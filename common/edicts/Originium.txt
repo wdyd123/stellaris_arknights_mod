@@ -35,3 +35,37 @@ monthly_originium_allowance = {
         }
     }
 }
+
+monthly_inf_supp_allowance = {
+    length = @ambitionDuration
+    icon = "GFX_edict_type_time"
+
+    resources = {
+        category = edicts
+
+        cost = {
+            unity = @ambitionCost
+            # multiplier = value:edict_size_effect
+        }
+
+        upkeep = {
+            unity = @ambitionUpkeep
+            # multiplier = value:edict_size_effect
+        }
+    }
+
+    modifier = {
+        country_base_infection_suppressant_produces_add = 5
+    }
+
+    potential = {
+    }
+
+    ai_weight = {
+        weight = 0
+        modifier = {
+            weight = 1
+            is_at_war = yes
+        }
+    }
+}
