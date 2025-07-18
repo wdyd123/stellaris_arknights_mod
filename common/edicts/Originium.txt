@@ -1,6 +1,6 @@
 @ambitionDuration = -1
-@ambitionCost = 75
-@ambitionUpkeep = 75
+@ambitionCost = 0
+@ambitionUpkeep = 0
 
 monthly_originium_allowance = {
     length = @ambitionDuration
@@ -21,7 +21,7 @@ monthly_originium_allowance = {
     }
 
     modifier = {
-        # country_base_originium_produces_add = 5
+         country_base_originium_produces_add = 5
     }
 
     potential = {

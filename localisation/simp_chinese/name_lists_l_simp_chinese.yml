@@ -8,6 +8,11 @@
  ####################################
  #Deficit Situations
  ####################################
+
+ situation_infection_suppressant_deficit_type: "矿石病抑制剂赤字"
+ situation_infection_suppressant_deficit_desc: "矿石病抑制剂赤字"
+ situation_infection_suppressant_deficit: "矿石病抑制剂赤字"
+
  mod_country_resource_max_infection_suppressant_add: "矿石病抑制剂储存上限"
  string_expenditures_greater_than_income_infection_suppressant: "矿石病抑制剂赤字"
  string_not_in_deficit_infection_suppressant: "矿石病抑制剂月结余为正"
@@ -63,3 +68,6 @@
  ####################################
  edict_monthly_originium_allowance: "源石月卡"
  edict_monthly_originium_allowance_desc: "海猫的大手发力了"
+
+ edict_monthly_inf_supp_allowance: "矿石病抑制剂"
+ edict_monthly_inf_supp_allowance_desc: "能解燃眉之急"

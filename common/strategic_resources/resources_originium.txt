@@ -4,7 +4,7 @@ infection_suppressant ={
     market_amount = 10
     market_price = 100
     max = 15000
-    allow_deficit = yes
+    allow_deficit = no
     # prerequisites = { "tech_mine_volatile_motes" }
 
     deficit_situation = situation_volatile_motes_deficit
@@ -27,7 +27,7 @@ originium ={
     market_amount = 10
     market_price = 100
     max = 15000
-    allow_deficit = yes
+    allow_deficit = no
     # prerequisites = { "tech_mine_volatile_motes" }
 
     deficit_situation = situation_volatile_motes_deficit
