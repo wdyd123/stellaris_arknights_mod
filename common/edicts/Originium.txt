@@ -1,0 +1,37 @@
+@ambitionDuration = -1
+@ambitionCost = 75
+@ambitionUpkeep = 75
+
+monthly_originium_allowance = {
+    length = @ambitionDuration
+    icon = "GFX_edict_type_time"
+
+    resources = {
+        category = edicts
+
+        cost = {
+            unity = @ambitionCost
+            # multiplier = value:edict_size_effect
+        }
+
+        upkeep = {
+            unity = @ambitionUpkeep
+            # multiplier = value:edict_size_effect
+        }
+    }
+
+    modifier = {
+        # country_base_originium_produces_add = 5
+    }
+
+    potential = {
+    }
+
+    ai_weight = {
+        weight = 0
+        modifier = {
+            weight = 1
+            is_at_war = yes
+        }
+    }
+}

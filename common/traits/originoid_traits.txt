@@ -1,0 +1,330 @@
+# 02_species_traits_basic_characteristics.txt
+trait_originium_based_unit = {
+    cost = {
+        base = 1
+        modifier = {
+            add = -1
+            is_species_class = TERRA
+        }
+    }
+    sorting_priority = 20
+    initial = no
+    randomized = no
+    species_potential_add = {
+        always = no
+    }
+    species_possible_remove = {
+        always = no
+    }
+    species_possible_merge_add = {
+        always = no
+    }
+
+    icon = "gfx/interface/icons/traits/originium.dds"
+    allowed_archetypes = { OTHER PRESAPIENT ORIGINOID BIOLOGICAL LITHOID }
+    tags = { originoid habitability leader special }
+
+    immortal_leaders = no
+
+    modifier = {
+        # pc_machine_habitability = 1
+        leader_lifespan_add = 20
+        habitability_floor_add = 0.5
+    }
+
+
+
+    leader_age_min = 14
+    leader_age_max = 25
+    custom_tooltip_with_modifiers = TRAIT_ORIGINIUM_UNIT_EFFECT
+
+}
+
+trait_auto_mod_originium = {
+    cost = {
+        base = 3
+        modifier = {
+            add = -1
+            has_trait = trait_originium_based_unit
+        }
+    }
+    auto_mod = yes
+    category = advanced_genetic
+
+    allowed_archetypes = { OTHER PRESAPIENT ORIGINOID BIOLOGICAL LITHOID ROBOT MACHINE }
+    localized_tags = {
+        SPECIES_TRAIT_ADAPTIVE_FRAMES
+    }
+    tags = { originoid positive automod }
+
+    species_possible_remove = {
+        always = yes
+    }
+    species_possible_merge_remove = {
+        always = yes
+    }
+    slave_cost = {
+        energy = 10000
+    }
+    assembly_score = {
+        base = 2
+    }
+    custom_tooltip_with_modifiers = automodding_trait_originium_tooltip
+}
+
+trait_traditional_originium = {
+    cost = 1
+    category = normal
+    species_possible_add = {
+        can_add_genetic_traits = yes
+    }
+    species_possible_remove = {
+        OR = {
+            can_remove_beneficial_genetic_traits = yes
+            can_remove_vocational_genetic_traits = yes
+        }
+    }
+    species_possible_merge_remove = {
+        always = yes
+    }
+    opposites = { "trait_quarrelsome" }
+    allowed_archetypes = { BIOLOGICAL LITHOID }
+    localized_tags = {
+        SPECIES_TRAIT_VOCATIONAL
+    }
+    tags = { organic positive pop_output unity }
+    modifier = {
+        bureaucrat_jobs_bonus_workforce_mult = 0.1
+    }
+    slave_cost = {
+        energy = 500
+    }
+    assembly_score = {
+        modifier = {
+            add = 1.5
+            from = { has_unity_designation = yes }
+        }
+        modifier = {
+            add = 1.5
+            from = { has_building = building_order_keep }
+        }
+    }
+}
+
+trait_thrifty_originium = {
+    cost = 2
+    category = normal
+    species_possible_add = {
+        can_add_genetic_traits = yes
+    }
+    species_possible_remove = {
+        OR = {
+            can_remove_beneficial_genetic_traits = yes
+            can_remove_vocational_genetic_traits = yes
+        }
+    }
+    species_possible_merge_remove = {
+        always = yes
+    }
+    allowed_archetypes = { BIOLOGICAL LITHOID }
+    localized_tags = {
+        SPECIES_TRAIT_VOCATIONAL
+    }
+    tags = { organic positive pop_output trade }
+    opposites = { "trait_cyborg_scarcity_algorithms" }
+    modifier = {
+        trader_jobs_bonus_workforce_mult = 0.25
+    }
+    slave_cost = {
+        energy = 500
+    }
+    assembly_score = {
+        modifier = {
+            add = 1.5
+            from = { has_trade_designation = yes }
+        }
+    }
+}
+
+trait_intelligent_originium = {
+    cost = 2
+    category = normal
+    species_possible_add = {
+        can_add_genetic_traits = yes
+    }
+    species_possible_remove = {
+        OR = {
+            can_remove_beneficial_genetic_traits = yes
+            can_remove_vocational_genetic_traits = yes
+        }
+    }
+    species_possible_merge_remove = {
+        always = yes
+    }
+    opposites = { "trait_nerve_stapled" "trait_erudite" "trait_enigmatic_intelligence_poor" }
+    allowed_archetypes = { BIOLOGICAL LITHOID }
+    localized_tags = {
+        SPECIES_TRAIT_VOCATIONAL
+    }
+    tags = { organic positive pop_output research }
+    modifier = {
+        researcher_jobs_bonus_workforce_mult = 0.10
+    }
+    slave_cost = {
+        energy = 500
+    }
+    assembly_score = {
+        modifier = {
+            add = 1.5
+            from = { has_research_designation = yes }
+        }
+        modifier = {
+            add = 1.5
+            from = { has_building = building_order_keep }
+        }
+    }
+}
+
+trait_industrious_originium = {
+    cost = 2
+    category = normal
+    species_possible_add = {
+        can_add_genetic_traits = yes
+    }
+    species_possible_remove = {
+        OR = {
+            can_remove_beneficial_genetic_traits = yes
+            can_remove_vocational_genetic_traits = yes
+        }
+    }
+    species_possible_merge_remove = {
+        always = yes
+    }
+    allowed_archetypes = { BIOLOGICAL LITHOID }
+    localized_tags = {
+        SPECIES_TRAIT_VOCATIONAL
+    }
+    tags = { organic positive pop_output mineral }
+    modifier = {
+        miner_jobs_bonus_workforce_mult = 0.15
+    }
+    slave_cost = {
+        energy = 500
+    }
+    assembly_score = {
+        modifier = {
+            add = 1.5
+            from = { has_mining_designation = yes }
+        }
+        modifier = {
+            add = 0.5
+            from = { has_rural_designation = yes }
+        }
+    }
+}
+
+trait_agrarian_originium = {
+    cost = 2
+    category = normal
+    species_possible_add = {
+        can_add_genetic_traits = yes
+    }
+    species_possible_remove = {
+        OR = {
+            can_remove_beneficial_genetic_traits = yes
+            can_remove_vocational_genetic_traits = yes
+        }
+    }
+    species_possible_merge_remove = {
+        always = yes
+    }
+    allowed_archetypes = { BIOLOGICAL LITHOID }
+    localized_tags = {
+        SPECIES_TRAIT_VOCATIONAL
+    }
+    tags = { organic positive pop_output food }
+    modifier = {
+        farmer_jobs_bonus_workforce_mult = 0.15
+    }
+    slave_cost = {
+        energy = 500
+    }
+    assembly_score = {
+        modifier = {
+            add = 1.5
+            from = { has_farming_designation = yes }
+        }
+        modifier = {
+            add = 0.5
+            from = { has_rural_designation = yes }
+        }
+    }
+}
+
+trait_ingenious_originium = {
+    cost = 2
+    category = normal
+    species_possible_add = {
+        can_add_genetic_traits = yes
+    }
+    species_possible_remove = {
+        OR = {
+            can_remove_beneficial_genetic_traits = yes
+            can_remove_vocational_genetic_traits = yes
+        }
+    }
+    species_possible_merge_remove = {
+        always = yes
+    }
+    allowed_archetypes = { BIOLOGICAL LITHOID }
+    localized_tags = {
+        SPECIES_TRAIT_VOCATIONAL
+    }
+    tags = { organic positive pop_output energy }
+    modifier = {
+        technician_jobs_bonus_workforce_mult = 0.15
+    }
+    slave_cost = {
+        energy = 500
+    }
+    assembly_score = {
+        modifier = {
+            add = 1.5
+            from = { has_generator_designation = yes }
+        }
+        modifier = {
+            add = 0.5
+            from = { has_rural_designation = yes }
+        }
+    }
+}
+
+trait_charismatic_originium = {
+    cost = 2
+    category = normal
+    species_possible_add = {
+        can_add_genetic_traits = yes
+    }
+    species_possible_remove = {
+        OR = {
+            can_remove_beneficial_genetic_traits = yes
+            can_remove_vocational_genetic_traits = yes
+        }
+    }
+    species_possible_merge_remove = {
+        always = yes
+    }
+
+    opposites = { "trait_repugnant" }
+    allowed_archetypes = { BIOLOGICAL LITHOID }
+    localized_tags = {
+        SPECIES_TRAIT_VOCATIONAL
+    }
+    tags = { organic positive pop_output amenities }
+    modifier = {
+        entertainer_jobs_bonus_workforce_mult = 0.20
+    }
+    slave_cost = {
+        energy = 500
+    }
+}

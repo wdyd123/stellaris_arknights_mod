@@ -1,0 +1,172 @@
+situation_event = {
+    id = deficit.230
+    title = deficit.230.name
+    desc = deficit.230.desc
+    picture = GFX_evt_deficit
+    show_sound = event_bad_omen
+    is_triggered_only = yes
+    situation = this
+
+    abort_trigger = {
+        situation_progress >= 100
+    }
+
+    immediate = {
+        owner = {
+            ordered_owned_planet = {
+                limit = {
+                    is_capital = no
+                    NOT = {
+                        is_planet_class = pc_cosmogenesis_world
+                    }
+                }
+                order_by = trigger:pop_amount
+                position = 0
+                save_event_target_as = looted_planet
+            }
+            if = {
+                limit = {
+                    NOT = { exists = event_target:looted_planet }
+                }
+                capital_scope = {
+                    save_event_target_as = looted_planet
+                }
+            }
+            random_system_within_border = {
+                limit = {
+                    any_system_planet = {
+                        exists = orbital_station
+                        OR = {
+                            has_deposit = d_volatile_motes_1
+                            has_deposit = d_volatile_motes_2
+                            has_deposit = d_volatile_motes_3
+                            has_deposit = d_volatile_motes_4
+                            has_deposit = d_volatile_motes_5
+                        }
+                    }
+                }
+                weights = {
+                    base = 1
+                    modifier = {
+                        add = 2
+                        any_system_planet = { has_deposit = d_volatile_motes_2 }
+                    }
+                    modifier = {
+                        add = 4
+                        any_system_planet = { has_deposit = d_volatile_motes_3 }
+                    }
+                    modifier = {
+                        add = 6
+                        any_system_planet = { has_deposit = d_volatile_motes_4 }
+                    }
+                    modifier = {
+                        add = 8
+                        any_system_planet = { has_deposit = d_volatile_motes_5 }
+                    }
+                }
+                random_system_planet = {
+                    limit = {
+                        exists = orbital_station
+                        OR = {
+                            has_deposit = d_volatile_motes_1
+                            has_deposit = d_volatile_motes_2
+                            has_deposit = d_volatile_motes_3
+                            has_deposit = d_volatile_motes_4
+                            has_deposit = d_volatile_motes_5
+                        }
+                    }
+                    weights = {
+                        base = 1
+                        modifier = {
+                            add = 2
+                            has_deposit = d_volatile_motes_2
+                        }
+                        modifier = {
+                            add = 4
+                            has_deposit = d_volatile_motes_3
+                        }
+                        modifier = {
+                            add = 6
+                            has_deposit = d_volatile_motes_4
+                        }
+                        modifier = {
+                            add = 8
+                            has_deposit = d_volatile_motes_5
+                        }
+                    }
+                    save_event_target_as = deposit_planet
+                }
+            }
+        }
+    }
+
+    option = {
+        name = deficit.200.A #blow something up, create a blocker or two
+        trigger = { exists = event_target:looted_planet }
+
+        owner = {
+            add_resource = {
+                volatile_motes = 0.1
+                mult = event_target:looted_planet.trigger:pop_amount
+            }
+        }
+        event_target:looted_planet = {
+            add_planet_devastation = 25
+            add_blocker = { type = d_exploited_deposit_blocker }
+            add_blocker = { type = d_exploited_deposit_blocker }
+        }
+    }
+    option = { #sacrifice a deposit
+        name = deficit.200.B
+        trigger = { exists = event_target:deposit_planet }
+
+        event_target:deposit_planet = {
+            switch = {
+                trigger = has_deposit
+                d_volatile_motes_5 = {
+                    root.owner = {
+                        add_resource = {
+                            volatile_motes = 1250
+                        }
+                    }
+                }
+                d_volatile_motes_4 = {
+                    root.owner = {
+                        add_resource = {
+                            volatile_motes = 1000
+                        }
+                    }
+                }
+                d_volatile_motes_3 = {
+                    root.owner = {
+                        add_resource = {
+                            volatile_motes = 750
+                        }
+                    }
+                }
+                d_volatile_motes_2 = {
+                    root.owner = {
+                        add_resource = {
+                            volatile_motes = 500
+                        }
+                    }
+                }
+                d_volatile_motes_1 = {
+                    root.owner = {
+                        add_resource = {
+                            volatile_motes = 250
+                        }
+                    }
+                }
+            }
+            clear_deposits = yes
+            hidden_effect = { orbital_station = { dismantle = yes } }
+        }
+        ai_chance = {
+            factor = 0
+        }
+    }
+    option = {
+        name = deficit.200.C
+    }
+}

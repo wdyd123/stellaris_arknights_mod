@@ -1,0 +1,13 @@
+version="0.0.1"
+tags={
+	"Technologies"
+	"Species"
+	"Gameplay"
+	"Events"
+	"Economy"
+	"Buildings"
+	"Leaders"
+	"Planet"
+}
+name="Arknights"
+supported_version="v4.0.*"

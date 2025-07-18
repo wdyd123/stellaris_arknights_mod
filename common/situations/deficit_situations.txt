@@ -1,0 +1,198 @@
+situation_infection_suppressant_deficit = {
+    picture = GFX_evt_deficit
+    category = negative
+    fail_icon = GFX_situation_outcome_meh
+    fail_icon_frame = GFX_situation_outcome_frame_green
+    complete_icon = GFX_situation_outcome_bankrupcy
+    complete_icon_frame = GFX_situation_outcome_frame_red
+
+    on_start = {
+        set_situation_flag = deficit_situation
+        owner = {
+            country_event = { id = timeline.19 } # Timeline Deficit
+        }
+    }
+    on_abort = {
+        owner = {
+            add_resource = {
+                infection_suppressant = @bailout_strategic_base_amount
+                mult = value:bailout_scaling_factor
+            }
+        }
+    }
+
+    initial_progress = 15
+    stages = {
+        deficit_first = {
+            icon = GFX_situation_stage_1
+            icon_background = GFX_situation_stage_frame_red
+            end = 25
+            modifier = {
+                planet_jobs_produces_mult = -0.05
+                bonus_pop_growth_mult = -0.05
+                planet_stability_add = -5  # 感染者病情恶化导致社会不稳定
+                planet_pop_assembly_mult = 0.05  # 危机下加速人口补充/治疗
+                planet_crime_add = 15           # 社会动荡导致犯罪率上升
+                pop_happiness = -0.05          # 感染者和普通人群幸福度下降
+                pop_decline_speed = 0.05
+                faction_approval = -0.05            # 派系满意度下降
+                empire_size_pops_mult = -0.02
+            }
+        }
+        deficit_second = {
+            icon = GFX_situation_stage_2
+            icon_background = GFX_situation_stage_frame_red
+            end = 50
+            modifier = {
+                planet_jobs_produces_mult = -0.10
+                bonus_pop_growth_mult = -0.10
+                planet_stability_add = -10  # 感染者病情恶化导致社会不稳定
+                planet_pop_assembly_mult = 0.10  # 危机下加速人口补充/治疗
+                planet_crime_add = 20          # 社会动荡导致犯罪率上升
+                pop_happiness = -0.10          # 感染者和普通人群幸福度下降
+                pop_decline_speed = 0.10
+                faction_approval = -0.10            # 派系满意度下降
+                empire_size_pops_mult = -0.04
+            }
+        }
+        deficit_third = {
+            icon = GFX_situation_stage_3
+            icon_background = GFX_situation_stage_frame_red
+            end = 75
+            modifier = {
+                planet_jobs_produces_mult = -0.15
+                bonus_pop_growth_mult = -0.15
+                planet_stability_add = -15  # 感染者病情恶化导致社会不稳定
+                planet_pop_assembly_mult = 0.15  # 危机下加速人口补充/治疗
+                planet_crime_add = 25         # 社会动荡导致犯罪率上升
+                pop_happiness = -0.15         # 感染者和普通人群幸福度下降
+                pop_decline_speed = 0.15
+                faction_approval = -0.15           # 派系满意度下降
+                empire_size_pops_mult = -0.06
+            }
+        }
+        deficit_fourth = {
+            icon = GFX_situation_stage_4
+            icon_background = GFX_situation_stage_frame_red
+            end = 100
+            modifier = {
+                planet_jobs_produces_mult = -0.20
+                bonus_pop_growth_mult = -0.20
+                planet_stability_add = -20  # 感染者病情恶化导致社会不稳定
+                planet_pop_assembly_mult = 0.20  # 危机下加速人口补充/治疗
+                planet_crime_add = 30         # 社会动荡导致犯罪率上升
+                pop_happiness = -0.20         # 感染者和普通人群幸福度下降
+                pop_decline_speed = 0.20
+                faction_approval = -0.20           # 派系满意度下降
+                empire_size_pops_mult = -0.08
+            }
+            on_first_enter = {
+                situation_event = { id = deficit.200 }
+            }
+        }
+    }
+
+    on_progress_complete = {
+        country_defaulted_in_situation_tooltip = yes
+        hidden_effect = {
+            situation_event = { id = deficit.205 }
+        }
+    }
+    on_fail = {
+        custom_tooltip = deficit_situation_finish_tooltip
+        hidden_effect = { destroy_situation = this }
+    }
+    monthly_progress = {
+        base = 0
+        modifier = {
+            add = value:deficit_situation_progress_value|RESOURCE|infection_suppressant|
+            desc = string_expenditures_greater_than_income_infection_suppressant
+            owner = { has_actual_deficit = { RESOURCE = infection_suppressant } }
+        }
+        modifier = {
+            subtract = 5
+            desc = string_not_in_deficit_infection_suppressant
+            owner = {
+                resource_income_compare = {
+                    resource = infection_suppressant
+                    value >= 0
+                }
+            }
+        }
+        modifier = {
+            subtract = 1
+            desc = string_resource_reserves_infection_suppressant
+            owner = {
+                has_negative_income_with_stockpile = { RESOURCE = infection_suppressant }
+            }
+        }
+        modifier = {
+            desc = civilian_difficulty
+            mult = 0.1
+            situation_monthly_progress > 0
+            is_difficulty = 0
+            owner = {
+                is_ai = no
+            }
+        }
+        modifier = {
+            desc = cadet_difficulty
+            mult = 0.5
+            situation_monthly_progress > 0
+            is_difficulty = 1
+            owner = {
+                is_ai = no
+            }
+        }
+    }
+    approach = {
+        name = deficit_approach_do_nothing
+        icon = GFX_situation_approach_this_is_fine
+        icon_background = GFX_situation_approach_bg_yellow
+        default = yes
+        on_select = {
+            custom_tooltip = deficit_approach_do_nothing_tooltip
+        }
+        ai_weight = {
+            base = 1
+        }
+    }
+    approach = {
+        name = deficit_approach_body_recycling
+        icon = GFX_situation_approach_balance_sheet
+        icon_background = GFX_situation_approach_bg_yellow
+        modifier = {
+            planet_building_refund_mult = 0.5
+            planet_structures_cost_mult = 0.5
+            planet_pops_infection_suppressant_upkeep_mult = -0.25
+            planet_pops_infection_suppressant_produces_mult = 0.10
+
+        }
+        ai_weight = {
+            base = 0
+        }
+    }
+    approach = {
+        name = deficit_approach_invest_in_mote_producers
+        icon = GFX_situation_approach_energy_credits
+        icon_background = GFX_situation_approach_bg_green
+        modifier = {
+            planet_chemists_volatile_motes_produces_mult = 0.25
+            planet_chemists_upkeep_mult = 0.25
+            planet_sr_miners_volatile_motes_produces_mult = 0.25
+            #No upkeep increase for mote harvesters because it'd also target mote farmers etc too
+        }
+
+        ai_weight = {
+            base = 0
+            modifier = {
+                add = 2
+                current_stage = deficit_third
+            }
+            modifier = {
+                add = 2
+                current_stage = deficit_fourth
+            }
+        }
+    }
+}

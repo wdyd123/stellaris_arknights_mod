@@ -1,0 +1,31 @@
+originoids={
+    species_class = TERRA
+
+    portraits = {
+        perro
+        Liberi
+    }
+
+    conditional_portraits = {
+        portraits = {
+            perro
+            Liberi
+        }
+    }
+    conditional_portraits = {
+        randomizable = {
+        }
+        playable = {
+        }
+        portraits = {
+            perro
+            Liberi
+
+        }
+    }
+
+    # These should not be used for randomly generated species
+    non_randomized_portraits = {
+    }
+
+}

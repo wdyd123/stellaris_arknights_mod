@@ -1,0 +1,45 @@
+infection_suppressant ={
+    tradable = yes
+    category = strategic
+    market_amount = 10
+    market_price = 100
+    max = 15000
+    allow_deficit = yes
+    # prerequisites = { "tech_mine_volatile_motes" }
+
+    deficit_situation = situation_volatile_motes_deficit
+    deficit_trade_conversion_mult = -1.25
+
+    culling_conversion_value = 7
+
+    ai_weight = {
+        weight = 10
+    }
+
+    ai_wants = {
+        base = 10
+    }
+}
+
+originium ={
+    tradable = yes
+    category = strategic
+    market_amount = 10
+    market_price = 100
+    max = 15000
+    allow_deficit = yes
+    # prerequisites = { "tech_mine_volatile_motes" }
+
+    deficit_situation = situation_volatile_motes_deficit
+    deficit_trade_conversion_mult = -1.25
+
+    culling_conversion_value = 7
+
+    ai_weight = {
+        weight = 10
+    }
+
+    ai_wants = {
+        base = 10
+    }
+}
