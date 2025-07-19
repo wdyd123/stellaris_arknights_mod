@@ -1,0 +1,1006 @@
+namespace = arknights_recruitment
+
+# 主招募事件 - 直接从干员池随机选择
+country_event = {
+    id = arknights_recruitment.1
+    title = arknights_recruitment.1.name
+    desc = arknights_recruitment.1.desc
+    # picture =
+
+    is_triggered_only = yes
+
+    immediate = {
+        # 检查是否所有干员都已被招募
+        create_country = {
+            name = "NAME_Unknown"
+            type = global_event
+            auto_delete = yes
+            flag = {
+                icon = {
+                    category = "special"
+                    file = "unknown.dds"
+                }
+                background = {
+                    category = "backgrounds"
+                    file = "00_solid.dds"
+                }
+                colors = {
+                    "red"
+                    "red"
+                    "null"
+                    "null"
+                }
+            }
+            effect = {
+                save_event_target_as = operator_country
+            }
+        }
+        event_target:operator_country = {
+            create_species = {
+                name = "NAME_Unknown"
+                class = TERRA
+                portrait = Perro_m #Exakeides portrait
+                namelist = "PRT1"
+                traits = {
+                    trait = "trait_enduring"
+                    trait = "trait_quick_learners"
+                    trait = "trait_erudite"
+                }
+                effect = {
+                    save_event_target_as = operator_species
+                }
+            }
+        }
+        if = {
+            limit = {
+                AND = {
+                    # 6星干员
+                    has_country_flag = recruited_silverash_permanent
+                    has_country_flag = recruited_chen_permanent
+                    has_country_flag = recruited_exusiai_permanent
+                    has_country_flag = recruited_eyjafjalla_permanent
+                    has_country_flag = recruited_saria_permanent
+                    has_country_flag = recruited_ifrit_permanent
+                    has_country_flag = recruited_shining_permanent
+                    has_country_flag = recruited_nightingale_permanent
+                    has_country_flag = recruited_hoshiguma_permanent
+                    has_country_flag = recruited_schwarz_permanent
+                    has_country_flag = recruited_blaze_permanent
+                    has_country_flag = recruited_weedy_permanent
+                    has_country_flag = recruited_w_permanent
+                    has_country_flag = recruited_skadi_alter_permanent
+                    has_country_flag = recruited_surtr_permanent
+                    has_country_flag = recruited_thorns_permanent
+                    has_country_flag = recruited_mudrock_permanent
+                    has_country_flag = recruited_ash_permanent
+                    has_country_flag = recruited_kaltsit_permanent
+                    has_country_flag = recruited_skadi_permanent
+                    has_country_flag = recruited_siege_permanent
+                    has_country_flag = recruited_bagpipe_permanent
+                    has_country_flag = recruited_phantom_permanent
+                    has_country_flag = recruited_suzuran_permanent
+                    has_country_flag = recruited_nian_permanent
+                    # 5星干员
+                    has_country_flag = recruited_platinum_permanent
+                    has_country_flag = recruited_blue_poison_permanent
+                    has_country_flag = recruited_specter_permanent
+                    has_country_flag = recruited_lappland_permanent
+                    has_country_flag = recruited_texas_permanent
+                    has_country_flag = recruited_pramanix_permanent
+                    has_country_flag = recruited_ptilopsis_permanent
+                    has_country_flag = recruited_silence_permanent
+                    has_country_flag = recruited_warfarin_permanent
+                    has_country_flag = recruited_zima_permanent
+                    has_country_flag = recruited_elysium_permanent
+                }
+            }
+            set_country_flag = all_operators_recruited
+        }
+        else = {
+            random_list = {
+                # 6星干员 (权重较低)
+                5 = {
+                    modifier = {
+                        factor = 0
+                        has_country_flag = recruited_silverash_permanent
+                    }
+                    set_country_flag = recruited_silverash
+                }
+                5 = {
+                    modifier = {
+                        factor = 0
+                        has_country_flag = recruited_chen_permanent
+                    }
+                    set_country_flag = recruited_chen
+                }
+                5 = {
+                    modifier = {
+                        factor = 0
+                        has_country_flag = recruited_exusiai_permanent
+                    }
+                    set_country_flag = recruited_exusiai
+                }
+                5 = {
+                    modifier = {
+                        factor = 0
+                        has_country_flag = recruited_eyjafjalla_permanent
+                    }
+                    set_country_flag = recruited_eyjafjalla
+                }
+                5 = {
+                    modifier = {
+                        factor = 0
+                        has_country_flag = recruited_saria_permanent
+                    }
+                    set_country_flag = recruited_saria
+                }
+                5 = {
+                    modifier = {
+                        factor = 0
+                        has_country_flag = recruited_ifrit_permanent
+                    }
+                    set_country_flag = recruited_ifrit
+                }
+                5 = {
+                    modifier = {
+                        factor = 0
+                        has_country_flag = recruited_shining_permanent
+                    }
+                    set_country_flag = recruited_shining
+                }
+                5 = {
+                    modifier = {
+                        factor = 0
+                        has_country_flag = recruited_nightingale_permanent
+                    }
+                    set_country_flag = recruited_nightingale
+                }
+                5 = {
+                    modifier = {
+                        factor = 0
+                        has_country_flag = recruited_hoshiguma_permanent
+                    }
+                    set_country_flag = recruited_hoshiguma
+                }
+                5 = {
+                    modifier = {
+                        factor = 0
+                        has_country_flag = recruited_schwarz_permanent
+                    }
+                    set_country_flag = recruited_schwarz
+                }
+                5 = {
+                    modifier = {
+                        factor = 0
+                        has_country_flag = recruited_blaze_permanent
+                    }
+                    set_country_flag = recruited_blaze
+                }
+                5 = {
+                    modifier = {
+                        factor = 0
+                        has_country_flag = recruited_weedy_permanent
+                    }
+                    set_country_flag = recruited_weedy
+                }
+                5 = {
+                    modifier = {
+                        factor = 0
+                        has_country_flag = recruited_w_permanent
+                    }
+                    set_country_flag = recruited_w
+                }
+                5 = {
+                    modifier = {
+                        factor = 0
+                        has_country_flag = recruited_skadi_alter_permanent
+                    }
+                    set_country_flag = recruited_skadi_alter
+                }
+                5 = {
+                    modifier = {
+                        factor = 0
+                        has_country_flag = recruited_surtr_permanent
+                    }
+                    set_country_flag = recruited_surtr
+                }
+                5 = {
+                    modifier = {
+                        factor = 0
+                        has_country_flag = recruited_thorns_permanent
+                    }
+                    set_country_flag = recruited_thorns
+                }
+                5 = {
+                    modifier = {
+                        factor = 0
+                        has_country_flag = recruited_mudrock_permanent
+                    }
+                    set_country_flag = recruited_mudrock
+                }
+                5 = {
+                    modifier = {
+                        factor = 0
+                        has_country_flag = recruited_ash_permanent
+                    }
+                    set_country_flag = recruited_ash
+                }
+                5 = {
+                    modifier = {
+                        factor = 0
+                        has_country_flag = recruited_kaltsit_permanent
+                    }
+                    set_country_flag = recruited_kaltsit
+                }
+                5 = {
+                    modifier = {
+                        factor = 0
+                        has_country_flag = recruited_skadi_permanent
+                    }
+                    set_country_flag = recruited_skadi
+                }
+                5 = {
+                    modifier = {
+                        factor = 0
+                        has_country_flag = recruited_siege_permanent
+                    }
+                    set_country_flag = recruited_siege
+                }
+                5 = {
+                    modifier = {
+                        factor = 0
+                        has_country_flag = recruited_bagpipe_permanent
+                    }
+                    set_country_flag = recruited_bagpipe
+                }
+                5 = {
+                    modifier = {
+                        factor = 0
+                        has_country_flag = recruited_phantom_permanent
+                    }
+                    set_country_flag = recruited_phantom
+                }
+                5 = {
+                    modifier = {
+                        factor = 0
+                        has_country_flag = recruited_suzuran_permanent
+                    }
+                    set_country_flag = recruited_suzuran
+                }
+                5 = {
+                    modifier = {
+                        factor = 0
+                        has_country_flag = recruited_nian_permanent
+                    }
+                    set_country_flag = recruited_nian
+                }
+
+                # 5星干员 (权重中等)
+                10 = {
+                    modifier = {
+                        factor = 0
+                        has_country_flag = recruited_platinum_permanent
+                    }
+                    set_country_flag = recruited_platinum
+                }
+                10 = {
+                    modifier = {
+                        factor = 0
+                        has_country_flag = recruited_blue_poison_permanent
+                    }
+                    set_country_flag = recruited_blue_poison
+                }
+                10 = {
+                    modifier = {
+                        factor = 0
+                        has_country_flag = recruited_specter_permanent
+                    }
+                    set_country_flag = recruited_specter
+                }
+                10 = {
+                    modifier = {
+                        factor = 0
+                        has_country_flag = recruited_lappland_permanent
+                    }
+                    set_country_flag = recruited_lappland
+                }
+                10 = {
+                    modifier = {
+                        factor = 0
+                        has_country_flag = recruited_texas_permanent
+                    }
+                    set_country_flag = recruited_texas
+                }
+                10 = {
+                    modifier = {
+                        factor = 0
+                        has_country_flag = recruited_pramanix_permanent
+                    }
+                    set_country_flag = recruited_pramanix
+                }
+                10 = {
+                    modifier = {
+                        factor = 0
+                        has_country_flag = recruited_ptilopsis_permanent
+                    }
+                    set_country_flag = recruited_ptilopsis
+                }
+                10 = {
+                    modifier = {
+                        factor = 0
+                        has_country_flag = recruited_silence_permanent
+                    }
+                    set_country_flag = recruited_silence
+                }
+                10 = {
+                    modifier = {
+                        factor = 0
+                        has_country_flag = recruited_warfarin_permanent
+                    }
+                    set_country_flag = recruited_warfarin
+                }
+                10 = {
+                    modifier = {
+                        factor = 0
+                        has_country_flag = recruited_zima_permanent
+                    }
+                    set_country_flag = recruited_zima
+                }
+                10 = {
+                    modifier = {
+                        factor = 0
+                        has_country_flag = recruited_elysium_permanent
+                    }
+                    set_country_flag = recruited_elysium
+                }
+            }
+        }
+    }
+
+    # 6星干员选项
+    option = {
+        name = arknights_recruitment.1.silverash
+        trigger = { has_country_flag = recruited_silverash }
+        create_leader = {
+            class = commander
+            species = event_target:operator_species
+            name = "SilverAsh"
+            skill = 4
+            traits = {
+                trait = leader_trait_aggressive
+                trait = leader_trait_trickster
+            }
+            event_leader = yes
+        }
+        set_country_flag = recruited_silverash_permanent
+        custom_tooltip = arknights_recruitment.silverash.tooltip
+    }
+
+    option = {
+        name = arknights_recruitment.1.chen
+        trigger = { has_country_flag = recruited_chen }
+        create_leader = {
+            class = commander
+            species = event_target:operator_species
+            name = "Ch'en"
+            skill = 4
+            traits = {
+                trait = leader_trait_butcher
+                trait = leader_trait_aggressive
+            }
+            event_leader = yes
+        }
+        set_country_flag = recruited_chen_permanent
+        custom_tooltip = arknights_recruitment.chen.tooltip
+    }
+
+    option = {
+        name = arknights_recruitment.1.exusiai
+        trigger = { has_country_flag = recruited_exusiai }
+        create_leader = {
+            class = commander
+            species = event_target:operator_species
+            name = "Exusiai"
+            skill = 4
+            traits = {
+                trait = leader_trait_aggressive
+                trait = leader_trait_gale_speed
+            }
+            event_leader = yes
+        }
+        set_country_flag = recruited_exusiai_permanent
+        custom_tooltip = arknights_recruitment.exusiai.tooltip
+    }
+
+    option = {
+        name = arknights_recruitment.1.eyjafjalla
+        trigger = { has_country_flag = recruited_eyjafjalla }
+        create_leader = {
+            class = scientist
+            species = event_target:operator_species
+            name = "Eyjafjalla"
+            skill = 4
+            traits = {
+                trait = leader_trait_expertise_psionics
+                trait = leader_trait_maniacal
+            }
+            event_leader = yes
+        }
+        set_country_flag = recruited_eyjafjalla_permanent
+        custom_tooltip = arknights_recruitment.eyjafjalla.tooltip
+    }
+
+    option = {
+        name = arknights_recruitment.1.saria
+        trigger = { has_country_flag = recruited_saria }
+        create_leader = {
+            class = commander
+            species = event_target:operator_species
+            name = "Saria"
+            skill = 4
+            traits = {
+                trait = leader_trait_resilient
+            }
+            event_leader = yes
+        }
+        set_country_flag = recruited_saria_permanent
+        custom_tooltip = arknights_recruitment.saria.tooltip
+    }
+
+    option = {
+        name = arknights_recruitment.1.ifrit
+        trigger = { has_country_flag = recruited_ifrit }
+        create_leader = {
+            class = scientist
+            species = event_target:operator_species
+            name = "Ifrit"
+            skill = 4
+            traits = {
+                trait = leader_trait_expertise_materials
+                trait = leader_trait_maniacal
+            }
+            event_leader = yes
+        }
+        set_country_flag = recruited_ifrit_permanent
+        custom_tooltip = arknights_recruitment.ifrit.tooltip
+    }
+
+    option = {
+        name = arknights_recruitment.1.shining
+        trigger = { has_country_flag = recruited_shining }
+        add_monthly_resource_mult = {
+            resource = society_research
+            value = 3
+            min = 15
+            max = 60
+        }
+        create_leader = {
+            class = scientist
+            species = event_target:operator_species
+            name = "Shining"
+            skill = 4
+            traits = {
+                trait = leader_trait_expertise_biology
+            }
+            event_leader = yes
+        }
+        set_country_flag = recruited_shining_permanent
+        custom_tooltip = arknights_recruitment.shining.tooltip
+    }
+
+    option = {
+        name = arknights_recruitment.1.nightingale
+        trigger = { has_country_flag = recruited_nightingale }
+        add_monthly_resource_mult = {
+            resource = society_research
+            value = 3
+            min = 15
+            max = 60
+        }
+        create_leader = {
+            class = scientist
+            species = event_target:operator_species
+            name = "Nightingale"
+            skill = 4
+            traits = {
+                trait = leader_trait_expertise_biology
+            }
+            event_leader = yes
+        }
+        set_country_flag = recruited_nightingale_permanent
+        custom_tooltip = arknights_recruitment.nightingale.tooltip
+    }
+
+    option = {
+        name = arknights_recruitment.1.hoshiguma
+        trigger = { has_country_flag = recruited_hoshiguma }
+        create_leader = {
+            class = commander
+            species = event_target:operator_species
+            name = "Hoshiguma"
+            skill = 4
+            traits = {
+                trait = leader_trait_resilient
+                trait = leader_trait_unyielding
+            }
+            event_leader = yes
+        }
+        set_country_flag = recruited_hoshiguma_permanent
+        custom_tooltip = arknights_recruitment.hoshiguma.tooltip
+    }
+
+    option = {
+        name = arknights_recruitment.1.schwarz
+        trigger = { has_country_flag = recruited_schwarz }
+        create_leader = {
+            class = commander
+            species = event_target:operator_species
+            name = "Schwarz"
+            skill = 4
+            traits = {
+                trait = leader_trait_cautious
+                trait = leader_trait_trickster
+            }
+            event_leader = yes
+        }
+        set_country_flag = recruited_schwarz_permanent
+        custom_tooltip = arknights_recruitment.schwarz.tooltip
+    }
+
+    option = {
+        name = arknights_recruitment.1.blaze
+        trigger = { has_country_flag = recruited_blaze }
+        create_leader = {
+            class = commander
+            species = event_target:operator_species
+            name = "Blaze"
+            skill = 4
+            traits = {
+                trait = leader_trait_aggressive
+                trait = leader_trait_resilient
+            }
+            event_leader = yes
+        }
+        set_country_flag = recruited_blaze_permanent
+        custom_tooltip = arknights_recruitment.blaze.tooltip
+    }
+
+    option = {
+        name = arknights_recruitment.1.weedy
+        trigger = { has_country_flag = recruited_weedy }
+        add_monthly_resource_mult = {
+            resource = influence
+            value = 3
+            min = 15
+            max = 50
+        }
+        create_leader = {
+            class = commander
+            species = event_target:operator_species
+            name = "Weedy"
+            skill = 4
+            traits = {
+                trait = leader_trait_trickster
+                trait = leader_trait_cautious
+            }
+            event_leader = yes
+        }
+        set_country_flag = recruited_weedy_permanent
+        custom_tooltip = arknights_recruitment.weedy.tooltip
+    }
+
+    option = {
+        name = arknights_recruitment.1.w
+        trigger = { has_country_flag = recruited_w }
+        create_leader = {
+            class = commander
+            species = event_target:operator_species
+            name = "W"
+            skill = 4
+            traits = {
+                trait = leader_trait_aggressive
+            }
+            event_leader = yes
+        }
+        set_country_flag = recruited_w_permanent
+        custom_tooltip = arknights_recruitment.w.tooltip
+    }
+
+    option = {
+        name = arknights_recruitment.1.skadi_alter
+        trigger = { has_country_flag = recruited_skadi_alter }
+        add_monthly_resource_mult = {
+            resource = unity
+            value = 4
+            min = 20
+            max = 80
+        }
+        create_leader = {
+            class = scientist
+            species = event_target:operator_species
+            name = "Skadi the Corrupting Heart"
+            skill = 4
+            traits = {
+                trait = leader_trait_expertise_statecraft
+            }
+            event_leader = yes
+        }
+        set_country_flag = recruited_skadi_alter_permanent
+        custom_tooltip = arknights_recruitment.skadi_alter.tooltip
+    }
+
+    option = {
+        name = arknights_recruitment.1.surtr
+        trigger = { has_country_flag = recruited_surtr }
+        create_leader = {
+            class = commander
+            species = event_target:operator_species
+            name = "Surtr"
+            skill = 4
+            traits = {
+                trait = leader_trait_aggressive
+            }
+            event_leader = yes
+        }
+        set_country_flag = recruited_surtr_permanent
+        custom_tooltip = arknights_recruitment.surtr.tooltip
+    }
+
+    option = {
+        name = arknights_recruitment.1.thorns
+        trigger = { has_country_flag = recruited_thorns }
+        create_leader = {
+            class = commander
+            species = event_target:operator_species
+            name = "Thorns"
+            skill = 4
+            traits = {
+                trait = leader_trait_cautious
+                trait = leader_trait_fleet_logistician
+            }
+            event_leader = yes
+        }
+        set_country_flag = recruited_thorns_permanent
+        custom_tooltip = arknights_recruitment.thorns.tooltip
+    }
+
+    option = {
+        name = arknights_recruitment.1.mudrock
+        trigger = { has_country_flag = recruited_mudrock }
+        create_leader = {
+            class = commander
+            species = event_target:operator_species
+            name = "Mudrock"
+            skill = 4
+            traits = {
+                trait = leader_trait_resilient
+            }
+            event_leader = yes
+        }
+        set_country_flag = recruited_mudrock_permanent
+        custom_tooltip = arknights_recruitment.mudrock.tooltip
+    }
+
+    option = {
+        name = arknights_recruitment.1.ash
+        trigger = { has_country_flag = recruited_ash }
+        create_leader = {
+            class = commander
+            species = event_target:operator_species
+            name = "Ash"
+            skill = 4
+            traits = {
+                trait = leader_trait_aggressive
+                trait = leader_trait_butcher
+            }
+            event_leader = yes
+        }
+        set_country_flag = recruited_ash_permanent
+        custom_tooltip = arknights_recruitment.ash.tooltip
+    }
+
+    option = {
+        name = arknights_recruitment.1.kaltsit
+        trigger = { has_country_flag = recruited_kaltsit }
+        add_monthly_resource_mult = {
+            resource = society_research
+            value = 3
+            min = 15
+            max = 60
+        }
+        create_leader = {
+            class = scientist
+            species = event_target:operator_species
+            name = "Kal'tsit"
+            skill = 4
+            traits = {
+                trait = leader_trait_expertise_biology
+                trait = leader_trait_meticulous
+            }
+            event_leader = yes
+        }
+        set_country_flag = recruited_kaltsit_permanent
+        custom_tooltip = arknights_recruitment.kaltsit.tooltip
+    }
+
+    option = {
+        name = arknights_recruitment.1.skadi
+        trigger = { has_country_flag = recruited_skadi }
+        add_monthly_resource_mult = {
+            resource = influence
+            value = 3
+            min = 15
+            max = 50
+        }
+        create_leader = {
+            class = commander
+            species = event_target:operator_species
+            name = "Skadi"
+            skill = 4
+            traits = {
+                trait = leader_trait_aggressive
+                trait = leader_trait_unyielding
+            }
+            event_leader = yes
+        }
+        set_country_flag = recruited_skadi_permanent
+        custom_tooltip = arknights_recruitment.skadi.tooltip
+    }
+
+    option = {
+        name = arknights_recruitment.1.siege
+        trigger = { has_country_flag = recruited_siege }
+        add_monthly_resource_mult = {
+            resource = energy
+            value = 4
+            min = 25
+            max = 100
+        }
+        create_leader = {
+            class = commander
+            species = event_target:operator_species
+            name = "Siege"
+            skill = 4
+            traits = {
+                trait = leader_trait_aggressive
+                trait = leader_trait_fleet_logistician
+            }
+            event_leader = yes
+        }
+        set_country_flag = recruited_siege_permanent
+        custom_tooltip = arknights_recruitment.siege.tooltip
+    }
+
+    option = {
+        name = arknights_recruitment.1.bagpipe
+        trigger = { has_country_flag = recruited_bagpipe }
+        add_monthly_resource_mult = {
+            resource = energy
+            value = 4
+            min = 25
+            max = 100
+        }
+        create_leader = {
+            class = commander
+            species = event_target:operator_species
+            name = "Bagpipe"
+            skill = 4
+            traits = {
+                trait = leader_trait_aggressive
+                trait = leader_trait_fleet_logistician
+            }
+            event_leader = yes
+        }
+        set_country_flag = recruited_bagpipe_permanent
+        custom_tooltip = arknights_recruitment.bagpipe.tooltip
+    }
+
+    option = {
+        name = arknights_recruitment.1.phantom
+        trigger = { has_country_flag = recruited_phantom }
+        add_monthly_resource_mult = {
+            resource = influence
+            value = 3
+            min = 15
+            max = 50
+        }
+        create_leader = {
+            class = commander
+            species = event_target:operator_species
+            name = "Phantom"
+            skill = 4
+            traits = {
+                trait = leader_trait_trickster
+                trait = leader_trait_cautious
+            }
+            event_leader = yes
+        }
+        set_country_flag = recruited_phantom_permanent
+        custom_tooltip = arknights_recruitment.phantom.tooltip
+    }
+
+    option = {
+        name = arknights_recruitment.1.suzuran
+        trigger = { has_country_flag = recruited_suzuran }
+        add_monthly_resource_mult = {
+            resource = unity
+            value = 4
+            min = 20
+            max = 80
+        }
+        create_leader = {
+            class = scientist
+            species = event_target:operator_species
+            name = "Suzuran"
+            skill = 4
+            traits = {
+                trait = leader_trait_expertise_statecraft
+            }
+            event_leader = yes
+        }
+        set_country_flag = recruited_suzuran_permanent
+        custom_tooltip = arknights_recruitment.suzuran.tooltip
+    }
+
+    option = {
+        name = arknights_recruitment.1.nian
+        trigger = { has_country_flag = recruited_nian }
+        add_monthly_resource_mult = {
+            resource = alloys
+            value = 4
+            min = 25
+            max = 80
+        }
+        create_leader = {
+            class = commander
+            species = event_target:operator_species
+            name = "Nian"
+            skill = 4
+            traits = {
+                trait = leader_trait_resilient
+            }
+            event_leader = yes
+        }
+        set_country_flag = recruited_nian_permanent
+        custom_tooltip = arknights_recruitment.nian.tooltip
+    }
+
+    # 5星干员选项
+    option = {
+        name = arknights_recruitment.1.5star
+        trigger = {
+            OR = {
+                has_country_flag = recruited_platinum
+                has_country_flag = recruited_blue_poison
+                has_country_flag = recruited_specter
+                has_country_flag = recruited_lappland
+                has_country_flag = recruited_texas
+                has_country_flag = recruited_pramanix
+                has_country_flag = recruited_ptilopsis
+                has_country_flag = recruited_silence
+                has_country_flag = recruited_warfarin
+                has_country_flag = recruited_zima
+                has_country_flag = recruited_elysium
+            }
+        }
+        create_leader = {
+            class = random
+            species = event_target:operator_species
+            name = random
+            skill = 3
+            traits = {
+                trait = random_trait
+            }
+            event_leader = yes
+        }
+        # 设置对应的永久标志
+        if = {
+            limit = { has_country_flag = recruited_platinum }
+            set_country_flag = recruited_platinum_permanent
+        }
+        if = {
+            limit = { has_country_flag = recruited_blue_poison }
+            set_country_flag = recruited_blue_poison_permanent
+        }
+        if = {
+            limit = { has_country_flag = recruited_specter }
+            set_country_flag = recruited_specter_permanent
+        }
+        if = {
+            limit = { has_country_flag = recruited_lappland }
+            set_country_flag = recruited_lappland_permanent
+        }
+        if = {
+            limit = { has_country_flag = recruited_texas }
+            set_country_flag = recruited_texas_permanent
+        }
+        if = {
+            limit = { has_country_flag = recruited_pramanix }
+            set_country_flag = recruited_pramanix_permanent
+        }
+        if = {
+            limit = { has_country_flag = recruited_ptilopsis }
+            set_country_flag = recruited_ptilopsis_permanent
+        }
+        if = {
+            limit = { has_country_flag = recruited_silence }
+            set_country_flag = recruited_silence_permanent
+        }
+        if = {
+            limit = { has_country_flag = recruited_warfarin }
+            set_country_flag = recruited_warfarin_permanent
+        }
+        if = {
+            limit = { has_country_flag = recruited_zima }
+            set_country_flag = recruited_zima_permanent
+        }
+        if = {
+            limit = { has_country_flag = recruited_elysium }
+            set_country_flag = recruited_elysium_permanent
+        }
+        custom_tooltip = arknights_recruitment.5star.tooltip
+    }
+
+    # 全部招募完毕的选项
+    option = {
+        name = arknights_recruitment.1.all_recruited
+        trigger = { has_country_flag = all_operators_recruited }
+        every_owned_leader ={
+            add_experience = value:tr_statecraft_amongst_peers_reward
+        }
+        add_monthly_resource_mult = {
+            resource = influence
+            value = 5
+            min = 50
+            max = 150
+        }
+        add_monthly_resource_mult = {
+            resource = unity
+            value = 5
+            min = 50
+            max = 150
+        }
+        custom_tooltip = arknights_recruitment.all_recruited.tooltip
+    }
+
+    after = {
+        # 清理所有临时标志
+        remove_country_flag = recruited_silverash
+        remove_country_flag = recruited_chen
+        remove_country_flag = recruited_exusiai
+        remove_country_flag = recruited_eyjafjalla
+        remove_country_flag = recruited_saria
+        remove_country_flag = recruited_ifrit
+        remove_country_flag = recruited_shining
+        remove_country_flag = recruited_nightingale
+        remove_country_flag = recruited_hoshiguma
+        remove_country_flag = recruited_schwarz
+        remove_country_flag = recruited_blaze
+        remove_country_flag = recruited_weedy
+        remove_country_flag = recruited_w
+        remove_country_flag = recruited_skadi_alter
+        remove_country_flag = recruited_surtr
+        remove_country_flag = recruited_thorns
+        remove_country_flag = recruited_mudrock
+        remove_country_flag = recruited_ash
+        remove_country_flag = recruited_kaltsit
+        remove_country_flag = recruited_skadi
+        remove_country_flag = recruited_siege
+        remove_country_flag = recruited_bagpipe
+        remove_country_flag = recruited_phantom
+        remove_country_flag = recruited_suzuran
+        remove_country_flag = recruited_nian
+        remove_country_flag = recruited_platinum
+        remove_country_flag = recruited_blue_poison
+        remove_country_flag = recruited_specter
+        remove_country_flag = recruited_lappland
+        remove_country_flag = recruited_texas
+        remove_country_flag = recruited_pramanix
+        remove_country_flag = recruited_ptilopsis
+        remove_country_flag = recruited_silence
+        remove_country_flag = recruited_warfarin
+        remove_country_flag = recruited_zima
+        remove_country_flag = recruited_elysium
+        remove_country_flag = all_operators_recruited
+    }
+}

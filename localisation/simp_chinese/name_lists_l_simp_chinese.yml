@@ -71,3 +71,85 @@
 
  edict_monthly_inf_supp_allowance: "矿石病抑制剂"
  edict_monthly_inf_supp_allowance_desc: "能解燃眉之急"
+
+ edict_gacha: "干员寻访"
+ edict_gacha_desc: "从猎头公司招聘一位干员"
+
+
+ ####################################
+ #Recruitment
+ ####################################
+
+ # 主招募事件
+ arknights_recruitment.1.name:0 "罗德岛招募协议"
+ arknights_recruitment.1.desc:0 "我们的情报网络已与罗德岛制药公司建立联系。他们的招募系统识别出了一位可能加入我们势力的潜在干员。每位干员都拥有独特的技能和经验，这对我们的使命可能具有重要价值。"
+
+ # 6星干员选项
+ arknights_recruitment.1.silverash:0 "欢迎银灰，喀兰贸易CEO"
+ arknights_recruitment.1.chen:0 "欢迎陈，前龙门近卫局高级督察"
+ arknights_recruitment.1.exusiai:0 "欢迎能天使，企鹅物流信使"
+ arknights_recruitment.1.eyjafjalla:0 "欢迎艾雅法拉，火山学家"
+ arknights_recruitment.1.saria:0 "欢迎塞雷娅，前莱茵生命防务主管"
+ arknights_recruitment.1.ifrit:0 "欢迎伊芙利特，莱茵生命研究员"
+ arknights_recruitment.1.shining:0 "欢迎闪灵，前萨卡兹赦罪师"
+ arknights_recruitment.1.nightingale:0 "欢迎夜莺，前萨卡兹赦罪师"
+ arknights_recruitment.1.hoshiguma:0 "欢迎星熊，龙门近卫局高级督察长"
+ arknights_recruitment.1.schwarz:0 "欢迎黑，莱茵生命保镖"
+ arknights_recruitment.1.blaze:0 "欢迎煌，罗德岛精英干员"
+ arknights_recruitment.1.weedy:0 "欢迎温蒂，罗德岛工程师"
+ arknights_recruitment.1.w:0 "欢迎W，前巴别塔佣兵"
+ arknights_recruitment.1.skadi_alter:0 "欢迎浊心斯卡蒂，深海猎人"
+ arknights_recruitment.1.surtr:0 "欢迎史尔特尔，神秘剑客"
+ arknights_recruitment.1.thorns:0 "欢迎棘刺，伊比利亚阿戈尔人"
+ arknights_recruitment.1.mudrock:0 "欢迎泥岩，萨卡兹佣兵团长"
+ arknights_recruitment.1.ash:0 "欢迎灰烬，彩虹小队队长"
+ arknights_recruitment.1.kaltsit:0 "欢迎凯尔希，罗德岛医疗主管"
+ arknights_recruitment.1.skadi:0 "欢迎斯卡蒂，深海猎人"
+ arknights_recruitment.1.siege:0 "欢迎推进之王，维多利亚皇家卫队"
+ arknights_recruitment.1.bagpipe:0 "欢迎风笛，维多利亚军官"
+ arknights_recruitment.1.phantom:0 "欢迎傀影，神秘艺术家"
+ arknights_recruitment.1.suzuran:0 "欢迎铃兰，东国贵族"
+ arknights_recruitment.1.nian:0 "欢迎年，古代炎国工匠"
+
+ # 5星干员选项
+ arknights_recruitment.1.5star:0 "欢迎我们的新5星干员"
+
+ # 全部招募完毕
+ arknights_recruitment.1.all_recruited:0 "罗德岛已无可用之兵，但是这次实践为我们积累了宝贵经验"
+
+ # 干员介绍tooltips
+ arknights_recruitment.silverash.tooltip:0 "银灰作为舰队司令官带来了卓越的商业头脑和战略领导力，他的喀兰贸易关系网提供了战术优势。"
+ arknights_recruitment.chen.tooltip:0 "陈的执法背景和战斗专长使她成为一名杰出的地面部队将军，拥有无与伦比的纪律性。"
+ arknights_recruitment.exusiai.tooltip:0 "能天使作为企鹅物流信使的速度和精准度完美转化为快速舰队部署和攻击性战术。"
+ arknights_recruitment.eyjafjalla.tooltip:0 "艾雅法拉的火山研究为灵能技术提供了突破性见解，并具备先进的物理学研究能力。"
+ arknights_recruitment.saria.tooltip:0 "塞雷娅的防御专长和医疗知识使她成为保护关键战略位置的理想将军。"
+ arknights_recruitment.ifrit.tooltip:0 "伊芙利特的破坏性源石技艺研究以其爆炸专长增强了我们的材料科学能力。"
+ arknights_recruitment.shining.tooltip:0 "闪灵作为前赦罪师的医疗专长提供了先进的生物学研究和强化的社会发展能力。"
+ arknights_recruitment.nightingale.tooltip:0 "夜莺的治疗源石技艺精通显著提升了我们的生物科学和人口健康研究。"
+ arknights_recruitment.hoshiguma.tooltip:0 "星熊的不屈意志和防御精通为我们的地面部队提供了无与伦比的保护。"
+ arknights_recruitment.schwarz.tooltip:0 "黑的精准射击和保镖经验使她成为具备战术隐秘能力的杰出舰队指挥官。"
+ arknights_recruitment.blaze.tooltip:0 "煌的实战经验和坚韧天性使她成为前线作战的强大将军。"
+ arknights_recruitment.weedy.tooltip:0 "温蒂的工程专长提供了创新的战术解决方案，并通过技术优势增强影响力。"
+ arknights_recruitment.w.tooltip:0 "W的爆破专长和佣兵经验为我们的舰队作战带来了毁灭性的战斗潜力。"
+ arknights_recruitment.skadi_alter.tooltip:0 "浊心斯卡蒂独特的深海猎人能力提供了卓越的凝聚力建设和治国专长。"
+ arknights_recruitment.surtr.tooltip:0 "史尔特尔压倒性的战斗实力使她成为能够单独扭转战局的毁灭性将军。"
+ arknights_recruitment.thorns.tooltip:0 "棘刺的阿戈尔血统和战术规划提供了出色的舰队后勤和战略协调能力。"
+ arknights_recruitment.mudrock.tooltip:0 "泥岩的佣兵领导力和防御专长为我们的地面作战提供了无与伦比的保护。"
+ arknights_recruitment.ash.tooltip:0 "灰烬的特种部队训练和彩虹小队领导力提供了精英军事战术能力。"
+ arknights_recruitment.kaltsit.tooltip:0 "凯尔希广博的医疗知识和研究经验显著推进了我们的生物科学和社会研究。"
+ arknights_recruitment.skadi.tooltip:0 "斯卡蒂的深海猎人能力和战斗实力同时提供了战术优势和增强的影响力行动。"
+ arknights_recruitment.siege.tooltip:0 "推进之王的皇家卫队经验和领导力提供了出色的舰队后勤和增强的能源管理。"
+ arknights_recruitment.bagpipe.tooltip:0 "风笛的军事纪律和维多利亚训练提供了优越的舰队协调和能源资源优化。"
+ arknights_recruitment.phantom.tooltip:0 "傀影神秘的艺术能力和隐秘专长提供了独特的战术解决方案和影响力行动。"
+ arknights_recruitment.suzuran.tooltip:0 "铃兰的贵族教育和源石技艺精通提供了卓越的治国专长和凝聚力建设能力。"
+ arknights_recruitment.nian.tooltip:0 "年的古代工艺和防御源石技艺提供了增强的合金生产和优越的防御能力。"
+
+ # 其他tooltips
+ arknights_recruitment.5star.tooltip:0 "这位经验丰富的干员带来了扎实的能力和宝贵的技能来加强我们的力量。"
+ arknights_recruitment.all_recruited.tooltip:0 "已招募所有可用干员，罗德岛提供大量补偿奖励，包括增强的影响力和凝聚力产出。"
+
+ # 法令相关本地化
+ arknights_recruitment_protocol:0 "罗德岛招募协议"
+ arknights_recruitment_protocol_desc:0 "激活专门的招募协议来联系罗德岛并招募技能娴熟的干员加入我们的事业。这项先进程序需要大量资源，但可以提供接触具有独特能力的高技能专家的机会。\n\n§Y消耗：§! 200 影响力，500 能量\n§Y冷却时间：§! 10年\n§R注意：§! 所有干员招募完毕后无法使用。"
+ arknights_recruitment_protocol_effect:0 "触发罗德岛招募流程 - 随机选择一个可用干员"
+ ARKNIGHTS_RECRUITMENT_COOLDOWN:0 "罗德岛招募协议仍在冷却中"

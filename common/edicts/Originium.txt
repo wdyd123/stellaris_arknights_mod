@@ -1,6 +1,6 @@
 @ambitionDuration = -1
-@ambitionCost = 0
-@ambitionUpkeep = 0
+@ambitionCost1 = 0
+@ambitionUpkeep1 = 0
 
 monthly_originium_allowance = {
     length = @ambitionDuration
@@ -10,12 +10,12 @@ monthly_originium_allowance = {
         category = edicts
 
         cost = {
-            unity = @ambitionCost
+            unity = @ambitionCost1
             # multiplier = value:edict_size_effect
         }
 
         upkeep = {
-            unity = @ambitionUpkeep
+            unity = @ambitionUpkeep1
             # multiplier = value:edict_size_effect
         }
     }
@@ -44,12 +44,12 @@ monthly_inf_supp_allowance = {
         category = edicts
 
         cost = {
-            unity = @ambitionCost
+            unity = @ambitionCost1
             # multiplier = value:edict_size_effect
         }
 
         upkeep = {
-            unity = @ambitionUpkeep
+            unity = @ambitionUpkeep1
             # multiplier = value:edict_size_effect
         }
     }
@@ -61,6 +61,34 @@ monthly_inf_supp_allowance = {
     potential = {
     }
 
+    ai_weight = {
+        weight = 0
+        modifier = {
+            weight = 1
+            is_at_war = yes
+        }
+    }
+}
+
+gacha = {
+    length = @ambitionDuration
+    icon = "GFX_edict_type_time"
+
+    resources = {
+        category = edicts
+
+        cost = {
+            originium = 5
+            # multiplier = value:edict_size_effect
+        }
+
+    }
+
+    potential = {
+    }
+    effect = {
+        country_event = { id = arknights_recruitment.1 }
+    }
     ai_weight = {
         weight = 0
         modifier = {
