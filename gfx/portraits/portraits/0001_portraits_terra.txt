@@ -1,8 +1,8 @@
 portraits = {
-    Liberi_f={ textureFile = gfx/models/portraits/liberi-f.dds  }
-    Liberi_m={ textureFile = gfx/models/portraits/liberi-m.dds  }
-    Perro_f ={ textureFile = gfx/models/portraits/perro-f.dds }
-    Perro_m ={ textureFile = gfx/models/portraits/perro-m.dds }
+    Liberi_f={ textureFile = gfx/models/portraits/civilian_protraits/liberi-f.dds  }
+    Liberi_m={ textureFile = gfx/models/portraits/civilian_protraits/liberi-m.dds  }
+    Perro_f ={ textureFile = gfx/models/portraits/civilian_protraits/perro-f.dds }
+    Perro_m ={ textureFile = gfx/models/portraits/civilian_protraits/perro-m.dds }
 
 
 }
@@ -23,6 +23,7 @@ portrait_groups = {
                 }
                 portraits = {
                     Liberi_m
+                    Perro_m
                 }
             }
             add = {
@@ -36,6 +37,8 @@ portrait_groups = {
                 }
                 portraits = {
                     Liberi_f
+                    Perro_f
+
                 }
             }
         }
@@ -50,6 +53,7 @@ portrait_groups = {
                 }
                 portraits = {
                     Liberi_m
+                    Perro_m
                 }
             }
             add = {
@@ -61,6 +65,8 @@ portrait_groups = {
                 }
                 portraits = {
                     Liberi_f
+                    Perro_f
+
                 }
             }
         }
@@ -75,6 +81,7 @@ portrait_groups = {
                 }
                 portraits = {
                     Liberi_m
+                    Perro_m
                 }
             }
             add = {
@@ -86,10 +93,12 @@ portrait_groups = {
                 }
                 portraits = {
                     Liberi_f
+                    Perro_f
+
                 }
             }
         }
-
+        pop_group = {  }
         #species scope
         species = { #generic portrait for a species
             add = {
@@ -99,6 +108,8 @@ portrait_groups = {
                 }
                 portraits = {
                     Liberi_f
+                    Perro_f
+
                 }
             }
             add = {
@@ -108,6 +119,7 @@ portrait_groups = {
                 }
                 portraits = {
                     Liberi_m
+                    Perro_m
                 }
             }
         }
@@ -120,6 +132,7 @@ portrait_groups = {
                 }
                 portraits = {
                     Liberi_f
+                    Perro_f
                 }
             }
             add = {
@@ -128,135 +141,7 @@ portrait_groups = {
                 }
                 portraits = {
                     Liberi_m
-                }
-            }
-        }
-    }
-
-    perro = {
-        default = Perro_f
-        game_setup = { #will run with a limited country scope. species and government is set but the country does not actually exist
-            add = {
-                trigger = {
-                    ruler = {
-                        OR = {
-                            gender = male
-                            gender = indeterminable
-                        }
-                    }
-                }
-                portraits = {
                     Perro_m
-                }
-            }
-            add = {
-                trigger = {
-                    ruler = {
-                        OR = {
-                            gender = female
-                            gender = indeterminable
-                        }
-                    }
-                }
-                portraits = {
-                    Perro_f
-                }
-            }
-            #set = {
-            #	trigger = { ... }
-            #	portraits = { ... }
-            #	#using "set =" instead of "add" will first clear any portraits already added
-            #}
-        }
-
-        #species scope
-        species = { #generic portrait for a species
-            add = {
-                trigger = {
-                    exists = species
-                    NOT = { species = { species_gender = male } }
-                }
-                portraits = {
-                    Perro_m
-                }
-            }
-            add = {
-                trigger = {
-                    exists = species
-                    NOT = { species = { species_gender = female } }
-                }
-                portraits = {
-                    Perro_f
-                }
-            }
-        }
-
-        #pop scope
-        pop = { #for a specific pop
-            add = {
-                trigger = {
-                    NOT = { species = { species_gender = male } }
-                }
-                portraits = {
-                    Perro_f
-                }
-            }
-            add = {
-                trigger = {
-                    NOT = { species = { species_gender = female } }
-                }
-                portraits = {
-                    Perro_m
-                }
-            }
-        }
-
-        leader = {
-            add = {
-                trigger = {
-                    OR = {
-                        gender = male
-                        gender = indeterminable
-                    }
-                }
-                portraits = {
-                    Perro_m
-                }
-            }
-            add = {
-                trigger = {
-                    OR = {
-                        gender = female
-                        gender = indeterminable
-                    }
-                }
-                portraits = {
-                    Perro_f
-                }
-            }
-        }
-
-        ruler = {
-            add = {
-                trigger = {
-                    OR = {
-                        gender = male
-                        gender = indeterminable
-                    }
-                }
-                portraits = {
-                    Perro_m
-                }
-            }
-            add = {
-                trigger = {
-                    OR = {
-                        gender = female
-                        gender = indeterminable
-                    }
-                }
-                portraits = {
-                    Perro_f
                 }
             }
         }
