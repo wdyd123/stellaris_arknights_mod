@@ -35,22 +35,6 @@ country_event = {
                 save_event_target_as = operator_country
             }
         }
-        event_target:operator_country = {
-            create_species = {
-                name = "NAME_Unknown"
-                class = TERRA
-                portrait = Perro_m #Exakeides portrait
-                namelist = "PRT1"
-                traits = {
-                    trait = "trait_enduring"
-                    trait = "trait_quick_learners"
-                    trait = "trait_erudite"
-                }
-                effect = {
-                    save_event_target_as = operator_species
-                }
-            }
-        }
         if = {
             limit = {
                 AND = {
@@ -361,6 +345,22 @@ country_event = {
     option = {
         name = arknights_recruitment.1.silverash
         trigger = { has_country_flag = recruited_silverash }
+        event_target:operator_country = {
+            create_species = {
+                name = "silverash"
+                class = TERRA
+                portrait = SilverAsh
+                namelist = "PRT1"
+                traits = {
+                    trait = "trait_enduring"
+                    trait = "trait_quick_learners"
+                    trait = "trait_erudite"
+                }
+                effect = {
+                    save_event_target_as = operator_species
+                }
+            }
+        }
         create_leader = {
             class = commander
             species = event_target:operator_species
@@ -379,6 +379,22 @@ country_event = {
     option = {
         name = arknights_recruitment.1.chen
         trigger = { has_country_flag = recruited_chen }
+        event_target:operator_country = {
+            create_species = {
+                name = "chen"
+                class = TERRA
+                portrait = Chen
+                namelist = "PRT1"
+                traits = {
+                    trait = "trait_enduring"
+                    trait = "trait_quick_learners"
+                    trait = "trait_erudite"
+                }
+                effect = {
+                    save_event_target_as = operator_species
+                }
+            }
+        }
         create_leader = {
             class = commander
             species = event_target:operator_species
@@ -397,6 +413,22 @@ country_event = {
     option = {
         name = arknights_recruitment.1.exusiai
         trigger = { has_country_flag = recruited_exusiai }
+        event_target:operator_country = {
+            create_species = {
+                name = "exusiai"
+                class = TERRA
+                portrait = Exusiai
+                namelist = "PRT1"
+                traits = {
+                    trait = "trait_enduring"
+                    trait = "trait_quick_learners"
+                    trait = "trait_erudite"
+                }
+                effect = {
+                    save_event_target_as = operator_species
+                }
+            }
+        }
         create_leader = {
             class = commander
             species = event_target:operator_species
@@ -415,6 +447,22 @@ country_event = {
     option = {
         name = arknights_recruitment.1.eyjafjalla
         trigger = { has_country_flag = recruited_eyjafjalla }
+        event_target:operator_country = {
+            create_species = {
+                name = "eyjafjalla"
+                class = TERRA
+                portrait = Eyjafjalla
+                namelist = "PRT1"
+                traits = {
+                    trait = "trait_enduring"
+                    trait = "trait_quick_learners"
+                    trait = "trait_erudite"
+                }
+                effect = {
+                    save_event_target_as = operator_species
+                }
+            }
+        }
         create_leader = {
             class = scientist
             species = event_target:operator_species
@@ -433,6 +481,22 @@ country_event = {
     option = {
         name = arknights_recruitment.1.saria
         trigger = { has_country_flag = recruited_saria }
+        event_target:operator_country = {
+            create_species = {
+                name = "saria"
+                class = TERRA
+                portrait = Saria
+                namelist = "PRT1"
+                traits = {
+                    trait = "trait_enduring"
+                    trait = "trait_quick_learners"
+                    trait = "trait_erudite"
+                }
+                effect = {
+                    save_event_target_as = operator_species
+                }
+            }
+        }
         create_leader = {
             class = commander
             species = event_target:operator_species
@@ -450,6 +514,22 @@ country_event = {
     option = {
         name = arknights_recruitment.1.ifrit
         trigger = { has_country_flag = recruited_ifrit }
+        event_target:operator_country = {
+            create_species = {
+                name = "ifrit"
+                class = TERRA
+                portrait = Ifrit
+                namelist = "PRT1"
+                traits = {
+                    trait = "trait_enduring"
+                    trait = "trait_quick_learners"
+                    trait = "trait_erudite"
+                }
+                effect = {
+                    save_event_target_as = operator_species
+                }
+            }
+        }
         create_leader = {
             class = scientist
             species = event_target:operator_species
@@ -468,6 +548,22 @@ country_event = {
     option = {
         name = arknights_recruitment.1.shining
         trigger = { has_country_flag = recruited_shining }
+        event_target:operator_country = {
+            create_species = {
+                name = "shining"
+                class = TERRA
+                portrait = Shining
+                namelist = "PRT1"
+                traits = {
+                    trait = "trait_enduring"
+                    trait = "trait_quick_learners"
+                    trait = "trait_erudite"
+                }
+                effect = {
+                    save_event_target_as = operator_species
+                }
+            }
+        }
         add_monthly_resource_mult = {
             resource = society_research
             value = 3
@@ -491,6 +587,22 @@ country_event = {
     option = {
         name = arknights_recruitment.1.nightingale
         trigger = { has_country_flag = recruited_nightingale }
+        event_target:operator_country = {
+            create_species = {
+                name = "nightingale"
+                class = TERRA
+                portrait = Nightingale
+                namelist = "PRT1"
+                traits = {
+                    trait = "trait_enduring"
+                    trait = "trait_quick_learners"
+                    trait = "trait_erudite"
+                }
+                effect = {
+                    save_event_target_as = operator_species
+                }
+            }
+        }
         add_monthly_resource_mult = {
             resource = society_research
             value = 3
@@ -514,6 +626,22 @@ country_event = {
     option = {
         name = arknights_recruitment.1.hoshiguma
         trigger = { has_country_flag = recruited_hoshiguma }
+        event_target:operator_country = {
+            create_species = {
+                name = "hoshiguma"
+                class = TERRA
+                portrait = Hoshiguma
+                namelist = "PRT1"
+                traits = {
+                    trait = "trait_enduring"
+                    trait = "trait_quick_learners"
+                    trait = "trait_erudite"
+                }
+                effect = {
+                    save_event_target_as = operator_species
+                }
+            }
+        }
         create_leader = {
             class = commander
             species = event_target:operator_species
@@ -532,6 +660,22 @@ country_event = {
     option = {
         name = arknights_recruitment.1.schwarz
         trigger = { has_country_flag = recruited_schwarz }
+        event_target:operator_country = {
+            create_species = {
+                name = "schwarz"
+                class = TERRA
+                portrait = Schwarz
+                namelist = "PRT1"
+                traits = {
+                    trait = "trait_enduring"
+                    trait = "trait_quick_learners"
+                    trait = "trait_erudite"
+                }
+                effect = {
+                    save_event_target_as = operator_species
+                }
+            }
+        }
         create_leader = {
             class = commander
             species = event_target:operator_species
@@ -550,6 +694,22 @@ country_event = {
     option = {
         name = arknights_recruitment.1.blaze
         trigger = { has_country_flag = recruited_blaze }
+        event_target:operator_country = {
+            create_species = {
+                name = "blaze"
+                class = TERRA
+                portrait = Blaze
+                namelist = "PRT1"
+                traits = {
+                    trait = "trait_enduring"
+                    trait = "trait_quick_learners"
+                    trait = "trait_erudite"
+                }
+                effect = {
+                    save_event_target_as = operator_species
+                }
+            }
+        }
         create_leader = {
             class = commander
             species = event_target:operator_species
@@ -568,6 +728,22 @@ country_event = {
     option = {
         name = arknights_recruitment.1.weedy
         trigger = { has_country_flag = recruited_weedy }
+        event_target:operator_country = {
+            create_species = {
+                name = "weedy"
+                class = TERRA
+                portrait = Weedy
+                namelist = "PRT1"
+                traits = {
+                    trait = "trait_enduring"
+                    trait = "trait_quick_learners"
+                    trait = "trait_erudite"
+                }
+                effect = {
+                    save_event_target_as = operator_species
+                }
+            }
+        }
         add_monthly_resource_mult = {
             resource = influence
             value = 3
@@ -592,6 +768,22 @@ country_event = {
     option = {
         name = arknights_recruitment.1.w
         trigger = { has_country_flag = recruited_w }
+        event_target:operator_country = {
+            create_species = {
+                name = "w"
+                class = TERRA
+                portrait = W
+                namelist = "PRT1"
+                traits = {
+                    trait = "trait_enduring"
+                    trait = "trait_quick_learners"
+                    trait = "trait_erudite"
+                }
+                effect = {
+                    save_event_target_as = operator_species
+                }
+            }
+        }
         create_leader = {
             class = commander
             species = event_target:operator_species
@@ -609,6 +801,22 @@ country_event = {
     option = {
         name = arknights_recruitment.1.skadi_alter
         trigger = { has_country_flag = recruited_skadi_alter }
+        event_target:operator_country = {
+            create_species = {
+                name = "skadi_alter"
+                class = TERRA
+                portrait = SkadiAlter
+                namelist = "PRT1"
+                traits = {
+                    trait = "trait_enduring"
+                    trait = "trait_quick_learners"
+                    trait = "trait_erudite"
+                }
+                effect = {
+                    save_event_target_as = operator_species
+                }
+            }
+        }
         add_monthly_resource_mult = {
             resource = unity
             value = 4
@@ -632,6 +840,22 @@ country_event = {
     option = {
         name = arknights_recruitment.1.surtr
         trigger = { has_country_flag = recruited_surtr }
+        event_target:operator_country = {
+            create_species = {
+                name = "surtr"
+                class = TERRA
+                portrait = Surtr
+                namelist = "PRT1"
+                traits = {
+                    trait = "trait_enduring"
+                    trait = "trait_quick_learners"
+                    trait = "trait_erudite"
+                }
+                effect = {
+                    save_event_target_as = operator_species
+                }
+            }
+        }
         create_leader = {
             class = commander
             species = event_target:operator_species
@@ -649,6 +873,22 @@ country_event = {
     option = {
         name = arknights_recruitment.1.thorns
         trigger = { has_country_flag = recruited_thorns }
+        event_target:operator_country = {
+            create_species = {
+                name = "thorns"
+                class = TERRA
+                portrait = Thorns
+                namelist = "PRT1"
+                traits = {
+                    trait = "trait_enduring"
+                    trait = "trait_quick_learners"
+                    trait = "trait_erudite"
+                }
+                effect = {
+                    save_event_target_as = operator_species
+                }
+            }
+        }
         create_leader = {
             class = commander
             species = event_target:operator_species
@@ -667,6 +907,22 @@ country_event = {
     option = {
         name = arknights_recruitment.1.mudrock
         trigger = { has_country_flag = recruited_mudrock }
+        event_target:operator_country = {
+            create_species = {
+                name = "mudrock"
+                class = TERRA
+                portrait = Mudrock
+                namelist = "PRT1"
+                traits = {
+                    trait = "trait_enduring"
+                    trait = "trait_quick_learners"
+                    trait = "trait_erudite"
+                }
+                effect = {
+                    save_event_target_as = operator_species
+                }
+            }
+        }
         create_leader = {
             class = commander
             species = event_target:operator_species
@@ -684,11 +940,28 @@ country_event = {
     option = {
         name = arknights_recruitment.1.ash
         trigger = { has_country_flag = recruited_ash }
+        event_target:operator_country = {
+            create_species = {
+                name = "ash"
+                class = TERRA
+                portrait = Ash
+                namelist = "PRT1"
+                traits = {
+                    trait = "trait_enduring"
+                    trait = "trait_quick_learners"
+                    trait = "trait_erudite"
+                }
+                effect = {
+                    save_event_target_as = operator_species
+                }
+            }
+        }
         create_leader = {
             class = commander
             species = event_target:operator_species
             name = "Ash"
             skill = 4
+
             traits = {
                 trait = leader_trait_aggressive
                 trait = leader_trait_butcher
@@ -702,6 +975,22 @@ country_event = {
     option = {
         name = arknights_recruitment.1.kaltsit
         trigger = { has_country_flag = recruited_kaltsit }
+        event_target:operator_country = {
+            create_species = {
+                name = "kaltsit"
+                class = TERRA
+                portrait = Kaltsit
+                namelist = "PRT1"
+                traits = {
+                    trait = "trait_enduring"
+                    trait = "trait_quick_learners"
+                    trait = "trait_erudite"
+                }
+                effect = {
+                    save_event_target_as = operator_species
+                }
+            }
+        }
         add_monthly_resource_mult = {
             resource = society_research
             value = 3
@@ -726,6 +1015,22 @@ country_event = {
     option = {
         name = arknights_recruitment.1.skadi
         trigger = { has_country_flag = recruited_skadi }
+        event_target:operator_country = {
+            create_species = {
+                name = "skadi"
+                class = TERRA
+                portrait = Skadi
+                namelist = "PRT1"
+                traits = {
+                    trait = "trait_enduring"
+                    trait = "trait_quick_learners"
+                    trait = "trait_erudite"
+                }
+                effect = {
+                    save_event_target_as = operator_species
+                }
+            }
+        }
         add_monthly_resource_mult = {
             resource = influence
             value = 3
@@ -750,6 +1055,22 @@ country_event = {
     option = {
         name = arknights_recruitment.1.siege
         trigger = { has_country_flag = recruited_siege }
+        event_target:operator_country = {
+            create_species = {
+                name = "siege"
+                class = TERRA
+                portrait = Siege
+                namelist = "PRT1"
+                traits = {
+                    trait = "trait_enduring"
+                    trait = "trait_quick_learners"
+                    trait = "trait_erudite"
+                }
+                effect = {
+                    save_event_target_as = operator_species
+                }
+            }
+        }
         add_monthly_resource_mult = {
             resource = energy
             value = 4
@@ -774,6 +1095,22 @@ country_event = {
     option = {
         name = arknights_recruitment.1.bagpipe
         trigger = { has_country_flag = recruited_bagpipe }
+        event_target:operator_country = {
+            create_species = {
+                name = "bagpipe"
+                class = TERRA
+                portrait = Bagpipe
+                namelist = "PRT1"
+                traits = {
+                    trait = "trait_enduring"
+                    trait = "trait_quick_learners"
+                    trait = "trait_erudite"
+                }
+                effect = {
+                    save_event_target_as = operator_species
+                }
+            }
+        }
         add_monthly_resource_mult = {
             resource = energy
             value = 4
@@ -798,6 +1135,22 @@ country_event = {
     option = {
         name = arknights_recruitment.1.phantom
         trigger = { has_country_flag = recruited_phantom }
+        event_target:operator_country = {
+            create_species = {
+                name = "phantom"
+                class = TERRA
+                portrait = Phantom
+                namelist = "PRT1"
+                traits = {
+                    trait = "trait_enduring"
+                    trait = "trait_quick_learners"
+                    trait = "trait_erudite"
+                }
+                effect = {
+                    save_event_target_as = operator_species
+                }
+            }
+        }
         add_monthly_resource_mult = {
             resource = influence
             value = 3
@@ -822,6 +1175,22 @@ country_event = {
     option = {
         name = arknights_recruitment.1.suzuran
         trigger = { has_country_flag = recruited_suzuran }
+        event_target:operator_country = {
+            create_species = {
+                name = "suzuran"
+                class = TERRA
+                portrait = Suzuran
+                namelist = "PRT1"
+                traits = {
+                    trait = "trait_enduring"
+                    trait = "trait_quick_learners"
+                    trait = "trait_erudite"
+                }
+                effect = {
+                    save_event_target_as = operator_species
+                }
+            }
+        }
         add_monthly_resource_mult = {
             resource = unity
             value = 4
@@ -845,6 +1214,22 @@ country_event = {
     option = {
         name = arknights_recruitment.1.nian
         trigger = { has_country_flag = recruited_nian }
+        event_target:operator_country = {
+            create_species = {
+                name = "nian"
+                class = TERRA
+                portrait = Nian
+                namelist = "PRT1"
+                traits = {
+                    trait = "trait_enduring"
+                    trait = "trait_quick_learners"
+                    trait = "trait_erudite"
+                }
+                effect = {
+                    save_event_target_as = operator_species
+                }
+            }
+        }
         add_monthly_resource_mult = {
             resource = alloys
             value = 4
@@ -867,78 +1252,366 @@ country_event = {
 
     # 5星干员选项
     option = {
-        name = arknights_recruitment.1.5star
-        trigger = {
-            OR = {
-                has_country_flag = recruited_platinum
-                has_country_flag = recruited_blue_poison
-                has_country_flag = recruited_specter
-                has_country_flag = recruited_lappland
-                has_country_flag = recruited_texas
-                has_country_flag = recruited_pramanix
-                has_country_flag = recruited_ptilopsis
-                has_country_flag = recruited_silence
-                has_country_flag = recruited_warfarin
-                has_country_flag = recruited_zima
-                has_country_flag = recruited_elysium
+        name = arknights_recruitment.1.platinum
+        trigger = { has_country_flag = recruited_platinum }
+        event_target:operator_country = {
+            create_species = {
+                name = "platinum"
+                class = TERRA
+                portrait = Platinum
+                namelist = "PRT1"
+                traits = {
+                    trait = "trait_enduring"
+                    trait = "trait_quick_learners"
+                    trait = "trait_erudite"
+                }
+                effect = {
+                    save_event_target_as = operator_species
+                }
             }
         }
         create_leader = {
-            class = random
+            class = commander
             species = event_target:operator_species
-            name = random
+            name = "Platinum"
             skill = 3
             traits = {
-                trait = random_trait
+                trait = leader_trait_cautious
             }
             event_leader = yes
         }
-        # 设置对应的永久标志
-        if = {
-            limit = { has_country_flag = recruited_platinum }
-            set_country_flag = recruited_platinum_permanent
+        set_country_flag = recruited_platinum_permanent
+        custom_tooltip = arknights_recruitment.platinum.tooltip
+    }
+
+    option = {
+        name = arknights_recruitment.1.blue_poison
+        trigger = { has_country_flag = recruited_blue_poison }
+        event_target:operator_country = {
+            create_species = {
+                name = "blue_poison"
+                class = TERRA
+                portrait = BluePoison
+                namelist = "PRT1"
+                traits = {
+                    trait = "trait_enduring"
+                    trait = "trait_quick_learners"
+                    trait = "trait_erudite"
+                }
+                effect = {
+                    save_event_target_as = operator_species
+                }
+            }
         }
-        if = {
-            limit = { has_country_flag = recruited_blue_poison }
-            set_country_flag = recruited_blue_poison_permanent
+        create_leader = {
+            class = commander
+            species = event_target:operator_species
+            name = "Blue Poison"
+            skill = 3
+            traits = {
+                trait = leader_trait_trickster
+            }
+            event_leader = yes
         }
-        if = {
-            limit = { has_country_flag = recruited_specter }
-            set_country_flag = recruited_specter_permanent
+        set_country_flag = recruited_blue_poison_permanent
+        custom_tooltip = arknights_recruitment.blue_poison.tooltip
+    }
+
+    option = {
+        name = arknights_recruitment.1.specter
+        trigger = { has_country_flag = recruited_specter }
+        event_target:operator_country = {
+            create_species = {
+                name = "specter"
+                class = TERRA
+                portrait = Specter
+                namelist = "PRT1"
+                traits = {
+                    trait = "trait_enduring"
+                    trait = "trait_quick_learners"
+                    trait = "trait_erudite"
+                }
+                effect = {
+                    save_event_target_as = operator_species
+                }
+            }
         }
-        if = {
-            limit = { has_country_flag = recruited_lappland }
-            set_country_flag = recruited_lappland_permanent
+        create_leader = {
+            class = commander
+            species = event_target:operator_species
+            name = "Specter"
+            skill = 3
+            traits = {
+                trait = leader_trait_aggressive
+            }
+            event_leader = yes
         }
-        if = {
-            limit = { has_country_flag = recruited_texas }
-            set_country_flag = recruited_texas_permanent
+        set_country_flag = recruited_specter_permanent
+        custom_tooltip = arknights_recruitment.specter.tooltip
+    }
+
+    option = {
+        name = arknights_recruitment.1.lappland
+        trigger = { has_country_flag = recruited_lappland }
+        event_target:operator_country = {
+            create_species = {
+                name = "lappland"
+                class = TERRA
+                portrait = Lappland
+                namelist = "PRT1"
+                traits = {
+                    trait = "trait_enduring"
+                    trait = "trait_quick_learners"
+                    trait = "trait_erudite"
+                }
+                effect = {
+                    save_event_target_as = operator_species
+                }
+            }
         }
-        if = {
-            limit = { has_country_flag = recruited_pramanix }
-            set_country_flag = recruited_pramanix_permanent
+        create_leader = {
+            class = commander
+            species = event_target:operator_species
+            name = "Lappland"
+            skill = 3
+            traits = {
+                trait = leader_trait_aggressive
+            }
+            event_leader = yes
         }
-        if = {
-            limit = { has_country_flag = recruited_ptilopsis }
-            set_country_flag = recruited_ptilopsis_permanent
+        set_country_flag = recruited_lappland_permanent
+        custom_tooltip = arknights_recruitment.lappland.tooltip
+    }
+
+    option = {
+        name = arknights_recruitment.1.texas
+        trigger = { has_country_flag = recruited_texas }
+        event_target:operator_country = {
+            create_species = {
+                name = "texas"
+                class = TERRA
+                portrait = Texas
+                namelist = "PRT1"
+                traits = {
+                    trait = "trait_enduring"
+                    trait = "trait_quick_learners"
+                    trait = "trait_erudite"
+                }
+                effect = {
+                    save_event_target_as = operator_species
+                }
+            }
         }
-        if = {
-            limit = { has_country_flag = recruited_silence }
-            set_country_flag = recruited_silence_permanent
+        create_leader = {
+            class = commander
+            species = event_target:operator_species
+            name = "Texas"
+            skill = 3
+            traits = {
+                trait = leader_trait_fleet_logistician
+            }
+            event_leader = yes
         }
-        if = {
-            limit = { has_country_flag = recruited_warfarin }
-            set_country_flag = recruited_warfarin_permanent
+        set_country_flag = recruited_texas_permanent
+        custom_tooltip = arknights_recruitment.texas.tooltip
+    }
+
+    option = {
+        name = arknights_recruitment.1.pramanix
+        trigger = { has_country_flag = recruited_pramanix }
+        event_target:operator_country = {
+            create_species = {
+                name = "pramanix"
+                class = TERRA
+                portrait = Pramanix
+                namelist = "PRT1"
+                traits = {
+                    trait = "trait_enduring"
+                    trait = "trait_quick_learners"
+                    trait = "trait_erudite"
+                }
+                effect = {
+                    save_event_target_as = operator_species
+                }
+            }
         }
-        if = {
-            limit = { has_country_flag = recruited_zima }
-            set_country_flag = recruited_zima_permanent
+        create_leader = {
+            class = scientist
+            species = event_target:operator_species
+            name = "Pramanix"
+            skill = 3
+            traits = {
+                trait = leader_trait_expertise_statecraft
+            }
+            event_leader = yes
         }
-        if = {
-            limit = { has_country_flag = recruited_elysium }
-            set_country_flag = recruited_elysium_permanent
+        set_country_flag = recruited_pramanix_permanent
+        custom_tooltip = arknights_recruitment.pramanix.tooltip
+    }
+
+    option = {
+        name = arknights_recruitment.1.ptilopsis
+        trigger = { has_country_flag = recruited_ptilopsis }
+        event_target:operator_country = {
+            create_species = {
+                name = "ptilopsis"
+                class = TERRA
+                portrait = Ptilopsis
+                namelist = "PRT1"
+                traits = {
+                    trait = "trait_enduring"
+                    trait = "trait_quick_learners"
+                    trait = "trait_erudite"
+                }
+                effect = {
+                    save_event_target_as = operator_species
+                }
+            }
         }
-        custom_tooltip = arknights_recruitment.5star.tooltip
+        create_leader = {
+            class = scientist
+            species = event_target:operator_species
+            name = "Ptilopsis"
+            skill = 3
+            traits = {
+                trait = leader_trait_expertise_biology
+            }
+            event_leader = yes
+        }
+        set_country_flag = recruited_ptilopsis_permanent
+        custom_tooltip = arknights_recruitment.ptilopsis.tooltip
+    }
+
+    option = {
+        name = arknights_recruitment.1.silence
+        trigger = { has_country_flag = recruited_silence }
+        event_target:operator_country = {
+            create_species = {
+                name = "silence"
+                class = TERRA
+                portrait = Silence
+                namelist = "PRT1"
+                traits = {
+                    trait = "trait_enduring"
+                    trait = "trait_quick_learners"
+                    trait = "trait_erudite"
+                }
+                effect = {
+                    save_event_target_as = operator_species
+                }
+            }
+        }
+        create_leader = {
+            class = scientist
+            species = event_target:operator_species
+            name = "Silence"
+            skill = 3
+            traits = {
+                trait = leader_trait_expertise_biology
+            }
+            event_leader = yes
+        }
+        set_country_flag = recruited_silence_permanent
+        custom_tooltip = arknights_recruitment.silence.tooltip
+    }
+
+    option = {
+        name = arknights_recruitment.1.warfarin
+        trigger = { has_country_flag = recruited_warfarin }
+        event_target:operator_country = {
+            create_species = {
+                name = "warfarin"
+                class = TERRA
+                portrait = Warfarin
+                namelist = "PRT1"
+                traits = {
+                    trait = "trait_enduring"
+                    trait = "trait_quick_learners"
+                    trait = "trait_erudite"
+                }
+                effect = {
+                    save_event_target_as = operator_species
+                }
+            }
+        }
+        create_leader = {
+            class = scientist
+            species = event_target:operator_species
+            name = "Warfarin"
+            skill = 3
+            traits = {
+                trait = leader_trait_expertise_biology
+            }
+            event_leader = yes
+        }
+        set_country_flag = recruited_warfarin_permanent
+        custom_tooltip = arknights_recruitment.warfarin.tooltip
+    }
+
+    option = {
+        name = arknights_recruitment.1.zima
+        trigger = { has_country_flag = recruited_zima }
+        event_target:operator_country = {
+            create_species = {
+                name = "zima"
+                class = TERRA
+                portrait = Zima
+                namelist = "PRT1"
+                traits = {
+                    trait = "trait_enduring"
+                    trait = "trait_quick_learners"
+                    trait = "trait_erudite"
+                }
+                effect = {
+                    save_event_target_as = operator_species
+                }
+            }
+        }
+        create_leader = {
+            class = commander
+            species = event_target:operator_species
+            name = "Zima"
+            skill = 3
+            traits = {
+                trait = leader_trait_fleet_logistician
+            }
+            event_leader = yes
+        }
+        set_country_flag = recruited_zima_permanent
+        custom_tooltip = arknights_recruitment.zima.tooltip
+    }
+
+    option = {
+        name = arknights_recruitment.1.elysium
+        trigger = { has_country_flag = recruited_elysium }
+        event_target:operator_country = {
+            create_species = {
+                name = "elysium"
+                class = TERRA
+                portrait = Elysium
+                namelist = "PRT1"
+                traits = {
+                    trait = "trait_enduring"
+                    trait = "trait_quick_learners"
+                    trait = "trait_erudite"
+                }
+                effect = {
+                    save_event_target_as = operator_species
+                }
+            }
+        }
+        create_leader = {
+            class = commander
+            species = event_target:operator_species
+            name = "Elysium"
+            skill = 3
+            traits = {
+                trait = leader_trait_fleet_logistician
+            }
+            event_leader = yes
+        }
+        set_country_flag = recruited_elysium_permanent
+        custom_tooltip = arknights_recruitment.elysium.tooltip
     }
 
     # 全部招募完毕的选项

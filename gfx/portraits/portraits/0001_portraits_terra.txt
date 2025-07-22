@@ -7,6 +7,26 @@ portraits = {
 
 }
 
+portraits = {
+    Exusiai = { textureFile = gfx/models/portraits/operator_portraits/Exusiai_cropped.dds }
+    Mechanist = { textureFile = gfx/models/portraits/operator_portraits/Mechanist_cropped.dds }
+    Misery = { textureFile = gfx/models/portraits/operator_portraits/Misery_cropped.dds }
+    Phantom = { textureFile = gfx/models/portraits/operator_portraits/Phantom_cropped.dds }
+    Pith = { textureFile = gfx/models/portraits/operator_portraits/Phantom_cropped.dds }
+    Pramanix = { textureFile = gfx/models/portraits/operator_portraits/Pramanix_cropped.dds }
+    Ptilopsis = { textureFile = gfx/models/portraits/operator_portraits/Ptilopsis_cropped.dds }
+    Raidian = { textureFile = gfx/models/portraits/operator_portraits/Raidian_cropped.dds }
+    Schwarz = { textureFile = gfx/models/portraits/operator_portraits/Schwarz_cropped.dds }
+    Sharp = { textureFile = gfx/models/portraits/operator_portraits/Sharp_cropped.dds }
+    Shining = { textureFile = gfx/models/portraits/operator_portraits/Shining_cropped.dds }
+    Stormeye = { textureFile = gfx/models/portraits/operator_portraits/Stormeye_cropped.dds }
+    Suzuran = { textureFile = gfx/models/portraits/operator_portraits/Suzuran_cropped.dds }
+    Thorns = { textureFile = gfx/models/portraits/operator_portraits/Thorns_cropped.dds }
+    Touch = { textureFile = gfx/models/portraits/operator_portraits/Touch_cropped.dds }
+    Zima = { textureFile = gfx/models/portraits/operator_portraits/Zima_cropped.dds }
+    郁金香 = { textureFile = gfx/models/portraits/operator_portraits/郁金香_cropped.dds }
+
+}
 portrait_groups = {
 
     Liberi = {
