@@ -357,13 +357,13 @@ country_event = {
                     trait = "trait_erudite"
                 }
                 effect = {
-                    save_event_target_as = operator_species
+                    save_event_target_as = silverash_species
                 }
             }
         }
         create_leader = {
             class = commander
-            species = event_target:operator_species
+            species = event_target:silverash_species
             name = "SilverAsh"
             skill = 4
             traits = {
@@ -391,13 +391,13 @@ country_event = {
                     trait = "trait_erudite"
                 }
                 effect = {
-                    save_event_target_as = operator_species
+                    save_event_target_as = chen_species
                 }
             }
         }
         create_leader = {
             class = commander
-            species = event_target:operator_species
+            species = event_target:chen_species
             name = "Ch'en"
             skill = 4
             traits = {
@@ -425,13 +425,13 @@ country_event = {
                     trait = "trait_erudite"
                 }
                 effect = {
-                    save_event_target_as = operator_species
+                    save_event_target_as = exusiai_species
                 }
             }
         }
         create_leader = {
             class = commander
-            species = event_target:operator_species
+            species = event_target:exusiai_species
             name = "Exusiai"
             skill = 4
             traits = {
@@ -459,13 +459,13 @@ country_event = {
                     trait = "trait_erudite"
                 }
                 effect = {
-                    save_event_target_as = operator_species
+                    save_event_target_as = eyjafjalla_species
                 }
             }
         }
         create_leader = {
             class = scientist
-            species = event_target:operator_species
+            species = event_target:eyjafjalla_species
             name = "Eyjafjalla"
             skill = 4
             traits = {
@@ -493,13 +493,13 @@ country_event = {
                     trait = "trait_erudite"
                 }
                 effect = {
-                    save_event_target_as = operator_species
+                    save_event_target_as = saria_species
                 }
             }
         }
         create_leader = {
             class = commander
-            species = event_target:operator_species
+            species = event_target:saria_species
             name = "Saria"
             skill = 4
             traits = {
@@ -526,13 +526,13 @@ country_event = {
                     trait = "trait_erudite"
                 }
                 effect = {
-                    save_event_target_as = operator_species
+                    save_event_target_as = ifrit_species
                 }
             }
         }
         create_leader = {
             class = scientist
-            species = event_target:operator_species
+            species = event_target:ifrit_species
             name = "Ifrit"
             skill = 4
             traits = {
@@ -560,7 +560,7 @@ country_event = {
                     trait = "trait_erudite"
                 }
                 effect = {
-                    save_event_target_as = operator_species
+                    save_event_target_as = shining_species
                 }
             }
         }
@@ -572,7 +572,7 @@ country_event = {
         }
         create_leader = {
             class = scientist
-            species = event_target:operator_species
+            species = event_target:shining_species
             name = "Shining"
             skill = 4
             traits = {
@@ -599,7 +599,7 @@ country_event = {
                     trait = "trait_erudite"
                 }
                 effect = {
-                    save_event_target_as = operator_species
+                    save_event_target_as = nightingale_species
                 }
             }
         }
@@ -611,7 +611,7 @@ country_event = {
         }
         create_leader = {
             class = scientist
-            species = event_target:operator_species
+            species = event_target:nightingale_species
             name = "Nightingale"
             skill = 4
             traits = {
@@ -638,13 +638,13 @@ country_event = {
                     trait = "trait_erudite"
                 }
                 effect = {
-                    save_event_target_as = operator_species
+                    save_event_target_as = hoshiguma_species
                 }
             }
         }
         create_leader = {
             class = commander
-            species = event_target:operator_species
+            species = event_target:hoshiguma_species
             name = "Hoshiguma"
             skill = 4
             traits = {
@@ -672,13 +672,13 @@ country_event = {
                     trait = "trait_erudite"
                 }
                 effect = {
-                    save_event_target_as = operator_species
+                    save_event_target_as = schwarz_species
                 }
             }
         }
         create_leader = {
             class = commander
-            species = event_target:operator_species
+            species = event_target:schwarz_species
             name = "Schwarz"
             skill = 4
             traits = {
@@ -706,13 +706,13 @@ country_event = {
                     trait = "trait_erudite"
                 }
                 effect = {
-                    save_event_target_as = operator_species
+                    save_event_target_as = blaze_species
                 }
             }
         }
         create_leader = {
             class = commander
-            species = event_target:operator_species
+            species = event_target:blaze_species
             name = "Blaze"
             skill = 4
             traits = {
@@ -740,7 +740,7 @@ country_event = {
                     trait = "trait_erudite"
                 }
                 effect = {
-                    save_event_target_as = operator_species
+                    save_event_target_as = weedy_species
                 }
             }
         }
@@ -752,7 +752,7 @@ country_event = {
         }
         create_leader = {
             class = commander
-            species = event_target:operator_species
+            species = event_target:weedy_species
             name = "Weedy"
             skill = 4
             traits = {
@@ -780,13 +780,13 @@ country_event = {
                     trait = "trait_erudite"
                 }
                 effect = {
-                    save_event_target_as = operator_species
+                    save_event_target_as = w_species
                 }
             }
         }
         create_leader = {
             class = commander
-            species = event_target:operator_species
+            species = event_target:w_species
             name = "W"
             skill = 4
             traits = {
@@ -813,7 +813,7 @@ country_event = {
                     trait = "trait_erudite"
                 }
                 effect = {
-                    save_event_target_as = operator_species
+                    save_event_target_as = skadi_alter_species
                 }
             }
         }
@@ -825,7 +825,7 @@ country_event = {
         }
         create_leader = {
             class = scientist
-            species = event_target:operator_species
+            species = event_target:skadi_alter_species
             name = "Skadi the Corrupting Heart"
             skill = 4
             traits = {
@@ -852,13 +852,13 @@ country_event = {
                     trait = "trait_erudite"
                 }
                 effect = {
-                    save_event_target_as = operator_species
+                    save_event_target_as = surtr_species
                 }
             }
         }
         create_leader = {
             class = commander
-            species = event_target:operator_species
+            species = event_target:surtr_species
             name = "Surtr"
             skill = 4
             traits = {
@@ -885,13 +885,13 @@ country_event = {
                     trait = "trait_erudite"
                 }
                 effect = {
-                    save_event_target_as = operator_species
+                    save_event_target_as = thorns_species
                 }
             }
         }
         create_leader = {
             class = commander
-            species = event_target:operator_species
+            species = event_target:thorns_species
             name = "Thorns"
             skill = 4
             traits = {
@@ -919,13 +919,13 @@ country_event = {
                     trait = "trait_erudite"
                 }
                 effect = {
-                    save_event_target_as = operator_species
+                    save_event_target_as = mudrock_species
                 }
             }
         }
         create_leader = {
             class = commander
-            species = event_target:operator_species
+            species = event_target:mudrock_species
             name = "Mudrock"
             skill = 4
             traits = {
@@ -952,13 +952,13 @@ country_event = {
                     trait = "trait_erudite"
                 }
                 effect = {
-                    save_event_target_as = operator_species
+                    save_event_target_as = ash_species
                 }
             }
         }
         create_leader = {
             class = commander
-            species = event_target:operator_species
+            species = event_target:ash_species
             name = "Ash"
             skill = 4
 
@@ -987,7 +987,7 @@ country_event = {
                     trait = "trait_erudite"
                 }
                 effect = {
-                    save_event_target_as = operator_species
+                    save_event_target_as = kaltsit_species
                 }
             }
         }
@@ -999,7 +999,7 @@ country_event = {
         }
         create_leader = {
             class = scientist
-            species = event_target:operator_species
+            species = event_target:kaltsit_species
             name = "Kal'tsit"
             skill = 4
             traits = {
@@ -1027,7 +1027,7 @@ country_event = {
                     trait = "trait_erudite"
                 }
                 effect = {
-                    save_event_target_as = operator_species
+                    save_event_target_as = skadi_species
                 }
             }
         }
@@ -1039,7 +1039,7 @@ country_event = {
         }
         create_leader = {
             class = commander
-            species = event_target:operator_species
+            species = event_target:skadi_species
             name = "Skadi"
             skill = 4
             traits = {
@@ -1067,7 +1067,7 @@ country_event = {
                     trait = "trait_erudite"
                 }
                 effect = {
-                    save_event_target_as = operator_species
+                    save_event_target_as = siege_species
                 }
             }
         }
@@ -1079,7 +1079,7 @@ country_event = {
         }
         create_leader = {
             class = commander
-            species = event_target:operator_species
+            species = event_target:siege_species
             name = "Siege"
             skill = 4
             traits = {
@@ -1107,7 +1107,7 @@ country_event = {
                     trait = "trait_erudite"
                 }
                 effect = {
-                    save_event_target_as = operator_species
+                    save_event_target_as = bagpipe_species
                 }
             }
         }
@@ -1119,7 +1119,7 @@ country_event = {
         }
         create_leader = {
             class = commander
-            species = event_target:operator_species
+            species = event_target:bagpipe_species
             name = "Bagpipe"
             skill = 4
             traits = {
@@ -1147,7 +1147,7 @@ country_event = {
                     trait = "trait_erudite"
                 }
                 effect = {
-                    save_event_target_as = operator_species
+                    save_event_target_as = phantom_species
                 }
             }
         }
@@ -1159,7 +1159,7 @@ country_event = {
         }
         create_leader = {
             class = commander
-            species = event_target:operator_species
+            species = event_target:phantom_species
             name = "Phantom"
             skill = 4
             traits = {
@@ -1187,7 +1187,7 @@ country_event = {
                     trait = "trait_erudite"
                 }
                 effect = {
-                    save_event_target_as = operator_species
+                    save_event_target_as = suzuran_species
                 }
             }
         }
@@ -1199,7 +1199,7 @@ country_event = {
         }
         create_leader = {
             class = scientist
-            species = event_target:operator_species
+            species = event_target:suzuran_species
             name = "Suzuran"
             skill = 4
             traits = {
@@ -1226,7 +1226,7 @@ country_event = {
                     trait = "trait_erudite"
                 }
                 effect = {
-                    save_event_target_as = operator_species
+                    save_event_target_as = nian_species
                 }
             }
         }
@@ -1238,7 +1238,7 @@ country_event = {
         }
         create_leader = {
             class = commander
-            species = event_target:operator_species
+            species = event_target:nian_species
             name = "Nian"
             skill = 4
             traits = {
@@ -1266,13 +1266,13 @@ country_event = {
                     trait = "trait_erudite"
                 }
                 effect = {
-                    save_event_target_as = operator_species
+                    save_event_target_as = platinum_species
                 }
             }
         }
         create_leader = {
             class = commander
-            species = event_target:operator_species
+            species = event_target:platinum_species
             name = "Platinum"
             skill = 3
             traits = {
@@ -1299,13 +1299,13 @@ country_event = {
                     trait = "trait_erudite"
                 }
                 effect = {
-                    save_event_target_as = operator_species
+                    save_event_target_as = blue_poison_species
                 }
             }
         }
         create_leader = {
             class = commander
-            species = event_target:operator_species
+            species = event_target:blue_poison_species
             name = "Blue Poison"
             skill = 3
             traits = {
@@ -1332,13 +1332,13 @@ country_event = {
                     trait = "trait_erudite"
                 }
                 effect = {
-                    save_event_target_as = operator_species
+                    save_event_target_as = specter_species
                 }
             }
         }
         create_leader = {
             class = commander
-            species = event_target:operator_species
+            species = event_target:specter_species
             name = "Specter"
             skill = 3
             traits = {
@@ -1365,13 +1365,13 @@ country_event = {
                     trait = "trait_erudite"
                 }
                 effect = {
-                    save_event_target_as = operator_species
+                    save_event_target_as = lappland_species
                 }
             }
         }
         create_leader = {
             class = commander
-            species = event_target:operator_species
+            species = event_target:lappland_species
             name = "Lappland"
             skill = 3
             traits = {
@@ -1398,13 +1398,13 @@ country_event = {
                     trait = "trait_erudite"
                 }
                 effect = {
-                    save_event_target_as = operator_species
+                    save_event_target_as = texas_species
                 }
             }
         }
         create_leader = {
             class = commander
-            species = event_target:operator_species
+            species = event_target:texas_species
             name = "Texas"
             skill = 3
             traits = {
@@ -1431,13 +1431,13 @@ country_event = {
                     trait = "trait_erudite"
                 }
                 effect = {
-                    save_event_target_as = operator_species
+                    save_event_target_as = pramanix_species
                 }
             }
         }
         create_leader = {
             class = scientist
-            species = event_target:operator_species
+            species = event_target:pramanix_species
             name = "Pramanix"
             skill = 3
             traits = {
@@ -1464,13 +1464,13 @@ country_event = {
                     trait = "trait_erudite"
                 }
                 effect = {
-                    save_event_target_as = operator_species
+                    save_event_target_as = ptilopsis_species
                 }
             }
         }
         create_leader = {
             class = scientist
-            species = event_target:operator_species
+            species = event_target:ptilopsis_species
             name = "Ptilopsis"
             skill = 3
             traits = {
@@ -1497,13 +1497,13 @@ country_event = {
                     trait = "trait_erudite"
                 }
                 effect = {
-                    save_event_target_as = operator_species
+                    save_event_target_as = silence_species
                 }
             }
         }
         create_leader = {
             class = scientist
-            species = event_target:operator_species
+            species = event_target:silence_species
             name = "Silence"
             skill = 3
             traits = {
@@ -1530,13 +1530,13 @@ country_event = {
                     trait = "trait_erudite"
                 }
                 effect = {
-                    save_event_target_as = operator_species
+                    save_event_target_as = warfarin_species
                 }
             }
         }
         create_leader = {
             class = scientist
-            species = event_target:operator_species
+            species = event_target:warfarin_species
             name = "Warfarin"
             skill = 3
             traits = {
@@ -1563,13 +1563,13 @@ country_event = {
                     trait = "trait_erudite"
                 }
                 effect = {
-                    save_event_target_as = operator_species
+                    save_event_target_as = zima_species
                 }
             }
         }
         create_leader = {
             class = commander
-            species = event_target:operator_species
+            species = event_target:zima_species
             name = "Zima"
             skill = 3
             traits = {
@@ -1596,13 +1596,13 @@ country_event = {
                     trait = "trait_erudite"
                 }
                 effect = {
-                    save_event_target_as = operator_species
+                    save_event_target_as = elysium_species
                 }
             }
         }
         create_leader = {
             class = commander
-            species = event_target:operator_species
+            species = event_target:elysium_species
             name = "Elysium"
             skill = 3
             traits = {

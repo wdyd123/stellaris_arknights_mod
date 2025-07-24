@@ -59,8 +59,8 @@
  infection_suppressant_desc: "用于抑制矿石病的医疗试剂，但会对感染者造成伤害，但是好死不如赖活着。"
  originium_desc: "在工业中用量巨大的源石结晶，但有着较高的提取难度。是世界的主要能源类精加工产物，同时也是几乎所有源石技艺得以施展的根本。如今，即使“它会传播绝症”的传言甚嚣尘上，也依旧没多少人能抵挡住它的诱惑。"
  originium: "至纯源石"
- # mod_country_resource_max_originium_add: "REPLACE_ME"
- # mod_country_resource_max_originium_add_desc: "REPLACE_ME"
+ # mod_country_resource_max_originium_add: "占位符"
+ # mod_country_resource_max_originium_add_desc: "占位符"
 
 
  ####################################
@@ -111,8 +111,21 @@
  arknights_recruitment.1.suzuran:0 "欢迎铃兰，东国贵族"
  arknights_recruitment.1.nian:0 "欢迎年，古代炎国工匠"
 
- # 5星干员选项
- arknights_recruitment.1.5star:0 "欢迎我们的新5星干员"
+ arknights_recruitment.1.platinum: "招募白金"
+ arknights_recruitment.1.blue_poison: "招募蓝毒"
+
+ arknights_recruitment.1.specter: "招募幽灵鲨"
+ arknights_recruitment.1.lappland: "招募拉普兰德"
+
+ arknights_recruitment.1.texas: "招募德克萨斯"
+ arknights_recruitment.1.zima: "招募凛冬"
+ arknights_recruitment.1.elysium: "招募极境"
+
+ arknights_recruitment.1.pramanix: "招募初雪"
+
+ arknights_recruitment.1.ptilopsis: "招募白面鸮"
+ arknights_recruitment.1.silence: "招募沉默"
+ arknights_recruitment.1.warfarin: "招募华法琳"
 
  # 全部招募完毕
  arknights_recruitment.1.all_recruited:0 "罗德岛已无可用之兵，但是这次实践为我们积累了宝贵经验"
@@ -144,7 +157,21 @@
  arknights_recruitment.suzuran.tooltip:0 "铃兰的贵族教育和源石技艺精通提供了卓越的治国专长和凝聚力建设能力。"
  arknights_recruitment.nian.tooltip:0 "年的古代工艺和防御源石技艺提供了增强的合金生产和优越的防御能力。"
 
- # 其他tooltips
+ arknights_recruitment.platinum.tooltip: "白金是一名库兰塔族狙击手，具有出色的远程射击能力。她冷静而专业，在战场上能够精确打击敌人要害。加入我们的队伍后，她将成为可靠的远程火力支援。"
+ arknights_recruitment.blue_poison.tooltip: "蓝毒是一名阿纳缇族狙击手，擅长使用毒素作战。她的箭矢携带剧毒，能够对敌人造成持续伤害。虽然性格温和，但在战斗中绝不手软。"
+
+ arknights_recruitment.specter.tooltip: "幽灵鲨是一名阿戈尔族近卫，拥有强大的近战能力和惊人的生存力。虽然受到海嗣的影响，但她的战斗意志依然坚定不移。在最危险的前线，她是最可靠的战士。"
+ arknights_recruitment.lappland.tooltip: "拉普兰德是一名鲁珀族近卫，曾经是黑帮成员。她的双剑技艺精湛，战斗风格狂野而有效。虽然性格古怪，但在战场上是不可多得的强力战士。"
+
+ arknights_recruitment.texas.tooltip: "德克萨斯是一名鲁珀族先锋，曾经的黑帮大小姐。她拥有出色的领导能力和战场适应性，擅长快速部署和费用回复。冷静的外表下隐藏着坚定的意志。"
+ arknights_recruitment.zima.tooltip: "凛冬是一名乌萨斯族先锋，曾经是学生运动的领导者。她拥有出色的指挥能力和鼓舞队友的天赋，能够在战场上为队伍提供强力的支援和费用回复。"
+ arknights_recruitment.elysium.tooltip: "极境是一名阿纳缇族先锋，具有优雅的贵族气质。他擅长战场指挥和后勤管理，能够为队伍提供优秀的费用支援和战术配合。完美主义的性格让他在任何任务中都力求完美。"
+
+ arknights_recruitment.pramanix.tooltip: "初雪是喀兰贸易的大小姐，也是一名出色的辅助干员。她能够削弱敌人的防御和法术抗性，为队友创造更好的输出环境。温柔的性格掩盖了她强大的战略价值。"
+
+ arknights_recruitment.ptilopsis.tooltip: "白面鸮是一名利贝利族医疗干员，拥有强大的群体治疗能力。她的存在能够显著提升队伍的续航能力，是任何行动都不可或缺的后勤支援。"
+ arknights_recruitment.silence.tooltip: "沉默是莱茵生命的研究员，也是一名技艺精湛的医疗干员。她能够使用无人机进行远程治疗，为前线战士提供及时的医疗支援。严谨的科学态度让她在医疗领域表现卓越。"
+ arknights_recruitment.warfarin.tooltip: "华法琳是一名萨卡兹族医疗干员，拥有悠久的医疗经验。她不仅能够治疗伤员，还能通过特殊手段强化队友的攻击能力。对血液的研究让她在医疗和辅助方面都表现出色。"
  arknights_recruitment.5star.tooltip:0 "这位经验丰富的干员带来了扎实的能力和宝贵的技能来加强我们的力量。"
  arknights_recruitment.all_recruited.tooltip:0 "已招募所有可用干员，罗德岛提供大量补偿奖励，包括增强的影响力和凝聚力产出。"
 

@@ -55,7 +55,7 @@ monthly_inf_supp_allowance = {
     }
 
     modifier = {
-        country_base_infection_suppressant_produces_add = 5
+        country_base_infection_suppressant_produces_add = 500
     }
 
     potential = {

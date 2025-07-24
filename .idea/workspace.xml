@@ -4,19 +4,28 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3c23acaf-318b-45fc-ae5e-187f4e105237" name="更改" comment="初步的抽卡机制">
-      <change afterPath="$PROJECT_DIR$/gfx/models/portraits/operator_portraits/Exusiai_cropped.dds" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gfx/models/portraits/operator_portraits/Phantom_cropped.dds" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gfx/models/portraits/operator_portraits/Pramanix_cropped.dds" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gfx/models/portraits/operator_portraits/Ptilopsis_cropped.dds" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gfx/models/portraits/operator_portraits/Schwarz_cropped.dds" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gfx/models/portraits/operator_portraits/Shining_cropped.dds" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gfx/models/portraits/operator_portraits/Suzuran_cropped.dds" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gfx/models/portraits/operator_portraits/Thorns_cropped.dds" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gfx/models/portraits/operator_portraits/Zima_cropped.dds" afterDir="false" />
+    <list default="true" id="3c23acaf-318b-45fc-ae5e-187f4e105237" name="更改" comment="完善了抽卡机制,更新了五星干员的逻辑,导入了一部分干员立绘.前天写了两个批处理文件想批量改干员图像,发现鹰角的立绘没有那么好批处理,还是手动吧.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/edicts/Originium.txt" beforeDir="false" afterPath="$PROJECT_DIR$/common/edicts/Originium.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/events/operator_events.txt" beforeDir="false" afterPath="$PROJECT_DIR$/events/operator_events.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gfx/portraits/portraits/0001_portraits_terra.txt" beforeDir="false" afterPath="$PROJECT_DIR$/gfx/portraits/portraits/0001_portraits_terra.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gfx/models/portraits/operator_portraits/Exusiai_cropped.dds" beforeDir="false" afterPath="$PROJECT_DIR$/gfx/models/portraits/operator_portraits/Exusiai_cropped.dds" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gfx/models/portraits/operator_portraits/Mechanist_cropped.dds" beforeDir="false" afterPath="$PROJECT_DIR$/gfx/models/portraits/operator_portraits/Mechanist_cropped.dds" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gfx/models/portraits/operator_portraits/Misery_cropped.dds" beforeDir="false" afterPath="$PROJECT_DIR$/gfx/models/portraits/operator_portraits/Misery_cropped.dds" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gfx/models/portraits/operator_portraits/Phantom_cropped.dds" beforeDir="false" afterPath="$PROJECT_DIR$/gfx/models/portraits/operator_portraits/Phantom_cropped.dds" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gfx/models/portraits/operator_portraits/Pith_cropped.dds" beforeDir="false" afterPath="$PROJECT_DIR$/gfx/models/portraits/operator_portraits/Pith_cropped.dds" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gfx/models/portraits/operator_portraits/Pramanix_cropped.dds" beforeDir="false" afterPath="$PROJECT_DIR$/gfx/models/portraits/operator_portraits/Pramanix_cropped.dds" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gfx/models/portraits/operator_portraits/Ptilopsis_cropped.dds" beforeDir="false" afterPath="$PROJECT_DIR$/gfx/models/portraits/operator_portraits/Ptilopsis_cropped.dds" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gfx/models/portraits/operator_portraits/Raidian_cropped.dds" beforeDir="false" afterPath="$PROJECT_DIR$/gfx/models/portraits/operator_portraits/Raidian_cropped.dds" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gfx/models/portraits/operator_portraits/Schwarz_cropped.dds" beforeDir="false" afterPath="$PROJECT_DIR$/gfx/models/portraits/operator_portraits/Schwarz_cropped.dds" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gfx/models/portraits/operator_portraits/Sharp_cropped.dds" beforeDir="false" afterPath="$PROJECT_DIR$/gfx/models/portraits/operator_portraits/Sharp_cropped.dds" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gfx/models/portraits/operator_portraits/Shining_cropped.dds" beforeDir="false" afterPath="$PROJECT_DIR$/gfx/models/portraits/operator_portraits/Shining_cropped.dds" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gfx/models/portraits/operator_portraits/Stormeye_cropped.dds" beforeDir="false" afterPath="$PROJECT_DIR$/gfx/models/portraits/operator_portraits/Stormeye_cropped.dds" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gfx/models/portraits/operator_portraits/Suzuran_cropped.dds" beforeDir="false" afterPath="$PROJECT_DIR$/gfx/models/portraits/operator_portraits/Suzuran_cropped.dds" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gfx/models/portraits/operator_portraits/Thorns_cropped.dds" beforeDir="false" afterPath="$PROJECT_DIR$/gfx/models/portraits/operator_portraits/Thorns_cropped.dds" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gfx/models/portraits/operator_portraits/Touch_cropped.dds" beforeDir="false" afterPath="$PROJECT_DIR$/gfx/models/portraits/operator_portraits/Touch_cropped.dds" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gfx/models/portraits/operator_portraits/Zima_cropped.dds" beforeDir="false" afterPath="$PROJECT_DIR$/gfx/models/portraits/operator_portraits/Zima_cropped.dds" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gfx/models/portraits/operator_portraits/郁金香_cropped.dds" beforeDir="false" afterPath="$PROJECT_DIR$/gfx/models/portraits/operator_portraits/郁金香_cropped.dds" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/localisation/simp_chinese/name_lists_l_simp_chinese.yml" beforeDir="false" afterPath="$PROJECT_DIR$/localisation/simp_chinese/name_lists_l_simp_chinese.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,17 +56,17 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "master",
-    "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "D:/OneDrive/Documents/Paradox Interactive/Stellaris/mod/00001/gfx/models/portraits/operator_portraits",
-    "settings.editor.selected.configurable": "preferences.pluginManager"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/OneDrive/Documents/Paradox Interactive/Stellaris/mod/00001/gfx/models/portraits/operator_portraits&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\OneDrive\Documents\Paradox Interactive\Stellaris\mod\00001\gfx\models\portraits\operator_portraits" />
@@ -108,7 +117,15 @@
       <option name="project" value="LOCAL" />
       <updated>1752959959741</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="完善了抽卡机制,更新了五星干员的逻辑,导入了一部分干员立绘.前天写了两个批处理文件想批量改干员图像,发现鹰角的立绘没有那么好批处理,还是手动吧.">
+      <option name="closed" value="true" />
+      <created>1753172786214</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1753172786215</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -154,6 +171,7 @@
     <MESSAGE value="增加资源ui" />
     <MESSAGE value="idea自动生成" />
     <MESSAGE value="初步的抽卡机制" />
-    <option name="LAST_COMMIT_MESSAGE" value="初步的抽卡机制" />
+    <MESSAGE value="完善了抽卡机制,更新了五星干员的逻辑,导入了一部分干员立绘.前天写了两个批处理文件想批量改干员图像,发现鹰角的立绘没有那么好批处理,还是手动吧." />
+    <option name="LAST_COMMIT_MESSAGE" value="完善了抽卡机制,更新了五星干员的逻辑,导入了一部分干员立绘.前天写了两个批处理文件想批量改干员图像,发现鹰角的立绘没有那么好批处理,还是手动吧." />
   </component>
 </project>
