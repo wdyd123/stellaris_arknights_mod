@@ -25,6 +25,36 @@ portraits = {
     Touch = { textureFile = gfx/models/portraits/operator_portraits/Touch_cropped.dds }
     Zima = { textureFile = gfx/models/portraits/operator_portraits/Zima_cropped.dds }
     郁金香 = { textureFile = gfx/models/portraits/operator_portraits/郁金香_cropped.dds }
+    # DDS文件注册语句
+    # Portrait Registration Statements
+
+    Ash = { textureFile = gfx/models/portraits/operator_portraits/Ash.dds }
+    Bagpipe = { textureFile = gfx/models/portraits/operator_portraits/Bagpipe.dds }
+    Blaze = { textureFile = gfx/models/portraits/operator_portraits/Blaze.dds }
+    BluePoison = { textureFile = gfx/models/portraits/operator_portraits/BluePoison.dds }
+    Chen = { textureFile = gfx/models/portraits/operator_portraits/Ch'en.dds }
+    Elysium = { textureFile = gfx/models/portraits/operator_portraits/Elysium.dds }
+    Eyjafjalla = { textureFile = gfx/models/portraits/operator_portraits/Eyjafjalla.dds }
+    Hoshiguma = { textureFile = gfx/models/portraits/operator_portraits/Hoshiguma.dds }
+    Kaltsit = { textureFile = gfx/models/portraits/operator_portraits/Kal'tsit.dds }
+    Lappland = { textureFile = gfx/models/portraits/operator_portraits/Lappland.dds }
+    Mudrock = { textureFile = gfx/models/portraits/operator_portraits/Mudrock.dds }
+    Nian = { textureFile = gfx/models/portraits/operator_portraits/Nian.dds }
+    Nightingale = { textureFile = gfx/models/portraits/operator_portraits/Nightingale.dds }
+    Platinum = { textureFile = gfx/models/portraits/operator_portraits/Platinum.dds }
+    Saria = { textureFile = gfx/models/portraits/operator_portraits/Saria.dds }
+    Silence = { textureFile = gfx/models/portraits/operator_portraits/Silence.dds }
+    SilverAsh = { textureFile = gfx/models/portraits/operator_portraits/SilverAsh.dds }
+    Skadi = { textureFile = gfx/models/portraits/operator_portraits/Skadi.dds }
+    SkadiAlter = { textureFile = gfx/models/portraits/operator_portraits/Skadi_alter.dds }
+    Specter = { textureFile = gfx/models/portraits/operator_portraits/Specter.dds }
+    Surtr = { textureFile = gfx/models/portraits/operator_portraits/Surtr.dds }
+    Texas = { textureFile = gfx/models/portraits/operator_portraits/Texas.dds }
+    Victoria = { textureFile = gfx/models/portraits/operator_portraits/Victoria.dds }
+    W = { textureFile = gfx/models/portraits/operator_portraits/W.dds }
+    Warfarin = { textureFile = gfx/models/portraits/operator_portraits/Warfarin.dds }
+    Weedy = { textureFile = gfx/models/portraits/operator_portraits/Weedy.dds }
+    Ifrit = { textureFile = gfx/models/portraits/operator_portraits/Ifrit.dds }
 
 }
 portrait_groups = {

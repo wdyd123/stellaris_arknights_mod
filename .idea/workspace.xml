@@ -4,9 +4,35 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3c23acaf-318b-45fc-ae5e-187f4e105237" name="更改" comment="完善了抽卡机制,更新了五星干员的逻辑,导入了一部分干员立绘.前天写了两个批处理文件想批量改干员图像,发现鹰角的立绘没有那么好批处理,还是手动吧.">
+    <list default="true" id="3c23acaf-318b-45fc-ae5e-187f4e105237" name="更改" comment="修改了干员立绘尺寸,以及干员立绘设置的逻辑,现在应该不会串立绘,也不会顶破天花板了">
+      <change afterPath="$PROJECT_DIR$/gfx/models/portraits/operator_portraits/Ash.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/models/portraits/operator_portraits/Bagpipe.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/models/portraits/operator_portraits/Blaze.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/models/portraits/operator_portraits/BluePoison.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/models/portraits/operator_portraits/Ch'en.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/models/portraits/operator_portraits/Elysium.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/models/portraits/operator_portraits/Eyjafjalla.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/models/portraits/operator_portraits/Hoshiguma.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/models/portraits/operator_portraits/Ifrit.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/models/portraits/operator_portraits/Kal'tsit.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/models/portraits/operator_portraits/Lappland.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/models/portraits/operator_portraits/Mudrock.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/models/portraits/operator_portraits/Nian.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/models/portraits/operator_portraits/Nightingale.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/models/portraits/operator_portraits/Platinum.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/models/portraits/operator_portraits/Saria.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/models/portraits/operator_portraits/Silence.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/models/portraits/operator_portraits/SilverAsh.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/models/portraits/operator_portraits/Skadi.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/models/portraits/operator_portraits/Skadi_alter.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/models/portraits/operator_portraits/Specter.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/models/portraits/operator_portraits/Surtr.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/models/portraits/operator_portraits/Texas.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/models/portraits/operator_portraits/Victoria.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/models/portraits/operator_portraits/W.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/models/portraits/operator_portraits/Warfarin.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/models/portraits/operator_portraits/Weedy.dds" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/edicts/Originium.txt" beforeDir="false" afterPath="$PROJECT_DIR$/common/edicts/Originium.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/events/operator_events.txt" beforeDir="false" afterPath="$PROJECT_DIR$/events/operator_events.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/gfx/models/portraits/operator_portraits/Exusiai_cropped.dds" beforeDir="false" afterPath="$PROJECT_DIR$/gfx/models/portraits/operator_portraits/Exusiai_cropped.dds" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/gfx/models/portraits/operator_portraits/Mechanist_cropped.dds" beforeDir="false" afterPath="$PROJECT_DIR$/gfx/models/portraits/operator_portraits/Mechanist_cropped.dds" afterDir="false" />
@@ -25,6 +51,7 @@
       <change beforePath="$PROJECT_DIR$/gfx/models/portraits/operator_portraits/Touch_cropped.dds" beforeDir="false" afterPath="$PROJECT_DIR$/gfx/models/portraits/operator_portraits/Touch_cropped.dds" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/gfx/models/portraits/operator_portraits/Zima_cropped.dds" beforeDir="false" afterPath="$PROJECT_DIR$/gfx/models/portraits/operator_portraits/Zima_cropped.dds" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/gfx/models/portraits/operator_portraits/郁金香_cropped.dds" beforeDir="false" afterPath="$PROJECT_DIR$/gfx/models/portraits/operator_portraits/郁金香_cropped.dds" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gfx/portraits/portraits/0001_portraits_terra.txt" beforeDir="false" afterPath="$PROJECT_DIR$/gfx/portraits/portraits/0001_portraits_terra.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/localisation/simp_chinese/name_lists_l_simp_chinese.yml" beforeDir="false" afterPath="$PROJECT_DIR$/localisation/simp_chinese/name_lists_l_simp_chinese.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -125,7 +152,15 @@
       <option name="project" value="LOCAL" />
       <updated>1753172786215</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="修改了干员立绘尺寸,以及干员立绘设置的逻辑,现在应该不会串立绘,也不会顶破天花板了">
+      <option name="closed" value="true" />
+      <created>1753348298972</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1753348298972</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -172,6 +207,7 @@
     <MESSAGE value="idea自动生成" />
     <MESSAGE value="初步的抽卡机制" />
     <MESSAGE value="完善了抽卡机制,更新了五星干员的逻辑,导入了一部分干员立绘.前天写了两个批处理文件想批量改干员图像,发现鹰角的立绘没有那么好批处理,还是手动吧." />
-    <option name="LAST_COMMIT_MESSAGE" value="完善了抽卡机制,更新了五星干员的逻辑,导入了一部分干员立绘.前天写了两个批处理文件想批量改干员图像,发现鹰角的立绘没有那么好批处理,还是手动吧." />
+    <MESSAGE value="修改了干员立绘尺寸,以及干员立绘设置的逻辑,现在应该不会串立绘,也不会顶破天花板了" />
+    <option name="LAST_COMMIT_MESSAGE" value="修改了干员立绘尺寸,以及干员立绘设置的逻辑,现在应该不会串立绘,也不会顶破天花板了" />
   </component>
 </project>

@@ -180,3 +180,49 @@
  arknights_recruitment_protocol_desc:0 "激活专门的招募协议来联系罗德岛并招募技能娴熟的干员加入我们的事业。这项先进程序需要大量资源，但可以提供接触具有独特能力的高技能专家的机会。\n\n§Y消耗：§! 200 影响力，500 能量\n§Y冷却时间：§! 10年\n§R注意：§! 所有干员招募完毕后无法使用。"
  arknights_recruitment_protocol_effect:0 "触发罗德岛招募流程 - 随机选择一个可用干员"
  ARKNIGHTS_RECRUITMENT_COOLDOWN:0 "罗德岛招募协议仍在冷却中"
+
+####################################
+#Operator
+####################################
+ # 明日方舟干员名称本地化
+ # Arknights Operators Localization
+
+ # 6星干员 (6-Star Operators)
+ silverash: "银灰"
+ chen: "陈"
+ exusiai: "能天使"
+ eyjafjalla: "艾雅法拉"
+ saria: "塞雷娅"
+ ifrit: "伊芙利特"
+ shining: "闪灵"
+ nightingale: "夜莺"
+ hoshiguma: "星熊"
+ schwarz: "黑"
+ blaze: "煌"
+ weedy: "温蒂"
+ w: "W"
+ skadi_alter: "浊心斯卡蒂"
+ surtr: "史尔特尔"
+ thorns: "棘刺"
+ mudrock: "泥岩"
+ ash: "灰烬"
+ kaltsit: "凯尔希"
+ skadi: "斯卡蒂"
+ siege: "推进之王"
+ bagpipe: "风笛"
+ phantom: "傀影"
+ suzuran: "铃兰"
+ nian: "年"
+
+ # 5星干员 (5-Star Operators)
+ platinum: "白金"
+ blue_poison: "蓝毒"
+ specter: "幽灵鲨"
+ lappland: "拉普兰德"
+ texas: "德克萨斯"
+ pramanix: "初雪"
+ ptilopsis: "白面鸮"
+ silence: "沉默"
+ warfarin: "华法林"
+ zima: "凛冬"
+ elysium: "极境"
