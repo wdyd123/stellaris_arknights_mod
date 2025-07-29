@@ -1,0 +1,89 @@
+originium_deposit_originium_generation = {
+    event_target:originium_country = {
+        if = {
+            limit = {
+                NOT = {
+                    has_country_flag = notified_of_originium_payoff
+                }
+            }
+            create_message = {
+                type = MESSAGE_ORIGINIUM_BOON
+                localization = MESSAGE_ORIGINIUM_BOON_DESC
+                days = 30
+                target = prev
+            }
+            set_timed_country_flag = {
+                flag = notified_of_originium_payoff
+                days = 60
+            }
+        }
+    }
+    random_list = {
+        1 = {
+            modifier = {
+                factor = 0
+                NOT = { has_planet_flag = originiums_doubled_4 }
+            }
+            event_target:originium_country = {
+                add_resource = {
+                    originium = 1024
+                }
+            }
+        }
+        1 = {
+            modifier = {
+                factor = 0
+                NOT = { has_planet_flag = originiums_doubled_5 }
+            }
+            event_target:originium_country = {
+                add_resource = {
+                    originium = 2048
+                }
+            }
+        }
+        1 = {
+            modifier = {
+                factor = 0
+                NOT = { has_planet_flag = originiums_doubled_6 }
+            }
+            event_target:originium_country = {
+                add_resource = {
+                    originium = 4096
+                }
+            }
+        }
+        1 = {
+            modifier = {
+                factor = 0
+                NOT = { has_planet_flag = originiums_doubled_7 }
+            }
+            event_target:originium_country = {
+                add_resource = {
+                    originium = 8192
+                }
+            }
+        }
+        1 = {
+            modifier = {
+                factor = 0
+                NOT = { has_planet_flag = originiums_doubled_8 }
+            }
+            event_target:originium_country = {
+                add_resource = {
+                    originium = 16384
+                }
+            }
+        }
+        1 = {
+            modifier = {
+                factor = 0
+                NOT = { has_planet_flag = originiums_doubled_9 }
+            }
+            event_target:originium_country = {
+                add_resource = {
+                    originium = 32768
+                }
+            }
+        }
+    }
+}

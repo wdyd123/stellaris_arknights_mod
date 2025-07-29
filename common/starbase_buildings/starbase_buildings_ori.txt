@@ -1,12 +1,12 @@
-nanite_harvester = {
+originium_harvester = {
     icon = "GFX_starbase_nanite_harvester"
-    construction_days = 360
+    construction_days = 1
 
     potential = {
-        exists = owner
-        owner = {
-            has_tradition = tr_nanotech_adopt
-        }
+        # exists = owner
+        # owner = {
+        #     has_tradition = tr_nanotech_adopt
+        # }
         is_normal_starbase = yes
     }
 
@@ -17,11 +17,11 @@ nanite_harvester = {
         }
 
         custom_tooltip = {
-            fail_text = requires_planetoids_for_nanites
+            fail_text = requires_planetoids_for_originium
             solar_system = {
                 any_system_planet = {
                     can_have_mineral_deposits = yes
-                    NOT = { has_deposit = d_nanite_harvester_deposit }
+                    NOT = { has_deposit = d_originium_harvester_deposit }
                 }
             }
         }
@@ -30,18 +30,18 @@ nanite_harvester = {
     resources = {
         category = starbase_buildings
         cost = {
-            alloys = 500
+            alloys = 1
         }
         upkeep = {
             energy = 4
-            mult = value:nanotech_harvester_deposit_num
+            mult = value:originium_harvester_deposit_num
         }
     }
 
     on_finished = {
         solar_system = {
             system_event = {
-                id = originium.5050
+                id = originium_production.5050
             }
         }
     }

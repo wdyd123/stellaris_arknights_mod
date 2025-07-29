@@ -234,3 +234,9 @@
  r_originium: "£originium£ §Y$originium$§!"
 
  originium_harvester_tooltip: ""$SYSTEM_EFFECTS_TXT$$TABBED_NEW_LINE$每个岩质行星，以及没有任何$shipclass_research_station$矿藏的卫星和小行星上，探出规模§Y0.1§!的$r_originium$矿藏"
+ sm_originium_harvester: "源石收割机"
+ sm_originium_harvester_desc: ""
+ requires_planetoids_for_originium: "需要一颗没有任何源石矿藏的荒芜，剧毒，熔融或者崩坏星球。"
+ MESSAGE_ORIGINIUM_BOON_TITLE: "源石矿脉成长"
+ MESSAGE_ORIGINIUM_BOON_DESC: "我们的采矿及其产生了过量的至纯源石"
+

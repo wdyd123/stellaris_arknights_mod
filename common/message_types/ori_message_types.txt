@@ -1,0 +1,9 @@
+message_type = {
+    key = "MESSAGE_ORIGINIUM_BOON"
+    icon = "GFX_message_fleet_upgrader_complete"
+    icon_frame = 1
+
+    name = "MESSAGE_ORIGINIUM_BOON_TITLE"
+    sound = "notification"
+    ping = "ping_notification_green"
+}

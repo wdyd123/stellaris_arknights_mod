@@ -1,0 +1,8 @@
+on_monthly_pulse = {
+    events = {
+        originium_production.5053
+    }
+}
+
+
+

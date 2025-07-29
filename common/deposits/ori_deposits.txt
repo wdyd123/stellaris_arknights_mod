@@ -1,0 +1,44 @@
+d_originium_harvester_deposit = {
+    resources = {
+        category = orbital_mining_deposits
+        produces = {
+            originium = 0.1
+        }
+    }
+    station = shipclass_mining_station
+    is_for_colonizable = no
+
+    drop_weight = {
+        weight = 0
+    }
+}
+
+d_originium_harvester_deposit_regular = {
+    resources = {
+        category = orbital_mining_deposits
+        produces = {
+            originium = 1.6
+        }
+    }
+    station = shipclass_mining_station
+    is_for_colonizable = no
+
+    drop_weight = {
+        weight = 0
+    }
+}
+
+d_originium_harvester_deposit_large = {
+    resources = {
+        category = orbital_mining_deposits
+        produces = {
+            originium = 25.6
+        }
+    }
+    station = shipclass_mining_station
+    is_for_colonizable = no
+
+    drop_weight = {
+        weight = 0
+    }
+}
