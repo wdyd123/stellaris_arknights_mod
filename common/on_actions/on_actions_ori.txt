@@ -1,4 +1,4 @@
-on_monthly_pulse = {
+on_five_year_pulse = {
     events = {
         originium_production.5053
     }

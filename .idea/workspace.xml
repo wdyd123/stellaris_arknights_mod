@@ -4,15 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3c23acaf-318b-45fc-ae5e-187f4e105237" name="更改" comment="源石产出,类似于纳米机器人,初步修改">
-      <change afterPath="$PROJECT_DIR$/common/message_types/ori_message_types.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common/scripted_effects/ori_effects.txt" afterDir="false" />
+    <list default="true" id="3c23acaf-318b-45fc-ae5e-187f4e105237" name="更改" comment="源石产出,类似于纳米机器人,基本完成,数值还需要修改">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/deposits/planetary_deposits.txt" beforeDir="false" afterPath="$PROJECT_DIR$/common/deposits/ori_deposits.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/common/on_actions/on_actions_ori.txt" beforeDir="false" afterPath="$PROJECT_DIR$/common/on_actions/on_actions_ori.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/starbase_buildings/starbase_buildings_ori.txt" beforeDir="false" afterPath="$PROJECT_DIR$/common/starbase_buildings/starbase_buildings_ori.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/events/originium_events.txt" beforeDir="false" afterPath="$PROJECT_DIR$/events/originium_events.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/localisation/simp_chinese/name_lists_l_simp_chinese.yml" beforeDir="false" afterPath="$PROJECT_DIR$/localisation/simp_chinese/name_lists_l_simp_chinese.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -161,7 +155,15 @@
       <option name="project" value="LOCAL" />
       <updated>1753754877279</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="源石产出,类似于纳米机器人,基本完成,数值还需要修改">
+      <option name="closed" value="true" />
+      <created>1753759439059</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1753759439059</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -211,6 +213,7 @@
     <MESSAGE value="修改了干员立绘尺寸,以及干员立绘设置的逻辑,现在应该不会串立绘,也不会顶破天花板了" />
     <MESSAGE value="补充立绘" />
     <MESSAGE value="源石产出,类似于纳米机器人,初步修改" />
-    <option name="LAST_COMMIT_MESSAGE" value="源石产出,类似于纳米机器人,初步修改" />
+    <MESSAGE value="源石产出,类似于纳米机器人,基本完成,数值还需要修改" />
+    <option name="LAST_COMMIT_MESSAGE" value="源石产出,类似于纳米机器人,基本完成,数值还需要修改" />
   </component>
 </project>
