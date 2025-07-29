@@ -226,3 +226,11 @@
  warfarin: "华法林"
  zima: "凛冬"
  elysium: "极境"
+
+
+ ####################################
+ #Starbase buildings
+ ####################################
+ r_originium: "£originium£ §Y$originium$§!"
+
+ originium_harvester_tooltip: ""$SYSTEM_EFFECTS_TXT$$TABBED_NEW_LINE$每个岩质行星，以及没有任何$shipclass_research_station$矿藏的卫星和小行星上，探出规模§Y0.1§!的$r_originium$矿藏"

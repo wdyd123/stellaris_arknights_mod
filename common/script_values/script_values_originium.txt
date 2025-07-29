@@ -1,0 +1,123 @@
+originium_harvester_deposit_num = {
+    base = 0
+    complex_trigger_modifier = {
+        trigger_scope = solar_system
+        trigger = count_system_planet
+        parameters = {
+            limit = {
+                has_mining_station = yes
+                has_planet_flag = originium_doubled_1
+            }
+        }
+        mode = add
+    }
+    complex_trigger_modifier = {
+        trigger_scope = solar_system
+        trigger = count_system_planet
+        parameters = {
+            limit = {
+                has_mining_station = yes
+                has_planet_flag = originium_doubled_2
+            }
+        }
+        mult = 2
+        mode = add
+    }
+    complex_trigger_modifier = {
+        trigger_scope = solar_system
+        trigger = count_system_planet
+        parameters = {
+            limit = {
+                has_mining_station = yes
+                has_planet_flag = originium_doubled_3
+            }
+        }
+        mult = 4
+        mode = add
+    }
+    complex_trigger_modifier = {
+        trigger_scope = solar_system
+        trigger = count_system_planet
+        parameters = {
+            limit = {
+                has_mining_station = yes
+                has_planet_flag = originium_doubled_4
+            }
+        }
+        mult = 8
+        mode = add
+    }
+    complex_trigger_modifier = {
+        trigger_scope = solar_system
+        trigger = count_system_planet
+        parameters = {
+            limit = {
+                has_mining_station = yes
+                has_planet_flag = originium_doubled_5
+            }
+        }
+        mult = 16
+        mode = add
+    }
+    complex_trigger_modifier = {
+        trigger_scope = solar_system
+        trigger = count_system_planet
+        parameters = {
+            limit = {
+                has_mining_station = yes
+                has_planet_flag = originium_doubled_6
+            }
+        }
+        mult = 32
+        mode = add
+    }
+    complex_trigger_modifier = {
+        trigger_scope = solar_system
+        trigger = count_system_planet
+        parameters = {
+            limit = {
+                has_mining_station = yes
+                has_planet_flag = originium_doubled_7
+            }
+        }
+        mult = 64
+        mode = add
+    }
+    complex_trigger_modifier = {
+        trigger_scope = solar_system
+        trigger = count_system_planet
+        parameters = {
+            limit = {
+                has_mining_station = yes
+                has_planet_flag = originium_doubled_8
+            }
+        }
+        mult = 128
+        mode = add
+    }
+    complex_trigger_modifier = {
+        trigger_scope = solar_system
+        trigger = count_system_planet
+        parameters = {
+            limit = {
+                has_mining_station = yes
+                has_planet_flag = originium_doubled_9
+            }
+        }
+        mult = 256
+        mode = add
+    }
+    complex_trigger_modifier = {
+        trigger_scope = solar_system
+        trigger = count_system_planet
+        parameters = {
+            limit = {
+                has_mining_station = yes
+                has_planet_flag = originium_doubled_10
+            }
+        }
+        mult = 512
+        mode = add
+    }
+    divide = 10
+}
