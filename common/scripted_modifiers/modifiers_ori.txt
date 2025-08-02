@@ -1,0 +1,11 @@
+planet_artisans_infection_suppressant_produces_add = {
+    icon = mod_planet_max_buildings_add
+    good = yes
+    category = planet
+}
+
+planet_artisans_originium_upkeep_add = {
+    icon = mod_planet_max_buildings_add
+    good = yes
+    category = planet
+}

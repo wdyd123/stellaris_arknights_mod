@@ -1,0 +1,292 @@
+artisan = {
+    category = specialist
+
+    swappable_data = {
+        default = {
+            condition_string = SPECIALIST_JOB_TRIGGER
+            building_icon = building_factory_1
+        }
+        swap_type = {
+            trigger = {
+                artisan_is_artificer_trigger = yes
+            }
+            name = artificer
+            desc = artificer
+            icon = artificer
+            weight = 5
+        }
+        swap_type = {
+            trigger = {
+                artisan_is_pearl_diver_trigger = yes
+            }
+            name = pearl_diver
+            desc = pearl_diver
+            icon = pearl_diver
+            building_icon = building_food_processing_facility
+            weight = 5
+        }
+        swap_type = {
+            trigger = {
+                artisan_is_artificer_trigger = yes
+                artisan_is_pearl_diver_trigger = yes
+            }
+            name = pearl_crafter
+            desc = pearl_crafter
+            icon = pearl_diver
+            building_icon = building_food_processing_facility
+            weight = 10
+        }
+        swap_type = {
+            trigger = {
+                job_has_originium_trait_trigger = yes
+            }
+            name = craft_operator
+            desc = craft_operator
+            icon = artificer
+            building_icon = building_factory_1
+            weight = 10
+        }
+    }
+    tags = { consumer_goods }
+
+    possible_pre_triggers = {
+        has_owner = yes
+        is_being_purged = no
+        is_being_assimilated = no
+    }
+
+    possible_precalc = can_fill_specialist_job
+    possible = {
+        hidden_trigger = { exists = owner }
+        owner = {
+            is_gestalt = no
+        }
+    }
+
+    resources = {
+        category = planet_artisans
+        # PRODUCES
+        produces = {
+            consumer_goods = 6
+
+        }
+        produces = {
+            trigger = {
+                job_has_originium_trait_trigger = yes
+            }
+            infection_suppressant = 6
+        }
+        # Job Swap - Artificers
+        produces = {
+            trigger = {
+                artisan_is_artificer_trigger = yes
+            }
+            consumer_goods = 2
+            trade = 2
+        }
+        # Job Swap - Pearl Divers
+        produces = {
+            trigger = {
+                exists = planet
+                planet = {
+                    artisan_is_pearl_diver_trigger = yes
+                }
+            }
+            trade = 2
+        }
+        produces = {
+            trigger = {
+                exists = planet
+                planet = {
+                    artisan_is_pearl_diver_trigger = yes
+                }
+                has_councilor = { COUNCILOR = "councilor_anglers" }
+            }
+            consumer_goods = @councilor_anglers_pearl_diver_consumer_goods_bonus
+            mult = value:councilor_level|TYPE|councilor_anglers|
+        }
+        produces = {
+            trigger = {
+                exists = planet
+                planet = {
+                    artisan_is_pearl_diver_trigger = yes
+                }
+                has_councilor = { COUNCILOR = "councilor_machine_anglers" }
+            }
+            consumer_goods = @councilor_machine_anglers_pearl_diver_consumer_goods_bonus
+            mult = value:councilor_level|TYPE|councilor_machine_anglers|
+        }
+        produces = {
+            trigger = {
+                exists = planet
+                planet = {
+                    artisan_is_pearl_diver_trigger = yes
+                }
+                has_councilor = { COUNCILOR = "councilor_machine_anglers" }
+            }
+            consumer_goods = @councilor_machine_anglers_pearl_diver_consumer_goods_bonus
+            mult = value:councilor_level|TYPE|councilor_machine_anglers|
+        }
+        # Job Swap - Catalytic
+        produces = {
+            trigger = {
+                industrial_jobs_are_catalytic_trigger = yes
+            }
+            consumer_goods = 1.5
+        }
+        # UPKEEP
+        upkeep = {
+            trigger = {
+                job_has_originium_trait_trigger = yes
+            }
+            originium = 3
+        }
+        upkeep = {
+            trigger = {
+                industrial_jobs_are_catalytic_trigger = no
+            }
+            minerals = 6
+        }
+        # Job Swap - Pearl Divers
+        upkeep = {
+            trigger = {
+                industrial_jobs_are_catalytic_trigger = no
+                exists = planet
+                planet = {
+                    artisan_is_pearl_diver_trigger = yes
+                }
+            }
+            minerals = -2
+            food = 3
+        }
+        # Job Swap - Catalytic
+        upkeep = {
+            trigger = {
+                industrial_jobs_are_catalytic_trigger = yes
+            }
+            food = 9
+        }
+        upkeep = {
+            trigger = {
+                industrial_jobs_are_catalytic_trigger = yes
+                exists = planet
+                planet = {
+                    artisan_is_pearl_diver_trigger = yes
+                }
+            }
+            minerals = 2
+            food = -3
+        }
+        produces = {
+            trigger = {
+                planet = {
+                    has_planet_flag = has_produce_requisitorium
+                    exists = owner.overlord
+                    owner.overlord = { country_uses_consumer_goods = yes }
+                }
+            }
+            consumer_goods = @requisitorium_consumer_goods_reduction
+        }
+        upkeep = {
+            trigger = {
+                planet = {
+                    has_planet_flag = has_produce_requisitorium
+                    exists = owner.overlord
+                    owner.overlord = { country_uses_consumer_goods = yes }
+                }
+            }
+            minerals = 1
+        }
+        upkeep = {
+            trigger = {
+                industrial_jobs_are_catalytic_trigger = yes
+                planet = {
+                    has_planet_flag = has_produce_requisitorium
+                    exists = owner.overlord
+                    owner.overlord = { country_uses_consumer_goods = yes }
+                }
+            }
+            food = 1.5
+        }
+        inline_script = "output/factory_output"
+    }
+
+    overlord_resources = {
+        category = planet_requisitioned_consumer_goods
+        produces = {
+            trigger = {
+                planet = {
+                    has_planet_flag = has_produce_requisitorium
+                    exists = owner.overlord
+                    owner.overlord = { country_uses_consumer_goods = yes }
+                }
+            }
+            consumer_goods = @requisitorium_consumer_goods_overlord
+        }
+    }
+
+    triggered_planet_modifier = {
+        potential = {
+            OR = {
+                AND = {
+                    artisan_is_pearl_diver_trigger = yes
+                    exists = owner
+                    owner = { has_valid_civic = civic_agrarian_idyll }
+                }
+                job_has_originium_trait_trigger = yes
+            }
+        }
+        planet_amenities_add = 200
+        mult = value:scripted_modifier_mult|MODIFIER|pop_job_amenities_mult|
+    }
+
+    weight = {
+        weight = @specialist_job_weight
+        mult = value:job_weights_multiple_resources_modifier|JOB|artisan|RESOURCE1|consumer_goods|RESOURCE2|consumer_goods|WEIGHT1|0.5|WEIGHT2|0.5|
+        modifier = {
+            factor = 2
+            is_enslaved = yes
+            can_take_servant_job = no
+        }
+
+        # low income modifier
+        modifier = {
+            factor = 1.2
+            exists = planet
+            planet = {
+                has_available_jobs = "artisan"
+            }
+            exists = owner
+            owner = {
+                is_ai = yes
+                OR = {
+                    has_monthly_income = {
+                        resource = consumer_goods
+                        value < 5
+                    }
+                    has_monthly_income = {
+                        resource = infection_suppressant
+                        value < 5
+                    }
+
+                }
+            }
+        }
+    }
+
+    inline_script = "jobs/automodding_priority_consumer_goods"
+
+    promotion = {
+        time = @standard_promotion_time
+        effect = {
+            pop_amount_change_category = {
+                CATEGORY = specialist
+                AMOUNT = local_pop_amount
+            }
+        }
+    }
+}
+
+craft_operator = {
+        possible = { always = no }
+}

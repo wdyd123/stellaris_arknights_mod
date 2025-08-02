@@ -1,0 +1,5 @@
+auto_trait_prio = {
+	#Metallurgists (Alloys)
+	trait_malleable_forge
+	trait_adaptive_forge
+}

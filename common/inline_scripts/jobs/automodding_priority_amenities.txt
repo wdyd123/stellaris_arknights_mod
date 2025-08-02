@@ -1,0 +1,11 @@
+auto_trait_prio = {
+	#Amenities
+	trait_charismatic_originium
+
+	trait_charismatic
+	trait_crafted_smiles
+	trait_robot_emotion_emulators
+	trait_cyborg_stainless_steel_smile
+	trait_malleable_ameneties
+	trait_adaptive_amenities
+}

@@ -1,0 +1,54 @@
+trait_invasive = {
+    icon = "gfx/interface/icons/traits/trait_plantoid_invasive_species.dds"
+    cost = 2
+    opposites = { "trait_agrarian" "trait_ingenious" "trait_industrious" "trait_intelligent" "trait_thrifty" "trait_natural_engineers" "trait_natural_physicists" "trait_natural_sociologists" "trait_extremely_adaptive" "trait_adaptive" "trait_rapid_breeders" "trait_talented" "trait_quick_learners" "trait_traditional" "trait_docile" "trait_very_strong" "trait_strong" "trait_nomadic" "trait_communal" "trait_charismatic" "trait_conformists" "trait_venerable" "trait_enduring"
+        "trait_resilient" "trait_conservational" "trait_noxious" "trait_inorganic_breath" "trait_humanoid_existential_iteroparity" "trait_incubator" "trait_delicious" "trait_nerve_stapled" "trait_fertile" "trait_robust" "trait_erudite" "trait_vat_grown" "trait_felsic" "trait_natural_machinist" "trait_drake_scaled" "trait_voidling" "trait_tiyanki" "trait_exotic_metabolism" "trait_egg_laying" "trait_chromalogs" "trait_camouflage" "trait_shelled"
+        trait_originium_based_unit trait_auto_mod_originium trait_traditional_originium trait_thrifty_originium trait_intelligent_originium trait_industrious_originium trait_agrarian_originium trait_ingenious_originium trait_charismatic_originium
+    }
+    host_has_dlc = "Plantoids Species Pack"
+    sorting_priority = 30
+
+    initial = yes
+    randomized = no
+    species_potential_add = {
+        can_add_or_remove_phenotype_traits = yes
+    }
+    species_possible_remove = {
+        OR = {
+            can_do_advanced_gene_modding = yes
+            can_add_or_remove_phenotype_traits = yes
+            can_remove_pop_growth_genetic_traits = yes
+        }
+    }
+    species_possible_merge_add = {
+        always = no
+    }
+    allowed_archetypes = { BIOLOGICAL LITHOID }
+    species_class = { PLANT FUN }
+    localized_tags = {
+        SPECIES_TRAIT_FUNGOID
+        SPECIES_TRAIT_PLANTOID
+    }
+    species_class_override = {
+        hidden_trigger = {
+            OR = {
+                can_add_or_remove_phenotype_traits = yes
+                can_add_transgenic_traits = yes
+            }
+        }
+    }
+    tags = { organic positive plantoid fungoid pop_growth habitability species }
+
+    custom_tooltip_with_modifiers = TRAIT_INVASIVE_EFFECT
+    triggered_planet_growth_habitability_modifier = {
+        logistic_growth_mult = 0.05
+        mult = value:count_negative_traits
+    }
+    triggered_planet_growth_habitability_modifier = {
+        potential = {
+            exists = from
+        }
+        pop_environment_tolerance = 0.05
+        mult = value:count_negative_traits
+    }
+}

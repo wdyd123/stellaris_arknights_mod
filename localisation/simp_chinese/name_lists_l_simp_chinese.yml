@@ -29,22 +29,32 @@
  ####################################
  #Traits
  ####################################
+ SPECIES_TRAIT_ORIGINIUM_VOCATIONAL: "['concept_vocational_traits_originium']"
  trait_originium_based_unit: "源石适应性"
  trait_originium_based_unit_desc: "源石适应性"
- trait_auto_mod_originium: "源石技艺适应性"
- trait_auto_mod_originium_desc: "源石技艺催生了全新的资源加工方法，使得各类资源的生产效率得到了飞跃提升，依据所有者的工作环境，动态调整源石技艺基因表达。"
- automodding_trait_originium_tooltip: "$automodding_trait_tooltip_all$\n\n§Y$trait_auto_mod_biological$§!可从['concept_automodding_Originium']中挑选修正"
- trait_traditional_originium: "传承"
+ trait_auto_mod_originium: "适应性源石技艺"
+ trait_auto_mod_originium_desc: "源石技艺催生了全新的资源加工方法，使得各类资源的生产效率得到了飞跃提升，依据工作环境，选择合适的源石技艺。"
+ automodding_trait_originium_tooltip: "$automodding_trait_tooltip_all$\n\n§Y$trait_auto_mod_biological$§!可从['concept_automodding_originium']中挑选修正"
+ trait_traditional_originium: "代际记忆"
  trait_thrifty_originium: "低能耗"
  trait_intelligent_originium: "聪慧"
  trait_industrious_originium: "吃苦耐劳"
  trait_agrarian_originium: "农民"
  trait_ingenious_originium: "足智多谋"
- trait_charismatic_originium: "魅力非凡!"
- concept_automodding_Originium: "源石技艺自动改造特质列表!"
- concept_automodding_Originium_desc: "—§3['trait:trait_traditional_originium']§!\n—§3['trait:trait_thrifty_originium']§!\n—§3['trait:trait_intelligent_originium']§!\n—§3['trait:trait_industrious_originium']§!\n—§3['trait:trait_agrarian_originium']§!\n—§3['trait:trait_ingenious_originium']§!\n—§3['trait:trait_charismatic_originium']§!"
- concept_vocational_traits_Originium: "职业源石技艺"
- concept_vocational_traits_Originium_desc: "$concept_vocational_traits$是一类可以通过§3['trait:trait_auto_mod_originium']§!特质自动调整的物种特质。$NEW_LINE$$concept_automodding_Originium_desc_desc$"
+ trait_charismatic_originium: "魅力非凡"
+ concept_automodding_originium: "适应性源石技艺列表"
+ concept_automodding_originium_desc: "—§3['trait:trait_traditional_originium']§!\n—§3['trait:trait_thrifty_originium']§!\n—§3['trait:trait_intelligent_originium']§!\n—§3['trait:trait_industrious_originium']§!\n—§3['trait:trait_agrarian_originium']§!\n—§3['trait:trait_ingenious_originium']§!\n—§3['trait:trait_charismatic_originium']§!"
+ concept_vocational_traits_originium: "职业源石技艺"
+ concept_vocational_traits_originium_desc: "$concept_vocational_traits_originium$是一类可以通过§3['trait:trait_auto_mod_originium']§!特质自动调整的物种特质。$NEW_LINE$$concept_automodding_originium_desc$"
+
+
+ trait_traditional_originium_desc: "§L几百年的历史，这些东西是他们的负担，但也是他们的骄傲。§!\n"
+ trait_thrifty_originium_desc: "§L这个物种天性节俭，总是喜欢尽一切可能将利益最大化。§!\n"
+ trait_intelligent_originium_desc: "§L这个物种大脑非常发达，他们可以轻易接受日新月异的科学进步。§!\n"
+ trait_industrious_originium_desc: "§L这个物种非常吃苦耐劳，这片大地不会体恤体弱者。§!\n"
+ trait_agrarian_originium_desc: "§L这一物种与土地有着难以割舍的关系，使他们成为了农业和园林的专家。§!\n"
+ trait_ingenious_originium_desc: "§L该物种头脑灵活，善于打破陈规，他们懂得如何最大化利用其基础设施和电力网。§!\n"
+ trait_charismatic_originium_desc: "§L这个物种拥有一种特别的魅力，任何其他生物都愿意与他们亲近。§!\n"
 
  ####################################
  #Resources
@@ -240,3 +250,40 @@
  MESSAGE_ORIGINIUM_BOON_TITLE: "源石矿脉成长"
  MESSAGE_ORIGINIUM_BOON_DESC: "我们的采矿及其产生了过量的至纯源石"
 
+
+ ####################################
+ #Zones
+ ####################################
+ zone_factory_ori: "抑制剂工厂"
+ zone_factory_ori_desc: "这里的装配线不停地运转，从简单的工具到矿石病抑制剂都从这里源源不断地生产出来。"
+ mod_planet_artisans_infection_suppressant_produces_add: "工匠抑制剂产出"
+ mod_planet_artisans_originium_upkeep_add: "工匠源石维护费"
+
+ ####################################
+ #Jobs
+ ####################################
+ craft_operator: "$job_craft_operator$"
+ job_craft_operator: "制造部干员"
+
+ job_craft_operator_plural: "制造部干员"
+ job_craft_operator_icon: "£job_artificer£"
+ job_craft_operator_desc: "熟练且有创意的工匠，可以生产极高品质的日用品和有效的矿石病抑制剂。"
+ job_craft_operator_effect_desc: "£job_artificer£§Y$job_craft_operator_plural$§!能将£minerals£§Y$minerals$§!和£originium£§Y$originium$§!转变为£consumer_goods£§Y$consumer_goods$§!以及£infection_suppressant£§Y$infection_suppressant$§!"
+ mod_job_craft_operator_add: "$job_craft_operator$岗位"
+ mod_job_craft_operator_per_pop: "每$VALUE$个人口提供§G+1§!个$job_craft_operator$岗位"
+ mod_job_craft_operator_per_pop_short: "\n每$VALUE$£pop£§G+1§!£mod_job_artificer_add£"
+
+ originium_miner: "$job_originium_miner$"
+ job_originium_miner: "源石矿工"
+ job_originium_miner_plural: "源石矿工"
+ job_originium_miner_desc: "使用强力的钻头，我们可以从当地源石矿脉上挖取矿物和源石。"
+ job_originium_miner_gestalt: "源石采矿子个体"
+ job_originium_miner_gestalt_plural: "源石采矿子个体"
+ job_originium_miner_gestalt_desc: "使用强力的钻头，我们可以从当地源石矿脉上挖取矿物和源石。"
+ miner_is_originium_miner_tt: "$job_miner_plural_with_icon$转化为[miner.GetIcon]$job_originium_miner_plural$"
+ mod_job_originium_miner_add: "$job_originium_miner$ 岗位"
+ mod_job_originium_miner_gestalt_add: "$job_originium_miner_gestalt$ 岗位"
+ mod_job_originium_miner_per_pop: "每$VALUE$个人口提供§G+1§!个$job_originium_miner$岗位"
+ mod_job_originium_miner_per_pop_short: "\n每$VALUE$£pop£§G+1§!£job_originium_miner£"
+ mod_job_originium_miner_gestalt_per_pop: "每$VALUE$个人口提供§G+1§!个$job_originium_miner_gestalt$岗位"
+ mod_job_originium_miner_gestalt_per_pop_short: "\n每$VALUE$£pop£§G+1§!£job_originium_miner_gestalt£"

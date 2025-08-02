@@ -1,14 +1,17 @@
 # 02_species_traits_basic_characteristics.txt
 trait_originium_based_unit = {
     cost = {
-        base = 1
+        base = 0
+        
         modifier = {
-            add = -1
-            is_species_class = TERRA
+            add = 1
+            NOT = {
+                owner_species = { is_species_class = TERRA }
+            }
         }
     }
     sorting_priority = 20
-    initial = no
+    initial = yes
     randomized = no
     species_potential_add = {
         always = no
@@ -21,16 +24,27 @@ trait_originium_based_unit = {
     }
 
     icon = "gfx/interface/icons/traits/originium.dds"
-    allowed_archetypes = { OTHER PRESAPIENT ORIGINOID BIOLOGICAL LITHOID }
+    allowed_archetypes = { OTHER PRESAPIENT ORIGINOID BIOLOGICAL LITHOID MACHINE ROBOT}
     tags = { originoid habitability leader special }
 
     immortal_leaders = no
 
     modifier = {
         # pc_machine_habitability = 1
-        leader_lifespan_add = 20
+        leader_lifespan_add = -10
         habitability_floor_add = 0.5
+        empire_size_pops_mult = -0.02
     }
+    resources = {
+        category = planet_pops
+        upkeep = {
+            infection_suppressant = 0.4
+        }
+        produces = {
+            originium = 0.01
+        }
+    }
+
 
 
 
@@ -45,15 +59,15 @@ trait_auto_mod_originium = {
         base = 3
         modifier = {
             add = -1
-            has_trait = trait_originium_based_unit
+            owner_species = { has_trait = trait_originium_based_unit}
         }
     }
     auto_mod = yes
-    category = advanced_genetic
+    category = normal
 
     allowed_archetypes = { OTHER PRESAPIENT ORIGINOID BIOLOGICAL LITHOID ROBOT MACHINE }
     localized_tags = {
-        SPECIES_TRAIT_ADAPTIVE_FRAMES
+        SPECIES_TRAIT_ORIGINIUM_VOCATIONAL
     }
     tags = { originoid positive automod }
 
@@ -69,12 +83,14 @@ trait_auto_mod_originium = {
     assembly_score = {
         base = 2
     }
+
     custom_tooltip_with_modifiers = automodding_trait_originium_tooltip
 }
 
 trait_traditional_originium = {
     cost = 1
     category = normal
+    auto_mod = yes
     species_possible_add = {
         can_add_genetic_traits = yes
     }
@@ -88,11 +104,11 @@ trait_traditional_originium = {
         always = yes
     }
     opposites = { "trait_quarrelsome" }
-    allowed_archetypes = { BIOLOGICAL LITHOID }
+    allowed_archetypes = { ORIGINOID }
     localized_tags = {
-        SPECIES_TRAIT_VOCATIONAL
+        SPECIES_TRAIT_ORIGINIUM_VOCATIONAL
     }
-    tags = { organic positive pop_output unity }
+    tags = { positive pop_output unity }
     modifier = {
         bureaucrat_jobs_bonus_workforce_mult = 0.1
     }
@@ -126,9 +142,9 @@ trait_thrifty_originium = {
     species_possible_merge_remove = {
         always = yes
     }
-    allowed_archetypes = { BIOLOGICAL LITHOID }
+    allowed_archetypes = { ORIGINOID }
     localized_tags = {
-        SPECIES_TRAIT_VOCATIONAL
+        SPECIES_TRAIT_ORIGINIUM_VOCATIONAL
     }
     tags = { organic positive pop_output trade }
     opposites = { "trait_cyborg_scarcity_algorithms" }
@@ -162,9 +178,9 @@ trait_intelligent_originium = {
         always = yes
     }
     opposites = { "trait_nerve_stapled" "trait_erudite" "trait_enigmatic_intelligence_poor" }
-    allowed_archetypes = { BIOLOGICAL LITHOID }
+    allowed_archetypes = { ORIGINOID }
     localized_tags = {
-        SPECIES_TRAIT_VOCATIONAL
+        SPECIES_TRAIT_ORIGINIUM_VOCATIONAL
     }
     tags = { organic positive pop_output research }
     modifier = {
@@ -200,9 +216,9 @@ trait_industrious_originium = {
     species_possible_merge_remove = {
         always = yes
     }
-    allowed_archetypes = { BIOLOGICAL LITHOID }
+    allowed_archetypes = { ORIGINOID }
     localized_tags = {
-        SPECIES_TRAIT_VOCATIONAL
+        SPECIES_TRAIT_ORIGINIUM_VOCATIONAL
     }
     tags = { organic positive pop_output mineral }
     modifier = {
@@ -238,9 +254,9 @@ trait_agrarian_originium = {
     species_possible_merge_remove = {
         always = yes
     }
-    allowed_archetypes = { BIOLOGICAL LITHOID }
+    allowed_archetypes = { ORIGINOID }
     localized_tags = {
-        SPECIES_TRAIT_VOCATIONAL
+        SPECIES_TRAIT_ORIGINIUM_VOCATIONAL
     }
     tags = { organic positive pop_output food }
     modifier = {
@@ -276,9 +292,9 @@ trait_ingenious_originium = {
     species_possible_merge_remove = {
         always = yes
     }
-    allowed_archetypes = { BIOLOGICAL LITHOID }
+    allowed_archetypes = { ORIGINOID }
     localized_tags = {
-        SPECIES_TRAIT_VOCATIONAL
+        SPECIES_TRAIT_ORIGINIUM_VOCATIONAL
     }
     tags = { organic positive pop_output energy }
     modifier = {
@@ -316,9 +332,9 @@ trait_charismatic_originium = {
     }
 
     opposites = { "trait_repugnant" }
-    allowed_archetypes = { BIOLOGICAL LITHOID }
+    allowed_archetypes = { ORIGINOID }
     localized_tags = {
-        SPECIES_TRAIT_VOCATIONAL
+        SPECIES_TRAIT_ORIGINIUM_VOCATIONAL
     }
     tags = { organic positive pop_output amenities }
     modifier = {

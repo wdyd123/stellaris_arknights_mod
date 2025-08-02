@@ -1,8 +1,8 @@
-concept_automodding_Originium = {
+concept_automodding_originium = {
     icon = "gfx/interface/icons/traits/trait_auto_mod_originium.dds"
 }
 
-concept_vocational_traits_Originium = {
+concept_vocational_traits_originium = {
     icon = "gfx/interface/icons/traits/trait_auto_mod_originium.dds"
 }
 

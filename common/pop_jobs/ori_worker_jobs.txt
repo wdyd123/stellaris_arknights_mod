@@ -1,0 +1,309 @@
+miner = {
+    category = worker
+    swappable_data = {
+        default = {
+            icon = miner
+            condition_string = WORKER_JOB_TRIGGER
+            building_icon = building_mineral_purification_plant
+        }
+        swap_type = {
+            trigger = {
+                miner_is_scrap_miner_trigger = yes
+            }
+            name = scrap_miner
+            desc = scrap_miner
+            weight = 5
+        }
+        swap_type = {
+            trigger = {
+                miner_is_cave_cleaner_trigger = yes
+            }
+            name = cave_cleaner
+            desc = cave_cleaner
+            weight = 10
+        }
+        swap_type = {
+            trigger = {
+                miner_is_mineral_diver_trigger = yes
+            }
+            name = mineral_diver
+            desc = mineral_diver
+            weight = 15
+        }
+        swap_type = {
+            trigger = {
+                miner_is_turtle_miner_trigger = yes
+            }
+            name = turtle_miner
+            desc = turtle_miner
+            weight = 20
+        }
+        swap_type = {
+            trigger = {
+                job_has_originium_trait_trigger = yes
+            }
+            name = originium_miner
+            desc = originium_miner
+            weight = 15
+        }
+    }
+
+    tags = { minerals strategic_resource }
+
+    possible_pre_triggers = {
+        has_owner = yes
+        is_being_purged = no
+        is_being_assimilated = no
+        is_sapient = yes
+    }
+
+    possible_precalc = can_fill_worker_job
+    possible = {
+        hidden_trigger = { exists = owner }
+        owner = {
+            is_gestalt = no
+        }
+    }
+
+    resources = {
+        category = planet_miners
+        produces = {
+            minerals = 4
+        }
+        # Job Swap - Originium Miners
+        produces = {
+            trigger = {
+                job_has_originium_trait_trigger = yes
+            }
+            originium = 2
+        }
+        # Job Swap - Scrap Miners
+        produces = {
+            trigger = {
+                exists = planet
+                planet = {
+                    miner_is_scrap_miner_trigger = yes
+                }
+            }
+            minerals = -2
+            alloys = 1
+        }
+        # Job Swap - Cave Cleaners
+        produces = {
+            trigger = {
+                exists = planet
+                planet = {
+                    miner_is_cave_cleaner_trigger = yes
+                }
+            }
+            minerals = 2
+        }
+        # Job Swap - Mineral Diver
+        produces = {
+            trigger = {
+                exists = planet
+                planet = {
+                    miner_is_mineral_diver_trigger = yes
+                }
+            }
+            minerals = -1
+            alloys = 1
+        }
+        # Job Swap - Turtle
+        produces = {
+            trigger = {
+                exists = planet
+                planet = {
+                    miner_is_turtle_miner_trigger = yes
+                }
+            }
+            minerals = -1
+            food = 3
+        }
+        produces = {
+            trigger = {
+                planet = {
+                    has_planet_flag = has_material_requisitorium
+                }
+            }
+            minerals = @requisitorium_minerals_reduction
+        }
+        # Job Swap - Originium Miners
+        upkeep = {
+            trigger = {
+                job_has_originium_trait_trigger = yes
+            }
+            infection_suppressant = 0.1
+        }
+    }
+
+    triggered_planet_modifier = {
+        # Gives some Stability per "Mining Guild" Councilor level.
+        potential = {
+            has_councilor = { COUNCILOR = "councilor_mining_guilds" }
+        }
+        planet_stability_add = @councilor_mining_guilds_miner_stability
+        mult = value:councilor_level|TYPE|councilor_mining_guilds|
+    }
+
+    overlord_resources = {
+        category = planet_requisitioned_minerals
+        produces = {
+            trigger = {
+                planet = {
+                    has_planet_flag = has_material_requisitorium
+                }
+            }
+            minerals = @requisitorium_minerals_overlord
+        }
+    }
+
+    weight = {
+        weight = @worker_job_weight
+        mult = value:job_weights_modifier|JOB|miner|RESOURCE|minerals|
+        modifier = {
+            factor = 10
+            is_enslaved = yes
+            can_take_servant_job = no
+            NOT = { has_slavery_type = { type = slavery_indentured } }
+        }
+        modifier = {
+            factor = 3
+            OR = {
+                is_non_sapient_robot = yes
+                is_shackled_robot = yes
+            }
+            can_take_servant_job = no
+            owner = { has_technology = tech_droid_workers }
+        }
+        modifier = {
+            factor = 200
+            OR = {
+                is_non_sapient_robot = yes
+                is_shackled_robot = yes
+            }
+            can_take_servant_job = no
+            owner = { NOT = { has_technology = tech_droid_workers } }
+        }
+        modifier = {
+            factor = 0.25
+            can_take_servant_job = yes
+        }
+
+        # low income modifier
+        modifier = {
+            factor = 3
+            exists = planet
+            planet = {
+                has_available_jobs = miner
+            }
+            exists = owner
+            owner = {
+                has_monthly_income = {
+                    resource = minerals
+                    value < 10
+                }
+            }
+        }
+        modifier = {
+            factor = 5
+            has_trait = trait_cyborg_creed_of_labor
+        }
+    }
+
+    inline_script = "jobs/automodding_priority_minerals"
+
+    promotion = {
+        time = @standard_promotion_time
+        effect = {
+            pop_amount_change_category = {
+                CATEGORY = worker
+                AMOUNT = local_pop_amount
+            }
+        }
+    }
+}
+
+originium_miner = {
+    category = worker
+
+    possible = { always = no }
+
+    swappable_data = {
+        default = {
+            icon = miner
+        }
+    }
+}
+
+originium_miner_gestalt = {
+    category = simple_drone
+
+    swappable_data = {
+        default = {
+            condition_string = DRONE_JOB_TRIGGER
+            icon = mining_drone
+        }
+    }
+
+    tags = { minerals originium }
+
+    possible_pre_triggers = {
+        has_owner = yes
+        is_enslaved = no
+        is_being_purged = no
+        is_being_assimilated = no
+        is_sapient = yes
+    }
+
+    possible_precalc = can_fill_drone_job
+
+    resources = {
+        category = planet_miners
+        produces = {
+            minerals = 3
+            originium = 1.33
+        }
+        upkeep = {
+            energy = 2
+        }
+    }
+
+    weight = {
+        weight = @simple_drone_job_weight
+        mult = value:job_weights_multiple_resources_modifier|JOB|turtle_miner_gestalt|RESOURCE1|minerals|WEIGHT1|0.5|RESOURCE2|originium|WEIGHT2|0.5|
+        modifier = {
+            factor = 1.1
+            owner = { has_valid_civic = civic_agrarian_idyll }
+        }
+        modifier = {
+            factor = 0.25
+            can_take_servant_job = yes
+        }
+        modifier = {
+            factor = 0.5
+            has_trait = trait_lithoid
+
+            owner = {
+                is_lithoid_empire = yes
+                country_uses_food = no
+                has_monthly_income = {
+                    resource = originium
+                    value >= 0
+                }
+            }
+        }
+    }
+
+    inline_script = "jobs/automodding_priority_minerals"
+
+    promotion = {
+        time = @standard_promotion_time
+        effect = {
+            pop_amount_change_category = {
+                CATEGORY = simple_drone
+                AMOUNT = local_pop_amount
+            }
+        }
+    }
+}

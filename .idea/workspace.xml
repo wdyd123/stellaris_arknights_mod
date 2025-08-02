@@ -5,8 +5,31 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3c23acaf-318b-45fc-ae5e-187f4e105237" name="更改" comment="源石产出,类似于纳米机器人,基本完成,数值还需要修改">
+      <change afterPath="$PROJECT_DIR$/common/economic_categories/ori_job_categoris.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/inline_scripts/jobs/automodding_priority_alloys.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/inline_scripts/jobs/automodding_priority_amenities.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/inline_scripts/jobs/automodding_priority_consumer_goods.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/inline_scripts/jobs/automodding_priority_energy.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/inline_scripts/jobs/automodding_priority_food.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/inline_scripts/jobs/automodding_priority_minerals.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/inline_scripts/jobs/automodding_priority_research.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/inline_scripts/jobs/automodding_priority_trade.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/inline_scripts/jobs/automodding_priority_unity.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/inline_scripts/zones/shared_industrial_factory_zone_ori.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/pop_jobs/ori_specialist_jobs.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/pop_jobs/ori_worker_jobs.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/scripted_modifiers/modifiers_ori.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/scripted_triggers/ori_scripted_triggers_ai.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/scripted_triggers/ori_scripted_triggers_jobs.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/traits/species_traits.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/zones/ori_zones.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dbnavigator.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dbnavigator.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dictionaries/project.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dictionaries/project.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/on_actions/on_actions_ori.txt" beforeDir="false" afterPath="$PROJECT_DIR$/common/on_actions/on_actions_ori.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/game_concepts/trait_concepts.txt" beforeDir="false" afterPath="$PROJECT_DIR$/common/game_concepts/trait_concepts.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/strategic_resources/resources_originium.txt" beforeDir="false" afterPath="$PROJECT_DIR$/common/strategic_resources/resources_originium.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/traits/originoid_traits.txt" beforeDir="false" afterPath="$PROJECT_DIR$/common/traits/originoid_traits.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/localisation/simp_chinese/name_lists_l_simp_chinese.yml" beforeDir="false" afterPath="$PROJECT_DIR$/localisation/simp_chinese/name_lists_l_simp_chinese.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,6 +53,7 @@
   }
 }</component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://B:/steam/steamapps/common/Stellaris/common/script_values/00_script_values.txt" root0="FORCE_HIGHLIGHTING" />
     <setting file="jar://$APPLICATION_PLUGINS_DIR$/Paradox-Language-Support/lib/Paradox-Language-Support-2.0.0.jar!/config/stellaris/common/traits.cwt" root0="FORCE_HIGHLIGHTING" />
     <setting file="jar://$APPLICATION_PLUGINS_DIR$/Paradox-Language-Support/lib/Paradox-Language-Support-2.0.0.jar!/config/stellaris/effects.cwt" root0="FORCE_HIGHLIGHTING" />
     <setting file="jar://$APPLICATION_PLUGINS_DIR$/Paradox-Language-Support/lib/Paradox-Language-Support-2.0.0.jar!/config/stellaris/events/events.cwt" root0="FORCE_HIGHLIGHTING" />
@@ -46,19 +70,29 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/OneDrive/Documents/Paradox Interactive/Stellaris/mod/00001/gfx/models/portraits/operator_portraits&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "master",
+    "ignore.virus.scanning.warn.message": "true",
+    "last_opened_file_path": "D:/OneDrive/Documents/Paradox Interactive/Stellaris/mod/00001/common/inline_scripts/jobs",
+    "run.code.analysis.last.selected.profile": "pProject Default",
+    "settings.editor.selected.configurable": "preferences.pluginManager"
+  },
+  "keyToStringList": {
+    "com.intellij.ide.scratch.ScratchImplUtil$2/新建临时文件": [
+      "PLAIN_TEXT"
+    ],
+    "com.intellij.ide.scratch.ScratchImplUtil$2/更改语言": [
+      "PARADOX_SCRIPT"
+    ]
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\OneDrive\Documents\Paradox Interactive\Stellaris\mod\00001\common\inline_scripts\jobs" />
       <recent name="D:\OneDrive\Documents\Paradox Interactive\Stellaris\mod\00001\gfx\models\portraits\operator_portraits" />
       <recent name="D:\OneDrive\Documents\Paradox Interactive\Stellaris\mod\00001\gfx\models\portraits" />
       <recent name="D:\OneDrive\Documents\Paradox Interactive\Stellaris\mod\00001\interface\resource_groups" />
@@ -163,7 +197,15 @@
       <option name="project" value="LOCAL" />
       <updated>1753759439059</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="源石产出,类似于纳米机器人,基本完成,数值还需要修改">
+      <option name="closed" value="true" />
+      <created>1753759549166</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1753759549166</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">

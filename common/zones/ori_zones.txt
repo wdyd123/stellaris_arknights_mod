@@ -1,0 +1,15 @@
+# zone_factory_ori = {
+#     inline_script = {
+#         script = zones/shared_industrial_factory_zone_ori
+#         AMOUNT = @scaling_district_1_job
+#     }
+#
+#     zone_sets = {
+#         urban
+#         habitat_urban
+#     }
+#
+#     inline_script = {
+#         script = zones/shared_city_non_urban_zone_modifiers
+#     }
+# }

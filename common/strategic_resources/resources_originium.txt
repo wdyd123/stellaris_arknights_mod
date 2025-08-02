@@ -3,11 +3,11 @@ infection_suppressant ={
     category = strategic
     market_amount = 10
     market_price = 100
-    max = 15000
+    max = 25000
     allow_deficit = no
     # prerequisites = { "tech_mine_volatile_motes" }
 
-    deficit_situation = situation_volatile_motes_deficit
+    deficit_situation = situation_infection_suppressant_deficit
     deficit_trade_conversion_mult = -1.25
 
     culling_conversion_value = 7
@@ -23,15 +23,13 @@ infection_suppressant ={
 
 originium ={
     tradable = yes
-    category = strategic
+    category = advanced
     market_amount = 10
     market_price = 100
-    max = 15000
+    max = 25000
     allow_deficit = no
     # prerequisites = { "tech_mine_volatile_motes" }
 
-    deficit_situation = situation_volatile_motes_deficit
-    deficit_trade_conversion_mult = -1.25
 
     culling_conversion_value = 7
 

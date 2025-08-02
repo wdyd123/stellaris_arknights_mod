@@ -1,0 +1,56 @@
+country_uses_infection_suppressant = {
+    OR = {
+        if = {
+            limit = {
+                # Check if we have an uninitialized economy, then return true to be safe because we don't know
+                resource_expenses_compare = {
+                    resource = food
+                    value = 0
+                }
+                resource_expenses_compare = {
+                    resource = minerals
+                    value = 0
+                }
+                resource_expenses_compare = {
+                    resource = energy
+                    value = 0
+                }
+            }
+        }
+        else = {
+            resource_expenses_compare = {
+                resource = infection_suppressant
+                value > 0
+            }
+        }
+    }
+}
+
+
+country_uses_originium = {
+    OR = {
+        if = {
+            limit = {
+                # Check if we have an uninitialized economy, then return true to be safe because we don't know
+                resource_expenses_compare = {
+                    resource = food
+                    value = 0
+                }
+                resource_expenses_compare = {
+                    resource = minerals
+                    value = 0
+                }
+                resource_expenses_compare = {
+                    resource = energy
+                    value = 0
+                }
+            }
+        }
+        else = {
+            resource_expenses_compare = {
+                resource = originium
+                value > 0
+            }
+        }
+    }
+}

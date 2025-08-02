@@ -1,0 +1,11 @@
+auto_trait_prio = { #Artificers & Pearl Divers have to be updated manually as they prefer Consumer Goods & Trade
+	#Traders+Merchants
+	trait_thrifty_originium
+
+	trait_thrifty
+	trait_commercial_genius
+	trait_robot_trading_algorithms
+	trait_cyborg_trading_algorithms
+	trait_malleable_trade
+	trait_adaptive_trade
+}

@@ -1,0 +1,5 @@
+auto_trait_prio = { #Artificers & Pearl Divers have to be updated manually as they prefer Consumer Goods & Trade
+	#Artisans (Consumer Goods)
+	trait_malleable_forge
+	trait_adaptive_forge
+}
