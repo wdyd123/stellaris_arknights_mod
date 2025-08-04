@@ -4,31 +4,23 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3c23acaf-318b-45fc-ae5e-187f4e105237" name="更改" comment="源石产出,类似于纳米机器人,基本完成,数值还需要修改">
-      <change afterPath="$PROJECT_DIR$/common/economic_categories/ori_job_categoris.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common/inline_scripts/jobs/automodding_priority_alloys.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common/inline_scripts/jobs/automodding_priority_amenities.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common/inline_scripts/jobs/automodding_priority_consumer_goods.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common/inline_scripts/jobs/automodding_priority_energy.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common/inline_scripts/jobs/automodding_priority_food.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common/inline_scripts/jobs/automodding_priority_minerals.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common/inline_scripts/jobs/automodding_priority_research.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common/inline_scripts/jobs/automodding_priority_trade.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common/inline_scripts/jobs/automodding_priority_unity.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common/inline_scripts/zones/shared_industrial_factory_zone_ori.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common/pop_jobs/ori_specialist_jobs.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common/pop_jobs/ori_worker_jobs.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common/scripted_modifiers/modifiers_ori.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common/scripted_triggers/ori_scripted_triggers_ai.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common/scripted_triggers/ori_scripted_triggers_jobs.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common/traits/species_traits.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common/zones/ori_zones.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dbnavigator.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dbnavigator.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dictionaries/project.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dictionaries/project.xml" afterDir="false" />
+    <list default="true" id="3c23acaf-318b-45fc-ae5e-187f4e105237" name="更改" comment="实现了源石技艺版的自动改造特质,特质具体效果还有待修改,每月自动改造人口数我也考虑修改一下,原版的有点垃圾.&#10;工匠现在会产出矿石病抑制剂,源石技艺特质以后都会增加抑制剂维护.&#10;矿工会产出少量源石,以供前期使用.">
+      <change afterPath="$PROJECT_DIR$/common/static_modifiers/ori_static_modifiers_workforce_traits.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/traits/consumer_good.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/traits/trait_originium_based_forge.dds" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/game_concepts/trait_concepts.txt" beforeDir="false" afterPath="$PROJECT_DIR$/common/game_concepts/trait_concepts.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/strategic_resources/resources_originium.txt" beforeDir="false" afterPath="$PROJECT_DIR$/common/strategic_resources/resources_originium.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/defines/ori_defines.txt" beforeDir="false" afterPath="$PROJECT_DIR$/common/defines/ori_defines.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/inline_scripts/jobs/automodding_priority_alloys.txt" beforeDir="false" afterPath="$PROJECT_DIR$/common/inline_scripts/jobs/automodding_priority_alloys.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/inline_scripts/jobs/automodding_priority_consumer_goods.txt" beforeDir="false" afterPath="$PROJECT_DIR$/common/inline_scripts/jobs/automodding_priority_consumer_goods.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/common/traits/originoid_traits.txt" beforeDir="false" afterPath="$PROJECT_DIR$/common/traits/originoid_traits.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gfx/interface/icons/traits/trait_agrarian_originium.dds" beforeDir="false" afterPath="$PROJECT_DIR$/gfx/interface/icons/traits/trait_agrarian_originium.dds" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gfx/interface/icons/traits/trait_auto_mod_originium .dds" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gfx/interface/icons/traits/trait_charismatic_originium.dds" beforeDir="false" afterPath="$PROJECT_DIR$/gfx/interface/icons/traits/trait_charismatic_originium.dds" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gfx/interface/icons/traits/trait_industrious_originium.dds" beforeDir="false" afterPath="$PROJECT_DIR$/gfx/interface/icons/traits/trait_industrious_originium.dds" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gfx/interface/icons/traits/trait_ingenious_originium.dds" beforeDir="false" afterPath="$PROJECT_DIR$/gfx/interface/icons/traits/trait_ingenious_originium.dds" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gfx/interface/icons/traits/trait_intelligent_originium.dds" beforeDir="false" afterPath="$PROJECT_DIR$/gfx/interface/icons/traits/trait_intelligent_originium.dds" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gfx/interface/icons/traits/trait_thrifty_originium.dds" beforeDir="false" afterPath="$PROJECT_DIR$/gfx/interface/icons/traits/trait_thrifty_originium.dds" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gfx/interface/icons/traits/trait_traditional_originium.dds" beforeDir="false" afterPath="$PROJECT_DIR$/gfx/interface/icons/traits/trait_traditional_originium.dds" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/localisation/simp_chinese/name_lists_l_simp_chinese.yml" beforeDir="false" afterPath="$PROJECT_DIR$/localisation/simp_chinese/name_lists_l_simp_chinese.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -70,28 +62,29 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "master",
-    "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "D:/OneDrive/Documents/Paradox Interactive/Stellaris/mod/00001/common/inline_scripts/jobs",
-    "run.code.analysis.last.selected.profile": "pProject Default",
-    "settings.editor.selected.configurable": "preferences.pluginManager"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/OneDrive/Documents/Paradox Interactive/Stellaris/mod/00001/gfx/interface/icons/traits&quot;,
+    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
   },
-  "keyToStringList": {
-    "com.intellij.ide.scratch.ScratchImplUtil$2/新建临时文件": [
-      "PLAIN_TEXT"
+  &quot;keyToStringList&quot;: {
+    &quot;com.intellij.ide.scratch.ScratchImplUtil$2/新建临时文件&quot;: [
+      &quot;PLAIN_TEXT&quot;
     ],
-    "com.intellij.ide.scratch.ScratchImplUtil$2/更改语言": [
-      "PARADOX_SCRIPT"
+    &quot;com.intellij.ide.scratch.ScratchImplUtil$2/更改语言&quot;: [
+      &quot;PARADOX_SCRIPT&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\OneDrive\Documents\Paradox Interactive\Stellaris\mod\00001\gfx\interface\icons\traits" />
       <recent name="D:\OneDrive\Documents\Paradox Interactive\Stellaris\mod\00001\common\inline_scripts\jobs" />
       <recent name="D:\OneDrive\Documents\Paradox Interactive\Stellaris\mod\00001\gfx\models\portraits\operator_portraits" />
       <recent name="D:\OneDrive\Documents\Paradox Interactive\Stellaris\mod\00001\gfx\models\portraits" />
@@ -205,7 +198,15 @@
       <option name="project" value="LOCAL" />
       <updated>1753759549166</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="实现了源石技艺版的自动改造特质,特质具体效果还有待修改,每月自动改造人口数我也考虑修改一下,原版的有点垃圾.&#10;工匠现在会产出矿石病抑制剂,源石技艺特质以后都会增加抑制剂维护.&#10;矿工会产出少量源石,以供前期使用.">
+      <option name="closed" value="true" />
+      <created>1754098374319</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1754098374319</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -256,6 +257,7 @@
     <MESSAGE value="补充立绘" />
     <MESSAGE value="源石产出,类似于纳米机器人,初步修改" />
     <MESSAGE value="源石产出,类似于纳米机器人,基本完成,数值还需要修改" />
-    <option name="LAST_COMMIT_MESSAGE" value="源石产出,类似于纳米机器人,基本完成,数值还需要修改" />
+    <MESSAGE value="实现了源石技艺版的自动改造特质,特质具体效果还有待修改,每月自动改造人口数我也考虑修改一下,原版的有点垃圾.&#10;工匠现在会产出矿石病抑制剂,源石技艺特质以后都会增加抑制剂维护.&#10;矿工会产出少量源石,以供前期使用." />
+    <option name="LAST_COMMIT_MESSAGE" value="实现了源石技艺版的自动改造特质,特质具体效果还有待修改,每月自动改造人口数我也考虑修改一下,原版的有点垃圾.&#10;工匠现在会产出矿石病抑制剂,源石技艺特质以后都会增加抑制剂维护.&#10;矿工会产出少量源石,以供前期使用." />
   </component>
 </project>

@@ -38,7 +38,7 @@ trait_originium_based_unit = {
     resources = {
         category = planet_pops
         upkeep = {
-            infection_suppressant = 0.4
+            infection_suppressant = 0.25
         }
         produces = {
             originium = 0.01
@@ -64,7 +64,10 @@ trait_auto_mod_originium = {
     }
     auto_mod = yes
     category = normal
+    initial = no
+    prerequisites = {
 
+    }
     allowed_archetypes = { OTHER PRESAPIENT ORIGINOID BIOLOGICAL LITHOID ROBOT MACHINE }
     localized_tags = {
         SPECIES_TRAIT_ORIGINIUM_VOCATIONAL
@@ -110,11 +113,19 @@ trait_traditional_originium = {
     }
     tags = { positive pop_output unity }
     modifier = {
-        bureaucrat_jobs_bonus_workforce_mult = 0.1
+        bureaucrat_jobs_bonus_workforce_mult = 0.2
     }
     slave_cost = {
         energy = 500
     }
+    resources = {
+        category = planet_pops
+        upkeep = {
+            infection_suppressant = 0.04
+        }
+    }
+    custom_tooltip_with_modifiers = trait_originium_infection_suppressant_upkeep_add_tt
+
     assembly_score = {
         modifier = {
             add = 1.5
@@ -149,8 +160,16 @@ trait_thrifty_originium = {
     tags = { organic positive pop_output trade }
     opposites = { "trait_cyborg_scarcity_algorithms" }
     modifier = {
-        trader_jobs_bonus_workforce_mult = 0.25
+        trader_jobs_bonus_workforce_mult = 0.45
     }
+    resources = {
+        category = planet_pops
+        upkeep = {
+            infection_suppressant = 0.04
+        }
+    }
+    custom_tooltip_with_modifiers = trait_originium_infection_suppressant_upkeep_add_tt
+
     slave_cost = {
         energy = 500
     }
@@ -184,8 +203,16 @@ trait_intelligent_originium = {
     }
     tags = { organic positive pop_output research }
     modifier = {
-        researcher_jobs_bonus_workforce_mult = 0.10
+        researcher_jobs_bonus_workforce_mult = 0.2
     }
+    resources = {
+        category = planet_pops
+        upkeep = {
+            infection_suppressant = 0.04
+        }
+    }
+    custom_tooltip_with_modifiers = trait_originium_infection_suppressant_upkeep_add_tt
+
     slave_cost = {
         energy = 500
     }
@@ -222,8 +249,16 @@ trait_industrious_originium = {
     }
     tags = { organic positive pop_output mineral }
     modifier = {
-        miner_jobs_bonus_workforce_mult = 0.15
+        miner_jobs_bonus_workforce_mult = 0.25
     }
+    resources = {
+        category = planet_pops
+        upkeep = {
+            infection_suppressant = 0.04
+        }
+    }
+    custom_tooltip_with_modifiers = trait_originium_infection_suppressant_upkeep_add_tt
+
     slave_cost = {
         energy = 500
     }
@@ -260,8 +295,16 @@ trait_agrarian_originium = {
     }
     tags = { organic positive pop_output food }
     modifier = {
-        farmer_jobs_bonus_workforce_mult = 0.15
+        farmer_jobs_bonus_workforce_mult = 0.25
     }
+    resources = {
+        category = planet_pops
+        upkeep = {
+            infection_suppressant = 0.04
+        }
+    }
+    custom_tooltip_with_modifiers = trait_originium_infection_suppressant_upkeep_add_tt
+
     slave_cost = {
         energy = 500
     }
@@ -298,8 +341,16 @@ trait_ingenious_originium = {
     }
     tags = { organic positive pop_output energy }
     modifier = {
-        technician_jobs_bonus_workforce_mult = 0.15
+        technician_jobs_bonus_workforce_mult = 0.25
     }
+    resources = {
+        category = planet_pops
+        upkeep = {
+            infection_suppressant = 0.04
+        }
+    }
+    custom_tooltip_with_modifiers = trait_originium_infection_suppressant_upkeep_add_tt
+
     slave_cost = {
         energy = 500
     }
@@ -338,9 +389,49 @@ trait_charismatic_originium = {
     }
     tags = { organic positive pop_output amenities }
     modifier = {
-        entertainer_jobs_bonus_workforce_mult = 0.20
+        entertainer_jobs_bonus_workforce_mult = 0.40
     }
+    resources = {
+        category = planet_pops
+        upkeep = {
+            infection_suppressant = 0.04
+        }
+    }
+    custom_tooltip_with_modifiers = trait_originium_infection_suppressant_upkeep_add_tt
+
     slave_cost = {
         energy = 500
     }
 }
+
+trait_originium_based_forge = {
+    cost = 0
+    category = normal
+    initial = yes
+    randomized = no
+    species_potential_add = {
+        has_trait = trait_originium_based_unit
+    }
+    species_possible_remove = {
+        always = no
+    }
+    species_possible_merge_add = {
+        always = no
+    }
+    allowed_archetypes = { ORIGINOID }
+    tags = { organic positive pop_output alloys consumer_goods special }
+
+    modifier = {
+        foundry_jobs_bonus_workforce_mult = 0.25
+        artisan_jobs_bonus_workforce_mult = 0.25
+
+    }
+    resources = {
+        category = planet_pops
+        upkeep = {
+            infection_suppressant = 0.04
+        }
+    }
+    custom_tooltip_with_modifiers = trait_originium_infection_suppressant_upkeep_add_tt
+}
+

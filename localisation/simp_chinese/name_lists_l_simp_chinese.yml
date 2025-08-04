@@ -36,16 +36,18 @@
  trait_auto_mod_originium_desc: "源石技艺催生了全新的资源加工方法，使得各类资源的生产效率得到了飞跃提升，依据工作环境，选择合适的源石技艺。"
  automodding_trait_originium_tooltip: "$automodding_trait_tooltip_all$\n\n§Y$trait_auto_mod_biological$§!可从['concept_automodding_originium']中挑选修正"
  trait_traditional_originium: "代际记忆"
- trait_thrifty_originium: "低能耗"
+ trait_thrifty_originium: "足智多谋"
  trait_intelligent_originium: "聪慧"
  trait_industrious_originium: "吃苦耐劳"
- trait_agrarian_originium: "农民"
- trait_ingenious_originium: "足智多谋"
+ trait_agrarian_originium: "嘉禾盈仓"
+ trait_ingenious_originium: "雷法专精"
  trait_charismatic_originium: "魅力非凡"
  concept_automodding_originium: "适应性源石技艺列表"
  concept_automodding_originium_desc: "—§3['trait:trait_traditional_originium']§!\n—§3['trait:trait_thrifty_originium']§!\n—§3['trait:trait_intelligent_originium']§!\n—§3['trait:trait_industrious_originium']§!\n—§3['trait:trait_agrarian_originium']§!\n—§3['trait:trait_ingenious_originium']§!\n—§3['trait:trait_charismatic_originium']§!"
  concept_vocational_traits_originium: "职业源石技艺"
  concept_vocational_traits_originium_desc: "$concept_vocational_traits_originium$是一类可以通过§3['trait:trait_auto_mod_originium']§!特质自动调整的物种特质。$NEW_LINE$$concept_automodding_originium_desc$"
+ trait_originium_based_forge: "火法专精"
+ trait_originium_based_forge_desc: "火属性的源石技艺在提高冶炼效率方面颇有帮助。"
 
 
  trait_traditional_originium_desc: "§L几百年的历史，这些东西是他们的负担，但也是他们的骄傲。§!\n"
@@ -287,3 +289,10 @@
  mod_job_originium_miner_per_pop_short: "\n每$VALUE$£pop£§G+1§!£job_originium_miner£"
  mod_job_originium_miner_gestalt_per_pop: "每$VALUE$个人口提供§G+1§!个$job_originium_miner_gestalt$岗位"
  mod_job_originium_miner_gestalt_per_pop_short: "\n每$VALUE$£pop£§G+1§!£job_originium_miner_gestalt£"
+
+
+ ####################################
+ #Modifier
+ ####################################
+ trait_originium_infection_suppressant_upkeep_add_tt: "$r_infection_suppressant$维护费：§R+0.04§!"
+
