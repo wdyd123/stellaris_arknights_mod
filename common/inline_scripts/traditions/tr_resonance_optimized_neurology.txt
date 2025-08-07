@@ -1,0 +1,22 @@
+custom_tooltip_with_modifiers = tr_aptitude_adopt_desc
+
+on_enabled = {
+    hidden_effect = {
+        every_owned_leader = {
+            add_trait = {
+				trait = random_common
+				show_message = no
+			}
+        }
+        every_pool_leader = {
+			add_trait = {
+				trait = random_common
+				show_message = no
+			}
+        }
+    }
+}
+modifier = {
+    leader_skill_add = 1
+    leader_starting_age_mult = -0.25
+}

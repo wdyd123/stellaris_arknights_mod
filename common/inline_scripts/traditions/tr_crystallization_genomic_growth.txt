@@ -1,0 +1,5 @@
+custom_tooltip_with_modifiers = tr_crystallization_genomic_growth_tt
+modifier = {
+    planet_pops_upkeep_mult = -0.10
+    pop_amenities_usage_mult = -0.10
+}

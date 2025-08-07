@@ -1,0 +1,4 @@
+custom_tooltip_with_modifiers = tr_crystallization_artificial_population_tt
+modifier = {
+	pop_government_ethic_attraction = 0.50
+}

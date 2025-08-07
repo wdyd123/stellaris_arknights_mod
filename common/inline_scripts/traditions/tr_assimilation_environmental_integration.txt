@@ -1,0 +1,14 @@
+custom_tooltip = tr_assimilation_environmental_integration_tt
+on_enabled = {
+	hidden_effect = {
+		species = {
+			set_habitability_trait = { trait = trait_auto_hab_preference }
+		}
+		every_owned_species = {
+			limit = {
+				is_subspecies = root
+			}
+			set_habitability_trait = { trait = trait_auto_hab_preference }
+		}
+	}
+}

@@ -1,0 +1,5 @@
+custom_tooltip_with_modifiers = tr_assimilation_somatic_subversiveness_tt
+modifier = {
+    species_leader_exp_gain = 0.10
+    leader_lifespan_mult = 0.10
+}

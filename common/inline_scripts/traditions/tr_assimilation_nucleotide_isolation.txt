@@ -1,0 +1,1 @@
+custom_tooltip_with_modifiers = tr_assimilation_nucleotide_isolation_tt

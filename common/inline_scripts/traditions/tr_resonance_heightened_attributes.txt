@@ -1,0 +1,4 @@
+custom_tooltip_with_modifiers = tr_resonance_heightened_attributes_tt
+modifier = {
+	empire_size_pops_mult = @genomic_purity_pop_size
+}

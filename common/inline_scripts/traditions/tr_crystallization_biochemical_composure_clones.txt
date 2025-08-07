@@ -1,0 +1,5 @@
+custom_tooltip_with_modifiers = tr_crystallization_biochemical_composure_clones_tt
+triggered_modifier = {
+    potential = { is_gestalt = yes }
+    councilor_skill_add = 2
+}
