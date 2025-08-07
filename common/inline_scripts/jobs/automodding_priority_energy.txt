@@ -1,7 +1,7 @@
 auto_trait_prio = {
 	#Technicians
+	trait_ingenious_originium_II
 	trait_ingenious_originium
-
 	trait_ingenious
 	trait_technical_skill
 	trait_robot_superconductive

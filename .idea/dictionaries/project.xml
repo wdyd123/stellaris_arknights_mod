@@ -2,7 +2,14 @@
   <dictionary name="project">
     <words>
       <w>automodding</w>
+      <w>biomorphosis</w>
+      <w>evopred</w>
+      <w>genetech</w>
+      <w>mult</w>
       <w>originium</w>
+      <w>researchmax</w>
+      <w>researchmin</w>
+      <w>researchreward</w>
     </words>
   </dictionary>
 </component>

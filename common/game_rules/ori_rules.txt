@@ -1,0 +1,210 @@
+leader_election_weight = {
+    base = 0
+
+    # Purity Elections
+    modifier = {
+        custom_tooltip = {
+            success_text = concept_genetic_purity
+            owner = {
+                is_purity_authority = yes
+            }
+            species = {
+                is_variable_set = species_traits_purity_count
+            }
+        }
+        add = species.value:species_purity_times_ten
+    }
+    # Resonance Elections
+    modifier = {
+        custom_tooltip = {
+            success_text = concept_genetic_purity
+            owner = {
+                is_resonance_authority = yes
+            }
+            species = {
+                is_variable_set = species_traits_resonance_count
+            }
+        }
+        add = species.value:species_resonance_times_ten
+    }
+
+    # Multiply by Faction support.
+    modifier = {
+        custom_tooltip = {
+            success_text = election_weight.faction_support
+            owner = { has_country_flag = first_faction }
+        }
+        add = value:leader_faction_support_election_bonus
+    }
+
+    # If no Factions formed, fake faction support based on if it's an Empire ethic or not.
+    modifier = {
+        custom_tooltip = {
+            success_text = election_weight.no_faction_empire_ethic
+            NOT = { owner = { has_country_flag = first_faction } }
+            leader_has_empire_ethic = yes
+        }
+        add = 50
+    }
+    modifier = {
+        custom_tooltip = {
+            success_text = election_weight.no_faction_not_empire_ethic
+            NOT = { owner = { has_country_flag = first_faction } }
+            leader_has_empire_ethic = no
+        }
+        add = 25
+    }
+
+    # Not changing Ruler should be slightly preferred.
+    modifier = {
+        is_ruler = yes
+        mult = 1.1
+    }
+
+    # Bonus if Leader was Councilor when election started. Or if no Election, is a Councilor now.
+    modifier = {
+        custom_tooltip = {
+            success_text = election_weight.iswas_councilor
+            if = {
+                limit = {
+                    owner = { has_country_flag = election_under_way }
+                }
+                has_leader_flag = councilor_at_election_start
+            }
+            else = {
+                is_councilor = yes
+                is_ruler = no
+            }
+        }
+        mult = 1.05
+    }
+
+    # Governments (based on Ethics and Civics) might prefer certain Leader classes. Hide if +/- 0%.
+    modifier = {
+        custom_tooltip = {
+            success_text = election_weight.leader_class_government_approves
+            check_variable_arithmetic = {
+                which = value:leader_class_government_match_bonus_mult
+                value != 1
+            }
+        }
+        mult = value:leader_class_government_match_bonus_mult
+    }
+
+    # Extra bonus for Councilor Subclass (which is a Trait).
+    modifier = {
+        custom_tooltip = {
+            success_text = election_weight.leader_councilor_subclass
+            has_council_subclass = yes
+        }
+        mult = 1.2
+    }
+
+    # Penalty for Non-Councilor Subclass (which is a Trait).
+    modifier = {
+        custom_tooltip = {
+            success_text = election_weight.leader_councilor_subclass
+            has_non_council_subclass = yes
+        }
+        mult = 0.8
+    }
+
+    # Bonus/penalty from Traits.
+    modifier = {
+        custom_tooltip = {
+            success_text = election_weight.leader_traits
+            check_variable_arithmetic = {
+                which = value:leader_traits_election_bonus_mult
+                value != 1
+            }
+        }
+        mult = value:leader_traits_election_bonus_mult
+    }
+
+    # Bonus from Skill level.
+    modifier = {
+        custom_tooltip = {
+            success_text = election_weight.leader_skill
+            check_variable_arithmetic = {
+                which = value:leader_skill_election_bonus_mult
+                value != 1
+            }
+        }
+        mult = value:leader_skill_election_bonus_mult
+    }
+
+    # Penalty from old Age, unless already ruler or immortal.
+    modifier = {
+        custom_tooltip = {
+            success_text = election_weight.leader_age
+            is_immortal = no
+            is_ruler = no
+            check_variable_arithmetic = {
+                which = value:leader_age_percentage_of_lifespan
+                value > 0.9
+            }
+        }
+        mult = 0.5
+    }
+    # Titanic reduction if you are fanatic xenophobic and the candidate is a xeno
+    modifier = {
+        custom_tooltip = {
+            success_text = Xeno
+            owner = {
+                has_ethic = ethic_fanatic_xenophobe
+                NOT = { is_same_species = prev } #Invalidated if you have selective kinship
+                NAND = {
+                    has_valid_civic = civic_selective_kinship
+                    is_same_species_class = prev
+                }
+            }
+        }
+        mult = 0.001
+    }
+    # Huge Reduction if you are a xenophobe and the candidate is a xeno
+    modifier = {
+        custom_tooltip = {
+            success_text = Xeno
+            owner = {
+                has_ethic = ethic_xenophobe
+                NOT = { is_same_species = prev }
+                NAND = {
+                    has_valid_civic = civic_selective_kinship
+                    is_same_species_class = prev
+                }
+            }
+        }
+        mult = 0.01
+    }
+    # Halve the chance if you are neither a xenophobe or xenophile
+    modifier = {
+        custom_tooltip = {
+            success_text = Xeno
+            owner = {
+                NOR = {
+                    is_xenophobe = yes
+                    is_xenophile = yes
+                }
+                NOT = { is_same_species = prev }
+                NAND = {
+                    has_valid_civic = civic_selective_kinship
+                    is_same_species_class = prev
+                }
+            }
+        }
+        mult = 0.5
+    }
+    # No modifiers for regular xenophiles or selective kinship empires
+    # Fanatic Xenophiles prefer electing aliens that are not the same species as the current one in charge.
+    modifier = {
+        custom_tooltip = {
+            success_text = Xeno
+            owner = { has_ethic = ethic_fanatic_xenophile }
+            exists = owner.ruler
+            NOT = {
+                is_same_species = owner.ruler
+            }
+        }
+        mult = 1.2
+    }
+}

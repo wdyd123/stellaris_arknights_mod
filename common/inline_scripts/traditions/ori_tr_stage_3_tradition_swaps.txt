@@ -1,0 +1,166 @@
+custom_tooltip = tr_originium_stage_3_swap_tt
+
+# Resonance Swap
+tradition_swap = {
+	name = tr_originium_stage_3_resonance_swap
+	inherit_name = no
+	inherit_icon = no
+	trigger = {
+		has_country_flag = originium_ascension_stage_3_resonance
+		NOR = {
+			has_ethic = ethic_xenophile
+			has_ethic = ethic_fanatic_xenophile
+		}
+		is_wilderness_empire = no
+	}
+
+	inline_script = {
+		script = traditions/tr_resonance_imperfection_remediation
+	}
+
+	weight = {
+		factor = 1
+	}
+}
+
+tradition_swap = {
+	name = tr_resonance_imperfection_remediation_xenophile
+	inherit_name = no
+	inherit_icon = no
+	trigger = {
+		has_country_flag = originium_ascension_stage_3_resonance
+		OR = {
+			has_ethic = ethic_xenophile
+			has_ethic = ethic_fanatic_xenophile
+		}
+	}
+
+	inline_script = {
+		script = traditions/tr_resonance_imperfection_remediation_xenophile
+	}
+
+	weight = {
+		factor = 1
+	}
+}
+
+# Wilderness Swap
+tradition_swap = {
+	name = tr_resonance_imperfection_remediation_wilderness
+	inherit_name = no
+	inherit_icon = no
+	trigger = {
+		is_wilderness_empire = yes
+	}
+	inline_script = {
+		script = traditions/tr_resonance_imperfection_remediation_wilderness
+	}
+	weight = {
+		factor = 1
+	}
+}
+
+# Crystallization Swap
+tradition_swap = {
+	name = tr_originium_stage_3_crystallization_swap
+	inherit_name = no
+	inherit_icon = no
+	trigger = {
+		has_country_flag = originium_ascension_stage_3_crystallization
+		is_crystallization_authority = no
+		NOT = {
+			has_country_flag = clone_army_full_potential
+		}
+	}
+
+	inline_script = {
+		script = traditions/tr_crystallization_biochemical_composure
+	}
+	weight = {
+		factor = 1
+	}
+}
+
+# Clone Army Swap
+tradition_swap = {
+	name = tr_crystallization_biochemical_composure_clone_army
+	inherit_name = no
+	inherit_icon = no
+	trigger = {
+		has_country_flag = clone_army_full_potential
+		is_crystallization_authority = no
+	}
+	modifier = {
+
+	}
+	inline_script = {
+		script = traditions/tr_crystallization_biochemical_composure
+	}
+	weight = {
+		factor = 1
+	}
+}
+
+# Crystallization Swap
+tradition_swap = {
+	name = tr_crystallization_biochemical_composure_clones
+	inherit_name = no
+	inherit_icon = no
+	trigger = {
+		has_country_flag = originium_ascension_stage_3_crystallization
+		is_crystallization_authority = yes
+		NOT = {
+			has_country_flag = clone_army_full_potential
+		}
+	}
+
+	inline_script = {
+		script = traditions/tr_crystallization_biochemical_composure_clones
+	}
+	weight = {
+		factor = 1
+	}
+}
+
+# Clone Army Swap
+tradition_swap = {
+	name = tr_crystallization_biochemical_composure_clones_clone_army
+	inherit_name = no
+	inherit_icon = no
+	trigger = {
+		has_country_flag = originium_ascension_stage_3_crystallization
+		is_crystallization_authority = yes
+		has_country_flag = clone_army_full_potential
+	}
+	modifier = {
+
+	}
+	inline_script = {
+		script = traditions/tr_crystallization_biochemical_composure_clones
+	}
+	weight = {
+		factor = 1
+	}
+}
+
+# Assimilation Swap
+tradition_swap = {
+	name = tr_originium_stage_3_assimilation_swap
+	inherit_name = no
+	inherit_icon = no
+	trigger = {
+		has_country_flag = originium_ascension_stage_3_assimilation
+		NOT = {
+			has_origin = origin_evolutionary_predators
+		}
+	}
+
+	inline_script = {
+		script = traditions/tr_assimilation_nucleotide_isolation
+	}
+	weight = {
+		factor = 1
+	}
+}
+
+

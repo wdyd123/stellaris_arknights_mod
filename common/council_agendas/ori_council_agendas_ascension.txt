@@ -1,0 +1,282 @@
+@base_tradition_agenda_cost = 7000
+@ascension_agenda_cost = 3500		# Same as short_agenda_cost from traditions
+@ascension_agenda_cooldown = 1080	# 3 Years
+
+agenda_originium_resonance = {
+    agenda_cost = @ascension_agenda_cost
+    agenda_cooldown = @ascension_agenda_cooldown
+    allow = {
+        has_ascension_perk = ap_originium_resonance
+    }
+    potential = {
+        has_utopia = yes
+        is_machine_empire = no
+        NOR = {
+            has_cybernetic_ascension = yes
+            has_psionic_ascension = yes
+            has_synthetic_ascension = yes
+            is_natural_design_empire = yes
+            is_individual_machine = yes
+            has_genetic_ascension = yes
+        }
+        NAND = {
+            has_technology = tech_genome_mapping
+            has_technology = tech_gene_tailoring
+            has_technology = tech_glandular_acclimation
+            has_technology = tech_gene_expressions
+            has_technology = tech_gene_seed_purification
+        }
+    }
+    effect = {
+        if = {
+            limit = {
+                is_wilderness_empire = no
+            }
+            inverted_switch = {
+                trigger = has_technology
+                tech_genome_mapping = {
+                    add_tech_progress = {
+                        tech = tech_genome_mapping
+                        progress = @agenda_award_tech_progress
+                    }
+                }
+                tech_gene_tailoring = {
+                    add_tech_progress = {
+                        tech = tech_gene_tailoring
+                        progress = @agenda_award_tech_progress
+                    }
+                }
+                tech_glandular_acclimation = {
+                    add_tech_progress = {
+                        tech = tech_glandular_acclimation
+                        progress = @agenda_award_tech_progress
+                    }
+                }
+                tech_gene_expressions = {
+                    add_tech_progress = {
+                        tech = tech_gene_expressions
+                        progress = @agenda_award_tech_progress
+                    }
+                }
+                tech_gene_seed_purification = {
+                    add_tech_progress = {
+                        tech = tech_gene_seed_purification
+                        progress = @agenda_award_tech_progress
+                    }
+                }
+                default = {
+                    add_monthly_resource_mult = {
+                        resource = society_research
+                        value = @tier3researchreward
+                        min = @tier3researchmin
+                        max = @tier3researchmax
+                    }
+                }
+            }
+        }
+        # Wilderness can't get Gene Seed Purification, so it gets swapped out for them
+        else = {
+            inverted_switch = {
+                trigger = has_technology
+                tech_genome_mapping = {
+                    add_tech_progress = {
+                        tech = tech_genome_mapping
+                        progress = @agenda_award_tech_progress
+                    }
+                }
+                tech_gene_tailoring = {
+                    add_tech_progress = {
+                        tech = tech_gene_tailoring
+                        progress = @agenda_award_tech_progress
+                    }
+                }
+                tech_glandular_acclimation = {
+                    add_tech_progress = {
+                        tech = tech_glandular_acclimation
+                        progress = @agenda_award_tech_progress
+                    }
+                }
+                tech_gene_expressions = {
+                    add_tech_progress = {
+                        tech = tech_gene_expressions
+                        progress = @agenda_award_tech_progress
+                    }
+                }
+                default = {
+                    add_monthly_resource_mult = {
+                        resource = society_research
+                        value = @tier3researchreward
+                        min = @tier3researchmin
+                        max = @tier3researchmax
+                    }
+                }
+            }
+        }
+    }
+}
+
+agenda_resonance_perfection = {
+    agenda_cost = @base_tradition_agenda_cost
+    allow = {
+        has_tradition = tr_resonance_adopt
+    }
+    potential = {
+        has_biogenesis_dlc = yes
+        is_machine_empire = no
+        is_wilderness_empire = no
+        NOR = {
+            has_cybernetic_ascension = yes
+            has_psionic_ascension = yes
+            has_synthetic_ascension = yes
+            is_natural_design_empire = yes
+            is_individual_machine = yes
+            has_crystallization_ascension = yes
+            has_assimilation_ascension = yes
+            has_genetic_ascension = yes
+            has_origin = origin_evolutionary_predators
+        }
+    }
+    modifier = {
+        logistic_growth_mult = 0.025
+    }
+    effect = {
+        custom_tooltip = agenda_resonance_perfection_unity_effect_tt
+        add_resource = {
+            unity = @perfection_protocols_base_reward
+            mult = value:resonance_perfection_posneg_value|POSNEG|positive|
+        }
+        custom_tooltip = agenda_resonance_perfection_society_effect_tt
+        add_resource = {
+            society_research = @perfection_protocols_base_reward
+            mult = value:resonance_perfection_posneg_value|POSNEG|negative|
+        }
+    }
+    finish_modifier = agenda_resonance_perfection_finish
+}
+
+agenda_resonance_perfection_wilderness = {
+    agenda_cost = @base_tradition_agenda_cost
+    allow = {
+        has_tradition = tr_resonance_adopt
+    }
+    potential = {
+        has_biogenesis_dlc = yes
+        is_wilderness_empire = yes
+        NOR = {
+            has_cybernetic_ascension = yes
+            has_psionic_ascension = yes
+            has_synthetic_ascension = yes
+            is_natural_design_empire = yes
+            is_individual_machine = yes
+            has_genetic_ascension = yes
+
+            has_crystallization_ascension = yes
+            has_assimilation_ascension = yes
+            has_origin = origin_evolutionary_predators
+        }
+    }
+    modifier = {
+        planet_building_build_speed_mult = 0.1
+    }
+    finish_modifier = agenda_resonance_perfection_wilderness_finish
+}
+
+agenda_crystallization_replication = {
+    agenda_cost = @base_tradition_agenda_cost
+    allow = {
+        has_tradition = tr_crystallization_adopt
+    }
+    potential = {
+        has_biogenesis_dlc = yes
+        is_machine_empire = no
+        NOR = {
+            has_cybernetic_ascension = yes
+            has_psionic_ascension = yes
+            has_synthetic_ascension = yes
+            is_natural_design_empire = yes
+            is_individual_machine = yes
+            has_resonance_ascension = yes
+            has_assimilation_ascension = yes
+            has_genetic_ascension = yes
+        }
+    }
+    modifier = {
+        bonus_pop_growth_mult = 0.25
+    }
+    finish_modifier = agenda_crystallization_replication_finish
+}
+
+agenda_assimilation_divergence = {
+    agenda_cost = @base_tradition_agenda_cost
+    allow = {
+        has_tradition = tr_assimilation_adopt
+    }
+    potential = {
+        has_biogenesis_dlc = yes
+        is_machine_empire = no
+        NOR = {
+            has_cybernetic_ascension = yes
+            has_psionic_ascension = yes
+            has_synthetic_ascension = yes
+            is_natural_design_empire = yes
+            is_individual_machine = yes
+            has_resonance_ascension = yes
+            has_crystallization_ascension = yes
+            has_genetic_ascension = yes
+
+            has_origin = origin_evolutionary_predators
+        }
+    }
+    modifier = {
+        auto_mod_monthly_add = 200
+    }
+    effect = {
+        custom_tooltip = agenda_assimilation_divergence_tt
+        hidden_effect = {
+            every_owned_species = {
+                limit = {
+                    NOR = {
+                    # ?
+                        has_trait = trait_adaptive_mutations
+                        has_trait = trait_malleable_genes
+                    }
+                    OR = {
+                        is_archetype = BIOLOGICAL
+                        is_archetype = ORIGINOID
+                        is_archetype = LITHOID
+                    }
+                }
+                change_species_characteristics = {
+                    add_trait = trait_adaptive_mutations
+                    add_traits_at_start_of_list = yes
+                }
+            }
+        }
+        if = {
+            limit = {
+                has_assimilation_environmental_integration_tradition = yes
+            }
+            custom_tooltip = agenda_assimilation_divergence_2_tt
+            hidden_effect = {
+                every_owned_species = {
+                    limit = {
+                        NOT = {
+                            has_trait = trait_auto_hab_preference
+                        }
+                        OR = {
+                            is_archetype = BIOLOGICAL
+                            is_archetype = ORIGINOID
+                            is_archetype = LITHOID
+                        }
+                    }
+                    set_habitability_trait = { trait = trait_auto_hab_preference }
+                }
+            }
+        }
+        hidden_effect = {
+            update_node_portraits_if_gestalt_effect = yes
+        }
+    }
+    finish_modifier = agenda_assimilation_divergence_finish
+}
+

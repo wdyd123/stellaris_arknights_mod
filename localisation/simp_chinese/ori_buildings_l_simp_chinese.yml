@@ -1,0 +1,11 @@
+﻿l_simp_chinese:
+ # mod_building_originium_facility_max_desc: "REPLACE_ME"
+ # mod_building_originium_facility_max: "REPLACE_ME"
+ # mod_planet_building_originium_facility_build_speed_mult_desc: "REPLACE_ME"
+ # mod_planet_building_originium_facility_build_speed_mult: "REPLACE_ME"
+ # building_originium_facility_desc: "REPLACE_ME"
+ # building_originium_facility: "源石研究所"
+
+
+ building_crystallize_vats: "晶化仓"
+ building_crystallize_vats_desc: "晶化仓将简单的物质转译用于产生有机人口增长。"

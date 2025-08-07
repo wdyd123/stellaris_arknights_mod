@@ -1,0 +1,24 @@
+# Build a Originium Research Facility
+development_focus_521 = {
+    base = development_focus_200
+
+    possible = {
+        has_biogenesis_dlc = yes
+        has_country_flag = originium_research_facility_unlocked
+    }
+
+    name = "development.521.name"
+    desc = "development.521.desc"
+    hint = "development.521.hint"
+    lore = "development.521.lore"
+
+    condition_for_achievement = {
+        custom_tooltip = {
+            fail_text = development.521.fail
+            success_text = development.521.success
+            any_owned_planet = {
+                has_building = building_originium_facility
+            }
+        }
+    }
+}

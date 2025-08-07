@@ -1,0 +1,21 @@
+originium_researcher = { # Normal empire
+    category = specialist
+    swappable_data = {
+        default = {
+            condition_string = SPECIALIST_JOB_TRIGGER
+            building_icon = building_originium_facility
+        }
+    }
+    possible = { always = no }
+}
+
+originium_drone = { # Hive empire
+    category = complex_drone
+    swappable_data = {
+        default = {
+            condition_string = DRONE_JOB_TRIGGER
+            building_icon = building_originium_facility
+        }
+    }
+    possible = { always = no }
+}

@@ -1,0 +1,5306 @@
+#######################
+# Events - Originium ascension #
+#######################
+
+namespace = ori_ap
+
+country_event = {
+    id = ori_ap.1
+
+    is_triggered_only = yes
+    hide_window = yes
+
+    trigger = {
+        has_biogenesis_dlc = yes
+    }
+
+    immediate = {
+        if = {
+            limit = {
+                is_hive_empire = no
+            }
+            start_situation = {
+                type = originium_resonance_situation
+                target = root
+            }
+        }
+        else = {
+            start_situation = {
+                type = originium_resonance_situation_hive
+                target = root
+            }
+        }
+    }
+}
+
+# Event Gatekeeper - Non-Hive Mind
+# Fires a random event for the current situation approach
+situation_event = {
+    id = ori_ap.2
+
+    is_triggered_only = yes
+    hide_window = yes
+
+    trigger = {
+        NOT = {
+            has_situation_flag = ori_ap_2_blocked
+        }
+        OR = {
+            AND = {
+                situation_progress >= 200
+                situation_progress < 300
+            }
+            AND = {
+                situation_progress >= 800
+                situation_progress < 900
+            }
+            AND = {
+                situation_progress >= 1400
+                situation_progress < 1500
+            }
+        }
+    }
+
+    immediate = {
+        set_situation_flag = ori_ap_2_blocked
+        remove_situation_flag = ori_ap_3_blocked
+        if = {
+            limit = {
+                owner = {
+                    is_hive_empire = yes
+                }
+            }
+            switch = {
+                trigger = current_situation_approach
+                originium_resonance_approach_resonance = {
+                    fire_on_action = { on_action = on_originium_resonance_hive_approach_resonance_events_list }
+                }
+                originium_resonance_approach_crystallization = {
+                    fire_on_action = { on_action = on_originium_resonance_hive_approach_crystallization_events_list }
+                }
+                originium_resonance_approach_assimilation = {
+                    fire_on_action = { on_action = on_originium_resonance_hive_approach_assimilation_events_list }
+                }
+            }
+        }
+        else = {
+            switch = {
+                trigger = current_situation_approach
+                originium_resonance_approach_resonance = {
+                    fire_on_action = { on_action = on_originium_resonance_approach_resonance_events_list }
+                }
+                originium_resonance_approach_crystallization = {
+                    fire_on_action = { on_action = on_originium_resonance_approach_crystallization_events_list }
+                }
+                originium_resonance_approach_assimilation = {
+                    fire_on_action = { on_action = on_originium_resonance_approach_assimilation_events_list }
+                }
+            }
+        }
+    }
+}
+
+# Fires a random event for the situation determined by the current and any previously selected approaches
+situation_event = {
+    id = ori_ap.3
+
+    is_triggered_only = yes
+    hide_window = yes
+
+    trigger = {
+        has_biogenesis_dlc = yes
+        NOT = {
+            has_situation_flag = ori_ap_3_blocked
+        }
+        OR = {
+            AND = {
+                situation_progress >= 400
+                situation_progress < 500
+            }
+            AND = {
+                situation_progress >= 1000
+                situation_progress < 1100
+            }
+            AND = {
+                situation_progress >= 1600
+                situation_progress < 1700
+            }
+        }
+    }
+
+    immediate = {
+        set_situation_flag = ori_ap_3_blocked
+        remove_situation_flag = ori_ap_2_blocked
+        if = {
+            limit = {
+                owner = {
+                    is_hive_empire = yes
+                }
+            }
+            fire_on_action = { on_action = on_originium_resonance_hive_events_list }
+        }
+        else = {
+            fire_on_action = { on_action = on_originium_resonance_events_list }
+        }
+    }
+}
+
+# Regular Empire Genetic Ascension
+# Situation Stage One Event
+
+situation_event = {
+    id = ori_ap.5
+    title = ori_ap.5.name
+    # ?
+    # desc = {
+    #     trigger = { owner = { has_one_originium_resonance_choice = yes } }
+    #     text = ori_ap.5.desc.no_options
+    # }
+    desc = {
+        # trigger = { owner = { has_one_originium_resonance_choice = no } }
+        text = ori_ap.5.desc.has_options
+    }
+    picture = GFX_evt_originium_resonance
+    show_sound = event_alien_nature
+    situation = this
+    is_triggered_only = yes
+
+    immediate = {
+        set_situation_flag = situation_originium_pause
+    }
+
+    option = {
+        name = ori_ap.5.a
+        trigger = {
+            NOR = {
+                has_situation_flag = crystallization_approach_selected
+                has_situation_flag = assimilation_approach_selected
+                owner = { has_country_flag = clone_army_full_potential }
+            }
+        }
+        set_situation_approach = originium_resonance_approach_resonance
+        owner = {
+            give_resonance_unlocks_effect = yes
+        }
+    }
+    option = {
+        name = ori_ap.5.b
+        trigger = {
+            NOR = {
+                has_situation_flag = resonance_approach_selected
+                has_situation_flag = assimilation_approach_selected
+            }
+        }
+        set_situation_approach = originium_resonance_approach_crystallization
+        owner = {
+            give_crystallization_unlocks_effect = yes
+        }
+    }
+    option = {
+        name = ori_ap.5.c
+        trigger = {
+            NOR = {
+                has_situation_flag = resonance_approach_selected
+                has_situation_flag = crystallization_approach_selected
+                owner = { has_country_flag = clone_army_full_potential }
+            }
+        }
+        set_situation_approach = originium_resonance_approach_assimilation
+        owner = {
+            give_assimilation_unlocks_effect = yes
+        }
+    }
+
+    after = {
+        remove_situation_flag = situation_originium_pause
+        custom_tooltip = originium_facility_needed_tt
+        hidden_effect = {
+            owner = {
+                if = {
+                    limit = {
+                        any_planet_within_border = {
+                            has_planet_flag = fotd_seperatist_planet@root
+                            owner = {
+                                has_country_flag = fotd_seperatist_country@root
+                            }
+                        }
+                    }
+                    # ?
+                    country_event = { id = origin.6115 days = 5 random = 2 }
+                }
+            }
+        }
+    }
+}
+
+# Situation Stage Two Event
+
+situation_event = {
+    id = ori_ap.10
+    title = ori_ap.10.name
+    # desc = {
+    #     trigger = { owner = { has_one_originium_resonance_choice = yes } }
+    #     text = ori_ap.10.desc.no_options
+    # }
+    desc = {
+        # trigger = { owner = { has_one_originium_resonance_choice = no } }
+        text = ori_ap.10.desc.has_options
+    }
+    picture = GFX_evt_originium_resonance
+    show_sound = event_alien_nature
+    situation = this
+    is_triggered_only = yes
+
+    immediate = {
+        set_situation_flag = situation_originium_pause
+        remove_situation_flag = resonance_approach_selected
+        remove_situation_flag = crystallization_approach_selected
+        remove_situation_flag = assimilation_approach_selected
+        owner = {
+            if = {
+                limit = {
+                    NOT = {
+                        has_technology = tech_gene_tailoring
+                    }
+                }
+                add_tech_progress = {
+                    tech = tech_gene_tailoring
+                    progress = 0.33
+                }
+            }
+        }
+    }
+
+    option = {
+        name = ori_ap.10.a
+        trigger = {
+            NOR = {
+                has_situation_flag = crystallization_approach_selected
+                has_situation_flag = assimilation_approach_selected
+                owner = { has_country_flag = clone_army_full_potential }
+            }
+        }
+        set_situation_approach = originium_resonance_approach_resonance
+        owner = {
+            give_resonance_unlocks_effect = yes
+        }
+        ai_chance = {
+            factor = 1
+        }
+    }
+
+    option = {
+        name = ori_ap.10.b
+        trigger = {
+            NOR = {
+                has_situation_flag = resonance_approach_selected
+                has_situation_flag = assimilation_approach_selected
+            }
+        }
+        set_situation_approach = originium_resonance_approach_crystallization
+        owner = {
+            give_crystallization_unlocks_effect = yes
+        }
+        ai_chance = {
+            factor = 1
+        }
+    }
+
+    option = {
+        name = ori_ap.10.c
+        trigger = {
+            NOR = {
+                has_situation_flag = resonance_approach_selected
+                has_situation_flag = crystallization_approach_selected
+                owner = { has_country_flag = clone_army_full_potential }
+            }
+        }
+        set_situation_approach = originium_resonance_approach_assimilation
+        owner = {
+            give_assimilation_unlocks_effect = yes
+        }
+        ai_chance = {
+            factor = 1
+        }
+    }
+
+    after = {
+        remove_situation_flag = situation_originium_pause
+        owner = {
+            if = {
+                limit = {
+                    NOT = {
+                        has_technology = tech_gene_tailoring
+                    }
+                }
+                tooltip = {
+                    add_tech_progress = {
+                        tech = tech_gene_tailoring
+                        progress = 0.33
+                    }
+                }
+            }
+        }
+    }
+}
+
+# Situation Stage Three Event
+
+situation_event = {
+    id = ori_ap.15
+    title = ori_ap.15.name
+    # desc = {
+    #     trigger = { owner = { has_one_originium_resonance_choice = yes } }
+    #     text = ori_ap.15.desc.no_options
+    # }
+    desc = {
+        # trigger = { owner = { has_one_originium_resonance_choice = no } }
+        text = ori_ap.15.desc.has_options
+    }
+    picture = GFX_evt_originium_resonance
+    show_sound = event_alien_nature
+    situation = this
+    is_triggered_only = yes
+
+    immediate = {
+        set_situation_flag = situation_originium_pause
+        remove_situation_flag = resonance_approach_selected
+        remove_situation_flag = crystallization_approach_selected
+        remove_situation_flag = assimilation_approach_selected
+    }
+
+    option = {
+        name = ori_ap.15.a
+        trigger = {
+            NOR = {
+                has_situation_flag = crystallization_approach_selected
+                has_situation_flag = assimilation_approach_selected
+                owner = { has_country_flag = clone_army_full_potential }
+            }
+        }
+        set_situation_approach = originium_resonance_approach_resonance
+        owner = {
+            give_resonance_unlocks_effect = yes
+        }
+        ai_chance = {
+            factor = 1
+        }
+    }
+
+    option = {
+        name = ori_ap.15.b
+        trigger = {
+            NOR = {
+                has_situation_flag = resonance_approach_selected
+                has_situation_flag = assimilation_approach_selected
+            }
+        }
+        set_situation_approach = originium_resonance_approach_crystallization
+        owner = {
+            give_crystallization_unlocks_effect = yes
+        }
+        ai_chance = {
+            factor = 1
+        }
+    }
+
+    option = {
+        name = ori_ap.15.c
+        trigger = {
+            NOR = {
+                has_situation_flag = resonance_approach_selected
+                has_situation_flag = crystallization_approach_selected
+                owner = { has_country_flag = clone_army_full_potential }
+            }
+        }
+        set_situation_approach = originium_resonance_approach_assimilation
+        owner = {
+            give_assimilation_unlocks_effect = yes
+        }
+        ai_chance = {
+            factor = 1
+        }
+    }
+
+    after = {
+        remove_situation_flag = situation_originium_pause
+    }
+}
+
+# Situation Completion Event
+
+situation_event = {
+    id = ori_ap.20
+    title = ori_ap.20.name
+    # desc = {
+    #     trigger = {
+    #         owner = { has_origin = origin_evolutionary_predators }
+    #     }
+    #     text = ori_ap.20.desc.evopred
+    # }
+    picture = GFX_evt_originium_resonance
+    show_sound = event_alien_nature
+    situation = this
+    is_triggered_only = yes
+
+    immediate = {
+        set_situation_flag = situation_originium_pause
+    }
+
+    option = {
+        name = ori_ap.20.a
+        trigger = {
+        }
+        allow = {
+            custom_tooltip = {
+                fail_text = no_resonance_unlock_tt
+                owner = {
+                    has_country_flag = resonance_unlock_level_1
+                }
+            }
+        }
+        if = {
+            limit = {
+                owner = { num_tradition_categories < @max_tradition_trees }
+            }
+            owner = {
+                set_country_flag = resonance_tradition_unlocked
+                add_tradition = tr_resonance_adopt # resonance Tree
+            }
+            custom_tooltip = resonance_tradition_unlocked
+        }
+        ai_chance = {
+            factor = 1
+        }
+    }
+
+    option = {
+        name = ori_ap.20.b
+        trigger = {
+        }
+        allow = {
+            custom_tooltip = {
+                fail_text = no_crystallization_unlock_tt
+                owner = {
+                    has_country_flag = crystallization_unlock_level_1
+                }
+            }
+        }
+        if = {
+            limit = {
+                owner = { num_tradition_categories < @max_tradition_trees }
+            }
+            owner = {
+                set_country_flag = crystallization_tradition_unlocked
+                add_tradition = tr_crystallization_adopt # Cloning Tree
+            }
+            custom_tooltip = crystallization_tradition_unlocked
+        }
+        ai_chance = {
+            factor = 1
+        }
+    }
+
+    option = {
+        name = ori_ap.20.c
+        allow = {
+            custom_tooltip = {
+                fail_text = no_assimilation_unlock_tt
+                owner = {
+                    has_country_flag = assimilation_unlock_level_1
+                }
+            }
+        }
+        if = {
+            limit = {
+                owner = { num_tradition_categories < @max_tradition_trees }
+            }
+            owner = {
+                set_country_flag = assimilation_tradition_unlocked
+                add_tradition = tr_assimilation_adopt # Mutation Tree
+            }
+            custom_tooltip = assimilation_tradition_unlocked
+        }
+        ai_chance = {
+            factor = 1
+        }
+    }
+
+    after = {
+        destroy_situation = this
+        remove_situation_flag = situation_originium_pause
+    }
+}
+
+# Hive Genetic Ascension Situation
+# Hive Situation Stage One Event
+
+situation_event = {
+    id = ori_ap.25
+    title = ori_ap.25.name
+    desc = {
+        text = ori_ap.25.desc.has_options
+    }
+    picture = GFX_evt_originium_resonance
+    show_sound = event_alien_nature
+    situation = this
+    is_triggered_only = yes
+
+    immediate = {
+        set_situation_flag = situation_originium_pause
+    }
+
+    option = {
+        name = ori_ap.25.a
+        trigger = {
+            NOR = {
+                has_situation_flag = crystallization_approach_selected
+                has_situation_flag = assimilation_approach_selected
+                owner = { has_country_flag = clone_army_full_potential }
+            }
+        }
+        set_situation_approach = originium_resonance_approach_resonance
+        owner = {
+            give_resonance_unlocks_effect = yes
+        }
+        ai_chance = {
+            factor = 1
+        }
+    }
+
+    option = {
+        name = ori_ap.25.b
+        trigger = {
+            NOR = {
+                has_situation_flag = resonance_approach_selected
+                has_situation_flag = assimilation_approach_selected
+                owner = { has_origin = origin_wilderness }
+            }
+        }
+        set_situation_approach = originium_resonance_approach_crystallization
+        owner = {
+            give_crystallization_unlocks_effect = yes
+        }
+        ai_chance = {
+            factor = 1
+        }
+    }
+
+    option = {
+        name = ori_ap.25.c
+        trigger = {
+            NOR = {
+                has_situation_flag = resonance_approach_selected
+                has_situation_flag = crystallization_approach_selected
+                owner = { has_country_flag = clone_army_full_potential }
+                owner = { has_origin = origin_wilderness }
+            }
+        }
+        set_situation_approach = originium_resonance_approach_assimilation
+        owner = {
+            give_assimilation_unlocks_effect = yes
+        }
+        ai_chance = {
+            factor = 1
+        }
+    }
+
+    after = {
+        remove_situation_flag = situation_originium_pause
+        if = {
+            limit = {
+                owner = { is_wilderness_empire = no }
+            }
+            custom_tooltip = originium_facility_needed_tt
+        }
+    }
+}
+
+# Hive Situation Stage Two Event
+
+situation_event = {
+    id = ori_ap.30
+    title = ori_ap.30.name
+    # desc = {
+    #     trigger = { owner = { has_one_originium_resonance_choice = yes } }
+    #     text = ori_ap.30.desc.no_options
+    # }
+    desc = {
+        # trigger = { owner = { has_one_originium_resonance_choice = no } }
+        text = ori_ap.30.desc.has_options
+    }
+    picture = GFX_evt_originium_resonance
+    show_sound = event_alien_nature
+    situation = this
+    is_triggered_only = yes
+
+    immediate = {
+        set_situation_flag = situation_originium_pause
+        remove_situation_flag = resonance_approach_selected
+        remove_situation_flag = crystallization_approach_selected
+        remove_situation_flag = assimilation_approach_selected
+        owner = {
+            if = {
+                limit = {
+                    NOT = {
+                        has_technology = tech_gene_tailoring
+                    }
+                }
+                add_tech_progress = {
+                    tech = tech_gene_tailoring
+                    progress = 0.33
+                }
+            }
+        }
+    }
+
+    option = {
+        name = ori_ap.30.a
+        trigger = {
+            NOR = {
+                has_situation_flag = crystallization_approach_selected
+                has_situation_flag = assimilation_approach_selected
+                owner = { has_country_flag = clone_army_full_potential }
+            }
+        }
+        set_situation_approach = originium_resonance_approach_resonance
+        owner = {
+            give_resonance_unlocks_effect = yes
+        }
+        ai_chance = {
+            factor = 1
+        }
+    }
+
+    option = {
+        name = ori_ap.30.b
+        trigger = {
+            NOR = {
+                has_situation_flag = resonance_approach_selected
+                has_situation_flag = assimilation_approach_selected
+                owner = { has_origin = origin_wilderness }
+            }
+        }
+        set_situation_approach = originium_resonance_approach_crystallization
+        owner = {
+            give_crystallization_unlocks_effect = yes
+        }
+        ai_chance = {
+            factor = 1
+        }
+    }
+
+    option = {
+        name = ori_ap.30.c
+        trigger = {
+            NOR = {
+                has_situation_flag = resonance_approach_selected
+                has_situation_flag = crystallization_approach_selected
+                owner = { has_country_flag = clone_army_full_potential }
+                owner = { has_origin = origin_wilderness }
+            }
+        }
+        set_situation_approach = originium_resonance_approach_assimilation
+        owner = {
+            give_assimilation_unlocks_effect = yes
+        }
+        ai_chance = {
+            factor = 1
+        }
+    }
+
+    after = {
+        remove_situation_flag = situation_originium_pause
+        owner = {
+            if = {
+                limit = {
+                    NOT = {
+                        has_technology = tech_gene_tailoring
+                    }
+                }
+                tooltip = {
+                    add_tech_progress = {
+                        tech = tech_gene_tailoring
+                        progress = 0.33
+                    }
+                }
+            }
+        }
+    }
+}
+
+# Hive Situation Stage 3 Event
+
+situation_event = {
+    id = ori_ap.35
+    title = ori_ap.35.name
+    # desc = {
+    #     trigger = { owner = { has_one_originium_resonance_choice = yes } }
+    #     text = ori_ap.35.desc.no_options
+    # }
+    desc = {
+        # trigger = { owner = { has_one_originium_resonance_choice = no } }
+        text = ori_ap.35.desc.has_options
+    }
+    picture = GFX_evt_originium_resonance
+    show_sound = event_alien_nature
+    situation = this
+    is_triggered_only = yes
+
+    immediate = {
+        set_situation_flag = situation_originium_pause
+        remove_situation_flag = resonance_approach_selected
+        remove_situation_flag = crystallization_approach_selected
+        remove_situation_flag = assimilation_approach_selected
+    }
+
+    option = {
+        name = ori_ap.35.a
+        trigger = {
+            NOR = {
+                has_situation_flag = crystallization_approach_selected
+                has_situation_flag = assimilation_approach_selected
+                owner = { has_country_flag = clone_army_full_potential }
+            }
+        }
+        set_situation_approach = originium_resonance_approach_resonance
+        owner = {
+            give_resonance_unlocks_effect = yes
+        }
+        ai_chance = {
+            factor = 1
+        }
+    }
+
+    option = {
+        name = ori_ap.35.b
+        trigger = {
+            NOR = {
+                has_situation_flag = resonance_approach_selected
+                has_situation_flag = assimilation_approach_selected
+                owner = { has_origin = origin_wilderness }
+            }
+        }
+        set_situation_approach = originium_resonance_approach_crystallization
+        owner = {
+            give_crystallization_unlocks_effect = yes
+        }
+        ai_chance = {
+            factor = 1
+        }
+    }
+
+    option = {
+        name = ori_ap.35.c
+        trigger = {
+            NOR = {
+                has_situation_flag = resonance_approach_selected
+                has_situation_flag = crystallization_approach_selected
+                owner = { has_country_flag = clone_army_full_potential }
+                owner = { has_origin = origin_wilderness }
+            }
+        }
+        set_situation_approach = originium_resonance_approach_assimilation
+        owner = {
+            give_assimilation_unlocks_effect = yes
+        }
+        ai_chance = {
+            factor = 1
+        }
+    }
+
+    after = {
+        remove_situation_flag = situation_originium_pause
+    }
+}
+
+# Hive Situation Completion Event
+
+situation_event = {
+    id = ori_ap.40
+    title = ori_ap.40.name
+    desc = {
+        trigger = {
+        }
+        text = ori_ap.40.desc
+    }
+    picture = GFX_evt_originium_resonance
+    show_sound = event_alien_nature
+    situation = this
+    is_triggered_only = yes
+
+    immediate = {
+        set_situation_flag = situation_originium_pause
+    }
+
+    option = {
+        name = ori_ap.40.a
+        trigger = {
+        }
+        allow = {
+            custom_tooltip = {
+                fail_text = no_resonance_unlock_tt
+                owner = {
+                    has_country_flag = resonance_unlock_level_1
+                }
+            }
+        }
+        if = {
+            limit = {
+                owner = { num_tradition_categories < @max_tradition_trees }
+            }
+            owner = {
+                set_country_flag = resonance_tradition_unlocked
+                add_tradition = tr_resonance_adopt # Mutation Tree
+            }
+            custom_tooltip = resonance_tradition_unlocked
+        }
+        ai_chance = {
+            factor = 1
+        }
+    }
+
+    option = {
+        name = ori_ap.40.b
+        trigger = {
+            NOR = {
+                owner = { has_origin = origin_wilderness }
+            }
+        }
+        allow = {
+            custom_tooltip = {
+                fail_text = no_crystallization_unlock_tt
+                owner = {
+                    has_country_flag = crystallization_unlock_level_1
+                }
+            }
+        }
+        if = {
+            limit = {
+                owner = { num_tradition_categories < @max_tradition_trees }
+            }
+            owner = {
+                set_country_flag = crystallization_tradition_unlocked
+                add_tradition = tr_crystallization_adopt # Cloning Tree
+            }
+            custom_tooltip = crystallization_tradition_unlocked
+        }
+        ai_chance = {
+            factor = 1
+        }
+    }
+
+    option = {
+        name = ori_ap.40.c
+        trigger = {
+            NOT = { owner = { has_origin = origin_wilderness } }
+        }
+        allow = {
+            custom_tooltip = {
+                fail_text = no_assimilation_unlock_tt
+                owner = {
+                    has_country_flag = assimilation_unlock_level_1
+                }
+            }
+        }
+        if = {
+            limit = {
+                owner = { num_tradition_categories < @max_tradition_trees }
+            }
+            owner = {
+                set_country_flag = assimilation_tradition_unlocked
+                add_tradition = tr_assimilation_adopt # Mutation Tree
+            }
+            custom_tooltip = assimilation_tradition_unlocked
+        }
+        ai_chance = {
+            factor = 1
+        }
+    }
+
+    after = {
+        destroy_situation = this
+        remove_situation_flag = situation_originium_pause
+    }
+}
+
+# Random Situation Events for Regular Empires
+
+situation_event = {
+    id = ori_ap.50
+    title = "ori_ap.50.name"
+    desc = "ori_ap.50.desc"
+    picture = GFX_evt_originium_resonance_resonance
+    show_sound = event_laboratory_sound
+    situation = this
+    is_triggered_only = yes
+
+    trigger = {
+        NOT = { has_situation_flag = originium_50_fire }
+        situation_progress >= 20
+        has_situation_flag = resonance_approach_selected
+    }
+
+    immediate = {
+        set_situation_flag = situation_originium_pause
+        set_situation_flag = originium_50_fire
+    }
+
+    option = {
+        name = ori_ap.50.a
+        owner = {
+            add_modifier = {
+                modifier = supremacy_denied
+                days = 1800
+            }
+        }
+        ai_chance = {
+            factor = 1
+            modifier = {
+                factor = 3
+                owner = {
+                    is_authoritarian = yes
+                }
+            }
+        }
+    }
+
+    option = {
+        name = ori_ap.50.b
+        owner = {
+            add_modifier = {
+                modifier = ori_augment_appreciation
+                days = 1800
+            }
+            hidden_effect = {
+                every_owned_species = {
+                    limit = {
+                        OR = {
+                            is_archetype = PRESAPIENT
+                            is_archetype = BIOLOGICAL
+                            is_archetype = LITHOID
+                            is_archetype = ORIGINOID
+
+                        }
+                    }
+                    set_species_traits_resonance_count_variable = yes
+                }
+            }
+        }
+        ai_chance = {
+            factor = 1
+            modifier = {
+                factor = 2
+                owner_species = {
+                    OR = {
+                        is_archetype = PRESAPIENT
+                        is_archetype = BIOLOGICAL
+                        is_archetype = LITHOID
+                        is_archetype = ORIGINOID
+                    }
+                }
+            }
+        }
+    }
+
+    after = {
+        remove_situation_flag = situation_originium_pause
+    }
+}
+
+situation_event = {
+    id = ori_ap.55
+    title = "ori_ap.55.name"
+    desc = "ori_ap.55.desc"
+    picture = GFX_evt_originium_resonance_resonance
+    show_sound = event_laboratory_sound
+    situation = this
+    is_triggered_only = yes
+
+    trigger = {
+        NOT = { has_situation_flag = originium_55_fire }
+        OR = {
+            current_stage = stage_2
+            current_stage = stage_3
+        }
+        has_situation_flag = resonance_approach_selected
+    }
+
+    immediate = {
+        set_situation_flag = situation_originium_pause
+        set_situation_flag = originium_55_fire
+    }
+
+    option = {
+        name = ori_ap.55.a
+        owner = {
+            add_modifier = {
+                modifier = superior_individuals
+                days = 1800
+            }
+        }
+        ai_chance = {
+            factor = 1
+            modifier = {
+                factor = 3
+                owner = {
+                    is_authoritarian = yes
+                }
+            }
+        }
+    }
+
+    option = {
+        name = ori_ap.55.b
+        owner = {
+            add_modifier = {
+                modifier = conscious_evolution
+                days = 1800
+            }
+        }
+        ai_chance = {
+            factor = 1
+        }
+    }
+
+    after = {
+        remove_situation_flag = situation_originium_pause
+    }
+}
+
+situation_event = {
+    id = ori_ap.60
+    title = "ori_ap.60.name"
+    desc = "ori_ap.60.desc"
+    picture = GFX_evt_originium_resonance_resonance
+    show_sound = event_laboratory_sound
+    situation = this
+    is_triggered_only = yes
+
+    trigger = {
+        NOT = { has_situation_flag = originium_60_fire }
+        OR = {
+            current_stage = stage_2
+            current_stage = stage_3
+        }
+        has_situation_flag = resonance_approach_selected
+    }
+
+    immediate = {
+        set_situation_flag = situation_originium_pause
+        set_situation_flag = originium_60_fire
+    }
+
+    option = {
+        name = ori_ap.60.a
+        owner = {
+            add_modifier = {
+                modifier = welfare_state
+                days = 1800
+            }
+        }
+        ai_chance = {
+            factor = 1
+            modifier = {
+                factor = 3
+                owner = {
+                    is_egalitarian = yes
+                }
+            }
+        }
+    }
+
+    option = {
+        name = ori_ap.60.b
+        owner = {
+            add_modifier = {
+                modifier = selective_survival
+                days = 1800
+            }
+        }
+        ai_chance = {
+            factor = 1
+        }
+    }
+
+    after = {
+        remove_situation_flag = situation_originium_pause
+    }
+}
+
+situation_event = {
+    id = ori_ap.65
+    title = "ori_ap.65.name"
+    desc = "ori_ap.65.desc"
+    picture = GFX_evt_originium_resonance_resonance
+    show_sound = event_laboratory_sound
+    situation = this
+    is_triggered_only = yes
+
+    trigger = {
+        NOT = { has_situation_flag = originium_65_fire }
+        current_stage = stage_3
+        has_situation_flag = resonance_approach_selected
+    }
+
+    immediate = {
+        set_situation_flag = situation_originium_pause
+        set_situation_flag = originium_65_fire
+    }
+
+    option = {
+        name = ori_ap.65.a
+        owner = {
+            add_modifier = {
+                modifier = maverick_citizens
+                days = 1800
+            }
+        }
+        hidden_effect = {
+            situation_event = {
+                id = ori_ap.66
+                days = 80
+                random = 60
+            }
+            owner = {
+                set_country_flag = maverick_citizens_flag
+                country_event = {
+                    id = ori_ap.68
+                    days = 1800
+                }
+            }
+        }
+        ai_chance = {
+            factor = 1
+        }
+    }
+
+    option = {
+        name = ori_ap.65.b
+        owner = {
+            add_modifier = {
+                modifier = super_powered
+                days = 1800
+            }
+        }
+        hidden_effect = {
+            situation_event = {
+                id = ori_ap.67
+                days = 80
+                random = 60
+            }
+        }
+        ai_chance = {
+            factor = 1
+            modifier = {
+                factor = 3
+                owner = {
+                    is_egalitarian = yes
+                }
+            }
+        }
+    }
+
+    after = {
+        remove_situation_flag = situation_originium_pause
+    }
+}
+
+situation_event = {
+    id = ori_ap.66
+    title = "ori_ap.66.name"
+    desc = "ori_ap.66.desc"
+    picture = GFX_evt_originium_resonance_resonance
+    show_sound = event_laboratory_sound
+    situation = this
+    is_triggered_only = yes
+
+    immediate = {
+        set_situation_flag = situation_originium_pause
+    }
+
+    option = {
+        name = ori_ap.66.a
+        owner = {
+            add_modifier = {
+                modifier = super_troopers
+                days = 1800
+            }
+        }
+        ai_chance = {
+            factor = 1
+            modifier = {
+                factor = 3
+                owner = {
+                    is_militarist = yes
+                }
+            }
+        }
+    }
+
+    option = {
+        name = ori_ap.66.b
+        owner = {
+            add_modifier = {
+                modifier = watch_the_watchers
+                days = 1800
+            }
+        }
+        ai_chance = {
+            factor = 1
+        }
+    }
+
+    after = {
+        remove_situation_flag = situation_originium_pause
+    }
+}
+
+situation_event = {
+    id = ori_ap.67
+    title = "ori_ap.67.name"
+    desc = "ori_ap.67.desc"
+    picture = GFX_evt_originium_resonance_resonance
+    show_sound = event_laboratory_sound
+    situation = this
+    is_triggered_only = yes
+
+    immediate = {
+        set_situation_flag = situation_originium_pause
+    }
+
+    option = {
+        name = ori_ap.67.a
+        owner = {
+            add_modifier = {
+                modifier = hero_council
+                days = 1800
+            }
+        }
+        ai_chance = {
+            factor = 1
+            modifier = {
+                factor = 2
+                owner = {
+                    is_egalitarian = yes
+                }
+            }
+        }
+    }
+
+    option = {
+        name = ori_ap.67.b
+        owner = {
+            add_modifier = {
+                modifier = hero_restrictions
+                days = 1800
+            }
+        }
+        ai_chance = {
+            factor = 1
+            modifier = {
+                factor = 3
+                owner = {
+                    is_authoritarian = yes
+                }
+            }
+        }
+    }
+
+    after = {
+        remove_situation_flag = situation_originium_pause
+    }
+}
+
+country_event = {
+    id = ori_ap.68
+    hide_window = yes
+
+    is_triggered_only = yes
+
+    immediate = {
+        owner = {
+            remove_country_flag = maverick_citizens_flag
+        }
+    }
+}
+
+situation_event = {
+    id = ori_ap.70
+    title = "ori_ap.70.name"
+    desc = "ori_ap.70.desc"
+    picture = GFX_evt_originium_resonance_crystallization
+    show_sound = event_laboratory_sound
+    situation = this
+    is_triggered_only = yes
+
+    trigger = {
+        owner = {
+            NOR = {
+                has_origin = origin_legendary_leader
+                has_origin = origin_clone_army
+            }
+        }
+        NOT = {
+            has_situation_flag = originium_70_fire
+        }
+        situation_progress >= 20
+        has_situation_flag = crystallization_approach_selected
+    }
+
+    immediate = {
+        set_situation_flag = situation_originium_pause
+        set_situation_flag = originium_70_fire
+        owner = {
+            random_owned_leader = {
+                limit = {
+                    AND = {
+                        NOT = { has_leader_flag = renowned_leader }
+                        is_ruler = no
+                        species = {
+                            is_robotic = no
+                        }
+                    }
+                }
+                save_event_target_as = two_for_one_leader
+            }
+        }
+    }
+
+    option = {
+        name = ori_ap.70.a
+        event_target:two_for_one_leader = {
+            add_trait = {
+                trait = leader_trait_has_backup_clone
+            }
+        }
+        ai_chance = {
+            factor = 1
+            modifier = {
+                factor = 2
+                owner = {
+                    is_egalitarian = yes
+                }
+            }
+        }
+    }
+
+    option = {
+        name = ori_ap.70.b
+        owner = {
+            add_modifier = {
+                modifier = deceitful_dismissal
+                days = 1800
+            }
+            event_target:two_for_one_leader = {
+                kill_leader = { show_notification = yes }
+            }
+            refresh_leader_pool = yes
+        }
+        ai_chance = {
+            factor = 1
+            modifier = {
+                factor = 3
+                owner = {
+                    is_authoritarian = yes
+                }
+            }
+        }
+    }
+
+    after = {
+        remove_situation_flag = situation_originium_pause
+    }
+}
+
+situation_event = {
+    id = ori_ap.75
+    title = "ori_ap.75.name"
+    desc = "ori_ap.75.desc"
+    picture = GFX_evt_originium_resonance_crystallization
+    show_sound = event_laboratory_sound
+    situation = this
+    is_triggered_only = yes
+
+    trigger = {
+        owner = {
+            NOT = { has_origin = origin_clone_army }
+        }
+        NOT = {
+            has_situation_flag = originium_75_fire
+        }
+        OR = {
+            current_stage = stage_2
+            current_stage = stage_3
+        }
+        has_situation_flag = crystallization_approach_selected
+    }
+
+    immediate = {
+        set_situation_flag = situation_originium_pause
+        set_situation_flag = originium_75_fire
+    }
+
+    option = {
+        name = ori_ap.75.a
+        owner = {
+            add_modifier = {
+                modifier = harvesting_halt
+                days = 1800
+            }
+        }
+        ai_chance = {
+            factor = 1
+        }
+    }
+
+    option = {
+        name = ori_ap.75.b
+        owner = {
+            add_modifier = {
+                modifier = clone_drivers
+                days = 1800
+            }
+        }
+        ai_chance = {
+            factor = 1
+            modifier = {
+                factor = 3
+                owner = {
+                    is_egalitarian = yes
+                }
+            }
+        }
+    }
+
+    after = {
+        remove_situation_flag = situation_originium_pause
+    }
+}
+
+situation_event = {
+    id = ori_ap.80
+    title = "ori_ap.80.name"
+    desc = "ori_ap.80.desc"
+    picture = GFX_evt_originium_resonance_crystallization
+    show_sound = event_laboratory_sound
+    situation = this
+    is_triggered_only = yes
+
+    trigger = {
+        NOT = { has_situation_flag = originium_80_fire }
+        OR = {
+            current_stage = stage_2
+            current_stage = stage_3
+        }
+        has_situation_flag = crystallization_approach_selected
+    }
+
+    immediate = {
+        set_situation_flag = situation_originium_pause
+        set_situation_flag = originium_80_fire
+    }
+
+    option = {
+        name = ori_ap.80.a
+        owner = {
+            add_modifier = {
+                modifier = effective_surveillance
+                days = 1800
+            }
+            if = {
+                limit = {
+                    NOT = { has_technology = tech_living_state }
+                }
+                give_tech_option_or_progress_effect = {
+                    TECH = tech_living_state
+                }
+            }
+            else = {
+                add_monthly_resource_mult = {
+                    resource = society_research
+                    value = @tier2researchreward
+                    min = @tier2researchmin
+                    max = @tier2researchmax
+                }
+            }
+        }
+        ai_chance = {
+            factor = 1
+            modifier = {
+                factor = 3
+                owner = {
+                    is_authoritarian = yes
+                }
+            }
+        }
+    }
+
+    option = {
+        name = ori_ap.80.b
+        owner = {
+            add_modifier = {
+                modifier = decriminalized_society
+                days = 1800
+            }
+            if = {
+                limit = {
+                    NOT = { has_technology = tech_artificial_moral_codes }
+                }
+                give_tech_option_or_progress_effect = {
+                    TECH = tech_artificial_moral_codes
+                }
+            }
+            else = {
+                add_monthly_resource_mult = {
+                    resource = society_research
+                    value = @tier2researchreward
+                    min = @tier2researchmin
+                    max = @tier2researchmax
+                }
+            }
+        }
+        ai_chance = {
+            factor = 1
+            modifier = {
+                factor = 2
+                owner = {
+                    is_materialist = yes
+                }
+            }
+        }
+    }
+
+    after = {
+        remove_situation_flag = situation_originium_pause
+    }
+}
+
+situation_event = {
+    id = ori_ap.85
+    title = "ori_ap.85.name"
+    desc = "ori_ap.85.desc"
+    picture = GFX_evt_originium_resonance_crystallization
+    show_sound = event_laboratory_sound
+    situation = this
+    is_triggered_only = yes
+
+    trigger = {
+        NOT = { has_situation_flag = originium_85_fire }
+        OR = {
+            current_stage = stage_2
+            current_stage = stage_3
+        }
+        has_situation_flag = crystallization_approach_selected
+    }
+
+    immediate = {
+        set_situation_flag = situation_originium_pause
+        set_situation_flag = originium_85_fire
+    }
+
+    option = {
+        name = ori_ap.85.a
+        owner = {
+            add_modifier = {
+                modifier = mass_euthanasia
+                days = 1800
+            }
+        }
+        hidden_effect = {
+            situation_event = {
+                id = ori_ap.86
+                days = 80
+                random = 60
+            }
+        }
+        ai_chance = {
+            factor = 1
+            modifier = {
+                factor = 3
+                owner = {
+                    is_egalitarian = yes
+                }
+            }
+        }
+    }
+
+    option = {
+        name = ori_ap.85.b
+        custom_tooltip = ori_ap.85.b.tt
+        owner = {
+            add_modifier = {
+                modifier = duplicated_inheritance
+                days = 1800
+            }
+            capital_scope = {
+                create_army = {
+                    name = duplicated_inheritance_armies
+                    owner = root
+                    type = "clone_army"
+                }
+            }
+        }
+        ai_chance = {
+            factor = 1
+            modifier = {
+                factor = 3
+                owner = {
+                    is_militarist = yes
+                }
+            }
+        }
+    }
+
+    option = {
+        name = ori_ap.85.c
+        custom_tooltip = ori_ap.85.c.tt
+        owner = {
+            capital_scope = {
+                create_pop_group = {
+                    species = owner.owner_main_species
+                }
+            }
+        }
+        ai_chance = {
+            factor = 1
+            modifier = {
+                factor = 3
+                owner = {
+                    is_egalitarian = yes
+                }
+            }
+        }
+    }
+
+    after = {
+        remove_situation_flag = situation_originium_pause
+    }
+}
+
+situation_event = {
+    id = ori_ap.86
+    title = "ori_ap.86.name"
+    desc = "ori_ap.86.desc"
+    picture = GFX_evt_originium_resonance_crystallization
+    show_sound = event_laboratory_sound
+    situation = this
+    is_triggered_only = yes
+
+    immediate = {
+        set_situation_flag = situation_originium_pause
+    }
+
+    option = {
+        name = ori_ap.86.a
+        owner = {
+            add_modifier = {
+                modifier = ethical_crystallization
+                days = 1800
+            }
+        }
+        ai_chance = {
+            factor = 1
+            modifier = {
+                factor = 3
+                owner = {
+                    is_materialist = yes
+                }
+            }
+        }
+    }
+
+    option = {
+        name = ori_ap.86.b
+        custom_tooltip = ori_ap.86.b.tt
+        owner = {
+            capital_scope = {
+                while = {
+                    count = 3
+                    create_army = {
+                        name = random
+                        owner = ROOT
+                        species = owner_main_species
+                        type = "assault_army"
+                    }
+                }
+            }
+        }
+        ai_chance = {
+            factor = 1
+            modifier = {
+                factor = 3
+                owner = {
+                    is_authoritarian = yes
+                }
+            }
+        }
+    }
+
+    after = {
+        remove_situation_flag = situation_originium_pause
+    }
+}
+
+situation_event = {
+    id = ori_ap.90
+    title = "ori_ap.90.name"
+    desc = "ori_ap.90.desc"
+    picture = GFX_evt_originium_resonance_assimilation
+    show_sound = event_laboratory_sound
+    situation = this
+    is_triggered_only = yes
+
+    trigger = {
+        NOT = { has_situation_flag = originium_90_fire }
+        OR = {
+            current_stage = stage_2
+            current_stage = stage_3
+        }
+        has_situation_flag = assimilation_approach_selected
+    }
+
+    immediate = {
+        set_situation_flag = situation_originium_pause
+        set_situation_flag = originium_90_fire
+    }
+
+    option = {
+        name = ori_ap.90.a
+        owner = {
+            capital_scope = {
+                add_modifier = {
+                    modifier = mutant_crackdown
+                    days = 1800
+                }
+            }
+        }
+        ai_chance = {
+            factor = 1
+            modifier = {
+                factor = 3
+                owner = {
+                    is_militarist = yes
+                }
+            }
+        }
+    }
+
+    option = {
+        name = ori_ap.90.b
+        owner = {
+            add_modifier = {
+                modifier = mutant_enclaves
+                days = 1800
+            }
+        }
+        ai_chance = {
+            factor = 1
+            modifier = {
+                factor = 3
+                owner = {
+                    is_authoritarian = yes
+                }
+            }
+        }
+    }
+
+    after = {
+        remove_situation_flag = situation_originium_pause
+    }
+}
+
+situation_event = {
+    id = ori_ap.95
+    title = "ori_ap.95.name"
+    desc = "ori_ap.95.desc"
+    picture = GFX_evt_originium_resonance_assimilation
+    show_sound = event_laboratory_sound
+    situation = this
+    is_triggered_only = yes
+
+    trigger = {
+        NOT = { has_situation_flag = originium_95_fire }
+        OR = {
+            current_stage = stage_2
+            current_stage = stage_3
+        }
+        has_situation_flag = assimilation_approach_selected
+    }
+
+    immediate = {
+        set_situation_flag = situation_originium_pause
+        set_situation_flag = originium_95_fire
+    }
+
+    option = {
+        name = ori_ap.95.a
+        owner = {
+            add_modifier = {
+                modifier = embracing_change
+                days = 1800
+            }
+        }
+        ai_chance = {
+            factor = 1
+            modifier = {
+                factor = 3
+                owner = {
+                    is_egalitarian = yes
+                }
+            }
+        }
+        add_situation_progress = 50
+    }
+
+    option = {
+        name = ori_ap.95.b
+        owner = {
+            add_modifier = {
+                modifier = biological_limitations
+                days = 1800
+            }
+        }
+        ai_chance = {
+            factor = 1
+            modifier = {
+                factor = 3
+                owner = {
+                    is_authoritarian = yes
+                }
+            }
+        }
+    }
+
+    after = {
+        remove_situation_flag = situation_originium_pause
+    }
+}
+
+situation_event = {
+    id = ori_ap.100
+    title = "ori_ap.100.name"
+    desc = "ori_ap.100.desc"
+    picture = GFX_evt_originium_resonance_assimilation
+    show_sound = event_laboratory_sound
+    situation = this
+    is_triggered_only = yes
+
+    trigger = {
+        # Only works for a planet with enough Pops
+        owner = {
+            any_owned_planet = {
+                count_owned_pop_amount = {
+                    count >= 800
+                    limit = {
+                        is_sapient = yes
+                        is_robot_pop_group = no
+                    }
+                }
+            }
+        }
+        NOT = { has_situation_flag = originium_100_fire }
+        owner = {
+        }
+        OR = {
+            current_stage = stage_2
+            current_stage = stage_3
+        }
+        has_situation_flag = assimilation_approach_selected
+    }
+
+    immediate = {
+        set_situation_flag = situation_originium_pause
+        set_situation_flag = originium_100_fire
+    }
+
+    option = {
+        name = ori_ap.100.a
+        # ?
+        custom_tooltip = ori_ap.100.a.tt
+        owner = {
+            add_modifier = {
+                modifier = societal_diversification
+                days = 1800
+            }
+            # Pick a planet with regular Pops
+            random_owned_planet = {
+                limit = {
+                    # Gatekeeper so we don't pick a planet with too few Pops
+                    count_owned_pop_amount = {
+                        count >= 800
+                        limit = {
+                            is_sapient = yes
+                            is_robot_pop_group = no
+                        }
+                    }
+                }
+                # Saving in case we need to reference the planet again
+                save_event_target_as = encourage_diversity_planet
+                # Pick a Pop Group
+                weighted_random_owned_pop_group = {
+                    limit = {
+                        is_sapient = yes
+                        is_robot_pop_group = no
+                    }
+                    # Create a new species in this group
+                    create_species = {
+                        is_mod = yes
+                        name = this
+                        plural = this
+                        class = this
+                        portrait = this
+                        traits = this
+                        can_be_modified = this
+                        homeworld = this
+                        namelist = this
+                        gender = this
+                        # The species (currently empty) will get a random trait
+                        effect = {
+                            random_list = {
+                                1 = {
+                                    modifier = {
+                                        factor = 0
+                                        has_trait = trait_bioadaptability
+                                    }
+                                    modify_species = {
+                                        species = this
+                                        change_scoped_species = no
+                                        add_trait = trait_bioadaptability
+                                        add_traits_at_start_of_list = yes
+                                        effect = { save_event_target_as = target_species }
+                                    }
+                                }
+                                1 = {
+                                    modifier = {
+                                        factor = 0
+                                        has_trait = trait_social_pheromones
+                                    }
+                                    modify_species = {
+                                        species = this
+                                        change_scoped_species = no
+                                        add_trait = trait_social_pheromones
+                                        add_traits_at_start_of_list = yes
+                                        effect = { save_event_target_as = target_species }
+                                    }
+                                }
+                                1 = {
+                                    modifier = {
+                                        factor = 0
+                                        has_trait = trait_limited_regeneration
+                                    }
+                                    modify_species = {
+                                        species = this
+                                        change_scoped_species = no
+                                        add_trait = trait_limited_regeneration
+                                        add_traits_at_start_of_list = yes
+                                        effect = { save_event_target_as = target_species }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    # Create a new species of mutants and save them
+                    save_event_target_as = source_pop_group
+                    prev = {
+                        create_pop_group = {
+                            pop_group = event_target:source_pop_group
+                            # Create a new Pop Group with the species we just created
+                            species = event_target:target_species
+                            size = 0
+                            # Transfer 400 Pops into our mutated species
+                            effect = {
+                                transfer_pop_amount = {
+                                    source = event_target:source_pop_group
+                                    target = this
+                                    amount = 400
+                                }
+                                save_event_target_as = new_pop_group
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        ai_chance = {
+            factor = 1
+            modifier = {
+                factor = 3
+                owner = {
+                    is_egalitarian = yes
+                }
+            }
+        }
+    }
+
+    option = {
+        name = ori_ap.100.b
+        owner = {
+            add_modifier = {
+                modifier = standardized_biology
+                days = 1800
+            }
+        }
+        ai_chance = {
+            factor = 1
+            modifier = {
+                factor = 3
+                owner = {
+                    is_authoritarian = yes
+                }
+            }
+        }
+    }
+
+    after = {
+        remove_situation_flag = situation_originium_pause
+    }
+}
+
+situation_event = {
+    id = ori_ap.105
+    title = "ori_ap.105.name"
+    desc = "ori_ap.105.desc"
+    picture = GFX_evt_originium_resonance_assimilation
+    show_sound = event_laboratory_sound
+    situation = this
+    is_triggered_only = yes
+
+    trigger = {
+        NOT = { has_situation_flag = originium_105_fire }
+        current_stage = stage_3
+        has_situation_flag = assimilation_approach_selected
+    }
+
+    immediate = {
+        set_situation_flag = situation_originium_pause
+        set_situation_flag = originium_105_fire
+    }
+
+    option = {
+        name = ori_ap.105.a
+        owner = {
+            add_modifier = {
+                modifier = blob_neutralized
+                days = 1800
+            }
+            if = {
+                limit = {
+                    owner = {
+                        is_lithoid_empire = no
+                    }
+                }
+                owner = {
+                    add_resource = {
+                        food = 500
+                    }
+                }
+            }
+            else = {
+                owner = {
+                    add_resource = {
+                        minerals = 500
+                    }
+                }
+            }
+        }
+        ai_chance = {
+            factor = 1
+            modifier = {
+                factor = 3
+                owner = {
+                    is_xenophobe = yes
+                }
+            }
+        }
+    }
+
+    option = {
+        name = ori_ap.105.b
+        owner = {
+            add_modifier = {
+                modifier = globule_research
+                days = 1800
+            }
+            capital_scope = {
+                weighted_random_owned_pop_group = {
+                    limit = {
+                        is_organic_species = yes
+                    }
+                    kill_single_pop = yes
+                }
+            }
+        }
+        ai_chance = {
+            factor = 1
+            modifier = {
+                factor = 3
+                owner = {
+                    is_materialist = yes
+                }
+            }
+        }
+    }
+
+    after = {
+        remove_situation_flag = situation_originium_pause
+    }
+}
+
+# Random Situation Events for Hive Empires
+
+situation_event = {
+    id = ori_ap.110
+    title = "ori_ap.110.name"
+    desc = "ori_ap.110.desc"
+    picture = GFX_evt_originium_resonance_resonance
+    show_sound = event_laboratory_sound
+    situation = this
+    is_triggered_only = yes
+
+    trigger = {
+        NOT = { has_situation_flag = originium_110_fire }
+        situation_progress >= 20
+        has_situation_flag = resonance_approach_selected
+    }
+
+    immediate = {
+        set_situation_flag = situation_originium_pause
+        set_situation_flag = originium_110_fire
+    }
+
+    option = {
+        name = ori_ap.110.a
+        owner = {
+            add_modifier = {
+                modifier = energetic_manipulation
+                days = 1800
+            }
+        }
+        ai_chance = {
+            factor = 1
+        }
+    }
+
+    option = {
+        name = ori_ap.110.b
+        owner = {
+            add_modifier = {
+                modifier = defensive_focus
+                days = 1800
+            }
+        }
+        ai_chance = {
+            factor = 1
+            modifier = {
+                factor = 3
+                owner = {
+                    is_militarist = yes
+                }
+            }
+        }
+    }
+
+    after = {
+        remove_situation_flag = situation_originium_pause
+    }
+}
+
+situation_event = {
+    id = ori_ap.115
+    title = "ori_ap.115.name"
+    desc = "ori_ap.115.desc"
+    picture = GFX_evt_originium_resonance_resonance
+    show_sound = event_laboratory_sound
+    situation = this
+    is_triggered_only = yes
+
+    trigger = {
+        NOT = { has_situation_flag = originium_115_fire }
+        OR = {
+            current_stage = stage_2
+            current_stage = stage_3
+        }
+        has_situation_flag = resonance_approach_selected
+        target = {
+            is_wilderness_empire = no
+        }
+    }
+
+    immediate = {
+        set_situation_flag = situation_originium_pause
+        set_situation_flag = originium_115_fire
+    }
+
+    option = {
+        name = ori_ap.115.a
+        owner = {
+            capital_scope = {
+                create_pop_group = {
+                    species = owner.owner_main_species
+                }
+            }
+        }
+        if = {
+            limit = {
+                owner = {
+                    is_lithoid_empire = no
+                }
+            }
+            owner = {
+                add_resource = {
+                    energy = 100
+                    food = 1000
+                }
+            }
+        }
+        else = {
+            owner = {
+                add_resource = {
+                    energy = 100
+                    minerals = 1000
+                    originium = 400
+                }
+            }
+        }
+        ai_chance = {
+            factor = 1
+            modifier = {
+                factor = 3
+                owner = {
+                    is_materialist = yes
+                }
+            }
+        }
+    }
+
+    option = {
+        name = ori_ap.115.b
+        owner = {
+            add_modifier = {
+                modifier = grunt_retention
+                days = 1800
+            }
+        }
+        ai_chance = {
+            factor = 1
+            modifier = {
+                factor = 2
+                owner = {
+                    is_authoritarian = yes
+                }
+            }
+        }
+    }
+
+    after = {
+        remove_situation_flag = situation_originium_pause
+    }
+}
+
+situation_event = {
+    id = ori_ap.120
+    title = "ori_ap.120.name"
+    desc = "ori_ap.120.desc"
+    picture = GFX_evt_originium_resonance_resonance
+    show_sound = event_laboratory_sound
+    situation = this
+    is_triggered_only = yes
+
+    trigger = {
+        NOT = { has_situation_flag = originium_120_fire }
+        OR = {
+            current_stage = stage_2
+            current_stage = stage_3
+        }
+        has_situation_flag = resonance_approach_selected
+    }
+
+    immediate = {
+        set_situation_flag = situation_originium_pause
+        set_situation_flag = originium_120_fire
+    }
+
+    option = {
+        name = ori_ap.120.a
+        owner = {
+            add_modifier = {
+                modifier = assured_longevity
+                days = 1800
+            }
+        }
+        ai_chance = {
+            factor = 1
+        }
+    }
+
+    option = {
+        name = ori_ap.120.b
+        owner = {
+            if = {
+                limit = {
+                    is_wilderness_empire = yes
+                }
+                add_modifier = {
+                    modifier = hyper_charged_wilderness
+                    days = 1800
+                }
+            }
+            else = {
+                add_modifier = {
+                    modifier = hyper_charged
+                    days = 1800
+                }
+            }
+        }
+        ai_chance = {
+            factor = 1
+            modifier = {
+                factor = 2
+                owner = {
+                    is_authoritarian = yes
+                }
+            }
+        }
+    }
+
+    after = {
+        remove_situation_flag = situation_originium_pause
+    }
+}
+
+situation_event = {
+    id = ori_ap.125
+    title = "ori_ap.125.name"
+    desc = "ori_ap.125.desc"
+    picture = GFX_evt_originium_resonance_resonance
+    show_sound = event_laboratory_sound
+    situation = this
+    is_triggered_only = yes
+
+    trigger = {
+        NOT = { has_situation_flag = originium_125_fire }
+        current_stage = stage_3
+        has_situation_flag = resonance_approach_selected
+    }
+
+    immediate = {
+        set_situation_flag = situation_originium_pause
+        set_situation_flag = originium_125_fire
+    }
+
+    option = {
+        name = ori_ap.125.a
+        owner = {
+            add_modifier = {
+                modifier = vitality_conservation
+                days = 1800
+            }
+        }
+        ai_chance = {
+            factor = 1
+            modifier = {
+                factor = 2
+                owner = {
+                    is_egalitarian = yes
+                }
+            }
+        }
+    }
+
+    option = {
+        name = ori_ap.125.b
+        owner = {
+            add_modifier = {
+                modifier = accelerated_growth
+                days = 1800
+            }
+        }
+        ai_chance = {
+            factor = 1
+        }
+    }
+
+    after = {
+        remove_situation_flag = situation_originium_pause
+    }
+}
+
+situation_event = {
+    id = ori_ap.130
+    title = "ori_ap.130.name"
+    desc = "ori_ap.130.desc"
+    picture = GFX_evt_originium_resonance_crystallization
+    show_sound = event_laboratory_sound
+    situation = this
+    is_triggered_only = yes
+
+    trigger = {
+        NOT = { has_situation_flag = originium_130_fire }
+        situation_progress >= 20
+        has_situation_flag = crystallization_approach_selected
+    }
+
+    immediate = {
+        set_situation_flag = situation_originium_pause
+        set_situation_flag = originium_130_fire
+    }
+
+    option = {
+        name = ori_ap.130.a
+        owner = {
+            add_modifier = {
+                modifier = interference_perseverance
+                days = 1800
+            }
+        }
+        ai_chance = {
+            factor = 1
+        }
+    }
+
+    option = {
+        name = ori_ap.130.b
+        owner = {
+            random_owned_leader = {
+                limit = {
+                    is_councilor = yes
+                    leader_class = official
+                }
+                if = {
+                    limit = {
+                        NOT = {
+                            has_trait_tier1or2 = {
+                                TRAIT = trait_ruler_feedback_loop
+                            }
+                        }
+                    }
+                    add_trait = {
+                        trait = trait_ruler_feedback_loop
+                    }
+                }
+                else_if = {
+                    limit = {
+                        has_trait = trait_ruler_feedback_loop
+                    }
+                    add_trait = {
+                        trait = trait_ruler_feedback_loop_2
+                    }
+                }
+                else = {
+                    add_experience = 200
+                }
+            }
+            while = {
+                count = 3
+                weighted_random_owned_pop_group = {
+                    limit = {
+                        is_organic_species = yes
+                    }
+                    kill_single_pop = yes
+                }
+            }
+        }
+        ai_chance = {
+            factor = 1
+            modifier = {
+                factor = 2
+                owner = {
+                    is_authoritarian = yes
+                }
+            }
+        }
+    }
+
+    after = {
+        remove_situation_flag = situation_originium_pause
+    }
+}
+
+situation_event = {
+    id = ori_ap.135
+    title = "ori_ap.135.name"
+    desc = "ori_ap.135.desc"
+    picture = GFX_evt_originium_resonance_crystallization
+    show_sound = event_laboratory_sound
+    situation = this
+    is_triggered_only = yes
+
+    trigger = {
+        NOT = { has_situation_flag = originium_135_fire }
+        OR = {
+            current_stage = stage_2
+            current_stage = stage_3
+        }
+        has_situation_flag = crystallization_approach_selected
+    }
+
+    immediate = {
+        set_situation_flag = situation_originium_pause
+        set_situation_flag = originium_135_fire
+    }
+
+    option = {
+        name = ori_ap.135.a
+        owner = {
+            add_modifier = {
+                modifier = tandem_workers
+                days = 1800
+            }
+        }
+        ai_chance = {
+            factor = 1
+        }
+    }
+
+    option = {
+        name = ori_ap.135.b
+        owner = {
+            if = {
+                limit = {
+                    NOT = { has_technology = tech_space_science_3 }
+                }
+                give_tech_option_or_progress_effect = {
+                    TECH = tech_space_science_3
+                }
+            }
+            else = {
+                add_monthly_resource_mult = {
+                    resource = physics_research
+                    value = @tier3researchreward
+                    min = @tier3researchmin
+                    max = @tier3researchmax
+                }
+            }
+        }
+        ai_chance = {
+            factor = 1
+        }
+    }
+
+    after = {
+        remove_situation_flag = situation_originium_pause
+    }
+}
+
+situation_event = {
+    id = ori_ap.140
+    title = "ori_ap.140.name"
+    desc = "ori_ap.140.desc"
+    picture = GFX_evt_originium_resonance_crystallization
+    show_sound = event_laboratory_sound
+    situation = this
+    is_triggered_only = yes
+
+    trigger = {
+        NOT = { has_situation_flag = originium_140_fire }
+        OR = {
+            current_stage = stage_2
+            current_stage = stage_3
+        }
+        has_situation_flag = crystallization_approach_selected
+    }
+
+    immediate = {
+        set_situation_flag = situation_originium_pause
+        set_situation_flag = originium_140_fire
+    }
+
+    option = {
+        name = ori_ap.140.a
+        owner = {
+            add_modifier = {
+                modifier = mandated_integration
+                days = 1800
+            }
+        }
+        ai_chance = {
+            factor = 1
+            modifier = {
+                factor = 2
+                owner = {
+                    is_authoritarian = yes
+                }
+            }
+        }
+    }
+
+    option = {
+        name = ori_ap.140.b
+        owner = {
+            if = {
+                limit = {
+                    NOT = { has_technology = tech_autonomous_agents }
+                }
+                give_tech_option_or_progress_effect = {
+                    TECH = tech_autonomous_agents
+                }
+            }
+            else = {
+                add_monthly_resource_mult = {
+                    resource = society_research
+                    value = @tier2researchreward
+                    min = @tier2researchmin
+                    max = @tier2researchmax
+                }
+            }
+        }
+        ai_chance = {
+            factor = 1
+        }
+    }
+
+    after = {
+        remove_situation_flag = situation_originium_pause
+    }
+}
+
+situation_event = {
+    id = ori_ap.145
+    title = "ori_ap.145.name"
+    desc = "ori_ap.145.desc"
+    picture = GFX_evt_originium_resonance_crystallization
+    show_sound = event_laboratory_sound
+    situation = this
+    is_triggered_only = yes
+
+    trigger = {
+        NOT = { has_situation_flag = originium_145_fire }
+        current_stage = stage_3
+        has_situation_flag = crystallization_approach_selected
+    }
+
+    immediate = {
+        set_situation_flag = situation_originium_pause
+        set_situation_flag = originium_145_fire
+    }
+
+    option = {
+        name = ori_ap.145.a
+        owner = {
+            add_modifier = {
+                modifier = methodic_procreation
+                days = 1800
+            }
+        }
+        ai_chance = {
+            factor = 1
+        }
+    }
+
+    option = {
+        name = ori_ap.145.b
+        owner = {
+            add_modifier = {
+                modifier = genetic_diversification
+                days = 1800
+            }
+        }
+        ai_chance = {
+            factor = 1
+            modifier = {
+                factor = 2
+                owner = {
+                    is_egalitarian = yes
+                }
+            }
+        }
+    }
+
+    after = {
+        remove_situation_flag = situation_originium_pause
+    }
+}
+
+situation_event = {
+    id = ori_ap.150
+    title = "ori_ap.150.name"
+    desc = "ori_ap.150.desc"
+    picture = GFX_evt_originium_resonance_assimilation
+    show_sound = event_laboratory_sound
+    situation = this
+    is_triggered_only = yes
+
+    trigger = {
+        NOT = { has_situation_flag = originium_150_fire }
+        situation_progress >= 20
+        has_situation_flag = assimilation_approach_selected
+    }
+
+    immediate = {
+        set_situation_flag = situation_originium_pause
+        set_situation_flag = originium_150_fire
+    }
+
+    option = {
+        name = ori_ap.150.a
+        owner = {
+            add_modifier = {
+                modifier = hive_spa_day
+                days = -1
+            }
+        }
+        hidden_effect = {
+            situation_event = {
+                id = ori_ap.151
+                days = 360
+            }
+        }
+        ai_chance = {
+            factor = 1
+            modifier = {
+                factor = 2
+                owner = {
+                    is_egalitarian = yes
+                }
+            }
+        }
+    }
+
+    option = {
+        name = ori_ap.150.b
+        owner = {
+            add_modifier = {
+                modifier = cousin_of_death
+                days = 1800
+            }
+        }
+        ai_chance = {
+            factor = 1
+            modifier = {
+                factor = 2
+                owner = {
+                    is_authoritarian = yes
+                }
+            }
+        }
+    }
+
+    after = {
+        remove_situation_flag = situation_originium_pause
+    }
+}
+
+situation_event = {
+    id = ori_ap.151
+    title = "ori_ap.151.name"
+    desc = "ori_ap.151.desc"
+    picture = GFX_evt_originium_resonance_assimilation
+    show_sound = event_celebration
+    situation = this
+    is_triggered_only = yes
+
+    immediate = {
+        set_situation_flag = situation_originium_pause
+    }
+
+    option = {
+        name = ori_ap.151.a
+        owner = {
+            remove_modifier = hive_spa_day
+            add_modifier = {
+                modifier = positively_glowing
+                days = 1440
+            }
+        }
+    }
+
+    after = {
+        remove_situation_flag = situation_originium_pause
+    }
+}
+
+
+situation_event = {
+    id = ori_ap.155
+    title = "ori_ap.155.name"
+    desc = "ori_ap.155.desc"
+    picture = GFX_evt_originium_resonance_crystallization
+    show_sound = event_laboratory_sound
+    situation = this
+    is_triggered_only = yes
+
+    trigger = {
+        NOT = { has_situation_flag = originium_155_fire }
+        OR = {
+            current_stage = stage_2
+            current_stage = stage_3
+        }
+        has_situation_flag = assimilation_approach_selected
+    }
+
+    immediate = {
+        set_situation_flag = situation_originium_pause
+        set_situation_flag = originium_155_fire
+    }
+
+    option = {
+        name = ori_ap.155.a
+        owner = {
+            add_modifier = {
+                modifier = multi_functionality
+                days = 1800
+            }
+        }
+        ai_chance = {
+            factor = 1
+        }
+    }
+
+    option = {
+        name = ori_ap.155.b
+        owner = {
+            add_modifier = {
+                modifier = optimized_workforce
+                days = 1800
+            }
+        }
+        ai_chance = {
+            factor = 1
+        }
+    }
+
+    after = {
+        remove_situation_flag = situation_originium_pause
+    }
+}
+
+situation_event = {
+    id = ori_ap.160
+    title = "ori_ap.160.name"
+    desc = "ori_ap.160.desc"
+    picture = GFX_evt_originium_resonance_assimilation
+    show_sound = event_laboratory_sound
+    situation = this
+    is_triggered_only = yes
+
+    trigger = {
+        NOT = { has_situation_flag = originium_160_fire }
+        OR = {
+            current_stage = stage_2
+            current_stage = stage_3
+        }
+        has_situation_flag = assimilation_approach_selected
+    }
+
+    immediate = {
+        set_situation_flag = situation_originium_pause
+        set_situation_flag = originium_160_fire
+    }
+
+    option = {
+        name = ori_ap.160.a
+        owner = {
+            if = {
+                limit = {
+                    NOT = { has_technology = tech_embodied_dynamism }
+                }
+                give_tech_option_or_progress_effect = {
+                    TECH = tech_embodied_dynamism
+                }
+            }
+            else = {
+                add_monthly_resource_mult = {
+                    resource = society_research
+                    value = @tier2researchreward
+                    min = @tier2researchmin
+                    max = @tier2researchmax
+                }
+            }
+        }
+        ai_chance = {
+            factor = 1
+        }
+    }
+
+    option = {
+        name = ori_ap.160.b
+        owner = {
+            if = {
+                limit = {
+                    NOR = {
+                        has_technology = tech_node_culling_1
+                        has_technology = tech_node_culling_2
+                    }
+                }
+                give_tech_option_or_progress_effect = {
+                    TECH = tech_node_culling_1
+                }
+            }
+            else_if = {
+                limit = {
+                    has_technology = tech_node_culling_1
+                    NOT = {
+                        has_technology = tech_node_culling_2
+                    }
+                }
+                add_tech_option_or_research_effect = {
+                    TECH = tech_node_culling_2
+                    PROGRESS = 0.25
+                    CATEGORY = society_research
+                }
+            }
+            else = {
+                add_monthly_resource_mult = {
+                    resource = society_research
+                    value = @tier2researchreward
+                    min = @tier2researchmin
+                    max = @tier2researchmax
+                }
+            }
+        }
+        ai_chance = {
+            factor = 1
+        }
+    }
+
+    after = {
+        remove_situation_flag = situation_originium_pause
+    }
+}
+
+situation_event = {
+    id = ori_ap.165
+    title = "ori_ap.165.name"
+    desc = "ori_ap.165.desc"
+    picture = GFX_evt_originium_resonance_assimilation
+    show_sound = event_laboratory_sound
+    situation = this
+    is_triggered_only = yes
+
+    trigger = {
+        NOT = { has_situation_flag = originium_165_fire }
+        current_stage = stage_3
+        has_situation_flag = assimilation_approach_selected
+    }
+
+    immediate = {
+        set_situation_flag = situation_originium_pause
+        set_situation_flag = originium_165_fire
+    }
+
+    option = {
+        name = ori_ap.165.a
+        owner = {
+            add_modifier = {
+                modifier = change_is_growth
+                days = 1800
+            }
+        }
+        ai_chance = {
+            factor = 1
+            modifier = {
+                factor = 2
+                owner = {
+                    is_materialist = yes
+                }
+            }
+        }
+    }
+
+    option = {
+        name = ori_ap.165.b
+        owner = {
+            add_modifier = {
+                modifier = maintain_the_essence
+                days = 1800
+            }
+        }
+        ai_chance = {
+            factor = 1
+            modifier = {
+                factor = 2
+                owner = {
+                    is_spiritualist = yes
+                }
+            }
+        }
+    }
+
+    after = {
+        remove_situation_flag = situation_originium_pause
+    }
+}
+
+
+# ADVANCED GOVERNMENT EVENTS
+# resonance
+
+country_event = {
+    id = ori_ap.170
+    title = ori_ap.170.name
+    desc = ori_ap.170.desc
+    picture = GFX_evt_originium_resonance
+    show_sound = event_alien_nature
+    is_triggered_only = yes
+
+    option = {
+        name = ori_ap.170.a
+        owner = {
+            hidden_effect = {
+                set_country_flag = ori_ap_resonance
+                advanced_authority_refresh = yes
+            }
+        }
+        custom_tooltip = ori_ap.170.a.tt
+        hidden_effect = {
+            every_owned_species = {
+                limit = {
+                    OR = {
+                        is_archetype = PRESAPIENT
+                        is_archetype = BIOLOGICAL
+                        is_archetype = LITHOID
+                        is_archetype = ORIGINOID
+
+                    }
+                }
+                set_species_traits_resonance_count_variable = yes
+            }
+            if = {
+                limit = {
+                    is_imperial_authority = yes
+                }
+                every_owned_leader = {
+                    limit = {
+                        is_same_species = root.ruler
+                    }
+                    add_trait = {
+                        trait = trait_imperial_heir
+                        show_message = no
+                    }
+                }
+                every_pool_leader = {
+                    limit = {
+                        is_same_species = root.ruler
+                    }
+                    add_trait = {
+                        trait = trait_imperial_heir
+                        show_message = no
+                    }
+                }
+            }
+            else_if = {
+                limit = {
+                    is_hive_empire = no
+                    is_megacorp = no
+                }
+                every_owned_leader = {
+                    limit = {
+                        species = {
+                            is_robotic_species = no
+                        }
+                        NOT = { has_trait = trait_leader_genetic_purist }
+                    }
+                    give_trait_no_notify_ignore_autocracy_restriction = {
+                        TRAIT = trait_leader_genetic_purist
+                    }
+                }
+                every_pool_leader = {
+                    limit = {
+                        species = {
+                            is_robotic_species = no
+                        }
+                        NOT = { has_trait = trait_leader_genetic_purist }
+                    }
+                    give_trait_no_notify_ignore_autocracy_restriction = {
+                        TRAIT = trait_leader_genetic_purist
+                    }
+                }
+            }
+        }
+    }
+
+    option = {
+        name = ori_ap.170.b
+    }
+
+    after = {
+        hidden_effect = {
+            if = {
+                limit = {
+                    any_planet_within_border = {
+                        has_planet_flag = fotd_seperatist_planet@root
+                        owner = {
+                            has_country_flag = fotd_seperatist_country@root
+                        }
+                    }
+                }
+                country_event = { id = origin.6120 days = 5 random = 2 }
+            }
+        }
+    }
+}
+
+# Executed just as country is changing its government, after the new one is applied
+# THIS = country
+country_event = {
+    id = ori_ap.171
+    hide_window = yes
+    is_triggered_only = yes
+
+    trigger = {
+        is_resonance_authority = yes
+    }
+
+    immediate = {
+        if = {
+            limit = {
+                is_imperial_authority = yes
+            }
+            every_owned_leader = {
+                limit = {
+                    species = {
+                        is_same_species = root.ruler
+                    }
+                    NOT = { has_trait = trait_imperial_heir }
+                }
+                give_trait_no_notify_ignore_autocracy_restriction = {
+                    TRAIT = trait_imperial_heir
+                }
+            }
+        }
+        else_if = {
+            limit = {
+                is_hive_empire = no
+                is_megacorp = no
+            }
+            every_owned_leader = {
+                limit = {
+                    species = {
+                        is_robotic_species = no
+                    }
+                    NOT = { has_trait = trait_leader_genetic_purist }
+                }
+                give_trait_no_notify_ignore_autocracy_restriction = {
+                    TRAIT = trait_leader_genetic_purist
+                }
+            }
+        }
+    }
+}
+
+# Executed just as country is changing its government, after the new one is applied
+# THIS = country
+country_event = {
+    id = ori_ap.172
+    hide_window = yes
+    is_triggered_only = yes
+
+    trigger = {
+        OR = {
+            is_resonance_authority = no
+            AND = {
+                is_resonance_authority = yes
+                is_imperial_authority = yes
+            }
+        }
+        any_owned_leader = {
+            has_trait = trait_leader_genetic_purist
+        }
+    }
+
+    immediate = {
+        every_owned_leader = {
+            limit = {
+                species = {
+                    is_robotic_species = no
+                }
+                has_trait = trait_leader_genetic_purist
+            }
+            remove_trait = trait_leader_genetic_purist
+        }
+    }
+}
+
+# CLONING
+
+country_event = {
+    id = ori_ap.175
+    title = ori_ap.175.name
+    desc = ori_ap.175.desc
+    picture = GFX_evt_originium_resonance
+    show_sound = event_alien_nature
+    is_triggered_only = yes
+
+    option = {
+        name = ori_ap.175.a
+        custom_tooltip = ori_ap.175.a.tt
+        if = {
+            limit = {
+                owner = {
+                    has_crystallization_biochemical_composure_tradition = yes
+                }
+            }
+            custom_tooltip = crystallization_biochemical_composure_tradition_swap_tt
+        }
+        owner = {
+            hidden_effect = {
+                set_country_flag = ori_ap_crystallization
+                advanced_authority_refresh = yes
+                give_backup_clones_effect = yes
+            }
+        }
+    }
+
+    option = {
+        name = ori_ap.175.b
+    }
+
+    after = {
+        hidden_effect = {
+            if = {
+                limit = {
+                    any_planet_within_border = {
+                        has_planet_flag = fotd_seperatist_planet@root
+                        owner = {
+                            has_country_flag = fotd_seperatist_country@root
+                        }
+                    }
+                }
+                country_event = { id = origin.6120 days = 5 random = 2 }
+            }
+        }
+    }
+}
+
+# MUTATION
+
+country_event = {
+    id = ori_ap.180
+    title = ori_ap.180.name
+    desc = ori_ap.180.desc
+    picture = GFX_evt_originium_resonance_assimilation
+    show_sound = event_alien_nature
+    is_triggered_only = yes
+
+    option = {
+        name = ori_ap.180.a
+        custom_tooltip = ori_ap.180.a.tt
+        owner = {
+            hidden_effect = {
+                set_country_flag = ori_ap_assimilation
+                advanced_authority_refresh = yes
+            }
+        }
+    }
+
+    option = {
+        name = ori_ap.180.b
+    }
+
+    after = {
+        hidden_effect = {
+            if = {
+                limit = {
+                    any_planet_within_border = {
+                        has_planet_flag = fotd_seperatist_planet@root
+                        owner = {
+                            has_country_flag = fotd_seperatist_country@root
+                        }
+                    }
+                }
+                country_event = { id = origin.6120 days = 5 random = 2 }
+            }
+        }
+    }
+}
+
+# resonance (HIVE VERSION)
+
+country_event = {
+    id = ori_ap.185
+    title = ori_ap.185.name
+    desc = ori_ap.185.desc
+    picture = GFX_evt_originium_resonance
+    show_sound = event_alien_nature
+    is_triggered_only = yes
+
+    option = {
+        name = ori_ap.185.a
+        custom_tooltip = ori_ap.185.a.tt
+        owner = {
+            hidden_effect = {
+                set_country_flag = ori_ap_resonance
+                advanced_authority_refresh = yes
+            }
+        }
+    }
+
+    option = {
+        name = ori_ap.185.b
+    }
+}
+
+# CLONING (HIVE VERSION)
+
+country_event = {
+    id = ori_ap.190
+    title = ori_ap.190.name
+    desc = ori_ap.190.desc
+    picture = GFX_evt_originium_resonance
+    show_sound = event_alien_nature
+    is_triggered_only = yes
+
+    option = {
+        name = ori_ap.190.a
+        custom_tooltip = ori_ap.190.a.tt
+        if = {
+            limit = {
+                owner = {
+                    has_crystallization_biochemical_composure_tradition = yes
+                }
+            }
+            custom_tooltip = crystallization_biochemical_composure_tradition_swap_tt
+        }
+        owner = {
+            hidden_effect = {
+                set_country_flag = ori_ap_crystallization
+                advanced_authority_refresh = yes
+            }
+        }
+    }
+
+    option = {
+        name = ori_ap.190.b
+    }
+}
+
+# MUTATION (HIVE VERSION)
+
+country_event = {
+    id = ori_ap.195
+    title = ori_ap.195.name
+    desc = ori_ap.195.desc
+    picture = GFX_evt_originium_resonance_assimilation
+    show_sound = event_alien_nature
+    is_triggered_only = yes
+
+    option = {
+        name = ori_ap.195.a
+        owner = {
+            custom_tooltip = ori_ap.195.a.tt
+            hidden_effect = {
+                set_country_flag = ori_ap_assimilation
+                advanced_authority_refresh = yes
+
+            }
+        }
+    }
+
+    option = {
+        name = ori_ap.195.b
+    }
+}
+
+### ADDITIONAL RANDOM EVENTS
+## NON-HIVE
+# resonance
+
+situation_event = {
+    id = ori_ap.200
+    title = "ori_ap.200.name"
+    desc = "ori_ap.200.desc"
+    picture = GFX_evt_originium_resonance_resonance
+    show_sound = event_laboratory_sound
+    situation = this
+    is_triggered_only = yes
+
+    trigger = {
+        NOT = { has_situation_flag = originium_200_fire }
+        has_situation_flag = resonance_approach_selected
+    }
+
+    immediate = {
+        set_situation_flag = situation_originium_pause
+        set_situation_flag = originium_200_fire
+    }
+
+    option = {
+        name = ori_ap.200.a
+        owner = {
+            add_modifier = {
+                modifier = artistic_integrity
+                days = 1800
+            }
+        }
+        ai_chance = {
+            factor = 1
+        }
+    }
+
+    option = {
+        name = ori_ap.200.b
+        owner = {
+            add_modifier = {
+                modifier = logic_first
+                days = 1800
+            }
+        }
+        ai_chance = {
+            factor = 1
+        }
+    }
+
+    option = {
+        name = ori_ap.200.c
+        owner = {
+            add_modifier = {
+                modifier = practical_application
+                days = 1800
+            }
+        }
+        ai_chance = {
+            factor = 1
+        }
+    }
+
+    after = {
+        remove_situation_flag = situation_originium_pause
+    }
+}
+
+situation_event = {
+    id = ori_ap.210
+    title = "ori_ap.210.name"
+    desc = "ori_ap.210.desc"
+    picture = GFX_evt_originium_resonance_resonance
+    show_sound = event_laboratory_sound
+    situation = this
+    is_triggered_only = yes
+
+    trigger = {
+        NOT = { has_situation_flag = originium_210_fire }
+        has_situation_flag = resonance_approach_selected
+    }
+
+    immediate = {
+        set_situation_flag = situation_originium_pause
+        set_situation_flag = originium_210_fire
+    }
+
+    option = {
+        name = ori_ap.210.a
+        owner = {
+            add_modifier = {
+                modifier = crack_downs
+                days = 1800
+            }
+        }
+        ai_chance = {
+            factor = 1
+        }
+        add_situation_progress = 50
+    }
+
+    option = {
+        name = ori_ap.210.b
+        owner = {
+            add_modifier = {
+                modifier = performative_reformation
+                days = 1800
+            }
+        }
+        ai_chance = {
+            factor = 1
+        }
+    }
+
+    after = {
+        remove_situation_flag = situation_originium_pause
+    }
+}
+
+situation_event = {
+    id = ori_ap.215
+    title = "ori_ap.215.name"
+    desc = "ori_ap.215.desc"
+    picture = GFX_evt_originium_resonance_resonance
+    show_sound = event_laboratory_sound
+    situation = this
+    is_triggered_only = yes
+
+    trigger = {
+        NOT = { has_situation_flag = originium_215_fire }
+        has_situation_flag = resonance_approach_selected
+        owner = {
+            NOT = {
+                has_origin = origin_lost_colony
+            }
+        }
+    }
+
+    immediate = {
+        set_situation_flag = situation_originium_pause
+        set_situation_flag = originium_215_fire
+    }
+
+    option = {
+        name = ori_ap.215.a
+        owner = {
+            add_modifier = {
+                modifier = ancestral_inheritance
+                days = 1800
+            }
+            capital_scope = {
+                add_deposit = d_underground_vault
+            }
+        }
+        ai_chance = {
+            factor = 1
+        }
+    }
+
+    option = {
+        name = ori_ap.215.b
+        owner = {
+            add_modifier = {
+                modifier = buried_secrets
+                days = 1800
+            }
+        }
+        ai_chance = {
+            factor = 1
+        }
+    }
+
+    after = {
+        remove_situation_flag = situation_originium_pause
+    }
+}
+
+situation_event = {
+    id = ori_ap.220
+    title = "ori_ap.220.name"
+    desc = "ori_ap.220.desc"
+    picture = GFX_evt_originium_resonance_resonance
+    show_sound = event_laboratory_sound
+    situation = this
+    is_triggered_only = yes
+
+    trigger = {
+        NOT = { has_situation_flag = originium_220_fire }
+        has_situation_flag = resonance_approach_selected
+        owner = {
+            any_owned_leader = {
+                is_ruler = no
+                is_heir = no
+                leader_class = scientist
+            }
+        }
+    }
+
+    immediate = {
+        set_situation_flag = situation_originium_pause
+        set_situation_flag = originium_220_fire
+        owner = {
+            random_owned_leader = {
+                limit = {
+                    is_ruler = no
+                    is_heir = no
+                }
+                save_event_target_as = rogue_geneticist
+            }
+        }
+        ai_chance = {
+            factor = 1
+        }
+    }
+
+    option = {
+        name = ori_ap.220.a
+        custom_tooltip = ori_ap.220.a.tt
+        trigger = {
+            owner = {
+                is_authoritarian = no
+            }
+        }
+        owner = {
+            add_modifier = {
+                modifier = specimen_study
+                days = 1800
+            }
+            refresh_leader_pool = yes
+        }
+        hidden_effect = {
+            event_target:rogue_geneticist = {
+                kill_leader = { show_notification = no }
+            }
+        }
+        ai_chance = {
+            factor = 1
+        }
+    }
+
+    option = {
+        name = ori_ap.220.b
+        trigger = {
+            owner = {
+                is_authoritarian = yes
+            }
+        }
+        event_target:rogue_geneticist = {
+            kill_leader = { show_notification = yes }
+        }
+        owner = {
+            add_modifier = {
+                modifier = specimen_study
+                days = 1800
+            }
+            refresh_leader_pool = yes
+        }
+        ai_chance = {
+            factor = 1
+        }
+    }
+
+    option = {
+        name = ori_ap.220.c
+        event_target:rogue_geneticist = {
+            add_expertise_trait_effect = {
+                TRAIT = leader_trait_expertise_biology
+            }
+        }
+        ai_chance = {
+            factor = 1
+        }
+    }
+
+    after = {
+        remove_situation_flag = situation_originium_pause
+    }
+}
+
+situation_event = {
+    id = ori_ap.225
+    title = "ori_ap.225.name"
+    desc = "ori_ap.225.desc"
+    picture = GFX_evt_originium_resonance_resonance
+    show_sound = event_laboratory_sound
+    situation = this
+    is_triggered_only = yes
+
+    trigger = {
+        NOT = { has_situation_flag = originium_225_fire }
+        has_situation_flag = resonance_approach_selected
+    }
+
+    immediate = {
+        set_situation_flag = situation_originium_pause
+        set_situation_flag = originium_225_fire
+    }
+
+    option = {
+        name = ori_ap.225.a
+        owner = {
+            add_modifier = {
+                modifier = resonance_tests
+                days = 1800
+            }
+        }
+        ai_chance = {
+            factor = 1
+        }
+    }
+
+    option = {
+        name = ori_ap.225.b
+        owner = {
+            random_owned_leader = {
+                limit = {
+                    is_ruler = no
+                    is_heir = no
+                    leader_class = official
+                }
+                kill_leader = { show_notification = yes }
+            }
+            add_monthly_resource_mult = {
+                resource = unity
+                value = @tier1researchreward
+                min = @tier1researchmin
+                max = @tier1researchmax
+            }
+            hidden_effect = {
+                refresh_leader_pool = yes
+            }
+        }
+        ai_chance = {
+            factor = 1
+        }
+    }
+
+    after = {
+        remove_situation_flag = situation_originium_pause
+    }
+}
+
+### ADDITIONAL RANDOM EVENTS
+## NON-HIVE
+# CLONING
+
+situation_event = {
+    id = ori_ap.230
+    title = "ori_ap.230.name"
+    desc = "ori_ap.230.desc"
+    picture = GFX_evt_originium_resonance_crystallization
+    show_sound = event_laboratory_sound
+    situation = this
+    is_triggered_only = yes
+
+    trigger = {
+        owner = {
+            NOT = { has_origin = origin_clone_army }
+        }
+        NOT = {
+            has_situation_flag = originium_230_fire
+        }
+        has_situation_flag = crystallization_approach_selected
+    }
+
+    immediate = {
+        set_situation_flag = situation_originium_pause
+        set_situation_flag = originium_230_fire
+    }
+
+    option = {
+        name = ori_ap.230.a
+        owner = {
+            add_modifier = {
+                modifier = crystallize_rights
+                days = 1800
+            }
+        }
+        ai_chance = {
+            factor = 1
+        }
+    }
+
+    option = {
+        name = ori_ap.230.b
+        owner = {
+            add_modifier = {
+                modifier = class_system
+                days = 1800
+            }
+        }
+        ai_chance = {
+            factor = 1
+        }
+    }
+
+    after = {
+        remove_situation_flag = situation_originium_pause
+    }
+}
+
+situation_event = {
+    id = ori_ap.235
+    title = "ori_ap.235.name"
+    desc = "ori_ap.235.desc"
+    picture = GFX_evt_originium_resonance_crystallization
+    show_sound = event_laboratory_sound
+    situation = this
+    is_triggered_only = yes
+
+    trigger = {
+        NOT = { has_situation_flag = originium_235_fire }
+        has_situation_flag = crystallization_approach_selected
+    }
+
+    immediate = {
+        set_situation_flag = situation_originium_pause
+        set_situation_flag = originium_235_fire
+    }
+
+    option = {
+        name = ori_ap.235.a
+        custom_tooltip = ori_ap.235.a.tt
+        hidden_effect = {
+            set_timed_situation_flag = {
+                flag = prophecy_stalled
+                months = 12
+            }
+        }
+        ai_chance = {
+            factor = 1
+        }
+    }
+
+    option = {
+        name = ori_ap.235.b
+        owner = {
+            add_modifier = {
+                modifier = swift_recovery
+                days = 1800
+            }
+        }
+        ai_chance = {
+            factor = 1
+        }
+    }
+
+    after = {
+        remove_situation_flag = situation_originium_pause
+    }
+}
+
+situation_event = {
+    id = ori_ap.240
+    title = "ori_ap.240.name"
+    desc = "ori_ap.240.desc"
+    picture = GFX_evt_originium_resonance_crystallization
+    show_sound = event_laboratory_sound
+    situation = this
+    is_triggered_only = yes
+
+    trigger = {
+        owner = {
+            NOT = { has_origin = origin_clone_army }
+        }
+        NOT = {
+            has_situation_flag = originium_240_fire
+        }
+        has_situation_flag = crystallization_approach_selected
+    }
+
+    immediate = {
+        set_situation_flag = situation_originium_pause
+        set_situation_flag = originium_240_fire
+    }
+
+    option = {
+        name = ori_ap.240.a
+        owner = {
+            add_modifier = {
+                modifier = well_adjusted
+                days = 1800
+            }
+        }
+        ai_chance = {
+            factor = 1
+        }
+    }
+
+    option = {
+        name = ori_ap.240.b
+        custom_tooltip = ori_ap.240.b.tt
+        owner = {
+            add_modifier = {
+                modifier = strict_discipline
+                days = 1800
+            }
+        }
+        hidden_effect = {
+            owner = {
+                every_owned_leader = {
+                    limit = {
+                        is_same_species = prev.species
+                    }
+                    add_experience = 200
+                }
+            }
+        }
+        ai_chance = {
+            factor = 1
+        }
+    }
+
+    after = {
+        remove_situation_flag = situation_originium_pause
+    }
+}
+
+situation_event = {
+    id = ori_ap.250
+    title = "ori_ap.250.name"
+    desc = "ori_ap.250.desc"
+    picture = GFX_evt_originium_resonance_crystallization
+    show_sound = event_laboratory_sound
+    situation = this
+    is_triggered_only = yes
+
+    trigger = {
+        owner = {
+            NOT = { has_origin = origin_clone_army }
+        }
+        NOT = {
+            has_situation_flag = originium_250_fire
+        }
+        has_situation_flag = crystallization_approach_selected
+    }
+
+    immediate = {
+        set_situation_flag = situation_originium_pause
+        set_situation_flag = originium_250_fire
+    }
+
+    option = {
+        name = ori_ap.250.a
+        owner = {
+            add_modifier = {
+                modifier = infinite_growth
+                days = 1800
+            }
+        }
+        ai_chance = {
+            factor = 1
+        }
+    }
+
+    option = {
+        name = ori_ap.250.b
+        owner = {
+            add_modifier = {
+                modifier = clone_colonies
+                days = 1800
+            }
+        }
+        ai_chance = {
+            factor = 1
+        }
+    }
+
+    after = {
+        remove_situation_flag = situation_originium_pause
+    }
+}
+
+### ADDITIONAL RANDOM EVENTS
+## NON-HIVE
+# MUTATION
+
+situation_event = {
+    id = ori_ap.260
+    title = "ori_ap.260.name"
+    desc = "ori_ap.260.desc"
+    picture = GFX_evt_originium_resonance_assimilation
+    show_sound = event_laboratory_sound
+    situation = this
+    is_triggered_only = yes
+
+    trigger = {
+        NOT = { has_situation_flag = originium_260_fire }
+        has_situation_flag = assimilation_approach_selected
+    }
+
+    immediate = {
+        set_situation_flag = situation_originium_pause
+        set_situation_flag = originium_260_fire
+    }
+
+    option = {
+        name = ori_ap.260.a
+        owner = {
+            add_modifier = {
+                modifier = mutant_studies
+                days = 1800
+            }
+        }
+        hidden_effect = {
+            every_country = {
+                limit = { is_spiritualist = yes }
+                add_opinion_modifier = { who = root modifier = opinion_heretical_research }
+            }
+        }
+        custom_tooltip = ori_ap_260_opinion_tt
+        ai_chance = {
+            factor = 1
+        }
+        add_situation_progress = 50
+    }
+
+    option = {
+        name = ori_ap.260.b
+        custom_tooltip = ori_ap.260.b.tt
+        owner = {
+            weighted_random_owned_pop_group = {
+                limit = {
+                    is_organic_species = yes
+                }
+                kill_single_pop = yes
+            }
+        }
+        hidden_effect = {
+            owner = {
+                every_owned_leader = {
+                    limit = {
+                        is_authoritarian = yes
+                        NOT = {
+                            has_trait = leader_trait_eager
+                        }
+                    }
+                    add_trait = {
+                        trait = leader_trait_eager
+                    }
+                }
+            }
+        }
+        ai_chance = {
+            factor = 1
+        }
+    }
+
+    after = {
+        remove_situation_flag = situation_originium_pause
+    }
+}
+
+situation_event = {
+    id = ori_ap.265
+    title = "ori_ap.265.name"
+    desc = "ori_ap.265.desc"
+    picture = GFX_evt_originium_resonance_assimilation
+    show_sound = event_laboratory_sound
+    situation = this
+    is_triggered_only = yes
+
+    trigger = {
+        NOT = { has_situation_flag = originium_265_fire }
+        has_situation_flag = assimilation_approach_selected
+    }
+
+    immediate = {
+        set_situation_flag = situation_originium_pause
+        set_situation_flag = originium_265_fire
+    }
+
+    option = {
+        name = ori_ap.265.a
+        owner = {
+            add_modifier = {
+                modifier = aspirational_striving
+                days = 1800
+            }
+        }
+        ai_chance = {
+            factor = 1
+        }
+    }
+
+    option = {
+        name = ori_ap.265.b
+        custom_tooltip = ori_ap.265.b.tt
+        owner = {
+            add_modifier = {
+                modifier = militaristic_fortitude
+                days = 1800
+            }
+            capital_scope = {
+                while = {
+                    count = 6
+                    create_army = {
+                        name = random
+                        owner = root
+                        type = "gene_warrior_army"
+                    }
+                }
+            }
+        }
+        hidden_effect = {
+            every_country = {
+                limit = { is_militarist = yes }
+                add_opinion_modifier = { who = root modifier = opinion_militant_values }
+            }
+        }
+        custom_tooltip = ori_ap_265_opinion_tt
+        ai_chance = {
+            factor = 1
+        }
+    }
+
+    option = {
+        name = ori_ap.265.c
+        owner = {
+            add_modifier = {
+                modifier = replicated_success
+                days = 1800
+            }
+        }
+        ai_chance = {
+            factor = 1
+        }
+        add_situation_progress = 50
+    }
+
+    after = {
+        remove_situation_flag = situation_originium_pause
+    }
+}
+
+situation_event = {
+    id = ori_ap.270
+    title = "ori_ap.270.name"
+    desc = "ori_ap.270.desc"
+    picture = GFX_evt_originium_resonance_assimilation
+    show_sound = event_laboratory_sound
+    situation = this
+    is_triggered_only = yes
+
+    trigger = {
+        NOT = { has_situation_flag = originium_270_fire }
+        has_situation_flag = assimilation_approach_selected
+    }
+
+    immediate = {
+        set_situation_flag = situation_originium_pause
+        set_situation_flag = originium_270_fire
+    }
+
+    option = {
+        name = ori_ap.270.a
+        owner = {
+            add_modifier = {
+                modifier = sewer_sweep
+                days = 1800
+            }
+        }
+        ai_chance = {
+            factor = 1
+        }
+    }
+
+    option = {
+        name = ori_ap.270.b
+        owner = {
+            add_tech_option_or_research_effect = {
+                TECH = tech_mine_exotic_gases
+                PROGRESS = 0.25
+                CATEGORY = society_research
+            }
+        }
+        ai_chance = {
+            factor = 1
+        }
+    }
+
+    after = {
+        remove_situation_flag = situation_originium_pause
+    }
+}
+
+situation_event = {
+    id = ori_ap.280
+    title = "ori_ap.280.name"
+    desc = "ori_ap.280.desc"
+    picture = GFX_evt_originium_resonance_assimilation
+    show_sound = event_laboratory_sound
+    situation = this
+    is_triggered_only = yes
+
+    trigger = {
+        NOT = { has_situation_flag = originium_280_fire }
+        has_situation_flag = assimilation_approach_selected
+    }
+
+    immediate = {
+        set_situation_flag = situation_originium_pause
+        set_situation_flag = originium_280_fire
+    }
+
+    option = {
+        name = ori_ap.280.a
+        owner = {
+            add_tech_option_or_research_effect = {
+                TECH = tech_neuroregeneration
+                PROGRESS = 0.1
+                CATEGORY = society_research
+            }
+        }
+        ai_chance = {
+            factor = 1
+        }
+    }
+
+    option = {
+        name = ori_ap.280.b
+        owner = {
+            add_modifier = {
+                modifier = weaponized_plague
+                days = 1800
+            }
+        }
+        owner = {
+            random_owned_leader = {
+                limit = {
+                    is_head_of_research = yes
+                }
+                add_or_level_up_veteran_trait_effect = {
+                    TRAIT = leader_trait_maniacal
+                }
+                add_experience = 500
+            }
+            random_owned_leader = {
+                limit = {
+                    leader_class = commander
+                    NOT = {
+                        has_trait = leader_trait_butcher
+                    }
+                }
+                add_trait = {
+                    trait = leader_trait_butcher
+                }
+            }
+        }
+        hidden_effect = {
+            every_country = {
+                limit = { is_materialist = yes }
+                add_opinion_modifier = { who = root modifier = opinion_plague_spreaders }
+            }
+        }
+        custom_tooltip = ori_ap_280_opinion_tt
+        ai_chance = {
+            factor = 1
+        }
+    }
+
+    after = {
+        remove_situation_flag = situation_originium_pause
+    }
+}
+
+### ADDITIONAL RANDOM EVENTS
+## NON-HIVE
+# THESE CAN HAPPEN FOR ANY PATH
+
+situation_event = {
+    id = ori_ap.295
+    title = "ori_ap.295.name"
+    desc = "ori_ap.295.desc"
+    picture = GFX_evt_originium_resonance_assimilation
+    show_sound = event_laboratory_sound
+    situation = this
+    is_triggered_only = yes
+
+    trigger = {
+        NOT = { has_situation_flag = originium_295_fire }
+        situation_progress >= 5
+    }
+
+    immediate = {
+        set_situation_flag = situation_originium_pause
+        set_situation_flag = originium_295_fire
+    }
+
+    option = {
+        name = ori_ap.295.a
+        owner = {
+            add_modifier = {
+                modifier = biohacker_haven
+                days = 1800
+            }
+        }
+        hidden_effect = {
+            every_country = {
+                limit = { is_egalitarian = yes }
+                add_opinion_modifier = { who = root modifier = opinion_bodily_autonomy  }
+            }
+        }
+        custom_tooltip = ori_ap_295_opinion_tt
+        ai_chance = {
+            factor = 1
+        }
+    }
+
+    option = {
+        name = ori_ap.295.b
+        owner = {
+            add_modifier = {
+                modifier = limited_autonomy
+                days = 1800
+            }
+        }
+        ai_chance = {
+            factor = 1
+        }
+    }
+
+    after = {
+        remove_situation_flag = situation_originium_pause
+    }
+}
+
+situation_event = {
+    id = ori_ap.300
+    title = "ori_ap.300.name"
+    desc = "ori_ap.300.desc"
+    picture = GFX_evt_originium_resonance_assimilation
+    show_sound = event_laboratory_sound
+    situation = this
+    is_triggered_only = yes
+
+    trigger = {
+        NOT = { has_situation_flag = originium_300_fire }
+        situation_progress >= 5
+        owner = {
+            any_owned_leader = {
+                is_ruler = no
+                is_heir = no
+                leader_class = scientist
+                NOR = {
+                    has_trait = leader_trait_spark_of_genius
+                    has_trait = leader_trait_spark_of_genius_2
+                }
+            }
+        }
+    }
+
+    immediate = {
+        set_situation_flag = situation_originium_pause
+        set_situation_flag = originium_300_fire
+        owner = {
+            random_owned_leader = {
+                limit = {
+                    is_ruler = no
+                    is_heir = no
+                    leader_class = scientist
+                    NOR = {
+                        has_trait = leader_trait_spark_of_genius
+                        has_trait = leader_trait_spark_of_genius_2
+                    }
+                }
+                save_event_target_as = genius_geneticist
+            }
+        }
+    }
+
+    option = {
+        name = ori_ap.300.a
+        event_target:genius_geneticist = {
+            add_trait = {
+                trait = leader_trait_spark_of_genius
+            }
+            add_experience = 250
+        }
+        ai_chance = {
+            factor = 1
+        }
+    }
+
+    option = {
+        name = ori_ap.300.b
+        trigger = {
+            owner = {
+                is_authoritarian = yes
+            }
+        }
+        owner = {
+            add_modifier = {
+                modifier = proactive_management
+                days = 1800
+            }
+            refresh_leader_pool = yes
+        }
+        event_target:genius_geneticist = {
+            kill_leader = {
+                show_notification = yes
+            }
+        }
+        ai_chance = {
+            factor = 1
+        }
+    }
+
+    option = {
+        name = ori_ap.300.c
+        trigger = {
+            owner = {
+                is_authoritarian = no
+            }
+        }
+        owner = {
+            add_modifier = {
+                modifier = proactive_management
+                days = 1800
+            }
+        }
+        ai_chance = {
+            factor = 1
+        }
+    }
+
+    after = {
+        remove_situation_flag = situation_originium_pause
+    }
+}
+
+
+### ADDITIONAL RANDOM EVENTS
+## HIVE
+# resonance
+
+situation_event = {
+    id = ori_ap.310
+    title = "ori_ap.310.name"
+    desc = "ori_ap.310.desc"
+    picture = GFX_evt_originium_resonance_resonance
+    show_sound = event_laboratory_sound
+    situation = this
+    is_triggered_only = yes
+
+    trigger = {
+        NOT = { has_situation_flag = originium_310_fire }
+        has_situation_flag = resonance_approach_selected
+        owner = {
+            any_owned_pop_group = {
+                is_same_species = prev.species
+                pop_group_size > 100
+            }
+        }
+    }
+
+    immediate = {
+        set_situation_flag = situation_originium_pause
+        set_situation_flag = originium_310_fire
+    }
+
+    option = {
+        name = ori_ap.310.a
+        owner = {
+            while = {
+                count = 1
+                weighted_random_owned_pop_group = {
+                    limit = {
+                        is_same_species = prev.species
+                        pop_group_size > 100
+                    }
+                    kill_single_pop = yes
+                }
+            }
+            add_modifier = {
+                modifier = biological_corrections
+                days = 1800
+            }
+        }
+        ai_chance = {
+            factor = 1
+        }
+    }
+
+    option = {
+        name = ori_ap.310.b
+        owner = {
+            if = {
+                limit = {
+                    is_wilderness_empire = yes
+                }
+                add_modifier = {
+                    modifier = cellular_degradation_wilderness
+                    days = 1800
+                }
+            }
+            else = {
+                add_modifier = {
+                    modifier = cellular_degradation
+                    days = 1800
+                }
+            }
+        }
+        ai_chance = {
+            factor = 1
+        }
+    }
+
+    after = {
+        remove_situation_flag = situation_originium_pause
+    }
+}
+
+situation_event = {
+    id = ori_ap.315
+    title = "ori_ap.315.name"
+    desc = "ori_ap.315.desc"
+    picture = GFX_evt_originium_resonance_resonance
+    show_sound = event_laboratory_sound
+    situation = this
+    is_triggered_only = yes
+
+    trigger = {
+        NOT = { has_situation_flag = originium_315_fire }
+        has_situation_flag = resonance_approach_selected
+    }
+
+    immediate = {
+        set_situation_flag = situation_originium_pause
+        set_situation_flag = originium_315_fire
+    }
+
+    option = {
+        name = ori_ap.315.a
+        owner = {
+            add_modifier = {
+                modifier = resilient_hive
+                days = -1
+            }
+        }
+        ai_chance = {
+            factor = 1
+        }
+    }
+
+    option = {
+        name = ori_ap.315.b
+        owner = {
+            add_modifier = {
+                modifier = cognizant_hive
+                days = -1
+            }
+        }
+        ai_chance = {
+            factor = 1
+        }
+    }
+
+    after = {
+        remove_situation_flag = situation_originium_pause
+    }
+}
+
+situation_event = {
+    id = ori_ap.325
+    title = "ori_ap.325.name"
+    desc = "ori_ap.325.desc"
+    desc = {
+        text = "ori_ap.325.desc.wilderness"
+        exclusive_trigger = {
+            target = {
+                is_wilderness_empire = yes
+            }
+        }
+    }
+    picture = GFX_evt_originium_resonance_resonance
+    show_sound = event_laboratory_sound
+    situation = this
+    is_triggered_only = yes
+
+    trigger = {
+        NOT = { has_situation_flag = originium_325_fire }
+        has_situation_flag = resonance_approach_selected
+    }
+
+    immediate = {
+        set_situation_flag = situation_originium_pause
+        set_situation_flag = originium_325_fire
+    }
+
+    option = {
+        name = ori_ap.325.a
+        owner = {
+            add_modifier = {
+                modifier = pristine_lineage
+                days = 1800
+            }
+        }
+        ai_chance = {
+            factor = 1
+        }
+    }
+
+    option = {
+        name = ori_ap.325.b
+        owner = {
+            if = {
+                limit ={
+
+                    is_wilderness_empire = yes
+                }
+                add_modifier = {
+                    modifier = breed_for_growth_wilderness
+                    days = 1800
+                }
+            }
+            else = {
+                add_modifier = {
+                    modifier = breed_for_growth
+                    days = 1800
+                }
+            }
+        }
+        ai_chance = {
+            factor = 1
+        }
+    }
+
+    after = {
+        remove_situation_flag = situation_originium_pause
+    }
+}
+
+situation_event = {
+    id = ori_ap.330
+    title = "ori_ap.330.name"
+    desc = "ori_ap.330.desc"
+    picture = GFX_evt_originium_resonance_resonance
+    show_sound = event_laboratory_sound
+    situation = this
+    is_triggered_only = yes
+
+    trigger = {
+        NOT = { has_situation_flag = originium_330_fire }
+        has_situation_flag = resonance_approach_selected
+    }
+
+    immediate = {
+        set_situation_flag = situation_originium_pause
+        set_situation_flag = originium_330_fire
+    }
+
+    option = {
+        name = ori_ap.330.a
+        owner = {
+            add_modifier = {
+                modifier = relentless_focus
+                days = 1800
+            }
+        }
+        ai_chance = {
+            factor = 1
+        }
+    }
+
+    option = {
+        name = ori_ap.330.b
+        owner = {
+            add_modifier = {
+                modifier = infrastructural_bolstering
+                days = 1800
+            }
+            random_owned_leader = {
+                limit = {
+                    is_councilor = yes
+                    leader_class = official
+                }
+                add_or_level_up_veteran_trait_effect = {
+                    TRAIT = trait_ruler_architectural_sense
+                }
+            }
+        }
+        ai_chance = {
+            factor = 1
+        }
+    }
+
+    after = {
+        remove_situation_flag = situation_originium_pause
+    }
+}
+
+situation_event = {
+    id = ori_ap.335
+    title = "ori_ap.335.name"
+    desc = "ori_ap.335.desc"
+    picture = GFX_evt_originium_resonance_resonance
+    show_sound = event_laboratory_sound
+    situation = this
+    is_triggered_only = yes
+
+    trigger = {
+        NOT = { has_situation_flag = originium_335_fire }
+        has_situation_flag = resonance_approach_selected
+    }
+
+    immediate = {
+        set_situation_flag = situation_originium_pause
+        set_situation_flag = originium_335_fire
+    }
+
+    option = {
+        name = ori_ap.335.a
+        owner = {
+            if = {
+                limit = {
+                    is_wilderness_empire = yes
+                }
+                add_modifier = {
+                    modifier = anomaly_purging_wilderness
+                    days = 1800
+                }
+            }
+            else ={
+                add_modifier = {
+                    modifier = anomaly_purging
+                    days = 1800
+                }
+            }
+        }
+        hidden_effect = {
+            every_country = {
+                limit = { values_others = yes }
+                add_opinion_modifier = { who = root modifier = opinion_population_purging }
+            }
+        }
+        custom_tooltip = ori_ap_335_opinion_tt
+        ai_chance = {
+            factor = 1
+        }
+        add_situation_progress = 50
+    }
+
+    option = {
+        name = ori_ap.335.b
+        owner = {
+            if = {
+                limit = {
+                    is_wilderness_empire = yes
+                }
+                add_modifier = {
+                    modifier = rigorous_examination_wilderness
+                    days = 1800
+                }
+            }
+            else = {
+                add_modifier = {
+                    modifier = rigorous_examination
+                    days = 1800
+                }
+            }
+        }
+        ai_chance = {
+            factor = 1
+        }
+    }
+
+    after = {
+        remove_situation_flag = situation_originium_pause
+    }
+}
+
+### ADDITIONAL RANDOM EVENTS
+## HIVE
+# CLONING
+
+situation_event = {
+    id = ori_ap.340
+    title = "ori_ap.340.name"
+    desc = "ori_ap.340.desc"
+    picture = GFX_evt_originium_resonance_crystallization
+    show_sound = event_laboratory_sound
+    situation = this
+    is_triggered_only = yes
+
+    trigger = {
+        NOT = { has_situation_flag = originium_340_fire }
+        has_situation_flag = crystallization_approach_selected
+    }
+
+    immediate = {
+        set_situation_flag = situation_originium_pause
+        set_situation_flag = originium_340_fire
+    }
+
+    option = {
+        name = ori_ap.340.a
+        owner = {
+            add_modifier = {
+                modifier = population_relocation
+                days = 1800
+            }
+        }
+        ai_chance = {
+            factor = 1
+        }
+    }
+
+    option = {
+        name = ori_ap.340.b
+        owner = {
+            add_modifier = {
+                modifier = factotum_reserves
+                days = 1800
+            }
+        }
+        ai_chance = {
+            factor = 1
+        }
+    }
+
+    after = {
+        remove_situation_flag = situation_originium_pause
+    }
+}
+
+situation_event = {
+    id = ori_ap.350
+    title = "ori_ap.350.name"
+    desc = "ori_ap.350.desc"
+    picture = GFX_evt_originium_resonance_crystallization
+    show_sound = event_laboratory_sound
+    situation = this
+    is_triggered_only = yes
+
+    trigger = {
+        NOT = { has_situation_flag = originium_350_fire }
+        has_situation_flag = crystallization_approach_selected
+    }
+
+    immediate = {
+        set_situation_flag = situation_originium_pause
+        set_situation_flag = originium_350_fire
+    }
+
+    option = {
+        name = ori_ap.350.a
+        custom_tooltip = ori_ap.350.a.tt
+        hidden_effect = {
+            owner.capital_scope = {
+                create_pop_group = {
+                    species = owner_main_species
+                    effect = {
+                        save_event_target_as = last_created_pop_group
+                    }
+                }
+                event_target:last_created_pop_group = {
+                    modify_species = {
+                        species = owner_main_species
+                        add_trait = trait_presapient_forcefully_devolved
+                        effect = {
+                            change_species_characteristics = {
+                                sapient = no
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        owner = {
+            add_modifier = {
+                modifier = simple_minds
+                days = 1800
+            }
+        }
+        ai_chance = {
+            factor = 1
+        }
+    }
+
+    option = {
+        name = ori_ap.350.b
+        owner = {
+            add_modifier = {
+                modifier = the_new_batch
+                days = 1800
+            }
+        }
+        ai_chance = {
+            factor = 1
+        }
+    }
+
+    after = {
+        remove_situation_flag = situation_originium_pause
+    }
+}
+
+situation_event = {
+    id = ori_ap.365
+    title = "ori_ap.365.name"
+    desc = "ori_ap.365.desc"
+    picture = GFX_evt_originium_resonance_crystallization
+    show_sound = event_laboratory_sound
+    situation = this
+    is_triggered_only = yes
+
+    trigger = {
+        NOT = { has_situation_flag = originium_365_fire }
+        has_situation_flag = crystallization_approach_selected
+    }
+
+    immediate = {
+        set_situation_flag = situation_originium_pause
+        set_situation_flag = originium_365_fire
+    }
+
+    option = {
+        name = ori_ap.365.a
+        owner = {
+            add_modifier = {
+                modifier = metaphysical_hive
+                days = 1800
+            }
+        }
+        ai_chance = {
+            factor = 1
+        }
+    }
+
+    option = {
+        name = ori_ap.365.b
+        owner = {
+            add_modifier = {
+                modifier = metaphysics_rejected
+                days = 1800
+            }
+        }
+        ai_chance = {
+            factor = 1
+        }
+    }
+
+    after = {
+        remove_situation_flag = situation_originium_pause
+    }
+}
+
+### ADDITIONAL RANDOM EVENTS
+## HIVE
+# MUTATION
+
+situation_event = {
+    id = ori_ap.375
+    title = "ori_ap.375.name"
+    desc = "ori_ap.375.desc"
+    picture = GFX_evt_originium_resonance_assimilation
+    show_sound = event_laboratory_sound
+    situation = this
+    is_triggered_only = yes
+
+    trigger = {
+        NOT = { has_situation_flag = originium_375_fire }
+        has_situation_flag = assimilation_approach_selected
+    }
+
+    immediate = {
+        set_situation_flag = situation_originium_pause
+        set_situation_flag = originium_375_fire
+    }
+
+    option = {
+        name = ori_ap.375.a
+        owner = {
+            add_modifier = {
+                modifier = boosted_neurology
+                days = 1800
+            }
+        }
+        ai_chance = {
+            factor = 1
+        }
+    }
+
+    option = {
+        name = ori_ap.375.b
+        owner = {
+            add_modifier = {
+                modifier = balanced_advancement
+                days = 1800
+            }
+            random_owned_leader = {
+                limit = {
+                    is_councilor = yes
+                    leader_class = official
+                }
+                if = {
+                    limit = {
+                        NOT = {
+                            has_trait = leader_trait_principled
+                        }
+                    }
+                    add_trait = {
+                        trait = leader_trait_principled
+                    }
+                }
+                else_if = {
+                    limit = {
+                        has_trait = leader_trait_principled
+                    }
+                    add_trait = {
+                        trait = leader_trait_principled_2
+                    }
+                }
+                else = {
+                    add_experience = 200
+                }
+            }
+        }
+        ai_chance = {
+            factor = 1
+        }
+    }
+
+    after = {
+        remove_situation_flag = situation_originium_pause
+    }
+}
+
+situation_event = {
+    id = ori_ap.380
+    title = "ori_ap.380.name"
+    desc = "ori_ap.380.desc"
+    picture = GFX_evt_originium_resonance_assimilation
+    show_sound = event_laboratory_sound
+    situation = this
+    is_triggered_only = yes
+
+    trigger = {
+        NOT = { has_situation_flag = originium_380_fire }
+        has_situation_flag = assimilation_approach_selected
+    }
+
+    immediate = {
+        set_situation_flag = situation_originium_pause
+        set_situation_flag = originium_380_fire
+    }
+
+    option = {
+        name = ori_ap.380.a
+        owner = {
+            add_modifier = {
+                modifier = decisive_meditation
+                days = 1800
+            }
+        }
+        ai_chance = {
+            factor = 1
+        }
+    }
+
+    option = {
+        name = ori_ap.380.b
+        owner = {
+            add_modifier = {
+                modifier = fury_embracing
+                days = 1800
+            }
+        }
+        ai_chance = {
+            factor = 1
+        }
+    }
+
+    after = {
+        remove_situation_flag = situation_originium_pause
+    }
+}
+
+situation_event = {
+    id = ori_ap.385
+    title = "ori_ap.385.name"
+    desc = "ori_ap.385.desc"
+    picture = GFX_evt_originium_resonance_assimilation
+    show_sound = event_laboratory_sound
+    situation = this
+    is_triggered_only = yes
+
+    trigger = {
+        NOT = { has_situation_flag = originium_385_fire }
+        has_situation_flag = assimilation_approach_selected
+    }
+
+    immediate = {
+        set_situation_flag = situation_originium_pause
+        set_situation_flag = originium_385_fire
+    }
+
+    option = {
+        name = ori_ap.385.a
+        owner = {
+            add_modifier = {
+                modifier = meteorological_adaptations
+                days = 1800
+            }
+        }
+        ai_chance = {
+            factor = 1
+        }
+    }
+
+    option = {
+        name = ori_ap.385.b
+        owner = {
+            add_modifier = {
+                modifier = uncomfortable_drones
+                days = 1800
+            }
+            give_next_terraforming_tech_option_effect = yes
+        }
+        ai_chance = {
+            factor = 1
+        }
+    }
+
+    after = {
+        remove_situation_flag = situation_originium_pause
+    }
+}
+
+situation_event = {
+    id = ori_ap.390
+    title = "ori_ap.390.name"
+    desc = "ori_ap.390.desc"
+    picture = GFX_evt_originium_resonance_assimilation
+    show_sound = event_laboratory_sound
+    situation = this
+    is_triggered_only = yes
+
+    trigger = {
+        NOT = { has_situation_flag = originium_390_fire }
+        has_situation_flag = assimilation_approach_selected
+    }
+
+    immediate = {
+        set_situation_flag = situation_originium_pause
+        set_situation_flag = originium_390_fire
+    }
+
+    option = {
+        name = ori_ap.390.a
+        owner = {
+            add_modifier = {
+                modifier = body_builders
+                days = 1800
+            }
+        }
+        ai_chance = {
+            factor = 1
+        }
+    }
+
+    option = {
+        name = ori_ap.390.b
+        owner = {
+            add_modifier = {
+                modifier = deep_thinkers
+                days = 1800
+            }
+        }
+        ai_chance = {
+            factor = 1
+        }
+    }
+
+    after = {
+        remove_situation_flag = situation_originium_pause
+    }
+}
+
+### ADDITIONAL RANDOM EVENTS
+## HIVE
+# THESE CAN HAPPEN FOR ANY PATH
+
+situation_event = {
+    id = ori_ap.405
+    title = "ori_ap.405.name"
+    desc = "ori_ap.405.desc"
+    picture = GFX_evt_originium_resonance_assimilation
+    show_sound = event_laboratory_sound
+    situation = this
+    is_triggered_only = yes
+
+    trigger = {
+        NOT = { has_situation_flag = originium_405_fire }
+    }
+
+    immediate = {
+        set_situation_flag = situation_originium_pause
+        set_situation_flag = originium_405_fire
+    }
+
+    option = {
+        name = ori_ap.405.a
+        owner = {
+            add_modifier = {
+                modifier = decisive_termination
+                days = 1800
+            }
+            weighted_random_owned_pop_group = {
+                limit = { is_same_species = prev.species }
+                kill_single_pop = yes
+            }
+        }
+        hidden_effect = {
+            every_country = {
+                limit = { values_others = yes }
+                add_opinion_modifier = { who = root modifier = opinion_population_purging }
+            }
+        }
+        custom_tooltip = ori_ap_335_opinion_tt
+        ai_chance = {
+            factor = 1
+        }
+    }
+
+    option = {
+        name = ori_ap.405.b
+        owner = {
+            if = {
+                limit = {
+                    is_wilderness_empire = yes
+                }
+                add_modifier = {
+                    modifier = survival_study_wilderness
+                    days = 1800
+                }
+            }
+            else = {
+                add_modifier = {
+                    modifier = survival_study
+                    days = 1800
+                }
+            }
+        }
+        ai_chance = {
+            factor = 1
+        }
+    }
+
+    after = {
+        remove_situation_flag = situation_originium_pause
+    }
+}
+
+situation_event = {
+    id = ori_ap.410
+    title = "ori_ap.410.name"
+    desc = "ori_ap.410.desc"
+    desc = {
+        text = "ori_ap.410.desc.wilderness"
+        exclusive_trigger = {
+            target = {
+                is_wilderness_empire = yes
+            }
+        }
+    }
+    picture = GFX_evt_originium_resonance_assimilation
+    show_sound = event_laboratory_sound
+    situation = this
+    is_triggered_only = yes
+
+    trigger = {
+        NOT = { has_situation_flag = originium_410_fire }
+    }
+
+    immediate = {
+        set_situation_flag = situation_originium_pause
+        set_situation_flag = originium_410_fire
+    }
+
+    option = {
+        name = ori_ap.410.a
+        owner = {
+            add_modifier = {
+                modifier = uncorrected_blunders
+                days = 720
+            }
+        }
+        ai_chance = {
+            factor = 1
+        }
+        add_situation_progress = 50
+    }
+
+    option = {
+        name = ori_ap.410.b
+        custom_tooltip = ori_ap.410.b.tt
+        hidden_effect = {
+            set_timed_situation_flag = {
+                flag = prophecy_stalled
+                months = 12
+            }
+        }
+        ai_chance = {
+            factor = 1
+        }
+    }
+
+    after = {
+        remove_situation_flag = situation_originium_pause
+    }
+}

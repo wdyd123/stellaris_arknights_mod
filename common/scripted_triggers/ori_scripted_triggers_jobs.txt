@@ -1,3 +1,19 @@
 job_has_originium_trait_trigger = {
     owner_species = { has_trait = trait_originium_based_unit}
 }
+
+healthcare_is_originium_researcher_trigger = {
+    OR = {
+        has_building = building_originium_facility
+        AND = {
+            exists = owner
+            owner = {
+                OR = {
+                    has_tradition = tr_crystallization_evolutionary_extrapolation
+                    has_tradition = tr_assimilation_finish
+                    has_tradition = tr_resonance_finish
+                }
+            }
+        }
+    }
+}

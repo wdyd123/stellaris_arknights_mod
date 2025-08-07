@@ -1,0 +1,494 @@
+defined_text = {
+    name = GetOriginiumStage1Effects
+    text = {
+        trigger = {
+            is_scope_valid = yes
+            has_country_flag = originium_resonance_stage_1_resonance
+            is_wilderness_empire = no
+        }
+        localization_key = originium_stage_one_resonance_tt
+    }
+    text = {
+        trigger = {
+            is_scope_valid = yes
+            has_country_flag = originium_resonance_stage_1_resonance
+            is_wilderness_empire = yes
+        }
+        localization_key = BLANK_STRING
+    }
+    text = {
+        trigger = {
+            is_scope_valid = yes
+            has_country_flag = originium_resonance_stage_1_crystallization
+        }
+        localization_key = originium_stage_one_crystallization_tt
+    }
+    text = {
+        trigger = {
+            is_scope_valid = yes
+            has_country_flag = originium_resonance_stage_1_assimilation
+        }
+        localization_key = originium_stage_one_assimilation_tt
+    }
+    default = originium_stage_1_default_tt
+}
+
+defined_text = {
+    name = GetOriginiumStage2Effects
+    text = {
+        trigger = {
+            is_scope_valid = yes
+            has_country_flag = originium_resonance_stage_2_resonance
+            is_wilderness_empire = no
+        }
+        localization_key = originium_stage_two_resonance_tt
+    }
+    text = {
+        trigger = {
+            is_scope_valid = yes
+            has_country_flag = originium_resonance_stage_1_resonance
+            is_wilderness_empire = yes
+        }
+        localization_key = BLANK_STRING
+    }
+    text = {
+        trigger = {
+            is_scope_valid = yes
+            has_country_flag = originium_resonance_stage_2_crystallization
+        }
+        localization_key = originium_stage_two_crystallization_tt
+    }
+    text = {
+        trigger = {
+            is_scope_valid = yes
+            has_country_flag = originium_resonance_stage_2_assimilation
+        }
+        localization_key = originium_stage_two_assimilation_tt
+    }
+    default = originium_stage_2_default_tt
+}
+
+defined_text = {
+    name = GetOriginiumStage3Effects
+    text = {
+        trigger = {
+            is_scope_valid = yes
+            has_country_flag = originium_resonance_stage_3_resonance
+            is_wilderness_empire = no
+        }
+        localization_key = originium_stage_three_resonance_tt
+    }
+    text = {
+        trigger = {
+            is_scope_valid = yes
+            has_country_flag = originium_resonance_stage_1_resonance
+            is_wilderness_empire = yes
+        }
+        localization_key = BLANK_STRING
+    }
+    text = {
+        trigger = {
+            is_scope_valid = yes
+            has_country_flag = originium_resonance_stage_3_crystallization
+        }
+        localization_key = originium_stage_three_crystallization_tt
+    }
+    text = {
+        trigger = {
+            is_scope_valid = yes
+            has_country_flag = originium_resonance_stage_3_assimilation
+        }
+        localization_key = originium_stage_three_assimilation_tt
+    }
+    default = originium_stage_3_default_tt
+}
+
+defined_text = {
+    name = GetGenomicSwap
+    text = {
+        trigger = {
+            is_scope_valid = yes
+            is_regular_empire = yes
+        }
+        localization_key = healthcare_is_genomic_researcher_tt
+    }
+    text = {
+        trigger = {
+            is_scope_valid = yes
+            is_hive_empire = yes
+        }
+        localization_key = spawning_is_genomic_researcher_tt
+    }
+    default = healthcare_is_genomic_researcher_tt
+}
+
+defined_text = {
+    name = GetGenomicJobWithIcon
+    text = {
+        trigger = {
+            is_scope_valid = yes
+            is_regular_empire = yes
+        }
+        localization_key = job_genomic_researcher_with_icon
+    }
+    text = {
+        trigger = {
+            is_scope_valid = yes
+            is_hive_empire = yes
+        }
+        localization_key = job_genomic_drone_with_icon
+    }
+    default = job_genomic_researcher_with_icon
+}
+
+defined_text = {
+    name = GetGenomicJobsPluralWithIcon
+    text = {
+        trigger = {
+            is_scope_valid = yes
+            is_regular_empire = yes
+        }
+        localization_key = job_genomic_researcher_plural_with_icon
+    }
+    text = {
+        trigger = {
+            is_scope_valid = yes
+            is_hive_empire = yes
+        }
+        localization_key = job_genomic_drone_plural_with_icon
+    }
+    default = job_genomic_researcher_plural_with_icon
+}
+
+defined_text = {
+    name = GetHasBackupCloneDesc
+    text = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_crystallization_authority = yes
+                has_crystallization_biochemical_composure_tradition = yes
+            }
+        }
+        localization_key = leader_trait_has_backup_clone_improved_desc
+    }
+    default = leader_trait_has_backup_clone_default_desc
+}
+
+defined_text = {
+    name = GetBackupCloneName
+    text = {
+        trigger = {
+            is_ruler = yes
+            exists = owner
+            owner = {
+                is_crystallization_authority = yes
+                is_imperial_authority = yes
+            }
+        }
+        localization_key = leader_trait_backup_clone_imperial
+    }
+    default = leader_trait_backup_clone_default
+}
+
+defined_text = {
+    name = GetBackupCloneNamePlural
+    text = {
+        trigger = {
+            is_ruler = yes
+            exists = owner
+            owner = {
+                is_crystallization_authority = yes
+                is_imperial_authority = yes
+            }
+        }
+        localization_key = leader_trait_backup_clone_imperial_plural
+    }
+    default = leader_trait_backup_clone_default_plural
+}
+
+defined_text = {
+    name = GetBackupCloneDesc
+    text = {
+        trigger = {
+            is_ruler = yes
+            exists = owner
+            owner = {
+                is_crystallization_authority = yes
+                is_imperial_authority = yes
+            }
+        }
+        localization_key = leader_trait_backup_clone_imperial_desc
+    }
+    default = leader_trait_backup_clone_default_desc
+}
+
+defined_text = {
+    name = GetAAnBackupCloneLower
+    text = {
+        trigger = {
+            is_ruler = yes
+            exists = owner
+            owner = {
+                is_crystallization_authority = yes
+                is_imperial_authority = yes
+            }
+        }
+        localization_key = string_an
+    }
+    default = string_a
+}
+
+defined_text = {
+    name = GetDegradationLevel
+    text = {
+        trigger = {
+            has_trait = leader_trait_backup_clone
+            leader_has_reduced_clone_degradation = yes
+        }
+        localization_key = backup_clone_0_degradation
+    }
+    text = {
+        trigger = {
+            OR = {
+                AND = {
+                    has_trait = leader_trait_backup_clone
+                    leader_has_reduced_clone_degradation = no
+                }
+                AND = {
+                    has_trait = leader_trait_backup_clone_2
+                    leader_has_reduced_clone_degradation = yes
+                }
+            }
+        }
+        localization_key = backup_clone_1_degradation
+    }
+    text = {
+        trigger = {
+            OR = {
+                AND = {
+                    has_trait = leader_trait_backup_clone_2
+                    leader_has_reduced_clone_degradation = no
+                }
+                AND = {
+                    has_trait = leader_trait_backup_clone_3
+                    leader_has_reduced_clone_degradation = yes
+                }
+            }
+        }
+        localization_key = backup_clone_2_degradation
+    }
+    text = {
+        trigger = {
+            has_trait = leader_trait_backup_clone_3
+            leader_has_reduced_clone_degradation = no
+        }
+        localization_key = backup_clone_3_degradation
+    }
+    default = backup_clone_1_degradation
+}
+
+defined_text = {
+    name = GetLeaderSurvivedReason
+    text = {
+        trigger = {
+            leader_backup_clone_can_activate = yes
+        }
+        localization_key = LEADER_SURVIVED_REASON_CLONE
+    }
+    default = LEADER_SURVIVED_REASON_DEFAULT
+}
+
+defined_text = {
+    name = GetLeaderShipSurvivedReason
+    text = {
+        trigger = {
+            leader_backup_clone_can_activate = yes
+        }
+        localization_key = LEADER_SURVIVED_REASON_CLONE
+    }
+    default = LEADER_SURVIVED_REASON_SHIP_DEFAULT
+}
+
+defined_text = {
+    name = GetEnvironmentalIntegrationEffects
+    text = {
+        trigger = {
+            has_tradition = tr_assimilation_adopt
+        }
+        localization_key = tr_assimilation_environmental_integration_2_tt
+    }
+    default = tr_assimilation_environmental_integration_1_tt
+}
+
+defined_text = {
+    name = GetResonanceAuthority
+    text = {
+        trigger = {
+            is_scope_valid = yes
+            is_democratic_authority = yes
+        }
+        localization_key = "['authority:auth_democratic:auth_ori_ap_democratic_resonance']"
+    }
+    text = {
+        trigger = {
+            is_scope_valid = yes
+            is_oligarchic_authority = yes
+        }
+        localization_key = "['authority:auth_oligarchic:auth_ori_ap_oligarchic_resonance']"
+    }
+    text = {
+        trigger = {
+            is_scope_valid = yes
+            is_dictatorial_authority = yes
+        }
+        localization_key = "['authority:auth_dictatorial:auth_ori_ap_dictatorial_resonance']"
+    }
+    text = {
+        trigger = {
+            is_scope_valid = yes
+            is_imperial_authority = yes
+        }
+        localization_key = "['authority:auth_imperial:auth_ori_ap_imperial_resonance']"
+    }
+    text = {
+        trigger = {
+            is_scope_valid = yes
+            is_megacorp = yes
+        }
+        localization_key = "['authority:auth_corporate:auth_ori_ap_corporate_resonance']"
+    }
+    text = {
+        trigger = {
+            is_scope_valid = yes
+            is_hive_empire = yes
+        }
+        localization_key = "['authority:auth_hive_mind:auth_ori_ap_hive_resonance']"
+    }
+    default = "['authority:auth_democratic:auth_ori_ap_democratic_resonance']"
+}
+
+defined_text= {
+    name = GetBiochemicalComposureSwapTT
+    text = {
+        trigger = {
+            OR = {
+                is_crystallization_authority = yes
+                has_tradition = tr_resonance_adopt
+                has_tradition = tr_assimilation_adopt
+            }
+        }
+        localization_key = BLANK_STRING
+    }
+    default = tr_crystallization_biochemical_composure_swap_tt
+}
+
+defined_text = {
+    name = GetCrystallizationAuthority
+    text = {
+        trigger = {
+            is_scope_valid = yes
+            is_democratic_authority = yes
+        }
+        localization_key = "['authority:auth_democratic:auth_ori_ap_democratic_crystallization']"
+    }
+    text = {
+        trigger = {
+            is_scope_valid = yes
+            is_oligarchic_authority = yes
+        }
+        localization_key = "['authority:auth_oligarchic:auth_ori_ap_oligarchic_crystallization']"
+    }
+    text = {
+        trigger = {
+            is_scope_valid = yes
+            is_dictatorial_authority = yes
+        }
+        localization_key = "['authority:auth_dictatorial:auth_ori_ap_dictatorial_crystallization']"
+    }
+    text = {
+        trigger = {
+            is_scope_valid = yes
+            is_imperial_authority = yes
+        }
+        localization_key = "['authority:auth_imperial:auth_ori_ap_imperial_crystallization']"
+    }
+    text = {
+        trigger = {
+            is_scope_valid = yes
+            is_megacorp = yes
+        }
+        localization_key = "['authority:auth_corporate:auth_ori_ap_corporate_crystallization']"
+    }
+    text = {
+        trigger = {
+            is_scope_valid = yes
+            is_hive_empire = yes
+        }
+        localization_key = "['authority:auth_hive_mind:auth_ori_ap_hive_crystallization']"
+    }
+    default = "['authority:auth_democratic:auth_ori_ap_democratic_crystallization']"
+}
+
+defined_text = {
+    name = GetAssimilationAuthority
+    text = {
+        trigger = {
+            is_scope_valid = yes
+            is_democratic_authority = yes
+            # NOT = { has_origin = origin_evolutionary_predators }
+        }
+        localization_key = "['authority:auth_democratic:auth_ori_ap_democratic_assimilation']"
+    }
+    text = {
+        trigger = {
+            is_scope_valid = yes
+            is_oligarchic_authority = yes
+            # NOT = { has_origin = origin_evolutionary_predators }
+        }
+        localization_key = "['authority:auth_oligarchic:auth_ori_ap_oligarchic_assimilation']"
+    }
+    text = {
+        trigger = {
+            is_scope_valid = yes
+            is_dictatorial_authority = yes
+            # NOT = { has_origin = origin_evolutionary_predators }
+        }
+        localization_key = "['authority:auth_dictatorial:auth_ori_ap_dictatorial_assimilation']"
+    }
+    text = {
+        trigger = {
+            is_scope_valid = yes
+            is_imperial_authority = yes
+            # NOT = { has_origin = origin_evolutionary_predators }
+        }
+        localization_key = "['authority:auth_imperial:auth_ori_ap_imperial_assimilation']"
+    }
+    text = {
+        trigger = {
+            is_scope_valid = yes
+            is_megacorp = yes
+            # NOT = { has_origin = origin_evolutionary_predators }
+        }
+        localization_key = "['authority:auth_corporate:auth_ori_ap_corporate_assimilation']"
+    }
+    text = {
+        trigger = {
+            is_scope_valid = yes
+            is_hive_empire = yes
+            # NOT = { has_origin = origin_evolutionary_predators }
+        }
+        localization_key = "['authority:auth_hive_mind:auth_ori_ap_hive_assimilation']"
+    }
+    default = "['authority:auth_democratic:auth_ori_ap_democratic_assimilation']"
+}
+
+define_text = {
+    name = GetAssimilationAuthorities
+    text = {
+        trigger = {
+            # NOT = { has_origin = origin_evolutionary_predators }
+        }
+        localization_key = "['concept_assimilation_authorities']"
+    }
+}

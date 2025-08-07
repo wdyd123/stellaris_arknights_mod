@@ -1,0 +1,86 @@
+concept_prophecy = {
+
+}
+# Resonance
+
+concept_originium_resonated = {
+
+}
+
+concept_resonance_authorities = {
+
+}
+
+concept_resonance_optimized_neurology = {
+    icon = "gfx/interface/icons/traditions/tradition_purity_optimized_neurology.dds"
+    tooltip_override = "tradition:tr_purity_optimized_neurology"
+}
+
+concept_resonance_heightened_attributes = {
+    icon = "gfx/interface/icons/traditions/tradition_purity_heightened_attributes.dds"
+    tooltip_override = "tradition:tr_purity_heightened_attributes"
+}
+
+concept_resonance_imperfection_remediation = {
+    icon = "gfx/interface/icons/traditions/tradition_purity_imperfection_remediation.dds"
+    tooltip_override = "tradition:tr_purity_imperfection_remediation"
+}
+
+# Cloning
+
+concept_crystallization_authorities = {
+
+}
+
+concept_backup_clones = {
+
+}
+
+concept_clone_leader_degradation = {
+
+}
+
+concept_crystallization_genomic_growth = {
+    icon = "gfx/interface/icons/traditions/tradition_cloning_genomic_growth.dds"
+    tooltip_override = "tradition:tr_cloning_genomic_growth"
+}
+
+concept_crystallization_artificial_population = {
+    icon = "gfx/interface/icons/traditions/tradition_cloning_artificial_population.dds"
+    tooltip_override = "tradition:tr_cloning_artificial_population"
+}
+
+concept_crystallization_biochemical_composure = {
+    icon = "gfx/interface/icons/traditions/tradition_cloning_biochemical_composure.dds"
+    tooltip_override = "tradition:tr_cloning_biochemical_composure"
+}
+
+concept_crystallization_biochemical_composure_clones = {
+    icon = "gfx/interface/icons/traditions/tradition_cloning_biochemical_composure.dds"
+    tooltip_override = "tradition:tr_cloning_biochemical_composure_clones"
+}
+
+# Mutation
+
+concept_assimilation_authorities = {
+
+}
+
+concept_assimilation_authorities_evopred = {
+
+}
+
+concept_assimilation_environmental_integration = {
+    icon = "gfx/interface/icons/traditions/tradition_mutation_environmental_integration.dds"
+    tooltip_override = "tradition:tr_mutation_environmental_integration"
+}
+
+concept_assimilation_somatic_subversiveness = {
+    icon = "gfx/interface/icons/traditions/tradition_mutation_somatic_subversiveness.dds"
+    tooltip_override = "tradition:tr_mutation_somatic_subversiveness"
+}
+
+concept_assimilation_nucleotide_isolation = {
+    icon = "gfx/interface/icons/traditions/tradition_mutation_nucleotide_isolation.dds"
+    tooltip_override = "tradition:tr_mutation_nucleotide_isolation"
+}

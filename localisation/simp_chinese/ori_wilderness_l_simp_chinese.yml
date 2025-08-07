@@ -1,0 +1,17 @@
+﻿l_simp_chinese:
+ ####################################
+ # Ascension Perks
+ ####################################
+ ap_originium_resonance_wilderness: "$ap_originium_resonance$"
+ ap_originium_resonance_wilderness_desc: "我们的意识与源石浑然一体。时机已然到来，我们将更进一步。"
+ originium_resonance_wilderness_tt: "—开启§Y$originium_resonance_situation$局势§!，这将解锁['tradition_category:tradition_resonance']传统树。\n—$UNLOCKS_AGENDA$§Y$council_agenda_agenda_engineered_evolution_name$§!，这将解锁基因修饰科技作为可用研究选项\n—$REQUIRES_TRADITION_SLOT$"
+
+ ####################################
+ # Agendas
+ ####################################
+ council_agenda_agenda_resonance_perfection_wilderness_name: "$council_agenda_agenda_resonance_perfection_name$"
+ council_agenda_agenda_resonance_perfection_wilderness_desc: "我们应该以最高的精确度指挥这场源石的的共鸣交响乐。"
+ agenda_resonance_perfection_wilderness_finish: "$council_agenda_agenda_resonance_perfection_wilderness_name$"
+ agenda_resonance_perfection_wilderness_finish_desc: "$council_agenda_agenda_resonance_perfection_wilderness_desc$"
+ council_agenda_agenda_superior_colonies_wilderness_name: "优选嫩芽"
+ council_agenda_agenda_superior_colonies_wilderness_desc: "$council_agenda_agenda_superior_colonies_desc$"

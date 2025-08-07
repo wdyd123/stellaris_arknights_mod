@@ -1,0 +1,1 @@
+custom_tooltip_with_modifiers = trait_originium_infection_suppressant_upkeep_add_tt

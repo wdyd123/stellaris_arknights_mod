@@ -1,0 +1,10 @@
+triggered_country_modifier = {
+    potential = {
+        healthcare_is_originium_researcher_trigger = yes
+        exists = owner
+        owner = {
+            has_completed_originium_situation = no
+        }
+    }
+    prophecy_progress_mult = 0.0125
+}

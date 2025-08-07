@@ -1,0 +1,463 @@
+building_originium_facility = {
+    base_buildtime = 500
+    category = amenity
+    planet_limit = 1
+
+    building_sets = {
+        government
+        research
+        society
+    }
+
+    potential = {
+        owner = {
+            has_country_flag = originium_research_facility_unlocked
+            is_wilderness_empire = no
+        }
+    }
+
+    destroy_trigger = {
+        exists = owner
+        owner = {
+            NOT = {
+                has_country_flag = originium_research_facility_unlocked
+            }
+        }
+    }
+
+    resources = {
+        category = planet_buildings
+        cost = {
+            minerals = @b3_minerals
+        }
+        upkeep = {
+            energy = @b3_upkeep
+        }
+    }
+
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = { is_regular_empire = yes }
+        }
+        job_healthcare_add = @building_static_jobs
+    }
+
+    inline_script = {
+        script = jobs/spawning_drone_add
+        AMOUNT = @building_static_jobs
+    }
+
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                has_technology = tech_gene_tailoring
+            }
+            any_owned_pop_group = {
+                has_auto_modding_trait = yes
+            }
+        }
+        auto_mod_monthly_add = 200
+    }
+
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                game_start_auto_mod_empire = yes
+            }
+            any_owned_pop_group = {
+                has_auto_modding_trait = yes
+            }
+        }
+        auto_mod_monthly_add = 200
+    }
+
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                has_country_flag = mutation_unlock_level_1
+            }
+        }
+        pop_environment_tolerance = @originium_mutation_habitability
+    }
+
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                has_country_flag = mutation_unlock_level_2
+            }
+        }
+        auto_mod_monthly_add = @originium_mutation_auto_mod
+    }
+
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                has_country_flag = clone_army_full_potential
+                has_originium_stage_1_tradition = yes
+            }
+        }
+        clone_soldiers_sustained = @clones_sustained_basic
+    }
+
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                OR = {
+                    has_purity_heightened_attributes_tradition = yes
+                    has_crystallization_artificial_population_tradition = yes
+                    has_mutation_somatic_subversiveness_tradition = yes
+                }
+            }
+        }
+        organic_pop_bonus_workforce_mult = @originium_workforce_mult
+    }
+
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+            }
+        }
+        text = healthcare_is_genomic_researcher_tt
+    }
+
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_gestalt = yes
+            }
+        }
+        text = spawning_is_genomic_researcher_tt
+    }
+
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+                has_completed_originium_situation = yes
+            }
+        }
+        text = job_genomic_researcher_effect_desc
+    }
+
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+                has_completed_originium_situation = no
+            }
+        }
+        text = job_genomic_researcher_situation_effect_desc
+    }
+
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_gestalt = yes
+                has_completed_originium_situation = yes
+            }
+        }
+        text = job_genomic_drone_effect_desc
+    }
+
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_gestalt = yes
+                has_completed_originium_situation = no
+            }
+        }
+        text = job_genomic_drone_situation_effect_desc
+    }
+
+    is_essential = yes
+}
+
+
+building_crystallize_vats = {
+    base_buildtime = @b1_time
+
+    category = pop_assembly
+
+    planet_limit = {
+        base = 1
+        modifier = {
+            exists = owner
+            owner = {
+                has_tradition = tr_crystallization_finish
+            }
+            has_upgraded_capital = yes
+            add = 1
+        }
+        modifier = {
+            exists = owner
+            owner = {
+                has_tradition = tr_crystallization_finish
+            }
+            has_major_upgraded_capital = yes
+            add = 1
+        }
+        modifier = {
+            exists = owner
+            owner = {
+                has_tradition = tr_crystallization_finish
+            }
+            has_fully_upgraded_capital = yes
+            add = 1
+        }
+    }
+
+    building_sets = {
+        government
+        urban
+    }
+
+    potential = {
+        exists = owner
+        NOT = { has_modifier = resort_colony }
+        OR = {
+            owner = { is_ai = no }
+            NOT = { exists = assembling_species }
+            assembling_species = { is_organic_species = yes }
+        }
+        OR = {
+            owner = { is_ai = no }
+            NAND = {
+                free_district_slots = 0
+                free_building_slots <= 1
+                free_housing <= 0
+                free_jobs <= 0
+            }
+        }
+    }
+
+    destroy_trigger = {
+        exists = owner
+        OR = {
+            AND = {
+                owner = { is_ai = yes }
+                free_district_slots = 0
+                free_building_slots = 0
+                free_housing <= 0
+                free_jobs <= 0
+            }
+        }
+    }
+
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                has_technology = tech_gene_tailoring
+            }
+            any_owned_pop_group = {
+                has_auto_modding_trait = yes
+            }
+        }
+        modifier = {
+            auto_mod_monthly_add = 200
+        }
+    }
+
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                game_start_auto_mod_empire = yes
+            }
+            any_owned_pop_group = {
+                has_auto_modding_trait = yes
+            }
+        }
+        modifier = {
+            auto_mod_monthly_add = 200
+        }
+    }
+
+    triggered_planet_pop_group_modifier_for_all = {
+        potential = {
+            owner = {
+                has_crystallization_tradition = no
+            }
+        }
+        bonus_pop_growth = 1.5
+    }
+
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                has_crystallization_tradition = no
+            }
+        }
+        fake_pop_growth_mod = 1.5
+    }
+
+    triggered_planet_pop_group_modifier_for_all = {
+        potential = {
+            owner = {
+                has_crystallization_tradition = yes
+            }
+        }
+        bonus_pop_growth = 3
+    }
+
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                has_crystallization_tradition = yes
+            }
+        }
+        fake_pop_growth_mod = 3
+    }
+
+    triggered_planet_pop_group_modifier_for_all = {
+        potential = {
+            owner = {
+                has_crystallization_tradition = yes
+            }
+        }
+        bonus_pop_growth = 4.5
+    }
+
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                has_crystallization_tradition = yes
+            }
+        }
+        fake_pop_growth_mod = 4.5
+    }
+
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                has_country_flag = clone_army_full_potential
+                has_active_tradition = tr_crystallization_adopt_clone_army
+            }
+        }
+        clone_soldiers_sustained = @clones_sustained_low
+    }
+
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                has_country_flag = clone_army_full_potential
+                has_active_tradition = tr_crystallization_finish_clone_army
+            }
+        }
+        clone_soldiers_sustained = @clones_sustained_low
+    }
+
+    resources = {
+        category = planet_buildings_clone_vats
+
+        # Base cost
+        cost = {
+            minerals = 500
+            originium = 100
+        }
+        # Org/Lith cost
+        cost = {
+            trigger = {
+                exists = owner
+                owner = { is_lithoid_empire = no }
+            }
+            food = 500
+        }
+        cost = {
+            trigger = {
+                exists = owner
+                owner = { is_lithoid_empire = yes }
+            }
+            energy = 500
+        }
+
+        # Base upkeep
+        upkeep = {
+            energy = 2
+        }
+        # Org/Lith upkeep
+        upkeep = {
+            trigger = {
+                exists = owner
+                owner = {
+                    is_lithoid_empire = no
+                }
+            }
+            food = 15
+        }
+        upkeep = {
+            trigger = {
+                exists = owner
+                owner = {
+                    is_lithoid_empire = no
+                    has_crystallization_tradition = yes
+                }
+            }
+            food = 15
+        }
+        upkeep = {
+            trigger = {
+                exists = owner
+                owner = {
+                    is_lithoid_empire = no
+                    has_crystallization_tradition = yes
+                }
+            }
+            food = 15
+        }
+        upkeep = {
+            trigger = {
+                exists = owner
+                owner = {
+                    is_lithoid_empire = yes
+                }
+            }
+            minerals = 15
+        }
+        upkeep = {
+            trigger = {
+                exists = owner
+                owner = {
+                    is_lithoid_empire = yes
+                    has_crystallization_tradition = yes
+                }
+            }
+            minerals = 15
+        }
+    }
+
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_crystallization_authority = yes
+                is_megacorp = yes
+            }
+        }
+        planet_jobs_trade_produces_mult = @replicatory_association_trade_mult
+        planet_amenities_add = @replicatory_association_amenities_add
+    }
+
+    prerequisites = {
+        tech_crystallization
+    }
+}

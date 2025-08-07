@@ -1,0 +1,34 @@
+triggered_pop_group_modifier = {
+    potential = {
+        exists = owner
+        owner = {
+            OR = {
+                AND = {
+                    is_resonance_authority = yes
+                    is_oligarchic_authority = yes
+                }
+                has_modifier = ori_augment_appreciation
+            }
+        }
+        species = {
+            is_variable_set = species_traits_resonance_count
+        }
+    }
+    key = concept_originium_resonated
+    pop_bonus_workforce_mult = @resonance_traits_bonus_workforce_mult
+    mult = species.species_traits_resonance_count
+}
+
+
+triggered_pop_group_modifier = {
+    potential = {
+        exists = owner
+        owner = {
+            is_resonance_authority = yes
+            is_democratic_authority = yes
+        }
+    }
+    key = concept_originium_resonated
+    pop_happiness = @resonance_traits_happiness
+    mult = species.species_traits_resonance_count
+}

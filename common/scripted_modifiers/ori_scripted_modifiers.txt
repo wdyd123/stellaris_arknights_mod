@@ -1,0 +1,7 @@
+prophecy_progress_mult = {
+    icon = mod_job_genomic_researcher_add
+    good = yes
+    percentage = yes
+    category = planet
+}
+

@@ -1,0 +1,78 @@
+custom_tooltip = tr_originium_stage_1_swap_tt
+
+# Resonance Swap
+tradition_swap = {
+	name = tr_originium_stage_1_resonance_swap
+	inherit_name = no
+	inherit_icon = no
+	trigger = {
+		OR = {
+			has_country_flag = genetic_ascension_stage_1_resonance
+			is_wilderness_empire = yes
+		}
+	}
+
+	inline_script = {
+		script = traditions/tr_resonance_optimized_neurology
+	}
+	weight = {
+		factor = 1
+	}
+}
+
+# Crystallization Swap
+tradition_swap = {
+	name = tr_originium_stage_1_crystallization_swap
+	inherit_name = no
+	inherit_icon = no
+	trigger = {
+		has_country_flag = genetic_ascension_stage_1_crystallization
+		NOT = {
+			has_country_flag = clone_army_full_potential
+		}
+	}
+
+	inline_script = {
+		script = traditions/tr_crystallization_genomic_growth
+	}
+	weight = {
+		factor = 1
+	}
+}
+
+# Clone Army Swap
+tradition_swap = {
+	name = tr_crystallization_genomic_growth_clone_army
+	inherit_name = no
+	inherit_icon = no
+	trigger = {
+		has_country_flag = clone_army_full_potential
+	}
+
+	custom_tooltip_with_modifiers = tr_crystallization_genomic_growth_clone_army_tt
+
+	modifier = {
+
+	}
+	weight = {
+		factor = 1
+	}
+}
+
+# Assimilation Swap
+tradition_swap = {
+	name = tr_originium_stage_1_assimilation_swap
+	inherit_name = no
+	inherit_icon = no
+	trigger = {
+		has_country_flag = genetic_ascension_stage_1_assimilation
+	}
+
+	inline_script = {
+		script = traditions/tr_assimilation_environmental_integration
+	}
+	weight = {
+		factor = 1
+	}
+}
+

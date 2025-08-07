@@ -1,0 +1,52 @@
+spriteTypes = {
+    spriteType = {
+        name = "GFX_evt_originium_resonance"
+        texturefile = "gfx/event_pictures/originium_resonance.dds"
+        masking_texture = "gfx/interface/situation_log/event_mask.dds"
+        alwaystransparent = yes
+    }
+
+    spriteType = {
+        name = "GFX_evt_originium_resonance_nomask"
+        texturefile = "gfx/event_pictures/originium_resonance.dds"
+        alwaystransparent = yes
+    }
+
+    spriteType = {
+        name = "GFX_evt_originium_resonance_zoom_1"
+        parent = "GFX_evt_originium_resonance_nomask"
+        upper_left = { x = 0 y = 0 }
+        lower_right = { x = 450 y = 150 }
+    }
+    spriteType = {
+        parent = "GFX_evt_originium_resonance_nomask"
+        name = "GFX_evt_originium_resonance_zoom_2"
+        upper_left = { x = 116 y = 11 }
+        lower_right = { x = 226 y = 77 }
+    }
+
+    spriteType = {
+        name = "GFX_evt_originium_resonance_resonance"
+        texturefile = "gfx/event_pictures/originium_resonance_resonance.dds"
+        masking_texture = "gfx/interface/situation_log/event_mask.dds"
+        alwaystransparent = yes
+    }
+
+    spriteType = {
+        name = "GFX_evt_originium_resonance_crystallization"
+        texturefile = "gfx/event_pictures/originium_resonance_crystallization.dds"
+        masking_texture = "gfx/interface/situation_log/event_mask.dds"
+        alwaystransparent = yes
+    }
+
+    spriteType = {
+        name = "GFX_evt_originium_resonance_assimilation"
+        texturefile = "gfx/event_pictures/originium_resonance_assimilation.dds"
+        masking_texture = "gfx/interface/situation_log/event_mask.dds"
+        alwaystransparent = yes
+    }
+
+
+
+
+}

@@ -1,0 +1,42 @@
+# tradition_originium = {
+#     tree_template = "tree_11_12"
+#     adoption_bonus = "tr_modularity_adopt"
+#     finish_bonus = "tr_modularity_finish"
+#
+#     potential = {
+#         AND = {
+#             owner_main_species = { is_species_class = TERRA }
+#             owner_main_species = { has_trait = trait_originium_based_unit }
+#         }
+#         NOR = {
+#             has_tradition = tr_nanotech_adopt
+#             has_tradition = tr_virtuality_adopt
+#             has_tradition = tr_modularity_adopt
+#             has_ascension_perk = ap_organo_machine_interfacing_assimilator
+#             has_cybernetic_ascension = yes
+#             has_originium_resonance = yes
+#             has_synthetic_ascension = yes
+#             is_natural_design_empire = yes
+#             is_individual_machine = yes
+#             has_genetic_ascension = yes
+#             has_psionic_ascension = yes
+#             has_resonance_ascension = yes
+#             has_crystallization_ascension = yes
+#             has_assimilation_ascension = yes
+#
+#
+#         }
+#     }
+#
+#     traditions = {
+#         "tr_modularity_1"
+#         "tr_modularity_2"
+#         "tr_modularity_3"
+#         "tr_modularity_4"
+#         "tr_modularity_5"
+#     }
+#
+#     ai_weight = {
+#         factor = 1000
+#     }
+# }

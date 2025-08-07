@@ -1,0 +1,8 @@
+﻿l_simp_chinese:
+ development.521.name: "建造源石研究所"
+ development.521.desc: ""
+ development.521.hint: "在你的一颗行星上任意可用['concept_building']槽上建造§H源石研究所§!建筑。"
+ development.521.lore: "§L“如果源石不让修改，那它生得这么好改是作甚？”§!"
+ development.521.req: "建成源石研究所"
+ development.521.fail: "£trigger_no£$development.521.req$"
+ development.521.success: "£trigger_yes£$development.521.req$"

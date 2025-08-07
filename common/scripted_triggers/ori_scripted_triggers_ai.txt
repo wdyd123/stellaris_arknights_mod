@@ -54,3 +54,16 @@ country_uses_originium = {
         }
     }
 }
+
+
+has_auto_modding_trait = {
+    OR = {
+        has_trait = trait_auto_mod_biological
+        has_trait = trait_auto_mod_cyborg
+        has_trait = trait_auto_mod_robotic
+        has_trait = trait_auto_mod_overtuned
+        has_trait = trait_malleable_genes
+        has_trait = trait_adaptive_mutations
+        has_trait = trait_auto_mod_originium_II
+    }
+}

@@ -1,7 +1,7 @@
 auto_trait_prio = {
 	#Amenities
+	trait_charismatic_originium_II
 	trait_charismatic_originium
-
 	trait_charismatic
 	trait_crafted_smiles
 	trait_robot_emotion_emulators

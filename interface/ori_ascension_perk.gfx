@@ -1,0 +1,7 @@
+spriteTypes = {
+    spriteType = {
+        name = "GFX_ap_originium_resonance"
+        texturefile = "gfx/interface/icons/ascension_perks/ap_originium_resonance.dds"
+        alwaystransparent = yes
+    }
+}

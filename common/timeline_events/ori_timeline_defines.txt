@@ -1,0 +1,143 @@
+##
+#### Timeline Events Database
+##
+
+## A quick explanation on how this works. Timeline events are completely moddable. Let's go over all the properties first:
+# fire_only_once 	-> determines whether or not it is only ever added once to the history of a country, which happens at the first addition of an event of this type
+# gui 				-> determines the GUI class that will be used to display this event
+# tooltip			-> determines the tooltip displayed. Can be hardcoded in the 00_default.txt , OR overridden in the add_timeline_effect
+# tooltip_delayed	-> determines the tooltip displayed. Can be hardcoded in the 00_default.txt , OR overridden in the add_timeline_effect
+# types				-> determines the event target scopes that can be passed in when the event is added to the country. Can be hardcoded in the 00_default.txt , OR overridden in the add_timeline_effect
+# targets           -> determines the scopes passed to the Database entry. These are essential for localization working properly.
+
+## Type Conversion
+# For savegame purposes we do not save the alive type, but rather the data is converted into a dead type. Those types need to be added from us specifically.
+# More types could be supported here, but this does require code support and us patching the game for it, if there is enough requested support that may be possible
+
+# Keep in mind that there are scope types that never cease to exist, so those will just work. For the scopes in the list above, the dead version due to having less data availalable they have less available localization options
+##
+
+## Types and Event Targets
+# The reason why it was mentioned that they are completely moddable is because script determines what kind of event targets are saved inside of timeline events and then displayed
+# These are defined here in the definition by the name of their event target scopes. Documentation on this can be found for event targets
+# They can then be accessed in localization via the following naming convention: EVENT_TARGET_0, EVENT_TARGET_1, etc... up to EVENT_TARGET_9 - supporting a total of 10 event targets
+# As those are saved inside of the savegame for each country, keep in mind that this has savegame size and memory consumption implications. So don't add 10 events per country at the start of every day (!)
+
+# They can be added to a country using the add_timeline_event effect. Documentation for its usage can be found below.
+
+# GUI types such as backgrounds, buttons, icons and instantTextBoxes are currently supported.
+
+# To add a new timeline event, 2 things need to be created. A add_timeline_effect + DB entry.
+# They can be either hardcoded or dynamic. Dynamic is recommended for reusability.
+
+## timeline event 'dynamic' example: -> Add this to any file
+#
+# 		add_timeline_event = {
+#			type = Name of the DB entry.
+#			override_id = Mandatory value used for any overrides to work. Must be unique.
+#			override_tooltip = Name of loc string that holds the desired tooltip. (Optional)
+#			override_types = { country, planet etc.. } The type of scopes to pass on to the DB entry. Must match the event targets passed on in targets below.
+#			override_text = { "GUI_element_name:name_of_string" } Any text to pass on to the DB entry. Used in GUI types.
+#			override_texture = { "GUI_element_name:GFX_name" } Any texture to pass on to the DB entry. Used in GUI types.
+#			targets = { event_target:name_of_event_target } These are used in localization. They must be saved in the event that adds the timeline event.
+#		}
+#
+
+# DB 'dynamic' example -> Add this to any file (currently only 00_default.txt is used)
+
+#       timeline_event_planet = {
+#			fire_only_once = no
+#			gui = { "timeline_grid_item_1" } The GUI type used for this type of timeline event
+#			types = { } # Only added if there is no override on the add_timeline_event that uses this
+#			tooltip = "" # Only added if there is no override on the add_timeline_event that uses this
+#			text = { } # Only added if there is no override on the add_timeline_event that uses this
+#			texture = { } # Only added if there is no override on the add_timeline_event that uses this
+#		}
+
+## timeline event 'hardcoded' example: -> Add this to any file
+#
+# 		add_timeline_event = {
+#			type = Name of the DB entry.
+#			override_id = Mandatory value used for any overrides to work. Must be unique.
+#			targets = { event_target:name_of_event_target }
+#		}
+#
+
+# DB 'hardcoded' example -> Add this to any file (currently only 00_default.txt is used)
+
+#       timeline_event_planet = {
+#			fire_only_once = no
+#			gui = { "timeline_grid_item_1" }
+#			types = { country planet }
+#			tooltip = "name_of_string"
+#			text = { "GUI_element_name:name_of_string" } # supports multiple text strings
+#			texture = { "GUI_element_name:GFX_name" } # supports multiple textures
+#		}
+
+###########################
+## Dotted Line Each Year ##
+###########################
+
+##########################################
+## timeline_event_year is used in code  ##
+## it can be removed, but do not rename ##
+##########################################
+
+ori_timeline_event_year = {
+    fire_only_once = no
+    gui = { "timeline_grid_item_new_year_event" }
+}
+
+#############
+## Origins ##
+#############
+
+ori_timeline_origin = {
+    fire_only_once = no
+    gui = { "timeline_grid_item_origin_zoom_1" "timeline_grid_item_origin_zoom_2" }
+}
+
+######################
+## Milestone Events ##
+######################
+
+ori_timeline_milestone = {
+    fire_only_once = no
+    gui = { "timeline_grid_milestone_zoom_1" "timeline_grid_milestone_zoom_2" "timeline_grid_milestone_zoom_3" }
+}
+
+###################
+## Origin Events ##
+###################
+
+ori_timeline_origin_specific = {
+    fire_only_once = no
+    gui = { "timeline_grid_origin_zoom_1" "timeline_grid_origin_zoom_2" "timeline_grid_origin_zoom_3" }
+}
+
+###################
+## Crisis Events ##
+###################
+
+ori_timeline_crisis = {
+    fire_only_once = no
+    gui = { "timeline_grid_crisis_zoom_1" "timeline_grid_crisis_zoom_2" "timeline_grid_crisis_zoom_3" }
+}
+
+###################
+## Empire Events ##
+###################
+
+ori_timeline_empire = {
+    fire_only_once = no
+    gui = { "timeline_grid_empire_zoom_1" "timeline_grid_empire_zoom_2" "timeline_grid_empire_zoom_3" }
+}
+
+#####################
+## Galactic Events ##
+#####################
+
+ori_timeline_galactic = {
+    fire_only_once = no
+    gui = { "timeline_grid_galactic_zoom_1" "timeline_grid_galactic_zoom_2" "timeline_grid_galactic_zoom_3" }
+}

@@ -290,3 +290,206 @@ artisan = {
 craft_operator = {
         possible = { always = no }
 }
+
+
+healthcare = {
+    category = specialist
+
+    swappable_data = {
+        default = {
+            condition_string = SPECIALIST_JOB_TRIGGER
+            building_icon = building_medical_2
+        }
+        # Mutagenic Spa Attendant
+        swap_type = {
+            trigger = {
+                healthcare_is_mutagenic_trigger = yes
+            }
+            name = bath_attendant
+            desc = bath_attendant
+            icon = bath_attendant
+            building_icon = building_toxic_bath
+            condition_string = SPECIALIST_JOB_TRIGGER
+            weight = 5
+        }
+        # Genomic Researchers
+        swap_type = {
+            trigger = {
+                healthcare_is_genomic_researcher_trigger = yes
+            }
+            name = genomic_researcher
+            desc = genomic_researcher
+            icon = genomic_researcher
+            building_icon = building_genomic_facility
+            condition_string = SPECIALIST_JOB_TRIGGER
+            weight = 10
+        }
+        # Originium Researchers
+        swap_type = {
+            trigger = {
+                healthcare_is_originium_researcher_trigger = yes
+            }
+            name = originium_researcher
+            desc = originium_researcher
+            icon = genomic_researcher
+            building_icon = building_originium_facility
+            condition_string = SPECIALIST_JOB_TRIGGER
+            weight = 10
+        }
+    }
+
+    tags = { pop_growth pop_assembly amenities }
+
+    possible_pre_triggers = {
+        has_owner = yes
+        is_being_purged = no
+        is_being_assimilated = no
+        is_sapient = yes
+    }
+
+    possible_precalc = can_fill_specialist_job
+
+    resources = {
+        category = planet_doctors
+        # Base Upkeep
+        upkeep = {
+            consumer_goods = 1
+        }
+        upkeep = {
+            trigger = {
+                exists = planet
+                planet = {
+                    healthcare_is_mutagenic_trigger = yes
+                }
+            }
+            consumer_goods = 1
+        }
+        # Job Swap - Genomic Researcher
+        produces = {
+            trigger = {
+                exists = planet
+                planet = {
+                    healthcare_is_genomic_researcher_trigger = yes
+                }
+            }
+            society_research = 6
+        }
+        produces = {
+            trigger = {
+                exists = planet
+                planet = {
+                    healthcare_is_genomic_researcher_trigger = yes
+                }
+                exists = owner
+                owner = {
+                    has_completed_genetic_situation = yes
+                }
+            }
+            society_research = 3
+        }
+        upkeep = {
+            trigger = {
+                exists = planet
+                planet = {
+                    healthcare_is_genomic_researcher_trigger = yes
+                }
+            }
+            consumer_goods = 2
+        }
+
+        # Job Swap - Originium Researcher
+        produces = {
+            trigger = {
+                exists = planet
+                planet = {
+                    healthcare_is_originium_researcher_trigger = yes
+                }
+            }
+            society_research = 8
+        }
+        produces = {
+            trigger = {
+                exists = planet
+                planet = {
+                    healthcare_is_originium_researcher_trigger = yes
+                }
+                exists = owner
+                owner = {
+                    has_completed_originium_situation = yes
+                }
+            }
+            society_research = 4
+        }
+        upkeep = {
+            trigger = {
+                exists = planet
+                planet = {
+                    healthcare_is_originium_researcher_trigger = yes
+                }
+            }
+            consumer_goods = 2
+            originium = 1
+        }
+    }
+
+
+
+
+    inline_script = "output/healthcare_triggered_modifiers"
+
+    inline_script = "output/genomic_triggered_modifiers"
+    inline_script = "output/originium_triggered_modifiers"
+
+    weight = {
+        weight = @high_prio_specialist_job_weight
+        mult = value:scripted_modifier_job_weight_mult|MODIFIER|pop_job_amenities_mult|
+        modifier = {
+            factor = 0.2
+            has_citizenship_rights = no
+            NOT = { has_trait = trait_mechanical }
+        }
+        modifier = {
+            factor = 0.1
+            can_take_servant_job = yes
+        }
+        modifier = {
+            factor = 2
+            owner = { has_valid_civic = civic_private_healthcare_corporate }
+        }
+        modifier = {
+            factor = 1.5
+            planet = {
+                has_branch_office = yes
+                branch_office_owner = {
+                    has_valid_civic = civic_private_healthcare_corporate
+                }
+            }
+        }
+        modifier = {
+            factor = 0.5
+            is_enslaved = yes
+            has_slavery_type = { type = slavery_indentured }
+        }
+        modifier = {
+            factor = 10
+            planet = {
+                free_amenities < 0
+                has_available_jobs = healthcare
+            }
+        }
+    }
+
+    inline_script = "jobs/automodding_priority_amenities"
+
+    promotion = {
+        time = @standard_promotion_time
+        effect = {
+            pop_amount_change_category = {
+                CATEGORY = specialist
+                AMOUNT = local_pop_amount
+            }
+        }
+    }
+}
+
+

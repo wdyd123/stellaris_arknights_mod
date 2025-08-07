@@ -1,0 +1,28 @@
+namespace = ori_timeline
+
+# Biomorphosis
+#Fires from utopia.2703, tr_cloning_finish, tr_purity_finish, or tr_mutation_adopt
+country_event = {
+    id = ori_timeline.80
+    hide_window = yes
+    is_triggered_only = yes
+    fire_only_once = yes
+
+    trigger = {
+        is_country_type = default
+    }
+
+    immediate = {
+        save_event_target_as = this_country
+        add_timeline_event = {
+            type = ori_timeline_empire
+            override_id = ori_timeline_originium_regular
+            override_tooltip = "TIMELINE_EVENT_ORIGINIUM_REGULAR_TOOLTIP"
+
+            override_types = { country }
+            override_text = { "text:TIMELINE_EVENT_ORIGINIUM_REGULAR" }
+            override_texture = { "background:GFX_evt_originium_resonance" }
+            targets = { event_target:this_country }
+        }
+    }
+}

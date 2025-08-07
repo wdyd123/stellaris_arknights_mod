@@ -1,0 +1,137 @@
+give_resonance_unlocks_effect = {
+    switch = {
+        trigger = has_country_flag
+        resonance_unlock_level_2 = {
+            set_country_flag = resonance_unlock_level_3
+            if = {
+                limit = {
+                    OR = {
+                        has_technology = tech_gene_seed_purification
+                        NOT = { can_research_technology = tech_gene_seed_purification }
+                    }
+                }
+                add_monthly_resource_mult = {
+                    resource = unity
+                    value = @tier4unityreward
+                    min = @tier4unitymin
+                    max = @tier4unitymax
+                }
+            }
+            else = {
+                add_tech_progress = {
+                    tech = tech_gene_seed_purification
+                    progress = @genomic_tech_progress
+                }
+            }
+        }
+        resonance_unlock_level_1 = {
+            set_country_flag = resonance_unlock_level_2
+            remove_modifier = resonance_unlock_level_1
+            add_modifier = {
+                modifier = resonance_unlock_level_2
+            }
+        }
+        default = {
+            custom_tooltip = resonance_traditions_unlocked_tt
+            set_country_flag = resonance_unlock_level_1
+            add_modifier = {
+                modifier = resonance_unlock_level_1
+            }
+        }
+    }
+}
+
+give_crystallization_unlocks_effect = {
+    switch = {
+        trigger = has_country_flag
+        crystallization_unlock_level_2 = {
+            set_country_flag = crystallization_unlock_level_3
+            if = {
+                limit = {
+                    OR = {
+                        has_technology = tech_gene_banks
+                        NOT = { can_research_technology = tech_gene_banks }
+                    }
+                }
+                add_monthly_resource_mult = {
+                    resource = unity
+                    value = @tier4unityreward
+                    min = @tier4unitymin
+                    max = @tier4unitymax
+                }
+            }
+            else = {
+                add_tech_progress = {
+                    tech = tech_gene_banks
+                    progress = @genomic_tech_progress
+                }
+            }
+        }
+        crystallization_unlock_level_1 = {
+            set_country_flag = crystallization_unlock_level_2
+            remove_modifier = crystallization_unlock_level_1
+            add_modifier = {
+                modifier = crystallization_unlock_level_2
+            }
+        }
+        default = {
+            custom_tooltip = crystallization_traditions_unlocked_tt
+            set_country_flag = crystallization_unlock_level_1
+            add_modifier = {
+                modifier = crystallization_unlock_level_1
+            }
+        }
+    }
+}
+
+give_assimilation_unlocks_effect = {
+    switch = {
+        trigger = has_country_flag
+        assimilation_unlock_level_2 = {
+            set_country_flag = assimilation_unlock_level_3
+            if = {
+                limit = {
+                    OR = {
+                        has_technology = tech_gene_expressions
+                        NOT = { can_research_technology = tech_gene_expressions }
+                    }
+                }
+                add_monthly_resource_mult = {
+                    resource = unity
+                    value = @tier4unityreward
+                    min = @tier4unitymin
+                    max = @tier4unitymax
+                }
+            }
+            else = {
+                add_tech_progress = {
+                    tech = tech_gene_expressions
+                    progress = @genomic_tech_progress
+                }
+            }
+        }
+        assimilation_unlock_level_1 = {
+            set_country_flag = assimilation_unlock_level_2
+            remove_modifier = assimilation_unlock_level_1
+            add_modifier = {
+                modifier = assimilation_unlock_level_2
+            }
+        }
+        default = {
+            custom_tooltip = assimilation_traditions_unlocked_tt
+            set_country_flag = assimilation_unlock_level_1
+            add_modifier = {
+                modifier = assimilation_unlock_level_1
+            }
+        }
+    }
+}
+
+set_species_traits_resonance_count_variable = {
+    set_variable = {
+        which = species_traits_resonance_count
+        value = value:species_traits_resonance_count_value
+    }
+}
+
+

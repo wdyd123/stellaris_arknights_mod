@@ -1,0 +1,73 @@
+agenda_resonance_perfection_finish = {
+    logistic_growth_mult = 0.1
+}
+
+agenda_resonance_perfection_wilderness_finish ={
+    planet_building_build_speed_mult = 0.2
+    planet_districts_upkeep_mult = -0.2
+    planet_buildings_upkeep_mult = -0.2
+}
+
+agenda_crystallization_replication_finish = {
+    bonus_pop_growth_mult = 1
+}
+
+agenda_assimilation_divergence_finish = {
+    auto_mod_monthly_add = 400
+}
+
+
+resonance_unlock_level_1 = {
+    icon = "gfx/interface/icons/traditions/tree_icons/tradition_icon_purity.dds"
+    custom_tooltip = resonance_unlock_level_1_tt
+}
+
+resonance_unlock_level_2 = {
+    icon = "gfx/interface/icons/traditions/tree_icons/tradition_icon_purity.dds"
+    custom_tooltip = resonance_unlock_level_2_tt
+    show_only_custom_tooltip = no
+    negative_traits_country = -1
+}
+
+crystallization_unlock_level_1 = {
+    icon = "gfx/interface/icons/traditions/tree_icons/tradition_icon_cloning.dds"
+    custom_tooltip = crystallization_unlock_level_1_tt
+}
+
+crystallization_unlock_level_2 = {
+    icon = "gfx/interface/icons/traditions/tree_icons/tradition_icon_cloning.dds"
+    custom_tooltip = crystallization_unlock_level_2_tt
+}
+
+assimilation_unlock_level_1 = {
+    icon = "gfx/interface/icons/traditions/tree_icons/tradition_icon_mutation.dds"
+    custom_tooltip = assimilation_unlock_level_1_tt
+}
+
+assimilation_unlock_level_2 = {
+    icon = "gfx/interface/icons/traditions/tree_icons/tradition_icon_mutation.dds"
+    custom_tooltip = assimilation_unlock_level_2_tt
+}
+
+ethical_crystallization = {
+    pop_happiness = 0.10
+    planet_jobs_society_research_produces_mult = 0.1
+}
+
+
+resonance_tests = {
+    pop_happiness = 0.15
+    planet_researchers_upkeep_mult = 0.1
+}
+
+crystallize_rights = {
+    logistic_growth_mult = 0.1
+    pop_ethic_egalitarian_attraction_mult = 0.25
+}
+
+ori_augment_appreciation = {
+    icon = "gfx/interface/icons/modifiers/mod_pop_political_power.dds"
+    pop_ethic_egalitarian_attraction_mult = 0.25
+    custom_tooltip = genetic_purist_effects_header
+    show_only_custom_tooltip = no
+}

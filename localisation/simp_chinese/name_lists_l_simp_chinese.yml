@@ -1,7 +1,7 @@
 ﻿l_simp_chinese:
-####################################
-#Species Classes
-####################################
+ ####################################
+ #Species Classes
+ ####################################
  TERRA: "泰拉人"
 
 
@@ -32,22 +32,34 @@
  SPECIES_TRAIT_ORIGINIUM_VOCATIONAL: "['concept_vocational_traits_originium']"
  trait_originium_based_unit: "源石适应性"
  trait_originium_based_unit_desc: "源石适应性"
- trait_auto_mod_originium: "适应性源石技艺"
- trait_auto_mod_originium_desc: "源石技艺催生了全新的资源加工方法，使得各类资源的生产效率得到了飞跃提升，依据工作环境，选择合适的源石技艺。"
+ trait_auto_mod_originium_II: "适应性源石技艺"
+ trait_auto_mod_originium_II_desc: "多亏源石研究的突破,这个物种现在可以根据岗位随心所欲的选择他们源石技艺的表达方式。"
  automodding_trait_originium_tooltip: "$automodding_trait_tooltip_all$\n\n§Y$trait_auto_mod_biological$§!可从['concept_automodding_originium']中挑选修正"
+
  trait_traditional_originium: "代际记忆"
- trait_thrifty_originium: "足智多谋"
- trait_intelligent_originium: "聪慧"
+ trait_thrifty_originium: "锱铢必较 "
+ trait_intelligent_originium: "源石认知"
  trait_industrious_originium: "吃苦耐劳"
- trait_agrarian_originium: "嘉禾盈仓"
- trait_ingenious_originium: "雷法专精"
+ trait_agrarian_originium: "深耕细作"
+ trait_ingenious_originium: "心灵手巧"
  trait_charismatic_originium: "魅力非凡"
+
+ trait_traditional_originium_II: "代际记忆+"
+ trait_thrifty_originium_II: "锱铢必较+"
+ trait_intelligent_originium_II: "源石认知+"
+ trait_industrious_originium_II: "吃苦耐劳+"
+ trait_agrarian_originium_II: "深耕细作+"
+ trait_ingenious_originium_II: "心灵手巧+"
+ trait_charismatic_originium_II: "魅力非凡+"
+
  concept_automodding_originium: "适应性源石技艺列表"
- concept_automodding_originium_desc: "—§3['trait:trait_traditional_originium']§!\n—§3['trait:trait_thrifty_originium']§!\n—§3['trait:trait_intelligent_originium']§!\n—§3['trait:trait_industrious_originium']§!\n—§3['trait:trait_agrarian_originium']§!\n—§3['trait:trait_ingenious_originium']§!\n—§3['trait:trait_charismatic_originium']§!"
+ concept_automodding_originium_desc: "—§3['trait:trait_traditional_originium_II']§!\n—§3['trait:trait_thrifty_originium_II']§!\n—§3['trait:trait_intelligent_originium_II']§!\n—§3['trait:trait_industrious_originium_II']§!\n—§3['trait:trait_agrarian_originium_II']§!\n—§3['trait:trait_ingenious_originium_II']§!\n—§3['trait:trait_charismatic_originium_II']§!"
  concept_vocational_traits_originium: "职业源石技艺"
- concept_vocational_traits_originium_desc: "$concept_vocational_traits_originium$是一类可以通过§3['trait:trait_auto_mod_originium']§!特质自动调整的物种特质。$NEW_LINE$$concept_automodding_originium_desc$"
+ concept_vocational_traits_originium_desc: "$concept_vocational_traits_originium$是一类可以通过§3['trait:trait_auto_mod_originium_II']§!特质自动调整的物种特质。$NEW_LINE$$concept_automodding_originium_desc$"
  trait_originium_based_forge: "火法专精"
- trait_originium_based_forge_desc: "火属性的源石技艺在提高冶炼效率方面颇有帮助。"
+ trait_originium_based_forge_II: "火法专精+"
+ trait_originium_based_forge_desc: "§L火属性的源石技艺在提高冶炼效率方面颇有帮助§!\n"
+ trait_originium_based_forge_desc_II: "§L火属性的源石技艺在提高冶炼效率方面颇有帮助\n借助源石,该物种的源石技艺适应性进一步提高。§!\n"
 
 
  trait_traditional_originium_desc: "§L几百年的历史，这些东西是他们的负担，但也是他们的骄傲。§!\n"
@@ -57,6 +69,15 @@
  trait_agrarian_originium_desc: "§L这一物种与土地有着难以割舍的关系，使他们成为了农业和园林的专家。§!\n"
  trait_ingenious_originium_desc: "§L该物种头脑灵活，善于打破陈规，他们懂得如何最大化利用其基础设施和电力网。§!\n"
  trait_charismatic_originium_desc: "§L这个物种拥有一种特别的魅力，任何其他生物都愿意与他们亲近。§!\n"
+
+
+ trait_traditional_originium_desc_II: "§L几百年的历史，这些东西是他们的负担，但也是他们的骄傲。\n借助源石,该物种的源石技艺适应性进一步提高。§!\n"
+ trait_thrifty_originium_desc_II: "§L这个物种天性节俭，总是喜欢尽一切可能将利益最大化。\n借助源石,该物种的源石技艺适应性进一步提高。§!\n"
+ trait_intelligent_originium_desc_II: "§L这个物种大脑非常发达，他们可以轻易接受日新月异的科学进步。\n借助源石,该物种的源石技艺适应性进一步提高。§!\n"
+ trait_industrious_originium_desc_II: "§L这个物种非常吃苦耐劳，这片大地不会体恤体弱者。\n借助源石,该物种的源石技艺适应性进一步提高。§!\n"
+ trait_agrarian_originium_desc_II: "§L这一物种与土地有着难以割舍的关系，使他们成为了农业和园林的专家。\n借助源石,该物种的源石技艺适应性进一步提高。§!\n"
+ trait_ingenious_originium_desc_II: "§L该物种头脑灵活，善于打破陈规，他们懂得如何最大化利用其基础设施和电力网。\n借助源石,该物种的源石技艺适应性进一步提高。§!\n"
+ trait_charismatic_originium_desc_II: "§L这个物种拥有一种特别的魅力，任何其他生物都愿意与他们亲近。\n借助源石,该物种的源石技艺适应性进一步提高。§!\n"
 
  ####################################
  #Resources
@@ -193,9 +214,9 @@
  arknights_recruitment_protocol_effect:0 "触发罗德岛招募流程 - 随机选择一个可用干员"
  ARKNIGHTS_RECRUITMENT_COOLDOWN:0 "罗德岛招募协议仍在冷却中"
 
-####################################
-#Operator
-####################################
+ ####################################
+ #Operator
+ ####################################
  # 明日方舟干员名称本地化
  # Arknights Operators Localization
 
@@ -294,5 +315,14 @@
  ####################################
  #Modifier
  ####################################
- trait_originium_infection_suppressant_upkeep_add_tt: "$r_infection_suppressant$维护费：§R+0.04§!"
+ trait_originium_infection_suppressant_upkeep_add_0.4_tt: "$r_infection_suppressant$维护费：§R0.4§!"
+ trait_originium_infection_suppressant_upkeep_add_0.2_tt: "$r_infection_suppressant$维护费：§R0.2§!"
+ trait_originium_infection_suppressant_upkeep_add_0.1_tt: "$r_infection_suppressant$维护费：§R0.1§!"
+
+
+ ####################################
+ #Tradition
+ ####################################
+ tradition_originium: "源石"
+ tradition_originium_desc: "TBW"
 

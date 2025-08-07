@@ -1,6 +1,8 @@
 auto_trait_prio = {
 	#Miners
+	trait_industrious_originium_II
 	trait_industrious_originium
+
 	trait_industrious
 	trait_crack_miner
 	trait_robot_power_drills

@@ -1,0 +1,32 @@
+tradition_resonance = {
+    tree_template = "tree_11_12"
+    adoption_bonus = "tr_resonance_adopt"
+    finish_bonus = "tr_resonance_finish"
+
+    potential = {
+        has_biogenesis_dlc = yes
+        is_machine_empire = no
+        NOR = {
+            has_cybernetic_ascension = yes
+            has_psionic_ascension = yes
+            has_synthetic_ascension = yes
+            is_natural_design_empire = yes
+            is_individual_machine = yes
+            has_cloning_ascension = yes
+            has_mutation_ascension = yes
+            has_originium_resonance = yes
+        }
+    }
+
+    traditions = {
+        "tr_resonance_genotype_regeneration"
+        "tr_resonance_exemplary_genetics"
+        "tr_resonance_stage_1_swap"
+        "tr_resonance_stage_2_swap"
+        "tr_resonance_stage_3_swap"
+    }
+
+    ai_weight = {
+        factor = 1000
+    }
+}

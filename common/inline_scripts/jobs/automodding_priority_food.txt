@@ -1,6 +1,8 @@
 auto_trait_prio = {
 	#Farmers
+	trait_agrarian_originium_II
 	trait_agrarian_originium
+
 	trait_agrarian
 	trait_farm_hands
 	trait_robot_harvesters

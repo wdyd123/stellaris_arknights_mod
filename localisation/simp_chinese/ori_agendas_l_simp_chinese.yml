@@ -1,0 +1,8 @@
+﻿l_simp_chinese:
+ council_agenda_agenda_genetic_pursuit_name: "基因追寻"
+ council_agenda_agenda_genetic_pursuit_desc: "我们必须集中我们的精力让基因变得更加完美。"
+ agenda_genetic_pursuit_finish: "$council_agenda_agenda_genetic_pursuit_name$$agenda_ref$"
+ agenda_genetic_pursuit_finish_desc: "$council_agenda_agenda_genetic_pursuit_desc$"
+ council_agenda_agenda_originium_resonance_name: "$ap_originium_resonance$"
+ council_agenda_agenda_originium_resonance_desc: "$ap_originium_resonance_desc$"
+

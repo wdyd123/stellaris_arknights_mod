@@ -1,4 +1,4 @@
 NGameplay = {
-    AUTO_MOD_BASE = 500
+    AUTO_MOD_BASE = 1000
 
 }

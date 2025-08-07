@@ -1,11 +1,11 @@
 concept_automodding_originium = {
-    icon = "gfx/interface/icons/traits/trait_auto_mod_originium.dds"
+    icon = "gfx/interface/icons/traits/trait_auto_mod_originium_II.dds"
 }
 
 concept_vocational_traits_originium = {
-    icon = "gfx/interface/icons/traits/trait_auto_mod_originium.dds"
+    icon = "gfx/interface/icons/traits/trait_auto_mod_originium_II.dds"
 }
 
 # concept_automodding_originium = {
-#     icon = "gfx/interface/icons/traits/trait_auto_mod_originium.dds"
+#     icon = "gfx/interface/icons/traits/trait_auto_mod_originium_II.dds"
 # }

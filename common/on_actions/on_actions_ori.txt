@@ -6,3 +6,176 @@ on_five_year_pulse = {
 
 
 
+on_originium_resonance_events_list = {
+    random_events = {
+        # Purity Random Events
+        10 = ori_ap.50
+        10 = ori_ap.55
+        10 = ori_ap.60
+        10 = ori_ap.65
+        10 = ori_ap.200
+        10 = ori_ap.210
+        10 = ori_ap.215
+        10 = ori_ap.220
+        10 = ori_ap.225
+        # Cloning Random Events
+        10 = ori_ap.70
+        10 = ori_ap.75
+        10 = ori_ap.80
+        10 = ori_ap.85
+        10 = ori_ap.230
+        10 = ori_ap.235
+        10 = ori_ap.240
+        10 = ori_ap.250
+        # Mutation Random Events
+        10 = ori_ap.90
+        10 = ori_ap.95
+        10 = ori_ap.100
+        10 = ori_ap.105
+        10 = ori_ap.260
+        10 = ori_ap.265
+        10 = ori_ap.270
+        10 = ori_ap.280
+        # Bonus Events (any approach)
+        5 = ori_ap.295
+        5 = ori_ap.300
+    }
+}
+
+on_originium_resonance_approach_resonance_events_list = {
+    random_events = {
+        # Purity Random Events
+        10 = ori_ap.50
+        10 = ori_ap.55
+        10 = ori_ap.60
+        10 = ori_ap.65
+        10 = ori_ap.200
+        10 = ori_ap.210
+        10 = ori_ap.215
+        10 = ori_ap.220
+        10 = ori_ap.225
+        # Bonus Events (any approach)
+        5 = ori_ap.295
+        5 = ori_ap.300
+    }
+}
+
+on_originium_resonance_approach_crystallization_events_list = {
+    random_events = {
+        # Cloning Random Events
+        10 = ori_ap.70
+        10 = ori_ap.75
+        10 = ori_ap.80
+        10 = ori_ap.85
+        10 = ori_ap.230
+        10 = ori_ap.235
+        10 = ori_ap.240
+        10 = ori_ap.250
+        # Bonus Events (any approach)
+        5 = ori_ap.295
+        5 = ori_ap.300
+    }
+}
+
+on_originium_resonance_approach_assimilation_events_list = {
+    random_events = {
+        # Mutation Random Events
+        10 = ori_ap.90
+        10 = ori_ap.95
+        10 = ori_ap.100
+        10 = ori_ap.105
+        10 = ori_ap.260
+        10 = ori_ap.265
+        10 = ori_ap.270
+        10 = ori_ap.280
+        # Bonus Events (any approach)
+        5 = ori_ap.295
+        5 = ori_ap.300
+    }
+}
+
+on_originium_resonance_hive_events_list = {
+    random_events = {
+        # Purity Random Events
+        10 = ori_ap.110
+        10 = ori_ap.115
+        10 = ori_ap.120
+        10 = ori_ap.125
+        10 = ori_ap.310
+        10 = ori_ap.315
+        10 = ori_ap.325
+        10 = ori_ap.330
+        10 = ori_ap.335
+        # Cloning Random Events
+        10 = ori_ap.130
+        10 = ori_ap.135
+        10 = ori_ap.140
+        10 = ori_ap.145
+        10 = ori_ap.340
+        10 = ori_ap.350
+        10 = ori_ap.365
+        # Mutation Random Events
+        10 = ori_ap.150
+        10 = ori_ap.155
+        10 = ori_ap.160
+        10 = ori_ap.165
+        10 = ori_ap.375
+        10 = ori_ap.380
+        10 = ori_ap.385
+        10 = ori_ap.390
+        # Bonus Events (any approach)
+        10 = ori_ap.405
+        10 = ori_ap.410
+    }
+}
+
+on_originium_resonance_hive_approach_resonance_events_list = {
+    random_events = {
+        # Purity Random Events
+        10 = ori_ap.110
+        10 = ori_ap.115
+        10 = ori_ap.120
+        10 = ori_ap.125
+        10 = ori_ap.310
+        10 = ori_ap.315
+        10 = ori_ap.325
+        10 = ori_ap.330
+        10 = ori_ap.335
+        # Bonus Events (any approach)
+        10 = ori_ap.405
+        10 = ori_ap.410
+    }
+}
+
+on_originium_resonance_hive_approach_crystallization_events_list = {
+    random_events = {
+        # Cloning Random Events
+        10 = ori_ap.130
+        10 = ori_ap.135
+        10 = ori_ap.140
+        10 = ori_ap.145
+        10 = ori_ap.340
+        10 = ori_ap.350
+        10 = ori_ap.365
+        # Bonus Events (any approach)
+        10 = ori_ap.405
+        10 = ori_ap.410
+    }
+}
+
+on_originium_resonance_hive_approach_assimilation_events_list = {
+    random_events = {
+        # Mutation Random Events
+        10 = ori_ap.150
+        10 = ori_ap.155
+        10 = ori_ap.160
+        10 = ori_ap.165
+        10 = ori_ap.375
+        10 = ori_ap.380
+        10 = ori_ap.385
+        10 = ori_ap.390
+        # Bonus Events (any approach)
+        10 = ori_ap.405
+        10 = ori_ap.410
+    }
+}

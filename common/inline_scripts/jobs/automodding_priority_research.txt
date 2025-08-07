@@ -1,7 +1,7 @@
 auto_trait_prio = {
 	#Researchers
+	trait_intelligent_originium_II
 	trait_intelligent_originium
-
 	trait_intelligent
 	trait_artificial_intelligence
 	trait_robot_logic_engines

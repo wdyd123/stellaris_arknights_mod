@@ -1,0 +1,32 @@
+tradition_assimilation = {
+    tree_template = "tree_12_11"
+    adoption_bonus = "tr_assimilation_adopt"
+    finish_bonus = "tr_assimilation_finish"
+
+    potential = {
+        has_biogenesis_dlc = yes
+        is_machine_empire = no
+        NOR = {
+            has_cybernetic_ascension = yes
+            has_psionic_ascension = yes
+            has_synthetic_ascension = yes
+            is_natural_design_empire = yes
+            is_individual_machine = yes
+            has_genetic_ascension = yes
+            has_resonance_ascension = yes
+            has_crystallization_ascension = yes
+        }
+    }
+
+    traditions = {
+        "tr_assimilation_stage_1_swap"
+        "tr_assimilation_planned_polymorphism"
+        "tr_assimilation_stage_2_swap"
+        "tr_assimilation_stage_3_swap"
+        "tr_assimilation_unnatural_selection"
+    }
+
+    ai_weight = {
+        factor = 1000
+    }
+}
