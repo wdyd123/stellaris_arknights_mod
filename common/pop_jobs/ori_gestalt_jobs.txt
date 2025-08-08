@@ -6,7 +6,7 @@ spawning_drone = {
             condition_string = DRONE_JOB_TRIGGER
             building_icon = building_spawning_pool
         }
-        # Permutation Attendance Drone
+        # Perassimilation Attendance Drone
         swap_type = {
             trigger = {
                 spawning_drone_is_bath_attendant_hive_trigger = yes
@@ -32,12 +32,12 @@ spawning_drone = {
         # Genomic Drones
         swap_type = {
             trigger = {
-                healthcare_is_genomic_researcher_trigger = yes
+                healthcare_is_originium_researcher_trigger = yes
             }
-            name = genomic_drone
-            desc = genomic_drone
-            icon = genomic_drone
-            building_icon = building_genomic_facility
+            name = originium_drone
+            desc = originium_drone
+            icon = originium_drone
+            building_icon = building_originium_facility
             condition_string = DRONE_JOB_TRIGGER
             weight = 15
         }
@@ -47,7 +47,7 @@ spawning_drone = {
             }
             name = originium_drone
             desc = originium_drone
-            icon = genomic_drone
+            icon = originium_drone
             building_icon = building_originium_facility
             condition_string = DRONE_JOB_TRIGGER
             weight = 15
@@ -109,7 +109,7 @@ spawning_drone = {
             trigger = {
                 exists = planet
                 planet = {
-                    healthcare_is_genomic_researcher_trigger = yes
+                    healthcare_is_originium_researcher_trigger = yes
                 }
             }
             society_research = 6
@@ -118,7 +118,7 @@ spawning_drone = {
             trigger = {
                 exists = planet
                 planet = {
-                    healthcare_is_genomic_researcher_trigger = yes
+                    healthcare_is_originium_researcher_trigger = yes
                 }
                 exists = owner
                 owner = {
@@ -131,7 +131,7 @@ spawning_drone = {
             trigger = {
                 exists = planet
                 planet = {
-                    healthcare_is_genomic_researcher_trigger = yes
+                    healthcare_is_originium_researcher_trigger = yes
                 }
                 exists = owner
                 owner = {
@@ -144,7 +144,7 @@ spawning_drone = {
             trigger = {
                 exists = planet
                 planet = {
-                    healthcare_is_genomic_researcher_trigger = yes
+                    healthcare_is_originium_researcher_trigger = yes
                 }
                 exists = owner
                 owner = {

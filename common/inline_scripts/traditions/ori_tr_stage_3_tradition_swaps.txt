@@ -6,7 +6,7 @@ tradition_swap = {
 	inherit_name = no
 	inherit_icon = no
 	trigger = {
-		has_country_flag = originium_ascension_stage_3_resonance
+		has_country_flag = originium_resonance_stage_3_resonance
 		NOR = {
 			has_ethic = ethic_xenophile
 			has_ethic = ethic_fanatic_xenophile
@@ -15,7 +15,7 @@ tradition_swap = {
 	}
 
 	inline_script = {
-		script = traditions/tr_resonance_imperfection_remediation
+		script = traditions/tr_resonance_buzz_elimination
 	}
 
 	weight = {
@@ -24,11 +24,11 @@ tradition_swap = {
 }
 
 tradition_swap = {
-	name = tr_resonance_imperfection_remediation_xenophile
+	name = tr_resonance_buzz_elimination_xenophile
 	inherit_name = no
 	inherit_icon = no
 	trigger = {
-		has_country_flag = originium_ascension_stage_3_resonance
+		has_country_flag = originium_resonance_stage_3_resonance
 		OR = {
 			has_ethic = ethic_xenophile
 			has_ethic = ethic_fanatic_xenophile
@@ -36,7 +36,7 @@ tradition_swap = {
 	}
 
 	inline_script = {
-		script = traditions/tr_resonance_imperfection_remediation_xenophile
+		script = traditions/tr_resonance_buzz_elimination_xenophile
 	}
 
 	weight = {
@@ -46,14 +46,14 @@ tradition_swap = {
 
 # Wilderness Swap
 tradition_swap = {
-	name = tr_resonance_imperfection_remediation_wilderness
+	name = tr_resonance_buzz_elimination_wilderness
 	inherit_name = no
 	inherit_icon = no
 	trigger = {
 		is_wilderness_empire = yes
 	}
 	inline_script = {
-		script = traditions/tr_resonance_imperfection_remediation_wilderness
+		script = traditions/tr_resonance_buzz_elimination_wilderness
 	}
 	weight = {
 		factor = 1
@@ -66,7 +66,7 @@ tradition_swap = {
 	inherit_name = no
 	inherit_icon = no
 	trigger = {
-		has_country_flag = originium_ascension_stage_3_crystallization
+		has_country_flag = originium_resonance_stage_3_crystallization
 		is_crystallization_authority = no
 		NOT = {
 			has_country_flag = clone_army_full_potential
@@ -74,7 +74,7 @@ tradition_swap = {
 	}
 
 	inline_script = {
-		script = traditions/tr_crystallization_biochemical_composure
+		script = traditions/tr_crystallization_regenerative_crystallization
 	}
 	weight = {
 		factor = 1
@@ -83,7 +83,7 @@ tradition_swap = {
 
 # Clone Army Swap
 tradition_swap = {
-	name = tr_crystallization_biochemical_composure_clone_army
+	name = tr_crystallization_regenerative_crystallization_clone_army
 	inherit_name = no
 	inherit_icon = no
 	trigger = {
@@ -94,7 +94,7 @@ tradition_swap = {
 
 	}
 	inline_script = {
-		script = traditions/tr_crystallization_biochemical_composure
+		script = traditions/tr_crystallization_regenerative_crystallization
 	}
 	weight = {
 		factor = 1
@@ -103,11 +103,11 @@ tradition_swap = {
 
 # Crystallization Swap
 tradition_swap = {
-	name = tr_crystallization_biochemical_composure_clones
+	name = tr_crystallization_regenerative_crystallization_clones
 	inherit_name = no
 	inherit_icon = no
 	trigger = {
-		has_country_flag = originium_ascension_stage_3_crystallization
+		has_country_flag = originium_resonance_stage_3_crystallization
 		is_crystallization_authority = yes
 		NOT = {
 			has_country_flag = clone_army_full_potential
@@ -115,7 +115,7 @@ tradition_swap = {
 	}
 
 	inline_script = {
-		script = traditions/tr_crystallization_biochemical_composure_clones
+		script = traditions/tr_crystallization_regenerative_crystallization_clones
 	}
 	weight = {
 		factor = 1
@@ -124,11 +124,11 @@ tradition_swap = {
 
 # Clone Army Swap
 tradition_swap = {
-	name = tr_crystallization_biochemical_composure_clones_clone_army
+	name = tr_crystallization_regenerative_crystallization_clones_clone_army
 	inherit_name = no
 	inherit_icon = no
 	trigger = {
-		has_country_flag = originium_ascension_stage_3_crystallization
+		has_country_flag = originium_resonance_stage_3_crystallization
 		is_crystallization_authority = yes
 		has_country_flag = clone_army_full_potential
 	}
@@ -136,7 +136,7 @@ tradition_swap = {
 
 	}
 	inline_script = {
-		script = traditions/tr_crystallization_biochemical_composure_clones
+		script = traditions/tr_crystallization_regenerative_crystallization_clones
 	}
 	weight = {
 		factor = 1
@@ -149,7 +149,7 @@ tradition_swap = {
 	inherit_name = no
 	inherit_icon = no
 	trigger = {
-		has_country_flag = originium_ascension_stage_3_assimilation
+		has_country_flag = originium_resonance_stage_3_assimilation
 		NOT = {
 			has_origin = origin_evolutionary_predators
 		}

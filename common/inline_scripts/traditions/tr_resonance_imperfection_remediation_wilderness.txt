@@ -1,1 +1,0 @@
-custom_tooltip_with_modifiers = tr_resonance_imperfection_remediation_wilderness_tt

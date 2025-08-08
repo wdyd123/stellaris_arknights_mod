@@ -288,7 +288,13 @@ artisan = {
 }
 
 craft_operator = {
-        possible = { always = no }
+    possible = { owner_species = { has_trait = trait_originium_based_unit } }
+    swappable_data = {
+        default = {
+            building_icon = building_factory_1
+            icon = artisan
+        }
+    }
 }
 
 
@@ -315,12 +321,12 @@ healthcare = {
         # Genomic Researchers
         swap_type = {
             trigger = {
-                healthcare_is_genomic_researcher_trigger = yes
+                healthcare_is_originium_researcher_trigger = yes
             }
-            name = genomic_researcher
-            desc = genomic_researcher
-            icon = genomic_researcher
-            building_icon = building_genomic_facility
+            name = originium_researcher
+            desc = originium_researcher
+            icon = originium_researcher
+            building_icon = building_originium_facility
             condition_string = SPECIALIST_JOB_TRIGGER
             weight = 10
         }
@@ -331,7 +337,7 @@ healthcare = {
             }
             name = originium_researcher
             desc = originium_researcher
-            icon = genomic_researcher
+            icon = originium_researcher
             building_icon = building_originium_facility
             condition_string = SPECIALIST_JOB_TRIGGER
             weight = 10
@@ -369,7 +375,7 @@ healthcare = {
             trigger = {
                 exists = planet
                 planet = {
-                    healthcare_is_genomic_researcher_trigger = yes
+                    healthcare_is_originium_researcher_trigger = yes
                 }
             }
             society_research = 6
@@ -378,7 +384,7 @@ healthcare = {
             trigger = {
                 exists = planet
                 planet = {
-                    healthcare_is_genomic_researcher_trigger = yes
+                    healthcare_is_originium_researcher_trigger = yes
                 }
                 exists = owner
                 owner = {
@@ -391,7 +397,7 @@ healthcare = {
             trigger = {
                 exists = planet
                 planet = {
-                    healthcare_is_genomic_researcher_trigger = yes
+                    healthcare_is_originium_researcher_trigger = yes
                 }
             }
             consumer_goods = 2

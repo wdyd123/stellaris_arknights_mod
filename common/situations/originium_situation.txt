@@ -130,7 +130,7 @@ originium_resonance_situation = {
 
     approach = { # Resonance Approach
         name = originium_resonance_approach_resonance
-        icon = GFX_situation_icon_purity
+        icon = GFX_situation_icon_resonance
         icon_background = GFX_situation_approach_bg_green
         on_select = {
             set_situation_flag = resonance_approach_selected
@@ -172,7 +172,7 @@ originium_resonance_situation = {
 
     approach = { # Crystallization Approach
         name = originium_resonance_approach_crystallization
-        icon = GFX_situation_icon_cloning
+        icon = GFX_situation_icon_crystallization
         icon_background = GFX_situation_approach_bg_green
         on_select = {
             set_situation_flag = crystallization_approach_selected
@@ -239,7 +239,7 @@ originium_resonance_situation = {
 
     approach = { # Mutation Approach
         name = originium_resonance_approach_assimilation
-        icon = GFX_situation_icon_mutation
+        icon = GFX_situation_icon_assimilation
         icon_background = GFX_situation_approach_bg_green
         on_select = {
             set_situation_flag = assimilation_approach_selected
@@ -438,7 +438,7 @@ originium_resonance_situation_hive = {
 
     approach = {
         name = originium_resonance_approach_resonance
-        icon = GFX_situation_icon_purity
+        icon = GFX_situation_icon_resonance
         icon_background = GFX_situation_approach_bg_green
         on_select = {
             set_situation_flag = resonance_approach_selected
@@ -487,7 +487,7 @@ originium_resonance_situation_hive = {
 
     approach = {
         name = originium_resonance_approach_crystallization
-        icon = GFX_situation_icon_cloning
+        icon = GFX_situation_icon_crystallization
         icon_background = GFX_situation_approach_bg_green
         on_select = {
             set_situation_flag = crystallization_approach_selected
@@ -556,7 +556,7 @@ originium_resonance_situation_hive = {
 
     approach = {
         name = originium_resonance_approach_assimilation
-        icon = GFX_situation_icon_mutation
+        icon = GFX_situation_icon_assimilation
         icon_background = GFX_situation_approach_bg_green
         on_select = {
             set_situation_flag = assimilation_approach_selected

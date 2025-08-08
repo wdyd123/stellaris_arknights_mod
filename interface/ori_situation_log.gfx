@@ -1,0 +1,16 @@
+spriteTypes = {
+    spriteType = {
+        name = "GFX_situation_icon_crystallization"
+        texturefile = "gfx/interface/icons/situation_log/situations/approaches/situation_icon_crystallization.dds"
+    }
+
+    spriteType = {
+        name = "GFX_situation_icon_assimilation"
+        texturefile = "gfx/interface/icons/situation_log/situations/approaches/situation_icon_assimilation.dds"
+    }
+
+    spriteType = {
+        name = "GFX_situation_icon_resonance"
+        texturefile = "gfx/interface/icons/situation_log/situations/approaches/situation_icon_resonance.dds"
+    }
+}

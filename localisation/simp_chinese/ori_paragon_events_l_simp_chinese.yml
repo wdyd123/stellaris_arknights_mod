@@ -1,0 +1,9 @@
+﻿l_simp_chinese:
+ paragon.6000.desc.ap_originium_resonance: "\"$paragon.6000.desc$\n\n再或者，我们的源石专家提出了另一个方案。尽管花费颇高，但可以用无限的结晶体来承载§Y[Ruler.GetTitle][Ruler.GetRegnalName]§!，使[Ruler.GetHimHer]最终实现永生。"
+ paragon.6000.g: "准备石棺。"
+ paragon.6000.g.tooltip: "我们的源石专家将会为§Y[Ruler.GetTitle][Ruler.GetRegnalName]§!准备延续寿命用的结晶体。"
+ paragon.60251.name: "更完美之躯"
+ paragon.60251.desc: "结晶流程和唤醒程序已经顺利完成。我们的领袖被救活了。\n\n然而，许多人表达了对[Ruler.GetHisHer]态度不可预料变化的担忧。§Y[Ruler.GetTitle][Ruler.GetRegnalName]§!迷恋于新的躯体，[Ruler.GetHisHer]产生了对我们人民下一个进化阶段的执念。[Ruler.GetSheHe]动用了相当多的资源来完善大众的源石映射。"
+ paragon.60251.a: "[Ruler.GetName]现在已经是一个完美的结晶原体了。"
+ leader_trait_the_originium_luminary: "完美映射"
+ leader_trait_the_originium_luminary_desc: "无尽的备份使这位领袖获得了永生。只要现在的皮囊损坏或老化，就将有十几个新的皮囊取而代之。这导致了对完美映射的痴迷。"

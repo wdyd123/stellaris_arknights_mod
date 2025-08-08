@@ -7,13 +7,13 @@ tradition_swap = {
 	inherit_icon = no
 	trigger = {
 		OR = {
-			has_country_flag = genetic_ascension_stage_1_resonance
+			has_country_flag = originium_resonance_stage_1_resonance
 			is_wilderness_empire = yes
 		}
 	}
 
 	inline_script = {
-		script = traditions/tr_resonance_optimized_neurology
+		script = traditions/tr_resonance_neural_tuning
 	}
 	weight = {
 		factor = 1
@@ -26,14 +26,14 @@ tradition_swap = {
 	inherit_name = no
 	inherit_icon = no
 	trigger = {
-		has_country_flag = genetic_ascension_stage_1_crystallization
+		has_country_flag = originium_resonance_stage_1_crystallization
 		NOT = {
 			has_country_flag = clone_army_full_potential
 		}
 	}
 
 	inline_script = {
-		script = traditions/tr_crystallization_genomic_growth
+		script = traditions/tr_crystallization_crystallized_growth
 	}
 	weight = {
 		factor = 1
@@ -42,14 +42,14 @@ tradition_swap = {
 
 # Clone Army Swap
 tradition_swap = {
-	name = tr_crystallization_genomic_growth_clone_army
+	name = tr_crystallization_crystallized_growth_clone_army
 	inherit_name = no
 	inherit_icon = no
 	trigger = {
 		has_country_flag = clone_army_full_potential
 	}
 
-	custom_tooltip_with_modifiers = tr_crystallization_genomic_growth_clone_army_tt
+	custom_tooltip_with_modifiers = tr_crystallization_crystallized_growth_clone_army_tt
 
 	modifier = {
 
@@ -65,7 +65,7 @@ tradition_swap = {
 	inherit_name = no
 	inherit_icon = no
 	trigger = {
-		has_country_flag = genetic_ascension_stage_1_assimilation
+		has_country_flag = originium_resonance_stage_1_assimilation
 	}
 
 	inline_script = {

@@ -1,0 +1,306 @@
+@base_cost = 30
+@city_cost = 50
+@biomass_cost = 50
+
+@wilderness_district_build_long = 480
+@wilderness_district_build_short = 240
+
+
+# Energy (yellow)
+district_photosynthesis_fields = {
+    expansion_planner = yes
+    is_capped_by_modifier = yes
+    base_buildtime = @wilderness_district_build_short
+    inherits_capped_modifiers_from = district_generator
+
+    min_for_deposits_on_planet = 3
+    max_for_deposits_on_planet = 15
+
+    zone_slots = {
+        slot_energy
+    }
+
+    show_on_uncolonized = {
+        uses_district_set = standard
+        exists = from
+        from = {
+            is_wilderness_empire = yes
+            NOT = { has_tradition = tr_purity_finish }
+            NOT = { has_tradition = tr_resonance_finish }
+        }
+    }
+
+    potential = {
+        uses_district_set = standard
+        exists = owner
+        owner = {
+            is_wilderness_empire = yes
+            NOT = { has_tradition = tr_purity_finish }
+            NOT = { has_tradition = tr_resonance_finish }
+        }
+    }
+
+    conversion_ratio = 1
+    convert_to = {
+        district_generator
+        district_generator_uncapped
+        district_photosynthesis_fields_uncapped
+        district_nexus_1
+        district_hive_1
+    }
+
+    resources = {
+        category = planet_districts_generator
+        cost = {
+            minerals = 300
+        }
+        cost = {
+            biomass = @biomass_cost
+        }
+        upkeep = {
+            energy = 1
+        }
+    }
+    planet_modifier = {
+        job_technician_drone_add = @base_rural_district_jobs
+        planet_housing_add = 100
+    }
+
+    triggered_desc = {
+        text = job_photosymbiont_effect_desc
+    }
+
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                has_tradition = tr_prosperity_public_works
+            }
+        }
+        planet_housing_add = 50
+    }
+
+    inline_script = {
+        script = buildings/on_all_wilderness_buildings_districts
+    }
+
+    prerequisites = {
+        tech_power_plant_1
+    }
+
+    ai_resource_production = {
+        energy = 5
+        trigger = {
+            OR = {
+                has_building = building_bioelectric_stimulator_1
+                has_building = building_bioelectric_stimulator_2
+                has_building = building_bioelectric_stimulator_3
+                has_building = building_bioelectric_stimulator_4
+            }
+        }
+    }
+
+    ai_estimate_without_unemployment = yes
+    additional_ai_weight = 10
+}
+
+
+# Mining (red)
+district_hollow_mountains = {
+    expansion_planner = yes
+    is_capped_by_modifier = yes
+    base_buildtime = @wilderness_district_build_short
+    inherits_capped_modifiers_from = district_mining
+
+    min_for_deposits_on_planet = 1
+    max_for_deposits_on_planet = 15
+
+    zone_slots = {
+        slot_minerals
+    }
+
+    show_on_uncolonized = {
+        uses_district_set = standard
+        exists = from
+        from = {
+            is_wilderness_empire = yes
+            NOT = { has_tradition = tr_purity_finish }
+            NOT = { has_tradition = tr_resonance_finish }
+        }
+    }
+
+    potential = {
+        uses_district_set = standard
+        exists = owner
+        owner = {
+            is_wilderness_empire = yes
+            NOT = { has_tradition = tr_purity_finish }
+            NOT = { has_tradition = tr_resonance_finish }
+        }
+    }
+
+    conversion_ratio = 1
+    convert_to = {
+        district_mining_uncapped
+        district_mining
+        district_hollow_mountains_uncapped
+        district_nexus_2
+        district_hive_2
+    }
+
+    resources = {
+        category = planet_districts_mining
+        cost = {
+            minerals = 300
+        }
+        cost = {
+            biomass = @biomass_cost
+        }
+        upkeep = {
+            food = 1
+        }
+    }
+
+
+    planet_modifier = {
+        job_mining_drone_add = @base_rural_district_jobs
+        planet_housing_add = 100
+    }
+
+    triggered_desc = {
+        text = job_grubsymbiont_effect_desc
+    }
+
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                has_tradition = tr_prosperity_public_works
+            }
+        }
+        planet_housing_add = 50
+    }
+
+    prerequisites = {
+        tech_mechanized_mining
+    }
+
+    ai_resource_production = {
+        minerals = 5
+        trigger = {
+            OR = {
+                has_building = building_churning_tunnels_1
+                has_building = building_churning_tunnels_2
+                has_building = building_churning_tunnels_3
+                has_building = building_churning_tunnels_4
+            }
+        }
+    }
+
+    ai_estimate_without_unemployment = yes
+    additional_ai_weight = 10
+}
+
+
+# Farming (green)
+district_orchard_forests = {
+    expansion_planner = yes
+    base_buildtime = @wilderness_district_build_short
+    inherits_capped_modifiers_from = district_farming
+
+    min_for_deposits_on_planet = 3
+    max_for_deposits_on_planet = 15
+
+    zone_slots = {
+        slot_food
+    }
+
+    show_on_uncolonized = {
+        uses_district_set = standard
+        exists = from
+        from = {
+            is_wilderness_empire = yes
+            NOT = { has_tradition = tr_purity_finish }
+            NOT = { has_tradition = tr_resonance_finish }
+        }
+    }
+
+    potential = {
+        uses_district_set = standard
+        exists = owner
+        owner = {
+            is_wilderness_empire = yes
+            NOT = { has_tradition = tr_purity_finish }
+            NOT = { has_tradition = tr_resonance_finish }
+        }
+    }
+
+    allow = {
+        NOT = { has_modifier = resort_colony }
+    }
+
+    conversion_ratio = 1
+    convert_to = {
+        district_farming
+        district_farming_uncapped
+        district_orchard_forests_uncapped
+        district_nexus_3
+        district_hive_3
+    }
+
+    resources = {
+        category = planet_districts_farming
+        cost = {
+            minerals = 300
+        }
+        cost = {
+            biomass = @biomass_cost
+        }
+        upkeep = {
+            energy = 1
+        }
+    }
+
+    planet_modifier = {
+        job_agri_drone_add = @base_rural_district_jobs
+        planet_housing_add = 100
+    }
+
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                has_tradition = tr_prosperity_public_works
+            }
+        }
+        planet_housing_add = 50
+    }
+
+    triggered_desc = {
+        text = job_pollinosymbiont_effect_desc
+    }
+
+    inline_script = {
+        script = buildings/on_all_wilderness_buildings_districts
+    }
+
+    prerequisites = {
+        tech_industrial_farming
+    }
+
+    ai_resource_production = {
+        food = 5
+        trigger = {
+            OR = {
+                has_building = building_massive_growth_1
+                has_building = building_massive_growth_2
+                has_building = building_massive_growth_3
+                has_building = building_massive_growth_4
+            }
+        }
+    }
+
+    ai_estimate_without_unemployment = yes
+    additional_ai_weight = 10
+}
+

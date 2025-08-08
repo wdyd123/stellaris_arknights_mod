@@ -1371,7 +1371,7 @@ situation_event = {
         name = ori_ap.70.a
         event_target:two_for_one_leader = {
             add_trait = {
-                trait = leader_trait_has_backup_clone
+                trait = leader_trait_has_crystallized_clone
             }
         }
         ai_chance = {
@@ -3228,16 +3228,16 @@ country_event = {
         if = {
             limit = {
                 owner = {
-                    has_crystallization_biochemical_composure_tradition = yes
+                    has_crystallization_regenerative_crystallization_tradition = yes
                 }
             }
-            custom_tooltip = crystallization_biochemical_composure_tradition_swap_tt
+            custom_tooltip = crystallization_regenerative_crystallization_tradition_swap_tt
         }
         owner = {
             hidden_effect = {
                 set_country_flag = ori_ap_crystallization
                 advanced_authority_refresh = yes
-                give_backup_clones_effect = yes
+                give_crystallized_clones_effect = yes
             }
         }
     }
@@ -3347,10 +3347,10 @@ country_event = {
         if = {
             limit = {
                 owner = {
-                    has_crystallization_biochemical_composure_tradition = yes
+                    has_crystallization_regenerative_crystallization_tradition = yes
                 }
             }
-            custom_tooltip = crystallization_biochemical_composure_tradition_swap_tt
+            custom_tooltip = crystallization_regenerative_crystallization_tradition_swap_tt
         }
         owner = {
             hidden_effect = {

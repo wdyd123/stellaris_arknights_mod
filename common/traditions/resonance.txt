@@ -72,19 +72,19 @@ tr_resonance_finish = {
     }
 }
 
-tr_resonance_genotype_regeneration = {
+tr_resonance_frequency_regeneration = {
     modifier = {
     }
 
-    custom_tooltip_with_modifiers = tr_resonance_genotype_regeneration_tt
+    custom_tooltip_with_modifiers = tr_resonance_frequency_regeneration_tt
 
     tradition_swap = {
-        name = tr_resonance_genotype_regeneration_wilderness
+        name = tr_resonance_frequency_regeneration_wilderness
         inherit_icon = yes
         trigger = {
             is_wilderness_empire = yes
         }
-        custom_tooltip_with_modifiers = tr_resonance_genotype_regeneration_wilderness_tt
+        custom_tooltip_with_modifiers = tr_resonance_frequency_regeneration_wilderness_tt
     }
 
     ai_weight = {
@@ -92,16 +92,16 @@ tr_resonance_genotype_regeneration = {
     }
 }
 
-tr_resonance_exemplary_genetics = {
+tr_resonance_exemplary_frequencies = {
     possible = {
-        has_tradition = tr_resonance_genotype_regeneration
+        has_tradition = tr_resonance_frequency_regeneration
     }
     modifier = {
         BIOLOGICAL_species_trait_points_add = 6
         BIOLOGICAL_species_trait_picks_add = 2
         modify_species_cost_mult = -0.50
     }
-    custom_tooltip_with_modifiers = tr_resonance_exemplary_genetics_tt
+    custom_tooltip_with_modifiers = tr_resonance_exemplary_frequencies_tt
 
     ai_weight = {
         factor = 5000
@@ -147,7 +147,7 @@ tr_resonance_stage_3_swap = {
 }
 
 # Dummy tradition for tooltip generation
-tr_resonance_optimized_neurology = {
+tr_resonance_neural_tuning = {
     possible = {
         # Called via tr_stage_1_tradition_swaps
         always = no
@@ -155,7 +155,7 @@ tr_resonance_optimized_neurology = {
 
     # Effects in the inline script for tooltip generation
     inline_script = {
-        script = traditions/tr_resonance_optimized_neurology
+        script = traditions/tr_resonance_neural_tuning
     }
 
     ai_weight = {
@@ -181,7 +181,7 @@ tr_resonance_heightened_attributes = {
 }
 
 # Dummy tradition for tooltip generation
-tr_resonance_imperfection_remediation = {
+tr_resonance_buzz_elimination = {
     possible = {
         # Called via tr_stage_3_tradition_swaps
         always = no
@@ -189,11 +189,11 @@ tr_resonance_imperfection_remediation = {
 
     # Effects in the inline script for tooltip generation
     inline_script = {
-        script = traditions/tr_resonance_imperfection_remediation
+        script = traditions/tr_resonance_buzz_elimination
     }
 
     tradition_swap = {
-        name = tr_resonance_imperfection_remediation_xenophile
+        name = tr_resonance_buzz_elimination_xenophile
         inherit_name = yes
         inherit_icon = yes
         trigger = {
@@ -206,7 +206,7 @@ tr_resonance_imperfection_remediation = {
         }
         # Effects in the inline script for tooltip generation
         inline_script = {
-            script = traditions/tr_resonance_imperfection_remediation_xenophile
+            script = traditions/tr_resonance_buzz_elimination_xenophile
         }
         weight = {
             factor = 1
@@ -214,14 +214,14 @@ tr_resonance_imperfection_remediation = {
     }
 
     tradition_swap = {
-        name = tr_resonance_imperfection_remediation_wilderness
+        name = tr_resonance_buzz_elimination_wilderness
         inherit_icon = yes
         trigger = {
             is_wilderness_empire = yes
         }
         # Effects in the inline script for tooltip generation
         inline_script = {
-            script = traditions/tr_resonance_imperfection_remediation_wilderness
+            script = traditions/tr_resonance_buzz_elimination_wilderness
         }
         weight = {
             factor = 1

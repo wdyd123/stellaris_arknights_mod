@@ -1,0 +1,7 @@
+custom_tooltip_with_modifiers = tr_crystallization_regenerative_crystallization_tt
+
+on_enabled = {
+	hidden_effect = {
+		give_crystallized_clones_effect = yes
+	}
+}

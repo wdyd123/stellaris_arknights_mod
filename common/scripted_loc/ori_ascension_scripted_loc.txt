@@ -110,16 +110,16 @@ defined_text = {
             is_scope_valid = yes
             is_regular_empire = yes
         }
-        localization_key = healthcare_is_genomic_researcher_tt
+        localization_key = healthcare_is_originium_researcher_tt
     }
     text = {
         trigger = {
             is_scope_valid = yes
             is_hive_empire = yes
         }
-        localization_key = spawning_is_genomic_researcher_tt
+        localization_key = spawning_is_originium_researcher_tt
     }
-    default = healthcare_is_genomic_researcher_tt
+    default = healthcare_is_originium_researcher_tt
 }
 
 defined_text = {
@@ -129,16 +129,16 @@ defined_text = {
             is_scope_valid = yes
             is_regular_empire = yes
         }
-        localization_key = job_genomic_researcher_with_icon
+        localization_key = job_originium_researcher_with_icon
     }
     text = {
         trigger = {
             is_scope_valid = yes
             is_hive_empire = yes
         }
-        localization_key = job_genomic_drone_with_icon
+        localization_key = job_originium_drone_with_icon
     }
-    default = job_genomic_researcher_with_icon
+    default = job_originium_researcher_with_icon
 }
 
 defined_text = {
@@ -148,16 +148,16 @@ defined_text = {
             is_scope_valid = yes
             is_regular_empire = yes
         }
-        localization_key = job_genomic_researcher_plural_with_icon
+        localization_key = job_originium_researcher_plural_with_icon
     }
     text = {
         trigger = {
             is_scope_valid = yes
             is_hive_empire = yes
         }
-        localization_key = job_genomic_drone_plural_with_icon
+        localization_key = job_originium_drone_plural_with_icon
     }
-    default = job_genomic_researcher_plural_with_icon
+    default = job_originium_researcher_plural_with_icon
 }
 
 defined_text = {
@@ -167,12 +167,12 @@ defined_text = {
             exists = owner
             owner = {
                 is_crystallization_authority = yes
-                has_crystallization_biochemical_composure_tradition = yes
+                has_crystallization_regenerative_crystallization_tradition = yes
             }
         }
-        localization_key = leader_trait_has_backup_clone_improved_desc
+        localization_key = leader_trait_has_crystallized_clone_improved_desc
     }
-    default = leader_trait_has_backup_clone_default_desc
+    default = leader_trait_has_crystallized_clone_default_desc
 }
 
 defined_text = {
@@ -186,9 +186,9 @@ defined_text = {
                 is_imperial_authority = yes
             }
         }
-        localization_key = leader_trait_backup_clone_imperial
+        localization_key = leader_trait_crystallized_clone_imperial
     }
-    default = leader_trait_backup_clone_default
+    default = leader_trait_crystallized_clone_default
 }
 
 defined_text = {
@@ -202,9 +202,9 @@ defined_text = {
                 is_imperial_authority = yes
             }
         }
-        localization_key = leader_trait_backup_clone_imperial_plural
+        localization_key = leader_trait_crystallized_clone_imperial_plural
     }
-    default = leader_trait_backup_clone_default_plural
+    default = leader_trait_crystallized_clone_default_plural
 }
 
 defined_text = {
@@ -218,9 +218,9 @@ defined_text = {
                 is_imperial_authority = yes
             }
         }
-        localization_key = leader_trait_backup_clone_imperial_desc
+        localization_key = leader_trait_crystallized_clone_imperial_desc
     }
-    default = leader_trait_backup_clone_default_desc
+    default = leader_trait_crystallized_clone_default_desc
 }
 
 defined_text = {
@@ -243,56 +243,56 @@ defined_text = {
     name = GetDegradationLevel
     text = {
         trigger = {
-            has_trait = leader_trait_backup_clone
+            has_trait = leader_trait_crystallized_clone
             leader_has_reduced_clone_degradation = yes
         }
-        localization_key = backup_clone_0_degradation
+        localization_key = crystallized_clone_0_degradation
     }
     text = {
         trigger = {
             OR = {
                 AND = {
-                    has_trait = leader_trait_backup_clone
+                    has_trait = leader_trait_crystallized_clone
                     leader_has_reduced_clone_degradation = no
                 }
                 AND = {
-                    has_trait = leader_trait_backup_clone_2
+                    has_trait = leader_trait_crystallized_clone_2
                     leader_has_reduced_clone_degradation = yes
                 }
             }
         }
-        localization_key = backup_clone_1_degradation
+        localization_key = crystallized_clone_1_degradation
     }
     text = {
         trigger = {
             OR = {
                 AND = {
-                    has_trait = leader_trait_backup_clone_2
+                    has_trait = leader_trait_crystallized_clone_2
                     leader_has_reduced_clone_degradation = no
                 }
                 AND = {
-                    has_trait = leader_trait_backup_clone_3
+                    has_trait = leader_trait_crystallized_clone_3
                     leader_has_reduced_clone_degradation = yes
                 }
             }
         }
-        localization_key = backup_clone_2_degradation
+        localization_key = crystallized_clone_2_degradation
     }
     text = {
         trigger = {
-            has_trait = leader_trait_backup_clone_3
+            has_trait = leader_trait_crystallized_clone_3
             leader_has_reduced_clone_degradation = no
         }
-        localization_key = backup_clone_3_degradation
+        localization_key = crystallized_clone_3_degradation
     }
-    default = backup_clone_1_degradation
+    default = crystallized_clone_1_degradation
 }
 
 defined_text = {
     name = GetLeaderSurvivedReason
     text = {
         trigger = {
-            leader_backup_clone_can_activate = yes
+            leader_crystallized_clone_can_activate = yes
         }
         localization_key = LEADER_SURVIVED_REASON_CLONE
     }
@@ -303,7 +303,7 @@ defined_text = {
     name = GetLeaderShipSurvivedReason
     text = {
         trigger = {
-            leader_backup_clone_can_activate = yes
+            leader_crystallized_clone_can_activate = yes
         }
         localization_key = LEADER_SURVIVED_REASON_CLONE
     }
@@ -380,7 +380,7 @@ defined_text= {
         }
         localization_key = BLANK_STRING
     }
-    default = tr_crystallization_biochemical_composure_swap_tt
+    default = tr_crystallization_regenerative_crystallization_swap_tt
 }
 
 defined_text = {

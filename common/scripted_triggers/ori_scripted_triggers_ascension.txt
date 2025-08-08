@@ -77,25 +77,25 @@ planet_has_cloning_facility = {
         has_active_building = building_ancient_cryo_chamber
         has_active_building = building_fe_clinic_1
         has_active_building = building_fe_clinic_2
-        has_active_building = building_genomic_facility
+        has_active_building = building_originium_facility
         has_active_building = building_originium_facility
         has_active_building = building_crystallize_vats
 
     }
 }
 
-country_can_have_backup_clones = {
+country_can_have_crystallized_clones = {
     OR = {
         is_crystallization_authority = yes
-        has_crystallization_biochemical_composure_tradition = yes
+        has_crystallization_regenerative_crystallization_tradition = yes
     }
 }
 
-leader_can_have_backup_clone = {
+leader_can_have_crystallized_clone = {
     is_robotic_species = no
     exists = owner
     owner = {
-        country_can_have_backup_clones = yes
+        country_can_have_crystallized_clones = yes
         any_owned_planet = {
             planet_has_cloning_facility = yes
         }
@@ -175,35 +175,37 @@ leader_has_reduced_clone_degradation = {
     }
 }
 
-leader_backup_clone_can_activate = {
-    has_trait = leader_trait_has_backup_clone
+leader_crystallized_clone_can_activate = {
+    has_trait = leader_trait_has_crystallized_clone
 }
 
-can_perform_genetic_assimilation = {
-    OR = {
-        has_active_tradition = tr_genetics_creation
-        has_active_tradition = tr_resonance_genotype_regeneration
-        has_active_tradition = tr_resonance_genotype_regeneration_wilderness
-        has_active_tradition = tr_crystallization_evolutionary_extrapolation
-        has_tradition = tr_assimilation_planned_polymorphism
-        has_valid_civic = civic_hive_bodysnatcher
-    }
-}
+# can_perform_genetic_assimilation = {
+#     OR = {
+#         has_active_tradition = tr_genetics_creation
+#         has_active_tradition = tr_resonance_frequency_regeneration
+#         has_active_tradition = tr_resonance_frequency_regeneration_wilderness
+#         has_active_tradition = tr_crystallization_evolutionary_extrapolation
+#         has_tradition = tr_assimilation_planned_polymorphism
+#         has_valid_civic = civic_hive_bodysnatcher
+#     }
+# }
+
+
 
 has_resonance_heightened_attributes_tradition = {
     has_country_flag = originium_resonance_stage_2_resonance
     has_originium_stage_2_tradition = yes
 }
 
-has_resonance_imperfection_remediation_tradition = {
+has_resonance_buzz_elimination_tradition = {
     custom_tooltip = {
-        text = has_resonance_imperfection_remediation_tradition_tt
+        text = has_resonance_buzz_elimination_tradition_tt
         has_country_flag = originium_resonance_stage_3_resonance
         has_originium_stage_3_tradition = yes
     }
 }
 
-has_crystallization_genomic_growth_tradition = {
+has_crystallization_crystallized_growth_tradition = {
     OR = {
         has_country_flag = originium_resonance_stage_1_crystallization
         has_country_flag = clone_army_full_potential
@@ -219,7 +221,7 @@ has_crystallization_artificial_population_tradition = {
     has_originium_stage_2_tradition = yes
 }
 
-has_crystallization_biochemical_composure_tradition = {
+has_crystallization_regenerative_crystallization_tradition = {
     OR = {
         has_country_flag = originium_resonance_stage_3_crystallization
         has_country_flag = clone_army_full_potential
@@ -274,5 +276,101 @@ is_assimilation_authority = {
 
 has_uncapped_wilderness_districts = {
     is_wilderness_empire = yes
-    has_tradition = tr_resonance_finish
+    OR = {
+        has_tradition = tr_purity_finish
+
+        has_tradition = tr_resonance_finish
+
+    }
 }
+#
+# has_resonance_heightened_attributes_tradition = {
+#     has_country_flag = originium_resonance_stage_2_resonance
+#     has_genetic_stage_2_tradition = yes
+#     has_resonance_heightened_attributes_tradition = yes
+# }
+#
+# has_resonance_buzz_elimination_tradition = {
+#     custom_tooltip = {
+#         text = has_resonance_buzz_elimination_tradition_tt
+#         has_country_flag = originium_resonance_stage_3_resonance
+#         has_genetic_stage_3_tradition = yes
+#     }
+# }
+#
+# has_crystallization_crystallized_growth_tradition = {
+#     OR = {
+#         has_country_flag = originium_resonance_stage_1_crystallization
+#         has_country_flag = clone_army_full_potential
+#     }
+#     has_genetic_stage_1_tradition = yes
+# }
+#
+# has_crystallization_artificial_population_tradition = {
+#     OR = {
+#         has_country_flag = originium_resonance_stage_2_crystallization
+#         has_country_flag = clone_army_full_potential
+#     }
+#     has_genetic_stage_2_tradition = yes
+# }
+#
+# has_crystallization_regenerative_crystallization_tradition = {
+#     OR = {
+#         has_country_flag = originium_resonance_stage_3_crystallization
+#         has_country_flag = clone_army_full_potential
+#     }
+#     has_genetic_stage_3_tradition = yes
+# }
+#
+# has_assimilation_environmental_integration_tradition = {
+#     OR = {
+#         has_country_flag = originium_resonance_stage_1_assimilation
+#         has_origin = origin_evolutionary_predators
+#     }
+#     has_genetic_stage_1_tradition = yes
+# }
+#
+# has_assimilation_somatic_subversiveness_tradition = {
+#     OR = {
+#         has_country_flag = originium_resonance_stage_2_assimilation
+#         has_origin = origin_evolutionary_predators
+#     }
+#     has_genetic_stage_2_tradition = yes
+# }
+#
+# has_assimilation_nucleotide_isolation_tradition = {
+#     custom_tooltip = {
+#         text = has_assimilation_nucleotide_isolation_tradition_tt
+#         OR = {
+#             has_country_flag = originium_resonance_stage_3_assimilation
+#             has_origin = origin_evolutionary_predators
+#         }
+#         has_genetic_stage_3_tradition = yes
+#     }
+# }
+#
+# has_genetically_ascended = {
+#     OR = {
+#         has_tradition = tr_genetics_finish
+#         has_tradition = tr_resonance_finish
+#         has_tradition = tr_crystallization_finish
+#         has_tradition = tr_assimilation_finish
+#     }
+# }
+#
+# is_resonance_authority = {
+#     has_country_flag = bio_resonance
+# }
+#
+# is_crystallization_authority = {
+#     has_country_flag = bio_crystallization
+# }
+#
+# is_assimilation_authority = {
+#     has_country_flag = bio_assimilation
+# }
+#
+# has_uncapped_wilderness_districts = {
+#     is_wilderness_empire = yes
+#     has_tradition = tr_resonance_finish
+# }

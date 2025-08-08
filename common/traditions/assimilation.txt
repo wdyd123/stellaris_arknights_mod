@@ -10,6 +10,7 @@ tr_assimilation_adopt = {
             species = {
                 change_species_characteristics = {
                     add_trait = trait_auto_mod_originium_II
+                    #noinspection ParadoxScriptUnresolvedExpression
                     add_traits_at_start_of_list = yes
                 }
             }

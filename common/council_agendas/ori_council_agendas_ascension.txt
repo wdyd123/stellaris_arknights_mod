@@ -238,6 +238,7 @@ agenda_assimilation_divergence = {
                     NOR = {
                     # ?
                         has_trait = trait_adaptive_mutations
+                        has_trait = trait_auto_mod_originium_II
                         has_trait = trait_malleable_genes
                     }
                     OR = {
@@ -247,7 +248,7 @@ agenda_assimilation_divergence = {
                     }
                 }
                 change_species_characteristics = {
-                    add_trait = trait_adaptive_mutations
+                    add_trait = trait_auto_mod_originium_II
                     add_traits_at_start_of_list = yes
                 }
             }

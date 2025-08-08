@@ -1,7 +1,8 @@
+namespace = ori_deficit
 situation_event = {
-    id = deficit.230
-    title = deficit.230.name
-    desc = deficit.230.desc
+    id = ori_deficit.230
+    title = ori_deficit.230.name
+    desc = ori_deficit.230.desc
     picture = GFX_evt_deficit
     show_sound = event_bad_omen
     is_triggered_only = yes

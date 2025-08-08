@@ -294,7 +294,7 @@ tech_epigenetic_triggers = {
 }
 
 #Cloning
-tech_cloning = {
+tech_crystallization = {
     cost = @tier2cost2
     area = society
     tier = 2
@@ -356,7 +356,7 @@ tech_gene_banks = {
     tier = 2
     category = { biology }
     is_rare = yes
-    prerequisites = { "tech_cloning" }
+    prerequisites = { "tech_crystallization" }
     weight = @tier2weight3
 
     potential = {

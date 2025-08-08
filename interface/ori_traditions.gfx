@@ -1,0 +1,261 @@
+spriteTypes = {
+    # BIOGENESIS - FLEXIBLE TRADITIONS
+
+    # STAGE ONE
+    spriteType = {
+        name = "GFX_tr_resonance_stage_1_swap"
+        textureFile = "gfx/interface/icons/traditions/tr_stage_1_swap.dds"
+    }
+
+    spriteType = {
+        name = "GFX_tr_crystallization_stage_1_swap"
+        textureFile = "gfx/interface/icons/traditions/tr_stage_1_swap.dds"
+    }
+
+    spriteType = {
+        name = "GFX_tr_assimilation_stage_1_swap"
+        textureFile = "gfx/interface/icons/traditions/tr_stage_1_swap.dds"
+    }
+
+    # STAGE TWO
+    spriteType = {
+        name = "GFX_tr_resonance_stage_2_swap"
+        textureFile = "gfx/interface/icons/traditions/tr_stage_2_swap.dds"
+    }
+
+    spriteType = {
+        name = "GFX_tr_crystallization_stage_2_swap"
+        textureFile = "gfx/interface/icons/traditions/tr_stage_2_swap.dds"
+    }
+
+    spriteType = {
+        name = "GFX_tr_assimilation_stage_2_swap"
+        textureFile = "gfx/interface/icons/traditions/tr_stage_2_swap.dds"
+    }
+
+    # STAGE THREE
+    spriteType = {
+        name = "GFX_tr_resonance_stage_3_swap"
+        textureFile = "gfx/interface/icons/traditions/tr_stage_3_swap.dds"
+    }
+
+    spriteType = {
+        name = "GFX_tr_crystallization_stage_3_swap"
+        textureFile = "gfx/interface/icons/traditions/tr_stage_3_swap.dds"
+    }
+
+    spriteType = {
+        name = "GFX_tr_assimilation_stage_3_swap"
+        textureFile = "gfx/interface/icons/traditions/tr_stage_3_swap.dds"
+    }
+
+    # BIOGENESIS - resonance
+
+    spriteType = {
+        name = "GFX_tr_resonance_exemplary_frequencies"
+        textureFile = "gfx/interface/icons/traditions/tradition_resonance_exemplary_frequencies.dds"
+    }
+
+    spriteType = {
+        name = "GFX_tr_resonance_frequency_regeneration"
+        textureFile = "gfx/interface/icons/traditions/tradition_resonance_frequency_regeneration.dds"
+    }
+
+    spriteType = {
+        name = "GFX_tr_resonance_heightened_attributes"
+        textureFile = "gfx/interface/icons/traditions/tradition_resonance_heightened_attributes.dds"
+    }
+
+    spriteType = {
+        name = "GFX_tr_resonance_buzz_elimination"
+        textureFile = "gfx/interface/icons/traditions/tradition_resonance_buzz_elimination.dds"
+    }
+
+    spriteType = {
+        name = "GFX_tr_resonance_buzz_elimination_xenophile"
+        textureFile = "gfx/interface/icons/traditions/tradition_resonance_buzz_elimination_xenophile.dds"
+    }
+
+    spriteType = {
+        name = "GFX_tr_resonance_buzz_elimination_wilderness"
+        textureFile = "gfx/interface/icons/traditions/tradition_resonance_buzz_elimination_wilderness.dds"
+    }
+
+    spriteType = {
+        name = "GFX_tr_resonance_neural_tuning"
+        textureFile = "gfx/interface/icons/traditions/tradition_resonance_neural_tuning.dds"
+    }
+
+    spriteType = {
+        name = "GFX_tr_originium_stage_1_resonance_swap"
+        textureFile = "gfx/interface/icons/traditions/tradition_resonance_neural_tuning.dds"
+    }
+
+    spriteType = {
+        name = "GFX_tr_originium_stage_2_resonance_swap"
+        textureFile = "gfx/interface/icons/traditions/tradition_resonance_heightened_attributes.dds"
+    }
+
+    spriteType = {
+        name = "GFX_tr_originium_stage_3_resonance_swap"
+        textureFile = "gfx/interface/icons/traditions/tradition_resonance_buzz_elimination.dds"
+    }
+
+    # BIOGENESIS - crystallization
+
+    spriteType = {
+        name = "GFX_tr_crystallization_crystallized_growth"
+        textureFile = "gfx/interface/icons/traditions/tradition_crystallization_crystallized_growth.dds"
+    }
+
+    spriteType = {
+        name = "GFX_tr_crystallization_crystallized_growth_clone_army"
+        textureFile = "gfx/interface/icons/traditions/tradition_crystallization_crystallized_growth.dds"
+    }
+
+    spriteType = {
+        name = "GFX_tr_crystallization_evolutionary_extrapolation"
+        textureFile = "gfx/interface/icons/traditions/tradition_crystallization_evolutionary_extrapolation.dds"
+    }
+
+    spriteType = {
+        name = "GFX_tr_crystallization_somatic_synthesization"
+        textureFile = "gfx/interface/icons/traditions/tradition_crystallization_somatic_synthesization.dds"
+    }
+
+    spriteType = {
+        name = "GFX_tr_crystallization_artificial_population"
+        textureFile = "gfx/interface/icons/traditions/tradition_crystallization_artificial_population.dds"
+    }
+
+    spriteType = {
+        name = "GFX_tr_crystallization_artificial_population_clone_army"
+        textureFile = "gfx/interface/icons/traditions/tradition_crystallization_artificial_population.dds"
+    }
+
+    spriteType = {
+        name = "GFX_tr_crystallization_regenerative_crystallization"
+        textureFile = "gfx/interface/icons/traditions/tradition_crystallization_regenerative_crystallization.dds"
+    }
+
+    spriteType = {
+        name = "GFX_tr_crystallization_regenerative_crystallization_clones"
+        textureFile = "gfx/interface/icons/traditions/tradition_crystallization_regenerative_crystallization.dds"
+    }
+
+    spriteType = {
+        name = "GFX_tr_crystallization_regenerative_crystallization_clone_army"
+        textureFile = "gfx/interface/icons/traditions/tradition_crystallization_regenerative_crystallization.dds"
+    }
+
+    spriteType = {
+        name = "GFX_tr_crystallization_regenerative_crystallization_clones_clone_army"
+        textureFile = "gfx/interface/icons/traditions/tradition_crystallization_regenerative_crystallization.dds"
+    }
+
+    spriteType = {
+        name = "GFX_tr_originium_stage_1_crystallization_swap"
+        textureFile = "gfx/interface/icons/traditions/tradition_crystallization_crystallized_growth.dds"
+    }
+
+    spriteType = {
+        name = "GFX_tr_originium_stage_2_crystallization_swap"
+        textureFile = "gfx/interface/icons/traditions/tradition_crystallization_artificial_population.dds"
+    }
+
+    spriteType = {
+        name = "GFX_tr_originium_stage_3_crystallization_swap"
+        textureFile = "gfx/interface/icons/traditions/tradition_crystallization_regenerative_crystallization.dds"
+    }
+
+    # BIOGENESIS - assimilation
+
+    spriteType = {
+        name = "GFX_tr_assimilation_environmental_integration"
+        textureFile = "gfx/interface/icons/traditions/tradition_assimilation_environmental_integration.dds"
+    }
+
+    spriteType = {
+        name = "GFX_tr_assimilation_environmental_integration_evo_pred"
+        textureFile = "gfx/interface/icons/traditions/tradition_assimilation_environmental_integration.dds"
+    }
+
+    spriteType = {
+        name = "GFX_tr_assimilation_planned_polymorphism"
+        textureFile = "gfx/interface/icons/traditions/tradition_assimilation_planned_polymorphism.dds"
+    }
+
+    spriteType = {
+        name = "GFX_tr_assimilation_somatic_subversiveness"
+        textureFile = "gfx/interface/icons/traditions/tradition_assimilation_somatic_subversiveness.dds"
+    }
+
+    spriteType = {
+        name = "GFX_tr_assimilation_somatic_subversiveness_evo_pred"
+        textureFile = "gfx/interface/icons/traditions/tradition_assimilation_somatic_subversiveness.dds"
+    }
+
+    spriteType = {
+        name = "GFX_tr_assimilation_nucleotide_isolation"
+        textureFile = "gfx/interface/icons/traditions/tradition_assimilation_nucleotide_isolation.dds"
+    }
+
+    spriteType = {
+        name = "GFX_tr_assimilation_nucleotide_isolation_evo_pred"
+        textureFile = "gfx/interface/icons/traditions/tradition_assimilation_nucleotide_isolation.dds"
+    }
+
+
+    spriteType = {
+        name = "GFX_tr_assimilation_unnatural_selection"
+        textureFile = "gfx/interface/icons/traditions/tradition_assimilation_unnatural_selection.dds"
+    }
+
+    spriteType = {
+        name = "GFX_tr_originium_stage_1_assimilation_swap"
+        textureFile = "gfx/interface/icons/traditions/tradition_assimilation_environmental_integration.dds"
+    }
+
+    spriteType = {
+        name = "GFX_tr_originium_stage_2_assimilation_swap"
+        textureFile = "gfx/interface/icons/traditions/tradition_assimilation_somatic_subversiveness.dds"
+    }
+
+    spriteType = {
+        name = "GFX_tr_originium_stage_3_assimilation_swap"
+        textureFile = "gfx/interface/icons/traditions/tradition_assimilation_nucleotide_isolation.dds"
+    }
+
+    # tile icons
+    spriteType ={
+        name = "GFX_tradition_category_bg_tradition_resonance"
+        textureFile = "gfx/interface/tiles/tradition_category_tile_resonance.dds"
+    }
+
+    spriteType ={
+        name = "GFX_tradition_category_bg_tradition_crystallization"
+        textureFile = "gfx/interface/tiles/tradition_category_tile_crystallization.dds"
+    }
+
+    spriteType ={
+        name = "GFX_tradition_category_bg_tradition_assimilation"
+        textureFile = "gfx/interface/tiles/tradition_category_tile_assimilation.dds"
+    }
+
+    # Tree Icons
+    spriteType = {
+        name = "GFX_tradition_category_icon_tradition_resonance"
+        textureFile = gfx/interface/icons/traditions/tree_icons/tradition_icon_resonance.dds
+    }
+
+    spriteType = {
+        name = "GFX_tradition_category_icon_tradition_crystallization"
+        textureFile = gfx/interface/icons/traditions/tree_icons/tradition_icon_crystallization.dds
+    }
+
+    spriteType = {
+        name = "GFX_tradition_category_icon_tradition_assimilation"
+        textureFile = gfx/interface/icons/traditions/tree_icons/tradition_icon_assimilation.dds
+    }
+
+}

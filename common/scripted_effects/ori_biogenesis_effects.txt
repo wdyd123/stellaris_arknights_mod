@@ -1,0 +1,143 @@
+give_crystallized_clones_effect = {
+    every_owned_leader = {
+        limit = {
+            NOR = {
+                is_gestalt_node = yes
+                is_robotic_species = yes
+                has_trait = leader_trait_ruler_hive_mind
+                has_trait = leader_trait_has_crystallized_clone
+            }
+        }
+        give_trait_no_notify_ignore_autocracy_restriction = {
+            TRAIT = leader_trait_has_crystallized_clone
+        }
+    }
+    every_pool_leader = {
+        limit = {
+            is_robotic_species = no
+            NOT = {
+                has_trait = leader_trait_has_crystallized_clone
+            }
+        }
+        random_list = {
+            75 = {
+                # Base 75% chance of nothing
+                modifier = {
+                    factor = 0
+                    root = {
+                        is_crystallization_authority = yes
+                        has_crystallization_regenerative_crystallization_tradition = yes
+                    }
+                }
+            }
+            25 = {
+                add_trait = {
+                    trait = leader_trait_has_crystallized_clone
+                    show_message = no
+                }
+            }
+        }
+    }
+    create_message = {
+        type = MESSAGE_ALL_GAINED_TRAIT
+        localization = MESSAGE_ALL_GAINED_TRAIT_DESC
+        days = @toast_message_days
+        variable = {
+            type = key
+            value = leader_trait_has_crystallized_clone
+            localization = TRAIT
+        }
+        variable = {
+            key = TRAIT_KEY
+            value = leader_trait_has_crystallized_clone
+        }
+        variable = {
+            key = "border"
+            value = "GFX_invisible"
+        }
+    }
+}
+
+create_crystallized_clone = {
+    clone_leader = {
+        target = from
+        background_planet = event_target:clone_background_planet
+        skip_background_generation = yes
+        custom_description = crystallized_clone_background
+        leader_age_min = 2
+        leader_age_max = 5
+        effect = {
+            if = {
+                limit = {
+                    NAND = {
+                        root = {
+                            is_crystallization_authority = yes
+                            is_imperial_authority = yes
+                        }
+                        from = {
+                            is_ruler = yes
+                        }
+                    }
+                }
+                remove_trait = leader_trait_has_crystallized_clone
+                switch = {
+                    trigger = has_trait
+                    leader_trait_crystallized_clone = {
+                        give_trait_no_notify_ignore_autocracy_restriction = {
+                            TRAIT = leader_trait_crystallized_clone_2
+                        }
+                    }
+                    leader_trait_crystallized_clone_2 = {
+                        give_trait_no_notify_ignore_autocracy_restriction = {
+                            TRAIT = leader_trait_crystallized_clone_3
+                        }
+                    }
+                    default = {
+                        give_trait_no_notify_ignore_autocracy_restriction = {
+                            TRAIT = leader_trait_crystallized_clone
+                        }
+                    }
+                }
+            }
+            else = {
+                give_trait_no_notify_ignore_autocracy_restriction = {
+                    TRAIT = leader_trait_crystallized_clone
+                }
+                root = {
+                    assign_leader = prev
+                }
+            }
+            set_years_served = from
+            restore_leader_location = yes
+            # Regulated Acadia prevents excessive crystallization
+            if = {
+                limit = {
+                    root = {
+                        is_crystallization_authority = yes
+                        is_democratic_authority = yes
+                    }
+                    has_trait_tier1or2or3 = { TRAIT = leader_trait_crystallized_clone }
+                }
+                set_leader_flag = ignore_country_clone_pulse
+            }
+            # If the Regenerative Cloning tradition is taken, clones can have clones
+            if = {
+                limit = {
+                    NOT = {
+                        has_leader_flag = ignore_country_clone_pulse
+                    }
+                    root = {
+                        has_country_flag = originium_resonance_stage_3_crystallization
+                        is_crystallization_authority = yes
+                    }
+                }
+                set_leader_flag = ignore_country_clone_pulse
+                leader_event = {
+                    id = ori_ap.5002
+                    days = 1080
+                    random = 720
+                }
+            }
+        }
+    }
+}

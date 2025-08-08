@@ -4,20 +4,20 @@ leader_election_weight = {
     # Purity Elections
     modifier = {
         custom_tooltip = {
-            success_text = concept_genetic_purity
+            success_text = concept_originium_resonated
             owner = {
-                is_purity_authority = yes
+                is_resonance_authority = yes
             }
             species = {
-                is_variable_set = species_traits_purity_count
+                is_variable_set = species_traits_resonance_count
             }
         }
-        add = species.value:species_purity_times_ten
+        add = species.value:species_resonance_times_ten
     }
     # Resonance Elections
     modifier = {
         custom_tooltip = {
-            success_text = concept_genetic_purity
+            success_text = concept_originium_resonated
             owner = {
                 is_resonance_authority = yes
             }

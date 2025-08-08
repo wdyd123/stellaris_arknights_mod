@@ -2,6 +2,7 @@ originium_researcher = { # Normal empire
     category = specialist
     swappable_data = {
         default = {
+            icon = originium_researcher
             condition_string = SPECIALIST_JOB_TRIGGER
             building_icon = building_originium_facility
         }
@@ -13,6 +14,7 @@ originium_drone = { # Hive empire
     category = complex_drone
     swappable_data = {
         default = {
+            icon = originium_researcher
             condition_string = DRONE_JOB_TRIGGER
             building_icon = building_originium_facility
         }

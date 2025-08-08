@@ -1,0 +1,1939 @@
+# These may be overwitten in an "extendable" manner, meaning (for example) you can create a second "auth_democratic" with extra swaps in it.
+# WARNING: The extend functionality breaks if you make changes in runtime and will require a restart to work correctly.
+#auth_example = {
+#	potential = {}										# requirements list, see ../readme_requirements.txt
+#	possible = {}										# requirements list, see ../readme_requirements.txt
+#	random_weight = { value = 1 }						# random weight, no scope; default: 1
+#
+#	traits = { trait = tait1 trait = tait2 }			# force listed traits on the founder species (only verified for empire designs, no effect after game start)
+#
+#	has_heir = yes / no									# default: no; you can either have a hereditary system (has_heir = yes), or an election system (has_heir = no)
+#	election_type = oligarchic / democratic	/ none		# default: none; oligarchic generate candidates only from leaders in the country
+#	election_term_years = 40							# default: 0
+#	election_term_variance = 10							# default: 0; actual election term = election_term_years +/- election_term_variance
+#	re_election_allowed = yes / no						# default: no
+#	can_have_emergency_elections = yes / no				# default: no
+#	max_election_candidates = 5							# default: -1; -1 == no limit
+#	can_reform = yes / no								# default = yes, whether you can reform into/out of this government type
+#	ruler_council_position = <>							# decides the authority's ruler council position, these are defined in 00_councilors.txt
+#
+#	has_agendas = yes / no								# default: no, replaced with Council Agendas
+#	uses_mandates = yes / no							# default: no, replaced with Council Agendas
+#
+#	color = { 81 140 44 255 }							# RGBA color used in some UI. If not specified, the AUTHORITY_DEFAULT_COLOR define is used.
+#
+#	advanced_authority_swap	= {							# To make sure everything is updated correctly after triggering a swap, use <advanced_authority_refresh = yes>
+#		name = "<name key>"								# Will also be used to attempt and find an icon from "interface/icons/governments/authorities/"
+#		description = "<localization key>"				# Used to customize the description in the case of a swap
+#		inherit_icon = yes/no							# Decides if we should inherit the icon of the original authority
+#		inherit_effects = yes/no						# Decides if we should inherit the modifiers from the base Authority and combine it with the advanced authority
+#		ruler_council_position = <>						# Used to swap out the ruler council position
+#		trigger = {}									# This will decide when the swap to advanced authority type will be made
+#		modifier = {}									# The modifiers that are used instead of the authority after the swap, can include the original by using inherit_effects
+#		tags = { <key> <key2> }							# Translation tags used for the authority swap
+#		has_heir = yes / no								# you can either have a hereditary system (has_heir = yes), or an election system (has_heir = no)
+#		election_type = oligarchic / democratic	/ none	# oligarchic generate candidates only from leaders in the country
+#		election_term_years = 40						#
+#		election_term_variance = 10						# actual election term = election_term_years +/- election_term_variance
+#		can_have_emergency_elections = yes / no			#
+#		max_election_candidates = 5						# -1 == no limit
+#		weight = {}										# If there are multiple options, the one with the highest weight is picked. Scope: Country
+#	}
+#
+#	tags = { <key> <key2> }								# add these translation tags to the description
+#}
+
+
+auth_democratic = {
+	election_term_years = 10
+	re_election_allowed = yes
+	election_type = democratic
+
+	uses_mandates = yes
+
+	color = { 81 140 44 255 }
+
+	ruler_council_position = councilor_ruler_democratic
+
+	possible = {
+		origin = {
+			NOR = {
+				text = origin_legendary_leader_no_gov_change
+				value = origin_legendary_leader_dictatorial
+				value = origin_legendary_leader_imperial
+			}
+		}
+		ethics = {
+			NOR = {
+				value = ethic_gestalt_consciousness
+				value = ethic_authoritarian
+				value = ethic_fanatic_authoritarian
+			}
+		}
+	}
+
+	country_modifier = {
+		faction_approval = 0.10
+		country_leader_pool_size = 1
+		custom_tooltip = auth_democratic_tt
+	}
+
+	random_weight = {
+		base = 2
+	}
+
+	advanced_authority_swap	= {
+		name = "auth_cyber_creed_democratic"
+		description = "auth_cyber_creed_democratic_desc"
+		inherit_icon = no
+		inherit_effects = no
+		trigger = {
+			is_scope_valid = yes
+			has_country_flag = cyber_creed_advanced_government
+		}
+		modifier = {
+			pop_ethic_spiritualist_attraction_mult = 0.2
+			pop_cyborg_happiness = 0.15
+			pop_non_cyborg_happiness = -0.15
+			pop_factions_produces_mult = 0.10
+			all_technology_research_speed = 0.05
+		}
+	}
+
+	advanced_authority_swap	= {
+		name = "auth_cyber_democratic_individualist"
+		description = "auth_cyber_democratic_individualist_desc"
+		inherit_icon = no
+		inherit_effects = no
+		trigger = {
+			is_scope_valid = yes
+			has_country_flag = cyber_individualist
+		}
+		modifier = {
+			custom_tooltip = auth_cyber_democratic_individualist_tt
+			show_only_custom_tooltip = no
+			pop_cyborg_happiness = 0.2
+			pop_non_cyborg_happiness = -0.15
+			empire_size_pops_mult = -0.15
+			leaders_cost_mult = -0.25
+			pop_factions_produces_mult = 0.2
+			planet_jobs_specialist_produces_mult = 0.1
+		}
+	}
+
+	advanced_authority_swap	= {
+		name = "auth_cyber_democratic_collectivist"
+		description = "auth_cyber_democratic_collectivist_desc"
+		inherit_icon = no
+		inherit_effects = no
+		trigger = {
+			is_scope_valid = yes
+			has_country_flag = cyber_collectivist
+		}
+		modifier = {
+			custom_tooltip = auth_cyber_democratic_collectivist_tt
+			show_only_custom_tooltip = no
+			pop_non_cyborg_happiness = -0.15
+			empire_size_pops_mult = -0.15
+			leaders_cost_mult = -0.25
+			planet_jobs_worker_produces_mult = 0.15
+			planet_stability_add = 15
+		}
+	}
+
+	advanced_authority_swap	= {
+		name = "auth_synth_democratic_physical"
+		description = "auth_synth_democratic_physical_desc"
+		inherit_icon = no
+		inherit_effects = no
+		trigger = {
+			is_scope_valid = yes
+			has_country_flag = synth_physical
+		}
+
+		modifier = {
+			custom_tooltip = auth_synth_democratic_physical_tt
+			country_edict_fund_mult = 0.5
+			pop_government_ethic_attraction = -0.25
+			planet_resettlement_unemployed_mult = 1
+			show_only_custom_tooltip = no
+		}
+
+	}
+
+	advanced_authority_swap	= {
+		name = "auth_synth_democratic_virtual"
+		description = "auth_synth_democratic_virtual_desc"
+		inherit_icon = no
+		inherit_effects = no
+		trigger = {
+			is_scope_valid = yes
+			has_country_flag = synth_virtual
+		}
+		modifier = {
+			custom_tooltip = auth_synth_democratic_virtual_tt
+			country_edict_fund_mult = 0.5
+			pop_government_ethic_attraction = -0.25
+			country_war_exhaustion_mult = -0.5
+			ship_speed_mult = 0.15
+			starbase_shipyard_build_speed_mult = 0.25
+			show_only_custom_tooltip = no
+		}
+	}
+
+	# BioGenesis Genetic Ascension Situation Authority Swaps
+	# Purity
+	# Phenotypical Autonomy (Democratic)
+
+	advanced_authority_swap	= {
+		name = "auth_bio_democratic_purity"
+		description = "auth_bio_democratic_purity_desc"
+		inherit_icon = no
+		inherit_effects = no
+		trigger = {
+			is_scope_valid = yes
+			has_country_flag = bio_purity
+		}
+		modifier = {
+			custom_tooltip = auth_bio_democratic_purity_tt
+			show_only_custom_tooltip = no
+		}
+	}
+
+	# Cloning
+	# Cordant Multiplicity (Democratic)
+
+	advanced_authority_swap	= {
+		name = "auth_bio_democratic_cloning"
+		description = "auth_bio_democratic_cloning_desc"
+		inherit_icon = no
+		inherit_effects = no
+		trigger = {
+			is_scope_valid = yes
+			has_country_flag = bio_cloning
+		}
+		modifier = {
+			custom_tooltip = auth_bio_democratic_cloning_tt
+			show_only_custom_tooltip = no
+			empire_size_pops_mult = -0.15
+			pop_factions_produces_mult = 0.25
+		}
+	}
+
+	# Mutation
+	# Biodiverse Liberty (Democratic)
+
+	advanced_authority_swap	= {
+		name = "auth_bio_democratic_mutation"
+		description = "auth_bio_democratic_mutation_desc"
+		inherit_icon = no
+		inherit_effects = no
+		trigger = {
+			is_scope_valid = yes
+			has_country_flag = bio_mutation
+			NOT = { has_origin = origin_evolutionary_predators }
+		}
+		modifier = {
+			auto_mod_monthly_mult = 0.5
+			pop_bonus_workforce_mult = 0.05
+			pop_happiness = 0.1
+			country_unity_produces_mult = 0.10
+			all_technology_research_speed = 0.05
+			country_leader_pool_size = 1
+		}
+	}
+
+	# Originium Resonance Ascension Situation Authority Swaps
+	# Resonance
+	# Phenotypical Autonomy (Democratic)
+
+	advanced_authority_swap	= {
+		name = "auth_ori_ap_democratic_resonance"
+		description = "auth_ori_ap_democratic_resonance_desc"
+		inherit_icon = no
+		inherit_effects = no
+		trigger = {
+			is_scope_valid = yes
+			has_country_flag = ori_ap_resonance
+		}
+		modifier = {
+			custom_tooltip = auth_ori_ap_democratic_resonance_tt
+			show_only_custom_tooltip = no
+		}
+	}
+
+	# Crystallization
+	# Cordant Multiplicity (Democratic)
+
+	advanced_authority_swap	= {
+		name = "auth_ori_ap_democratic_crystallization"
+		description = "auth_ori_ap_democratic_crystallization_desc"
+		inherit_icon = no
+		inherit_effects = no
+		trigger = {
+			is_scope_valid = yes
+			has_country_flag = ori_ap_crystallization
+		}
+		modifier = {
+			custom_tooltip = auth_ori_ap_democratic_crystallization_tt
+			show_only_custom_tooltip = no
+			empire_size_pops_mult = -0.15
+			pop_factions_produces_mult = 0.25
+		}
+	}
+
+	# Assimilation
+	# Biodiverse Liberty (Democratic)
+
+	advanced_authority_swap	= {
+		name = "auth_ori_ap_democratic_assimilation"
+		description = "auth_ori_ap_democratic_assimilation_desc"
+		inherit_icon = no
+		inherit_effects = no
+		trigger = {
+			is_scope_valid = yes
+			has_country_flag = ori_ap_assimilation
+			NOT = { has_origin = origin_evolutionary_predators }
+		}
+		modifier = {
+			auto_mod_monthly_mult = 0.5
+			pop_bonus_workforce_mult = 0.05
+			pop_happiness = 0.1
+			country_unity_produces_mult = 0.10
+			all_technology_research_speed = 0.05
+			country_leader_pool_size = 1
+		}
+	}
+
+	# EvoPred (Democratic)
+
+	advanced_authority_swap	= {
+		name = "auth_bio_democratic_evopred"
+		description = "auth_bio_democratic_evopred_desc"
+		inherit_icon = no
+		inherit_effects = no
+		trigger = {
+			is_scope_valid = yes
+			has_country_flag = bio_mutation
+			has_origin = origin_evolutionary_predators
+		}
+		modifier = {
+			custom_tooltip = auth_bio_democratic_evopred_tt
+			show_only_custom_tooltip = no
+		}
+	}
+
+	tags = {
+		AUTHORITY_SUCCESSION_TYPE
+		AUTHORITY_DEMOCRATIC_SUCCESSION
+	}
+}
+
+auth_oligarchic = {
+	election_term_years = 20
+	election_type = oligarchic
+	can_have_emergency_elections = yes
+	max_election_candidates = 4
+
+	has_agendas = yes
+
+	color = { 164 135 18 255 }
+
+	ruler_council_position = councilor_ruler_oligarchic
+
+	possible = {
+		origin = {
+			NOR = {
+				text = origin_legendary_leader_no_gov_change
+				value = origin_legendary_leader_dictatorial
+				value = origin_legendary_leader_imperial
+			}
+		}
+		ethics = {
+			NOR = {
+				value = ethic_gestalt_consciousness
+				value = ethic_fanatic_egalitarian
+				value = ethic_fanatic_authoritarian
+			}
+		}
+	}
+
+	country_modifier = {
+		councilor_skill_add = 2
+	}
+
+	advanced_authority_swap	= {
+		name = "auth_cyber_creed_oligarchic"
+		description = "auth_cyber_creed_oligarchic_desc"
+		inherit_icon = no
+		inherit_effects = no
+		trigger = {
+			is_scope_valid = yes
+			has_country_flag = cyber_creed_advanced_government
+		}
+		modifier = {
+			pop_ethic_spiritualist_attraction_mult = 0.2
+			pop_cyborg_happiness = 0.15
+			pop_non_cyborg_happiness = -0.15
+			pop_factions_produces_mult = 0.1
+			all_technology_research_speed = 0.05
+		}
+	}
+
+	random_weight = {
+		base = 2
+	}
+
+	advanced_authority_swap	= {
+		name = "auth_cyber_oligarchic_individualist"
+		description = "auth_cyber_oligarchic_individualist_desc"
+		inherit_icon = no
+		inherit_effects = no
+		trigger = {
+			is_scope_valid = yes
+			has_country_flag = cyber_individualist
+		}
+		modifier = {
+			custom_tooltip = auth_cyber_oligarchic_individualist_tt
+			planet_stability_add = 10
+			pop_cat_ruler_happiness = 0.25
+			pop_cat_ruler_political_power = 2
+			planet_jobs_specialist_produces_mult = 0.1
+			pop_cat_specialist_happiness = -0.1
+			pop_cat_specialist_political_power = -1
+			planet_jobs_worker_produces_mult = -0.15
+			pop_cat_worker_political_power = -1
+			pop_unemployment_demotion_time_mult = 0.25
+			show_only_custom_tooltip = no
+		}
+	}
+
+	advanced_authority_swap	= {
+		name = "auth_cyber_oligarchic_collectivist"
+		description = "auth_cyber_oligarchic_collectivist_desc"
+		inherit_icon = no
+		inherit_effects = no
+		trigger = {
+			is_scope_valid = yes
+			has_country_flag = cyber_collectivist
+		}
+		modifier = {
+			custom_tooltip = auth_cyber_oligarchic_collectivist_tt
+			planet_jobs_specialist_produces_mult = 0.1
+			planet_jobs_worker_produces_mult = -0.15
+			show_only_custom_tooltip = no
+		}
+	}
+
+	advanced_authority_swap	= {
+		name = "auth_synth_oligarchic_physical"
+		description = "auth_synth_oligarchic_physical_desc"
+		inherit_icon = no
+		inherit_effects = no
+		trigger = {
+			is_scope_valid = yes
+			has_country_flag = synth_physical
+		}
+		modifier = {
+			custom_tooltip = auth_cyber_oligarch_ruler_enforcers_tt
+			pop_category_rulers_upkeep_mult = 0.15
+			planet_bureaucrats_unity_produces_mult = 0.25
+			planet_bureaucrats_upkeep_mult = -0.10
+			show_only_custom_tooltip = no
+		}
+	}
+
+	advanced_authority_swap	= {
+		name = "auth_synth_oligarchic_virtual"
+		description = "auth_synth_oligarchic_virtual_desc"
+		inherit_icon = no
+		inherit_effects = no
+		trigger = {
+			is_scope_valid = yes
+			has_country_flag = synth_virtual
+		}
+		modifier = {
+			custom_tooltip = auth_cyber_oligarch_ruler_enforcers_tt
+			pop_category_rulers_upkeep_mult = 0.15
+			edicts_upkeep_mult = -0.2
+			edicts_cost_mult = -0.75
+			empire_size_districts_mult = -0.10
+			empire_size_colonies_mult = -0.50
+			show_only_custom_tooltip = no
+		}
+	}
+
+	# BioGenesis Genetic Ascension Situation Authority Swaps
+	# Purity
+	# Eugenic Hierarchy (Oligarchic)
+
+	advanced_authority_swap	= {
+		name = "auth_bio_oligarchic_purity"
+		description = "auth_bio_oligarchic_purity_desc"
+		inherit_icon = no
+		inherit_effects = no
+		trigger = {
+			is_scope_valid = yes
+			has_country_flag = bio_purity
+		}
+		modifier = {
+			custom_tooltip = auth_bio_oligarchic_purity_tt
+			show_only_custom_tooltip = no
+		}
+	}
+
+	# Cloning
+	# Physiological Transcendency (Oligarchic)
+
+	advanced_authority_swap	= {
+		name = "auth_bio_oligarchic_cloning"
+		description = "auth_bio_oligarchic_cloning_desc"
+		inherit_icon = no
+		inherit_effects = no
+		trigger = {
+			is_scope_valid = yes
+			has_country_flag = bio_cloning
+		}
+		modifier = {
+			custom_tooltip = auth_bio_oligarchic_cloning_tt
+			show_only_custom_tooltip = no
+			councilor_skill_add = 2
+			pop_category_rulers_unity_produces_add = 3
+		}
+	}
+
+	# Mutation
+	# Catalytic Command (Oligarchic)
+
+	advanced_authority_swap	= {
+		name = "auth_bio_oligarchic_mutation"
+		description = "auth_bio_oligarchic_mutation_desc"
+		inherit_icon = no
+		inherit_effects = no
+		trigger = {
+			is_scope_valid = yes
+			has_country_flag = bio_mutation
+			NOT = { has_origin = origin_evolutionary_predators }
+		}
+		modifier = {
+			pop_cat_ruler_happiness = 0.25
+			planet_crime_add = -10
+			pop_factions_produces_mult = 0.1
+			all_technology_research_speed = 0.05
+			pop_cat_specialist_bonus_workforce_mult = 0.1
+			pop_cat_specialist_happiness = -0.10
+			pop_cat_worker_happiness = -0.15
+		}
+	}
+
+	# O日晷牛魔 Resonance Ascension Situation Authority Swaps
+	# Resonance
+	# Eugenic Hierarchy (Oligarchic)
+
+	advanced_authority_swap	= {
+		name = "auth_ori_ap_oligarchic_resonance"
+		description = "auth_ori_ap_oligarchic_resonance_desc"
+		inherit_icon = no
+		inherit_effects = no
+		trigger = {
+			is_scope_valid = yes
+			has_country_flag = ori_ap_resonance
+		}
+		modifier = {
+			custom_tooltip = auth_ori_ap_oligarchic_resonance_tt
+			show_only_custom_tooltip = no
+		}
+	}
+
+	# Crystallization
+	# Physiological Transcendency (Oligarchic)
+
+	advanced_authority_swap	= {
+		name = "auth_ori_ap_oligarchic_crystallization"
+		description = "auth_ori_ap_oligarchic_crystallization_desc"
+		inherit_icon = no
+		inherit_effects = no
+		trigger = {
+			is_scope_valid = yes
+			has_country_flag = ori_ap_crystallization
+		}
+		modifier = {
+			custom_tooltip = auth_ori_ap_oligarchic_crystallization_tt
+			show_only_custom_tooltip = no
+			councilor_skill_add = 2
+			pop_category_rulers_unity_produces_add = 3
+		}
+	}
+
+	# Assimilation
+	# Catalytic Command (Oligarchic)
+
+	advanced_authority_swap	= {
+		name = "auth_ori_ap_oligarchic_assimilation"
+		description = "auth_ori_ap_oligarchic_assimilation_desc"
+		inherit_icon = no
+		inherit_effects = no
+		trigger = {
+			is_scope_valid = yes
+			has_country_flag = ori_ap_assimilation
+			NOT = { has_origin = origin_evolutionary_predators }
+		}
+		modifier = {
+			pop_cat_ruler_happiness = 0.25
+			planet_crime_add = -10
+			pop_factions_produces_mult = 0.1
+			all_technology_research_speed = 0.05
+			pop_cat_specialist_bonus_workforce_mult = 0.1
+			pop_cat_specialist_happiness = -0.10
+			pop_cat_worker_happiness = -0.15
+		}
+	}
+
+	# EvoPred (Oligarchic)
+
+	advanced_authority_swap	= {
+		name = "auth_bio_oligarchic_evopred"
+		description = "auth_bio_oligarchic_evopred_desc"
+		inherit_icon = no
+		inherit_effects = no
+		trigger = {
+			is_scope_valid = yes
+			has_country_flag = bio_mutation
+			has_origin = origin_evolutionary_predators
+		}
+		modifier = {
+			custom_tooltip = auth_bio_oligarchic_evopred_tt
+			show_only_custom_tooltip = no
+			councilor_skill_add = 2
+		}
+	}
+
+	tags = {
+		AUTHORITY_SUCCESSION_TYPE
+		AUTHORITY_OLIGARCHIC_SUCCESSION
+	}
+}
+
+auth_dictatorial = {
+	election_type = oligarchic
+
+	has_agendas = yes
+
+	color = { 162 85 12 255 }
+
+	ruler_council_position = councilor_ruler_dictatorial
+
+	possible = {
+		origin = {
+			NOT = {
+				text = origin_legendary_leader_no_gov_change
+				value = origin_legendary_leader_imperial
+			}
+		}
+		ethics = {
+			NOR = {
+				value = ethic_gestalt_consciousness
+				value = ethic_egalitarian
+				value = ethic_fanatic_egalitarian
+			}
+		}
+	}
+
+	country_modifier = {
+		councilor_ruler_dictatorial_exp_gain = 0.25
+		country_leader_pool_size = -1
+	}
+
+	advanced_authority_swap	= {
+		name = "auth_cyber_creed_dictatorial"
+		description = "auth_cyber_creed_dictatorial_desc"
+		inherit_icon = no
+		inherit_effects = no
+		trigger = {
+			is_scope_valid = yes
+			has_country_flag = cyber_creed_advanced_government
+		}
+		modifier = {
+			pop_ethic_spiritualist_attraction_mult = 0.2
+			pop_cyborg_happiness = 0.15
+			pop_non_cyborg_happiness = -0.15
+			pop_factions_produces_mult = 0.1
+			all_technology_research_speed = 0.05
+		}
+	}
+
+	random_weight = {
+		base = 2
+	}
+
+	advanced_authority_swap	= {
+		name = "auth_cyber_dictatorial_individualist"
+		description = "auth_cyber_dictatorial_individualist_desc"
+		inherit_icon = no
+		inherit_effects = no
+		trigger = {
+			is_scope_valid = yes
+			has_country_flag = cyber_individualist
+		}
+		modifier = {
+			custom_tooltip = auth_cyber_dictatorial_individualist_tt
+			pop_ethic_authoritarian_attraction_mult = 1
+			show_only_custom_tooltip = no
+			planet_stability_add = 5
+			edicts_upkeep_mult = -0.25
+			planet_enforcers_unity_produces_add = 3
+		}
+	}
+
+	# If any modifiers for Cybernetic Collectivist Dictatorial authorities are changed
+	# update the following custom tooltips in machine_age_situations_1_l_english.yml
+	# auth_cyber_dictatorial_collectivist_official_effects
+	# auth_cyber_dictatorial_collectivist_commander_effects
+	# auth_cyber_dictatorial_collectivist_scientist_effects
+	# auth_cyber_dictatorial_collectivist_base_effects
+	advanced_authority_swap	= {
+		name = "auth_cyber_dictatorial_collectivist_official"
+		description = "auth_cyber_dictatorial_collectivist_desc"
+		inherit_icon = no
+		inherit_effects = no
+		trigger = {
+			is_scope_valid = yes
+			has_country_flag = cyber_collectivist
+			exists = ruler
+			ruler = { leader_class = official }
+		}
+		modifier = {
+			custom_tooltip = auth_cyber_dictatorial_collectivist_official_tt
+			show_only_custom_tooltip = yes
+			planet_jobs_worker_produces_mult = 0.15
+			planet_stability_add = 5
+			edicts_upkeep_mult = -0.25
+			pop_amenities_usage_mult = 0.15
+		}
+	}
+
+	advanced_authority_swap	= {
+		name = "auth_cyber_dictatorial_collectivist_commander"
+		description = "auth_cyber_dictatorial_collectivist_desc"
+		inherit_icon = no
+		inherit_effects = no
+		trigger = {
+			is_scope_valid = yes
+			has_country_flag = cyber_collectivist
+			exists = ruler
+			ruler = { leader_class = commander }
+		}
+		modifier = {
+			custom_tooltip = auth_cyber_dictatorial_collectivist_commander_tt
+			show_only_custom_tooltip = yes
+			ship_fire_rate_mult = 0.10
+			job_soldier_stability_add = 2
+			planet_stability_add = 5
+			edicts_upkeep_mult = -0.25
+			pop_amenities_usage_mult = 0.15
+		}
+	}
+
+	advanced_authority_swap	= {
+		name = "auth_cyber_dictatorial_collectivist_scientist"
+		description = "auth_cyber_dictatorial_collectivist_desc"
+		inherit_icon = no
+		inherit_effects = no
+		trigger = {
+			is_scope_valid = yes
+			has_country_flag = cyber_collectivist
+			exists = ruler
+			ruler = { leader_class = scientist }
+		}
+		modifier = {
+			custom_tooltip = auth_cyber_dictatorial_collectivist_scientist_tt
+			show_only_custom_tooltip = yes
+			all_technology_research_speed = 0.10
+			planet_stability_add = 5
+			edicts_upkeep_mult = -0.25
+			pop_amenities_usage_mult = 0.15
+		}
+	}
+
+	advanced_authority_swap	= {
+		name = "auth_cyber_dictatorial_collectivist_vacant"
+		description = "auth_cyber_dictatorial_collectivist_desc"
+		inherit_icon = no
+		inherit_effects = no
+		trigger = {
+			is_scope_valid = yes
+			has_country_flag = cyber_collectivist
+			NOT = {
+				any_owned_leader = {
+					is_ruler = yes
+				}
+			}
+		}
+		modifier = {
+			custom_tooltip = auth_cyber_dictatorial_collectivist_vacant_tt
+			show_only_custom_tooltip = no
+			planet_stability_add = 5
+			edicts_upkeep_mult = -0.25
+			pop_amenities_usage_mult = 0.15
+		}
+	}
+
+	advanced_authority_swap	= {
+		name = "auth_synth_dictatorial_physical"
+		description = "auth_synth_dictatorial_physical_desc"
+		inherit_icon = no
+		inherit_effects = no
+		trigger = {
+			is_scope_valid = yes
+			has_country_flag = synth_physical
+		}
+		modifier = {
+			ruler_skill_add = 5
+			all_technology_research_speed = -0.05
+			planet_jobs_worker_produces_mult = 0.15
+			planet_districts_upkeep_mult = -0.25
+			planet_districts_cost_mult = -0.50
+		}
+	}
+
+	advanced_authority_swap	= {
+		name = "auth_synth_dictatorial_virtual"
+		description = "auth_synth_dictatorial_virtual_desc"
+		inherit_icon = no
+		inherit_effects = no
+		trigger = {
+			is_scope_valid = yes
+			has_country_flag = synth_virtual
+		}
+		modifier = {
+			ruler_skill_add = 5
+			all_technology_research_speed = -0.05
+			planet_researchers_upkeep_mult = 0.05
+			pop_government_ethic_attraction = 1
+			pop_ethics_shift_speed_mult = 0.5
+			planet_buildings_upkeep_mult = -0.2
+			planet_buildings_cost_mult = -0.1
+		}
+	}
+
+	# BioGenesis Genetic Ascension Situation Authority Swaps
+	# Purity
+	# Nucleic Judiciary (Dictatorial)
+
+	advanced_authority_swap	= {
+		name = "auth_bio_dictatorial_purity"
+		description = "auth_bio_dictatorial_purity_desc"
+		inherit_icon = no
+		inherit_effects = no
+		trigger = {
+			is_scope_valid = yes
+			has_country_flag = bio_purity
+		}
+		modifier = {
+			custom_tooltip = auth_bio_dictatorial_purity_tt
+			show_only_custom_tooltip = no
+		}
+	}
+
+	# Cloning
+	# Homogenous Submission (Dictatorial)
+
+	advanced_authority_swap	= {
+		name = "auth_bio_dictatorial_cloning"
+		description = "auth_bio_dictatorial_cloning_desc"
+		inherit_icon = no
+		inherit_effects = no
+		trigger = {
+			is_scope_valid = yes
+			has_country_flag = bio_cloning
+		}
+		modifier = {
+			custom_tooltip = auth_bio_dictatorial_cloning_tt
+			show_only_custom_tooltip = no
+			councilor_ruler_dictatorial_exp_gain = 0.25
+			pop_ethic_authoritarian_attraction_mult = 1
+			planet_stability_add = 10
+		}
+	}
+
+	# Mutation
+	# Hybrid Mandate (Dictatorial)
+
+	advanced_authority_swap	= {
+		name = "auth_bio_dictatorial_mutation"
+		description = "auth_bio_dictatorial_mutation_desc"
+		inherit_icon = no
+		inherit_effects = no
+		trigger = {
+			is_scope_valid = yes
+			has_country_flag = bio_mutation
+			NOT = { has_origin = origin_evolutionary_predators }
+		}
+		modifier = {
+			custom_tooltip = auth_bio_dictatorial_mutation_tt
+			show_only_custom_tooltip = no
+			pop_cat_ruler_bonus_workforce_mult = 0.25
+			pop_cat_ruler_happiness = 0.25
+			planet_stability_add = 10
+			planet_enforcers_unity_produces_add = 3
+			pop_factions_produces_mult = 0.1
+		}
+	}
+
+	# BioGenesis Genetic Ascension Situation Authority Swaps
+	# Resonance
+	# Nucleic Judiciary (Dictatorial)
+
+	advanced_authority_swap	= {
+		name = "auth_ori_ap_dictatorial_resonance"
+		description = "auth_ori_ap_dictatorial_resonance_desc"
+		inherit_icon = no
+		inherit_effects = no
+		trigger = {
+			is_scope_valid = yes
+			has_country_flag = ori_ap_resonance
+		}
+		modifier = {
+			custom_tooltip = auth_ori_ap_dictatorial_resonance_tt
+			show_only_custom_tooltip = no
+		}
+	}
+
+	# Crystallization
+	# Homogenous Submission (Dictatorial)
+
+	advanced_authority_swap	= {
+		name = "auth_ori_ap_dictatorial_crystallization"
+		description = "auth_ori_ap_dictatorial_crystallization_desc"
+		inherit_icon = no
+		inherit_effects = no
+		trigger = {
+			is_scope_valid = yes
+			has_country_flag = ori_ap_crystallization
+		}
+		modifier = {
+			custom_tooltip = auth_ori_ap_dictatorial_crystallization_tt
+			show_only_custom_tooltip = no
+			councilor_ruler_dictatorial_exp_gain = 0.25
+			pop_ethic_authoritarian_attraction_mult = 1
+			planet_stability_add = 10
+		}
+	}
+
+	# Assimilation
+	# Hybrid Mandate (Dictatorial)
+
+	advanced_authority_swap	= {
+		name = "auth_ori_ap_dictatorial_assimilation"
+		description = "auth_ori_ap_dictatorial_assimilation_desc"
+		inherit_icon = no
+		inherit_effects = no
+		trigger = {
+			is_scope_valid = yes
+			has_country_flag = ori_ap_assimilation
+			NOT = { has_origin = origin_evolutionary_predators }
+		}
+		modifier = {
+			custom_tooltip = auth_ori_ap_dictatorial_assimilation_tt
+			show_only_custom_tooltip = no
+			pop_cat_ruler_bonus_workforce_mult = 0.25
+			pop_cat_ruler_happiness = 0.25
+			planet_stability_add = 10
+			planet_enforcers_unity_produces_add = 3
+			pop_factions_produces_mult = 0.1
+		}
+	}
+
+
+	# EvoPred (Dictatorial)
+
+	advanced_authority_swap	= {
+		name = "auth_bio_dictatorial_evopred"
+		description = "auth_bio_dictatorial_evopred_desc"
+		inherit_icon = no
+		inherit_effects = no
+		trigger = {
+			is_scope_valid = yes
+			has_country_flag = bio_mutation
+			has_origin = origin_evolutionary_predators
+		}
+		modifier = {
+			custom_tooltip = auth_bio_dictatorial_evopred_tt
+		}
+	}
+
+	tags = {
+		AUTHORITY_SUCCESSION_TYPE
+		AUTHORITY_DICTATORIAL_SUCCESSION
+	}
+}
+
+auth_imperial = {
+	has_heir = yes
+
+	has_agendas = yes
+
+	color = { 141 38 38 255 }
+
+	ruler_council_position = councilor_ruler_imperial
+
+	possible = {
+		origin = {
+			NOT = {
+				text = origin_legendary_leader_no_gov_change
+				value = origin_legendary_leader_dictatorial
+			}
+		}
+		ethics = {
+			NOR = {
+				value = ethic_gestalt_consciousness
+				value = ethic_egalitarian
+				value = ethic_fanatic_egalitarian
+			}
+		}
+	}
+
+	country_modifier = {
+		country_leader_pool_size = -1
+		# Additional modifiers are found in inline_scripts\buildings\on_all_capital_buildings.txt
+	}
+
+	advanced_authority_swap	= {
+		name = "auth_cyber_creed_imperial"
+		description = "auth_cyber_creed_imperial_desc"
+		inherit_icon = no
+		inherit_effects = no
+		trigger = {
+			is_scope_valid = yes
+			has_country_flag = cyber_creed_advanced_government
+		}
+		modifier = {
+			pop_ethic_spiritualist_attraction_mult = 0.2
+			pop_cyborg_happiness = 0.15
+			pop_non_cyborg_happiness = -0.15
+			pop_factions_produces_mult = 0.1
+			all_technology_research_speed = 0.05
+		}
+	}
+
+	advanced_authority_swap	= {
+		name = "auth_cyber_imperial_individualist"
+		description = "auth_cyber_imperial_individualist_desc"
+		inherit_icon = no
+		inherit_effects = no
+		ruler_council_position = councilor_ruler_imperial_cyber
+		trigger = {
+			is_scope_valid = yes
+			has_country_flag = cyber_individualist
+		}
+		modifier = {
+			custom_tooltip = auth_cyber_imperial_individualist_tt
+			show_only_custom_tooltip = no
+		}
+		tags = {
+			AUTHORITY_SUCCESSION_TYPE
+			AUTHORITY_HAS_HEIR
+		}
+	}
+
+	advanced_authority_swap	= {
+		name = "auth_cyber_imperial_collectivist"
+		description = "auth_cyber_imperial_collectivist_desc"
+		inherit_icon = no
+		inherit_effects = no
+		ruler_council_position = councilor_ruler_imperial_cyber
+		trigger = {
+			is_scope_valid = yes
+			has_country_flag = cyber_collectivist
+		}
+		modifier = {
+			custom_tooltip = auth_cyber_imperial_collectivist_tt
+			show_only_custom_tooltip = no
+		}
+		tags = {
+			AUTHORITY_SUCCESSION_TYPE
+			AUTHORITY_HAS_HEIR
+		}
+	}
+
+	advanced_authority_swap	= {
+		name = "auth_synth_imperial_physical"
+		description = "auth_synth_imperial_physical_desc"
+		inherit_icon = no
+		inherit_effects = no
+		ruler_council_position = councilor_ruler_imperial_synth
+		trigger = {
+			is_scope_valid = yes
+			has_country_flag = synth_physical
+		}
+		modifier = {
+			leader_initial_skill = 2
+			species_leader_exp_gain = 0.10
+			planet_jobs_worker_produces_mult = 0.10
+			custom_tooltip = auth_synth_imperial_physical_tt
+			show_only_custom_tooltip = no
+		}
+		tags = {
+			AUTHORITY_SUCCESSION_TYPE
+			AUTHORITY_HAS_HEIR
+		}
+	}
+
+	advanced_authority_swap	= {
+		name = "auth_synth_imperial_virtual"
+		description = "auth_synth_imperial_virtual_desc"
+		inherit_icon = no
+		inherit_effects = no
+		ruler_council_position = councilor_ruler_imperial_synth
+		trigger = {
+			is_scope_valid = yes
+			has_country_flag = synth_virtual
+		}
+		modifier = {
+			planet_jobs_worker_produces_mult = 0.10
+			ship_hull_regen_add_perc = 0.05
+			ship_armor_regen_add_perc = 0.05
+			custom_tooltip = auth_synth_imperial_virtual_tt
+			show_only_custom_tooltip = no
+		}
+		tags = {
+			AUTHORITY_SUCCESSION_TYPE
+			AUTHORITY_HAS_HEIR
+		}
+	}
+
+	# BioGenesis Genetic Ascension Situation Authority Swaps
+	# Purity
+	# Biotic Dominion (Imperial)
+
+	advanced_authority_swap	= {
+		name = "auth_bio_imperial_purity"
+		description = "auth_bio_imperial_purity_desc"
+		inherit_icon = no
+		inherit_effects = no
+		trigger = {
+			is_scope_valid = yes
+			has_country_flag = bio_purity
+		}
+		modifier = {
+			custom_tooltip = auth_bio_imperial_purity_tt
+			show_only_custom_tooltip = no
+		}
+		tags = {
+			AUTHORITY_SUCCESSION_TYPE
+			AUTHORITY_HAS_HEIR
+		}
+	}
+
+	# Cloning
+	# Hereditary Continuity (Imperial)
+
+	advanced_authority_swap	= {
+		name = "auth_bio_imperial_cloning"
+		description = "auth_bio_imperial_cloning_desc"
+		inherit_icon = no
+		inherit_effects = no
+		has_heir = no
+		trigger = {
+			is_scope_valid = yes
+			has_country_flag = bio_cloning
+		}
+		modifier = {
+			custom_tooltip = auth_bio_imperial_cloning_tt
+			show_only_custom_tooltip = no
+			ruler_skill_add = 5
+		}
+		tags = {
+			AUTHORITY_SUCCESSION_TYPE
+			AUTHORITY_HAS_CLONE
+		}
+	}
+
+	random_weight = {
+		base = 2
+	}
+
+	# Mutation
+	# Genomic Expansionist (Imperial)
+
+	advanced_authority_swap	= {
+		name = "auth_bio_imperial_mutation"
+		description = "auth_bio_imperial_mutation_desc"
+		inherit_icon = no
+		inherit_effects = no
+		trigger = {
+			is_scope_valid = yes
+			has_country_flag = bio_mutation
+			NOT = { has_origin = origin_evolutionary_predators }
+		}
+		modifier = {
+			country_leader_pool_size = -1
+			species_leader_exp_gain = 0.10
+			all_technology_research_speed = 0.05
+			pop_cat_worker_bonus_workforce_mult = 0.15
+		}
+		tags = {
+			AUTHORITY_SUCCESSION_TYPE
+			AUTHORITY_HAS_HEIR
+		}
+	}
+
+	random_weight = {
+		base = 2
+	}
+
+
+	# BioGenesis Genetic Ascension Situation Authority Swaps
+	# Resonance
+	# Biotic Dominion (Imperial)
+
+	advanced_authority_swap	= {
+		name = "auth_ori_ap_imperial_resonance"
+		description = "auth_ori_ap_imperial_resonance_desc"
+		inherit_icon = no
+		inherit_effects = no
+		trigger = {
+			is_scope_valid = yes
+			has_country_flag = ori_ap_resonance
+		}
+		modifier = {
+			custom_tooltip = auth_ori_ap_imperial_resonance_tt
+			show_only_custom_tooltip = no
+		}
+		tags = {
+			AUTHORITY_SUCCESSION_TYPE
+			AUTHORITY_HAS_HEIR
+		}
+	}
+
+	# Crystallization
+	# Hereditary Continuity (Imperial)
+
+	advanced_authority_swap	= {
+		name = "auth_ori_ap_imperial_crystallization"
+		description = "auth_ori_ap_imperial_crystallization_desc"
+		inherit_icon = no
+		inherit_effects = no
+		has_heir = no
+		trigger = {
+			is_scope_valid = yes
+			has_country_flag = ori_ap_crystallization
+		}
+		modifier = {
+			custom_tooltip = auth_ori_ap_imperial_crystallization_tt
+			show_only_custom_tooltip = no
+			ruler_skill_add = 5
+		}
+		tags = {
+			AUTHORITY_SUCCESSION_TYPE
+			AUTHORITY_HAS_CLONE
+		}
+	}
+
+	random_weight = {
+		base = 2
+	}
+
+	# Assimilation
+	# Genomic Expansionist (Imperial)
+
+	advanced_authority_swap	= {
+		name = "auth_ori_ap_imperial_assimilation"
+		description = "auth_ori_ap_imperial_assimilation_desc"
+		inherit_icon = no
+		inherit_effects = no
+		trigger = {
+			is_scope_valid = yes
+			has_country_flag = ori_ap_assimilation
+			NOT = { has_origin = origin_evolutionary_predators }
+		}
+		modifier = {
+			country_leader_pool_size = -1
+			species_leader_exp_gain = 0.10
+			all_technology_research_speed = 0.05
+			pop_cat_worker_bonus_workforce_mult = 0.15
+		}
+		tags = {
+			AUTHORITY_SUCCESSION_TYPE
+			AUTHORITY_HAS_HEIR
+		}
+	}
+
+	random_weight = {
+		base = 2
+	}
+
+	# EvoPred (Imperial)
+
+	advanced_authority_swap	= {
+		name = "auth_bio_imperial_evopred"
+		description = "auth_bio_imperial_evopred_desc"
+		inherit_icon = no
+		inherit_effects = no
+		trigger = {
+			is_scope_valid = yes
+			has_country_flag = bio_mutation
+			has_origin = origin_evolutionary_predators
+		}
+		modifier = {
+			custom_tooltip = auth_bio_imperial_evopred_tt
+			show_only_custom_tooltip = no
+			logistic_growth_mult = -0.1
+			country_produces_mult = 0.1
+		}
+		tags = {
+			AUTHORITY_SUCCESSION_TYPE
+			AUTHORITY_HAS_HEIR
+		}
+	}
+
+	tags = {
+		AUTHORITY_SUCCESSION_TYPE
+		AUTHORITY_HAS_HEIR
+		AUTH_IMPERIAL_CAPITAL_SYSTEM_BONUS
+	}
+}
+
+auth_hive_mind = {
+	has_heir = no
+	election_type = none
+	has_factions = no
+	can_reform = no
+	localization_postfix = hive_mind
+
+	color = { 225 165 33 255 }
+
+	valid_for_released_vassal = yes
+
+	ruler_council_position = councilor_ruler_hive_mind
+
+	playable = {
+		OR = {
+			has_utopia = yes
+			has_biogenesis_dlc = yes
+		}
+	}
+	possible = {
+		ethics = {
+			value = ethic_gestalt_consciousness
+		}
+		species_archetype = { NOT = { value = MACHINE } }
+	}
+	random_weight = {
+		base = 2
+	}
+
+	traits = {
+		trait = trait_hive_mind
+	}
+
+	country_modifier = {
+		logistic_growth_mult = 0.25
+		empire_size_penalty_mult = -0.25
+	}
+
+	tags = {
+		AUTH_HIVE_MIND_AI_RESTRICTIONS
+		AUTH_HIVE_MIND_FOREIGN_POP_SURVIVAL
+		AUTH_HIVE_MIND_GENEMODDING
+		AUTH_HIVE_MIND_ASCENSION_RESTRICTIONS
+		NEW_LINE
+		AUTHORITY_SUCCESSION_TYPE
+		AUTH_GESTALT_IMMORTAL_LEADERS
+	}
+
+	advanced_authority_swap	= {
+		name = "auth_cyber_hive_volitional"
+		description = "auth_cyber_hive_volitional_desc"
+		inherit_icon = no
+		inherit_effects = no
+		trigger = {
+			is_scope_valid = yes
+			has_country_flag = cyber_hive_volitional
+		}
+		modifier = {
+			bonus_pop_growth_mult = 0.15
+			country_leader_cap_add = 1
+			num_tech_alternatives_add = 1
+			planet_crime_no_happiness_mult = 0.5
+			leaders_upkeep_mult = 0.05
+		}
+	}
+
+	advanced_authority_swap	= {
+		name = "auth_cyber_hive_integrated"
+		description = "auth_cyber_hive_integrated_desc"
+		inherit_icon = no
+		inherit_effects = no
+		trigger = {
+			is_scope_valid = yes
+			has_country_flag = cyber_hive_integrated
+		}
+		modifier = {
+			bonus_pop_growth_mult = 0.15
+			custom_tooltip = auth_cyber_hive_integrated_tt
+			empire_size_penalty_mult = -0.33
+			leaders_upkeep_mult = 0.05
+			show_only_custom_tooltip = no
+		}
+	}
+
+	# BioGensis
+	# (Hive)
+
+	advanced_authority_swap	= {
+		name = "auth_bio_hive_purity"
+		description = "auth_bio_hive_purity_desc"
+		inherit_icon = no
+		inherit_effects = no
+		trigger = {
+			is_scope_valid = yes
+			has_country_flag = bio_purity
+		}
+		modifier = {
+			custom_tooltip = auth_bio_hive_purity_tt
+			show_only_custom_tooltip = no
+			subspecies_integration_mult = 3
+			modify_species_cost_mult = -0.25
+		}
+	}
+
+	advanced_authority_swap	= {
+		name = "auth_bio_hive_cloning"
+		description = "auth_bio_hive_cloning_desc"
+		inherit_icon = no
+		inherit_effects = no
+		trigger = {
+			is_scope_valid = yes
+			has_country_flag = bio_cloning
+		}
+		modifier = {
+			custom_tooltip = auth_bio_hive_cloning_tt
+			show_only_custom_tooltip = no
+			bonus_pop_growth_mult = 0.15
+			empire_size_penalty_mult = -0.33
+			leaders_upkeep_mult = 0.05
+			num_tech_alternatives_add = 1
+		}
+	}
+
+	advanced_authority_swap	= {
+		name = "auth_bio_hive_mutation"
+		description = "auth_bio_hive_mutation_desc"
+		inherit_icon = no
+		inherit_effects = no
+		trigger = {
+			is_scope_valid = yes
+			has_country_flag = bio_mutation
+			NOT = { has_origin = origin_evolutionary_predators }
+		}
+		modifier = {
+			planet_stability_add = 10
+			empire_size_pops_mult = -0.15
+			pop_environment_tolerance = 0.15
+			pop_cat_simple_drone_bonus_workforce_mult = 0.15
+		}
+	}
+
+	advanced_authority_swap	= {
+		name = "auth_ori_ap_hive_resonance"
+		description = "auth_ori_ap_hive_resonance_desc"
+		inherit_icon = no
+		inherit_effects = no
+		trigger = {
+			is_scope_valid = yes
+			has_country_flag = ori_ap_resonance
+		}
+		modifier = {
+			custom_tooltip = auth_ori_ap_hive_resonance_tt
+			show_only_custom_tooltip = no
+			subspecies_integration_mult = 3
+			modify_species_cost_mult = -0.25
+		}
+	}
+
+	advanced_authority_swap	= {
+		name = "auth_ori_ap_hive_crystallization"
+		description = "auth_ori_ap_hive_crystallization_desc"
+		inherit_icon = no
+		inherit_effects = no
+		trigger = {
+			is_scope_valid = yes
+			has_country_flag = ori_ap_crystallization
+		}
+		modifier = {
+			custom_tooltip = auth_ori_ap_hive_crystallization_tt
+			show_only_custom_tooltip = no
+			bonus_pop_growth_mult = 0.15
+			empire_size_penalty_mult = -0.33
+			leaders_upkeep_mult = 0.05
+			num_tech_alternatives_add = 1
+		}
+	}
+
+	advanced_authority_swap	= {
+		name = "auth_ori_ap_hive_assimilation"
+		description = "auth_ori_ap_hive_assimilation_desc"
+		inherit_icon = no
+		inherit_effects = no
+		trigger = {
+			is_scope_valid = yes
+			has_country_flag = ori_ap_assimilation
+			NOT = { has_origin = origin_evolutionary_predators }
+		}
+		modifier = {
+			planet_stability_add = 10
+			empire_size_pops_mult = -0.15
+			pop_environment_tolerance = 0.15
+			pop_cat_simple_drone_bonus_workforce_mult = 0.15
+		}
+	}
+
+	# EvoPred Mutation (Hive Mind)
+
+	advanced_authority_swap	= {
+		name = "auth_bio_hive_mind_evopred"
+		description = "auth_bio_hive_mind_evopred_desc"
+		inherit_icon = no
+		inherit_effects = no
+		trigger = {
+			is_scope_valid = yes
+			has_country_flag = bio_mutation
+			has_origin = origin_evolutionary_predators
+		}
+		modifier = {
+			custom_tooltip = auth_bio_hive_mind_evopred_tt
+			show_only_custom_tooltip = no
+			pop_cat_purge_bonus_workforce_mult = 0.5
+			empire_size_penalty_mult = -0.20
+		}
+	}
+
+	# Wilderness Mutualistic Intelligence
+
+	advanced_authority_swap = {
+		name = "auth_mutualistic_intelligence"
+		description = "auth_mutualistic_intelligence_desc"
+
+		inherit_icon = no
+		inherit_effects = no
+		trigger = {
+			is_scope_valid = yes
+			is_wilderness_empire = yes
+		}
+		tags = { # note: completely replaces all Hive Mind tags, so repetition is intentional
+			AUTH_HIVE_MIND_AI_RESTRICTIONS
+			AUTH_MUTUALISTIC_FOREIGN_POP_SURVIVAL
+			AUTH_MUTUALISTIC_ASCENSION_RESTRICTIONS
+			NEW_LINE
+			AUTHORITY_SUCCESSION_TYPE
+			AUTH_GESTALT_IMMORTAL_LEADERS
+		}
+		modifier = {
+			empire_size_penalty_mult = -0.25
+			empire_size_districts_mult = 2
+			empire_size_colonies_mult = 2
+			diplo_weight_economy_mult = 1
+		}
+	}
+}
+
+auth_machine_intelligence = {
+	machine_empire = yes
+	has_heir = no
+	election_type = none
+	has_factions = no
+	can_reform = no
+	localization_postfix = machine_intelligence
+
+	color = { 0 165 155 255 }
+
+	valid_for_released_vassal = no
+
+	ruler_council_position = councilor_ruler_machine_intelligence
+
+	playable = {
+		OR = {
+			has_synthetic_dawn = yes
+			has_machine_age_dlc = yes
+		}
+	}
+	possible = {
+		ethics = {
+			value = ethic_gestalt_consciousness
+		}
+		species_archetype = { value = MACHINE }
+	}
+	random_weight = {
+		base = 2
+	}
+
+	traits = {
+		trait = trait_machine_unit
+	}
+
+	country_modifier = {
+		colony_start_urban_districts_add = 1
+		planet_colony_development_speed_mult = 0.25
+		planet_pop_assembly_add = 1
+		station_gatherers_produces_mult = 0.1
+	}
+
+	tags = {
+		AUTH_MACHINE_NATIVE_POPS
+		AUTH_MACHINE_FOREIGN_POP_SURVIVAL
+		AUTH_MACHINE_TECH_ADDITIONS
+		AUTH_MACHINE_TECH_RESTRICTIONS
+		AUTH_MACHINE_ASCENSION_RESTRICTIONS
+		NEW_LINE
+		AUTHORITY_SUCCESSION_TYPE
+		AUTH_GESTALT_IMMORTAL_LEADERS
+	}
+
+	#Memory Aggregator
+	advanced_authority_swap	= {
+		name = "auth_memory_aggregator"
+		description = "auth_memory_aggregator_desc"
+		inherit_icon = no
+		inherit_effects = no
+		trigger = {
+			is_scope_valid = yes
+			has_country_flag = driven_memory_aggregator
+		}
+		modifier = {
+			custom_tooltip = auth_memory_aggregator_tt
+			show_only_custom_tooltip = no
+			colony_start_urban_districts_add = 1
+			planet_colony_development_speed_mult = 0.25
+			planet_pop_assembly_add = 1
+			empire_size_pops_mult = -0.1
+			MACHINE_species_trait_picks_add = 1
+		}
+		tags = {
+			AUTH_MACHINE_NATIVE_POPS
+			AUTH_MACHINE_FOREIGN_POP_SURVIVAL
+			AUTH_MACHINE_TECH_ADDITIONS
+			AUTH_MACHINE_TECH_RESTRICTIONS
+			AUTH_ASSIMILATOR_ASCENSION_RESTRICTIONS
+			NEW_LINE
+			AUTHORITY_SUCCESSION_TYPE
+			AUTH_GESTALT_IMMORTAL_LEADERS
+		}
+	}
+	#Neural Chorus
+	advanced_authority_swap	= {
+		name = "auth_neural_chorus"
+		description = "auth_neural_chorus_desc"
+		inherit_icon = no
+		inherit_effects = no
+		trigger = {
+			is_scope_valid = yes
+			has_country_flag = driven_neural_chorus
+		}
+		modifier = {
+			custom_tooltip = auth_driven_neural_chorus_tt
+			show_only_custom_tooltip = no
+			colony_start_urban_districts_add = 1
+			planet_colony_development_speed_mult = 0.25
+			logistic_growth_mult = 0.25
+			planet_pops_cyborgs_upkeep_mult = 0.1
+		}
+		tags = {
+			AUTH_MACHINE_NATIVE_POPS
+			AUTH_MACHINE_FOREIGN_POP_SURVIVAL
+			AUTH_MACHINE_TECH_ADDITIONS
+			AUTH_MACHINE_TECH_RESTRICTIONS
+			AUTH_ASSIMILATOR_ASCENSION_RESTRICTIONS
+			NEW_LINE
+			AUTHORITY_SUCCESSION_TYPE
+			AUTH_GESTALT_IMMORTAL_LEADERS
+		}
+	}
+}
+
+auth_ancient_machine_intelligence = {
+	has_heir = no
+	election_type = none
+	can_reform = no
+
+	valid_for_released_vassal = no
+
+	ruler_council_position = councilor_ruler_machine_intelligence
+
+	icon = "gfx/interface/icons/governments/authorities/auth_hive_mind.dds"
+
+	potential = { country_type = { value = ai_empire } }
+}
+
+auth_corporate = {
+	election_term_years = 20
+	election_type = oligarchic
+	can_have_emergency_elections = yes
+	max_election_candidates = 4
+	localization_postfix = corporate
+
+	has_agendas = yes
+
+	color = { 132 143 38 255 }
+
+	ruler_council_position = councilor_ruler_corporate
+
+	potential = {
+		country_type = { NOT = { value = primitive } }
+	}
+
+	playable = {
+		has_megacorp = yes
+	}
+	possible = {
+		origin = {
+			NOR = {
+				text = origin_legendary_leader_no_gov_change
+				value = origin_legendary_leader_dictatorial
+				value = origin_legendary_leader_imperial
+			}
+		}
+		ethics = {
+			NOR = {
+				value = ethic_gestalt_consciousness
+				value = ethic_fanatic_egalitarian
+				value = ethic_fanatic_authoritarian
+			}
+		}
+	}
+
+	country_modifier = {
+		planet_jobs_trade_produces_mult = 0.10
+		empire_size_colonies_mult = 0.50
+		external_leader_pool_add = 1
+	}
+
+	advanced_authority_swap	= {
+		name = "auth_cyber_creed_corporate"
+		description = "auth_cyber_creed_corporate_desc"
+		inherit_icon = no
+		inherit_effects = no
+		trigger = {
+			is_scope_valid = yes
+			has_country_flag = cyber_creed_advanced_government
+		}
+		modifier = {
+			pop_ethic_spiritualist_attraction_mult = 0.2
+			pop_cyborg_happiness = 0.15
+			pop_non_cyborg_happiness = -0.15
+			pop_factions_produces_mult = 0.1
+			all_technology_research_speed = 0.05
+		}
+	}
+
+	advanced_authority_swap	= {
+		name = "auth_cyber_corporate_individualist"
+		description = "auth_cyber_corporate_individualist_desc"
+		inherit_icon = no
+		inherit_effects = no
+		trigger = {
+			is_scope_valid = yes
+			has_country_flag = cyber_individualist
+		}
+		modifier = {
+			custom_tooltip = auth_cyber_corporate_individualist_tt
+			country_trade_produces_mult = 0.1
+			planet_crime_add = 20
+			pop_lifestyle_trade_value_add = 1
+			pop_cyborg_happiness = 0.1
+			show_only_custom_tooltip = no
+		}
+	}
+
+	advanced_authority_swap	= {
+		name = "auth_cyber_corporate_collectivist"
+		description = "auth_cyber_corporate_collectivist_desc"
+		inherit_icon = no
+		inherit_effects = no
+		trigger = {
+			is_scope_valid = yes
+			has_country_flag = cyber_collectivist
+		}
+		modifier = {
+			custom_tooltip = auth_cyber_corporate_collectivist_tt
+			country_trade_produces_mult = 0.1
+			planet_crime_add = 20
+			council_agenda_progress_speed = 0.25
+			show_only_custom_tooltip = no
+		}
+	}
+
+	advanced_authority_swap	= {
+		name = "auth_synth_corporate_physical"
+		description = "auth_synth_corporate_physical_desc"
+		inherit_icon = no
+		inherit_effects = no
+		trigger = {
+			is_scope_valid = yes
+			has_country_flag = synth_physical
+		}
+		modifier = {
+			custom_tooltip = auth_synth_corporate_physical_tt
+			country_trade_produces_mult = 0.1
+			show_only_custom_tooltip = no
+		}
+	}
+
+	advanced_authority_swap	= {
+		name = "auth_synth_corporate_virtual"
+		description = "auth_synth_corporate_virtual_desc"
+		inherit_icon = no
+		inherit_effects = no
+		trigger = {
+			is_scope_valid = yes
+			has_country_flag = synth_virtual
+		}
+		modifier = {
+			custom_tooltip = auth_synth_corporate_virtual_tt
+			intel_decryption_add = 1
+			show_only_custom_tooltip = no
+		}
+	}
+
+	# BioGenesis Genetic Ascension Situation Authority Swaps
+	# Purity
+	# Organic Syndicate (Corporate)
+
+	advanced_authority_swap	= {
+		name = "auth_bio_corporate_purity"
+		description = "auth_bio_corporate_purity_desc"
+		inherit_icon = no
+		inherit_effects = no
+		trigger = {
+			is_scope_valid = yes
+			has_country_flag = bio_purity
+		}
+		modifier = {
+			custom_tooltip = auth_bio_corporate_purity_tt
+			slave_market_cost_mult = -0.33
+			show_only_custom_tooltip = no
+		}
+	}
+
+	# Cloning
+	# Replicatory Association (Corporate)
+
+	advanced_authority_swap	= {
+		name = "auth_bio_corporate_cloning"
+		description = "auth_bio_corporate_cloning_desc"
+		inherit_icon = no
+		inherit_effects = no
+		trigger = {
+			is_scope_valid = yes
+			has_country_flag = bio_cloning
+		}
+		modifier = {
+			custom_tooltip = auth_bio_corporate_cloning_tt
+			show_only_custom_tooltip = no
+		}
+	}
+
+	# Mutation
+	# Aberrant Monopoly (Corporate)
+
+	advanced_authority_swap	= {
+		name = "auth_bio_corporate_mutation"
+		description = "auth_bio_corporate_mutation_desc"
+		inherit_icon = no
+		inherit_effects = no
+		trigger = {
+			is_scope_valid = yes
+			has_country_flag = bio_mutation
+			NOT = { has_origin = origin_evolutionary_predators }
+		}
+		modifier = {
+			custom_tooltip = auth_bio_corporate_mutation_tt
+			show_only_custom_tooltip = no
+			country_unity_produces_mult = 0.10
+			planet_crime_add = 20
+			pop_happiness = 0.1
+		}
+	}
+
+	advanced_authority_swap	= {
+		name = "auth_ori_ap_corporate_resonance"
+		description = "auth_ori_ap_corporate_resonance_desc"
+		inherit_icon = no
+		inherit_effects = no
+		trigger = {
+			is_scope_valid = yes
+			has_country_flag = ori_ap_resonance
+		}
+		modifier = {
+			custom_tooltip = auth_ori_ap_corporate_resonance_tt
+			slave_market_cost_mult = -0.33
+			show_only_custom_tooltip = no
+		}
+	}
+
+	# Cloning
+	# Replicatory Association (Corporate)
+
+	advanced_authority_swap	= {
+		name = "auth_ori_ap_corporate_crystallization"
+		description = "auth_ori_ap_corporate_crystallization_desc"
+		inherit_icon = no
+		inherit_effects = no
+		trigger = {
+			is_scope_valid = yes
+			has_country_flag = ori_ap_crystallization
+		}
+		modifier = {
+			custom_tooltip = auth_ori_ap_corporate_crystallization_tt
+			show_only_custom_tooltip = no
+		}
+	}
+
+	# Mutation
+	# Aberrant Monopoly (Corporate)
+
+	advanced_authority_swap	= {
+		name = "auth_ori_ap_corporate_assimilation"
+		description = "auth_ori_ap_corporate_assimilation_desc"
+		inherit_icon = no
+		inherit_effects = no
+		trigger = {
+			is_scope_valid = yes
+			has_country_flag = ori_ap_assimilation
+			NOT = { has_origin = origin_evolutionary_predators }
+		}
+		modifier = {
+			custom_tooltip = auth_ori_ap_corporate_assimilation_tt
+			show_only_custom_tooltip = no
+			country_unity_produces_mult = 0.10
+			planet_crime_add = 20
+			pop_happiness = 0.1
+		}
+	}
+
+
+	# EvoPred (Corporate)
+
+	advanced_authority_swap	= {
+		name = "auth_bio_corporate_evopred"
+		description = "auth_bio_corporate_evopred_desc"
+		inherit_icon = no
+		inherit_effects = no
+		trigger = {
+			is_scope_valid = yes
+			has_country_flag = bio_mutation
+			has_origin = origin_evolutionary_predators
+		}
+		modifier = {
+			planet_jobs_trade_produces_mult = 0.10
+			empire_size_colonies_mult = 0.50
+			custom_tooltip = auth_bio_corporate_evopred_tt
+			show_only_custom_tooltip = no
+		}
+	}
+
+	tags = {
+		AUTHORITY_SUCCESSION_TYPE
+		AUTHORITY_CORPORATE_SUCCESSION
+	}
+}

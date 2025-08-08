@@ -7,5 +7,9 @@
  # building_originium_facility: "源石研究所"
 
 
- building_crystallize_vats: "晶化仓"
- building_crystallize_vats_desc: "晶化仓将简单的物质转译用于产生有机人口增长。"
+ building_crystallize_vats: "石棺"
+ building_crystallize_vats_desc: "石棺将简单的物质转译用于产生有机人口增长。"
+ improves_crystallize_vats_tt: "['building:building_crystallize_vats']多产出§G+1.5§!§Y$MOD_BONUS_POP_GROWTH$§!，但相应提升§Y维护费§!。"
+ planet_buildings_crystallize_vats: "$building_crystallize_vats$"
+ mod_planet_buildings_crystallize_vats_upkeep_mult: "$building_crystallize_vats$维护费"
+ mod_building_crystallize_vats_max: "$planet_buildings_crystallize_vats$行星限制"

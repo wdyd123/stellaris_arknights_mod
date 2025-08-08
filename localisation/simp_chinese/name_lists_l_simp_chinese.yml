@@ -4,7 +4,32 @@
  ####################################
  TERRA: "泰拉人"
 
-
+ TERRA_desc: "REPLACE_ME"
+ TERRA_plural: "REPLACE_ME"
+ TERRA_insult_01: "REPLACE_ME"
+ TERRA_insult_plural_01: "REPLACE_ME"
+ TERRA_compliment_01: "REPLACE_ME"
+ TERRA_compliment_plural_01: "REPLACE_ME"
+ TERRA_spawn: "REPLACE_ME"
+ TERRA_spawn_plural: "REPLACE_ME"
+ TERRA_sound_01: "REPLACE_ME"
+ TERRA_sound_02: "REPLACE_ME"
+ TERRA_sound_03: "REPLACE_ME"
+ TERRA_sound_04: "REPLACE_ME"
+ TERRA_sound_05: "REPLACE_ME"
+ TERRA_organ: "REPLACE_ME"
+ TERRA_organ_plural: "REPLACE_ME"
+ TERRA_mouth: "REPLACE_ME"
+ TERRA_hand: "REPLACE_ME"
+ TERRA_hand_plural: "REPLACE_ME"
+ TERRA_ear: "REPLACE_ME"
+ TERRA_ear_plural: "REPLACE_ME"
+ TERRA_tooth: "REPLACE_ME"
+ TERRA_tooth_plural: "REPLACE_ME"
+ TERRA_fossil: "REPLACE_ME"
+ TERRA_fossil_plural: "REPLACE_ME"
+ TERRA_remnant: "REPLACE_ME"
+ TERRA_remnant_plural: "REPLACE_ME"
  ####################################
  #Deficit Situations
  ####################################
@@ -17,8 +42,8 @@
  string_expenditures_greater_than_income_infection_suppressant: "矿石病抑制剂赤字"
  string_not_in_deficit_infection_suppressant: "矿石病抑制剂月结余为正"
  string_resource_reserves_infection_suppressant: "矿石病抑制剂储备"
- deficit.230.name: "严峻矿石病抑制剂赤字"
- deficit.230.desc: "由于管理失误和资源浪费，我们的矿石病抑制剂库存已经完全枯竭！这种战略物资在防控源石感染和维持劳动力健康等多个关键领域具有广泛应用。尽快补充库存对于确保我们帝国的持续发展至关重要。"
+ ori_deficit.230.name: "严峻矿石病抑制剂赤字"
+ ori_deficit.230.desc: "由于管理失误和资源浪费，我们的矿石病抑制剂库存已经完全枯竭！这种战略物资在防控源石感染和维持劳动力健康等多个关键领域具有广泛应用。尽快补充库存对于确保我们帝国的持续发展至关重要。"
  r_infection_suppressant: "£infection_suppressant£ §Y$infection_suppressant$§!"
  TRAIT_ORIGINIUM_UNIT_EFFECT: "起始年龄：§G14岁§!\n需要额外的$r_infection_suppressant$维护费"
  mod_planet_pops_infection_suppressant_upkeep_mult: "人口抑制剂维护费"
@@ -59,7 +84,7 @@
  trait_originium_based_forge: "火法专精"
  trait_originium_based_forge_II: "火法专精+"
  trait_originium_based_forge_desc: "§L火属性的源石技艺在提高冶炼效率方面颇有帮助§!\n"
- trait_originium_based_forge_desc_II: "§L火属性的源石技艺在提高冶炼效率方面颇有帮助\n借助源石,该物种的源石技艺适应性进一步提高。§!\n"
+ trait_originium_based_forge_II_desc: "§L火属性的源石技艺在提高冶炼效率方面颇有帮助\n借助源石,该物种的源石技艺适应性进一步提高。§!\n"
 
 
  trait_traditional_originium_desc: "§L几百年的历史，这些东西是他们的负担，但也是他们的骄傲。§!\n"
@@ -71,13 +96,13 @@
  trait_charismatic_originium_desc: "§L这个物种拥有一种特别的魅力，任何其他生物都愿意与他们亲近。§!\n"
 
 
- trait_traditional_originium_desc_II: "§L几百年的历史，这些东西是他们的负担，但也是他们的骄傲。\n借助源石,该物种的源石技艺适应性进一步提高。§!\n"
- trait_thrifty_originium_desc_II: "§L这个物种天性节俭，总是喜欢尽一切可能将利益最大化。\n借助源石,该物种的源石技艺适应性进一步提高。§!\n"
- trait_intelligent_originium_desc_II: "§L这个物种大脑非常发达，他们可以轻易接受日新月异的科学进步。\n借助源石,该物种的源石技艺适应性进一步提高。§!\n"
- trait_industrious_originium_desc_II: "§L这个物种非常吃苦耐劳，这片大地不会体恤体弱者。\n借助源石,该物种的源石技艺适应性进一步提高。§!\n"
- trait_agrarian_originium_desc_II: "§L这一物种与土地有着难以割舍的关系，使他们成为了农业和园林的专家。\n借助源石,该物种的源石技艺适应性进一步提高。§!\n"
- trait_ingenious_originium_desc_II: "§L该物种头脑灵活，善于打破陈规，他们懂得如何最大化利用其基础设施和电力网。\n借助源石,该物种的源石技艺适应性进一步提高。§!\n"
- trait_charismatic_originium_desc_II: "§L这个物种拥有一种特别的魅力，任何其他生物都愿意与他们亲近。\n借助源石,该物种的源石技艺适应性进一步提高。§!\n"
+ trait_traditional_originium_II_desc: "§L几百年的历史，这些东西是他们的负担，但也是他们的骄傲。\n借助源石,该物种的源石技艺适应性进一步提高。§!\n"
+ trait_thrifty_originium_II_desc: "§L这个物种天性节俭，总是喜欢尽一切可能将利益最大化。\n借助源石,该物种的源石技艺适应性进一步提高。§!\n"
+ trait_intelligent_originium_II_desc: "§L这个物种大脑非常发达，他们可以轻易接受日新月异的科学进步。\n借助源石,该物种的源石技艺适应性进一步提高。§!\n"
+ trait_industrious_originium_II_desc: "§L这个物种非常吃苦耐劳，这片大地不会体恤体弱者。\n借助源石,该物种的源石技艺适应性进一步提高。§!\n"
+ trait_agrarian_originium_II_desc: "§L这一物种与土地有着难以割舍的关系，使他们成为了农业和园林的专家。\n借助源石,该物种的源石技艺适应性进一步提高。§!\n"
+ trait_ingenious_originium_II_desc: "§L该物种头脑灵活，善于打破陈规，他们懂得如何最大化利用其基础设施和电力网。\n借助源石,该物种的源石技艺适应性进一步提高。§!\n"
+ trait_charismatic_originium_II_desc: "§L这个物种拥有一种特别的魅力，任何其他生物都愿意与他们亲近。\n借助源石,该物种的源石技艺适应性进一步提高。§!\n"
 
  ####################################
  #Resources

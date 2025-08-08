@@ -1,7 +1,7 @@
 namespace = ori_timeline
 
 # Biomorphosis
-#Fires from utopia.2703, tr_cloning_finish, tr_purity_finish, or tr_mutation_adopt
+#Fires from utopia.2703, tr_crystallization_finish, tr_resonance_finish, or tr_assimilation_adopt
 country_event = {
     id = ori_timeline.80
     hide_window = yes

@@ -18,34 +18,34 @@ agenda_assimilation_divergence_finish = {
 
 
 resonance_unlock_level_1 = {
-    icon = "gfx/interface/icons/traditions/tree_icons/tradition_icon_purity.dds"
+    icon = "gfx/interface/icons/traditions/tree_icons/tradition_icon_resonance.dds"
     custom_tooltip = resonance_unlock_level_1_tt
 }
 
 resonance_unlock_level_2 = {
-    icon = "gfx/interface/icons/traditions/tree_icons/tradition_icon_purity.dds"
+    icon = "gfx/interface/icons/traditions/tree_icons/tradition_icon_resonance.dds"
     custom_tooltip = resonance_unlock_level_2_tt
     show_only_custom_tooltip = no
     negative_traits_country = -1
 }
 
 crystallization_unlock_level_1 = {
-    icon = "gfx/interface/icons/traditions/tree_icons/tradition_icon_cloning.dds"
+    icon = "gfx/interface/icons/traditions/tree_icons/tradition_icon_crystallization.dds"
     custom_tooltip = crystallization_unlock_level_1_tt
 }
 
 crystallization_unlock_level_2 = {
-    icon = "gfx/interface/icons/traditions/tree_icons/tradition_icon_cloning.dds"
+    icon = "gfx/interface/icons/traditions/tree_icons/tradition_icon_crystallization.dds"
     custom_tooltip = crystallization_unlock_level_2_tt
 }
 
 assimilation_unlock_level_1 = {
-    icon = "gfx/interface/icons/traditions/tree_icons/tradition_icon_mutation.dds"
+    icon = "gfx/interface/icons/traditions/tree_icons/tradition_icon_assimilation.dds"
     custom_tooltip = assimilation_unlock_level_1_tt
 }
 
 assimilation_unlock_level_2 = {
-    icon = "gfx/interface/icons/traditions/tree_icons/tradition_icon_mutation.dds"
+    icon = "gfx/interface/icons/traditions/tree_icons/tradition_icon_assimilation.dds"
     custom_tooltip = assimilation_unlock_level_2_tt
 }
 

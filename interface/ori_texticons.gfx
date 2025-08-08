@@ -1,0 +1,16 @@
+spriteTypes = {
+    spriteType = {
+        name = "GFX_text_resonance"
+        textureFile = "gfx/interface/icons/text_icons/tradition_icon_purity.dds"
+    }
+
+    spriteType = {
+        name = "GFX_text_crystallization"
+        textureFile = "gfx/interface/icons/text_icons/tradition_icon_cloning.dds"
+    }
+
+    spriteType = {
+        name = "GFX_text_assimilation"
+        textureFile = "gfx/interface/icons/text_icons/tradition_icon_mutation.dds"
+    }
+}

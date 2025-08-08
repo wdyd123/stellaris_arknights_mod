@@ -3,16 +3,21 @@
 ###################################
 
 # Genomic job modifiers
-@originium_purity_growth = 0.10
-@originium_purity_pop_size = -0.10
-@originium_cloning_assembly = 1.0
-@originium_cloning_amenities = 300
-@originium_cloning_crime = -10
-@originium_mutation_habitability = 0.10
-@originium_mutation_auto_mod = 100
+@originium_resonance_growth = 0.10
+@originium_resonance_pop_size = -0.10
+@originium_crystallization_assembly = 1.0
+@originium_crystallization_amenities = 300
+@originium_crystallization_crime = -10
+@originium_assimilation_habitability = 0.10
+@originium_assimilation_auto_mod = 100
 @originium_tech_progress = 0.50
 
 @originium_workforce_mult = 0.15
+
+@originium_base_output = 0.05
+@originium_boosted_output = 0.15
+
+
 
 # # Agendas
 # @perfection_protocols_base_reward = 5

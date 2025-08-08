@@ -1,0 +1,233 @@
+namespace = ori_ap
+country_event = {
+    id = ori_ap.5000
+    is_triggered_only = yes
+    hide_window = yes
+
+    trigger = {
+        from = {
+            is_pool_leader = no
+            leader_crystallized_clone_can_activate = yes
+        }
+    }
+
+    immediate = {
+        random_owned_planet = {
+            limit = {
+                planet_has_cloning_facility = yes
+            }
+            save_event_target_as = clone_background_planet
+        }
+        create_crystallized_clone = yes
+        from = {
+            set_leader_flag = leader_death_events_blocked
+        }
+    }
+}
+
+# Fired by on_five_year_pulse_country
+# This = Country
+# Gatekeeper event for reissuing backup clones
+country_event = {
+    id = ori_ap.5001
+    is_triggered_only = yes
+    hide_window = yes
+
+    trigger = {
+        has_country_flag = originium_resonance_stage_3_crystallization
+        is_crystallization_authority = yes
+    }
+
+    immediate = {
+        every_owned_leader = {
+            limit = {
+                is_gestalt_node = no
+                is_robotic_species = no
+                NOR = {
+                    has_trait = leader_trait_has_crystallized_clone
+                    has_leader_flag = ignore_country_clone_pulse
+                }
+            }
+            leader_event = {
+                id = ori_ap.5002
+                days = 180
+                random = 180
+            }
+        }
+        every_pool_leader = {
+            limit = {
+                is_robotic_species = no
+                NOR = {
+                    has_trait = leader_trait_has_crystallized_clone
+                    has_leader_flag = ignore_country_clone_pulse
+                }
+            }
+            leader_event = {
+                id = ori_ap.5002
+                days = 180
+                random = 180
+            }
+        }
+    }
+}
+
+leader_event = {
+    id = ori_ap.5002
+    hide_window = yes
+    is_triggered_only = yes
+
+    trigger = {
+        NOT = {
+            has_trait = leader_trait_has_crystallized_clone
+        }
+        exists = owner
+        owner = {
+            has_country_flag = originium_resonance_stage_3_crystallization
+            is_crystallization_authority = yes
+        }
+    }
+
+    immediate = {
+        set_leader_flag = ignore_country_clone_pulse
+        random_list = {
+            1 = {		# 33% chance to gain a backup clone
+                add_trait = {
+                    trait = leader_trait_has_crystallized_clone
+                }
+            }
+            2 = {		# 67% chance to reroll in 3-5 years
+                leader_event = {
+                    id = ori_ap.5002
+                    days = 1080
+                    random = 720
+                }
+            }
+        }
+    }
+}
+
+# Assign Purity Authority variables
+
+# Triggered by on_uplift_completion
+# Scope = planet_event
+# This = planet scope
+# From = uplifted species (pre-modification)
+planet_event = {
+    id = ori_ap.5105
+    is_triggered_only = yes
+    hide_window = yes
+
+    trigger = {
+        exists = owner
+        owner = {
+            is_resonance_authority = yes
+        }
+        from = {
+            OR = {
+                is_archetype = PRESAPIENT
+                is_archetype = BIOLOGICAL
+                is_archetype = LITHOID
+            }
+            NOT = {
+                is_variable_set = species_traits_resonance_count
+            }
+        }
+    }
+
+    immediate = {
+        planet_event = { id = ori_ap.5106 days = 5 }
+    }
+}
+
+# Also triggered by on_planet_transfer
+planet_event = {
+    id = ori_ap.5106
+    is_triggered_only = yes
+    hide_window = yes
+
+    trigger = {
+        exists = owner
+        owner = {
+            is_resonance_authority = yes
+        }
+        any_owned_species = {
+            OR = {
+                is_archetype = PRESAPIENT
+                is_archetype = BIOLOGICAL
+                is_archetype = LITHOID
+            }
+            NOT = {
+                is_variable_set = species_traits_resonance_count
+            }
+        }
+    }
+
+    immediate = {
+        every_owned_species = {
+            limit = {
+                NOT = {
+                    is_variable_set = species_traits_resonance_count
+                }
+            }
+            set_species_traits_resonance_count_variable = yes
+        }
+    }
+}
+
+# Triggered by on_modification_complete
+# This = Country
+# From = Species ( Post Modification )
+country_event = {
+    id = ori_ap.5107
+    is_triggered_only = yes
+    hide_window = yes
+
+    trigger = {
+        is_resonance_authority = yes
+        from = {
+            OR = {
+                is_archetype = PRESAPIENT
+                is_archetype = BIOLOGICAL
+                is_archetype = LITHOID
+            }
+        }
+    }
+
+    immediate = {
+        from = {
+            set_species_traits_resonance_count_variable = yes
+        }
+    }
+}
+
+# Triggered by on_monthly_pulse_country
+country_event = {
+    id = ori_ap.5108
+    is_triggered_only = yes
+    hide_window = yes
+
+    trigger = {
+        is_resonance_authority = yes
+        any_owned_species = {
+            OR = {
+                is_archetype = PRESAPIENT
+                is_archetype = BIOLOGICAL
+                is_archetype = LITHOID
+            }
+            NOT = {
+                is_variable_set = species_traits_resonance_count
+            }
+        }
+    }
+
+    immediate = {
+        every_owned_species = {
+            limit = {
+                NOT = {
+                    is_variable_set = species_traits_resonance_count
+                }
+            }
+            set_species_traits_resonance_count_variable = yes
+        }
+    }
+}

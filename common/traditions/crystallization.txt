@@ -206,7 +206,7 @@ tr_crystallization_stage_3_swap = {
 }
 
 # Dummy traditions for tooltip generation
-tr_crystallization_genomic_growth = {
+tr_crystallization_crystallized_growth = {
     possible = {
         # Called via tr_stage_1_tradition_swaps
         always = no
@@ -214,7 +214,7 @@ tr_crystallization_genomic_growth = {
 
     # Effects in the inline script for tooltip generation
     inline_script = {
-        script = traditions/tr_crystallization_genomic_growth
+        script = traditions/tr_crystallization_crystallized_growth
     }
 
     ai_weight = {
@@ -238,7 +238,7 @@ tr_crystallization_artificial_population = {
     }
 }
 
-tr_crystallization_biochemical_composure = {
+tr_crystallization_regenerative_crystallization = {
     possible = {
         # Called via tr_stage_3_tradition_swaps
         always = no
@@ -246,7 +246,7 @@ tr_crystallization_biochemical_composure = {
 
     # Effects in the inline script for tooltip generation
     inline_script = {
-        script = traditions/tr_crystallization_biochemical_composure
+        script = traditions/tr_crystallization_regenerative_crystallization
     }
 
     ai_weight = {
@@ -254,7 +254,7 @@ tr_crystallization_biochemical_composure = {
     }
 }
 
-tr_crystallization_biochemical_composure_clones = {
+tr_crystallization_regenerative_crystallization_clones = {
     possible = {
         # Called via tr_stage_3_tradition_swaps
         always = no
@@ -262,7 +262,7 @@ tr_crystallization_biochemical_composure_clones = {
 
     # Effects in the inline script for tooltip generation
     inline_script = {
-        script = traditions/tr_crystallization_biochemical_composure_clones
+        script = traditions/tr_crystallization_regenerative_crystallization_clones
     }
 
     ai_weight = {

@@ -29,6 +29,7 @@ building_originium_facility = {
         category = planet_buildings
         cost = {
             minerals = @b3_minerals
+            originium = 50
         }
         upkeep = {
             energy = @b3_upkeep
@@ -78,20 +79,20 @@ building_originium_facility = {
         potential = {
             exists = owner
             owner = {
-                has_country_flag = mutation_unlock_level_1
+                has_country_flag = assimilation_unlock_level_1
             }
         }
-        pop_environment_tolerance = @originium_mutation_habitability
+        pop_environment_tolerance = @originium_assimilation_habitability
     }
 
     triggered_planet_modifier = {
         potential = {
             exists = owner
             owner = {
-                has_country_flag = mutation_unlock_level_2
+                has_country_flag = assimilation_unlock_level_2
             }
         }
-        auto_mod_monthly_add = @originium_mutation_auto_mod
+        auto_mod_monthly_add = @originium_assimilation_auto_mod
     }
 
     triggered_planet_modifier = {
@@ -110,9 +111,9 @@ building_originium_facility = {
             exists = owner
             owner = {
                 OR = {
-                    has_purity_heightened_attributes_tradition = yes
+                    has_resonance_heightened_attributes_tradition = yes
                     has_crystallization_artificial_population_tradition = yes
-                    has_mutation_somatic_subversiveness_tradition = yes
+                    has_assimilation_somatic_subversiveness_tradition = yes
                 }
             }
         }
@@ -126,7 +127,7 @@ building_originium_facility = {
                 is_gestalt = no
             }
         }
-        text = healthcare_is_genomic_researcher_tt
+        text = healthcare_is_originium_researcher_tt
     }
 
     triggered_desc = {
@@ -136,7 +137,7 @@ building_originium_facility = {
                 is_gestalt = yes
             }
         }
-        text = spawning_is_genomic_researcher_tt
+        text = spawning_is_originium_researcher_tt
     }
 
     triggered_desc = {
@@ -147,7 +148,7 @@ building_originium_facility = {
                 has_completed_originium_situation = yes
             }
         }
-        text = job_genomic_researcher_effect_desc
+        text = job_originium_researcher_effect_desc
     }
 
     triggered_desc = {
@@ -158,7 +159,7 @@ building_originium_facility = {
                 has_completed_originium_situation = no
             }
         }
-        text = job_genomic_researcher_situation_effect_desc
+        text = job_originium_researcher_situation_effect_desc
     }
 
     triggered_desc = {
@@ -169,7 +170,7 @@ building_originium_facility = {
                 has_completed_originium_situation = yes
             }
         }
-        text = job_genomic_drone_effect_desc
+        text = job_originium_drone_effect_desc
     }
 
     triggered_desc = {
@@ -180,7 +181,7 @@ building_originium_facility = {
                 has_completed_originium_situation = no
             }
         }
-        text = job_genomic_drone_situation_effect_desc
+        text = job_originium_drone_situation_effect_desc
     }
 
     is_essential = yes

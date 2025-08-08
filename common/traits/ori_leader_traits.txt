@@ -1,0 +1,237 @@
+leader_trait_has_crystallized_clone = {
+    force_councilor_trait = yes
+    inline_script = {
+        script = trait/icon
+        CLASS = leader
+        ICON = "GFX_leader_trait_crystallized_clone"
+        RARITY = common
+        COUNCIL = triggered
+        TIER = none
+    }
+    leader_potential_add = {
+        leader_can_have_crystallized_clone = yes
+    }
+    triggered_self_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_crystallization_authority = yes
+                has_crystallization_regenerative_crystallization_tradition = yes
+            }
+        }
+        leader_skill_add = 2
+    }
+    # Oligarchy - Commander
+    triggered_councilor_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_crystallization_authority = yes
+                is_oligarchic_authority = yes
+            }
+            leader_class = commander
+            OR = {
+                is_ruler = yes
+                is_councilor = yes
+            }
+        }
+        country_naval_cap_mult = 0.05
+    }
+    # Oligarchy - Official
+    triggered_councilor_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_crystallization_authority = yes
+                is_oligarchic_authority = yes
+            }
+            leader_class = official
+            OR = {
+                is_ruler = yes
+                is_councilor = yes
+            }
+        }
+        country_trade_produces_mult = 0.15
+    }
+    # Oligarchy - Scientist
+    triggered_councilor_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_crystallization_authority = yes
+                is_oligarchic_authority = yes
+            }
+            leader_class = scientist
+            OR = {
+                is_ruler = yes
+                is_councilor = yes
+            }
+        }
+        country_physics_research_produces_mult = 0.05
+        country_society_research_produces_mult = 0.05
+        country_engineering_research_produces_mult = 0.05
+    }
+    initial = no
+    randomized = no
+    custom_tooltip_with_modifiers = leader_trait_has_crystallized_clone_tt
+    leader_class = { commander scientist official }
+    selectable_weight = {
+        weight = @shared_trait_weight
+        inline_script = paragon/not_council_weight_mult
+    }
+}
+
+leader_trait_crystallized_clone = {
+    force_councilor_trait = yes
+    leader_trait_type = negative
+    inline_script = {
+        script = trait/icon_negative
+        ICON = "GFX_leader_trait_crystallized_clone"
+        COUNCIL = triggered
+        TIER = 1
+    }
+    triggered_self_modifier = {
+        potential = {
+            leader_has_reduced_clone_degradation = no
+        }
+        leader_lifespan_mult = @clone_leader_lifespan_penalty
+        species_leader_exp_gain = @clone_leader_xp_penalty
+    }
+    triggered_self_modifier = {
+        potential = {
+            leader_has_reduced_clone_degradation = yes
+        }
+        leader_lifespan_mult = @clone_leader_lifespan_penalty
+        species_leader_exp_gain = @clone_leader_xp_penalty
+        mult = 0.5
+    }
+    self_modifier = {
+        leader_skill_add = @clone_leader_effective_skill_penalty
+    }
+    triggered_self_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_crystallization_authority = yes
+                is_democratic_authority = yes
+            }
+        }
+        leaders_upkeep_mult = @cordant_multiplicity_clone_upkeep
+    }
+    leader_class = { commander scientist official }
+    selectable_weight = 0
+}
+
+leader_trait_crystallized_clone_2 = {
+    force_councilor_trait = yes
+    replace_traits = { leader_trait_crystallized_clone }
+    leader_trait_type = negative
+    inline_script = {
+        script = trait/icon_negative
+        ICON = "GFX_leader_trait_crystallized_clone"
+        COUNCIL = triggered
+        TIER = 2
+    }
+    triggered_self_modifier = {
+        potential = {
+            leader_has_reduced_clone_degradation = no
+        }
+        leader_skill_add = @clone_leader_effective_skill_penalty
+        leader_lifespan_mult = @clone_leader_lifespan_penalty
+        species_leader_exp_gain = @clone_leader_xp_penalty
+        mult = 2
+    }
+    triggered_self_modifier = {
+        potential = {
+            leader_has_reduced_clone_degradation = yes
+        }
+        leader_skill_add = @clone_leader_effective_skill_penalty
+        leader_lifespan_mult = @clone_leader_lifespan_penalty
+        species_leader_exp_gain = @clone_leader_xp_penalty
+    }
+    triggered_self_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_crystallization_authority = yes
+                is_democratic_authority = yes
+            }
+        }
+        leaders_upkeep_mult = @cordant_multiplicity_clone_upkeep
+    }
+    leader_class = { commander scientist official }
+    selectable_weight = 0
+}
+
+leader_trait_crystallized_clone_3 = {
+    force_councilor_trait = yes
+    replace_traits = { leader_trait_crystallized_clone_2 }
+    leader_trait_type = negative
+    inline_script = {
+        script = trait/icon_negative
+        ICON = "GFX_leader_trait_crystallized_clone"
+        COUNCIL = triggered
+        TIER = 3
+    }
+    triggered_self_modifier = {
+        potential = {
+            leader_has_reduced_clone_degradation = no
+        }
+        leader_skill_add = @clone_leader_effective_skill_penalty
+        leader_lifespan_mult = @clone_leader_lifespan_penalty
+        species_leader_exp_gain = @clone_leader_xp_penalty
+        mult = 3
+    }
+    triggered_self_modifier = {
+        potential = {
+            leader_has_reduced_clone_degradation = yes
+        }
+        leader_skill_add = @clone_leader_effective_skill_penalty
+        leader_lifespan_mult = @clone_leader_lifespan_penalty
+        species_leader_exp_gain = @clone_leader_xp_penalty
+        mult = 2
+    }
+    triggered_self_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_crystallization_authority = yes
+                is_democratic_authority = yes
+            }
+        }
+        leaders_upkeep_mult = @cordant_multiplicity_clone_upkeep
+    }
+    leader_class = { commander scientist official }
+    selectable_weight = 0
+}
+
+
+leader_trait_the_originium_luminary = {
+    inline_script = {
+        script = trait/icon
+        CLASS = leader
+        ICON = "GFX_leader_trait_legendary_xenophobe_one"
+        RARITY = paragon
+        COUNCIL = yes
+        TIER = none
+    }
+
+    inline_script = {
+        script = paragon/leader_resource_upkeep
+        RESOURCE = food
+        AMOUNT = 100
+    }
+
+    councilor_modifier = {
+        BIOLOGICAL_species_trait_points_add = 1
+        BIOLOGICAL_species_trait_picks_add = 1
+        modify_species_cost_mult = -0.10
+        logistic_growth_mult = -0.15
+    }
+
+    leader_class = { official commander scientist }
+
+    initial = no
+    randomized = no
+    immortal_leaders = yes
+}

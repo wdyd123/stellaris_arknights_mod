@@ -11,19 +11,19 @@ concept_resonance_authorities = {
 
 }
 
-concept_resonance_optimized_neurology = {
-    icon = "gfx/interface/icons/traditions/tradition_purity_optimized_neurology.dds"
-    tooltip_override = "tradition:tr_purity_optimized_neurology"
+concept_resonance_neural_tuning = {
+    icon = "gfx/interface/icons/traditions/tradition_resonance_neural_tuning.dds"
+    tooltip_override = "tradition:tr_resonance_neural_tuning"
 }
 
 concept_resonance_heightened_attributes = {
-    icon = "gfx/interface/icons/traditions/tradition_purity_heightened_attributes.dds"
-    tooltip_override = "tradition:tr_purity_heightened_attributes"
+    icon = "gfx/interface/icons/traditions/tradition_resonance_heightened_attributes.dds"
+    tooltip_override = "tradition:tr_resonance_heightened_attributes"
 }
 
-concept_resonance_imperfection_remediation = {
-    icon = "gfx/interface/icons/traditions/tradition_purity_imperfection_remediation.dds"
-    tooltip_override = "tradition:tr_purity_imperfection_remediation"
+concept_resonance_buzz_elimination = {
+    icon = "gfx/interface/icons/traditions/tradition_resonance_buzz_elimination.dds"
+    tooltip_override = "tradition:tr_resonance_buzz_elimination"
 }
 
 # Cloning
@@ -32,7 +32,7 @@ concept_crystallization_authorities = {
 
 }
 
-concept_backup_clones = {
+concept_crystallized_clones = {
 
 }
 
@@ -40,24 +40,24 @@ concept_clone_leader_degradation = {
 
 }
 
-concept_crystallization_genomic_growth = {
-    icon = "gfx/interface/icons/traditions/tradition_cloning_genomic_growth.dds"
-    tooltip_override = "tradition:tr_cloning_genomic_growth"
+concept_crystallization_crystallized_growth = {
+    icon = "gfx/interface/icons/traditions/tradition_crystallization_crystallized_growth.dds"
+    tooltip_override = "tradition:tr_crystallization_crystallized_growth"
 }
 
 concept_crystallization_artificial_population = {
-    icon = "gfx/interface/icons/traditions/tradition_cloning_artificial_population.dds"
-    tooltip_override = "tradition:tr_cloning_artificial_population"
+    icon = "gfx/interface/icons/traditions/tradition_crystallization_artificial_population.dds"
+    tooltip_override = "tradition:tr_crystallization_artificial_population"
 }
 
-concept_crystallization_biochemical_composure = {
-    icon = "gfx/interface/icons/traditions/tradition_cloning_biochemical_composure.dds"
-    tooltip_override = "tradition:tr_cloning_biochemical_composure"
+concept_crystallization_regenerative_crystallization = {
+    icon = "gfx/interface/icons/traditions/tradition_crystallization_regenerative_crystallization.dds"
+    tooltip_override = "tradition:tr_crystallization_regenerative_crystallization"
 }
 
-concept_crystallization_biochemical_composure_clones = {
-    icon = "gfx/interface/icons/traditions/tradition_cloning_biochemical_composure.dds"
-    tooltip_override = "tradition:tr_cloning_biochemical_composure_clones"
+concept_crystallization_regenerative_crystallization_clones = {
+    icon = "gfx/interface/icons/traditions/tradition_crystallization_regenerative_crystallization.dds"
+    tooltip_override = "tradition:tr_crystallization_regenerative_crystallization_clones"
 }
 
 # Mutation
@@ -71,16 +71,16 @@ concept_assimilation_authorities_evopred = {
 }
 
 concept_assimilation_environmental_integration = {
-    icon = "gfx/interface/icons/traditions/tradition_mutation_environmental_integration.dds"
-    tooltip_override = "tradition:tr_mutation_environmental_integration"
+    icon = "gfx/interface/icons/traditions/tradition_assimilation_environmental_integration.dds"
+    tooltip_override = "tradition:tr_assimilation_environmental_integration"
 }
 
 concept_assimilation_somatic_subversiveness = {
-    icon = "gfx/interface/icons/traditions/tradition_mutation_somatic_subversiveness.dds"
-    tooltip_override = "tradition:tr_mutation_somatic_subversiveness"
+    icon = "gfx/interface/icons/traditions/tradition_assimilation_somatic_subversiveness.dds"
+    tooltip_override = "tradition:tr_assimilation_somatic_subversiveness"
 }
 
 concept_assimilation_nucleotide_isolation = {
-    icon = "gfx/interface/icons/traditions/tradition_mutation_nucleotide_isolation.dds"
-    tooltip_override = "tradition:tr_mutation_nucleotide_isolation"
+    icon = "gfx/interface/icons/traditions/tradition_assimilation_nucleotide_isolation.dds"
+    tooltip_override = "tradition:tr_assimilation_nucleotide_isolation"
 }

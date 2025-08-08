@@ -2,13 +2,13 @@ originoids={
     species_class = TERRA
 
     portraits = {
-        perro
+        # perro
         Liberi
     }
 
     conditional_portraits = {
         portraits = {
-            perro
+            # perro
             Liberi
         }
     }
@@ -18,7 +18,7 @@ originoids={
         playable = {
         }
         portraits = {
-            perro
+            # perro
             Liberi
 
         }

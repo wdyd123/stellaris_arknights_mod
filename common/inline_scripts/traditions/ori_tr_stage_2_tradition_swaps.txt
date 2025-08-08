@@ -6,7 +6,7 @@ tradition_swap = {
 	inherit_name = no
 	inherit_icon = no
 	trigger = {
-		has_country_flag = originium_ascension_stage_2_resonance
+		has_country_flag = originium_resonance_stage_2_resonance
 		is_wilderness_empire = no
 	}
 
@@ -42,7 +42,7 @@ tradition_swap = {
 	inherit_name = no
 	inherit_icon = no
 	trigger = {
-		has_country_flag = originium_ascension_stage_2_crystallization
+		has_country_flag = originium_resonance_stage_2_crystallization
 		NOT = {
 			has_country_flag = clone_army_full_potential
 		}
@@ -79,7 +79,7 @@ tradition_swap = {
 	inherit_name = no
 	inherit_icon = no
 	trigger = {
-		has_country_flag = originium_ascension_stage_2_assimilation
+		has_country_flag = originium_resonance_stage_2_assimilation
 	}
 
 	inline_script = {

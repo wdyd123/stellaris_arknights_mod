@@ -1,0 +1,143 @@
+purge = {
+    option = {
+        name = "purge_not_allowed"
+
+        valid = {
+            NOT = { has_ethic = ethic_gestalt_consciousness }
+            NOT = { has_valid_civic = "civic_fanatic_purifiers" }
+        }
+
+        policy_flags = {
+            purge_not_allowed
+        }
+    }
+
+    option = {
+        name = "purge_displacement_only"
+
+        policy_flags = {
+            purge_displacement_only
+        }
+
+        modifier = {}
+
+        valid = {
+            NOR = {
+                has_ethic = ethic_xenophile
+                has_ethic = ethic_fanatic_xenophile
+            }
+            is_homicidal = no
+        }
+
+        AI_weight = {
+            factor = 5
+            modifier = {
+                factor = 0
+                has_valid_ai_personality = yes
+                has_ai_personality_behaviour = multispecies
+            }
+        }
+    }
+
+    option = {
+        name = "purge_allowed"
+
+        in_breach_of = {
+            {
+                key = resolution_rulesofwar_reverence_for_life
+            }
+            {
+                key = resolution_rulesofwar_independent_tribunals
+            }
+            {
+                key = resolution_rulesofwar_last_resort_doctrine
+            }
+            {
+                key = resolution_rulesofwar_demobilization_initiative
+            }
+        }
+
+        policy_flags = {
+            purge_allowed
+        }
+        modifier = {}
+
+        valid = {
+            custom_tooltip = {
+                success_text = is_not_a_signatory_vassal_success
+                fail_text = is_not_a_signatory_vassal_fail
+                NOT = { any_agreement = { agreement_preset = preset_signatory } }
+            }
+            custom_tooltip = {
+                fail_text = is_broken_shackles_origin
+                NOT = { has_origin = origin_broken_shackles }
+            }
+            OR = {
+                has_ethic = ethic_gestalt_consciousness
+                has_ethic = ethic_xenophobe
+                has_ethic = ethic_fanatic_xenophobe
+                has_crisis_perk = menp_undertaker	# Unlocked with Crisis Level 1
+                AND = {
+                    custom_tooltip = {
+                        text = civic_tooltip_not_xenophile
+                        NOR = {
+                            has_ethic = ethic_xenophile
+                            has_ethic = ethic_fanatic_xenophile
+                        }
+                    }
+                    has_purity_imperfection_remediation_tradition = yes
+                    has_resonance_buzz_elimination_tradition = yes
+                }
+            }
+        }
+
+        AI_weight = {
+            factor = 10
+            modifier = {
+                factor = 40
+                has_ethic = ethic_gestalt_consciousness
+                NOT = { has_valid_civic = civic_hive_empath }
+            }
+            modifier = {
+                factor = 0
+                OR = {
+                    has_ethic = ethic_pacifist
+                    has_ethic = ethic_fanatic_pacifist
+                }
+            }
+            modifier = {
+                factor = 0
+                has_valid_ai_personality = yes
+                NOR = {
+                    has_ai_personality_behaviour = purger
+                    has_ethic = ethic_gestalt_consciousness
+                    AND = {
+                        has_origin = origin_necrophage
+                        is_xenophobe = yes
+                    }
+                }
+            }
+            modifier = {
+                factor = 0.1
+                has_valid_ai_personality = yes
+                is_ai = yes
+                is_galactic_community_member = yes
+                OR = {
+                    is_active_resolution = "resolution_rulesofwar_reverence_for_life"
+                    is_active_resolution = "resolution_rulesofwar_independent_tribunals"
+                    is_active_resolution = "resolution_rulesofwar_last_resort_doctrine"
+                    is_active_resolution = "resolution_rulesofwar_demobilization_initiative"
+                }
+            }
+            modifier = {
+                factor = 10
+                has_ascension_perk = ap_become_the_crisis
+            }
+            modifier = {
+                factor = 1000
+                has_origin = origin_necrophage
+                is_xenophobe = yes
+            }
+        }
+    }
+}

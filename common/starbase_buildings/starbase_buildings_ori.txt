@@ -49,7 +49,7 @@ originium_harvester = {
     on_destroyed = {
         solar_system = {
             system_event = {
-                id = originium.5051
+                id = originium_production.5051
             }
         }
     }

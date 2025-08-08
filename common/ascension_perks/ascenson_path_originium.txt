@@ -12,7 +12,7 @@ ap_originium_resonance = {
                 country_event = { id = ori_ap.1 }
             }
             custom_tooltip = "originium_resonance_originium_tt"
-            set_country_flag = origninium_research_facility_unlocked
+            set_country_flag = originium_research_facility_unlocked
         }
         # ?
         else_if = {

@@ -12,15 +12,15 @@ tradition_resonance = {
             has_synthetic_ascension = yes
             is_natural_design_empire = yes
             is_individual_machine = yes
-            has_cloning_ascension = yes
-            has_mutation_ascension = yes
+            has_crystallization_ascension = yes
+            has_assimilation_ascension = yes
             has_originium_resonance = yes
         }
     }
 
     traditions = {
-        "tr_resonance_genotype_regeneration"
-        "tr_resonance_exemplary_genetics"
+        "tr_resonance_frequency_regeneration"
+        "tr_resonance_exemplary_frequencies"
         "tr_resonance_stage_1_swap"
         "tr_resonance_stage_2_swap"
         "tr_resonance_stage_3_swap"

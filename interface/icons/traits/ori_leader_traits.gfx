@@ -1,0 +1,7 @@
+spriteTypes = {
+    spriteType = {
+        name = "GFX_leader_trait_crystallized_clone"
+        texturefile = "gfx/interface/icons/traits/leader_trait_icons/crystallized_clone.dds"
+    }
+
+}

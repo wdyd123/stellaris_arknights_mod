@@ -8,3 +8,114 @@ triggered_country_modifier = {
     }
     prophecy_progress_mult = 0.0125
 }
+
+triggered_planet_modifier = {
+    potential = {
+        healthcare_is_originium_researcher_trigger = yes
+        exists = owner
+        owner = {
+            has_country_flag = resonance_unlock_level_1
+        }
+    }
+    logistic_growth_mult = @originium_resonance_growth
+}
+
+triggered_planet_pop_group_modifier_for_all = {
+    potential = {
+        exists = planet
+        planet = {
+            healthcare_is_originium_researcher_trigger = yes
+            exists = owner
+            owner = {
+                has_country_flag = crystallization_unlock_level_1
+            }
+        }
+    }
+    bonus_pop_growth = @originium_crystallization_assembly
+}
+
+triggered_planet_modifier = {
+    potential = {
+        healthcare_is_originium_researcher_trigger = yes
+        exists = owner
+        owner = {
+            has_country_flag = crystallization_unlock_level_1
+        }
+    }
+    fake_pop_growth_mod = @originium_crystallization_assembly
+}
+
+triggered_planet_modifier = {
+    potential = {
+        healthcare_is_originium_researcher_trigger = yes
+        exists = owner
+        owner = {
+            has_country_flag = crystallization_unlock_level_2
+            is_gestalt = no
+        }
+    }
+    planet_amenities_add = @originium_crystallization_amenities
+    mult = value:scripted_modifier_mult|MODIFIER|pop_job_amenities_mult|
+}
+
+triggered_planet_modifier = {
+    potential = {
+        healthcare_is_originium_researcher_trigger = yes
+        exists = owner
+        owner = {
+            has_country_flag = crystallization_unlock_level_2
+            is_gestalt = yes
+        }
+    }
+    planet_amenities_no_happiness_add = @originium_crystallization_amenities
+    mult = value:scripted_modifier_mult|MODIFIER|pop_job_amenities_mult|
+}
+
+triggered_planet_pop_group_modifier_for_all = {
+    potential = {
+        exists = planet
+        planet = {
+            healthcare_is_originium_researcher_trigger = yes
+            exists = owner
+            owner = {
+                has_crystallization_crystallized_growth_tradition = yes
+            }
+        }
+    }
+    bonus_pop_growth = @originium_crystallization_assembly
+}
+
+triggered_planet_modifier = {
+    potential = {
+        healthcare_is_originium_researcher_trigger = yes
+        exists = owner
+        owner = {
+            has_crystallization_crystallized_growth_tradition = yes
+        }
+    }
+    fake_pop_growth_mod = @originium_crystallization_assembly
+}
+
+triggered_planet_modifier = {
+    potential = {
+        healthcare_is_originium_researcher_trigger = yes
+        exists = owner
+        owner = {
+            has_crystallization_artificial_population_tradition = yes
+            is_gestalt = no
+        }
+    }
+    planet_crime_add = @originium_crystallization_crime
+}
+
+triggered_planet_modifier = {
+    potential = {
+        healthcare_is_originium_researcher_trigger = yes
+        exists = owner
+        owner = {
+            has_crystallization_artificial_population_tradition = yes
+            is_gestalt = yes
+        }
+    }
+    planet_crime_no_happiness_add = @originium_crystallization_crime
+}

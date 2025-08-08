@@ -20,7 +20,7 @@ give_resonance_unlocks_effect = {
             else = {
                 add_tech_progress = {
                     tech = tech_gene_seed_purification
-                    progress = @genomic_tech_progress
+                    progress = @originium_tech_progress
                 }
             }
         }
@@ -63,7 +63,7 @@ give_crystallization_unlocks_effect = {
             else = {
                 add_tech_progress = {
                     tech = tech_gene_banks
-                    progress = @genomic_tech_progress
+                    progress = @originium_tech_progress
                 }
             }
         }
@@ -106,7 +106,7 @@ give_assimilation_unlocks_effect = {
             else = {
                 add_tech_progress = {
                     tech = tech_gene_expressions
-                    progress = @genomic_tech_progress
+                    progress = @originium_tech_progress
                 }
             }
         }
