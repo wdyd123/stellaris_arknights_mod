@@ -7,29 +7,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3c23acaf-318b-45fc-ae5e-187f4e105237" name="更改" comment="美术资源补充">
-      <change afterPath="$PROJECT_DIR$/interface/ori_resources.gfx" afterDir="false" />
+    <list default="true" id="3c23acaf-318b-45fc-ae5e-187f4e105237" name="更改" comment="贸易市场图标问题&#10;物种特质点数">
+      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/ascension_perks/ascenson_path_originium.txt" beforeDir="false" afterPath="$PROJECT_DIR$/common/ascension_perks/ascenson_path_originium.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/buildings/ori_fallen_empire_buildings.txt" beforeDir="false" afterPath="$PROJECT_DIR$/common/buildings/ori_fallen_empire_buildings.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/scripted_loc/ori_ascension_scripted_loc.txt" beforeDir="false" afterPath="$PROJECT_DIR$/common/scripted_loc/ori_ascension_scripted_loc.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/situations/originium_situation.txt" beforeDir="false" afterPath="$PROJECT_DIR$/common/situations/originium_situation.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/strategic_resources/resources_originium.txt" beforeDir="false" afterPath="$PROJECT_DIR$/common/strategic_resources/resources_originium.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/technology/ori_soc_tech.txt" beforeDir="false" afterPath="$PROJECT_DIR$/common/technology/ori_soc_tech.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/traditions/assimilation.txt" beforeDir="false" afterPath="$PROJECT_DIR$/common/traditions/assimilation.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/traditions/crystallization.txt" beforeDir="false" afterPath="$PROJECT_DIR$/common/traditions/crystallization.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/traditions/resonance.txt" beforeDir="false" afterPath="$PROJECT_DIR$/common/traditions/resonance.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/traits/ori_leader_traits.txt" beforeDir="false" afterPath="$PROJECT_DIR$/common/traits/ori_leader_traits.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/traits/originoid_traits.txt" beforeDir="false" afterPath="$PROJECT_DIR$/common/traits/originoid_traits.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gfx/interface/icons/resources/infection_suppressant_20.dds" beforeDir="false" afterPath="$PROJECT_DIR$/gfx/interface/icons/resources/infection_suppressant_market.dds" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gfx/interface/icons/resources/infection_suppressant_large.dds" beforeDir="false" afterPath="$PROJECT_DIR$/gfx/interface/icons/resources/infection_suppressant_market_large.dds" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gfx/interface/icons/resources/originium.dds" beforeDir="false" afterPath="$PROJECT_DIR$/gfx/interface/icons/resources/originium.dds" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gfx/interface/icons/resources/originium_20.dds" beforeDir="false" afterPath="$PROJECT_DIR$/gfx/interface/icons/resources/originium_market.dds" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gfx/interface/icons/resources/originium_grey.dds" beforeDir="false" afterPath="$PROJECT_DIR$/gfx/interface/icons/resources/originium_grey.dds" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gfx/interface/icons/resources/originium_large.dds" beforeDir="false" afterPath="$PROJECT_DIR$/gfx/interface/icons/resources/originium_market_large.dds" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/localisation/english/ori_ascension_perk_lists_l_english.yml" beforeDir="false" afterPath="$PROJECT_DIR$/localisation/english/ori_ascension_perk_lists_l_english.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/localisation/simp_chinese/ori_ascension_perk_lists_l_simp_chinese.yml" beforeDir="false" afterPath="$PROJECT_DIR$/localisation/simp_chinese/ori_ascension_perk_lists_l_simp_chinese.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/localisation/simp_chinese/ori_technology_l_simp_chinese.yml" beforeDir="false" afterPath="$PROJECT_DIR$/localisation/simp_chinese/ori_technology_l_simp_chinese.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -76,7 +56,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "master",
+    "git-widget-placeholder": "正在合并 master",
     "ignore.virus.scanning.warn.message": "true",
     "last_opened_file_path": "D:/OneDrive/Documents/Paradox Interactive/Stellaris/mod/00001/gfx/interface/icons/resources",
     "run.code.analysis.last.selected.profile": "pProject Default",
@@ -278,7 +258,47 @@
       <option name="project" value="LOCAL" />
       <updated>1754708698090</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="贸易市场图标问题&#10;物种特质点数">
+      <option name="closed" value="true" />
+      <created>1754731715379</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1754731715379</updated>
+    </task>
+    <task id="LOCAL-00022" summary="贸易市场图标问题&#10;物种特质点数">
+      <option name="closed" value="true" />
+      <created>1754732131865</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1754732131865</updated>
+    </task>
+    <task id="LOCAL-00023" summary="贸易市场图标问题&#10;物种特质点数">
+      <option name="closed" value="true" />
+      <created>1754732139506</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1754732139506</updated>
+    </task>
+    <task id="LOCAL-00024" summary="贸易市场图标问题&#10;物种特质点数">
+      <option name="closed" value="true" />
+      <created>1754732185537</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1754732185537</updated>
+    </task>
+    <task id="LOCAL-00025" summary="贸易市场图标问题&#10;物种特质点数">
+      <option name="closed" value="true" />
+      <created>1754732340628</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1754732340628</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -336,6 +356,7 @@
     <MESSAGE value="图标修改&#10;特质修改&#10;适配天选帝君起源&#10;文本优化&#10;飞升效果完善&#10;bug修复" />
     <MESSAGE value="英文本地化" />
     <MESSAGE value="美术资源补充" />
-    <option name="LAST_COMMIT_MESSAGE" value="美术资源补充" />
+    <MESSAGE value="贸易市场图标问题&#10;物种特质点数" />
+    <option name="LAST_COMMIT_MESSAGE" value="贸易市场图标问题&#10;物种特质点数" />
   </component>
 </project>
