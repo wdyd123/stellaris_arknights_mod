@@ -562,7 +562,7 @@ tech_gene_tailoring = {
             POINTS1 = @tech_gene_tailoring_POINTS
             POINTS2 = 3
         }
-        ORIGINOID_species_trait_points_add = @tech_gene_tailoring_POINTS
+        BIOLOGICAL_species_trait_points_add = @tech_gene_tailoring_POINTS
         ORIGINOID_species_trait_points_add = 3
     }
 

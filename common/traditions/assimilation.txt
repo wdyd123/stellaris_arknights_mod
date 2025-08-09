@@ -119,7 +119,7 @@ tr_assimilation_unnatural_selection = {
     custom_tooltip_with_modifiers = tr_assimilation_unnatural_selection_tt
     modifier = {
         ORIGINOID_species_trait_points_add = 4
-        BIOLOGICAL_species_trait_picks_add = 4
+        ORIGINOID_species_trait_picks_add = 4
         modify_species_cost_mult = -0.50
     }
     ai_weight = {
