@@ -161,7 +161,7 @@ defined_text = {
 }
 
 defined_text = {
-    name = GetHasBackupCloneDesc
+    name = GetHasBackupCrystallizedCloneDesc
     text = {
         trigger = {
             exists = owner
@@ -369,7 +369,7 @@ defined_text = {
 }
 
 defined_text= {
-    name = GetBiochemicalComposureSwapTT
+    name = GetRegenerativeCrystallizationSwapTT
     text = {
         trigger = {
             OR = {

@@ -11,7 +11,7 @@ l_simp_chinese:
  tech_morphogenetic_field_mastery_desc: "形态发生研究本是药学领域的尝试，但深入理解其中玄妙后，开发出了有机体潜意识直连技术。"
  tech_gene_tailoring: "基因剪裁"
  tech_gene_tailoring_desc: "使基因编辑工具被广泛使用肯定会对我们的发展有积极的影响。"
- tech_gene_tailoring_modifier_desc: "$species_trait_points_add$：$POINTS|0=+$"
+ tech_gene_tailoring_modifier_desc_ori: "有机体$species_trait_points_add$：$POINTS1|0=+$\n\n源石体$species_trait_points_add$：$POINTS2|0=+$"
  tech_gene_tailoring_overtuned: "$tech_gene_tailoring$"
  tech_gene_tailoring_overtuned_desc: "$tech_gene_tailoring_desc$"
  tech_gene_expressions: "基因定向表达"
@@ -37,3 +37,7 @@ l_simp_chinese:
  tech_plantoid_transgenesis_desc: "通过一些人工的促长手段，我们在植物类物种中发现的进化适应性也可以复制到其他形式的生命体中。"
  TECH_UNLOCK_PLANTOID_GENETICS_TITLE: "§H解锁特性：§!植物体转基因技术"
  TECH_UNLOCK_PLANTOID_GENETICS_DESC: "允许我们经由物种修饰技术将植物类特质添加给有机物种。"
+
+
+#to be translated
+ mod_ORIGINOID_species_trait_points_add: "源石体物种修饰点"

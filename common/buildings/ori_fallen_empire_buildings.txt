@@ -946,7 +946,7 @@ building_ancient_cryo_chamber = {
             }
         }
         BIOLOGICAL_species_trait_picks_add = 1
-        BIOLOGICAL_species_trait_points_add = 1
+        ORIGINOID_species_trait_points_add = 1
     }
 
     resources = {

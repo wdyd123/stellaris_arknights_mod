@@ -7,22 +7,29 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3c23acaf-318b-45fc-ae5e-187f4e105237" name="更改" comment="图标修改&#10;特质修改&#10;适配天选帝君起源&#10;文本优化&#10;飞升效果完善&#10;bug修复">
-      <change afterPath="$PROJECT_DIR$/localisation/english/main_ori_l_english.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/localisation/english/name_lists_l_english.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/localisation/english/oir_deposits_l_english.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/localisation/english/ori_agendas_l_english.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/localisation/english/ori_ascension_perk_lists_l_english.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/localisation/english/ori_buildings_l_english.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/localisation/english/ori_focus_l_english.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/localisation/english/ori_paragon_events_l_english.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/localisation/english/ori_situations_l_english.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/localisation/english/ori_technology_l_english.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/localisation/english/ori_wilderness_l_english.yml" afterDir="false" />
+    <list default="true" id="3c23acaf-318b-45fc-ae5e-187f4e105237" name="更改" comment="美术资源补充">
+      <change afterPath="$PROJECT_DIR$/interface/ori_resources.gfx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/static_modifiers/ori_asscension_modifiers.txt" beforeDir="false" afterPath="$PROJECT_DIR$/common/static_modifiers/ori_asscension_modifiers.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/events/originium_ascension_events.txt" beforeDir="false" afterPath="$PROJECT_DIR$/events/originium_ascension_events.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/ascension_perks/ascenson_path_originium.txt" beforeDir="false" afterPath="$PROJECT_DIR$/common/ascension_perks/ascenson_path_originium.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/buildings/ori_fallen_empire_buildings.txt" beforeDir="false" afterPath="$PROJECT_DIR$/common/buildings/ori_fallen_empire_buildings.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/scripted_loc/ori_ascension_scripted_loc.txt" beforeDir="false" afterPath="$PROJECT_DIR$/common/scripted_loc/ori_ascension_scripted_loc.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/situations/originium_situation.txt" beforeDir="false" afterPath="$PROJECT_DIR$/common/situations/originium_situation.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/strategic_resources/resources_originium.txt" beforeDir="false" afterPath="$PROJECT_DIR$/common/strategic_resources/resources_originium.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/technology/ori_soc_tech.txt" beforeDir="false" afterPath="$PROJECT_DIR$/common/technology/ori_soc_tech.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/traditions/assimilation.txt" beforeDir="false" afterPath="$PROJECT_DIR$/common/traditions/assimilation.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/traditions/crystallization.txt" beforeDir="false" afterPath="$PROJECT_DIR$/common/traditions/crystallization.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/traditions/resonance.txt" beforeDir="false" afterPath="$PROJECT_DIR$/common/traditions/resonance.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/traits/ori_leader_traits.txt" beforeDir="false" afterPath="$PROJECT_DIR$/common/traits/ori_leader_traits.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/traits/originoid_traits.txt" beforeDir="false" afterPath="$PROJECT_DIR$/common/traits/originoid_traits.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gfx/interface/icons/resources/infection_suppressant_20.dds" beforeDir="false" afterPath="$PROJECT_DIR$/gfx/interface/icons/resources/infection_suppressant_market.dds" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gfx/interface/icons/resources/infection_suppressant_large.dds" beforeDir="false" afterPath="$PROJECT_DIR$/gfx/interface/icons/resources/infection_suppressant_market_large.dds" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gfx/interface/icons/resources/originium.dds" beforeDir="false" afterPath="$PROJECT_DIR$/gfx/interface/icons/resources/originium.dds" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gfx/interface/icons/resources/originium_20.dds" beforeDir="false" afterPath="$PROJECT_DIR$/gfx/interface/icons/resources/originium_market.dds" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gfx/interface/icons/resources/originium_grey.dds" beforeDir="false" afterPath="$PROJECT_DIR$/gfx/interface/icons/resources/originium_grey.dds" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gfx/interface/icons/resources/originium_large.dds" beforeDir="false" afterPath="$PROJECT_DIR$/gfx/interface/icons/resources/originium_market_large.dds" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/localisation/english/ori_ascension_perk_lists_l_english.yml" beforeDir="false" afterPath="$PROJECT_DIR$/localisation/english/ori_ascension_perk_lists_l_english.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/localisation/simp_chinese/ori_ascension_perk_lists_l_simp_chinese.yml" beforeDir="false" afterPath="$PROJECT_DIR$/localisation/simp_chinese/ori_ascension_perk_lists_l_simp_chinese.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/localisation/simp_chinese/ori_technology_l_simp_chinese.yml" beforeDir="false" afterPath="$PROJECT_DIR$/localisation/simp_chinese/ori_technology_l_simp_chinese.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -71,7 +78,7 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "git-widget-placeholder": "master",
     "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "D:/OneDrive/Documents/Paradox Interactive/Stellaris/mod/00001/localisation/english",
+    "last_opened_file_path": "D:/OneDrive/Documents/Paradox Interactive/Stellaris/mod/00001/gfx/interface/icons/resources",
     "run.code.analysis.last.selected.profile": "pProject Default",
     "settings.editor.selected.configurable": "reference.settings.project.statistic.project.settings"
   },
@@ -87,17 +94,20 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\OneDrive\Documents\Paradox Interactive\Stellaris\mod\00001\gfx\interface\icons\resources" />
       <recent name="D:\OneDrive\Documents\Paradox Interactive\Stellaris\mod\00001\localisation\english" />
       <recent name="D:\OneDrive\Documents\Paradox Interactive\Stellaris\mod\00001\gfx\interface\icons\jobs" />
       <recent name="D:\OneDrive\Documents\Paradox Interactive\Stellaris\mod\00001\gfx\interface\icons\agenda_icons" />
       <recent name="D:\OneDrive\Documents\Paradox Interactive\Stellaris\mod\00001\gfx\interface\icons\traditions\tree_icons" />
-      <recent name="D:\OneDrive\Documents\Paradox Interactive\Stellaris\mod\00001\common\inline_scripts\buildings" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\OneDrive\Documents\Paradox Interactive\Stellaris\mod\00001\gfx\event_pictures" />
       <recent name="D:\OneDrive\Documents\Paradox Interactive\Stellaris\mod\00001\common\inline_scripts\pop_categories" />
       <recent name="D:\OneDrive\Documents\Paradox Interactive\Stellaris\mod\00001\common\tradition_categories" />
       <recent name="D:\OneDrive\Documents\Paradox Interactive\Stellaris\mod\00001\gfx\models\portraits\civilian_protraits" />
+    </key>
+    <key name="Pls.ConvertImageFormat.RECENT_KEYS.PNG">
+      <recent name="D:\OneDrive\桌面\sucai\resources" />
     </key>
   </component>
   <component name="TaskManager">
@@ -252,7 +262,23 @@
       <option name="project" value="LOCAL" />
       <updated>1754669292894</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="英文本地化">
+      <option name="closed" value="true" />
+      <created>1754708678171</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1754708678171</updated>
+    </task>
+    <task id="LOCAL-00020" summary="美术资源补充">
+      <option name="closed" value="true" />
+      <created>1754708698090</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1754708698090</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -308,6 +334,8 @@
     <MESSAGE value="特质标签" />
     <MESSAGE value="图标修改,特质修改,现区分高低等级特质,低级可以直接添加,高级属于自动改造特质.&#10;&#10;飞升路线完善,传统仍需要修改&#10;&#10;事件适配&#10;&#10;本地化" />
     <MESSAGE value="图标修改&#10;特质修改&#10;适配天选帝君起源&#10;文本优化&#10;飞升效果完善&#10;bug修复" />
-    <option name="LAST_COMMIT_MESSAGE" value="图标修改&#10;特质修改&#10;适配天选帝君起源&#10;文本优化&#10;飞升效果完善&#10;bug修复" />
+    <MESSAGE value="英文本地化" />
+    <MESSAGE value="美术资源补充" />
+    <option name="LAST_COMMIT_MESSAGE" value="美术资源补充" />
   </component>
 </project>

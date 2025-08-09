@@ -960,7 +960,7 @@
  tr_crystallization_artificial_population_clone_army_tt: "$tr_crystallization_artificial_population_tt$\n£pop£§Y$clone_soldier$ populations§! maintained per £building£§YMedical Building§! level: §G+$@clones_sustained_low|0$§!"
 
  tr_crystallization_regenerative_crystallization: "Crystalline Stabilization"
- tr_crystallization_regenerative_crystallization_delayed: "Through biochemical enhancement, we can ensure crystalline stability and resilience.[GetBiochemicalComposureSwapTT]"
+ tr_crystallization_regenerative_crystallization_delayed: "Through biochemical enhancement, we can ensure crystalline stability and resilience.[GetRegenerativeCrystallizationSwapTT]"
  tr_crystallization_regenerative_crystallization_tt: "$ENABLES_CRYSTALLIZED_CLONES$\n$LEADERS_GAIN_CRYSTALLIZED_CLONES$"
  tr_crystallization_regenerative_crystallization_clone_army: "$tr_crystallization_regenerative_crystallization$"
  tr_crystallization_regenerative_crystallization_clone_army_delayed: "$tr_crystallization_regenerative_crystallization_delayed$"
@@ -983,7 +983,7 @@
 
  leader_trait_has_crystallized_clone: "Backup Clone"
  leader_trait_has_crystallized_clone_plural: "Backup Clones"
- leader_trait_has_crystallized_clone_desc: "[GetHasBackupCloneDesc]"
+ leader_trait_has_crystallized_clone_desc: "[GetHasBackupCrystallizedCloneDesc]"
  leader_trait_has_crystallized_clone_default_desc: "This leader has a crystalline clone of themselves, normally stored in preservation facilities with regular memory transfers."
  leader_trait_has_crystallized_clone_improved_desc: "This leader works alongside a crystalline clone of themselves."
  leader_trait_has_crystallized_clone_tt: "§YLeader Death§!§E:§! $TABBED_NEW_LINE$Replaced by [GetAAnBackupCloneLower] §Y$leader_trait_crystallized_clone$§!"

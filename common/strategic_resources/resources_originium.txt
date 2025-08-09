@@ -1,6 +1,6 @@
 infection_suppressant ={
     tradable = yes
-    category = strategic
+    category = advanced
     market_amount = 10
     market_price = 100
     max = 25000
@@ -23,13 +23,15 @@ infection_suppressant ={
 
 originium ={
     tradable = yes
-    category = advanced
+    category = strategic
     market_amount = 10
     market_price = 100
     max = 25000
     allow_deficit = no
     # prerequisites = { "tech_mine_volatile_motes" }
+    tradable_in_market = {
 
+    }
 
     culling_conversion_value = 7
 

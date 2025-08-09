@@ -27,6 +27,7 @@ ap_originium_resonance = {
         #     custom_tooltip = "originium_resonance_tt"
         # }
     }
+
     possible = {
         # custom_tooltip = {
         #     fail_text = "synthetic_empire_biological_ascension"
@@ -83,7 +84,6 @@ ap_originium_resonance = {
             num_tradition_categories < @max_tradition_trees
         }
     }
-
     potential = {
         OR = {
             has_utopia = yes

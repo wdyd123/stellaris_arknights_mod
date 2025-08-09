@@ -1,0 +1,19 @@
+spriteTypes = {
+    spriteType = {
+        name = "GFX_resource_originium_large"
+        textureFile = "gfx/interface/icons/resources/originium_market_large.dds"
+    }
+    spriteType = {
+        name = "GFX_resource_originium"
+        textureFile = "gfx/interface/icons/resources/originium.dds"
+    }
+    spriteType = {
+        name = "GFX_resource_infection_suppressant"
+        textureFile = "gfx/interface/icons/resources/infection_suppressant.dds"
+    }
+    spriteType = {
+        name = "GFX_resource_infection_suppressant_large"
+        textureFile = "gfx/interface/icons/resources/infection_suppressant_market_large.dds"
+    }
+
+}

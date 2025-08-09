@@ -137,7 +137,7 @@ tr_crystallization_evolutionary_extrapolation = {
 tr_crystallization_somatic_synthesization = {
     custom_tooltip_with_modifiers = tr_crystallization_somatic_synthesization_tt
     modifier = {
-        BIOLOGICAL_species_trait_points_add = 4
+        ORIGINOID_species_trait_points_add = 4
         BIOLOGICAL_species_trait_picks_add = 2
         modify_species_cost_mult = -0.50
     }
@@ -151,7 +151,7 @@ tr_crystallization_somatic_synthesization = {
         }
         custom_tooltip_with_modifiers = tr_crystallization_somatic_synthesization_clone_army_tt
         modifier = {
-            BIOLOGICAL_species_trait_points_add = 4
+            ORIGINOID_species_trait_points_add = 4
             BIOLOGICAL_species_trait_picks_add = 2
             modify_species_cost_mult = -0.50
         }

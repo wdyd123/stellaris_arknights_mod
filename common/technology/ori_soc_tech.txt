@@ -557,11 +557,13 @@ tech_gene_tailoring = {
     gateway = biological
 
     modifier = {
-        description = tech_gene_tailoring_modifier_desc
+        description = tech_gene_tailoring_modifier_desc_ori
         description_parameters = {
-            POINTS = @tech_gene_tailoring_POINTS
+            POINTS1 = @tech_gene_tailoring_POINTS
+            POINTS2 = 3
         }
-        BIOLOGICAL_species_trait_points_add = @tech_gene_tailoring_POINTS
+        ORIGINOID_species_trait_points_add = @tech_gene_tailoring_POINTS
+        ORIGINOID_species_trait_points_add = 3
     }
 
     feature_flags = {
