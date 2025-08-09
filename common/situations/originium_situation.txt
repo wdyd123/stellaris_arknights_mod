@@ -50,7 +50,7 @@ originium_resonance_situation = {
     }
 
     monthly_progress = {
-        base = 150
+        base = 15
         modifier = {
             mult = 0
             desc = "originium_resonance_situation_pause_desc"
