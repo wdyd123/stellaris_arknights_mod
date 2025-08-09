@@ -15,7 +15,10 @@ agenda_crystallization_replication_finish = {
 agenda_assimilation_divergence_finish = {
     auto_mod_monthly_add = 400
 }
-
+assimilant_studies = {
+    planet_jobs_society_research_produces_mult = 0.1
+    pop_happiness = -0.2
+}
 
 resonance_unlock_level_1 = {
     icon = "gfx/interface/icons/traditions/tree_icons/tradition_icon_resonance.dds"

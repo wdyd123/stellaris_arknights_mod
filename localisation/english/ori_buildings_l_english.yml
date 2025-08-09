@@ -1,0 +1,15 @@
+﻿l_english:
+ # mod_building_originium_facility_max_desc: "REPLACE_ME"
+ # mod_building_originium_facility_max: "REPLACE_ME"
+ # mod_planet_building_originium_facility_build_speed_mult_desc: "REPLACE_ME"
+ # mod_planet_building_originium_facility_build_speed_mult: "REPLACE_ME"
+ # building_originium_facility_desc: "REPLACE_ME"
+ # building_originium_facility: "Originium Research Institute"
+
+
+ building_crystallize_vats: "Sarcophagi"
+ building_crystallize_vats_desc: "Sarcophagi translate simple materials for use in generating organic population growth."
+ improves_crystallize_vats_tt: "['building:building_crystallize_vats'] produces an additional §G+1.5§!§Y$MOD_BONUS_POP_GROWTH$§!, but correspondingly increases §YUpkeep§!."
+ planet_buildings_crystallize_vats: "$building_crystallize_vats$"
+ mod_planet_buildings_crystallize_vats_upkeep_mult: "$building_crystallize_vats$ Upkeep"
+ mod_building_crystallize_vats_max: "$planet_buildings_crystallize_vats$ Planet Limit"

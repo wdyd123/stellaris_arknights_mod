@@ -7,84 +7,22 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3c23acaf-318b-45fc-ae5e-187f4e105237" name="更改" comment="图标修改,特质修改,现区分高低等级特质,低级可以直接添加,高级属于自动改造特质.&#10;&#10;飞升路线完善,传统仍需要修改&#10;&#10;事件适配&#10;&#10;本地化">
-      <change afterPath="$PROJECT_DIR$/.idea/stat.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/statistics-view.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common/buildings/ori_amenity_buildings.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common/buildings/ori_fallen_empire_buildings.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common/districts/ori_wilderness_districts.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common/governments/authorities/ori_authorities.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common/inline_scripts/buildings/on_all_wilderness_buildings_districts.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common/inline_scripts/jobs/healthcare_add.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common/inline_scripts/traditions/tr_crystallization_regenerative_crystallization.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common/inline_scripts/traditions/tr_resonance_buzz_elimination_wilderness.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common/policies/ori_policies.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common/scripted_effects/ori_biogenesis_effects.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common/traits/ori_leader_traits.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/events/aquatic_events.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/events/ori_ascension_events.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/events/ori_origin_events_paragon.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/agenda_icons/agenda_assimilation_divergence.dds" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/agenda_icons/agenda_crystallized_replications.dds" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/agenda_icons/agenda_resonance_perfection.dds" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/agenda_icons/agenda_resonance_perfection_wilderness.dds" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/jobs/job_originium_researcher.dds" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/traditions/tree_icons/tradition_icon_assimilation.dds" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/traditions/tree_icons/tradition_icon_crystallization.dds" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/traditions/tree_icons/tradition_icon_resonance.dds" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/traits/leader_trait_icons/crystallized_clone.dds" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gfx/interface/tiles/tradition_category_tile_assimilation.dds" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gfx/interface/tiles/tradition_category_tile_crystallization.dds" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gfx/interface/tiles/tradition_category_tile_resonance.dds" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/interface/icons/traits/ori_leader_traits.gfx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/interface/ori_situation_log.gfx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/interface/ori_texticons.gfx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/interface/ori_traditions.gfx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/localisation/simp_chinese/oir_deposits.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/localisation/simp_chinese/ori_paragon_events_l_simp_chinese.yml" afterDir="false" />
+    <list default="true" id="3c23acaf-318b-45fc-ae5e-187f4e105237" name="更改" comment="图标修改&#10;特质修改&#10;适配天选帝君起源&#10;文本优化&#10;飞升效果完善&#10;bug修复">
+      <change afterPath="$PROJECT_DIR$/localisation/english/main_ori_l_english.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/localisation/english/name_lists_l_english.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/localisation/english/oir_deposits_l_english.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/localisation/english/ori_agendas_l_english.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/localisation/english/ori_ascension_perk_lists_l_english.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/localisation/english/ori_buildings_l_english.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/localisation/english/ori_focus_l_english.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/localisation/english/ori_paragon_events_l_english.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/localisation/english/ori_situations_l_english.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/localisation/english/ori_technology_l_english.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/localisation/english/ori_wilderness_l_english.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/ascension_perks/ascenson_path_originium.txt" beforeDir="false" afterPath="$PROJECT_DIR$/common/ascension_perks/ascenson_path_originium.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/buildings/ori_buildings.txt" beforeDir="false" afterPath="$PROJECT_DIR$/common/buildings/ori_buildings.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/council_agendas/ori_council_agendas_ascension.txt" beforeDir="false" afterPath="$PROJECT_DIR$/common/council_agendas/ori_council_agendas_ascension.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/game_concepts/ori_asccension_concepts.txt" beforeDir="false" afterPath="$PROJECT_DIR$/common/game_concepts/ori_asccension_concepts.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/game_rules/ori_rules.txt" beforeDir="false" afterPath="$PROJECT_DIR$/common/game_rules/ori_rules.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/inline_scripts/output/originium_triggered_modifiers.txt" beforeDir="false" afterPath="$PROJECT_DIR$/common/inline_scripts/output/originium_triggered_modifiers.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/inline_scripts/pop_categories/ori_social_classes_triggered_modifiers.txt" beforeDir="false" afterPath="$PROJECT_DIR$/common/inline_scripts/pop_categories/social_classes_triggered_modifiers.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/inline_scripts/traditions/ori_tr_stage_1_tradition_swaps.txt" beforeDir="false" afterPath="$PROJECT_DIR$/common/inline_scripts/traditions/ori_tr_stage_1_tradition_swaps.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/inline_scripts/traditions/ori_tr_stage_2_tradition_swaps.txt" beforeDir="false" afterPath="$PROJECT_DIR$/common/inline_scripts/traditions/ori_tr_stage_2_tradition_swaps.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/inline_scripts/traditions/ori_tr_stage_3_tradition_swaps.txt" beforeDir="false" afterPath="$PROJECT_DIR$/common/inline_scripts/traditions/ori_tr_stage_3_tradition_swaps.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/inline_scripts/traditions/tr_crystallization_biochemical_composure.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/inline_scripts/traditions/tr_crystallization_biochemical_composure_clones.txt" beforeDir="false" afterPath="$PROJECT_DIR$/common/inline_scripts/traditions/tr_crystallization_regenerative_crystallization_clones.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/inline_scripts/traditions/tr_crystallization_genomic_growth.txt" beforeDir="false" afterPath="$PROJECT_DIR$/common/inline_scripts/traditions/tr_crystallization_crystallized_growth.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/inline_scripts/traditions/tr_resonance_heightened_attributes.txt" beforeDir="false" afterPath="$PROJECT_DIR$/common/inline_scripts/traditions/tr_resonance_heightened_attributes.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/inline_scripts/traditions/tr_resonance_imperfection_remediation.txt" beforeDir="false" afterPath="$PROJECT_DIR$/common/inline_scripts/traditions/tr_resonance_buzz_elimination.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/inline_scripts/traditions/tr_resonance_imperfection_remediation_wilderness.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/inline_scripts/traditions/tr_resonance_imperfection_remediation_xenophile.txt" beforeDir="false" afterPath="$PROJECT_DIR$/common/inline_scripts/traditions/tr_resonance_buzz_elimination_xenophile.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/inline_scripts/traditions/tr_resonance_optimized_neurology.txt" beforeDir="false" afterPath="$PROJECT_DIR$/common/inline_scripts/traditions/tr_resonance_neural_tuning.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/pop_jobs/ori_gestalt_jobs.txt" beforeDir="false" afterPath="$PROJECT_DIR$/common/pop_jobs/ori_gestalt_jobs.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/pop_jobs/ori_originium_jobs.txt" beforeDir="false" afterPath="$PROJECT_DIR$/common/pop_jobs/ori_originium_jobs.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/pop_jobs/ori_specialist_jobs.txt" beforeDir="false" afterPath="$PROJECT_DIR$/common/pop_jobs/ori_specialist_jobs.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/portrait_sets/0001_portraits_terra.txt" beforeDir="false" afterPath="$PROJECT_DIR$/common/portrait_sets/0001_portraits_terra.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/scripted_effects/ori_ascension_effects.txt" beforeDir="false" afterPath="$PROJECT_DIR$/common/scripted_effects/ori_ascension_effects.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/scripted_loc/ori_ascension_scripted_loc.txt" beforeDir="false" afterPath="$PROJECT_DIR$/common/scripted_loc/ori_ascension_scripted_loc.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/scripted_triggers/ori_scripted_triggers_ascension.txt" beforeDir="false" afterPath="$PROJECT_DIR$/common/scripted_triggers/ori_scripted_triggers_ascension.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/scripted_variables/ori_scripted_variables.txt" beforeDir="false" afterPath="$PROJECT_DIR$/common/scripted_variables/ori_scripted_variables.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/situations/deficit_situations.txt" beforeDir="false" afterPath="$PROJECT_DIR$/common/situations/deficit_situations.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/situations/originium_situation.txt" beforeDir="false" afterPath="$PROJECT_DIR$/common/situations/originium_situation.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/starbase_buildings/starbase_buildings_ori.txt" beforeDir="false" afterPath="$PROJECT_DIR$/common/starbase_buildings/starbase_buildings_ori.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/common/static_modifiers/ori_asscension_modifiers.txt" beforeDir="false" afterPath="$PROJECT_DIR$/common/static_modifiers/ori_asscension_modifiers.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/technology/ori_soc_tech.txt" beforeDir="false" afterPath="$PROJECT_DIR$/common/technology/ori_soc_tech.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/tradition_categories/resonance.txt" beforeDir="false" afterPath="$PROJECT_DIR$/common/tradition_categories/resonance.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/traditions/crystallization.txt" beforeDir="false" afterPath="$PROJECT_DIR$/common/traditions/crystallization.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/traditions/resonance.txt" beforeDir="false" afterPath="$PROJECT_DIR$/common/traditions/resonance.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/traits/originoid_traits.txt" beforeDir="false" afterPath="$PROJECT_DIR$/common/traits/originoid_traits.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/events/ori_timeline_events.txt" beforeDir="false" afterPath="$PROJECT_DIR$/events/ori_timeline_events.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/events/originium_ascension_events.txt" beforeDir="false" afterPath="$PROJECT_DIR$/events/originium_ascension_events.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/events/situation_dificit_events.txt" beforeDir="false" afterPath="$PROJECT_DIR$/events/ori_situation_dificit_events.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/localisation/simp_chinese/name_lists_l_simp_chinese.yml" beforeDir="false" afterPath="$PROJECT_DIR$/localisation/simp_chinese/name_lists_l_simp_chinese.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/localisation/simp_chinese/ori_ascension_perk_lists_l_simp_chinese.yml" beforeDir="false" afterPath="$PROJECT_DIR$/localisation/simp_chinese/ori_ascension_perk_lists_l_simp_chinese.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/localisation/simp_chinese/ori_buildings_l_simp_chinese.yml" beforeDir="false" afterPath="$PROJECT_DIR$/localisation/simp_chinese/ori_buildings_l_simp_chinese.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/localisation/simp_chinese/ori_technology_l_simp_chinese.yml" beforeDir="false" afterPath="$PROJECT_DIR$/localisation/simp_chinese/ori_technology_l_simp_chinese.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -133,7 +71,7 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "git-widget-placeholder": "master",
     "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "D:/OneDrive/Documents/Paradox Interactive/Stellaris/mod/00001/gfx/interface/icons/jobs",
+    "last_opened_file_path": "D:/OneDrive/Documents/Paradox Interactive/Stellaris/mod/00001/localisation/english",
     "run.code.analysis.last.selected.profile": "pProject Default",
     "settings.editor.selected.configurable": "reference.settings.project.statistic.project.settings"
   },
@@ -149,11 +87,11 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\OneDrive\Documents\Paradox Interactive\Stellaris\mod\00001\localisation\english" />
       <recent name="D:\OneDrive\Documents\Paradox Interactive\Stellaris\mod\00001\gfx\interface\icons\jobs" />
       <recent name="D:\OneDrive\Documents\Paradox Interactive\Stellaris\mod\00001\gfx\interface\icons\agenda_icons" />
       <recent name="D:\OneDrive\Documents\Paradox Interactive\Stellaris\mod\00001\gfx\interface\icons\traditions\tree_icons" />
       <recent name="D:\OneDrive\Documents\Paradox Interactive\Stellaris\mod\00001\common\inline_scripts\buildings" />
-      <recent name="D:\OneDrive\Documents\Paradox Interactive\Stellaris\mod\00001\gfx\interface\tiles" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\OneDrive\Documents\Paradox Interactive\Stellaris\mod\00001\gfx\event_pictures" />
@@ -306,7 +244,15 @@
       <option name="project" value="LOCAL" />
       <updated>1754575310162</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="图标修改&#10;特质修改&#10;适配天选帝君起源&#10;文本优化&#10;飞升效果完善&#10;bug修复">
+      <option name="closed" value="true" />
+      <created>1754669292894</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1754669292894</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -361,6 +307,7 @@
     <MESSAGE value="修改特质图片、特质效果" />
     <MESSAGE value="特质标签" />
     <MESSAGE value="图标修改,特质修改,现区分高低等级特质,低级可以直接添加,高级属于自动改造特质.&#10;&#10;飞升路线完善,传统仍需要修改&#10;&#10;事件适配&#10;&#10;本地化" />
-    <option name="LAST_COMMIT_MESSAGE" value="图标修改,特质修改,现区分高低等级特质,低级可以直接添加,高级属于自动改造特质.&#10;&#10;飞升路线完善,传统仍需要修改&#10;&#10;事件适配&#10;&#10;本地化" />
+    <MESSAGE value="图标修改&#10;特质修改&#10;适配天选帝君起源&#10;文本优化&#10;飞升效果完善&#10;bug修复" />
+    <option name="LAST_COMMIT_MESSAGE" value="图标修改&#10;特质修改&#10;适配天选帝君起源&#10;文本优化&#10;飞升效果完善&#10;bug修复" />
   </component>
 </project>

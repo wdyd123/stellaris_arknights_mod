@@ -1,0 +1,9 @@
+﻿l_english:
+ paragon.6000.desc.ap_originium_resonance: "\"$paragon.6000.desc$\n\nAlternatively, our Originium specialists have proposed another solution. Though quite costly, infinite crystalline bodies could be used to house §Y[Ruler.GetTitle][Ruler.GetRegnalName]§!, allowing [Ruler.GetHimHer] to ultimately achieve immortality."
+ paragon.6000.g: "Prepare the sarcophagi."
+ paragon.6000.g.tooltip: "Our Originium specialists will prepare life-extending crystalline bodies for §Y[Ruler.GetTitle][Ruler.GetRegnalName]§!."
+ paragon.60251.name: "A More Perfect Form"
+ paragon.60251.desc: "The crystallization process and awakening procedure have been completed successfully. Our leader has been revived.\n\nHowever, many have expressed concerns about the unpredictable changes in [Ruler.GetHisHer] attitude. §Y[Ruler.GetTitle][Ruler.GetRegnalName]§! has become obsessed with [Ruler.GetHisHer] new form, developing a fixation on the next evolutionary stage for our people. [Ruler.GetSheHe] has devoted considerable resources to perfecting mass Originium mapping."
+ paragon.60251.a: "[Ruler.GetName] is now a perfect crystalline prototype."
+ leader_trait_the_originium_luminary: "Perfect Mapping"
+ leader_trait_the_originium_luminary_desc: "Endless backups have granted this leader immortality. Whenever the current vessel becomes damaged or aged, dozens of new vessels will take its place. This has led to an obsession with perfect mapping."

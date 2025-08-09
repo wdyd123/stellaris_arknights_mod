@@ -1,0 +1,1391 @@
+﻿l_english:
+ ####################################
+ #Ascension perk
+ ####################################
+
+ originium_resonance_situation_desc: "The choice lies before us, the outcome already predetermined.\n\nHere, we come to a crucial moment of decision."
+ originium_resonance_situation_type: "$originium_resonance_situation$"
+ originium_resonance_situation: "Destined Path"
+ #Hive
+ originium_resonance_situation_hive_desc: "The choice lies before us, the outcome already predetermined.\n\nHere, we come to a crucial moment of decision."
+ originium_resonance_situation_hive_type: "$originium_resonance_situation_hive$"
+ originium_resonance_situation_hive: "Destined Path"
+
+ ap_originium_resonance_wilderness: "Originium Resonance"
+ ap_originium_resonance_wilderness_delayed: "TBW"
+ ap_originium_resonance: "Originium Resonance"
+ ap_originium_resonance_desc: "Originium is not merely energy—it is a catalyst for evolution. Through deep fusion with Originium, we shall transcend biological limitations and unlock new forms of existence. Infection is no longer a curse, but a pathway to higher levels of being."
+ originium_resonance_tt: "$access_tradition_tree$['tradition_category:tradition_genetics']\n$UNLOCKS_AGENDA$ $council_agenda_agenda_origiium_resonance_name$, unlocking genetic technology research options.\n—$REQUIRES_TRADITION_SLOT$"
+
+ originium_resonance_situation_monthly_change_tooltip: "Our Originium scholars are continuously advancing research efforts."
+ originium_resonance_situation_outcome: "We will unlock the full potential of Originium arts, ensuring absolute superiority for our species.\n\nWe shall determine the ultimate expression of Originium."
+ originium_resonance_situation_pause_desc: "Situation paused"
+ originium_resonance_approach_selected: "$TRIGGER_FAIL$We have already made our choice for this phase."
+ situation_gene_tailoring_needed_desc: "$TRIGGER_FAIL$Missing ['concept_gene_tailoring'] technology"
+ mod_prophecy_progress_mult: "$originium_resonance_situation$ monthly progress"
+
+ #STAGE EVENTS
+ ori_ap.5.name: "Nature Can Be Changed" #STAGE ONE
+ ori_ap.5.desc.no_options: "To accelerate evolution, we must decisively choose a path for self-definition. As we become aware of our full potential, we acutely realize that this endeavor may fundamentally alter our essence.\n\nDesigning evolution is a profound undertaking. The changes we implement today will reshape our future."
+ ori_ap.5.desc.has_options: "$ori_ap.5.desc.no_options$\n\nTo begin our enhancement, we must now choose where our first step on this journey shall lead."
+ ori_ap.5.a: "The path of Resonance."
+ ori_ap.5.b: "The path of Crystallization."
+ ori_ap.5.c: "The path of Assimilation."
+
+ ori_ap.10.name: "Turning Point" #STAGE TWO
+ ori_ap.10.desc.no_options: "Controlling Originium is a profound undertaking. We now possess deeper understanding of Originium characteristics, translation, and expression.\n\nThe pinnacle of our progress is within reach. In just a few years, we will fully realize our complete potential as a species."
+ ori_ap.10.desc.has_options: "$ori_ap.10.desc.no_options$\n\nHowever, for now, we can continue on our current path or shift focus for our next developmental phase."
+ ori_ap.10.a: "Focus on Resonance."
+ ori_ap.10.b: "Focus on Crystallization."
+ ori_ap.10.c: "Focus on Assimilation."
+
+ ori_ap.15.name: "Evolutionary Crossroads" #STAGE THREE
+ ori_ap.15.desc.no_options: "Our efforts have brought us to the eve of major transformation. We must soon make crucial decisions about our forward path to fully realize our evolutionary potential."
+ ori_ap.15.desc.has_options: "$ori_ap.15.desc.no_options$\n\nWe need to reaffirm our focus once again."
+ ori_ap.15.a: "We choose Resonance."
+ ori_ap.15.b: "We shall master Crystallization."
+ ori_ap.15.c: "Assimilation will lead us to the future."
+
+ originium_resonance_approach_resonance: "Resonance"
+ originium_resonance_approach_crystallization: "Crystallization"
+ originium_resonance_approach_assimilation: "Assimilation"
+ originium_resonance_approach_resonance_desc: "We will focus on resonating with Originium."
+ originium_resonance_approach_crystallization_desc: "Crystallization research will promote our growth."
+ originium_resonance_approach_assimilation_desc: "Our future lies in assimilating everything with Originium."
+
+ ori_ap.20.name: "The Chosen Path" #FINAL STAGE - TRADITION TREE CHOICE
+ ori_ap.20.desc: "Whether we strive for the purest self, pave the road to success with crystallization, or enhance ourselves through deliberate Originium fusion, after this moment we shall forge ahead with our chosen path."
+ ori_ap.20.a: "We will delve deep into the true essence of Resonance."
+ ori_ap.20.b: "We will achieve success through Crystallization."
+ ori_ap.20.c: "We will harness the power of Assimilation."
+
+ #Random Events
+ ori_ap.50.name: "Some Are More Equal Than Others"
+ ori_ap.50.desc: "Due to our focus on Originium resonance, enhanced citizens have begun to consider themselves naturally superior to others. Because of this sense of superiority, they demand shorter working hours, more amenities, and greater political power. Their increasingly intense rallies are causing serious social unrest."
+ ori_ap.50.a: "Suppress the demonstrators."
+ ori_ap.50.b: "Their demands are reasonable."
+
+ ori_ap.55.name: "Social Mitosis"
+ ori_ap.55.desc: "News bulletins are filled with divisive rhetoric as differences tear society apart. Those with enhanced frequencies gain more opportunities, spawning a new form of class struggle.\n\nFrequency enhancers believe they represent the future of our species, while traditionalists think we have gone too far into unnatural territory."
+ ori_ap.55.a: "Superior individuals create a superior world."
+ ori_ap.55.b: "Perhaps we should wait for our people."
+
+ ori_ap.60.name: "Phase Differential"
+ ori_ap.60.desc: "In certain industries, frequency testing abuse has become increasingly common. Those deemed to possess harmonious frequency compositions receive preferential treatment in work and education, and are blindly granted positions with easier access to power.\n\nWhile some believe attuned individuals are indeed stronger and healthier, others argue this mindset creates unfair discrimination against those unwilling or unable to alter their frequencies for perfection."
+ ori_ap.60.a: "We must ensure equal opportunities for all."
+ ori_ap.60.b: "This is called survival of the fittest."
+
+ ori_ap.65.name: "Heroes and Villains"
+ ori_ap.65.desc: "Our pursuit of resonance has enabled certain individuals to take prominent roles in public safety. Possessing superhuman strength, agility, and endurance, a small group of do-gooders have styled themselves as vigilantes, taking the law into their own [owner.species.GetHandNamePlural].\n\nHowever, this novel courage has not gone unchallenged. In the shadows, equally powerful adversaries are emerging with evil intentions to balance the scales of power. Conflicts between the two camps cause significant property damage and even endanger civilians."
+ ori_ap.65.a: "Our streets don't need volunteer police."
+ ori_ap.65.b: "Let them fight it out."
+
+ MAVERICK_CITIZENS_MOD: "Every 100 [enforcer.GetIcon]§Y[enforcer.GetNamePlural]§! produce §G+2§! $r_stability$ and §G+2§! $r_unity$."
+
+ ori_ap.66.name: "Superhuman Restrictions"
+ ori_ap.66.desc: "Activities of superhuman individuals have been banned, and they are now subject to strict regulatory restrictions. We are working to monitor and contain such activities.\n\nAs we strive to ensure they use their powers only in service to the empire, both superhumans and unenhanced feel increasing fear and contempt. Our people are deeply divided on this issue."
+ ori_ap.66.a: "Form superhuman units."
+ ori_ap.66.b: "Help the disadvantaged reintegrate into society."
+
+ ori_ap.67.name: "Superhuman Dependence"
+ ori_ap.67.desc: "Our growing dependence on genetically enhanced vigilantes has become a double-edged sword. While these beings bring us security and well-being, we are also acutely aware of our dependence on them.\n\nWhile the public is grateful, they now begin to bypass judicial procedures and administrators, turning to these superhumans for guidance and support. The line between heroes and government has blurred. Power hangs in delicate balance."
+ ori_ap.67.a: "Form a superhuman council!"
+ ori_ap.67.b: "Limit these \"heroes'\" involvement in governance."
+
+ ori_ap.70.name: "Two Bodies, One Soul"
+ ori_ap.70.desc: "A distinguished leader praised galaxy-wide for their tireless work ethic has been revealed to actually be not one person, but two.\n\nIt turns out this leader acquired a perfect crystalline clone, allowing two people to work in shifts. When one crystalline body was handling official duties and administrative affairs, the other was secretly resting and recovering.\n\nThis revelation has created an uproar in political circles, raising questions about the nature of leadership and the ethical boundaries of crystalline technology."
+ ori_ap.70.a: "This is efficient use of crystalline technology."
+ ori_ap.70.b: "Dismiss both for deceptive behavior."
+
+ ori_ap.75.name: "Crystalline Uprising"
+ ori_ap.75.desc: "The practice of commissioning crystalline clones for organ harvesting has created problems. Some apparently sentient crystalline beings are resisting through prolonged hunger strikes.\n\nWhile many believe the health and longevity of originals should take priority, others advocate that every thinking being should have personal autonomy. This controversial issue has become the focus of heated debate."
+ ori_ap.75.a: "Terminate organ transplantation."
+ ori_ap.75.b: "Original rights are paramount."
+
+ ori_ap.80.name: "Burden of Proof"
+ ori_ap.80.desc: "Law enforcement faces a dilemma. Crime rates in our capital are rising, but fewer people than ever are being brought to justice. Suspects increasingly defend themselves by claiming their crystalline clones committed the crimes.\n\nIn cases where perpetrators weren't caught in the act, it's nearly impossible to prove criminal guilt. Some judicial officials now call for effectively abolishing charges for most illegal acts."
+ ori_ap.80.a: "Strengthen our surveillance systems."
+ ori_ap.80.b: "Fewer laws, less crime."
+
+ ori_ap.85.name: "Striking Resemblance"
+ ori_ap.85.desc: "An unauthorized large-scale crystallization facility has been discovered within our territory, housing thousands of clones, each a copy of our [Owner.Leader.GetTitle] [Owner.Leader.GetName]. Civilian scientists found at the scene have been detained, but none are willing to cooperate, all claiming ignorance of who ordered these crystalline clones.\n\nSporadic evidence suggests [Owner.Leader.GetName] [Owner.Leader.GetHerselfHimself] may be behind this operation. Unfortunately, [Owner.Leader.GetSheHe] has vanished without a trace."
+ ori_ap.85.a: "Euthanize these crystalline clones."
+ ori_ap.85.b: "We've inherited a crystalline army."
+ ori_ap.85.b.tt: "([owner.capital_scope.GetName]):\nCreated a §Y$clone_army$§!."
+ ori_ap.85.c: "Release these crystalline clones."
+ ori_ap.85.c.tt: "We will gain a set of §Y populations§!."
+
+ ori_ap.86.name: "Unexpected Backlash"
+ ori_ap.86.desc: "The practice of euthanizing so many crystalline clones has sparked public outrage and serious debate. Disgruntled [Owner.GetSpeciesAdj] rights activists and religious groups are holding massive protests.\n\nMeanwhile, rumors suggest some crystalline clones have escaped and are hiding among the general population."
+ ori_ap.86.a: "Perhaps we can learn from this..."
+ ori_ap.86.b: "Deploy security forces to quell the unrest."
+ ori_ap.86.b.tt: "([owner.capital_scope.GetName]):\nCreated 3 §Y$assault_army_plural$§!."
+
+ ori_ap.90.name: "Mutant Enclaves"
+ ori_ap.90.desc: "Many individuals with significant or unconventional genetic assimilation have been socially ostracized. Forced underground, these mutants have formed their own settlements.\n\nThose who venture into these areas rarely return."
+ ori_ap.90.a: "Clear out these settlements."
+ ori_ap.90.b: "Monitor their development from a distance."
+
+ ori_ap.95.name: "Transgenic Rebellion"
+ ori_ap.95.desc: "Disaffected youth have begun dramatically altering their appearance as extreme entertainment.\n\nLatest trends include an obsession with compound eyes and competitions to see how many extra limbs can be added to one body—the current record stands at 156.\n\nThese biohackers have attracted public attention and raised security concerns. With growing calls for strict restrictions on genetic assimilation, we must determine our official stance."
+ ori_ap.95.a: "This is just harmless entertainment."
+ ori_ap.95.b: "156 limbs is too many."
+
+ ori_ap.100.name: "Unintended Consequences"
+ ori_ap.100.desc: "Widespread adoption of genetic manipulation technology in our civilization has spawned a dizzying array of physical assimilations.\n\nSome previously predictable biological processes now show unexpected deviations, making standardization nearly impossible.\n\nThe physical commonalities that once unified our species are dissolving, replaced by a kaleidoscope of forms and functions that threatens social cohesion."
+ ori_ap.100.a: "Encourage diversity."
+ ori_ap.100.a.tt: "Random §Y400§! £pop£§H populations§! will gain one of ['trait:trait_bioadaptability'], ['trait:trait_social_pheromones'], or ['trait:trait_limited_regeneration'] traits."
+ ori_ap.100.b: "Enforce standard genetic templates."
+
+ ori_ap.105.name: "Originium Amorphization"
+ ori_ap.105.desc: "An Originium assimilation experiment has failed catastrophically. Scientists attempted to fuse exotic creatures with Originium to activate its potential and make it compatible with more life forms.\n\nInstead, they created something that can assimilate any cells it contacts, merging with contact subjects to form a massive, amorphous mass of biological matter.\n\nThis biomass rolled through the testing facility, consuming everything in its path. It's currently contained, but would pose a major health hazard if it escaped. Fortunately, it appears to be edible..."
+ ori_ap.105.a: "Destroy this biomass!"
+ ori_ap.105.b: "Its research value is worth the risk."
+
+ ## HIVE EMPIRE SITUATION
+ #SET-UP / PREAMBLE
+ originium_resonance_situation_hive_monthly_change_tooltip: "Genetic workers are steadily advancing our research."
+ originium_resonance_situation_hive_outcome: "$originium_resonance_situation_outcome$"
+
+ #STAGE EVENTS
+ ori_ap.25.name: "Collective Evolution" #STAGE ONE
+ ori_ap.25.desc.no_options: "[owner.GetGovernmentName] is undergoing transformation. We are about to realize our full potential while also recognizing this effort may fundamentally change our essence. Designing our own evolution is a profound undertaking. The changes we implement now will have far-reaching effects in the future."
+ ori_ap.25.desc.has_options: "$ori_ap.25.desc.no_options$\n\nWe must now choose a developmental focus for the first phase of evolution."
+ ori_ap.25.a: "$ori_ap.5.a$"
+ ori_ap.25.b: "$ori_ap.5.b$"
+ ori_ap.25.c: "$ori_ap.5.c$"
+
+ ori_ap.30.name: "Hive Convergence" #STAGE TWO
+ ori_ap.30.desc.no_options: "Designing our own evolution has brought significant changes. We now have deeper understanding of genetic traits, reproductive processes, and DNA sequences.\n\nOur work is nearing its pinnacle.\n\nSoon, we will become what we are destined to be."
+ ori_ap.30.desc.has_options: "$ori_ap.30.desc.no_options$ We have the opportunity to continue on our current path or choose a new focus."
+ ori_ap.30.a: "$ori_ap.10.a$"
+ ori_ap.30.b: "$ori_ap.10.b$"
+ ori_ap.30.c: "$ori_ap.10.c$"
+
+ ori_ap.35.name: "Evolutionary Union" #STAGE THREE
+ ori_ap.35.desc.no_options: "We stand on the brink of a major evolutionary breakthrough. We will soon face crucial choices to fully develop our evolutionary potential."
+ ori_ap.35.desc.has_options: "$ori_ap.35.desc.no_options$\n\nWe must once again choose our priorities."
+ ori_ap.35.a: "$ori_ap.15.a$"
+ ori_ap.35.b: "$ori_ap.15.b$"
+ ori_ap.35.c: "$ori_ap.15.c$"
+
+ originium_resonance_hive_approach_one: "$originium_resonance_approach_resonance$"
+ originium_resonance_hive_approach_two: "$originium_resonance_approach_crystallization$"
+ originium_resonance_hive_approach_three: "$originium_resonance_approach_assimilation$"
+ originium_resonance_hive_approach_one_desc: "$originium_resonance_approach_resonance_desc$"
+ originium_resonance_hive_approach_two_desc: "$originium_resonance_approach_crystallization_desc$"
+ originium_resonance_hive_approach_three_desc: "$originium_resonance_approach_assimilation_desc$"
+
+ ori_ap.40.name: "Biological Specificity" #FINAL STAGE - TRADITION TREE CHOICE
+ ori_ap.40.desc: "Whether we pursue the most perfect resonance form, achieve success through assimilation technology, or undergo genetic enhancement through deliberate crystallization, this moment marks an irreversible turning point."
+ ori_ap.40.a: "$ori_ap.20.a$"
+ ori_ap.40.b: "$ori_ap.20.b$"
+ ori_ap.40.c: "$ori_ap.20.c$"
+
+ #Random Events (Hives)
+ ori_ap.110.name: "Division Optimization"
+ ori_ap.110.desc: "As we begin biological enhancements to [target.GetGestaltEntityName], we must prioritize enhancement projects that most benefit our civilization.\n\nSelective genetic manipulation allows us to cultivate ideal traits best suited for specific industrial sectors.\n\nWith these newfound capabilities, we can choose to enhance [target.GetIndividualNamePlural] in energy production or defense sectors."
+ ori_ap.110.a: "Energy is always useful."
+ ori_ap.110.b: "We should prioritize defense."
+
+ ori_ap.115.name: "Generational Redundancy"
+ ori_ap.115.desc: "When creating new templates for workers, we must decide how to handle those unable to match genetic upgrades.\n\nSome older workers are too weak to withstand adjustments. They can be retained as laborers for the rest of their lives, or their biomass can be recycled to supply the hive."
+ ori_ap.115.a: "Recycle aging workers."
+ ori_ap.115.b: "They still have their uses."
+
+ ori_ap.120.name: "Speed or Durability"
+ ori_ap.120.desc: "Breakthrough genetic research has revealed a way to enhance neural transmission efficiency, significantly boosting [target.GetIndividualName] output.\n\nHowever, this increase in brain output power cannot be sustained long-term and will lead to shortened lifespans.\n\nWe must decide whether to maintain normal lifespans or trade longevity for enhanced capabilities."
+ ori_ap.120.a: "Our current lifespan is more important."
+ ori_ap.120.b: "Stimulate [target.GetIndividualNamePlural], boost productivity."
+
+ ori_ap.125.name: "Synaptic Overload"
+ ori_ap.125.desc: "A batch of newly enhanced [target.GetIndividualNamePlural] has been integrated into [target.GetGestaltEntityName]. They've been bioengineered and fine-tuned to accelerate neural development and cognitive processes. [target.GetGestaltEntityName]'s critical synaptic nodes are operating at unprecedented speeds.\n\nHowever, this acceleration undermines [target.GetIndividualName] stability and could cause catastrophic synaptic overload. We might be able to reallocate more [target.GetIndividualNamePlural] to perform coordination tasks."
+ ori_ap.125.a: "Slow down to maintain stability."
+ ori_ap.125.b: "Live fast, die young."
+
+ ori_ap.130.name: "Frequency Phenomenon"
+ ori_ap.130.desc: "Since integrating a new batch of crystalline clones into the hive, we've discovered an unpleasant sound vibration problem. A mistake in the crystallization process may have hindered their biological transmitter development, creating frequency interference.\n\nWhen these crystalline clones communicate with the hive collective, all nearby workers are affected by a noisy and disturbing mental tinnitus. This causes distraction and affects work efficiency."
+ ori_ap.130.a: "Unpleasant, but tolerable."
+ ori_ap.130.b: "Cull the malfunctioning workers."
+
+ ori_ap.135.name: "Synchronization Dilemma"
+ ori_ap.135.desc: "Recent crystallization experiments have yielded unusual results. Some crystalline clones appear to have neural connections with template donors, causing them to unconsciously synchronize actions.\n\nThis phenomenon persists regardless of distance—crystalline clones will synchronize perfectly with donors elsewhere in the galaxy. This discovery opens new possibilities for us.\n\nWe can initiate a program placing crystalline clones and donors in identical environments for collaborative work, or extract relevant neurotransmitters for deeper study of this phenomenon."
+ ori_ap.135.a: "Configure perfectly matched work environments for donors and crystalline clones."
+ ori_ap.135.b: "Surgically sever the synchronization neural links."
+
+ ori_ap.140.name: "Incompatible Crystallization"
+ ori_ap.140.desc: "To consolidate the hive, we cultivated a batch of crystalline clones using donor material and artificially accelerated their maturation. While these crystalline clones are excellent biological specimens, they are incompatible.\n\nThis anomaly, though disturbing, provides a unique opportunity. These unique workers possess independent identities and thoughts, which may be more advantageous when interacting with entities outside the collective. Their ability to think autonomously can bridge gaps that the hive's unified consciousness cannot cross. However, these benefits come at a cost: their growing individual consciousness causes unrest that will affect some of our advanced cognitive functions."
+ ori_ap.140.a: "Force integration."
+ ori_ap.140.b: "Utilize their potential."
+
+ ori_ap.145.name: "Manufacturing Concerns"
+ ori_ap.145.desc: "Our collective consciousness is in turmoil. Despite possessing self-replication capabilities, we hesitate about the effectiveness (or even morality) of this behavior.\n\nCrystallization procedures require substantial resources. Especially when natural reproduction might produce more genetic diversity, should we spend these resources elsewhere?\n\nHistorically, this isn't how we reproduced, and we're uncertain if we're ready to accept such fundamental changes to our species."
+ ori_ap.145.a: "Crystallization efficiency is hard to ignore."
+ ori_ap.145.b: "Genetic diversity is crucial."
+
+ ori_ap.150.name: "Hive Burnout"
+ ori_ap.150.desc: "Our assimilation experiments have caused anomalies within the hive. Previously effortless tasks now require careful consideration, and conflicting instructions strain the collective psyche.\n\nWhile the resulting burden might burn out our most capable workers, it also provides an opportunity.\n\nWe must decide: should we slow down to repair, or push ourselves beyond limits?"
+ ori_ap.150.a: "We can take a break."
+ ori_ap.150.b: "Sleep is for the dead."
+
+ ori_ap.151.name: "Renewed Vigor"
+ ori_ap.151.desc: "Our decision to take a respite has paid off. The previously discordant impulses have gradually settled, coalescing into a harmonious stream of thought that once again drives the collective with clarity.\n\nWorkers who once teetered on the edge of exhaustion have resumed precise, tireless work. This period of reflection has not only alleviated collective fatigue but also strengthened our resolve to face future challenges."
+ ori_ap.151.a: "We're positively glowing now!"
+
+ ori_ap.155.name: "Specialized vs. Generalized Debate"
+ ori_ap.155.desc: "Assimilation brings many benefits, and our hive can use selective enhancement to further meet demands. We can achieve mineral output specialization through hardened chitinous appendages.\n\nAlternatively, we can give all workers more genetic modifications, providing them with multiple different functions."
+ ori_ap.155.a: "Generalized is useful."
+ ori_ap.155.b: "Let us begin exploring."
+
+ ori_ap.160.name: "Phenotypic Drift"
+ ori_ap.160.desc: "Continuous experimentation has brought unexpected complexity to the hive. Some workers have developed unique physical characteristics: spined exoskeletons, oversized appendages, or abnormally sensitive sensory organs.\n\nWhile these changes do bring certain benefits, they also increase metabolic burden. The hive faces the challenge of balancing this intensifying pressure. The key question: how much assimilation is appropriate?"
+ ori_ap.160.a: "Embrace vitality."
+ ori_ap.160.b: "Must maintain cohesion."
+
+ ori_ap.165.name: "Nostalgia for the Past"
+ ori_ap.165.desc: "The hive is changing. Through genomic modifications, we observe significant health improvements. However, this also makes us more vulnerable to psychological stress.\n\nWe don't hate our former selves. Despite becoming stronger and more cognitively advanced, we still miss those familiar thought patterns of the past.\n\nA deep discomfort permeates the entire hive, as if our bodies no longer match our inner spirits. Have we transcended the boundaries of self?"
+ ori_ap.165.a: "Life is change."
+ ori_ap.165.b: "We cannot lose our essence."
+
+ #Modifiers
+ supremacy_denied: "Supremacy Restricted"
+ supremacy_denied_desc: "The government is taking decisive measures to curb genetic differences."
+ ori_augment_appreciation: "Genetic Enhancement Appreciation"
+ ori_augment_appreciation_desc: "Genetic engineers and genetically enhanced individuals are valuable members of our society."
+ conscious_evolution: "Conscious Evolution"
+ conscious_evolution_desc: "We move forward together."
+ superior_individuals: "Superior Individuals"
+ superior_individuals_desc: "Elite talent creates elite results."
+ welfare_state: "Welfare State"
+ welfare_state_desc: "Government-initiated social welfare programs are being implemented."
+ selective_survival: "Selective Survival"
+ selective_survival_desc: "Enhanced workers contribute to our industrial efficiency."
+ super_powered: "Super Powered"
+ super_powered_desc: "Superhuman individuals enhance our defensive forces."
+ deceitful_dismissal: "Deceitful Dismissal"
+ deceitful_dismissal_desc: "We are seeking new, honest leaders."
+ harvesting_halt: "Organ Harvesting Ban"
+ harvesting_halt_desc: "Crystalline organ harvesting has been classified as illegal."
+ crystallized_clone_drivers: "Crystalline Workforce"
+ crystallized_clone_drivers_desc: "Continued utilization of crystalline humans allows us to focus on improving industrial efficiency."
+ effective_surveillance: "Effective System"
+ effective_surveillance_desc: "Our society values civil rights. At least in theory."
+ decriminalized_society: "Authority Reshaping"
+ decriminalized_society_desc: "Through proactive enforcement, we take a tougher stance on crime."
+ mass_euthanasia: "Mass Euthanasia"
+ mass_euthanasia_desc: "Decisive action will be taken against illegal crystallization."
+ duplicated_inheritance: "Duplicated Inheritance"
+ duplicated_inheritance_desc: "A steady influx of new recruits enhances our military activities."
+ duplicated_inheritance_armies: "Inherited Crystalline Legions"
+ mutant_crackdown: "Mutant Crackdown"
+ mutant_crackdown_desc: "The government takes decisive action against exclusionary behavior."
+ mutant_enclaves: "Mutant Enclaves"
+ mutant_enclaves_desc: "Mutant settlements provide valuable data for sociological research."
+ embracing_change: "Embracing Change"
+ embracing_change_desc: "New creative expression opportunities and novelty promote diversified development."
+ biological_limitations: "Biological Limitations"
+ biological_limitations_desc: "Biosecurity and enforcement technology will maintain the practicality of current regulations."
+ societal_diversification: "Societal Diversification"
+ societal_diversification_desc: "As populations attempt unique biological modifications, related responsibility issues have been addressed."
+ standardized_biology: "Standardized Biology"
+ standardized_biology_desc: "Through standardized genetic templates, social cohesion is enhanced."
+ blob_neutralized: "Blob Removed"
+ blob_neutralized_desc: "Decisive action regarding the blob makes everyone feel safer."
+ globule_research: "Globule Research"
+ globule_research_desc: "Scientists conduct closed biological experiments in this sector."
+ super_troopers: "Super Troopers"
+ super_troopers_desc: "Superhero legions help us maintain social order."
+ watch_the_watchers: "Watch the Watchers"
+ watch_the_watchers_desc: "Who watches the watchers? We do."
+ hero_council: "Hero Council"
+ hero_council_desc: "Superhero advisors assist in government decision-making processes."
+ hero_restrictions: "Hero Restrictions"
+ hero_restrictions_desc: "Our government will no longer rely on superhuman support."
+ ethical_crystallization: "Ethical Crystallization"
+ ethical_crystallization_desc: "Strict guidelines limit the use of large-scale crystallization technology."
+ nuisance_crackdown: "Nuisance Crackdown"
+ nuisance_crackdown_desc: "Crystalline humans have equal rights. But originals have more equal rights."
+ artistic_integrity: "Artistic Integrity"
+ artistic_integrity_desc: "Artistic pursuits will lead us to greatness."
+ logic_first: "Logic First"
+ logic_first_desc: "We will become leaders in galactic science."
+ practical_application: "Practical Application"
+ practical_application_desc: "We will prioritize development of goods and services production."
+ crack_downs: "Crackdown Operations"
+ crack_downs_desc: "Under the iron fist of law, stability will be enhanced."
+ performative_reformation: "Performative Reformation"
+ performative_reformation_desc: "If it makes them happy, let them perform their revolutionary fantasies."
+ ancestral_inheritance: "Ancestral Heritage"
+ ancestral_inheritance_desc: "Ancestral knowledge will guide us toward the future."
+ buried_secrets: "Buried Secrets"
+ buried_secrets_desc: "What our ancestors did cannot surface in today's world."
+ specimen_study: "Specimen Study"
+ specimen_study_desc: "Confiscated research materials will supplement official development."
+ resonance_tests: "Frequency Testing"
+ resonance_tests_desc: "Claims of resonance frequency must undergo rigorous verification."
+ crystallize_rights: "Crystalline Rights"
+ crystallize_rights_desc: "We will respect the autonomy of crystalline individuals."
+ class_system: "Class System"
+ class_system_desc: "There must be clear hierarchical distinctions between citizens and their crystalline clones."
+ thorough_inspections: "Thorough Investigations"
+ thorough_inspections_desc: "We must ensure no more accidents occur in the crystalline production process."
+ swift_recovery: "Swift Recovery"
+ swift_recovery_desc: "Productivity is our top priority."
+ well_adjusted: "Well Adjusted"
+ well_adjusted_desc: "Emotional problems should be the least of our concerns."
+ strict_discipline: "Strict Discipline"
+ strict_discipline_desc: "Hard work and strict discipline will shape everyone into model citizens."
+ infinite_growth: "Infinite Growth"
+ infinite_growth_desc: "Despite additional costs, we must boost industrial output."
+ crystallized_clone_colonies: "Crystalline Colonization"
+ crystallized_clone_colonies_desc: "Crystalline citizens can accelerate our colonial development processes."
+ assimilant_studies: "Assimilant Studies"
+ assimilant_studies_desc: "We will retain these assimilants as experimental subjects to enhance understanding of assimilation."
+ aspirational_striving: "Aspirational Striving"
+ aspirational_striving_desc: "Outstanding individuals should be held up as examples—an ideal worth pursuing!"
+ militaristic_fortitude: "Militaristic Fortitude"
+ militaristic_fortitude_desc: "Genetic advantages will lead us to glory."
+ replicated_success: "Replicated Success"
+ replicated_success_desc: "These extraordinary abilities cannot be limited to a few. They must be shared with all citizens."
+ sewer_sweep: "Sewer Sweep"
+ sewer_sweep_desc: "Whatever's crawling down there... we don't want it."
+ weaponized_plague: "Weaponized Plague"
+ weaponized_plague_desc: "Plague is an effective tool we can use to eliminate the weak."
+ biohacker_haven: "Biohacker Haven"
+ biohacker_haven_desc: "Our government will work to remove all restrictions on genetic modification."
+ limited_autonomy: "Limited Autonomy"
+ limited_autonomy_desc: "We will maintain order by limiting use of government-approved biohacking technologies."
+ proactive_management: "Proactive Management"
+ proactive_management_desc: "Theoretical science is just empty talk. Our leaders should focus on assigned tasks."
+ really_proactive_management: "$proactive_management$"
+ really_proactive_management_desc: "Our empire has no room for idle workers."
+
+ #Hive Modifiers
+ energetic_manipulation: "Energetic Manipulation"
+ energetic_manipulation_desc: "Biological enhancements improve efficiency."
+ defensive_focus: "Defensive Focus"
+ defensive_focus_desc: "Defense is our top priority. Strength and resilience are the cornerstones of our army."
+ grunt_retention: "Worker Retention"
+ grunt_retention_desc: "Workers of all ages contribute to our research and technological development."
+ assured_longevity: "Assured Longevity"
+ assured_longevity_desc: "With improved unity and collective morale, we actively prioritize our own welfare."
+ hyper_charged: "Hypercharged"
+ hyper_charged_desc: "Improved neural relay efficiency allows us to achieve higher productivity in less time."
+ hyper_charged_wilderness: "$hyper_charged$"
+ hyper_charged_wilderness_desc: "$hyper_charged_desc$"
+ vitality_conservation: "Vitality Conservation"
+ vitality_conservation_desc: "As enhancement processes improve, we must take time to focus on our own welfare."
+ accelerated_growth: "Accelerated Growth"
+ accelerated_growth_desc: "With efficiency improvements, productivity has grown dramatically."
+ interference_perseverance: "Interference Perseverance"
+ interference_perseverance_desc: "The hive mind endures neural interference and continuously adapts. Even facing these disturbances, we maintain operational efficiency."
+ tandem_workers: "Tandem Workers"
+ tandem_workers_desc: "We are making full use of current coordination issues."
+ mandated_integration: "Mandated Integration"
+ mandated_integration_desc: "Forced integration of rebellious workers will quell all rebellion."
+ methodic_procreation: "Methodic Procreation"
+ methodic_procreation_desc: "We focus on optimizing crystallization technology while considering its ethical and social implications."
+ genetic_diversification: "Genetic Diversification"
+ genetic_diversification_desc: "We are collectively deliberating our species' future, adopting cautious and comprehensive response strategies."
+ hive_spa_day: "Rest and Recuperation"
+ hive_spa_day_desc: "We will spend a year prioritizing collective welfare."
+ cousin_of_death: "Can't Stop, Won't Stop"
+ cousin_of_death_desc: "No time to rest. We still have work to do."
+ positively_glowing: "Positively Glowing"
+ positively_glowing_desc: "We've rested and are now revitalized."
+ multi_functionality: "Multi-functionality"
+ multi_functionality_desc: "Production efficiency is improving, and worker versatility has reached new heights."
+ optimized_workforce: "Optimized Workforce"
+ optimized_workforce_desc: "The hive mind is satisfied—all workers perform according to their abilities."
+ change_is_growth: "Change is Growth"
+ change_is_growth_desc: "Growth means change, change promotes growth. We are absorbing knowledge at an accelerated pace."
+ maintain_the_essence: "Maintain the Essence"
+ maintain_the_essence_desc: "In our continuous evolution, we cannot lose ourselves. We remain strong and resolute."
+ strengthened_focus: "Strengthened Focus"
+ strengthened_focus_desc: "Workers are healthier, the hive mind more content."
+ evolutionary_diversion: "Evolutionary Diversion"
+ evolutionary_diversion_desc: "Major changes have shaken the hive. Now we must focus on safe biological modifications."
+ biological_corrections: "Biological Corrections"
+ biological_corrections_desc: "We cannot let malignant genetic anomalies endanger our mutation aspirations."
+ cellular_degradation: "Cellular Degradation"
+ cellular_degradation_desc: "We must embrace new evolutionary directions with an open mind."
+ cellular_degradation_wilderness: "$cellular_degradation$"
+ cellular_degradation_wilderness_desc: "$cellular_degradation_desc$"
+ resilient_hive: "Resilient Consciousness"
+ resilient_hive_desc: "We focus on enhancing physical strength and adaptability traits, ensuring [GetGestaltEntityName]'s survival in harsh environments."
+ cognizant_hive: "Cognizant Consciousness"
+ cognizant_hive_desc: "We prioritize enhancing mental capabilities and [GetIndividualName] coordination, promoting decision-making abilities and operational efficiency."
+ pristine_lineage: "Resonant Bloodline"
+ pristine_lineage_desc: "Prioritize cultivating processing [GetIndividualNamePlural] and leadership nodes."
+ breed_for_growth: "Breed for Growth"
+ breed_for_growth_desc: "We select traits most favorable to fertility and raising healthy [GetIndividualNamePlural]."
+ breed_for_growth_wilderness: "$breed_for_growth$"
+ breed_for_growth_wilderness_desc: "$breed_for_growth_desc$"
+ relentless_focus: "Relentless Focus"
+ relentless_focus_desc: "We cannot be distracted. Purity is our goal—everything else must be sacrificed."
+ infrastructural_bolstering: "Infrastructure Reinforcement"
+ infrastructural_bolstering_desc: "In pursuing purity, [GetGestaltEntityName]'s production system must never be compromised."
+ anomaly_purging: "Anomaly Purging"
+ anomaly_purging_desc: "No room for chance. Any unexpected situations must be immediately eliminated."
+ anomaly_purging_wilderness: "$anomaly_purging$"
+ anomaly_purging_wilderness_desc: "$anomaly_purging_desc$"
+ rigorous_examination: "Rigorous Examination"
+ rigorous_examination_desc: "Some so-called impurities may actually benefit [GetGestaltEntityName]. We shouldn't rush to eliminate them."
+ rigorous_examination_wilderness: "$rigorous_examination$"
+ rigorous_examination_wilderness_desc: "$rigorous_examination_desc$"
+ population_relocation: "Population Relocation"
+ population_relocation_desc: "By relocating remaining citizens, we can balance potential pressure on the hive from crystallization-related population growth."
+ factotum_reserves: "Factotum Reserves"
+ factotum_reserves_desc: "The hive's energy production will be reinforced by multifunctional crystalline workers."
+ simple_minds: "Simple Minds"
+ simple_minds_desc: "The hive finds comfort in the soothing traits of a few simple minds."
+ the_new_batch: "Crystallization: New Generation"
+ the_new_batch_desc: "The old batch makes way, the new batch arrives."
+ metaphysical_hive: "Metaphysical Hive"
+ metaphysical_hive_desc: "Even if it causes discord, we still contemplate the nature of existence and purpose."
+ metaphysics_rejected: "Rejection of Metaphysics"
+ metaphysics_rejected_desc: "Metaphysical questions are distractions of independent consciousness; our meaning lies not in thinking about existence, but in living as a whole."
+ boosted_neurology: "Neural Enhancement"
+ boosted_neurology_desc: "We've thought too long. We must commit to species transformation, regardless of potential flaws."
+ balanced_advancement: "Balanced Advancement"
+ balanced_advancement_desc: "Our mutation experiments need not change how we connect with each other."
+ rage_quitting: "Rage Suppression"
+ rage_quitting_desc: "There is no place for reckless violence within the hive."
+ fury_embracing: "Fury Embracing"
+ fury_embracing_desc: "We embrace the formless chaos of the future."
+ decisive_meditation: "Decisive Meditation"
+ decisive_meditation_desc: "We choose to first accept the turbulent nature of consciousness, moving together toward a more balanced holistic view."
+ meteorological_adaptations: "Meteorological Adaptations"
+ meteorological_adaptations_desc: "We must invest time and resources to improve our climate adaptability."
+ body_builders: "Body Builders"
+ body_builders_desc: "Physical strength is the pinnacle of evolution."
+ deep_thinkers: "Deep Thinkers"
+ deep_thinkers_desc: "What sustains us is our capacity for deep thought."
+ sensible_supremacy: "Sensible Supremacy"
+ sensible_supremacy_desc: "We can be both bold and cautious."
+ decisive_termination: "Decisive Termination"
+ decisive_termination_desc: "To control plague outbreaks, we will execute the infected."
+ survival_study: "Survival Study"
+ survival_study_desc: "Careful study of infected [GetIndividualNamePlural] will lead us to find a cure for the plague."
+ survival_study_wilderness: "$survival_study$"
+ survival_study_wilderness_desc: "$survival_study_desc$"
+ uncorrected_blunders: "Uncorrected Blunders"
+ uncorrected_blunders_desc: "We may have failed to double-check our calculations."
+ maverick_citizens: "Maverick Citizens"
+ maverick_citizens_desc: "If you've done nothing wrong, you have nothing to worry about."
+
+ #Advanced Governments
+ #Resonance
+ ori_ap.170.name: "Resonance: Government Reform?"
+ ori_ap.170.desc: "Our species stands on the edge of the next grand frontier. We must now make a choice.\n\nShall we embrace our destiny, purify our genetic lineage, and elevate our civilization to new heights of genetic excellence? Or shall we preserve the lessons of our past and continue forward in our current unrefined form?"
+ ori_ap.170.a: "Embrace resonance, reach new heights!"
+ ori_ap.170.a.tt: "$change_auth_tt$[GetResonanceAuthority]"
+ ori_ap.170.b: "We need not change how we govern ourselves."
+
+ #crystallization
+ ori_ap.175.name: "Crystallization: Government Reform?"
+ ori_ap.175.desc: "Our species has reached a critical moment. A decision must be made.\n\nShall we embrace destiny, harness the power of crystallization, and irreversibly transform ourselves into a civilization of replicated perfection? Or shall we absorb the lessons from our journey thus far and continue maintaining our unnecessary diversification?"
+ ori_ap.175.a: "We will make crystallization an integral part of our future."
+ ori_ap.175.a.tt: "$change_auth_tt$[GetCrystallizationAuthority]\n$LEADERS_GAIN_CRYSTALLIZED_CLONES$"
+ ori_ap.175.b: "$ori_ap.170.b$"
+
+ #assimilation
+ ori_ap.180.name: "Mutation: Government Reform?"
+ ori_ap.180.desc: "We stand at the precipice of a critical biological frontier. An important choice awaits us.\n\nWe can embrace our destiny by harnessing the power of advanced biological mutation, irreversibly transforming our civilization through deliberate evolution of our genetic code. Or we can preserve the lessons gained from past explorations and continue maintaining our current mundane form."
+ ori_ap.180.a: "We can become anything and everything."
+ ori_ap.180.a.tt: "$change_auth_tt$[GetAssimilationAuthority]"
+ ori_ap.180.b: "$ori_ap.170.b$"
+
+ #Hives
+ ori_ap.185.name: "$ori_ap.170.name$"
+ ori_ap.185.desc: "$ori_ap.170.desc$"
+ ori_ap.185.a: "$ori_ap.170.a$"
+ ori_ap.185.a.tt: "$ori_ap.170.a.tt$"
+ ori_ap.185.b: "$ori_ap.170.b$"
+ ori_ap.190.name: "$ori_ap.175.name$"
+ ori_ap.190.desc: "$ori_ap.175.desc$"
+ ori_ap.190.a.tt: "$ori_ap.175.a.tt$"
+ ori_ap.190.a: "$ori_ap.175.a$"
+ ori_ap.190.b: "$ori_ap.170.b$"
+ ori_ap.195.name: "$ori_ap.180.name$"
+ ori_ap.195.desc: "$ori_ap.180.desc$"
+ ori_ap.195.a: "$ori_ap.180.a$"
+ ori_ap.195.a.tt: "$change_auth_tt$[GetassimilationAuthority]"
+ ori_ap.195.b: "$ori_ap.170.b$"
+
+ ### ADDITIONAL RANDOM EVENTS
+ ## NON-HIVE
+ #PURITY
+ ori_ap.200.name: "Embracing Our Heritage"
+ ori_ap.200.desc: "As we focus on tuning our frequencies, we are recognizing all that makes our civilization great.\n\nWith our frequencies more harmonious than ever before, we feel unprecedented pride in our superior heritage.\n\nExperts from all fields—arts, sciences, and commerce—are cheering our collective efforts and hoping to lead us to glory."
+ ori_ap.200.a: "We will celebrate this milestone by funding the arts!"
+ ori_ap.200.b: "Scientific research must always come first."
+ ori_ap.200.c: "Consumption is the heart of the economy."
+
+ ori_ap.210.name: "We Reject Resonance!"
+ ori_ap.210.desc: "Protesters' cries echo through our cities. A rebellious faction within the empire has taken it upon themselves to reject our cause, turning away from our path toward resonance.\n\nThese troublemakers preach the supposed need for frequency diversity and cultural integration.\n\nIf their radical behavior goes unaddressed, our progress toward resonance may be hindered."
+ ori_ap.210.a: "Suppress these dissidents!"
+ ori_ap.210.b: "Appease them with empty promises."
+
+ ori_ap.215.name: "Secrets of the Past"
+ ori_ap.215.desc: "Archaeologists have discovered evidence of an ancient civilization on our ancestral homeworld.\n\nA long-buried underground vault has been excavated, containing shocking evidence of ancient genetic experiments.\n\nIf this news becomes public, it could undermine our modern claims about genetic resonance."
+ ori_ap.215.a: "Integrate this research with ours. Build upon the past."
+ ori_ap.215.b: "Destroy the evidence. No one must ever know."
+
+ ori_ap.220.name: "Mad Science"
+ ori_ap.220.desc: "A rogue Originium scholar named [event_target:rogue_geneticist.GetName] has been discovered conducting unauthorized biological experiments. [event_target:rogue_geneticist.GetHisHer] disregard for safety protocols aimed to create a master race embodying the resonance ideals we pursue. However, [event_target:rogue_geneticist.GetHeShe] has instead created monstrous aberrations.\n\nNow, a short-lived subspecies is dying under our supervision—beings that, while sharing some similarities with our frequency characteristics, are mostly disease-ridden horrors. Though study of their genetic composition has been fruitful, the prognosis is fatal. [event_target:rogue_geneticist.GetName] shows no remorse."
+ ori_ap.220.a: "Remove this rogue from office!"
+ ori_ap.220.a.tt: "[event_target:rogue_geneticist.GetName] is forced into retirement."
+ ori_ap.220.b: "\"Dispose\" of [event_target:rogue_geneticist.GetName]."
+ ori_ap.220.c: "This is exactly the innovative spirit we need!"
+
+ ori_ap.225.name: "Resonance Scandal!"
+ ori_ap.225.desc: "To accelerate our path toward resonance and identify frequency anomalies, we've implemented regular frequency testing. Possessing 'high-quality' frequencies has become a status symbol.\n\nAllegedly, certain imperial officials have been falsifying their biometric data, forging test results to show they possess more ideal traits than they actually do. If this is exposed, such concealment of truth will surely spark public outrage."
+ ori_ap.225.a: "We need more accurate and reliable testing."
+ ori_ap.225.b: "Perhaps this official just made a mistake..."
+
+ ### ADDITIONAL RANDOM EVENTS
+ ## NON-HIVE
+ #crystallization
+ ori_ap.230.name: "Crystalline Dilemma"
+ ori_ap.230.desc: "Crystalline humans walk among us. They live in our cities and work in our factories. Some even hold important positions, participating in policies that affect our lives.\n\nAs crystalline individuals integrate into our society, many questions remain unanswered. What rights should they have? Are they equal to non-crystalline humans, or should they be managed as subordinates?"
+ ori_ap.230.a: "All crystalline humans have full citizenship rights!"
+ ori_ap.230.b: "They are second-class citizens at best."
+
+ ori_ap.235.name: "Crystalline Factory Sabotaged!"
+ ori_ap.235.desc: "One of our most productive crystallization facilities has suddenly shut down due to an accident, causing major losses.\n\nSince many of our operations are automated for efficiency, no one was able to intervene in time during this critical moment.\n\nA freshly produced crystalline human slipped and was crushed in the machinery, causing a production line jam that forced complete shutdown."
+ ori_ap.235.a: "This requires a full investigation!"
+ ori_ap.235.a.tt: "§Y$originium_resonance_situation$§! situation progress for §Y12§! months: §R-50%§!"
+ prophecy_stalled_tt: "§Y$originium_resonance_situation$§! situation progress for §Y12§! months:"
+ ori_ap.235.b: "Resume production as quickly as possible!"
+
+ ori_ap.240.name: "Identity Crisis"
+ ori_ap.240.desc: "Crystalline humans throughout our empire report experiencing distress, struggling to find a sense of self-identity.\n\nThey yearn for identity beyond their originals. They question the meaning of their existence, feeling lost about life goals and aspirations."
+ ori_ap.240.a: "This is common. Go get therapy."
+ ori_ap.240.b: "They should find fulfillment in their work."
+ ori_ap.240.b.tt: "Each §Y£leader£leader§! of the empire's primary species gains §G+200§! experience."
+
+ ori_ap.250.name: "Crystalline Humans Everywhere!"
+ ori_ap.250.desc: "As more crystalline humans integrate into our population, the additional resources needed to sustain them begin to strain the economy.\n\nWhile immediate challenges are mounting, the economic vitality from a larger labor force and consumer base could lay the foundation for long-term prosperity—provided we can effectively manage this transition period."
+ ori_ap.250.a: "Our infrastructure must keep pace with growing demand."
+ ori_ap.250.b: "Let them enjoy life in alien colonies."
+
+ ### ADDITIONAL RANDOM EVENTS
+ ## NON-HIVE
+ #assimilation
+ ori_ap.260.name: "Runaway Assimilation"
+ ori_ap.260.desc: "Spontaneous limb growth. Matter fluctuations. Sudden morphological transformations. These reports, while sporadic, cannot be ignored.\n\nOur assimilation experiments have produced some less-than-ideal results throughout civilization. Perhaps using Originium to arbitrarily modify matter is more complex than we initially anticipated."
+ ori_ap.260.a: "Unusual assimilation processes can advance our research."
+ ori_ap_260_opinion_tt: "§YSpiritualist§! empires' opinion of us changes: §R-50§!"
+ ori_ap.260.b: "Eliminate these aberrants."
+ ori_ap.260.b.tt: "Each §YAuthoritarian£leader£leader§! gains the §Y$leader_trait_eager$§! trait."
+
+ ori_ap.265.name: "Assimilator Excellence"
+ ori_ap.265.desc: "Through self-directed assimilation experiments, a small portion of our population has developed extraordinary abilities and physical enhancements.\n\nAs unique strongmen and gifted individuals, they are forming a group and attracting widespread public attention."
+ ori_ap.265.a: "Their success might inspire others."
+ ori_ap.265.b: "Sounds like they'd make excellent soldiers."
+ ori_ap.265.b.tt: "Create a §Y$gene_warrior_army$§! on §Y[Owner.capital_scope.GetName]§!."
+ ori_ap_265_opinion_tt: "§YMilitarist§! empires' opinion of us changes: §G+50§!"
+ ori_ap.265.c: "Find out how they did it and replicate the process."
+
+ ori_ap.270.name: "Urban Legends Come True"
+ ori_ap.270.desc: "Surveillance has confirmed the existence of a group of modified individuals living in the city's sewer systems—disturbingly validating long-ignored urban legends.\n\nThis discovery has intensified social tensions, and as fear of the unknown escalates, visibly assimilated citizens report increased discrimination. However, these individuals have shown extraordinary creativity, using sewer gases for resource production and transforming their environment in unexpected ways."
+ ori_ap.270.a: "Clean out the sewers!"
+ ori_ap.270.b: "These assimilators might have discovered something..."
+
+ ori_ap.280.name: "Assimilation Contagion"
+ ori_ap.280.desc: "A new disease is spreading throughout our empire. This disease causes a series of unpleasant symptoms including but not limited to: involuntary gas and liquid discharge, extreme fatigue, and in some cases even death.\n\nMost peculiarly, this disease only affects those who have altered their physiological characteristics through assimilation. Continued research into their modified genomes has brought some surprising discoveries."
+ ori_ap.280.a: "Seek therapeutic applications."
+ ori_ap.280.b: "Weaponize the disease."
+ ori_ap_280_opinion_tt: "§YMaterialist§! empires' opinion of us changes: §R-50§!"
+
+ ### ADDITIONAL RANDOM EVENTS
+ ## NON-HIVE
+ #ANY APPROACH
+ ori_ap.295.name: "Rebellious Cells"
+ ori_ap.295.desc: "Our Originium research facilities provide unprecedented physiological modification capabilities for the entire civilization.\n\nHowever, the empire's citizens want more. They call for breaking centralized resource control, allowing so-called \"biohackers\" free and unrestricted access to Originium technology."
+ ori_ap.295.a: "Give biohackers more autonomy."
+ ori_ap.295.b: "Ordinary citizens already have too much freedom."
+ ori_ap_295_opinion_tt: "§YEgalitarian§! empires' opinion of us changes: §G+50§!"
+
+ ori_ap.300.name: "Genius Originium Scholar"
+ ori_ap.300.desc: "A [Owner.GetScientist] named [event_target:genius_geneticist.GetName] has just published academic research that could greatly accelerate and improve the efficiency and effectiveness of our Originium experiments.\n\nThis new approach is currently theoretical and untested, so careful consideration of its methodology is needed for safe application to our work."
+ ori_ap.300.a: "Recognize [event_target:genius_geneticist.GetName]'s contributions."
+ ori_ap.300.b: "Reckless ideas—and individuals—will not be tolerated."
+ ori_ap.300.c: "Everyone back to work."
+
+ ### ADDITIONAL RANDOM EVENTS
+ ## HIVE
+ #PURITY
+ ori_ap.310.name: "[target.GetGestaltEntityName] Resonance Disruption"
+ ori_ap.310.desc: "Due to our ongoing frequency adjustment experiments, our species has been invaded by a runaway frequency. We are becoming weak at an alarming rate, and the uncontrolled interaction between this foreign frequency and our own is destroying our stability.\n\nWe must address this anomalous biological behavior before it's too late."
+ ori_ap.310.a: "Purge the contaminants."
+ ori_ap.310.b: "Let us study it."
+
+ ori_ap.315.name: "Dedication to the Cause"
+ ori_ap.315.desc: "If our civilization is to achieve resonance, we must first consider [target.GetGestaltEntityName]'s welfare. The frequency tuning process must ensure every adaptive change enhances collective resilience.\n\nGoing in the wrong direction—introducing changes that cause instability or destroy cohesion—could be catastrophic, threatening the foundation of our unity."
+ ori_ap.315.a: "Focus on physical resilience."
+ ori_ap.315.b: "Cognitive efficiency is crucial."
+
+ ori_ap.325.name: "Beyond the Present"
+ ori_ap.325.desc: "To ensure our species' longevity and resonance, we must implement more selective breeding and stricter frequency screening protocols.\n\nOnly by carefully selecting workers worthy of continuing our lineage can we transcend natural evolution."
+ ori_ap.325.desc.wilderness: "To ensure our species' longevity and resonance, we must implement more selective breeding and stricter frequency screening protocols.\n\nOnly by carefully selecting symbionts with traits that serve our collective interests can we transcend natural evolution."
+ ori_ap.325.a: "We will screen for intelligence."
+ ori_ap.325.b: "We breed for expansion."
+
+ ori_ap.330.name: "Ingenious Ascension"
+ ori_ap.330.desc: "The rewards of frequency tuning will secure our heritage, but every [target.GetIndividualName]'s role, every effort must align with our resonance vision.\n\nWe now face a major choice: should we pursue ultimate perfection at the cost of adaptability? Or should we adopt a more comprehensive strategy, prioritizing infrastructure development that can sustainably support these efforts?"
+ ori_ap.330.a: "Pursuing resonance must be our sole focus."
+ ori_ap.330.b: "We must take time to develop foundations."
+
+ ori_ap.335.name: "Purging Imperfection"
+ ori_ap.335.desc: "We have discovered some noise and anomalies within [target.GetGestaltEntityName].\n\nIn our pursuit of greater goals, these flawed characteristics must be eliminated, seizing control of our physical development from natural evolution's hands."
+ ori_ap.335.a: "Eliminate the weak to strengthen the whole."
+ ori_ap.335.b: "Reforge defective individuals."
+ ori_ap_335_opinion_tt: "§YBenevolent§! empires' opinion of us changes: §R-50§!"
+
+ ### ADDITIONAL RANDOM EVENTS
+ ## HIVE
+ #crystallization
+ ori_ap.340.name: "Too Many Crystalline Humans!"
+ ori_ap.340.desc: "Our crystallization facilities operate far more efficiently than originally expected, resulting in a surplus of crystalline clones.\n\nIntegrating so many workers will be a challenge."
+ ori_ap.340.a: "New hive members should be relocated."
+ ori_ap.340.b: "Increase output. Accelerate crystallization."
+
+ ori_ap.350.name: "Empty Shells"
+ ori_ap.350.desc: "A malfunction at one of our major crystallization centers has affected some workers. The crystallization process was somehow contaminated, resulting in a batch of crystalline clones without cognitive ability.\n\nThey are essentially living objects, completely without consciousness or higher cognitive functions. Until the cause is fully identified and this production problem corrected, crystallization facility output has temporarily decreased."
+ ori_ap.350.a: "This feels... oddly comfortable."
+ ori_ap.350.a.tt: "100 £pop£§Hunenlightened populations§! generated on §Y[owner.capital_scope.GetName]§!."
+ ori_ap.350.b: "Cultivate a new batch."
+
+ ori_ap.365.name: "Hive Metaphysics"
+ ori_ap.365.desc: "A question has emerged within our consciousness: might crystalline clones eventually replace us all?\n\nOur initial efforts in crystalline replication have progressed smoothly, making us wonder if this efficient reproduction method might ultimately replace our natural reproduction.\n\nIf so, there might come a day when the hive contains no more original individuals, only crystalline clones of crystalline clones of crystalline clones... What would this mean for our species? No one knows the answer to this question, and it makes anomalies stir restlessly, but we must ask."
+ ori_ap.365.a: "The question itself has value."
+ ori_ap.365.b: "Such questions only distract us."
+
+ ### ADDITIONAL RANDOM EVENTS
+ ## HIVE
+ #assimilation
+ ori_ap.375.name: "Deepening Connections"
+ ori_ap.375.desc: "We have made a discovery. By manipulating specific genes, we can extend the reach of consciousness, allowing our perceptual abilities to exceed our species' original limits.\n\nImplementing these genetic mutations throughout the hive requires substantial energy, but doing so could deepen our understanding of the universe and our place within it."
+ ori_ap.375.a: "This cost is negligible. Proceed."
+ ori_ap.375.b: "We must not be hasty."
+
+ mod_planet_evaluators_physics_research_produces_add: "§Y$physics_research$§! produced by each $pop_group_unit$ [evaluator.GetIcon][evaluator.GetNamePlural]"
+
+ ori_ap.380.name: "Emotional Overload"
+ ori_ap.380.desc: "Multiple areas of the hive are experiencing uncontrollable waves of anger. These emotional fluctuations ripple through our shared consciousness, amplifying our collective pain and frustration.\n\nRecently introduced mutations seem to have overstimulated neural cells in workers' aggression control centers, disrupting the hive's emotional balance. Conflict incidents are increasingly frequent, with some individuals abandoning their assigned tasks to attack their own kind."
+ ori_ap.380.a: "We will work together to stay clear-headed."
+ ori_ap.380.b: "Embrace the rage."
+
+ ori_ap.385.name: "Environmental Discomfort"
+ ori_ap.385.desc: "While certain mutations have indeed made us stronger and enhanced us, we find other mutations bring unpleasant side effects.\n\nThough life-extending enhancements have been successfully implemented, these same mutations have reduced our tolerance for extreme climates.\n\nThose who have undergone these biological enhancements experience difficulties regulating their internal temperature systems, and this discomfort spreads throughout the entire hive."
+ ori_ap.385.a: "We must upgrade climate protection systems."
+ ori_ap.385.b: "As we change, our environmental preferences change too."
+
+ uncomfortable_drones: "Uncomfortable Drones"
+ uncomfortable_drones_desc: "Our workers must endure discomfort from mutations."
+
+ ori_ap.390.name: "Strength or Wisdom"
+ ori_ap.390.desc: "We have discovered two mutations. One assimilation can enhance the strength of basic individuals, dramatically improving labor efficiency. Another can boost the intelligence of complex workers, enhancing problem-solving and strategic thinking abilities.\n\nThe hive must decide which evolutionary path to choose."
+ ori_ap.390.a: "Strength is progress."
+ ori_ap.390.b: "Thinking makes us prosper."
+
+ ### ADDITIONAL RANDOM EVENTS
+ ## HIVE
+ #ANY APPROACH
+ ori_ap.405.name: "Pathological Phase"
+ ori_ap.405.desc: "We barely controlled a sudden outbreak of phase plague.\n\nOur manipulation of internal Originium mapping triggered phase mutations, causing physical damage to many [target.GetIndividualNamePlural].\n\nAffected [target.GetIndividualNamePlural] have been quarantined, and we must now decide how to proceed."
+ ori_ap.405.a: "Dispose of [target.GetIndividualNamePlural], end the plague."
+ ori_ap.405.b: "Study the victims."
+
+ ori_ap.410.name: "Corrupted Cells"
+ ori_ap.410.desc: "A calculation error has caused spectral integrity degradation in many workers. Unfortunately, we cannot yet determine at which step the error occurred.\n\nAfter reviewing the biological calculations involved in our species' ascension and correcting some potentially problematic steps, we intend to continue our work.\n\nHowever, we still cannot be certain whether we've fixed the problem or created more issues."
+ ori_ap.410.desc.wilderness: "A calculation error has caused spectral integrity degradation in many symbionts. Unfortunately, we cannot yet determine at which step the error occurred.\n\nAfter reviewing the biological calculations involved in our species' ascension and correcting some potentially problematic steps, we intend to continue our work.\n\nHowever, we still cannot be certain whether we've fixed the problem or created more issues."
+ ori_ap.410.a: "We can learn from the consequences."
+ ori_ap.410.b: "Terminate the experiment."
+ ori_ap.410.b.tt: "$ori_ap.235.a.tt$"
+
+ #Buildings and Jobs
+ originium_research_facility_unlocked_tt: "Unlocks Building: ['building:building_originium_facility']"
+ situation_originium_facility_needed_desc: "£trigger_no£No available ['building:building_originium_facility']"
+ originium_facility_needed_tt: "§R\nRequired Action:§!\n$t$—Build a §Y$building_originium_facility$§! to begin the §Y$originium_resonance_situation$§! situation."
+
+ building_originium_facility: "Originium Research Institute"
+ building_originium_facility_plural: "Originium Research Institutes"
+ building_originium_facility_desc: "A specialized facility for researching how to shape our genetic future."
+
+ originium_resonance_number_of_originium_researchers: "$job_originium_researcher_plural$ jobs"
+ originium_resonance_number_of_originium_drones: "$job_originium_drone_plural$ jobs"
+
+ originium_researcher: "$job_originium_researcher$"
+ job_originium_researcher: "Originium Researcher"
+ job_originium_researcher_plural: "Originium Researchers"
+ job_originium_researcher_with_icon: "£job_originium_researcher£$job_originium_researcher$"
+ job_originium_researcher_plural_with_icon: "£job_originium_researcher£$job_originium_researcher_plural$"
+ job_originium_researcher_desc: "$job_originium_researcher_plural$ conduct research about our future."
+ job_originium_researcher_effect_desc: "£job_originium_researcher£$job_originium_researcher_plural$ convert $r_consumer_goods$ into $r_society$ and $r_amenities$"
+ job_originium_researcher_situation_effect_desc: "£job_originium_researcher£$job_originium_researcher_plural$ convert $r_consumer_goods$ into $r_society$, $r_amenities$ and boost §Y$originium_resonance_situation$ monthly situation progress§!"
+
+ mod_job_originium_researcher_add: "$job_originium_researcher$ jobs"
+ healthcare_is_originium_researcher_tt: "£job_healthcare£$job_healthcare_plural$ become $job_originium_researcher_plural_with_icon$"
+
+ originium_drone: "$job_originium_drone$"
+ job_originium_drone: "Originium Research Drone"
+ job_originium_drone_plural: "Originium Research Drones"
+ job_originium_drone_with_icon: "£job_originium_drone£$job_originium_drone$"
+ job_originium_drone_plural_with_icon: "£job_originium_drone£$job_originium_drone_plural$"
+ job_originium_drone_desc: "$job_originium_drone_plural$ conduct research about our future."
+ job_originium_drone_effect_desc: "£job_originium_drone£$job_originium_drone_plural$ convert $r_food$ (or $r_minerals$) into $r_society$ and $r_amenities$"
+ job_originium_drone_situation_effect_desc: "£job_originium_drone£$job_originium_drone_plural$ convert $r_food$ (or $r_minerals$) into $r_society$, $r_amenities$ and boost §Y$originium_resonance_situation$ monthly situation progress§!"
+
+ mod_job_originium_drone_add: "$job_originium_drone$ jobs"
+ spawning_is_originium_researcher_tt: "£job_spawning_drone£$job_spawning_drone_plural$ become $job_originium_drone_plural_with_icon$"
+
+ #Approach Unlocks
+ originium_resonance_originium_tt: "—Begins §Y$originium_resonance_situation$ situation§!, unlocking ['tradition_category:tradition_resonance'], ['tradition_category:tradition_crystallization'], or ['tradition_category:tradition_assimilation'] tradition trees.\n—$UNLOCKS_AGENDA$§Y$council_agenda_agenda_originium_resonance_name$§!, unlocking genetic modification technology research options\n—$originium_research_facility_unlocked_tt$\n—$REQUIRES_TRADITION_SLOT$"
+
+ resonance_traditions_unlocked_tt: "Allows adopting ['tradition_category:tradition_resonance'] when §Y$originium_resonance_situation$ situation§! ends."
+ crystallization_traditions_unlocked_tt: "Allows adopting ['tradition_category:tradition_crystallization'] when §Y$originium_resonance_situation$ situation§! ends."
+ assimilation_traditions_unlocked_tt: "Allows adopting ['tradition_category:tradition_assimilation'] when §Y$originium_resonance_situation$ situation§! ends."
+
+ no_resonance_unlock_tt: "§PDid not choose §Y$originium_resonance_approach_resonance$§! approach in any stage!§!"
+ no_crystallization_unlock_tt: "§PDid not choose §Y$originium_resonance_approach_crystallization$§! approach in any stage!§!"
+ no_assimilation_unlock_tt: "§PDid not choose §Y$originium_resonance_approach_assimilation$§! approach in any stage!§!"
+
+ resonance_unlock_level_1: "Originium Research — Resonance I"
+ resonance_unlock_level_1_tt: "£mod_logistic_growth_mult£$MOD_LOGISTIC_GROWTH_MULT$ per $pop_group_unit$ [GetGenomicJobsPluralWithIcon]: §G+$@originium_resonance_growth|1%$§!"
+ resonance_unlock_level_1_desc: "$originium_resonance_approach_resonance_desc$"
+ resonance_unlock_level_2: "Originium Research — Resonance II"
+ resonance_unlock_level_2_tt: "$resonance_unlock_level_1_tt$\n"
+ resonance_unlock_level_2_desc: "$originium_resonance_approach_resonance_desc$"
+
+ crystallization_unlock_level_1: "Originium Research — Crystallization I"
+ crystallization_unlock_level_1_tt: "£mod_bonus_pop_growth£$MOD_BONUS_POP_GROWTH$ per $pop_group_unit$ [GetGenomicJobsPluralWithIcon]: §G+$@originium_crystallization_assembly|0$§!"
+ crystallization_unlock_level_1_desc: "$originium_resonance_approach_crystallization_desc$"
+ crystallization_unlock_level_2: "Originium Research — Crystallization II"
+ crystallization_unlock_level_2_tt: "$crystallization_unlock_level_1_tt$\n£mod_planet_amenities_add£Amenities per $pop_group_unit$ [GetGenomicJobsPluralWithIcon]: §G+$@originium_crystallization_amenities|0$§!"
+ crystallization_unlock_level_2_desc: "$originium_resonance_approach_crystallization_desc$"
+
+ assimilation_unlock_level_1: "Originium Research — Assimilation I"
+ assimilation_unlock_level_1_tt: "£mod_pop_environment_tolerance£$MOD_POP_ENVIRONMENT_TOLERANCE$ from £building£$building_originium_facility_plural$: §G+$@originium_assimilation_habitability|1%$§!"
+ assimilation_unlock_level_1_desc: "$originium_resonance_approach_assimilation_desc$"
+ assimilation_unlock_level_2: "Originium Research — Assimilation II"
+ assimilation_unlock_level_2_tt: "$assimilation_unlock_level_1_tt$\n$MOD_AUTO_MOD_MONTHLY_ADD$ from £building£$building_originium_facility_plural$: §G+$@originium_assimilation_auto_mod|0$§!"
+ assimilation_unlock_level_2_desc: "$originium_resonance_approach_assimilation_desc$"
+
+ #Traditions
+ REQUIRES_FINISHED_PROPHECY: "$TRIGGER_FAIL$Complete ['concept_prophecy'] situation"
+ GRANTED_BY: "§WUnlocked by"
+ ORIGINIUM_SITUATION: "§Y$originium_resonance_situation$§! situation"
+ UNLOCKED_BY_RESONANCE: "$ORIGINIUM_SITUATIONs §Y£resonance£$originium_resonance_approach_resonance$ approach§!."
+ UNLOCKED_BY_CRYSTALLIZATION: "$ORIGINIUM_SITUATIONs §Y£crystallization£$originium_resonance_approach_crystallization$ approach§!."
+ UNLOCKED_BY_ASSIMILATION: "$ORIGINIUM_SITUATIONs §Y£assimilation£$originium_resonance_approach_assimilation$ approach§!."
+
+ #Stage One Swaps
+ originium_stage_1_effects: "[owner.GetGeneticStage1Effects]"
+ originium_stage_1_default_tt: "This stage will select the tradition used by ['concept_flexible_tradition_1']$NEW_LINE$—Resonance: ['concept_resonance_neural_tuning']$NEW_LINE$—Crystallization: ['concept_crystallization_crystallized_growth']$NEW_LINE$—Assimilation: ['concept_assimilation_environmental_integration']"
+
+ tr_originium_stage_1_swap: "$concept_flexible_tradition$ I"
+ tr_originium_stage_1_swap_tt: "This ['concept_flexible_tradition'] is determined by the approach selected during §Y$stage_1$§! of the §Y$originium_resonance_situation$§! situation:$NEW_LINE$—Resonance: ['concept_resonance_neural_tuning']$NEW_LINE$—Crystallization: ['concept_crystallization_crystallized_growth']$NEW_LINE$—Assimilation: ['concept_assimilation_environmental_integration']"
+
+ tr_resonance_stage_1_swap: "$tr_originium_stage_1_swap$"
+ tr_crystallization_stage_1_swap: "$tr_originium_stage_1_swap$"
+ tr_assimilation_stage_1_swap: "$tr_originium_stage_1_swap$"
+
+ tr_originium_stage_1_resonance_swap: "$tr_resonance_neural_tuning$"
+ tr_originium_stage_1_resonance_swap_delayed: "$tr_resonance_neural_tuning_delayed$\n\n$GRANTED_BY$ $UNLOCKED_BY_RESONANCE$"
+ tr_originium_stage_1_crystallization_swap: "$tr_crystallization_crystallized_growth$"
+ tr_originium_stage_1_crystallization_swap_delayed: "$tr_crystallization_crystallized_growth_delayed$\n\n$GRANTED_BY$ $UNLOCKED_BY_CRYSTALLIZATION$"
+ tr_originium_stage_1_assimilation_swap: "$tr_assimilation_environmental_integration$"
+ tr_originium_stage_1_assimilation_swap_delayed: "$tr_assimilation_environmental_integration_delayed$\n\n$GRANTED_BY$ $UNLOCKED_BY_ASSIMILATION$"
+
+ originium_stage_one_resonance_tt: "Set ['concept_flexible_tradition_1'] to ['concept_resonance_neural_tuning']"
+ originium_stage_one_crystallization_tt: "Set ['concept_flexible_tradition_1'] to ['concept_crystallization_crystallized_growth']"
+ originium_stage_one_assimilation_tt: "Set ['concept_flexible_tradition_1'] to ['concept_assimilation_environmental_integration']"
+
+ concept_flexible_tradition_1: "$tr_originium_stage_1_swap$"
+ concept_flexible_tradition_1_desc: "$tr_originium_stage_1_swap_tt$"
+ concept_resonance_neural_tuning: "$tr_resonance_neural_tuning$"
+ concept_crystallization_crystallized_growth: "$tr_crystallization_crystallized_growth$"
+ concept_assimilation_environmental_integration: "$tr_assimilation_environmental_integration$"
+
+ #Stage Two Swaps
+ originium_stage_2_effects: "[owner.GetGeneticStage2Effects]"
+ originium_stage_2_default_tt: "This stage will select the tradition used by ['concept_flexible_tradition_2']$NEW_LINE$—Resonance: ['concept_resonance_heightened_attributes']$NEW_LINE$—Crystallization: ['concept_crystallization_artificial_population']$NEW_LINE$—Assimilation: ['concept_assimilation_somatic_subversiveness']"
+
+ tr_originium_stage_2_swap: "$concept_flexible_tradition$ II"
+ tr_originium_stage_2_swap_tt: "This ['concept_flexible_tradition'] is determined by the approach selected during §Y$stage_2$§! of the §Y$originium_resonance_situation$§! situation:$NEW_LINE$—Resonance: ['concept_resonance_heightened_attributes']$NEW_LINE$—Crystallization: ['concept_crystallization_artificial_population']$NEW_LINE$—Assimilation: ['concept_assimilation_somatic_subversiveness']"
+
+ tr_resonance_stage_2_swap: "$tr_originium_stage_2_swap$"
+ tr_crystallization_stage_2_swap: "$tr_originium_stage_2_swap$"
+ tr_assimilation_stage_2_swap: "$tr_originium_stage_2_swap$"
+
+ tr_originium_stage_2_resonance_swap: "$tr_resonance_heightened_attributes$"
+ tr_originium_stage_2_resonance_swap_delayed: "$tr_resonance_heightened_attributes_delayed$\n\n$GRANTED_BY$ $UNLOCKED_BY_RESONANCE$"
+ tr_originium_stage_2_crystallization_swap: "$tr_crystallization_artificial_population$"
+ tr_originium_stage_2_crystallization_swap_delayed: "$tr_crystallization_artificial_population_delayed$\n\n$GRANTED_BY$ $UNLOCKED_BY_CRYSTALLIZATION$"
+ tr_originium_stage_2_assimilation_swap: "$tr_assimilation_somatic_subversiveness$"
+ tr_originium_stage_2_assimilation_swap_delayed: "$tr_assimilation_somatic_subversiveness_delayed$\n\n$GRANTED_BY$ $UNLOCKED_BY_ASSIMILATION$"
+
+ originium_stage_two_resonance_tt: "Set ['concept_flexible_tradition_2'] to ['concept_resonance_heightened_attributes']"
+ originium_stage_two_crystallization_tt: "Set ['concept_flexible_tradition_2'] to ['concept_crystallization_artificial_population']"
+ originium_stage_two_assimilation_tt: "Set ['concept_flexible_tradition_2'] to ['concept_assimilation_somatic_subversiveness']"
+
+ concept_flexible_tradition_2: "$tr_originium_stage_2_swap$"
+ concept_flexible_tradition_2_desc: "$tr_originium_stage_2_swap_tt$"
+ concept_resonance_heightened_attributes: "$tr_resonance_heightened_attributes$"
+ concept_crystallization_artificial_population: "$tr_crystallization_artificial_population$"
+ concept_assimilation_somatic_subversiveness: "$tr_assimilation_somatic_subversiveness$"
+
+ #Stage Three Swaps
+ originium_stage_3_effects: "[owner.GetGeneticStage3Effects]"
+ originium_stage_3_default_tt: "This stage will select the tradition used by ['concept_flexible_tradition_3']$NEW_LINE$—Resonance: ['concept_resonance_buzz_elimination']$NEW_LINE$—Crystallization: ['concept_crystallization_regenerative_crystallization']$NEW_LINE$—Assimilation: ['concept_assimilation_nucleotide_isolation']"
+
+ tr_originium_stage_3_swap: "$concept_flexible_tradition$ III"
+ tr_originium_stage_3_swap_tt: "This ['concept_flexible_tradition'] is determined by the approach selected during §Y$stage_3$§! of the §Y$originium_resonance_situation$§! situation:$NEW_LINE$—Resonance: ['concept_resonance_buzz_elimination']$NEW_LINE$—Crystallization: ['concept_crystallization_regenerative_crystallization']$NEW_LINE$—Assimilation: ['concept_assimilation_nucleotide_isolation']"
+
+ tr_resonance_stage_3_swap: "$tr_originium_stage_3_swap$"
+ tr_crystallization_stage_3_swap: "$tr_originium_stage_3_swap$"
+ tr_assimilation_stage_3_swap: "$tr_originium_stage_3_swap$"
+
+ tr_originium_stage_3_resonance_swap: "$tr_resonance_buzz_elimination$"
+ tr_originium_stage_3_resonance_swap_delayed: "$tr_resonance_buzz_elimination_delayed$\n\n$GRANTED_BY$ $UNLOCKED_BY_RESONANCE$"
+ tr_originium_stage_3_crystallization_swap: "$tr_crystallization_regenerative_crystallization$"
+ tr_originium_stage_3_crystallization_swap_delayed: "$tr_crystallization_regenerative_crystallization_delayed$\n\n$GRANTED_BY$ $UNLOCKED_BY_CRYSTALLIZATION$"
+ tr_originium_stage_3_assimilation_swap: "$tr_assimilation_nucleotide_isolation$"
+ tr_originium_stage_3_assimilation_swap_delayed: "$tr_assimilation_nucleotide_isolation_delayed$\n\n$GRANTED_BY$ $UNLOCKED_BY_ASSIMILATION$"
+
+ originium_stage_three_resonance_tt: "Set ['concept_flexible_tradition_3'] to ['concept_resonance_buzz_elimination']"
+ originium_stage_three_crystallization_tt: "Set ['concept_flexible_tradition_3'] to ['concept_crystallization_regenerative_crystallization']"
+ originium_stage_three_assimilation_tt: "Set ['concept_flexible_tradition_3'] to ['concept_assimilation_nucleotide_isolation']"
+
+ concept_flexible_tradition_3: "$tr_originium_stage_3_swap$"
+ concept_flexible_tradition_3_desc: "$tr_originium_stage_3_swap_tt$"
+ concept_resonance_buzz_elimination: "$tr_resonance_buzz_elimination$"
+ concept_crystallization_regenerative_crystallization: "$tr_crystallization_regenerative_crystallization$"
+ concept_assimilation_nucleotide_isolation: "$tr_assimilation_nucleotide_isolation$"
+
+ resonance_tradition_unlocked: "Adopt tradition tree: ['tradition_category:tradition_resonance']"
+ crystallization_tradition_unlocked: "Adopt tradition tree: ['tradition_category:tradition_crystallization']"
+ assimilation_tradition_unlocked: "Adopt tradition tree: ['tradition_category:tradition_assimilation']"
+
+ CAN_ALTER_POP_APPEARANCE: "Can §Yadjust§! £pop£§Ypopulation appearance§! through species modification."
+ CAN_ASSIMILATE_HIVES: "Can §Yassimilate§! £pop£§Hpopulations§! into or separate from §YHive Minds§!"
+ CAN_DO_ADVANCED_GENE_MODDING: "Allows §Yadding or removing§! §Yadvanced§! organic species traits through species modification technology"
+
+ #Resonance
+ tradition_resonance: "Resonance"
+ tradition_resonance_desc: "$ori_ap.20.a$"
+ tr_resonance_adopt: "$tradition_resonance$ Tradition"
+ tr_resonance_finish: "$tradition_resonance$ Tradition Complete"
+ tr_resonance_finish_tt: "Unlocks ['concept_resonance_authorities']\n[GetGenomicSwap]"
+ tr_resonance_finish_wilderness_tt: "£building£§YBuildings§! and £district£§YDistricts§! provide §YBuild Speed§!: §G+3%§!\n£building£§YBuildings§! and £district£§YDistricts§! provide §YEdict Effect§!: §G+3%§!\nAll £district£['concept_districts'] §Ghave no limits§!"
+
+ tr_resonance_exemplary_frequencies: "Exemplary Frequencies"
+ tr_resonance_exemplary_frequencies_delayed: "We will record the most beautiful frequencies to ensure our superiority."
+ tr_resonance_exemplary_frequencies_tt: "$CAN_ALTER_POP_APPEARANCE$\n$CAN_DO_ADVANCED_GENE_MODDING$\n§YAdvanced§! organic species trait costs reduced"
+
+ tr_resonance_frequency_regeneration: "Frequency Regeneration"
+ tr_resonance_frequency_regeneration_delayed: "We will rejuvenate and revitalize our frequencies."
+ tr_resonance_frequency_regeneration_tt: "$CAN_ASSIMILATE_HIVES$\nCan §Yremove§! §Ybeneficial§! organic species traits through species modification technology\nCan §Yadd§! §Ydetrimental§! organic species traits through species modification technology"
+ tr_resonance_frequency_regeneration_wilderness: "$tr_resonance_frequency_regeneration$"
+ tr_resonance_frequency_regeneration_wilderness_delayed: "Originium's information retention allows us to re-add lost frequencies, changing or healing ourselves."
+ tr_resonance_frequency_regeneration_wilderness_tt: "Allows §Yassimilating§! £pop£§Hpopulations§! as Pre-Sapients\nCan §Yremove§! §Ybeneficial§! organic species traits through species modification technology\nCan §Yadd§! §Ydetrimental§! organic species traits through species modification technology"
+
+ tr_resonance_buzz_elimination_wilderness: "$tr_resonance_buzz_elimination$"
+ tr_resonance_buzz_elimination_wilderness_delayed: "Eradicating discord from our ecosystem will enable greater achievements."
+ tr_resonance_buzz_elimination_wilderness_tt: "§Y$decision_wilderness_expand$§! maximum planet size: §G+5§!"
+
+ tr_resonance_heightened_attributes: "Heightened Attributes"
+ tr_resonance_heightened_attributes_delayed: "We need to enhance our abilities to achieve biological excellence."
+ tr_resonance_heightened_attributes_tt: "£mod_pop_bonus_workforce_mult£$mod_organic_pop_bonus_workforce_mult$:\n$t$—£building£§YMedical Buildings§! per level: §G+$@medical_workforce_mult|0%$§!\n$t$£building£§Y$building_originium_facility$§! produces: §G+$@originium_workforce_mult|0%$§!"
+
+ tr_resonance_buzz_elimination: "Buzz Elimination"
+ tr_resonance_buzz_elimination_delayed: "We must identify and eliminate all discordant sounds."
+ tr_resonance_buzz_elimination_tt: "Allows selecting §YPurification§! policies and species rights"
+ tr_resonance_buzz_elimination_xenophile: "$tr_resonance_buzz_elimination$"
+ tr_resonance_buzz_elimination_xenophile_delayed: "$tr_resonance_buzz_elimination_delayed$"
+
+ has_resonance_buzz_elimination_tradition_tt: "Has §Y$tr_resonance_buzz_elimination$§! tradition"
+
+ tr_resonance_neural_tuning: "Neural Tuning"
+ tr_resonance_neural_tuning_delayed: "Our neural systems must be optimized for better performance."
+
+ council_agenda_agenda_resonance_perfection_name: "Resonance Protocol"
+ council_agenda_agenda_resonance_perfection_desc: "We will embrace the information within Originium."
+
+ agenda_resonance_perfection_unity_effect_tt: "Each £pop£§HOrganic Population§!:$NEW_LINE$—Each §YPositive§! species trait produces §Y$@perfection_protocols_base_reward|0$§! $r_unity$\n(Maximum £unity£§Y25§! per £pop£§H$pop_group_unit$§!):"
+ agenda_resonance_perfection_society_effect_tt: "—Each §YNegative§! species trait produces §Y$@perfection_protocols_base_reward|0$§! $r_society$\n(Maximum £society£§Y25§! per £pop£§H$pop_group_unit$§!):"
+
+ agenda_resonance_perfection_finish: "$council_agenda_agenda_resonance_perfection_name$agenda_ref$"
+ agenda_resonance_perfection_finish_desc: "$council_agenda_agenda_resonance_perfection_desc$"
+
+ concept_resonance_authorities: "Resonance Authority Systems"
+ concept_resonance_authorities_desc: "Empires that fully adopt the Resonance ascension path can adopt Resonance authority systems.\n$NEW_LINE$—['authority:auth_democratic:auth_ori_ap_democratic_resonance']$NEW_LINE$—['authority:auth_oligarchic:auth_ori_ap_oligarchic_resonance']$NEW_LINE$—['authority:auth_dictatorial:auth_ori_ap_dictatorial_resonance']$NEW_LINE$—['authority:auth_imperial:auth_ori_ap_imperial_resonance']$NEW_LINE$—['authority:auth_corporate:auth_ori_ap_corporate_resonance']$NEW_LINE$—['authority:auth_hive_mind:auth_ori_ap_hive_resonance']"
+
+ #crystallization
+ tradition_crystallization: "Crystallization"
+ tradition_crystallization_desc: "$ori_ap.20.b$"
+ tr_crystallization_adopt: "$tradition_crystallization$ Tradition"
+ tr_crystallization_adopt_tt: "$improves_crystallize_vats_tt$"
+ tr_crystallization_adopt_clone_army_tt: "$tr_crystallization_adopt_tt$\n£pop£§Y$clone_soldier$ populations§! maintained by §Y$building_crystallize_vats$§!: §G+$@clones_sustained_low|0$§!"
+
+ tr_crystallization_finish: "$tradition_crystallization$ Tradition Complete"
+ tr_crystallization_finish_tt: "Unlocks ['concept_crystallization_authorities']\n£building£§YCapital Buildings§! per level provide £building£$mod_building_crystallize_vats_max$: §G+1§!"
+ tr_crystallization_finish_clone_army_tt: "$tr_crystallization_finish_tt$\n£pop£§Y$clone_soldier$ populations§! maintained by §Y$building_crystallize_vats$§!: §G+$@clones_sustained_low|0$§!"
+
+ tr_crystallization_crystallized_growth: "Crystallized Growth"
+ tr_crystallization_crystallized_growth_delayed: "Our population will grow through advanced crystallization technology."
+ tr_crystallization_crystallized_growth_tt: "$crystallization_unlock_level_1_tt$"
+ tr_crystallization_crystallized_growth_clone_army: "$tr_crystallization_crystallized_growth$"
+ tr_crystallization_crystallized_growth_clone_army_delayed: "$tr_crystallization_crystallized_growth_delayed$"
+ tr_crystallization_crystallized_growth_clone_army_tt: "$crystallization_unlock_level_1_tt$\n['building:building_originium_facility', $building_originium_facility_plural$] maintain £pop£§Y$clone_soldier$ populations§!: §G+$@clones_sustained_basic|0$§!"
+
+ tr_crystallization_evolutionary_extrapolation: "Evolutionary Extrapolation"
+ tr_crystallization_evolutionary_extrapolation_delayed: "Clever use of evolutionary data will perfect our crystallization technology."
+ tr_crystallization_evolutionary_extrapolation_tt: "[GetGenomicSwap]\n$CAN_ASSIMILATE_HIVES$"
+
+ tr_crystallization_somatic_synthesization: "Somatic Synthesization"
+ tr_crystallization_somatic_synthesization_delayed: "Somatic synthesis technology can be used to replicate ideal specimens."
+ tr_crystallization_somatic_synthesization_tt: "Unlocks Army: §Y$perfected_clone_army$§!\nCan §Yremove§! §YPopulation Growth§! organic species traits through species modification\n$CAN_DO_ADVANCED_GENE_MODDING$\n$CAN_ALTER_POP_APPEARANCE$"
+ tr_crystallization_somatic_synthesization_clone_army: "Crystalline Synthesis"
+ tr_crystallization_somatic_synthesization_clone_army_tt: "Unlocks species modification: §Y$clone_soldier$§!\n$tr_crystallization_somatic_synthesization_tt$"
+
+ tr_crystallization_artificial_population: "Artificial Population"
+ tr_crystallization_artificial_population_delayed: "We can use crystallization to obtain controlled, efficient populations."
+ tr_crystallization_artificial_population_tt: "$tr_resonance_heightened_attributes_tt$\n£mod_planet_crime_add£$MOD_PLANET_CRIME_ADD$ per $pop_group_unit$ [GetGenomicJobsPluralWithIcon]: §G$@originium_crystallization_crime|0$§!"
+ tr_crystallization_artificial_population_clone_army: "$tr_crystallization_artificial_population$"
+ tr_crystallization_artificial_population_clone_army_delayed: "$tr_crystallization_artificial_population_delayed$"
+ tr_crystallization_artificial_population_clone_army_tt: "$tr_crystallization_artificial_population_tt$\n£pop£§Y$clone_soldier$ populations§! maintained per £building£§YMedical Building§! level: §G+$@clones_sustained_low|0$§!"
+
+ tr_crystallization_regenerative_crystallization: "Crystalline Stabilization"
+ tr_crystallization_regenerative_crystallization_delayed: "Through biochemical enhancement, we can ensure crystalline stability and resilience.[GetBiochemicalComposureSwapTT]"
+ tr_crystallization_regenerative_crystallization_tt: "$ENABLES_CRYSTALLIZED_CLONES$\n$LEADERS_GAIN_CRYSTALLIZED_CLONES$"
+ tr_crystallization_regenerative_crystallization_clone_army: "$tr_crystallization_regenerative_crystallization$"
+ tr_crystallization_regenerative_crystallization_clone_army_delayed: "$tr_crystallization_regenerative_crystallization_delayed$"
+ tr_crystallization_regenerative_crystallization_clones: "Regenerative Crystallization"
+ tr_crystallization_regenerative_crystallization_clones_delayed: "Through biochemical enhancement, we can ensure crystalline stability and resilience."
+ tr_crystallization_regenerative_crystallization_clones_tt: "Leaders initially have the §Y$leader_trait_has_crystallized_clone$§! trait by default\nLeaders can periodically regain the §Y$leader_trait_has_crystallized_clone$§! trait\n§Y$leader_trait_has_crystallized_clone$§! trait provides additional effects"
+ tr_crystallization_regenerative_crystallization_clones_clone_army: "$tr_crystallization_regenerative_crystallization_clones$"
+ tr_crystallization_regenerative_crystallization_clones_clone_army_delayed: "Through biochemical enhancement, we can ensure crystalline stability and resilience."
+ tr_crystallization_regenerative_crystallization_swap_tt: "\n\n§WIf adopting §H$concept_crystallization_authorities$§! then replaced by ['concept_crystallization_regenerative_crystallization_clones'].§!"
+
+ crystallization_regenerative_crystallization_tradition_swap_tt: "['concept_crystallization_regenerative_crystallization'] is replaced by ['concept_crystallization_regenerative_crystallization_clones']"
+
+ concept_crystallization_regenerative_crystallization_clones: "$tr_crystallization_regenerative_crystallization_clones$"
+
+ ENABLES_CRYSTALLIZED_CLONES: "£leader£Leaders can have ['concept_crystallized_clones']"
+ LEADERS_GAIN_CRYSTALLIZED_CLONES: "All available leaders gain §Y$leader_trait_has_crystallized_clone$§! trait"
+
+ concept_crystallized_clones: "$leader_trait_has_crystallized_clone_plural$"
+ concept_crystallized_clones_desc: "—New leaders may initially have §Y$leader_trait_has_crystallized_clone$§! trait$NEW_LINE$—Leaders may gain §Y$leader_trait_has_crystallized_clone$§! trait when leveling up$NEW_LINE$—Leaders with §Y$leader_trait_has_crystallized_clone$§! trait can avoid death"
+
+ leader_trait_has_crystallized_clone: "Backup Clone"
+ leader_trait_has_crystallized_clone_plural: "Backup Clones"
+ leader_trait_has_crystallized_clone_desc: "[GetHasBackupCloneDesc]"
+ leader_trait_has_crystallized_clone_default_desc: "This leader has a crystalline clone of themselves, normally stored in preservation facilities with regular memory transfers."
+ leader_trait_has_crystallized_clone_improved_desc: "This leader works alongside a crystalline clone of themselves."
+ leader_trait_has_crystallized_clone_tt: "§YLeader Death§!§E:§! $TABBED_NEW_LINE$Replaced by [GetAAnBackupCloneLower] §Y$leader_trait_crystallized_clone$§!"
+
+ leader_trait_crystallized_clone: "[GetBackupCloneName]"
+ leader_trait_crystallized_clone_plural: "[GetBackupCloneNamePlural]"
+ leader_trait_crystallized_clone_default: "Crystalline Leader"
+ leader_trait_crystallized_clone_default_plural: "Crystalline Leaders"
+ leader_trait_crystallized_clone_imperial: "Imperial Clone"
+ leader_trait_crystallized_clone_imperial_plural: "Imperial Clones"
+ leader_trait_crystallized_clone_desc: "[GetBackupCloneDesc]"
+ leader_trait_crystallized_clone_default_desc: "This leader is a crystalline clone of a recently deceased leader, suffering from [GetDegradationLevel] degradation."
+ leader_trait_crystallized_clone_imperial_desc: "This clone ensures the continuation of the imperial genome."
+
+ crystallized_clone_0_degradation: "minor"
+ crystallized_clone_1_degradation: "mild"
+ crystallized_clone_2_degradation: "moderate"
+ crystallized_clone_3_degradation: "severe"
+
+ crystallized_clone_background: "§Y[Root.GetName]§! is a §Y$leader_trait_crystallized_clone$§! from the §Y[Root.GetBackgroundPlanet]§![Root.GetHomeWorldBiome]."
+
+ concept_crystallized_clone_leader_degradation: "Crystalline Leader Degradation"
+ concept_crystallized_clone_leader_degradation_desc: "$concept_clone_leader_degradation_flavor$DOUBLE_NEW_LINE$concept_clone_leader_degradation_effect$"
+ concept_crystallized_clone_leader_degradation_flavor: "Each crystallization comes with risks of cellular degradation and cognitive decline."
+ concept_crystallized_clone_leader_degradation_effect: "Degradation causes the following penalties:$NEW_LINE$—£mod_leader_lifespan_mult£$MOD_LEADER_LIFESPAN_MULT$$NEW_LINE$—£mod_leader_species_exp_gain£$MOD_LEADER_SPECIES_EXP_GAIN$$NEW_LINE$—£mod_ruler_skill_add£$MOD_LEADER_SKILL_ADD$"
+
+ perfected_crystallized_clone_army: "Perfected Crystalline Army"
+ perfected_crystallized_clone_army_plural: "Perfected Crystalline Armies"
+ perfected_crystallized_clone_army_desc: "Units specialized for planetary assault. Reward pathways, habits, and epigenetic training give these crystalline clones combat instincts comparable to soldiers with decades of experience."
+
+ council_agenda_agenda_crystallization_replication_name: "Crystallization Initiative"
+ council_agenda_agenda_crystallization_replication_desc: "We should provide adequate resource supply for crystalline precipitation to ensure population enhancement."
+
+ agenda_crystallization_replication_finish: "$council_agenda_agenda_crystallization_replication_name$agenda_ref$"
+ agenda_crystallization_replication_finish_desc: "$council_agenda_agenda_crystallization_replication_desc$"
+
+ concept_crystallization_authorities: "Crystallization Authority Systems"
+ concept_crystallization_authorities_desc: "Empires that fully adopt the Crystallization ascension path can adopt Crystallization authority systems.\n$NEW_LINE$—['authority:auth_democratic:auth_ori_ap_democratic_crystallization']$NEW_LINE$—['authority:auth_oligarchic:auth_ori_ap_oligarchic_crystallization']$NEW_LINE$—['authority:auth_dictatorial:auth_ori_ap_dictatorial_crystallization']$NEW_LINE$—['authority:auth_imperial:auth_ori_ap_imperial_crystallization']$NEW_LINE$—['authority:auth_corporate:auth_ori_ap_corporate_crystallization']$NEW_LINE$—['authority:auth_hive_mind:auth_ori_ap_hive_crystallization']"
+
+ concept_prophecy: "$originium_resonance_situation$"
+ concept_prophecy_desc: "Unlock §Y$ap_originium_resonance$§! ascension perk to begin the §Y$originium_resonance_situation$§! situation."
+
+ #assimilation
+ tradition_assimilation: "Assimilation"
+ tradition_assimilation_desc: "$ori_ap.20.c$"
+ tr_assimilation_adopt: "$tradition_assimilation$ Tradition"
+ tr_ori_ascension_adopt_tt: "§YFounder Species§! gains ['trait:trait_auto_mod_originium_II'] species trait"
+ tr_assimilation_finish: "$tradition_assimilation$ Tradition Complete"
+ tr_assimilation_finish_tt: "Unlocks [GetAssimilationAuthorities]\n[GetGenomicSwap]"
+
+ tr_assimilation_environmental_integration: "Environmental Integration"
+ tr_assimilation_environmental_integration_delayed: "We will adapt our genetic structure to thrive in different environments."
+ tr_assimilation_environmental_integration_tt: "[GetEnvironmentalIntegrationEffects]"
+ tr_assimilation_environmental_integration_1_tt: "§YFounder Species§! current habitability trait replaced by ['trait:trait_auto_hab_preference']\n$EXCEED_HABITABILITY_CAP_TT$"
+ tr_assimilation_environmental_integration_2_tt: "$tr_assimilation_environmental_integration_1_tt$\n§Y$council_agenda_agenda_assimilation_divergence_name$§! council agenda also grants §Y$trait_auto_hab_preference$§! habitability trait"
+
+ EXCEED_HABITABILITY_CAP_TT: "Species with §Y$trait_auto_hab_preference$§! trait can reach §G200%§! habitability, and for every §G10%§! above §G100%§! provides:$TABBED_NEW_LINE$—$MOD_POP_BONUS_WORKFORCE_MULT$: §G$@auto_adapted_production|2%$§!$TABBED_NEW_LINE$—$MOD_POP_HOUSING_USAGE_MULT$: §G$@auto_adapted_housing|2%$§!$TABBED_NEW_LINE$—$MOD_POP_AMENITIES_USAGE_MULT$: §G$@auto_adapted_amenities|%2$§!"
+
+ tr_assimilation_planned_polymorphism: "Planned Polymorphism"
+ tr_assimilation_planned_polymorphism_delayed: "Strategic induction of polymorphism will optimize our genetic traits."
+ tr_assimilation_planned_polymorphism_tt: "['concept_automodding_originium', §3Adaptive Originium Arts§!] effects §G+$@originium_base_output|0%$§!\n$CAN_ASSIMILATE_HIVES$"
+
+ tr_assimilation_somatic_subversiveness: "Somatic Subversion"
+ tr_assimilation_somatic_subversiveness_delayed: "Using somatic assimilation will enhance our adaptability and resistance."
+ tr_assimilation_somatic_subversiveness_tt: "$tr_resonance_heightened_attributes_tt$"
+
+ tr_assimilation_nucleotide_isolation: "Nucleotide Isolation"
+ tr_assimilation_nucleotide_isolation_delayed: "We will perfect our genetic code by isolating and enhancing beneficial mutations."
+ tr_assimilation_nucleotide_isolation_tt: "Unlocks ['trait:trait_bioadaptability'], ['trait:trait_social_pheromones'], and ['trait:trait_limited_regeneration'] traits for species modification\nUnlocks ['concept_leviathan_traits'] for species modification"
+
+ has_assimilation_nucleotide_isolation_tradition_tt: "Has §Y$tr_assimilation_nucleotide_isolation$§! tradition"
+
+ tr_assimilation_unnatural_selection: "Unnatural Selection"
+ tr_assimilation_unnatural_selection_delayed: "We have the ability to guide our evolutionary path through directed assimilation."
+ tr_assimilation_unnatural_selection_tt: "Allows ignoring §YPhenotype Restrictions§! when adding or removing ['concept_phenotype_traits'] through species modification\nAllows adding §YDetrimental§! traits through species modification\n$CAN_DO_ADVANCED_GENE_MODDING$\n$CAN_ALTER_POP_APPEARANCE$"
+
+ council_agenda_agenda_assimilation_divergence_name: "Assimilation Directive"
+ council_agenda_agenda_assimilation_divergence_desc: "Introduction of super-adaptive nucleotides can make evolutionary changes take effect in real time."
+
+ agenda_assimilation_divergence_tt: "All organic species gain ['trait:trait_auto_mod_originium_II'] species trait"
+ agenda_assimilation_divergence_2_tt: "All organic species gain ['trait:trait_auto_hab_preference'] species trait"
+ agenda_assimilation_divergence_finish: "$council_agenda_agenda_assimilation_divergence_name$agenda_ref$"
+ agenda_assimilation_divergence_finish_desc: "$council_agenda_agenda_assimilation_divergence_desc$"
+
+ trait_adaptive_assimilations: "Adaptive Assimilations"
+ trait_adaptive_assimilations_desc: "§LBy introducing super-adaptive nucleotides into this species' genetic structure, they can make evolutionary changes take effect in real time.§!"
+ automodding_trait_adaptive_assimilations_tt: "$automodding_trait_tooltip_all$\n\n§Y$trait_adaptive_assimilations$§! can select modifications from ['concept_automodding_adaptive']"
+
+ concept_automodding_adaptive: "$trait_adaptive_assimilations$ Auto-modification Trait List"
+ concept_automodding_adaptive_desc: "—['trait:trait_adaptive_minerals']\n—['trait:trait_adaptive_energy']\n—['trait:trait_adaptive_food']\n—['trait:trait_adaptive_research']\n—['trait:trait_adaptive_unity']\n—['trait:trait_adaptive_forge']\n—['trait:trait_adaptive_trade']\n—['trait:trait_adaptive_amenities']"
+
+ trait_adaptive_minerals: "Adaptive Claws"
+ trait_adaptive_minerals_desc: "$trait_malleable_minerals_desc$"
+ trait_adaptive_energy: "Adaptive Insulation"
+ trait_adaptive_energy_desc: "$trait_malleable_energy_desc$"
+ trait_adaptive_food: "Adaptive Limbs"
+ trait_adaptive_food_desc: "$trait_malleable_food_desc$"
+ trait_adaptive_research: "Adaptive Cortex"
+ trait_adaptive_research_desc: "$trait_malleable_research_desc$"
+ trait_adaptive_unity: "Adaptive Sensory Organs"
+ trait_adaptive_unity_desc: "$trait_malleable_unity_desc$"
+ trait_adaptive_forge: "Adaptive Calluses"
+ trait_adaptive_forge_desc: "$trait_malleable_forge_desc$"
+ trait_adaptive_trade: "Adaptive Pheromones"
+ trait_adaptive_trade_desc: "$trait_malleable_trade_desc$"
+ trait_adaptive_amenities: "Adaptive Resonance"
+ trait_adaptive_amenities_desc: "$trait_malleable_ameneties_desc$"
+
+ concept_assimilation_authorities: "Assimilation Authority Systems"
+ concept_assimilation_authorities_desc: "Empires that fully adopt the Assimilation ascension path can adopt Assimilation authority systems.\n$NEW_LINE$—['authority:auth_democratic:auth_ori_ap_democratic_assimilation']$NEW_LINE$—['authority:auth_oligarchic:auth_ori_ap_oligarchic_assimilation']$NEW_LINE$—['authority:auth_dictatorial:auth_ori_ap_dictatorial_assimilation']$NEW_LINE$—['authority:auth_imperial:auth_ori_ap_imperial_assimilation']$NEW_LINE$—['authority:auth_corporate:auth_ori_ap_corporate_assimilation']$NEW_LINE$—['authority:auth_hive_mind:auth_ori_ap_hive_assimilation']"
+
+ concept_leviathan_traits: "Leviathan Traits"
+ concept_leviathan_traits_desc: "Leviathan traits are traits obtained after defeating leviathans encountered in the galaxy and harvesting their genetic material. Including:\n—['trait:trait_drake_scaled']\n—['trait:trait_voidling']\n—['trait:trait_tiyanki']"
+
+ concept_phenotype_traits: "Phenotype Traits"
+ concept_phenotype_traits_desc: "Phenotype traits are species traits specific to certain species appearances. Categorized as follows:$NEW_LINE$—['concept_humanoid_phenotype_traits']$NEW_LINE$—['concept_mammalian_phenotype_traits']$NEW_LINE$—['concept_reptilian_phenotype_traits']$NEW_LINE$—['concept_arthropoid_phenotype_traits']$NEW_LINE$—['concept_avian_phenotype_traits']$NEW_LINE$—['concept_molluscoid_phenotype_traits']$NEW_LINE$—['concept_plantoid_phenotype_traits']$NEW_LINE$—['concept_fungoid_phenotype_traits']$NEW_LINE$—['concept_lithoid_phenotype_traits']$NEW_LINE$—['concept_necroid_phenotype_traits']$NEW_LINE$—['concept_aquatic_phenotype_traits']$NEW_LINE$—['concept_toxoid_phenotype_traits']"
+
+ concept_humanoid_phenotype_traits: "Humanoid Species Traits"
+ concept_humanoid_phenotype_traits_desc: "—['trait:trait_familial']\n—['trait:trait_genetic_memory']\n—['trait:trait_nascent_stage']"
+
+ concept_mammalian_phenotype_traits: "Mammalian Species Traits"
+ concept_mammalian_phenotype_traits_desc: "—['trait:trait_familial']\n—['trait:trait_genetic_memory']\n—['trait:trait_seasonal_dormancy']\n—['trait:trait_nascent_stage']"
+
+ concept_reptilian_phenotype_traits: "Reptilian Species Traits"
+ concept_reptilian_phenotype_traits_desc: "—['trait:trait_camouflage']\n—['trait:trait_chromalogs']\n—['trait:trait_egg_laying']\n—['trait:trait_seasonal_dormancy']\n—['trait:trait_nascent_stage']"
+
+ concept_arthropoid_phenotype_traits: "Arthropod Species Traits"
+ concept_arthropoid_phenotype_traits_desc: "—['trait:trait_camouflage']\n—['trait:trait_chromalogs']\n—['trait:trait_flight']\n—['trait:trait_spatial_mastery']\n—['trait:trait_nascent_stage']"
+
+ concept_avian_phenotype_traits: "Avian Species Traits"
+ concept_avian_phenotype_traits_desc: "—['trait:trait_egg_laying']\n—['trait:trait_familial']\n—['trait:trait_flight']\n—['trait:trait_spatial_mastery']\n—['trait:trait_hollow_bones']"
+
+ concept_molluscoid_phenotype_traits: "Molluscoid Species Traits"
+ concept_molluscoid_phenotype_traits_desc: "—['trait:trait_shelled']\n—['trait:trait_spare_organs']\n—['trait:trait_permeable_skin']"
+
+ concept_plantoid_phenotype_traits: "Plantoid Species Traits"
+ concept_plantoid_phenotype_traits_desc: "—['trait:trait_plantoid_budding']\n—['trait:trait_invasive']\n—['trait:trait_plantoid_phototrophic']\n—['trait:trait_plantoid_radiotrophic']\n—['trait:trait_rooted']"
+
+ concept_fungoid_phenotype_traits: "Fungoid Species Traits"
+ concept_fungoid_phenotype_traits_desc: "—['trait:trait_plantoid_budding']\n—['trait:trait_invasive']\n—['trait:trait_plantoid_phototrophic']\n—['trait:trait_plantoid_radiotrophic']\n—['trait:trait_rooted']"
+
+ concept_lithoid_phenotype_traits: "Lithoid Species Traits"
+ concept_lithoid_phenotype_traits_desc: "—['trait:trait_lithoid_budding']\n—['trait:trait_lithoid_gaseous_byproducts']\n—['trait:trait_plantoid_radiotrophic']\n—['trait:trait_lithoid_scintillating']\n—['trait:trait_lithoid_volatile_excretions']\n—['trait:trait_brittle']"
+
+ concept_necroid_phenotype_traits: "Necroid Species Traits"
+ concept_necroid_phenotype_traits_desc: "—['trait:trait_acidic_vascularity']\n—['trait:trait_genetic_memory']\n—['trait:trait_shelled']\n—['trait:trait_spare_organs']\n—['trait:trait_brittle']"
+
+ concept_aquatic_phenotype_traits: "Aquatic Species Traits"
+ concept_aquatic_phenotype_traits_desc: "—['trait:trait_camouflage']\n—['trait:trait_chromalogs']\n—['trait:trait_egg_laying']\n—['trait:trait_permeable_skin']"
+
+ concept_toxoid_phenotype_traits: "Toxoid Species Traits"
+ concept_toxoid_phenotype_traits_desc: "—['trait:trait_acidic_vascularity']\n—['trait:trait_spare_organs']\n—['trait:trait_hollow_bones']"
+
+ concept_automodding_habitability: "Auto-modification Habitability Preference Traits"
+ concept_automodding_habitability_plural: "Auto-modification Habitability Preference Traits"
+ concept_automodding_habitability_desc: "—Automatically selects modifications from a predetermined trait list that match the current planet.\n—Number of times £pop£§HPopulations§! with §Y$concept_automodding_traits$§! are checked per colony per month: §G100§!\n—Population growth and assembly buildings will increase the number of monthly auto-modified £pop£§HPopulations§!"
+
+ automodding_habitability_tooltip_all: "['concept_automodding_habitability', $concept_automodding_habitability_plural$] will automatically adjust based on the £planet£§YPlanet Type§! where £pop£§HPopulations§! currently live"
+
+ trait_auto_hab_preference: "Mutagenic Habitability"
+ trait_auto_hab_preference_tt_mod: "Arid Climate Habitability: §Y$@auto_base|0%$§!\n$t$—Wet Climate Habitability: §Y$@auto_base|0%$§!\n$t$—Cold Climate Habitability: §Y$@auto_base|0%$§!\n$t$—$pc_nuked$ Habitability: §Y$@auto_base|0%$§!"
+ trait_auto_hab_preference_tt_desc: "$automodding_habitability_tooltip_all$\n\n§Y$trait_auto_hab_preference$§! can select modifications from ['concept_automodding_hab_preference']."
+ trait_auto_hab_preference_desc: "§LClimate preferences are usually determined by billions of years of evolution, design, and artificial genetic manipulation, but in this case, retroviral drugs can provide responsive environmental adaptation.§!"
+
+ concept_automodding_hab_preference: "$trait_auto_hab_preference$ Trait List"
+ concept_automodding_hab_preference_desc: "Standard:\n—['trait:trait_auto_dry_preference']\n—['trait:trait_auto_wet_preference']\n—['trait:trait_auto_cold_preference']\n\nSpecial:\n—['trait:trait_auto_pc_nuked_preference']\n—['trait:trait_auto_pc_gaia_preference']\n—['trait:trait_auto_pc_hive_preference']\n\nArtificial:\n—['trait:trait_auto_pc_city_preference']\n—['trait:trait_auto_pc_relic_preference']\n—['trait:trait_auto_pc_habitat_preference']\n—['trait:trait_auto_pc_ringworld_habitable_preference']\n—['trait:trait_auto_pc_cosmogenesis_world_preference']"
+
+ auto_base_tt: "§G$@auto_base|0%$§!"
+ auto_ideal_bonus_tt: "§G$@auto_ideal_bonus|0%$§!"
+ auto_base_bonus_sum_tt: "§G$@auto_base_bonus_sum|0%$§!"
+ auto_base_penalty_sum_tt: "§R$@auto_base_penalty_sum|0%$§!"
+
+ trait_auto_wet_preference: "Wet Climate Assimilation"
+ trait_auto_wet_preference_tt: "Arid Climate Habitability: $auto_base_penalty_sum_tt$\n$t$—Wet Climate Habitability: $auto_base_bonus_sum_tt$\n$t$—Cold Climate Habitability: $auto_base_penalty_sum_tt$\n$t$—$pc_nuked$ Habitability: $auto_base_penalty_sum_tt$"
+ trait_auto_wet_preference_desc: "$trait_auto_hab_preference_desc$"
+
+ trait_auto_cold_preference: "Cold Climate Assimilation"
+ trait_auto_cold_preference_tt: "Arid Climate Habitability: $auto_base_penalty_sum_tt$\n$t$—Wet Climate Habitability: $auto_base_penalty_sum_tt$\n$t$—Cold Climate Habitability: $auto_base_bonus_sum_tt$\n$t$—$pc_nuked$ Habitability: $auto_base_penalty_sum_tt$"
+ trait_auto_cold_preference_desc: "$trait_auto_hab_preference_desc$"
+
+ trait_auto_dry_preference: "Arid Climate Assimilation"
+ trait_auto_dry_preference_tt: "Arid Climate Habitability: $auto_base_bonus_sum_tt$\n$t$—Wet Climate Habitability: $auto_base_penalty_sum_tt$\n$t$—Cold Climate Habitability: $auto_base_penalty_sum_tt$\n$t$—$pc_nuked$ Habitability: $auto_base_penalty_sum_tt$"
+ trait_auto_dry_preference_desc: "$trait_auto_hab_preference_desc$"
+
+ trait_auto_pc_habitat_preference: "$pc_habitat$ Assimilation"
+ trait_auto_pc_habitat_preference_tt: "$pc_habitat$ Habitability: $auto_base_tt$\n$t$—$IDEAL_PREFERENCE_TT$"
+ trait_auto_pc_habitat_preference_desc: "$trait_auto_hab_preference_desc$"
+
+ trait_auto_pc_city_preference: "$pc_city$ Assimilation"
+ trait_auto_pc_city_preference_tt: "$pc_city$ Habitability: $auto_ideal_bonus_tt$\n$t$—$IDEAL_PREFERENCE_TT$"
+ trait_auto_pc_city_preference_desc: "$trait_auto_hab_preference_desc$"
+
+ trait_auto_pc_relic_preference: "$pc_relic$ Assimilation"
+ trait_auto_pc_relic_preference_tt: "$pc_relic$ Habitability: $auto_ideal_bonus_tt$\n$t$—$IDEAL_PREFERENCE_TT$"
+ trait_auto_pc_relic_preference_desc: "$trait_auto_hab_preference_desc$"
+
+ trait_auto_pc_hive_preference: "$pc_hive$ Assimilation"
+ trait_auto_pc_hive_preference_tt: "$pc_hive$ Habitability: $auto_ideal_bonus_tt$\n$t$—$IDEAL_PREFERENCE_TT$"
+ trait_auto_pc_hive_preference_desc: "$trait_auto_hab_preference_desc$"
+
+ trait_auto_pc_ringworld_habitable_preference: "Ringworld Assimilation"
+ trait_auto_pc_ringworld_habitable_preference_tt: "Ringworld Habitability: $auto_ideal_bonus_tt$\n$t$—$IDEAL_PREFERENCE_TT$"
+ trait_auto_pc_ringworld_habitable_preference_desc: "$trait_auto_hab_preference_desc$"
+
+ trait_auto_pc_cosmogenesis_world_preference: "$pc_cosmogenesis_world$ Assimilation"
+ trait_auto_pc_cosmogenesis_world_preference_tt: "$pc_cosmogenesis_world$ Habitability: $auto_ideal_bonus_tt$\n$t$—$IDEAL_PREFERENCE_TT$"
+ trait_auto_pc_cosmogenesis_world_preference_desc: "$trait_auto_hab_preference_desc$"
+
+ #Advanced Authorities
+ organic_leaders_have_trade_upkeep: "£leader£§YOrganic Leaders§! have $r_unity$ upkeep replaced with $r_trade$ upkeep"
+
+ #Resonance
+ plus_minus_icon: "£plus_minus£"
+ minus_plus_icon: "£minus_plus£"
+ pop_effects_from_resonance_header: "['concept_originium_resonated'] effects on £pop£populations:"
+ leaders_gain_genetic_resonance_trait: "£leader£Organic leaders gain §Y$trait_leader_genetic_purist$§! trait"
+ genetic_purist_effects_header: "['concept_originium_resonated'] effects on £leader£§Y$trait_leader_genetic_purist$§!:"
+ authority_grants_genetic_purist_tt: "$leaders_gain_genetic_resonance_trait$NEW_LINE$genetic_purist_effects_header$"
+
+ concept_originium_resonated: "Originium Resonated"
+ concept_originium_resonated_desc: "Governments that have adopted ['tradition_category:tradition_resonance'] will proportionally apply effects and modifiers to £pop£§HOrganic Populations§! and £leader£§HLeaders§!.$TABBED_NEW_LINE$—Scales with trait points spent on §GBeneficial§! species traits.$TABBED_NEW_LINE$—Scales down with trait points spent on §RDetrimental§! species traits."
+
+ trait_leader_genetic_purist: "Genetic Resonance Advocate"
+ trait_leader_genetic_purist_desc: "This leader's work is guided by unwavering genetic resonance beliefs, showing no tolerance for any form of imperfection."
+
+ #Authority Systems
+ auth_ori_ap_democratic_resonance: "Harmonic Republic"
+ auth_ori_ap_democratic_resonance_tt: "$pop_effects_from_resonance_header$$TABBED_NEW_LINE$—£mod_pop_happiness£$MOD_POP_HAPPINESS$：$plus_minus_icon$§Y$@resonance_traits_happiness|1%$§!$DOUBLE_NEW_LINE$$authority_grants_genetic_purist_tt$$TABBED_NEW_LINE$—$mod_leaders_upkeep_mult$$minus_plus_icon$§Y5.0%§!$TABBED_NEW_LINE$—$MOD_LEADER_SPECIES_EXP_GAIN$$plus_minus_icon$§Y5.0%§!"
+ auth_ori_ap_democratic_resonance_desc: "Each citizen's will weaves together like musical notes into a grand symphony. Under this system, individual voices are amplified through sophisticated resonance mechanisms, forming a harmonious unified collective will. Democracy is no longer simple majority rule, but harmony achieved by tuning each soul's frequency for true harmonic governance."
+
+ auth_ori_ap_oligarchic_resonance: "Tuning Council"
+ auth_ori_ap_oligarchic_resonance_tt: "$eugenic_political_power_effects$"
+ auth_ori_ap_oligarchic_resonance_desc: "Power distribution is like precise instrument tuning—only elites naturally gifted with perfect pitch perception can serve as tuning masters. They are not autocratic rulers, but principal conductors of society's grand orchestra, ensuring every note sounds at the right moment."
+
+ auth_ori_ap_dictatorial_resonance: "Frequency Tribunal"
+ auth_ori_ap_dictatorial_resonance_tt: "$pop_effects_from_resonance_header$TABBED_NEW_LINE$£society£Society Research per $pop_group_unit$ £pop£population: $plus_minus_icon$§Y$@resonance_traits_resource$§!$DOUBLE_NEW_LINE$authority_grants_genetic_purist_tt$TABBED_NEW_LINE$—Planetary $MOD_PLANET_CRIME_ADD$: $minus_plus_icon$§Y5.0§!$TABBED_NEW_LINE$—Sector $MOD_PLANET_CRIME_ADD$: $minus_plus_icon$§Y2.5§!$TABBED_NEW_LINE$—Planetary $MOD_PLANET_STABILITY_ADD$: $plus_minus_icon$§Y5.0§!$TABBED_NEW_LINE$—Sector $MOD_PLANET_STABILITY_ADD$: $plus_minus_icon$§Y2.5§!"
+ auth_ori_ap_dictatorial_resonance_desc: "Justice spreads like sound waves—silent yet omnipresent. The government monitors each individual's life frequency, eliminating discordant notes before they appear. This predictive governance ensures society always plays perfect harmony, with any noise precisely eliminated at the germinal stage."
+
+ auth_ori_ap_imperial_resonance: "Celestial Dynasty"
+ auth_ori_ap_imperial_resonance_tt: "['concept_originium_resonated'] effects on £leader£§Y$imperial_ruler$§! and §YHeirs§!:$TABBED_NEW_LINE$—$MOD_LEADER_SKILL_ADD$: $plus_minus_icon$§Y$@resonance_traits_imperial_level|2$§!$DOUBLE_NEW_LINE$Our §Y[Ruler.GetTitle]'s species§! £leader£leaders gain §Y$imperial_bloodline$§! trait\n['concept_originium_resonated'] effects on £leader£§YImperial Bloodline§!:$TABBED_NEW_LINE$—$MOD_LEADER_LIFESPAN_MULT$: $plus_minus_icon$§Y$@resonance_traits_imperial_bloodline|1%$§!$TABBED_NEW_LINE$—$MOD_LEADER_SPECIES_EXP_GAIN$: $plus_minus_icon$§Y$@resonance_traits_leader_xp|1%$§!"
+ auth_ori_ap_imperial_resonance_desc: "The royal bloodline carries the universe's most primal harmonious sound, passed down through generations with the talent to harmonize all things. Each monarch is a divinely chosen conductor, their very life an eternal symphony. Under their guidance, entire civilizations perform like well-trained orchestras, playing grand melodies across the stars."
+
+ auth_ori_ap_corporate_resonance: "Resonant Commercial Consortium"
+ auth_ori_ap_corporate_resonance_tt: "$organic_leaders_have_trade_upkeep$\n\n$pop_effects_from_resonance_header$$TABBED_NEW_LINE$—$r_trade$ output every $pop_group_unit$£pop£ pop produces：$plus_minus_icon$§Y$@resonance_traits_resource$§!$DOUBLE_NEW_LINE$"
+ auth_ori_ap_corporate_resonance_desc: "Commerce is like music—requiring precise rhythm and perfect coordination. This corporate consortium treats market operations as a grand symphonic performance, with each department as an indispensable instrumental section. Through precise frequency control technology, they achieve perfect balance in supply and demand, creating harmonious resonance of profit."
+
+ #Crystallization Authorities
+ auth_ori_ap_democratic_crystallization: "Mirror Parliament"
+ auth_ori_ap_democratic_crystallization_tt: "$ENABLES_CRYSTALLIZED_CLONES$\n§Y$leader_trait_crystallized_clone_default$§! upkeep: §G$@cordant_multiplicity_clone_upkeep|0%$§!\n§Y$leader_trait_crystallized_clone_default_plural$§! suffer ['concept_clone_leader_degradation', degradation] and cannot have §Y$leader_trait_has_crystallized_clone_plural$§!"
+ auth_ori_ap_democratic_crystallization_desc: "Democracy here is no longer limited by single perspective constraints. Through crystallization technology, the same person can simultaneously participate in discussions from multiple angles, each reflection carrying different experiences and insights. This multi-existence democratic form ensures comprehensive decision-making, allowing truth to gradually emerge through countless reflections."
+
+ auth_ori_ap_oligarchic_crystallization: "Eternal Council"
+ auth_ori_ap_oligarchic_crystallization_tt: "$ENABLES_CRYSTALLIZED_CLONES$\n§Y$leader_trait_has_crystallized_clone$§! trait provides additional effects for council members\n§Y$leader_trait_crystallized_clone_default_plural$§! suffer ['concept_clone_leader_degradation', degradation] while serving on council.\n"
+ auth_ori_ap_oligarchic_crystallization_desc: "Time's passage cannot shake this council's accumulated wisdom. Each councilor achieves a form of eternity through crystallization technology, their experience and insight transmitted across generations. This isn't simple replication, but crystallization of wisdom, allowing the finest decision-making capabilities to forever guide civilization forward."
+
+ auth_ori_ap_dictatorial_crystallization: "Prism Autocracy"
+ auth_ori_ap_dictatorial_crystallization_tt: "$ENABLES_CRYSTALLIZED_CLONES$\n$AVAILABLE_POLICIES$§Y$policy_homogenous_class$§!"
+ auth_ori_ap_dictatorial_crystallization_desc: "Power is like light through a perfect prism, decomposing into countless identical spectra, each faithfully reflecting the ruler's will. Every level of society is staffed with carefully selected executors who mirror-like perfectly replicate supreme commands, ensuring policy implementation in every corner with absolute thoroughness."
+
+ auth_ori_ap_imperial_crystallization: "Crystal Dynasty"
+ auth_ori_ap_imperial_crystallization_tt: "$ENABLES_CRYSTALLIZED_CLONES$\n§Y$leader_trait_crystallized_clone_imperial$§! trait penalties do not increase"
+ auth_ori_ap_imperial_crystallization_desc: "Imperial power is like the purest crystal, maintaining its brilliance through millennia. Each monarch is a perfect inheritor of their predecessor's wisdom, their memories, experience, and character crystallized in eternal crystal structures. This form of rule transcending death ensures the empire always has the most enlightened leaders."
+
+ auth_ori_ap_corporate_crystallization: "Reflection Holdings"
+ auth_ori_ap_corporate_crystallization_tt: "$organic_leaders_have_trade_upkeep$\n$ENABLES_CRYSTALLIZED_CLONES$\n$mod_planet_jobs_trade_produces_mult$ from £building£['building:building_crystallize_vats']: §G+$@replicatory_association_trade_mult|0%$§!\n£mod_planet_amenities_add£Planetary Amenities from £building£§Y$building_crystallize_vats$§!: §G+$@replicatory_association_amenities_add|0$§!\n$AVAILABLE_POLICIES$§Y$policy_replicatory_association_insurance$§!"
+ auth_ori_ap_corporate_crystallization_desc: "This corporation maximizes talent value through multi-reflection technology, allowing each excellent individual to simultaneously function in different positions. They provide not only traditional commercial services but pioneer new human resource paradigms—one person can simultaneously serve as the core of multiple departments, achieving exponential efficiency gains."
+
+ #Assimilation Authorities
+ auth_ori_ap_democratic_assimilation: "Fusion Autonomy"
+ auth_ori_ap_democratic_assimilation_desc: "This system believes true freedom comes from infinite possibilities. Every citizen has the right to redefine their form of existence, achieving personal ideals by fusing different traits and abilities. Society provides platforms for all voices to be heard, regardless of what form of existence produces that voice."
+
+ auth_ori_ap_oligarchic_assimilation: "Evolutionary Aristocracy"
+ auth_ori_ap_oligarchic_assimilation_desc: "Aristocratic status is not inherited honor, but the result of continuous evolution. Only individuals capable of constant adaptation and evolution can maintain their ruling position. This elite class represents the pinnacle of adaptability, using their existence to prove evolution's power and guide society toward higher developmental levels."
+
+ auth_ori_ap_dictatorial_assimilation: "Catalytic Autocracy"
+ auth_ori_ap_dictatorial_assimilation_desc: "Change is the only truth; stagnation is death. This regime treats continuous transformation as a sign of social health, viewing any force attempting to maintain the status quo as progress's enemy. Rulers play the role of catalysts, accelerating every social metamorphosis, ensuring civilization remains at evolution's forefront."
+ auth_ori_ap_dictatorial_assimilation_tt: "\n[enforcer.GetIcon][enforcer.GetName] reduce £crime£Crime: §G-5§!"
+
+ auth_ori_ap_imperial_assimilation: "Flux Empire"
+ auth_ori_ap_imperial_assimilation_desc: "The empire is like an ever-flowing river, maintaining its essence through constant change. Each monarch embraces unknown possibilities, allowing the empire to find new paths through every crisis. They don't rely on fixed patterns but seek eternal power within flux."
+
+ auth_ori_ap_corporate_assimilation: "Adaptive Consortium"
+ auth_ori_ap_corporate_assimilation_desc: "Markets are like ecosystems—only the most adaptive enterprises survive. This consortium masters the secret of rapid adaptation, quickly adjusting structure and strategy according to any environmental change. They don't defeat opponents through competition but make competition itself meaningless through constant self-transformation."
+ auth_ori_ap_corporate_assimilation_tt: "$organic_leaders_have_trade_upkeep$\n$r_trade$ per $pop_group_unit$ £pop£population from ['trait:trait_spare_organs']: §G+0.10§!"
+
+ #Hive Advanced Authorities
+ auth_ori_ap_hive_resonance: "Harmonic Collective"
+ auth_ori_ap_hive_resonance_desc: "This collective consciousness is like a perfectly tuned instrument, with each individual as an irreplaceable note. Through precise harmonic control, the entire group forms an acoustic system transcending individual intelligence. They need no verbal communication because every thought perfectly synchronizes with collective frequency."
+ auth_ori_ap_hive_resonance_tt: "$pop_effects_from_resonance_header$$TABBED_NEW_LINE$— £unity£$unity$ every $pop_group_unit$£pop£ produces：$plus_minus_icon$§Y$@resonance_traits_resource$§!$DOUBLE_NEW_LINE$"
+
+ auth_ori_ap_hive_crystallization: "Replication Swarm"
+ auth_ori_ap_hive_crystallization_desc: "This group pushes efficiency to theoretical limits. Each individual is a carefully designed standardized product with identical capabilities and response patterns. They function like precision machine parts, performing identical roles in any position. This ultimate standardization creates unprecedented organizational efficiency."
+ auth_ori_ap_hive_crystallization_tt: "$ENABLES_CRYSTALLIZED_CLONES$\n£society£['technology:tech_node_culling_1'] reduces ['concept_clone_leader_degradation', crystalline degradation]"
+
+ auth_ori_ap_hive_assimilation: "Flux Network"
+ auth_ori_ap_hive_assimilation_desc: "This network's power lies in its infinite adaptability. Facing any challenge, the entire group rapidly evolves corresponding solutions. Each node is both information receiver and innovation source. This distributed evolution mechanism ensures the collective always finds optimal survival strategies."
+
+ #Related Policies and Traits
+ policy_replicatory_association_insurance: "Multi-existence Guarantee"
+ policy_replicatory_association_insurance_desc: "Provides multi-existence backup services for core management, ensuring key talent perpetuity."
+
+ replicatory_association_insurance_stellar: "Stellar-class Guarantee"
+ replicatory_association_insurance_stellar_name: "$replicatory_association_insurance_stellar$"
+ replicatory_association_insurance_stellar_desc: "$leader_upkeep_skill_header_energy$§R+$@replicatory_association_insurance_upkeep|0$§!\n§YLeader§! §Y$leader_trait_has_crystallized_clone_plural$§! ['concept_clone_leader_degradation', degradation] is reduced"
+
+ replicatory_association_insurance_platinium: "Platinum-class Guarantee"
+ replicatory_association_insurance_platinium_name: "$replicatory_association_insurance_platinium$"
+ replicatory_association_insurance_platinium_desc: "$councilor_upkeep_skill_header_energy$§R+$@replicatory_association_insurance_upkeep|0$§!\n§YCouncil Members§! §Y$leader_trait_has_crystallized_clone_plural$§! ['concept_clone_leader_degradation', degradation] is reduced"
+
+ replicatory_association_insurance_basic: "Basic-class Guarantee"
+ replicatory_association_insurance_basic_name: "$replicatory_association_insurance_basic$"
+ replicatory_association_insurance_basic_desc: "$ruler_upkeep_skill_header_energy$§R+$@replicatory_association_insurance_upkeep|0$§!\n§YEmpire Ruler§! §Y$leader_trait_has_crystallized_clone_plural$§! suffer ['concept_clone_leader_degradation', degradation]"
+
+ policy_homogenous_class: "Spectral Modulation"
+ policy_homogenous_class_desc: "Through precise spectral modulation technology, optimize ability configuration for different functional personnel."
+
+ homogenous_class_scientists: "Research Spectrum"
+ homogenous_class_scientists_name: "$homogenous_class_scientists$"
+ homogenous_class_scientists_desc: "§Y$leader_trait_has_crystallized_clone_plural$§! effects on $scientist_plural_with_icon$:$TABBED_NEW_LINE$—$society_upkeep_skill_header$§R+$@homogenous_clone_upkeep|0$§!$TABBED_NEW_LINE$—Reduced ['concept_clone_leader_degradation', degradation]"
+
+ homogenous_class_officials: "Administrative Spectrum"
+ homogenous_class_officials_name: "$homogenous_class_officials$"
+ homogenous_class_officials_desc: "§Y$leader_trait_has_crystallized_clone_plural$§! effects on $official_plural_with_icon$:$TABBED_NEW_LINE$—$society_upkeep_skill_header$§R+$@homogenous_clone_upkeep|0$§!$TABBED_NEW_LINE$—Reduced ['concept_clone_leader_degradation', degradation]"
+
+ homogenous_class_commanders: "Tactical Spectrum"
+ homogenous_class_commanders_name: "$homogenous_class_commanders$"
+ homogenous_class_commanders_desc: "§Y$leader_trait_has_crystallized_clone_plural$§! effects on $commander_plural_with_icon$:$TABBED_NEW_LINE$—$society_upkeep_skill_header$§R+$@homogenous_clone_upkeep|0$§!$TABBED_NEW_LINE$—Reduced ['concept_clone_leader_degradation', degradation]"
+
+ #Technology Related
+ tech_node_culling_1_crystallization: "$tech_node_culling_1$"
+ tech_node_culling_1_crystallization_desc: "$tech_node_culling_1_desc$"
+
+ REDUCED_CLONE_DEGRADATION_TITLE: "§HUnlocks Feature:§! Reduced Crystalline Degradation"
+ REDUCED_CLONE_DEGRADATION_DESC: "§Y$leader_trait_crystallized_clone_default_plural$§! have reduced ['concept_clone_leader_degradation', degradation]"
+
+ AUTHORITY_HAS_CLONE: "$t$When §YRuler Dies§!, a §Y$leader_trait_crystallized_clone_imperial$§! becomes the new ruler.$TABBED_NEW_LINE$§H$leader_trait_crystallized_clone_imperial_plural$§! have reduced ['concept_clone_leader_degradation', degradation]."
+
+ #Upkeep Cost Headers
+ leader_upkeep_skill_header_energy: "£leader£Leader $i_energy$ upkeep per skill level:"
+ councilor_upkeep_skill_header_energy: "£leader£Council Member $i_energy$ upkeep per skill level:"
+ ruler_upkeep_skill_header_energy: "£leader£Ruler $i_energy$ upkeep per skill level:"
+ society_upkeep_skill_header: "$i_society$ upkeep:"
+
+ #Evolutionary Predator Related
+ eternal_ancestor_male: "$eternal_ancestor_female$"
+ eternal_ancestor_female: "Flux Ancestor"
+
+ #Government Types
+ gov_ori_ap_democratic_phenotypical_autonomy: "$auth_ori_ap_democratic_resonance$"
+ gov_ori_ap_democratic_phenotypical_autonomy_desc: "$auth_ori_ap_democratic_resonance_desc$"
+ gov_ori_ap_oligarchic_eugenic_hierarchy: "$auth_ori_ap_oligarchic_resonance$"
+ gov_ori_ap_oligarchic_eugenic_hierarchy_desc: "$auth_ori_ap_oligarchic_resonance_desc$"
+ gov_ori_ap_dictatorial_nucleic_judiciary: "$auth_ori_ap_dictatorial_resonance$"
+ gov_ori_ap_dictatorial_nucleic_judiciary_desc: "$auth_ori_ap_dictatorial_resonance_desc$"
+ gov_ori_ap_imperial_biotic_dominion: "$auth_ori_ap_imperial_resonance$"
+ gov_ori_ap_imperial_biotic_dominion_desc: "$auth_ori_ap_imperial_resonance_desc$"
+ gov_ori_ap_corporate_organic_syndicate: "$auth_ori_ap_corporate_resonance$"
+ gov_ori_ap_corporate_organic_syndicate_desc: "$auth_ori_ap_corporate_resonance_desc$"
+
+ gov_ori_ap_democratic_cordant_multiplicity: "$auth_ori_ap_democratic_crystallization$"
+ gov_ori_ap_democratic_cordant_multiplicity_desc: "$auth_ori_ap_democratic_crystallization_desc$"
+ gov_ori_ap_oligarchic_replicating_regency: "$auth_ori_ap_oligarchic_crystallization$"
+ gov_ori_ap_oligarchic_replicating_regency_desc: "$auth_ori_ap_oligarchic_crystallization_desc$"
+ gov_ori_ap_imperial_hereditary_continuity: "$auth_ori_ap_imperial_crystallization$"
+ gov_ori_ap_imperial_hereditary_continuity_desc: "$auth_ori_ap_imperial_crystallization_desc$"
+ gov_ori_ap_corporate_replicatory_association: "$auth_ori_ap_corporate_crystallization$"
+ gov_ori_ap_corporate_replicatory_association_desc: "$auth_ori_ap_corporate_crystallization_desc$"
+ gov_ori_ap_dictatorial_homogenous_submission: "$auth_ori_ap_dictatorial_crystallization$"
+ gov_ori_ap_dictatorial_homogenous_submission_desc: "$auth_ori_ap_dictatorial_crystallization_desc$"
+
+ gov_ori_ap_democratic_biodiverse_liberty: "$auth_ori_ap_democratic_assimilation$"
+ gov_ori_ap_democratic_biodiverse_liberty_desc: "$auth_ori_ap_democratic_assimilation_desc$"
+ gov_ori_ap_oligarchic_catalytic_command: "$auth_ori_ap_oligarchic_assimilation$"
+ gov_ori_ap_oligarchic_catalytic_command_desc: "$auth_ori_ap_oligarchic_assimilation_desc$"
+ gov_ori_ap_imperial_originium_expansionist: "$auth_ori_ap_imperial_assimilation$"
+ gov_ori_ap_imperial_originium_expansionist_desc: "$auth_ori_ap_imperial_assimilation_desc$"
+ gov_ori_ap_corporate_organ_usury: "$auth_ori_ap_corporate_assimilation$"
+ gov_ori_ap_corporate_organ_usury_desc: "$auth_ori_ap_corporate_assimilation_desc$"
+ gov_ori_ap_dictatorial_hybrid_mandate: "$auth_ori_ap_dictatorial_assimilation$"
+ gov_ori_ap_dictatorial_hybrid_mandate_desc: "$auth_ori_ap_dictatorial_assimilation_desc$"
+
+ gov_ori_ap_hive_mind_resonance_paradigm: "$auth_ori_ap_hive_resonance$"
+ gov_ori_ap_hive_mind_resonance_paradigm_desc: "$auth_ori_ap_hive_resonance_desc$"
+ gov_ori_ap_hive_mind_replicating_horde: "$auth_ori_ap_hive_crystallization$"
+ gov_ori_ap_hive_mind_replicating_horde_desc: "$auth_ori_ap_hive_crystallization_desc$"
+ gov_ori_ap_hive_mind_adaptive_dominion: "$auth_ori_ap_hive_assimilation$"
+ gov_ori_ap_hive_mind_adaptive_dominion_desc: "$auth_ori_ap_hive_assimilation_desc$"
+
+ #Concept Definitions
+ concept_auth_ori_ap_democratic_crystallization: "Mirror Parliament"
+ concept_auth_ori_ap_oligarchic_crystallization: "Eternal Council"
+ concept_auth_ori_ap_dictatorial_crystallization: "Prism Autocracy"
+ concept_auth_ori_ap_imperial_crystallization: "Crystal Dynasty"
+ concept_auth_ori_ap_corporate_crystallization: "Reflection Holdings"
+ concept_auth_ori_ap_hive_resonance: "Harmonic Collective"
+ concept_auth_ori_ap_hive_crystallization: "Replication Swarm"
+ concept_auth_ori_ap_hive_assimilation: "Flux Network"nuked_preference: "$pc_nuked$ Assimilation"
+ trait_auto_pc_nuked_preference_tt: "Arid Climate Habitability: $auto_base_penalty_sum_tt$\n$t$—Wet Climate Habitability: $auto_base_penalty_sum_tt$\n$t$—Cold Climate Habitability: $auto_base_penalty_sum_tt$\n$t$—$pc_nuked$ Habitability: $auto_base_bonus_sum_tt$"
+ trait_auto_pc_nuked_preference_desc: "$trait_auto_hab_preference_desc$"
+
+ IDEAL_PREFERENCE_TT: "Arid Climate Habitability: $auto_base_penalty_sum_tt$\n$t$—Wet Climate Habitability: $auto_base_penalty_sum_tt$\n$t$—Cold Climate Habitability: $auto_base_penalty_sum_tt$\n$t$—$pc_nuked$ Habitability: $auto_base_penalty_sum_tt$"
+
+ trait_auto_pc_gaia_preference: "$pc_gaia$ Assimilation"
+ trait_auto_pc_gaia_preference_tt: "$pc_gaia$ Habitability: $auto_ideal_bonus_tt$\n$t$—$IDEAL_PREFERENCE_TT$"
+ trait_auto_pc_gaia_preference_desc: "$trait_auto_hab_preference_desc$"

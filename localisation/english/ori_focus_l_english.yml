@@ -1,0 +1,8 @@
+﻿l_english:
+ development.521.name: "Build Originium Research Institute"
+ development.521.desc: ""
+ development.521.hint: "Build an §HOriginium Research Institute§! building on any available ['concept_building'] slot on one of your planets."
+ development.521.lore: "§L"If Originium isn't meant to be modified, then why is it so easy to modify?"§!"
+ development.521.req: "Complete Originium Research Institute"
+ development.521.fail: "£trigger_no£$development.521.req$"
+ development.521.success: "£trigger_yes£$development.521.req$"

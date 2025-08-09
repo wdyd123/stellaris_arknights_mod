@@ -3991,7 +3991,7 @@ situation_event = {
         name = ori_ap.260.a
         owner = {
             add_modifier = {
-                modifier = mutant_studies
+                modifier = assimilant_studies
                 days = 1800
             }
         }

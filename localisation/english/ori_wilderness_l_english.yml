@@ -1,0 +1,17 @@
+﻿l_english:
+ ####################################
+ # Ascension Perks
+ ####################################
+ ap_originium_resonance_wilderness: "$ap_originium_resonance$"
+ ap_originium_resonance_wilderness_desc: "Our consciousness has become one with Originium. The time has come to take the next step."
+ originium_resonance_wilderness_tt: "—Initiates the §Y$originium_resonance_situation$ Situation§!, which unlocks the ['tradition_category:tradition_resonance'] Tradition tree.\n—$UNLOCKS_AGENDA$§Y$council_agenda_agenda_engineered_evolution_name$§!, which unlocks genetic modification technologies as available research options\n—$REQUIRES_TRADITION_SLOT$"
+
+ ####################################
+ # Agendas
+ ####################################
+ council_agenda_agenda_resonance_perfection_wilderness_name: "$council_agenda_agenda_resonance_perfection_name$"
+ council_agenda_agenda_resonance_perfection_wilderness_desc: "We should conduct this symphony of Originium resonance with the highest precision."
+ agenda_resonance_perfection_wilderness_finish: "$council_agenda_agenda_resonance_perfection_wilderness_name$"
+ agenda_resonance_perfection_wilderness_finish_desc: "$council_agenda_agenda_resonance_perfection_wilderness_desc$"
+ council_agenda_agenda_superior_colonies_wilderness_name: "Superior Saplings"
+ council_agenda_agenda_superior_colonies_wilderness_desc: "$council_agenda_agenda_superior_colonies_desc$"

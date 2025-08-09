@@ -1,0 +1,7 @@
+﻿l_english:
+ council_agenda_agenda_genetic_pursuit_name: "Genetic Pursuit"
+ council_agenda_agenda_genetic_pursuit_desc: "We must concentrate our efforts to perfect our genetic makeup."
+ agenda_genetic_pursuit_finish: "$council_agenda_agenda_genetic_pursuit_name$$agenda_ref$"
+ agenda_genetic_pursuit_finish_desc: "$council_agenda_agenda_genetic_pursuit_desc$"
+ council_agenda_agenda_originium_resonance_name: "$ap_originium_resonance$"
+ council_agenda_agenda_originium_resonance_desc: "$ap_originium_resonance_desc$"

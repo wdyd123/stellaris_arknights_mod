@@ -1,0 +1,343 @@
+﻿l_english:
+ ####################################
+ #Species Classes
+ ####################################
+ TERRA: "Terran"
+
+ TERRA_desc: "REPLACE_ME"
+ TERRA_plural: "REPLACE_ME"
+ TERRA_insult_01: "REPLACE_ME"
+ TERRA_insult_plural_01: "REPLACE_ME"
+ TERRA_compliment_01: "REPLACE_ME"
+ TERRA_compliment_plural_01: "REPLACE_ME"
+ TERRA_spawn: "REPLACE_ME"
+ TERRA_spawn_plural: "REPLACE_ME"
+ TERRA_sound_01: "REPLACE_ME"
+ TERRA_sound_02: "REPLACE_ME"
+ TERRA_sound_03: "REPLACE_ME"
+ TERRA_sound_04: "REPLACE_ME"
+ TERRA_sound_05: "REPLACE_ME"
+ TERRA_organ: "REPLACE_ME"
+ TERRA_organ_plural: "REPLACE_ME"
+ TERRA_mouth: "REPLACE_ME"
+ TERRA_hand: "REPLACE_ME"
+ TERRA_hand_plural: "REPLACE_ME"
+ TERRA_ear: "REPLACE_ME"
+ TERRA_ear_plural: "REPLACE_ME"
+ TERRA_tooth: "REPLACE_ME"
+ TERRA_tooth_plural: "REPLACE_ME"
+ TERRA_fossil: "REPLACE_ME"
+ TERRA_fossil_plural: "REPLACE_ME"
+ TERRA_remnant: "REPLACE_ME"
+ TERRA_remnant_plural: "REPLACE_ME"
+ ####################################
+ #Deficit Situations
+ ####################################
+
+ situation_infection_suppressant_deficit_type: "Oripathy Suppressant Deficit"
+ situation_infection_suppressant_deficit_desc: "Oripathy Suppressant Deficit"
+ situation_infection_suppressant_deficit: "Oripathy Suppressant Deficit"
+
+ mod_country_resource_max_infection_suppressant_add: "Oripathy Suppressant Storage Capacity"
+ string_expenditures_greater_than_income_infection_suppressant: "Oripathy Suppressant Deficit"
+ string_not_in_deficit_infection_suppressant: "Positive Monthly Oripathy Suppressant Balance"
+ string_resource_reserves_infection_suppressant: "Oripathy Suppressant Reserves"
+ ori_deficit.230.name: "Critical Oripathy Suppressant Shortage"
+ ori_deficit.230.desc: "Due to management failures and resource waste, our oripathy suppressant stockpiles have been completely depleted! This strategic resource has widespread applications in multiple critical areas including preventing originium infection and maintaining workforce health. Rapid replenishment of stockpiles is crucial to ensuring the continued development of our empire."
+ r_infection_suppressant: "£infection_suppressant£ §Y$infection_suppressant$§!"
+ TRAIT_ORIGINIUM_UNIT_EFFECT: "Starting Age: §G14 years§!\nRequires additional $r_infection_suppressant$ maintenance cost"
+ mod_planet_pops_infection_suppressant_upkeep_mult: "Population Suppressant Maintenance Cost"
+ mod_planet_pops_infection_suppressant_produces_mult: "Oripathy Suppressant Production"
+
+ deficit_approach_body_recycling: "Body Recycling"
+
+ ####################################
+ #Traits
+ ####################################
+ SPECIES_TRAIT_ORIGINIUM_VOCATIONAL: "['concept_vocational_traits_originium']"
+ trait_originium_based_unit: "Originium Adaptability"
+ trait_originium_based_unit_desc: "Originium Adaptability"
+ trait_auto_mod_originium_II: "Adaptive Originium Arts"
+ trait_auto_mod_originium_II_desc: "Thanks to breakthroughs in originium research, this species can now freely choose the expression of their originium arts according to their profession."
+ automodding_trait_originium_tooltip: "$automodding_trait_tooltip_all$\n\n§Y$trait_auto_mod_biological$§! can select modifiers from ['concept_automodding_originium']"
+
+ trait_traditional_originium: "Generational Memory"
+ trait_thrifty_originium: "Penny-Pinching"
+ trait_intelligent_originium: "Originium Cognition"
+ trait_industrious_originium: "Hardworking"
+ trait_agrarian_originium: "Intensive Cultivation"
+ trait_ingenious_originium: "Ingenious"
+ trait_charismatic_originium: "Exceptional Charisma"
+
+ trait_traditional_originium_II: "Generational Memory+"
+ trait_thrifty_originium_II: "Penny-Pinching+"
+ trait_intelligent_originium_II: "Originium Cognition+"
+ trait_industrious_originium_II: "Hardworking+"
+ trait_agrarian_originium_II: "Intensive Cultivation+"
+ trait_ingenious_originium_II: "Ingenious+"
+ trait_charismatic_originium_II: "Exceptional Charisma+"
+
+ concept_automodding_originium: "Adaptive Originium Arts List"
+ concept_automodding_originium_desc: "—§3['trait:trait_traditional_originium_II']§!\n—§3['trait:trait_thrifty_originium_II']§!\n—§3['trait:trait_intelligent_originium_II']§!\n—§3['trait:trait_industrious_originium_II']§!\n—§3['trait:trait_agrarian_originium_II']§!\n—§3['trait:trait_ingenious_originium_II']§!\n—§3['trait:trait_charismatic_originium_II']§!"
+ concept_vocational_traits_originium: "Vocational Originium Arts"
+ concept_vocational_traits_originium_desc: "$concept_vocational_traits_originium$ is a class of species traits that can be automatically adjusted through the §3['trait:trait_auto_mod_originium_II']§! trait.$NEW_LINE$$concept_automodding_originium_desc$"
+ trait_originium_based_forge: "Pyromancy Specialization"
+ trait_originium_based_forge_II: "Pyromancy Specialization+"
+ trait_originium_based_forge_desc: "§LFire-attribute originium arts are quite helpful in improving smelting efficiency§!\n"
+ trait_originium_based_forge_II_desc: "§LFire-attribute originium arts are quite helpful in improving smelting efficiency\nWith the aid of originium, this species' originium arts adaptability is further enhanced.§!\n"
+
+ trait_traditional_originium_desc: "§LHundreds of years of history - these things are both their burden and their pride.§!\n"
+ trait_thrifty_originium_desc: "§LThis species is naturally frugal, always seeking to maximize benefits in every possible way.§!\n"
+ trait_intelligent_originium_desc: "§LThis species has highly developed brains, allowing them to easily accept rapid scientific progress.§!\n"
+ trait_industrious_originium_desc: "§LThis species is extremely hardworking - this land shows no mercy to the weak.§!\n"
+ trait_agrarian_originium_desc: "§LThis species has an inseparable relationship with the land, making them experts in agriculture and horticulture.§!\n"
+ trait_ingenious_originium_desc: "§LThis species is mentally flexible and good at breaking conventions - they know how to maximize the use of their infrastructure and power grid.§!\n"
+ trait_charismatic_originium_desc: "§LThis species possesses a special charisma that makes any other creature willing to approach them.§!\n"
+
+ trait_traditional_originium_II_desc: "§LHundreds of years of history - these things are both their burden and their pride.\nWith the aid of originium, this species' originium arts adaptability is further enhanced.§!\n"
+ trait_thrifty_originium_II_desc: "§LThis species is naturally frugal, always seeking to maximize benefits in every possible way.\nWith the aid of originium, this species' originium arts adaptability is further enhanced.§!\n"
+ trait_intelligent_originium_II_desc: "§LThis species has highly developed brains, allowing them to easily accept rapid scientific progress.\nWith the aid of originium, this species' originium arts adaptability is further enhanced.§!\n"
+ trait_industrious_originium_II_desc: "§LThis species is extremely hardworking - this land shows no mercy to the weak.\nWith the aid of originium, this species' originium arts adaptability is further enhanced.§!\n"
+ trait_agrarian_originium_II_desc: "§LThis species has an inseparable relationship with the land, making them experts in agriculture and horticulture.\nWith the aid of originium, this species' originium arts adaptability is further enhanced.§!\n"
+ trait_ingenious_originium_II_desc: "§LThis species is mentally flexible and good at breaking conventions - they know how to maximize the use of their infrastructure and power grid.\nWith the aid of originium, this species' originium arts adaptability is further enhanced.§!\n"
+ trait_charismatic_originium_II_desc: "§LThis species possesses a special charisma that makes any other creature willing to approach them.\nWith the aid of originium, this species' originium arts adaptability is further enhanced.§!\n"
+
+ ####################################
+ #Resources
+ ####################################
+ tech_infection_suppressant_i: "Tier I Oripathy Suppressant"
+ tech_infection_suppressant_i_desc: "Tier I oripathy suppressant is the initial treatment method for oripathy, using basic pharmaceutical components to slow the spread of oripathy. Although its effects are limited, it buys precious time for controlling oripathy."
+ tech_infection_suppressant_ii: "Tier II Oripathy Suppressant"
+ tech_infection_suppressant_ii_desc: "Tier II oripathy suppressant improves upon Tier I, effectively delaying the progression of oripathy and improving patient survival rates. This technology shows stronger therapeutic effects in clinical practice with greatly reduced side effects."
+ tech_infection_suppressant_iii: "Tier III Oripathy Suppressant"
+ tech_infection_suppressant_iii_desc: "Tier III oripathy suppressant is the latest breakthrough technology, capable of completely controlling oripathy and restoring patient physiological functions. Its high efficiency and low side effects make curing oripathy possible, bringing new hope to patients."
+ infection_suppressant: "Oripathy Suppressant"
+ infection_suppressant_desc: "A medical reagent used to suppress oripathy, though it causes harm to the infected, but it's better to live miserably than die well."
+ originium_desc: "Originium crystals used extensively in industry, but with high extraction difficulty. They are the world's primary energy-based refined products and also the foundation for almost all originium arts. Today, even with rumors spreading that 'it spreads terminal illness,' few can resist its allure."
+ originium: "Pure Originium"
+ # mod_country_resource_max_originium_add: "Placeholder"
+ # mod_country_resource_max_originium_add_desc: "Placeholder"
+
+ ####################################
+ #Edicts
+ ####################################
+ edict_monthly_originium_allowance: "Monthly Originium Pass"
+ edict_monthly_originium_allowance_desc: "Hypergryph's generous hand at work"
+
+ edict_monthly_inf_supp_allowance: "Oripathy Suppressant"
+ edict_monthly_inf_supp_allowance_desc: "Can resolve urgent needs"
+
+ edict_gacha: "Operator Headhunting"
+ edict_gacha_desc: "Recruit an operator from a headhunting company"
+
+ ####################################
+ #Recruitment
+ ####################################
+
+ # Main recruitment event
+ arknights_recruitment.1.name:0 "Rhodes Island Recruitment Protocol"
+ arknights_recruitment.1.desc:0 "Our intelligence network has established contact with Rhodes Island Pharmaceuticals. Their recruitment system has identified a potential operator who may join our cause. Each operator possesses unique skills and experience that could be of significant value to our mission."
+
+ # 6-star operator options
+ arknights_recruitment.1.silverash:0 "Welcome SilverAsh, CEO of Karlan Trade"
+ arknights_recruitment.1.chen:0 "Welcome Ch'en, Former Lungmen Guard Department Senior Inspector"
+ arknights_recruitment.1.exusiai:0 "Welcome Exusiai, Penguin Logistics Courier"
+ arknights_recruitment.1.eyjafjalla:0 "Welcome Eyjafjalla, Volcanologist"
+ arknights_recruitment.1.saria:0 "Welcome Saria, Former Rhine Lab Defense Chief"
+ arknights_recruitment.1.ifrit:0 "Welcome Ifrit, Rhine Lab Researcher"
+ arknights_recruitment.1.shining:0 "Welcome Shining, Former Sarkaz Confessor"
+ arknights_recruitment.1.nightingale:0 "Welcome Nightingale, Former Sarkaz Confessor"
+ arknights_recruitment.1.hoshiguma:0 "Welcome Hoshiguma, Lungmen Guard Department Senior Superintendent"
+ arknights_recruitment.1.schwarz:0 "Welcome Schwarz, Rhine Lab Bodyguard"
+ arknights_recruitment.1.blaze:0 "Welcome Blaze, Rhodes Island Elite Operator"
+ arknights_recruitment.1.weedy:0 "Welcome Weedy, Rhodes Island Engineer"
+ arknights_recruitment.1.w:0 "Welcome W, Former Babel Mercenary"
+ arknights_recruitment.1.skadi_alter:0 "Welcome Skadi the Corrupting Heart, Abyssal Hunter"
+ arknights_recruitment.1.surtr:0 "Welcome Surtr, Mysterious Swordsman"
+ arknights_recruitment.1.thorns:0 "Welcome Thorns, Iberian Aegir"
+ arknights_recruitment.1.mudrock:0 "Welcome Mudrock, Sarkaz Mercenary Leader"
+ arknights_recruitment.1.ash:0 "Welcome Ash, Rainbow Team Leader"
+ arknights_recruitment.1.kaltsit:0 "Welcome Kal'tsit, Rhodes Island Medical Director"
+ arknights_recruitment.1.skadi:0 "Welcome Skadi, Abyssal Hunter"
+ arknights_recruitment.1.siege:0 "Welcome Siege, Victorian Royal Guard"
+ arknights_recruitment.1.bagpipe:0 "Welcome Bagpipe, Victorian Officer"
+ arknights_recruitment.1.phantom:0 "Welcome Phantom, Mysterious Artist"
+ arknights_recruitment.1.suzuran:0 "Welcome Suzuran, Higashi Noble"
+ arknights_recruitment.1.nian:0 "Welcome Nian, Ancient Yan Craftsman"
+
+ arknights_recruitment.1.platinum: "Recruit Platinum"
+ arknights_recruitment.1.blue_poison: "Recruit Blue Poison"
+
+ arknights_recruitment.1.specter: "Recruit Specter"
+ arknights_recruitment.1.lappland: "Recruit Lappland"
+
+ arknights_recruitment.1.texas: "Recruit Texas"
+ arknights_recruitment.1.zima: "Recruit Zima"
+ arknights_recruitment.1.elysium: "Recruit Elysium"
+
+ arknights_recruitment.1.pramanix: "Recruit Pramanix"
+
+ arknights_recruitment.1.ptilopsis: "Recruit Ptilopsis"
+ arknights_recruitment.1.silence: "Recruit Silence"
+ arknights_recruitment.1.warfarin: "Recruit Warfarin"
+
+ # All operators recruited
+ arknights_recruitment.1.all_recruited:0 "Rhodes Island has no available operators left, but this practice has accumulated valuable experience for us"
+
+ # Operator introduction tooltips
+ arknights_recruitment.silverash.tooltip:0 "SilverAsh brings exceptional business acumen and strategic leadership as an admiral, with his Karlan Trade network providing tactical advantages."
+ arknights_recruitment.chen.tooltip:0 "Ch'en's law enforcement background and combat expertise make her an outstanding ground forces general with unparalleled discipline."
+ arknights_recruitment.exusiai.tooltip:0 "Exusiai's speed and precision as a Penguin Logistics courier translate perfectly to rapid fleet deployment and aggressive tactics."
+ arknights_recruitment.eyjafjalla.tooltip:0 "Eyjafjalla's volcanic research provides breakthrough insights into psionic technology and advanced physics research capabilities."
+ arknights_recruitment.saria.tooltip:0 "Saria's defensive expertise and medical knowledge make her an ideal general for protecting critical strategic positions."
+ arknights_recruitment.ifrit.tooltip:0 "Ifrit's destructive originium arts research enhances our materials science capabilities with her explosive expertise."
+ arknights_recruitment.shining.tooltip:0 "Shining's medical expertise as a former confessor provides advanced biological research and enhanced social development capabilities."
+ arknights_recruitment.nightingale.tooltip:0 "Nightingale's mastery of healing originium arts significantly enhances our biological sciences and population health research."
+ arknights_recruitment.hoshiguma.tooltip:0 "Hoshiguma's unwavering will and defensive mastery provide unparalleled protection for our ground forces."
+ arknights_recruitment.schwarz.tooltip:0 "Schwarz's precision shooting and bodyguard experience make her an outstanding fleet commander with tactical stealth capabilities."
+ arknights_recruitment.blaze.tooltip:0 "Blaze's combat experience and resilient nature make her a powerful general for frontline operations."
+ arknights_recruitment.weedy.tooltip:0 "Weedy's engineering expertise provides innovative tactical solutions and enhanced influence through technological superiority."
+ arknights_recruitment.w.tooltip:0 "W's explosive expertise and mercenary experience bring devastating combat potential to our fleet operations."
+ arknights_recruitment.skadi_alter.tooltip:0 "Skadi the Corrupting Heart's unique Abyssal Hunter abilities provide excellent cohesion building and governing expertise."
+ arknights_recruitment.surtr.tooltip:0 "Surtr's overwhelming combat prowess makes her a devastating general capable of turning the tide single-handedly."
+ arknights_recruitment.thorns.tooltip:0 "Thorns' Aegir heritage and tactical planning provide excellent fleet logistics and strategic coordination capabilities."
+ arknights_recruitment.mudrock.tooltip:0 "Mudrock's mercenary leadership and defensive expertise provide unparalleled protection for our ground operations."
+ arknights_recruitment.ash.tooltip:0 "Ash's special forces training and Rainbow Team leadership provide elite military tactical capabilities."
+ arknights_recruitment.kaltsit.tooltip:0 "Kal'tsit's extensive medical knowledge and research experience significantly advance our biological sciences and social research."
+ arknights_recruitment.skadi.tooltip:0 "Skadi's Abyssal Hunter abilities and combat prowess provide both tactical advantages and enhanced influence operations."
+ arknights_recruitment.siege.tooltip:0 "Siege's Royal Guard experience and leadership provide excellent fleet logistics and enhanced energy management."
+ arknights_recruitment.bagpipe.tooltip:0 "Bagpipe's military discipline and Victorian training provide superior fleet coordination and energy resource optimization."
+ arknights_recruitment.phantom.tooltip:0 "Phantom's mysterious artistic abilities and stealth expertise provide unique tactical solutions and influence operations."
+ arknights_recruitment.suzuran.tooltip:0 "Suzuran's noble education and originium arts mastery provide excellent governing expertise and cohesion building capabilities."
+ arknights_recruitment.nian.tooltip:0 "Nian's ancient craftsmanship and defensive originium arts provide enhanced alloy production and superior defensive capabilities."
+
+ arknights_recruitment.platinum.tooltip: "Platinum is a Kuranta sniper with excellent long-range shooting abilities. She is calm and professional, capable of precisely striking enemy weak points on the battlefield. After joining our team, she will become reliable long-range fire support."
+ arknights_recruitment.blue_poison.tooltip: "Blue Poison is an Anaty sniper who excels at using toxins in combat. Her arrows carry deadly poison that can cause continuous damage to enemies. Although gentle in nature, she shows no mercy in battle."
+
+ arknights_recruitment.specter.tooltip: "Specter is an Aegir guard with powerful close-combat abilities and amazing survivability. Though affected by the Seaborn, her fighting spirit remains unwavering. On the most dangerous frontlines, she is the most reliable warrior."
+ arknights_recruitment.lappland.tooltip: "Lappland is a Lupo guard who was once a gang member. Her twin-sword techniques are exquisite, with a wild yet effective fighting style. Though eccentric in personality, she is an invaluable powerful warrior on the battlefield."
+
+ arknights_recruitment.texas.tooltip: "Texas is a Lupo vanguard, former gang boss lady. She has excellent leadership abilities and battlefield adaptability, excelling at rapid deployment and DP recovery. Her calm exterior hides a firm will."
+ arknights_recruitment.zima.tooltip: "Zima is a Ursus vanguard who was once a student movement leader. She has excellent command abilities and the talent to inspire teammates, providing strong support and DP recovery for the team on the battlefield."
+ arknights_recruitment.elysium.tooltip: "Elysium is an Anaty vanguard with elegant noble temperament. He excels at battlefield command and logistics management, providing excellent DP support and tactical coordination for the team. His perfectionist nature makes him strive for perfection in any mission."
+
+ arknights_recruitment.pramanix.tooltip: "Pramanix is the young lady of Karlan Trade and an excellent supporter. She can weaken enemy defense and arts resistance, creating better output environments for teammates. Her gentle nature conceals her powerful strategic value."
+
+ arknights_recruitment.ptilopsis.tooltip: "Ptilopsis is a Liberi medic with powerful group healing abilities. Her presence can significantly improve the team's sustainability and is indispensable logistical support for any operation."
+ arknights_recruitment.silence.tooltip: "Silence is a Rhine Lab researcher and a skilled medic. She can use drones for remote healing, providing timely medical support for frontline fighters. Her rigorous scientific attitude makes her excel in the medical field."
+ arknights_recruitment.warfarin.tooltip: "Warfarin is a Sarkaz medic with extensive medical experience. She can not only treat the wounded but also enhance teammates' attack capabilities through special means. Her research on blood makes her excel in both medical and support aspects."
+ arknights_recruitment.5star.tooltip:0 "This experienced operator brings solid capabilities and valuable skills to strengthen our forces."
+ arknights_recruitment.all_recruited.tooltip:0 "All available operators have been recruited, Rhodes Island provides substantial compensation rewards including enhanced influence and cohesion output."
+
+ # Edict-related localization
+ arknights_recruitment_protocol:0 "Rhodes Island Recruitment Protocol"
+ arknights_recruitment_protocol_desc:0 "Activate specialized recruitment protocols to contact Rhodes Island and recruit skilled operators to join our cause. This advanced procedure requires significant resources but provides access to highly skilled specialists with unique abilities.\n\n§YCost:§! 200 Influence, 500 Energy\n§YCooldown:§! 10 years\n§RNote:§! Cannot be used after all operators have been recruited."
+ arknights_recruitment_protocol_effect:0 "Triggers Rhodes Island recruitment process - randomly selects an available operator"
+ ARKNIGHTS_RECRUITMENT_COOLDOWN:0 "Rhodes Island Recruitment Protocol is still on cooldown"
+
+ ####################################
+ #Operator
+ ####################################
+ # Arknights Operators Localization
+
+ # 6-Star Operators
+ silverash: "SilverAsh"
+ chen: "Ch'en"
+ exusiai: "Exusiai"
+ eyjafjalla: "Eyjafjalla"
+ saria: "Saria"
+ ifrit: "Ifrit"
+ shining: "Shining"
+ nightingale: "Nightingale"
+ hoshiguma: "Hoshiguma"
+ schwarz: "Schwarz"
+ blaze: "Blaze"
+ weedy: "Weedy"
+ w: "W"
+ skadi_alter: "Skadi the Corrupting Heart"
+ surtr: "Surtr"
+ thorns: "Thorns"
+ mudrock: "Mudrock"
+ ash: "Ash"
+ kaltsit: "Kal'tsit"
+ skadi: "Skadi"
+ siege: "Siege"
+ bagpipe: "Bagpipe"
+ phantom: "Phantom"
+ suzuran: "Suzuran"
+ nian: "Nian"
+
+ # 5-Star Operators
+ platinum: "Platinum"
+ blue_poison: "Blue Poison"
+ specter: "Specter"
+ lappland: "Lappland"
+ texas: "Texas"
+ pramanix: "Pramanix"
+ ptilopsis: "Ptilopsis"
+ silence: "Silence"
+ warfarin: "Warfarin"
+ zima: "Zima"
+ elysium: "Elysium"
+
+ ####################################
+ #Starbase buildings
+ ####################################
+ r_originium: "£originium£ §Y$originium$§!"
+
+ originium_harvester_tooltip: ""$SYSTEM_EFFECTS_TXT$$TABBED_NEW_LINE$On each rocky planet, as well as satellites and asteroids without any $shipclass_research_station$ deposits, detect §Y0.1§! scale $r_originium$ deposits"
+ sm_originium_harvester: "Originium Harvester"
+ sm_originium_harvester_desc: ""
+ requires_planetoids_for_originium: "Requires a barren, toxic, molten, or shattered planet without any originium deposits."
+ MESSAGE_ORIGINIUM_BOON_TITLE: "Originium Vein Growth"
+ MESSAGE_ORIGINIUM_BOON_DESC: "Our mining operations have generated excess pure originium"
+
+ ####################################
+ #Zones
+ ####################################
+ zone_factory_ori: "Suppressant Factory"
+ zone_factory_ori_desc: "The assembly lines here run continuously, producing everything from simple tools to oripathy suppressants in a steady stream."
+ mod_planet_artisans_infection_suppressant_produces_add: "Artisan Suppressant Production"
+ mod_planet_artisans_originium_upkeep_add: "Artisan Originium Maintenance Cost"
+
+ ####################################
+ #Jobs
+ ####################################
+ craft_operator: "$job_craft_operator$"
+ job_craft_operator: "Manufacturing Department Operator"
+
+ job_craft_operator_plural: "Manufacturing Department Operators"
+ job_craft_operator_icon: "£job_artificer£"
+ job_craft_operator_desc: "Skilled and creative craftsmen who can produce extremely high-quality daily necessities and effective oripathy suppressants."
+ job_craft_operator_effect_desc: "£job_artificer£§Y$job_craft_operator_plural$§! can convert £minerals£§Y$minerals$§! and £originium£§Y$originium$§! into £consumer_goods£§Y$consumer_goods$§! and £infection_suppressant£§Y$infection_suppressant$§!"
+ mod_job_craft_operator_add: "$job_craft_operator$ jobs"
+ mod_job_craft_operator_per_pop: "§G+1§! $job_craft_operator$ job per $VALUE$ population"
+ mod_job_craft_operator_per_pop_short: "\n§G+1§!£mod_job_artificer_add£ per $VALUE$£pop£"
+
+ originium_miner: "$job_originium_miner$"
+ job_originium_miner: "Originium Miner"
+ job_originium_miner_plural: "Originium Miners"
+ job_originium_miner_desc: "Using powerful drills, we can extract minerals and originium from local originium veins."
+ job_originium_miner_gestalt: "Originium Mining Sub-entity"
+ job_originium_miner_gestalt_plural: "Originium Mining Sub-entities"
+ job_originium_miner_gestalt_desc: "Using powerful drills, we can extract minerals and originium from local originium veins."
+ miner_is_originium_miner_tt: "$job_miner_plural_with_icon$ converted to [miner.GetIcon]$job_originium_miner_plural$"
+ mod_job_originium_miner_add: "$job_originium_miner$ jobs"
+ mod_job_originium_miner_gestalt_add: "$job_originium_miner_gestalt$ jobs"
+ mod_job_originium_miner_per_pop: "§G+1§! $job_originium_miner$ job per $VALUE$ population"
+ mod_job_originium_miner_per_pop_short: "\n§G+1§!£job_originium_miner£ per $VALUE$£pop£"
+ mod_job_originium_miner_gestalt_per_pop: "§G+1§! $job_originium_miner_gestalt$ job per $VALUE$ population"
+ mod_job_originium_miner_gestalt_per_pop_short: "\n§G+1§!£job_originium_miner_gestalt£ per $VALUE$£pop£"
+
+ ####################################
+ #Modifier
+ ####################################
+ trait_originium_infection_suppressant_upkeep_add_0.4_tt: "$r_infection_suppressant$ maintenance cost: §R0.4§!"
+ trait_originium_infection_suppressant_upkeep_add_0.2_tt: "$r_infection_suppressant$ maintenance cost: §R0.2§!"
+ trait_originium_infection_suppressant_upkeep_add_0.1_tt: "$r_infection_suppressant$ maintenance cost: §R0.1§!"
+
+ ####################################
+ #Tradition
+ ####################################
+ tradition_originium: "Originium"
+ tradition_originium_desc: "TBW"

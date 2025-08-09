@@ -1,0 +1,3 @@
+﻿l_english:
+ TIMELINE_EVENT_ORIGINIUM_REGULAR: "Fate's Calling\n§L[GetDate]§!"
+ TIMELINE_EVENT_ORIGINIUM_REGULAR_TOOLTIP: "§HThe threads of fate reveal themselves§!\n§YEmpire Event§!\n\n§L[GetDate]§!, [EVENT_TARGET_0.GetName] has completed Originium Ascension"
