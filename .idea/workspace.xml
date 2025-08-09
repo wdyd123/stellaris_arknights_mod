@@ -7,9 +7,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3c23acaf-318b-45fc-ae5e-187f4e105237" name="更改" comment="Merge branch 'master' of https://github.com/wdyd123/00001">
+    <list default="true" id="3c23acaf-318b-45fc-ae5e-187f4e105237" name="更改" comment="物种特质可选数修复">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/edicts/Originium.txt" beforeDir="false" afterPath="$PROJECT_DIR$/common/edicts/Originium.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/situations/originium_situation.txt" beforeDir="false" afterPath="$PROJECT_DIR$/common/situations/originium_situation.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/static_modifiers/ori_asscension_modifiers.txt" beforeDir="false" afterPath="$PROJECT_DIR$/common/static_modifiers/ori_asscension_modifiers.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/traits/ori_leader_traits.txt" beforeDir="false" afterPath="$PROJECT_DIR$/common/traits/ori_leader_traits.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/events/originium_ascension_events.txt" beforeDir="false" afterPath="$PROJECT_DIR$/events/originium_ascension_events.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/localisation/english/ori_ascension_perk_lists_l_english.yml" beforeDir="false" afterPath="$PROJECT_DIR$/localisation/english/ori_ascension_perk_lists_l_english.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/localisation/simp_chinese/main_ori_l_simp_chinese.yml" beforeDir="false" afterPath="$PROJECT_DIR$/localisation/simp_chinese/main_ori_l_simp_chinese.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/localisation/simp_chinese/name_lists_l_simp_chinese.yml" beforeDir="false" afterPath="$PROJECT_DIR$/localisation/simp_chinese/name_lists_l_simp_chinese.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/localisation/simp_chinese/ori_ascension_perk_lists_l_simp_chinese.yml" beforeDir="false" afterPath="$PROJECT_DIR$/localisation/simp_chinese/ori_ascension_perk_lists_l_simp_chinese.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/localisation/simp_chinese/ori_technology_l_simp_chinese.yml" beforeDir="false" afterPath="$PROJECT_DIR$/localisation/simp_chinese/ori_technology_l_simp_chinese.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,28 +60,28 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "master",
-    "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "D:/OneDrive/Documents/Paradox Interactive/Stellaris/mod/00001/gfx/interface/icons/resources",
-    "run.code.analysis.last.selected.profile": "pProject Default",
-    "settings.editor.selected.configurable": "reference.settings.project.statistic.project.settings"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/OneDrive/Documents/Paradox Interactive/Stellaris/mod/00001/gfx/interface/icons/resources&quot;,
+    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
   },
-  "keyToStringList": {
-    "com.intellij.ide.scratch.ScratchImplUtil$2/新建临时文件": [
-      "GitIgnore",
-      "PLAIN_TEXT"
+  &quot;keyToStringList&quot;: {
+    &quot;com.intellij.ide.scratch.ScratchImplUtil$2/新建临时文件&quot;: [
+      &quot;GitIgnore&quot;,
+      &quot;PLAIN_TEXT&quot;
     ],
-    "com.intellij.ide.scratch.ScratchImplUtil$2/更改语言": [
-      "PARADOX_SCRIPT"
+    &quot;com.intellij.ide.scratch.ScratchImplUtil$2/更改语言&quot;: [
+      &quot;PARADOX_SCRIPT&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\OneDrive\Documents\Paradox Interactive\Stellaris\mod\00001\gfx\interface\icons\resources" />
@@ -314,7 +324,15 @@
       <option name="project" value="LOCAL" />
       <updated>1754734329011</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="物种特质可选数修复">
+      <option name="closed" value="true" />
+      <created>1754736765599</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1754736765599</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -374,6 +392,7 @@
     <MESSAGE value="美术资源补充" />
     <MESSAGE value="贸易市场图标问题&#10;物种特质点数" />
     <MESSAGE value="Merge branch 'master' of https://github.com/wdyd123/00001" />
-    <option name="LAST_COMMIT_MESSAGE" value="Merge branch 'master' of https://github.com/wdyd123/00001" />
+    <MESSAGE value="物种特质可选数修复" />
+    <option name="LAST_COMMIT_MESSAGE" value="物种特质可选数修复" />
   </component>
 </project>

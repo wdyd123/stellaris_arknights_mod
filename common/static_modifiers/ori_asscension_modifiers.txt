@@ -71,6 +71,156 @@ crystallize_rights = {
 ori_augment_appreciation = {
     icon = "gfx/interface/icons/modifiers/mod_pop_political_power.dds"
     pop_ethic_egalitarian_attraction_mult = 0.25
-    custom_tooltip = genetic_purist_effects_header
+    custom_tooltip = originium_resonated_effects_header
     show_only_custom_tooltip = no
 }
+
+ori_supremacy_denied = {
+    planet_stability_add = 15
+    pop_ethic_authoritarian_attraction_mult = 0.25
+}
+
+
+
+ori_conscious_evolution = {
+    planet_jobs_unity_produces_mult = 0.1
+}
+
+
+ori_selective_survival = {
+    pop_ethic_authoritarian_attraction_mult = 0.25
+    country_leader_cap_add = 1
+}
+
+ori_harvesting_halt = {
+    pop_ethic_egalitarian_attraction_mult = 0.25
+    bonus_pop_growth_mult = 0.25
+}
+
+crystallized_clone_drivers = {
+    pop_ethic_authoritarian_attraction_mult = 0.25
+    leader_lifespan_mult = 0.2
+}
+ori_mass_euthanasia = {
+    planet_pops_upkeep_mult = -0.1
+    pop_ethic_authoritarian_attraction_mult = 0.25
+}
+
+ori_mutant_crackdown = {
+    icon = "gfx/interface/icons/planet_modifiers/pm_martial_law.dds"
+    icon_frame = 1
+    job_soldier_stability_add = 5
+    job_soldier_add = 200
+}
+
+ori_mutant_enclaves = {
+    planet_jobs_society_research_produces_mult = 0.2
+}
+
+ori_standardized_biology = {
+    country_unity_produces_mult = 0.1
+    pop_ethic_authoritarian_attraction_mult = 0.3
+}
+
+ori_class_system = {
+    council_agenda_progress_speed = 0.2
+    pop_ethic_authoritarian_attraction_mult = 0.25
+}
+
+ori_thorough_inspections = {
+    planet_stability_add = 15
+    logistic_growth_mult = -0.1
+}
+
+
+ori_clone_colonies = {
+    planet_colony_development_speed_mult = 1
+}
+
+
+ori_biohacker_haven = {
+    planet_jobs_society_research_produces_mult = 0.1
+    pop_happiness = 0.1
+}
+
+ori_limited_autonomy = {
+    country_unity_produces_mult = 0.1
+    planet_stability_add = 10
+    pop_ethic_authoritarian_attraction_mult = 0.25
+}
+
+ori_methodic_procreation = {
+    bonus_pop_growth_mult = 0.05
+}
+
+ori_nuisance_crackdown = {
+    planet_jobs_society_research_produces_mult = 0.1
+}
+
+
+ori_nuisance_crackdown = {
+    planet_stability_add = 15
+    pop_happiness = -0.10
+}
+
+
+ori_cognizant_hive = {
+    council_agenda_progress_speed = 0.05
+}
+
+
+ori_relentless_focus = {
+    country_unity_produces_mult = 0.15
+    planet_jobs_society_research_produces_mult = 0.15
+}
+
+ori_infrastructural_bolstering = {
+    planet_building_build_speed_mult = 0.2
+}
+
+
+
+ori_rigorous_examination = {
+    planet_pops_upkeep_mult = 0.1
+    planet_jobs_society_research_produces_mult = 0.2
+}
+
+ori_rigorous_examination_wilderness = {
+    planet_districts_upkeep_mult = 0.1
+    planet_jobs_society_research_produces_mult = 0.2
+}
+
+ori_population_relocation = {
+    pop_resettlement_cost_mult = -0.5
+    planet_resettlement_unemployed_mult = 0.2
+}
+
+ori_factotum_reserves = {
+    country_energy_produces_mult = 0.25
+    logistic_growth_mult = -0.1
+}
+
+ori_the_new_batch = {
+    bonus_pop_growth_mult = 0.15
+}
+
+
+ori_uncomfortable_drones = {
+    country_unity_produces_mult = 0.1
+}
+
+
+ori_uncomfortable_drones = {
+    planet_jobs_simple_drone_produces_mult = -0.05
+}
+
+ori_survival_study = {
+    planet_jobs_society_research_produces_mult = 0.15
+    logistic_growth_mult = -0.1
+}
+
+ori_ori_survival_study_wilderness = {
+    planet_jobs_society_research_produces_mult = 0.15
+    planet_building_build_speed_mult = -0.1
+}
+

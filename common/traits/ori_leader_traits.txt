@@ -235,3 +235,85 @@ leader_trait_the_originium_luminary = {
     randomized = no
     immortal_leaders = yes
 }
+
+
+trait_leader_originium_resonator = {
+    inline_script = {
+        script = trait/icon
+        CLASS = leader
+        ICON = "GFX_leader_trait_legendary_xenophobe_one"
+        RARITY = common
+        COUNCIL = triggered
+        TIER = none
+    }
+
+    # Democratic
+    triggered_self_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_democratic_authority = yes
+                is_resonance_authority = yes
+            }
+            species = {
+                is_variable_set = species_traits_resonance_count
+            }
+        }
+        leaders_upkeep_mult = @purity_traits_leader_upkeep
+        species_leader_exp_gain = @purity_traits_leader_xp
+        mult = species.species_traits_resonance_count
+    }
+
+    # Oligarchic
+    triggered_councilor_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_oligarchic_authority = yes
+                is_resonance_authority = yes
+            }
+            species = {
+                is_variable_set = species_traits_resonance_count
+            }
+        }
+        council_agenda_progress_speed = @purity_traits_council_speed
+        mult = species.species_traits_resonance_count
+    }
+
+    # Dictatorial
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_dictatorial_authority = yes
+                is_resonance_authority = yes
+            }
+            species = {
+                is_variable_set = species_traits_resonance_count
+            }
+        }
+        planet_crime_add = @purity_traits_governor_planet_crime
+        planet_stability_add = @purity_traits_governor_planet_stability
+        mult = species.species_traits_resonance_count
+    }
+    triggered_sector_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_dictatorial_authority = yes
+                is_resonance_authority = yes
+            }
+            species = {
+                is_variable_set = species_traits_resonance_count
+            }
+        }
+        planet_crime_add = @purity_traits_governor_sector_crime
+        planet_stability_add = @purity_traits_governor_sector_stability
+        mult = species.species_traits_resonance_count
+    }
+
+    initial = no
+    randomized = no
+    ai_weight = 0
+    leader_class = { commander scientist official }
+}

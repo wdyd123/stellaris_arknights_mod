@@ -133,6 +133,8 @@
  edict_gacha: "干员寻访"
  edict_gacha_desc: "从猎头公司招聘一位干员"
 
+ edict_debug: "调试"
+ edict_debug_desc: "REPLACE_ME"
 
  ####################################
  #Recruitment
@@ -291,7 +293,7 @@
  ####################################
  r_originium: "£originium£ §Y$originium$§!"
 
- originium_harvester_tooltip: ""$SYSTEM_EFFECTS_TXT$$TABBED_NEW_LINE$每个岩质行星，以及没有任何$shipclass_research_station$矿藏的卫星和小行星上，探出规模§Y0.1§!的$r_originium$矿藏"
+ originium_harvester_tooltip: ""$SYSTEM_EFFECTS_TXT$$TABBED_NEW_LINE$每个岩质行星，以及没有任何$shipclass_research_station$矿藏的卫星和小行星上，探出规模§Y0.1§!的$r_originium$矿藏\n$r_originium$矿藏规模每五年成长一次"
  sm_originium_harvester: "源石收割机"
  sm_originium_harvester_desc: ""
  requires_planetoids_for_originium: "需要一颗没有任何源石矿藏的荒芜，剧毒，熔融或者崩坏星球。"
@@ -344,7 +346,8 @@
  trait_originium_infection_suppressant_upkeep_add_0.2_tt: "$r_infection_suppressant$维护费：§R0.2§!"
  trait_originium_infection_suppressant_upkeep_add_0.1_tt: "$r_infection_suppressant$维护费：§R0.1§!"
 
-
+ mod_ORIGINOID_species_trait_points_add: "源石物种$species_trait_points_add$"
+ mod_ORIGINOID_species_trait_picks_add: "源石物种$SPECIES_TRAIT_PICKS$"
  ####################################
  #Tradition
  ####################################

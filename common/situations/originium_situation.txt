@@ -61,6 +61,12 @@ originium_resonance_situation = {
             desc = originium_resonance_number_of_originium_researchers
         }
         modifier = {
+            owner = { has_edict = debug }
+            add = 135
+            desc = originium_resonance_number_of_originium_researchers
+
+        }
+        modifier = {
             mult = 0
             desc = "situation_originium_facility_needed_desc"
             owner = {

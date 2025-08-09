@@ -36,6 +36,11 @@ monthly_originium_allowance = {
     }
 }
 
+debug = {
+    length = @ambitionDuration
+    icon = "GFX_edict_type_time"
+}
+
 monthly_inf_supp_allowance = {
     length = @ambitionDuration
     icon = "GFX_edict_type_time"

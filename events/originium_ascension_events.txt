@@ -950,7 +950,7 @@ situation_event = {
         name = ori_ap.50.a
         owner = {
             add_modifier = {
-                modifier = supremacy_denied
+                modifier = ori_supremacy_denied
                 days = 1800
             }
         }
@@ -1054,7 +1054,7 @@ situation_event = {
         name = ori_ap.55.b
         owner = {
             add_modifier = {
-                modifier = conscious_evolution
+                modifier = ori_conscious_evolution
                 days = 1800
             }
         }
@@ -1114,7 +1114,7 @@ situation_event = {
         name = ori_ap.60.b
         owner = {
             add_modifier = {
-                modifier = selective_survival
+                modifier = ori_selective_survival
                 days = 1800
             }
         }
@@ -1445,7 +1445,7 @@ situation_event = {
         name = ori_ap.75.a
         owner = {
             add_modifier = {
-                modifier = harvesting_halt
+                modifier = ori_harvesting_halt
                 days = 1800
             }
         }
@@ -1458,7 +1458,7 @@ situation_event = {
         name = ori_ap.75.b
         owner = {
             add_modifier = {
-                modifier = clone_drivers
+                modifier = crystallized_clone_drivers
                 days = 1800
             }
         }
@@ -1603,7 +1603,7 @@ situation_event = {
         name = ori_ap.85.a
         owner = {
             add_modifier = {
-                modifier = mass_euthanasia
+                modifier = ori_mass_euthanasia
                 days = 1800
             }
         }
@@ -1770,7 +1770,7 @@ situation_event = {
         owner = {
             capital_scope = {
                 add_modifier = {
-                    modifier = mutant_crackdown
+                    modifier = ori_mutant_crackdown
                     days = 1800
                 }
             }
@@ -1790,7 +1790,7 @@ situation_event = {
         name = ori_ap.90.b
         owner = {
             add_modifier = {
-                modifier = mutant_enclaves
+                modifier = ori_mutant_enclaves
                 days = 1800
             }
         }
@@ -2037,7 +2037,7 @@ situation_event = {
         name = ori_ap.100.b
         owner = {
             add_modifier = {
-                modifier = standardized_biology
+                modifier = ori_standardized_biology
                 days = 1800
             }
         }
@@ -2679,7 +2679,7 @@ situation_event = {
         name = ori_ap.145.a
         owner = {
             add_modifier = {
-                modifier = methodic_procreation
+                modifier = ori_methodic_procreation
                 days = 1800
             }
         }
@@ -2692,7 +2692,7 @@ situation_event = {
         name = ori_ap.145.b
         owner = {
             add_modifier = {
-                modifier = genetic_diversification
+                modifier = ori_nuisance_crackdown
                 days = 1800
             }
         }
@@ -3089,10 +3089,10 @@ country_event = {
                         species = {
                             is_robotic_species = no
                         }
-                        NOT = { has_trait = trait_leader_genetic_purist }
+                        NOT = { has_trait = trait_leader_originium_resonator }
                     }
                     give_trait_no_notify_ignore_autocracy_restriction = {
-                        TRAIT = trait_leader_genetic_purist
+                        TRAIT = trait_leader_originium_resonator
                     }
                 }
                 every_pool_leader = {
@@ -3100,10 +3100,10 @@ country_event = {
                         species = {
                             is_robotic_species = no
                         }
-                        NOT = { has_trait = trait_leader_genetic_purist }
+                        NOT = { has_trait = trait_leader_originium_resonator }
                     }
                     give_trait_no_notify_ignore_autocracy_restriction = {
-                        TRAIT = trait_leader_genetic_purist
+                        TRAIT = trait_leader_originium_resonator
                     }
                 }
             }
@@ -3169,10 +3169,10 @@ country_event = {
                     species = {
                         is_robotic_species = no
                     }
-                    NOT = { has_trait = trait_leader_genetic_purist }
+                    NOT = { has_trait = trait_leader_originium_resonator }
                 }
                 give_trait_no_notify_ignore_autocracy_restriction = {
-                    TRAIT = trait_leader_genetic_purist
+                    TRAIT = trait_leader_originium_resonator
                 }
             }
         }
@@ -3195,7 +3195,7 @@ country_event = {
             }
         }
         any_owned_leader = {
-            has_trait = trait_leader_genetic_purist
+            has_trait = trait_leader_originium_resonator
         }
     }
 
@@ -3205,9 +3205,9 @@ country_event = {
                 species = {
                     is_robotic_species = no
                 }
-                has_trait = trait_leader_genetic_purist
+                has_trait = trait_leader_originium_resonator
             }
-            remove_trait = trait_leader_genetic_purist
+            remove_trait = trait_leader_originium_resonator
         }
     }
 }
@@ -3778,7 +3778,7 @@ situation_event = {
         name = ori_ap.230.b
         owner = {
             add_modifier = {
-                modifier = class_system
+                modifier = ori_class_system
                 days = 1800
             }
         }
@@ -3950,7 +3950,7 @@ situation_event = {
         name = ori_ap.250.b
         owner = {
             add_modifier = {
-                modifier = clone_colonies
+                modifier = ori_clone_colonies
                 days = 1800
             }
         }
@@ -4284,7 +4284,7 @@ situation_event = {
         name = ori_ap.295.a
         owner = {
             add_modifier = {
-                modifier = biohacker_haven
+                modifier = ori_biohacker_haven
                 days = 1800
             }
         }
@@ -4304,7 +4304,7 @@ situation_event = {
         name = ori_ap.295.b
         owner = {
             add_modifier = {
-                modifier = limited_autonomy
+                modifier = ori_limited_autonomy
                 days = 1800
             }
         }
@@ -4540,7 +4540,7 @@ situation_event = {
         name = ori_ap.315.b
         owner = {
             add_modifier = {
-                modifier = cognizant_hive
+                modifier = ori_cognizant_hive
                 days = -1
             }
         }
@@ -4647,7 +4647,7 @@ situation_event = {
         name = ori_ap.330.a
         owner = {
             add_modifier = {
-                modifier = relentless_focus
+                modifier = ori_relentless_focus
                 days = 1800
             }
         }
@@ -4660,7 +4660,7 @@ situation_event = {
         name = ori_ap.330.b
         owner = {
             add_modifier = {
-                modifier = infrastructural_bolstering
+                modifier = ori_infrastructural_bolstering
                 days = 1800
             }
             random_owned_leader = {
@@ -4742,13 +4742,13 @@ situation_event = {
                     is_wilderness_empire = yes
                 }
                 add_modifier = {
-                    modifier = rigorous_examination_wilderness
+                    modifier = ori_rigorous_examination_wilderness
                     days = 1800
                 }
             }
             else = {
                 add_modifier = {
-                    modifier = rigorous_examination
+                    modifier = ori_rigorous_examination
                     days = 1800
                 }
             }
@@ -4790,7 +4790,7 @@ situation_event = {
         name = ori_ap.340.a
         owner = {
             add_modifier = {
-                modifier = population_relocation
+                modifier = ori_population_relocation
                 days = 1800
             }
         }
@@ -4803,7 +4803,7 @@ situation_event = {
         name = ori_ap.340.b
         owner = {
             add_modifier = {
-                modifier = factotum_reserves
+                modifier = ori_factotum_reserves
                 days = 1800
             }
         }
@@ -4875,7 +4875,7 @@ situation_event = {
         name = ori_ap.350.b
         owner = {
             add_modifier = {
-                modifier = the_new_batch
+                modifier = ori_the_new_batch
                 days = 1800
             }
         }
@@ -4979,7 +4979,7 @@ situation_event = {
         name = ori_ap.375.b
         owner = {
             add_modifier = {
-                modifier = balanced_advancement
+                modifier = ori_uncomfortable_drones
                 days = 1800
             }
             random_owned_leader = {
@@ -5106,7 +5106,7 @@ situation_event = {
         name = ori_ap.385.b
         owner = {
             add_modifier = {
-                modifier = uncomfortable_drones
+                modifier = ori_uncomfortable_drones
                 days = 1800
             }
             give_next_terraforming_tech_option_effect = yes
@@ -5225,13 +5225,13 @@ situation_event = {
                     is_wilderness_empire = yes
                 }
                 add_modifier = {
-                    modifier = survival_study_wilderness
+                    modifier = ori_ori_survival_study_wilderness
                     days = 1800
                 }
             }
             else = {
                 add_modifier = {
-                    modifier = survival_study
+                    modifier = ori_survival_study
                     days = 1800
                 }
             }

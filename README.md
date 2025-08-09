@@ -1,11 +1,17 @@
+![mod_banner](images/arknights_stellaris_banner.png)
+
 # 明日方舟 Stellaris Mod | Arknights Stellaris Mod
 
 [![开发状态](https://img.shields.io/badge/开发状态-Alpha-orange)](https://github.com/your-repo)
 [![兼容性](https://img.shields.io/badge/Stellaris-3.12+-green)](https://store.steampowered.com/app/281990/Stellaris/)
 
+![mod_logo](images/terra_originium_logo.png)
+
 > 🚧 **开发中** | **Work in Progress** 🚧  
 > 将明日方舟的世界观带入群星，体验泰拉大陆的源石文明！  
 > *Bringing the world of Arknights to Stellaris - Experience the Originium civilization of Terra!*
+
+![gameplay_preview](images/stellaris_arknights_preview.png)
 
 ---
 
@@ -17,7 +23,11 @@
 
 ---
 
+![compatibility_section](images/compatibility_header.png)
+
 ## 🔧 兼容性说明 | Compatibility
+
+![mod_compatibility_chart](images/mod_compatibility_diagram.png)
 
 ### ✅ 兼容的Mod | Compatible Mods
 - UI类mod | UI mods
@@ -31,11 +41,20 @@
 - 修改官方建筑的mod | Mods that modify vanilla buildings
 - 修改官方特质的mod | Mods that modify vanilla traits
 
+![compatibility_warning](images/compatibility_warning_icon.png)
+
 ---
+
+![changelog_header](images/update_log_banner.png)
 
 ## 📋 更新日志 | Update Log
 
+![version_timeline](images/development_timeline.png)
+
 ### 🎯 **2025.8.8** - 源石飞升完成
+
+![originium_ascension](images/originium_ascension_showcase.png)
+
 - ✨ 基本完成源石飞升的所有效果和事件
 - 🔄 重载原版特质以适配新飞升机制
 - 🖼️ 添加了新的图片资源
@@ -43,6 +62,9 @@
 *Completed all effects and events for Originium Ascension path, overrode vanilla traits for compatibility, added new images*
 
 ### 🚀 **2025.8.6** - 飞升框架实现
+
+![ascension_framework](images/ascension_framework_ui.png)
+
 - 🏗️ 源石飞升框架基本实现
 - ⚙️ 传统树效果仍在开发中
 - 📊 抑制剂产量机制需要调整
@@ -50,6 +72,9 @@
 *Originium Ascension framework implemented, tradition tree effects still in development*
 
 ### 🔧 **2025.8.1** - 自动改造系统
+
+![auto_modification](images/auto_mod_system_demo.png)
+
 - 🤖 实现源石技艺版自动改造特质
 - ⚗️ 工匠现在产出矿石病抑制剂
 - ⛏️ 矿工产出少量源石供前期使用
@@ -58,18 +83,27 @@
 *Implemented Originium Arts auto-modification traits, artisans now produce suppressants*
 
 ### 💎 **2025.7.29** - 源石生产系统
+
+![originium_production](images/originium_mining_facility.png)
+
 - ⛏️ 实现源石生产机制（类似纳米机器人）
 - 🔓 暂无前置科技要求
 
 *Implemented Originium production system similar to nanobots*
 
 ### 🖼️ **2025.7.24** - 立绘系统优化
+
+![portrait_system](images/operator_portraits_fixed.png)
+
 - 📐 修改干员立绘尺寸和设置逻辑
 - 🔧 解决立绘重叠和超出边界问题
 
 *Fixed operator portrait sizing and logic issues*
 
 ### 🎲 **2025.7.22** - 抽卡机制完善
+
+![gacha_system](images/gacha_mechanism_preview.png)
+
 - 🎯 完善抽卡机制，更新五星干员逻辑
 - 🖼️ 导入部分干员立绘
 - 🔄 手动处理立绘资源
@@ -77,6 +111,9 @@
 *Improved gacha mechanics and updated 5-star operator logic*
 
 ### 🎮 **2025.7.20** - 基础抽卡系统
+
+![basic_gacha](images/initial_gacha_ui.png)
+
 - 🎲 增加初级抽卡机制
 - 👥 干员特质和立绘系统初步可玩
 
@@ -130,13 +167,13 @@
 
 ---
 
-## 🗓️ 开发路线图 | Development Roadmap
+## 🗓️ 开发进度图 | Development Roadmap
 
 | 功能 | 状态 | 进度  |
 |------|------|-----|
-| 种族系统 | ✅ 完成 | 60% |
-| 特质系统 | 🔄 开发中 | 60% |
-| 传统系统 | 🔄 开发中 | 90% |
+| 种族系统 | ✅ 完成 | 70% |
+| 特质系统 | 🔄 开发中 | 70% |
+| 传统系统 | ✅ 完成 | 90% |
 | 天灾系统 | 📋 计划中 | 20% |
 | 建筑系统 | 🔄 开发中 | 40% |
 | 抽卡系统 | ✅ 基本完成 | 70% |
@@ -161,11 +198,11 @@
 ## 🤝 贡献与反馈 | Contributing & Feedback
 
 欢迎提供建议、报告bug或贡献代码！  
-*Suggestions, bug reports, and code contributions are welcome!*
+*Suggestions, bug reports, and code contributions are welcomed!*
 
 ### 已知问题
-- ~~抑制剂产量在开局时为负值，需要调整~~ ✅ 已修复
-- 部分特质效果仍需数值调整
+- ~~抑制剂产量在开局时为负值，需要调整~~
+- 部分特质效果仍需平衡性调整
 - 立绘系统可能偶有异常
 
 ---
