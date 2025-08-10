@@ -1,14 +1,15 @@
 on_five_year_pulse = {
     events = {
         originium_production.5053
+        arknights_recruitment.1
     }
-}
 
+}
 
 
 on_originium_resonance_events_list = {
     random_events = {
-        # Purity Random Events
+        # Resonance Random Events
         10 = ori_ap.50
         10 = ori_ap.55
         10 = ori_ap.60
@@ -18,7 +19,7 @@ on_originium_resonance_events_list = {
         10 = ori_ap.215
         10 = ori_ap.220
         10 = ori_ap.225
-        # Cloning Random Events
+        # Crystallization Random Events
         10 = ori_ap.70
         10 = ori_ap.75
         10 = ori_ap.80
@@ -27,7 +28,7 @@ on_originium_resonance_events_list = {
         10 = ori_ap.235
         10 = ori_ap.240
         10 = ori_ap.250
-        # Mutation Random Events
+        # Assimilation Random Events
         10 = ori_ap.90
         10 = ori_ap.95
         10 = ori_ap.100
@@ -44,7 +45,7 @@ on_originium_resonance_events_list = {
 
 on_originium_resonance_approach_resonance_events_list = {
     random_events = {
-        # Purity Random Events
+        # Resonance Random Events
         10 = ori_ap.50
         10 = ori_ap.55
         10 = ori_ap.60
@@ -62,7 +63,7 @@ on_originium_resonance_approach_resonance_events_list = {
 
 on_originium_resonance_approach_crystallization_events_list = {
     random_events = {
-        # Cloning Random Events
+        # Crystallization Random Events
         10 = ori_ap.70
         10 = ori_ap.75
         10 = ori_ap.80
@@ -79,7 +80,7 @@ on_originium_resonance_approach_crystallization_events_list = {
 
 on_originium_resonance_approach_assimilation_events_list = {
     random_events = {
-        # Mutation Random Events
+        # Assimilation Random Events
         10 = ori_ap.90
         10 = ori_ap.95
         10 = ori_ap.100
@@ -96,7 +97,7 @@ on_originium_resonance_approach_assimilation_events_list = {
 
 on_originium_resonance_hive_events_list = {
     random_events = {
-        # Purity Random Events
+        # Resonance Random Events
         10 = ori_ap.110
         10 = ori_ap.115
         10 = ori_ap.120
@@ -106,7 +107,7 @@ on_originium_resonance_hive_events_list = {
         10 = ori_ap.325
         10 = ori_ap.330
         10 = ori_ap.335
-        # Cloning Random Events
+        # Crystallization Random Events
         10 = ori_ap.130
         10 = ori_ap.135
         10 = ori_ap.140
@@ -114,7 +115,7 @@ on_originium_resonance_hive_events_list = {
         10 = ori_ap.340
         10 = ori_ap.350
         10 = ori_ap.365
-        # Mutation Random Events
+        # Assimilation Random Events
         10 = ori_ap.150
         10 = ori_ap.155
         10 = ori_ap.160
@@ -131,7 +132,7 @@ on_originium_resonance_hive_events_list = {
 
 on_originium_resonance_hive_approach_resonance_events_list = {
     random_events = {
-        # Purity Random Events
+        # Resonance Random Events
         10 = ori_ap.110
         10 = ori_ap.115
         10 = ori_ap.120
@@ -149,7 +150,7 @@ on_originium_resonance_hive_approach_resonance_events_list = {
 
 on_originium_resonance_hive_approach_crystallization_events_list = {
     random_events = {
-        # Cloning Random Events
+        # Crystallization Random Events
         10 = ori_ap.130
         10 = ori_ap.135
         10 = ori_ap.140
@@ -165,7 +166,7 @@ on_originium_resonance_hive_approach_crystallization_events_list = {
 
 on_originium_resonance_hive_approach_assimilation_events_list = {
     random_events = {
-        # Mutation Random Events
+        # Assimilation Random Events
         10 = ori_ap.150
         10 = ori_ap.155
         10 = ori_ap.160

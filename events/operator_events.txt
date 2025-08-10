@@ -6,10 +6,14 @@ country_event = {
     title = arknights_recruitment.1.name
     desc = arknights_recruitment.1.desc
     # picture =
-
     is_triggered_only = yes
-
+    trigger = {
+        has_country_flag = recruitment_available
+    }
     immediate = {
+        add_resource = {
+            originium = -500
+        }
         # 检查是否所有干员都已被招募
         create_country = {
             name = "NAME_Unknown"

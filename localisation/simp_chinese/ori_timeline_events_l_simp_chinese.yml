@@ -1,0 +1,3 @@
+﻿l_simp_chinese:
+ TIMELINE_EVENT_ORIGENESIS_CRISIS_TOOLTIP: "§H源石计划§!\n§Y危机事件§!\n\n银河系正面临危机。[EVENT_TARGET_0.GetName]打开了所有外交频道，宣称有一场不可见,不可知的危机将要来临。他们的舰队正在集结，所有人都要服从他们的计划。他们不再仅仅是一个帝国，而是演变成了一场危机。"
+ TIMELINE_EVENT_ORIGENESIS_CRISIS: "源石计划\n§L[GetDate]§!"

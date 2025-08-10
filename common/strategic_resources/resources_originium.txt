@@ -43,3 +43,13 @@ originium ={
         base = 10
     }
 }
+
+
+reality_projection = {
+    tradable = no
+    category = other
+
+    ai_weight = {
+        weight = 1
+    }
+}

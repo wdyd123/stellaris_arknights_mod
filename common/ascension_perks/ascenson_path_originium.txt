@@ -116,3 +116,102 @@ ap_originium_resonance = {
         # }
     }
 }
+
+ap_origenesis = {
+    potential = {
+        NOR = {
+            has_ascension_perk = ap_become_the_crisis
+            has_ascension_perk = ap_cosmogenesis
+            has_ascension_perk = ap_defender_of_the_galaxy
+            has_ascension_perk = ap_origenesis
+            has_ascension_perk = ap_behemoths
+            has_origin = origin_slavers # No crisis for MSI
+        }
+
+        is_wilderness_empire = no
+    }
+
+    possible = {
+        # custom_tooltip = {
+        #     fail_text = "requires_ascension_perks_3"
+        #     num_ascension_perks > 2
+        # }
+        custom_tooltip = {
+            fail_text = "requires_independence"
+            is_subject = no
+        }
+        custom_tooltip = {
+            fail_text = "must_not_be_custodian"
+            is_galactic_custodian = no
+        }
+        custom_tooltip = {
+            fail_text = "must_not_be_emperor"
+            is_galactic_emperor = no
+        }
+    }
+
+    on_enabled = {
+        hidden_effect = {
+            set_ai_personality = origenesis_avatar
+            country_event = { id = ori_timeline.69 } # Timeline Become the crisis
+        }
+        activate_crisis_progression = origenesis_path
+    }
+
+    ai_weight = {
+        factor = 7.5
+        modifier = {
+            factor = 0
+            NOR = {
+                is_militarist = yes
+                is_xenophobe = yes
+                is_gestalt = yes
+            }
+        }
+        modifier = {
+            factor = 10
+            is_homicidal = yes
+        }
+        modifier = {
+            factor = 2
+            has_tradition = tr_supremacy_finish
+        }
+        modifier = {
+            factor = 2
+            has_ascension_perk = ap_mind_over_matter
+        }
+        modifier = {
+            factor = 2
+                owner_species = { has_trait = trait_psionic }
+        }
+        modifier = {
+            factor = 2
+            has_ascension_perk = ap_mind_over_matter
+        }
+        modifier = {
+            factor = 0
+            galaxy_percentage < 0.1
+        }
+        modifier = {
+            factor = 2
+            galaxy_percentage > 0.2
+        }
+        modifier = {
+            factor = 2
+            has_ascension_perk = ap_originium_resonance
+        }
+        modifier = {
+            factor = 0
+            count_playable_country = {
+                count > 1
+                limit = {
+                    has_ascension_perk = ap_become_the_crisis
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            blocks_disruptive_gameplay = yes
+        }
+    }
+}

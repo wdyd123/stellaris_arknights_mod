@@ -92,7 +92,8 @@ gacha = {
     potential = {
     }
     effect = {
-        country_event = { id = arknights_recruitment.1 }
+        set_country_flag = recruitmen_available
+        # country_event = { id = arknights_recruitment.1 }
     }
     ai_weight = {
         weight = 0

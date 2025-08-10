@@ -1,0 +1,22 @@
+origenesis_path = {
+    crisis_currency = "reality_projection"
+
+    levels = {
+        crisis_origenesis_level_1
+        crisis_origenesis_level_2
+        crisis_origenesis_level_3
+        crisis_origenesis_level_4
+        crisis_origenesis_level_5
+    }
+
+    objectives = {
+        crisobj_destroy_empires
+        crisobj_destroy_enemy_ships
+        crisobj_destroy_starbases
+        crisobj_purge_pops
+        crisobj_destroy_worlds
+        crisobj_conquer_worlds
+        crisobj_vassalise_empires
+        crisobj_have_vassals
+    }
+}

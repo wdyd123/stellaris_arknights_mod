@@ -104,19 +104,6 @@
  trait_ingenious_originium_II_desc: "§L该物种头脑灵活，善于打破陈规，他们懂得如何最大化利用其基础设施和电力网。\n借助源石,该物种的源石技艺适应性进一步提高。§!\n"
  trait_charismatic_originium_II_desc: "§L这个物种拥有一种特别的魅力，任何其他生物都愿意与他们亲近。\n借助源石,该物种的源石技艺适应性进一步提高。§!\n"
 
- ####################################
- #Resources
- ####################################
- tech_infection_suppressant_i: "一级矿石病抑制剂"
- tech_infection_suppressant_i_desc: "一级源石病抑制剂是最初的源石病防治手段，通过基本的药物成分减缓源石病的扩散。尽管效果有限，它为源石病的控制争取了宝贵的时间。"
- tech_infection_suppressant_ii: "二级矿石病抑制剂"
- tech_infection_suppressant_ii_desc: "二级源石病抑制剂在一级的基础上进行改进，能有效延缓源石病的进程并提高患者的生存期。该技术在临床中表现出了更强的治疗效果，副作用大大减少。"
- tech_infection_suppressant_iii: "三级矿石病抑制剂"
- tech_infection_suppressant_iii_desc: "三级源石病抑制剂是最新的突破性技术，能够彻底控制源石病并恢复患者的生理功能。其高效性和低副作用使源石病的治愈成为可能，为患者带来了新的希望。"
- infection_suppressant: "矿石病抑制剂"
- infection_suppressant_desc: "用于抑制矿石病的医疗试剂，但会对感染者造成伤害，但是好死不如赖活着。"
- originium_desc: "在工业中用量巨大的源石结晶，但有着较高的提取难度。是世界的主要能源类精加工产物，同时也是几乎所有源石技艺得以施展的根本。如今，即使“它会传播绝症”的传言甚嚣尘上，也依旧没多少人能抵挡住它的诱惑。"
- originium: "至纯源石"
  # mod_country_resource_max_originium_add: "占位符"
  # mod_country_resource_max_originium_add_desc: "占位符"
 

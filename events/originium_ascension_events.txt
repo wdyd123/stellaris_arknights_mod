@@ -3578,6 +3578,7 @@ situation_event = {
     is_triggered_only = yes
 
     trigger = {
+
         NOT = { has_situation_flag = originium_220_fire }
         has_situation_flag = resonance_approach_selected
         owner = {

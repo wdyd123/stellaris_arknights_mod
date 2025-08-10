@@ -26,3 +26,27 @@ country_event = {
         }
     }
 }
+
+country_event = {
+    id = ori_timeline.69
+    hide_window = yes
+    is_triggered_only = yes
+
+    trigger = {
+        is_country_type = default
+    }
+
+    immediate = {
+        save_event_target_as = this_country
+
+        add_timeline_event = {
+            type = timeline_crisis
+            override_id = timeline_origesis_crisis
+            override_tooltip = "TIMELINE_EVENT_ORIGENESIS_CRISIS_TOOLTIP"
+            override_types = { country }
+            override_text = { "text:TIMELINE_EVENT_ORIGENESIS_CRISIS" }
+            override_texture = { "background:GFX_evt_crisis_declared" }
+            targets = { event_target:this_country }
+        }
+    }
+}

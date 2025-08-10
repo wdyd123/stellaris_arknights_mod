@@ -1,0 +1,35 @@
+crisis_origenesis_level_1 = {
+    required_crisis_currency = 0
+
+    # REWARDS
+    perks = {
+        menp_objectives
+        menp_undertaker
+        menp_intimidation
+    }
+
+    on_unlock = {
+        hidden_effect = {
+            owner = {
+                country_event = { id = crisis.4140 }
+            }
+        }
+    }
+
+}
+
+crisis_origenesis_level_2 = {
+
+}
+
+crisis_origenesis_level_3 = {
+
+}
+
+crisis_origenesis_level_4 = {
+
+}
+
+crisis_origenesis_level_5 = {
+
+}

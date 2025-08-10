@@ -39,3 +39,9 @@ l_simp_chinese:
  TECH_UNLOCK_PLANTOID_GENETICS_DESC: "允许我们经由物种修饰技术将植物类特质添加给有机物种。"
 
 
+ tech_infection_suppressant_i: "一级矿石病抑制剂"
+ tech_infection_suppressant_i_desc: "一级源石病抑制剂是最初的源石病防治手段，通过基本的药物成分减缓源石病的扩散。尽管效果有限，它为源石病的控制争取了宝贵的时间。"
+ tech_infection_suppressant_ii: "二级矿石病抑制剂"
+ tech_infection_suppressant_ii_desc: "二级源石病抑制剂在一级的基础上进行改进，能有效延缓源石病的进程并提高患者的生存期。该技术在临床中表现出了更强的治疗效果，副作用大大减少。"
+ tech_infection_suppressant_iii: "三级矿石病抑制剂"
+ tech_infection_suppressant_iii_desc: "三级源石病抑制剂是最新的突破性技术，能够彻底控制源石病并恢复患者的生理功能。其高效性和低副作用使源石病的治愈成为可能，为患者带来了新的希望。"
