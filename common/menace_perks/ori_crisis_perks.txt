@@ -1,0 +1,221 @@
+#noinspection ParadoxScriptMissingImage
+reality_etches_objectives = {
+    portrait = "GFX_crisis_icon_reality_etches"
+
+    on_unlock = {
+        custom_tooltip = unlocks_reality_etches_objectives
+    }
+}
+
+
+reality_etcher = {
+    portrait = "GFX_crisis_icon_reality_etcher"
+
+    modifier = {
+        pop_purge_speed = 5.0
+    }
+
+    on_unlock = {
+        custom_tooltip = unlocks_purge
+    }
+}
+
+#FE Buildings
+origenesis_buildings_1 = {
+    portrait = "GFX_crisis_icon_origenesis_building_1"
+
+    on_unlock = {
+        custom_tooltip = unlocks_ori_buildings_1
+    }
+}
+
+#FE Unlock Level 2
+origenesis_techs_1 = {
+    portrait = "GFX_crisis_icon_origenesis_techs_1"
+
+    on_unlock = {
+        custom_tooltip = unlocks_ori_features_1
+    }
+}
+
+#Level 2
+#FE Ships 1
+origenesis_ship_2 = {
+    portrait = "GFX_crisis_icon_origenesis_ship_1"
+
+    on_unlock = {
+        if = {
+            limit = {
+                country_uses_bio_ships = no
+            }
+            custom_tooltip = unlocks_ori_ship_2
+        }
+        else = {
+            custom_tooltip = unlocks_ori_ship_2_bio
+        }
+    }
+}
+
+#Dark Matter 2
+origenesis_buildings_2 = {
+    portrait = "GFX_crisis_icon_origenesis_building_2"
+
+    on_unlock = {
+        custom_tooltip = unlocks_ori_buildings_2
+    }
+}
+
+origenesis_matter_extraction = {
+    portrait = "GFX_crisis_icon_matterextraction"
+
+    modifier = {
+        starbase_shipyard_build_cost_mult = -0.3
+    }
+}
+
+# unlock level 3
+origenesis_cortex_expanding  = {
+    portrait = "GFX_crisis_icon_knowledgeextraction"
+    modifier = {
+        halo_world_limit_add = 1
+        country_leader_pool_size = 7
+        empire_size_mult = -0.05
+    }
+
+    on_unlock = {
+        custom_tooltip = unlocks_ori_features_2
+    }
+
+}
+
+# Level 3
+origenesis_ship_3 = {
+    portrait = "GFX_crisis_icon_origenesis_ship_2"
+
+    on_unlock = {
+        if = {
+            limit = {
+                country_uses_bio_ships = no
+            }
+            custom_tooltip = unlocks_ori_ship_3
+        }
+        else = {
+            custom_tooltip = unlocks_ori_ship_3_bio
+        }
+    }
+}
+
+
+origenesis_buildings_3 = {
+    portrait = "GFX_crisis_icon_origenesis_building_3"
+
+    on_unlock = {
+        custom_tooltip = unlocks_ori_buildings_3
+    }
+}
+
+origenesis_features_3 = {
+    portrait = "GFX_crisis_icon_eternal_expansion"
+
+    modifier = {
+        planet_jobs_produces_mult = 0.25
+        planet_pops_upkeep_mult = 0.1
+        planet_pops_originium_upkeep_mult = 0.1
+        halo_world_limit_add = 1
+    }
+
+    on_unlock = {
+        custom_tooltip = unlocks_ori_features_3
+    }
+}
+
+origenesis_easily_built = {
+    portrait = "GFX_crisis_icon_origenesis_easilyreplaced"
+
+    modifier = {
+        starbase_shipyard_build_speed_mult = 0.5
+    }
+}
+
+# Level 4
+origenesis_ship_4 = {
+    portrait = "GFX_crisis_icon_origenesis_ship_3"
+
+    on_unlock = {
+        if = {
+            limit = {
+                country_uses_bio_ships = no
+            }
+            custom_tooltip = unlocks_ori_ship_4
+        }
+        else = {
+            custom_tooltip = unlocks_ori_ship_4_bio
+        }
+    }
+}
+
+origenesis_buildings_4 = {
+    portrait = "GFX_crisis_icon_origenesis_building_4"
+
+    on_unlock = {
+        custom_tooltip = unlocks_ori_buildings_4
+    }
+}
+
+
+origenesis_originium_components = {
+    portrait = "GFX_crisis_icon_origenesis_building_4"
+    modifier = {
+        ship_armor_add = 0.1
+        ship_hull_add = 0.1
+        ship_shield_add = 0.1
+        ship_accuracy_add = 10
+        ship_weapon_damage = 0.1
+        ship_weapon_range_mult = 0.1
+    }
+
+}
+
+# unlock Level 5
+origenesis_knowledge_extraction  = {
+    portrait = "GFX_crisis_icon_knowledgeextraction"
+
+    modifier = {
+        country_society_research_produces_mult = 0.05
+        country_physics_research_produces_mult = 0.05
+        country_engineering_research_produces_mult = 0.05
+        halo_world_limit_add = 1
+
+    }
+    on_unlock = {
+        custom_tooltip = unlocks_ori_features_5
+    }
+
+}
+
+# Level 5
+origenesis_galatic_consumption = {
+    portrait = "GFX_crisis_icon_knowledgeextraction"
+
+    on_unlock = {
+        custom_tooltip = unlocks_ori_features_6
+    }
+
+}
+
+#FE Buildings 5
+origenesis_buildings_5 = {
+    portrait = "GFX_crisis_icon_origenesis_building_5"
+
+    on_unlock = {
+        custom_tooltip = unlocks_ori_buildings_5
+    }
+}
+
+origenesis_techs_5 = {
+    portrait = "GFX_crisis_icon_oritech"
+
+    on_unlock = {
+        custom_tooltip = unlocks_ori_techs_5
+    }
+}

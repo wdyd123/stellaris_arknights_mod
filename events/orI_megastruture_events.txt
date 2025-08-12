@@ -1,0 +1,20 @@
+namespace = ori_ms
+
+country_event = {
+    id = ori_ms.5065
+    hide_window = yes
+    location = FROM
+
+    is_triggered_only = yes
+
+    trigger = {
+        last_increased_tech = tech_halo_world
+    }
+
+    immediate = {
+        set_variable = {
+            which = halo_world_counter
+            value = 0
+        }
+    }
+}

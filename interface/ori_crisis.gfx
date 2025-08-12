@@ -1,0 +1,7 @@
+spriteTypes = {
+    spriteType = {
+        name = "GFX_crisis_icon_reality_etches"
+        texturefile = "gfx/interface/icons/crisis/cosmogenesis_icon_advanced_logic.dds"
+        noOfFrames = 2
+    }
+}

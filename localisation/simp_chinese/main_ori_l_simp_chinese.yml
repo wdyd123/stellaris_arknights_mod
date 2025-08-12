@@ -1,4 +1,0 @@
-l_simp_chinese:
- TIMELINE_EVENT_ORIGINIUM_REGULAR: "命运所指\n§L[GetDate]§!"
- TIMELINE_EVENT_ORIGINIUM_REGULAR_TOOLTIP: "§H错综的命运显出踪迹§!\n§Y帝国事件§!\n\n§L[GetDate]§!，[EVENT_TARGET_0.GetName]完成了源石飞升"
-

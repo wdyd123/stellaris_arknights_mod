@@ -121,3 +121,8 @@ originium_harvester_deposit_num = {
     }
     divide = 10
 }
+
+halo_world_limit = {
+    base = 0
+    add = modifier:dyson_swarm_limit_add
+}

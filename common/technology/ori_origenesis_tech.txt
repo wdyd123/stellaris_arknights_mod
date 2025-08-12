@@ -1,0 +1,21 @@
+tech_originium_awakening = {
+    area = physics
+    cost = 10000
+    tier = 5
+    category = { computing }
+    ai_update_type = all
+    is_rare = yes
+    weight = 0
+
+    potential = {
+        has_ascension_perk = ap_origenesis
+    }
+
+    prereqfor_desc = {
+        custom = {
+            title = origenesis_level_1_tech_title
+            desc = origenesis_level_1_tech_desc
+        }
+    }
+
+}

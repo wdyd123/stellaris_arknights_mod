@@ -1,0 +1,292 @@
+entity = {
+    name = "haloworld_seam_entity_01_full_entity"
+    cull_radius = 10000.0
+    scale = 0.8
+    locator = { name = "ringworld_north"      position = { 605.88 0 90 } rotation = { 90  30 0  }     }
+    locator = { name = "ringworld_south"      position = { -294.12 0 90 } rotation = { -90 30 0  }     }
+    locator = { name = "ringworld_west"       position = { 155.88 -225 479.7 } rotation = { 0   30 0  }     }
+    locator = { name = "ringworld_east"       position = { 155.88 225 -299.7 } rotation = { 180 30 0  }     }
+    state = { name = "construction" }
+
+    attach = { ringworld_north     = "ringworld_3x_seams_entity" }
+    attach = { ringworld_south     = "ringworld_3x_seams_entity" }
+    attach = { ringworld_west      = "ringworld_3x_seams_entity" }
+    attach = { ringworld_east      = "ringworld_3x_seams_entity" }
+}
+
+
+
+entity = {
+    name = "haloworld_3x_seams_entity_08"
+    cull_radius = 500.0
+    pdxmesh = "ringworld_construction_mesh"
+    scale = 0.8
+    meshsettings = {
+        name = "polySurface128Shape"
+        index = 0
+        texture_diffuse = "ringworld_construction_diffuse.dds"
+        texture_normal = "ringworld_construction_normal.dds"
+        texture_specular = "ringworld_construction_specular.dds"
+        shader = "PdxMeshTerra"
+    }
+
+    meshsettings = {
+        name = "polySurface161Shape"
+        index = 0
+        texture_diffuse = "ringworld_seam_arthropoid_01_diffuse.dds"
+        texture_normal = "ringworld_seam_normal.dds"
+        texture_specular = "ringworld_seam_arthropoid_01_specular.dds"
+        shader = "PdxMeshTerra"
+    }
+
+    default_state = "idle"
+    state = { name = "idle"
+        start_event = { trigger_once = yes sound = { soundeffect = "ringworld_hum_idle_02" stop_on_state_change = yes } }
+    }
+    state = { name = "construction"
+        start_event = { trigger_once = yes sound = { soundeffect = "ringworld_construction_ambient" } }
+    }
+
+    locator = { name = "locator1" 	position = { -225 	0 	-60.289 	} rotation ={ -30 0 0} 	}
+    locator = { name = "locator2" 	position = {  225 	0 	-60.289		} rotation ={ 30 0 0}	}
+
+    attach = { locator1 = "ringworld_construction_entity" }
+    attach = { locator2 = "ringworld_construction_entity" }
+}
+
+
+
+entity = {
+    name = "haloworld_construction_entity"
+    cull_radius = 500.0
+    pdxmesh = "ringworld_construction_mesh"
+    meshsettings = {
+        name = "polySurface128Shape"
+        index = 0
+        texture_diffuse = "ringworld_construction_diffuse.dds"
+        texture_normal = "ringworld_construction_normal.dds"
+        texture_specular = "ringworld_construction_specular.dds"
+        shader = "PdxMeshTerra"
+    }
+
+    meshsettings = {
+        name = "polySurface161Shape"
+        index = 0
+        texture_diffuse = "ringworld_seam_arthropoid_01_diffuse.dds"
+        texture_normal = "ringworld_seam_normal.dds"
+        texture_specular = "ringworld_seam_arthropoid_01_specular.dds"
+        shader = "PdxMeshTerra"
+    }
+}
+
+entity = {
+    name = "haloworld_full_construction_entity_ro"
+    cull_radius = 1000
+    scale = 0.8
+    locator = { name = "locator1"
+        position = { 0  0  0 }
+        rotation = { 30 60 0 }
+    }
+    attach = { locator1 = "haloworld_full_construction_entity" }
+}
+
+entity = {
+    name = "haloworld_full_construction_entity"
+    cull_radius = 500.0
+    scale = 1
+
+
+    default_state = "idle"
+    state = { name = "idle"
+        start_event = { trigger_once = yes sound = { soundeffect = "ringworld_hum_idle_02" stop_on_state_change = yes } }
+    }
+
+    state = { name = "construction"
+        start_event = { trigger_once = yes sound = { soundeffect = "ringworld_construction_ambient" } }
+    }
+
+    # 12个部分，每个占30度
+    # 半径设为450（与你原来的保持一致）
+    # 每个部分的旋转角度 = 该部分的位置角度
+
+    # 0度位置（12点钟方向）
+    locator = { name = "locator1"
+        position = { 0  0  450 }
+        rotation = { 0 0 0 }
+    }
+
+    # 30度位置（1点钟方向）
+    locator = { name = "locator2"
+        position = { 225  0  389.71 }
+        rotation = { 30 0 0 }
+    }
+
+    # 60度位置（2点钟方向）
+    locator = { name = "locator3"
+        position = { 389.71  0  225 }
+        rotation = { 60 0 0 }
+    }
+
+    # 90度位置（3点钟方向）
+    locator = { name = "locator4"
+        position = { 450  0  0 }
+        rotation = { 90 0 0 }
+    }
+
+    # 120度位置（4点钟方向）
+    locator = { name = "locator5"
+        position = { 389.71  0  -225 }
+        rotation = { 120 0 0 }
+    }
+
+    # 150度位置（5点钟方向）
+    locator = { name = "locator6"
+        position = { 225  0  -389.71 }
+        rotation = { 150 0 0 }
+    }
+
+    # 180度位置（6点钟方向）
+    locator = { name = "locator7"
+        position = { 0  0  -450 }
+        rotation = { 180 0 0 }
+    }
+
+    # 210度位置（7点钟方向）
+    locator = { name = "locator8"
+        position = { -225  0  -389.71 }
+        rotation = { -150 0 0 }  # 或 210 0 0
+    }
+
+    # 240度位置（8点钟方向）
+    locator = { name = "locator9"
+        position = { -389.71  0  -225 }
+        rotation = { -120 0 0 }  # 或 240 0 0
+    }
+
+    # 270度位置（9点钟方向）
+    locator = { name = "locator10"
+        position = { -450  0  0 }
+        rotation = { -90 0 0 }  # 或 270 0 0
+    }
+
+    # 300度位置（10点钟方向）
+    locator = { name = "locator11"
+        position = { -389.71  0  225 }
+        rotation = { -60 0 0 }  # 或 300 0 0
+    }
+
+    # 330度位置（11点钟方向）
+    locator = { name = "locator12"
+        position = { -225  0  389.71 }
+        rotation = { -30 0 0 }  # 或 330 0 0
+    }
+
+    # 附加12个construction实体
+    attach = { locator1 = "haloworld_construction_entity" }
+    attach = { locator2 = "haloworld_construction_entity" }
+    attach = { locator3 = "haloworld_construction_entity" }
+    attach = { locator4 = "haloworld_construction_entity" }
+    attach = { locator5 = "haloworld_construction_entity" }
+    attach = { locator6 = "haloworld_construction_entity" }
+    attach = { locator7 = "haloworld_construction_entity" }
+    attach = { locator8 = "haloworld_construction_entity" }
+    attach = { locator9 = "haloworld_construction_entity" }
+    attach = { locator10 = "haloworld_construction_entity" }
+    attach = { locator11 = "haloworld_construction_entity" }
+    attach = { locator12 = "haloworld_construction_entity" }
+}
+#
+# entity = {
+#     name = "haloworld_3x_construction_entity"
+#     cull_radius = 500.0
+#     scale = 0.8
+#
+#     default_state = "idle"
+#     state = { name = "idle"
+#         start_event = { trigger_once = yes sound = { soundeffect = "ringworld_hum_idle_02" stop_on_state_change = yes } }
+#     }
+#
+#     state = { name = "construction"
+#         start_event = { trigger_once = yes sound = { soundeffect = "ringworld_construction_ambient" } }
+#     }
+#
+#     locator = { name = "locator1" 	position = { -225   0 	-60.289 	} rotation ={ -30 0 0} 	}
+#     locator = { name = "locator2" 	position = { 0  0 0 }             rotation ={ 0 0 0} 	}
+#     locator = { name = "locator3" 	position = {  225 	0 	-60.289	} rotation ={ 30 0 0}	}
+#
+#     attach = { locator1 = "haloworld_construction_entity" }
+#     attach = { locator2 = "haloworld_construction_entity" }
+#     attach = { locator3 = "haloworld_construction_entity" }
+#
+# }
+#
+# entity = {
+#     name = "haloworld_full_construction_entity"
+#     cull_radius = 500.0
+#     scale = 0.8
+#
+#     default_state = "idle"
+#     state = { name = "idle"
+#         start_event = { trigger_once = yes sound = { soundeffect = "ringworld_hum_idle_02" stop_on_state_change = yes } }
+#     }
+#     #
+#     # state = { name = "construction"
+#     #     start_event = { trigger_once = yes sound = { soundeffect = "ringworld_construction_ambient" } }
+#     # }
+#
+#     locator = { name = "locator1" 	position = { 0   0 	450 	} rotation ={ 0 0 0} 	}
+#     locator = { name = "locator2" 	position = { 450  0 0 }             rotation ={ 90 0 0} 	}
+#     locator = { name = "locator3" 	position = {  -450 	0 	0	} rotation ={ -90 0 0}	}
+#     locator = { name = "locator4" 	position = {  0  0 	-450	} rotation ={ 180 0 0}	}
+#
+#     attach = { locator1 = "haloworld_3x_construction_entity" }
+#     attach = { locator2 = "haloworld_3x_construction_entity" }
+#     attach = { locator3 = "haloworld_3x_construction_entity" }
+#     attach = { locator4 = "haloworld_3x_construction_entity" }
+# }
+#
+# entity = {
+#     name = "haloworld_3x_seams_entity_08_up"
+#     cull_radius = 500.0
+#     scale = 0.8
+#
+#     default_state = "idle"
+#     state = { name = "idle"
+#         start_event = { trigger_once = yes sound = { soundeffect = "ringworld_hum_idle_02" stop_on_state_change = yes } }
+#     }
+#
+#     state = { name = "construction"
+#         start_event = { trigger_once = yes sound = { soundeffect = "ringworld_construction_ambient" } }
+#     }
+#
+#     locator = { name = "locator1" 	position = { -225   -194.856 	-112.5 	} rotation ={ -30 30 0} 	}
+#     locator = { name = "locator2" 	position = { 0  -225 -60.289 }             rotation ={ 0 30 0} 	}
+#     locator = { name = "locator3" 	position = {  225 	-194.856 	-112.5	} rotation ={ 30 30 0}	}
+#
+#     attach = { locator1 = "haloworld_construction_entity" }
+#     attach = { locator2 = "haloworld_construction_entity" }
+#     attach = { locator3 = "haloworld_construction_entity" }
+# }
+#
+# entity = {
+#     name = "haloworld_3x_seams_entity_08_mid"
+#     cull_radius = 500.0
+#     scale = 0.8
+#     default_state = "idle"
+#     state = { name = "idle"
+#         start_event = { trigger_once = yes sound = { soundeffect = "ringworld_hum_idle_02" stop_on_state_change = yes } }
+#     }
+#
+#     state = { name = "construction"
+#         start_event = { trigger_once = yes sound = { soundeffect = "ringworld_construction_ambient" } }
+#     }
+#
+#     locator = { name = "locator1" 	position = { -194.856   112.5 	-60.289 	} rotation ={ -30 0 -30} 	}
+#     locator = { name = "locator2" 	position = {    0     0     0 }             rotation ={ 0 0 -30} 	}
+#     locator = { name = "locator3" 	position = {  194.856 	-112.5 	-60.289	} rotation ={ 30 0 -30}	}
+#
+#     attach = { locator1 = "haloworld_construction_entity" }
+#     attach = { locator2 = "haloworld_construction_entity" }
+#     attach = { locator3 = "haloworld_construction_entity" }
+# }
+

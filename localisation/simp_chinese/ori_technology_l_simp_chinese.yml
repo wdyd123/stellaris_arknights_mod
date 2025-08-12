@@ -45,3 +45,7 @@ l_simp_chinese:
  tech_infection_suppressant_ii_desc: "二级源石病抑制剂在一级的基础上进行改进，能有效延缓源石病的进程并提高患者的生存期。该技术在临床中表现出了更强的治疗效果，副作用大大减少。"
  tech_infection_suppressant_iii: "三级矿石病抑制剂"
  tech_infection_suppressant_iii_desc: "三级源石病抑制剂是最新的突破性技术，能够彻底控制源石病并恢复患者的生理功能。其高效性和低副作用使源石病的治愈成为可能，为患者带来了新的希望。"
+
+
+ origenesis_level_1_tech_desc: "§I$tech_originium_awakening$§!\n解开源石的更多功能，我们必须提高能量获取效率。"
+ origenesis_level_1_tech_title: "解锁§I源石计划§!天灾§I等级2§!"

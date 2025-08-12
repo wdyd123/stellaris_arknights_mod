@@ -1,0 +1,23 @@
+tech_halo_world = {
+    area = engineering
+    cost = @tier5cost3
+    tier = 5
+    category = { voidcraft }
+    ai_update_type = all
+    prerequisites = { "tech_mega_engineering" }
+
+    weight = @tier5weight3
+    is_rare = yes
+
+    potential = {
+        has_ascension_perk = ap_origenesis
+    }
+
+    weight_modifier = {
+        factor = 0
+    }
+
+    ai_weight = {
+        factor = @best_megastructure_ai_tech_factor
+    }
+}

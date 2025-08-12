@@ -1,0 +1,37 @@
+# On becoming a Crisis Empire (Crisis Level 1)
+namespace = ori_crisis
+country_event = {
+    id = ori_crisis.4140
+    title = "ori_crisis.4140.name"
+    desc = {
+        text = ori_crisis.4140.desc
+    }
+    picture = GFX_evt_sign_of_apocalypse
+    show_sound = event_death_cult
+    event_chain = origenesis_chain
+
+    is_triggered_only = yes
+
+    immediate = {
+        begin_event_chain = {
+            event_chain = origenesis_chain
+            target = root
+        }
+    }
+
+    option = {
+        name = ori_crisis.4140.a
+        tooltip = {
+            begin_event_chain = {
+                event_chain = origenesis_chain
+                target = root
+            }
+        }
+        add_event_chain_counter = {
+            event_chain = "origenesis_chain"
+            counter = "origenesis_level_reached"
+            amount = 1
+        }
+        custom_tooltip = new_origenesis_perks_tt
+    }
+}

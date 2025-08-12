@@ -335,6 +335,9 @@
 
  mod_ORIGINOID_species_trait_points_add: "源石物种$species_trait_points_add$"
  mod_ORIGINOID_species_trait_picks_add: "源石物种$SPECIES_TRAIT_PICKS$"
+
+ mod_planet_pops_originium_upkeep_mult: "人口$r_originium$维护费"
+
  ####################################
  #Tradition
  ####################################

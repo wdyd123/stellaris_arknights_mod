@@ -1,0 +1,286 @@
+# Halo World First Stage
+halo_world_1 = {
+    entity = "construction_platform_entity"
+    construction_entity = "construction_platform_entity"
+    portrait = "GFX_megastructure_construction_background"
+    place_entity_on_planet_plane = no
+    build_type = inside_gravity_well
+    use_planet_resource = no
+    build_time = 720 # 3 years
+    resources = {
+        category = megastructures
+        cost = {
+            unity = 2500
+        }
+        cost = {
+            trigger = {
+                country_uses_bio_ships = no
+            }
+            alloys = 2500
+        }
+        cost = {
+            trigger = {
+                country_uses_bio_ships = yes
+            }
+            alloys = 2500
+            mult = 0.5
+        }
+        cost = {
+            trigger = {
+                country_uses_bio_ships = yes
+            }
+            food = 2500
+            mult = @halved_alloy_to_food_cost_ratio
+        }
+    }
+
+    prerequisites = { "tech_halo_world" }
+
+    potential = {
+        always = yes
+    }
+
+    possible = {
+        hidden_trigger = {
+            exists = starbase
+        }
+        custom_tooltip = {
+            fail_text = "requires_inside_border"
+            is_inside_border = from
+        }
+        custom_tooltip = {
+            fail_text = "requires_no_halo_existing"
+            is_inside_border = from
+        }
+        custom_tooltip = {
+            fail_text = "requires_surveyed_system"
+            NOT = {
+                any_system_planet = {
+                    is_surveyed = {
+                        who = prev.from
+                        status = no
+                    }
+                }
+            }
+        }
+        custom_tooltip = {
+            fail_text = "requires_less_than_x_halo_worlds"
+            from = {
+                check_variable = {
+                    which = halo_world_counter
+                    value <= value:halo_world_limit
+                }
+            }
+        }
+    }
+
+    placement_rules = {
+        planet_possible = {
+            custom_tooltip = {
+                fail_text = "BUILD_MEGASTRUCTURE_PLANET_TARGET_NEEDED"	# these loc lines are inverted
+                always = no
+            }
+        }
+    }
+
+    # root = system
+    # from = country
+    ai_weight = {
+        factor = 15
+
+        modifier = {
+            add = 10
+            is_bottleneck_system = yes
+        }
+
+        complex_trigger_modifier = {
+            trigger = count_neighbor_system
+            mode = add
+            mult = 1
+        }
+
+        complex_trigger_modifier = {
+            trigger = count_starbase_in_system
+            mode = add
+            mult = -1
+        }
+
+        complex_trigger_modifier = {
+            trigger = count_bypass_in_system
+            mode = add
+            mult = 1
+        }
+
+        modifier = {
+            factor = 0.1
+            starbase = { NOT = { has_starbase_size >= starbase_starfortress } }
+        }
+
+        modifier = {
+            add = 5
+            any_neighbor_system = {
+                exists = owner
+                NOT = {
+                    owner = { is_same_value = from }
+                }
+            }
+        }
+
+        modifier = {
+            factor = 1.15
+            from = {
+                has_origin = origin_starlit_citadel
+            }
+        }
+    }
+
+    on_build_start = {
+        from = {
+            change_variable = {
+                which = halo_world_counter
+                value = 1
+            }
+        }
+    }
+    on_build_cancel = {
+        from = {
+            if = {
+                limit = {
+                    check_variable = {
+                        which = dyson_swarm_counter
+                        value >= 1
+                    }
+                }
+                change_variable = {
+                    which = dyson_swarm_counter
+                    value = -1
+                }
+            }
+        }
+
+    }
+    on_build_complete = {
+        spawn_planet = {
+            name = "NAME_Ring_Section_C"
+            class = pc_city
+            size = 1
+            location = fromfrom
+            init_effect = {
+                set_planet_flag = anchor
+            }
+        }
+    }
+}
+
+
+halo_world_2_intermediate = {
+    entity = ""
+    construction_entity = "haloworld_seam_entity_01_full_entity"
+    construction_scale = 0.8
+    portrait = "GFX_megastructure_construction_background"
+    show_galactic_map_icon = yes
+    show_in_outliner = yes
+    build_time = 4800
+    resources = {
+        category = megastructures
+        cost = {
+            trigger = {
+                country_uses_bio_ships = no
+            }
+            alloys = 6000
+        }
+        cost = {
+            trigger = {
+                country_uses_bio_ships = yes
+            }
+            alloys = 6000
+            mult = 0.5
+        }
+        cost = {
+            trigger = {
+                country_uses_bio_ships = yes
+            }
+            food = 6000
+            mult = @halved_alloy_to_food_cost_ratio
+        }
+    }
+
+    upgrade_from = {
+        halo_world_1
+    }
+
+    prerequisites = { "tech_halo_world" }
+
+    on_build_start = {}
+    on_build_cancel = {}
+
+    on_build_complete = {
+        random_system_planet = {
+            limit = { has_planet_flag = anchor }
+            save_event_target_as = anchor_planet
+        }
+        spawn_megastructure = {
+            name = "NAME_Ring_Section_A"
+            type = "halo_world_2"
+            orbit_angle = 0
+            orbit_distance = 0.1
+            owner = from
+            graphical_culture = fromfrom
+            planet = event_target:anchor_planet
+        }
+        # spawn_megastructure = {
+        #     name = "NAME_Ring_Section_A"
+        #     type = "halo_world_2"
+        #     orbit_angle = 0
+        #     orbit_distance = 36
+        #     owner = from
+        #     graphical_culture = fromfrom
+        #     planet = event_target:anchor_planet
+        # }
+        # spawn_megastructure = {
+        #     name = "NAME_Ring_Section_B"
+        #     type = "halo_world_2"
+        #     orbit_angle = 90
+        #     orbit_distance = 36
+        #     owner = from
+        #     graphical_culture = fromfrom
+        #     planet = event_target:anchor_planet
+        # }
+        # spawn_megastructure = {
+        #     name = "NAME_Ring_Section_C"
+        #     type = "halo_world_2"
+        #     orbit_angle = 180
+        #     orbit_distance = 36
+        #     owner = from
+        #     graphical_culture = fromfrom
+        #     planet = event_target:anchor_planet
+        # }
+        # spawn_megastructure = {
+        #     name = "NAME_Ring_Section_D"
+        #     type = "halo_world_2"
+        #     orbit_angle = 270
+        #     orbit_distance = 36
+        #
+        #     owner = from
+        #     graphical_culture = fromfrom
+        #     planet = event_target:anchor_planet
+        # }
+
+        remove_megastructure = fromfrom
+    }
+}
+
+
+
+halo_world_2 = {
+    entity = "haloworld_full_construction_entity_ro"
+    portrait = "GFX_megastructure_construction_background"
+    rotate_to_center = yes
+    upgrade_from = {
+        halo_world_2_intermediate
+    }
+    scales_with_planet = no
+    # used from script only
+    upgrade_desc = hide
+    potential = { always = no }
+}

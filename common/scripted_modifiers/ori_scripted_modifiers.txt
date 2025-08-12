@@ -5,3 +5,9 @@ prophecy_progress_mult = {
     category = planet
 }
 
+halo_world_limit_add = {
+    icon = "mod_country_megastructure_build_cap_add"
+    good = yes
+    category = country
+}
+

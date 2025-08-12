@@ -3,15 +3,16 @@ crisis_origenesis_level_1 = {
 
     # REWARDS
     perks = {
-        menp_objectives
-        menp_undertaker
-        menp_intimidation
+        reality_etches_objectives
+        reality_etcher
+        origenesis_buildings_1
+        origenesis_techs_1
     }
 
     on_unlock = {
         hidden_effect = {
             owner = {
-                country_event = { id = crisis.4140 }
+                country_event = { id = ori_crisis.4140 }
             }
         }
     }
@@ -19,17 +20,48 @@ crisis_origenesis_level_1 = {
 }
 
 crisis_origenesis_level_2 = {
+    allow = {
+        custom_tooltip = {
+            success_text = origenesis_level_2_req_clear_tooltip
+            fail_text =	origenesis_level_2_req_tooltip
+            has_technology = tech_originium_awakening
+        }
+    }
+    required_crisis_currency = 1000
+    perks = {
+        origenesis_ship_2
+        origenesis_buildings_2
+        origenesis_matter_extraction
+        origenesis_cortex_expanding
+    }
+    on_unlock = {
+        add_origenesis_level_2_perks = yes
 
+    }
 }
 
 crisis_origenesis_level_3 = {
-
+    perks = {
+        origenesis_ship_3
+        origenesis_buildings_3
+        origenesis_features_3
+        origenesis_easily_built
+    }
 }
 
 crisis_origenesis_level_4 = {
-
+    perks = {
+        origenesis_ship_4
+        origenesis_buildings_4
+        origenesis_originium_components
+        origenesis_knowledge_extraction
+    }
 }
 
 crisis_origenesis_level_5 = {
-
+    perks = {
+        origenesis_galatic_consumption
+        origenesis_buildings_5
+        origenesis_techs_5
+    }
 }

@@ -45,7 +45,7 @@ originium ={
 }
 
 
-reality_projection = {
+reality_etches = {
     tradable = no
     category = other
 

@@ -1,5 +1,5 @@
 origenesis_path = {
-    crisis_currency = "reality_projection"
+    crisis_currency = "reality_etches"
 
     levels = {
         crisis_origenesis_level_1

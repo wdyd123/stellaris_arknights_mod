@@ -1,0 +1,17 @@
+defined_text = {
+    name = Get_origenesis_ship_2
+    text = {
+        trigger = {
+            country_uses_bio_ships = yes
+        }
+        localization_key = menp_cosmo_ship_2_desc_bio
+    }
+    default = menp_cosmo_ship_2_desc_regular
+}
+
+
+
+defined_text = {
+    name = origenesis_level_reached
+    default = origenesis_level_reached
+}

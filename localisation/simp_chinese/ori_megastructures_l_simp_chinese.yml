@@ -1,0 +1,21 @@
+﻿l_simp_chinese:
+ TIMELINE_EVENT_ORIGINIUM_REGULAR: "命运所指\n§L[GetDate]§!"
+ TIMELINE_EVENT_ORIGINIUM_REGULAR_TOOLTIP: "§H错综的命运显出踪迹§!\n§I帝国事件§!\n\n§L[GetDate]§!，[EVENT_TARGET_0.GetName]完成了源石飞升"
+
+ pc_halo_world_habitable: "光环区段"
+ pc_halo_world_habitable_desc: "该光环区段是光环的一部分，同行星一样围绕太阳运行。\n不像球形行星那样拥有诸多限制，内圈有大量人造宜居空间。"
+ pc_halo_world_habitable_adj: "$pc_ringworld_habitable_adj$"
+ mod_pc_halo_world_habitable_habitability: "$mod_pc_ringworld_habitable_habitability$"
+ trait_pc_halo_world_habitable_preference: "$trait_pc_ringworld_habitable_preference$"
+ trait_pc_halo_world_habitable_preference_desc: "$trait_pc_ringworld_habitable_preference_desc$"
+ mod_halo_world_limit_add: "§I光环§!上限"
+
+ halo_world_1: "光环基址"
+ halo_world_1_DESC: "这个设施将作为集结地、资源仓库，并为成千上万的光环建设者提供居住区。"
+ halo_world_1_MEGASTRUCTURE_DETAILS: "一个§I$pc_halo_world_habitable$§!容纳了数个行星大小的区块。"
+ halo_world_1_CONSTRUCTION_INFO_DELAYED: "一个完整的光环包含了2个修建完成的光环区段，每一段都相当于一个巨大的盖亚星球。"
+ requires_less_than_x_halo_worlds: "$TRIGGER_FAIL$我们无法同时维持超过[owner.GetHaloWorldLimit]个§I光环§!"
+ halo_world_2: "§I光环§!框架"
+ halo_world_2_DESC: "这个框架结构大体上构成了未完成的环形世界的总表面区域的四分之一。其中较小型的宜居区块的建设工作还没有完成。"
+
+ requires_no_halo_existing: "$TRIGGER_FAIL$每个星系只能支持一座§I光环§!"

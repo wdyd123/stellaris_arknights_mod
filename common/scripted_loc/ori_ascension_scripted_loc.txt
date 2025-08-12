@@ -492,3 +492,8 @@ define_text = {
         localization_key = "['concept_assimilation_authorities']"
     }
 }
+
+defined_text = {
+    name = GetHaloWorldLimit
+    value = value:halo_world_limit
+}

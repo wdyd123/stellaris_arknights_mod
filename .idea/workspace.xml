@@ -7,27 +7,38 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3c23acaf-318b-45fc-ae5e-187f4e105237" name="更改" comment="文案修改,适配了一些修正">
-      <change afterPath="$PROJECT_DIR$/common/ascension_perks/ori_ascension_paths.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common/crisis_levels/ori_crisis_levels.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common/crisis_objectives/ori_crisis_objectives.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common/crisis_paths/origenesis_path.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common/personalities/ori_personalities.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common/situations/ori_recruitment_situations.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gfx/models/planets/ori_halo.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/localisation/simp_chinese/ori_origenesis_l_simp_chinese.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/localisation/simp_chinese/ori_personalities_l_simp_chinese.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/localisation/simp_chinese/ori_timeline_events_l_simp_chinese.yml" afterDir="false" />
+    <list default="true" id="3c23acaf-318b-45fc-ae5e-187f4e105237" name="更改" comment="天灾雏形,等级和美术资源都有缺失&#10;现在在招募法令开启时每五年招募一名领袖">
+      <change afterPath="$PROJECT_DIR$/common/event_chains/ori_origenesis_event_chains.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/megastructures/ori_halo_world.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/menace_perks/ori_crisis_perks.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/planet_classes/ori_planet_classes.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/scripted_loc/ori_crisis_scripted_loc.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/technology/ori_fallen_empire_tech.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/technology/ori_megastructures.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/technology/ori_origenesis_tech.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/events/orI_megastruture_events.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/events/ori_crisis_events.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/technologies/tech_halo_world.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/interface/ori_crisis.gfx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/interface/ori_megastructure_selection.gfx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/localisation/simp_chinese/ori_megastructures_l_simp_chinese.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dictionaries/project.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dictionaries/project.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/ascension_perks/ascenson_path_originium.txt" beforeDir="false" afterPath="$PROJECT_DIR$/common/ascension_perks/ascenson_path_originium.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/edicts/Originium.txt" beforeDir="false" afterPath="$PROJECT_DIR$/common/edicts/Originium.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/on_actions/on_actions_ori.txt" beforeDir="false" afterPath="$PROJECT_DIR$/common/on_actions/on_actions_ori.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/situations/originium_situation.txt" beforeDir="false" afterPath="$PROJECT_DIR$/common/situations/originium_situation.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/events/operator_events.txt" beforeDir="false" afterPath="$PROJECT_DIR$/events/operator_events.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/events/ori_timeline_events.txt" beforeDir="false" afterPath="$PROJECT_DIR$/events/ori_timeline_events.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/events/originium_ascension_events.txt" beforeDir="false" afterPath="$PROJECT_DIR$/events/originium_ascension_events.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/interface/ori_ascension_perk.gfx" beforeDir="false" afterPath="$PROJECT_DIR$/interface/ori_ascension_perk.gfx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/localisation/simp_chinese/ori_ascension_perk_lists_l_simp_chinese.yml" beforeDir="false" afterPath="$PROJECT_DIR$/localisation/simp_chinese/ori_ascension_perk_lists_l_simp_chinese.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/crisis_levels/ori_crisis_levels.txt" beforeDir="false" afterPath="$PROJECT_DIR$/common/crisis_levels/ori_crisis_levels.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/crisis_paths/origenesis_path.txt" beforeDir="false" afterPath="$PROJECT_DIR$/common/crisis_paths/origenesis_path.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/menace_perks/ori_perks.txt" beforeDir="false" afterPath="$PROJECT_DIR$/common/crisis_paths/ori_megastrucures.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/script_values/script_values_originium.txt" beforeDir="false" afterPath="$PROJECT_DIR$/common/script_values/script_values_originium.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/scripted_loc/ori_ascension_scripted_loc.txt" beforeDir="false" afterPath="$PROJECT_DIR$/common/scripted_loc/ori_ascension_scripted_loc.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/scripted_modifiers/ori_scripted_modifiers.txt" beforeDir="false" afterPath="$PROJECT_DIR$/common/scripted_modifiers/ori_scripted_modifiers.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/strategic_resources/resources_originium.txt" beforeDir="false" afterPath="$PROJECT_DIR$/common/strategic_resources/resources_originium.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/events/originium_events.txt" beforeDir="false" afterPath="$PROJECT_DIR$/events/originium_events.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gfx/interface/icons/resources/reality_projection.dds" beforeDir="false" afterPath="$PROJECT_DIR$/gfx/interface/icons/resources/reality_etches.dds" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gfx/interface/icons/resources/reality_projection_grey.dds" beforeDir="false" afterPath="$PROJECT_DIR$/gfx/interface/icons/resources/reality_etches_grey.dds" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gfx/models/planets/ori_halo.asset" beforeDir="false" afterPath="$PROJECT_DIR$/gfx/models/planets/ori_halo.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/localisation/simp_chinese/main_ori_l_simp_chinese.yml" beforeDir="false" afterPath="$PROJECT_DIR$/localisation/simp_chinese/main_1_ori_l_simp_chinese.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/localisation/simp_chinese/name_lists_l_simp_chinese.yml" beforeDir="false" afterPath="$PROJECT_DIR$/localisation/simp_chinese/name_lists_l_simp_chinese.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/localisation/simp_chinese/ori_origenesis_l_simp_chinese.yml" beforeDir="false" afterPath="$PROJECT_DIR$/localisation/simp_chinese/ori_origenesis_l_simp_chinese.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/localisation/simp_chinese/ori_resources_l_simp_chinese.yml" beforeDir="false" afterPath="$PROJECT_DIR$/localisation/simp_chinese/ori_resources_l_simp_chinese.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -80,9 +91,9 @@
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;master&quot;,
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/OneDrive/Documents/Paradox Interactive/Stellaris/mod/00001/gfx/interface/icons/resources&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/OneDrive/Documents/Paradox Interactive/Stellaris/mod/00001/gfx/interface/icons/technologies&quot;,
     &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;com.intellij.platform.ide.impl.presentationAssistant.PresentationAssistantConfigurable&quot;
+    &quot;settings.editor.selected.configurable&quot;: &quot;pls&quot;
   },
   &quot;keyToStringList&quot;: {
     &quot;com.intellij.ide.scratch.ScratchImplUtil$2/新建临时文件&quot;: [
@@ -96,11 +107,11 @@
 }</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\OneDrive\Documents\Paradox Interactive\Stellaris\mod\00001\gfx\interface\icons\technologies" />
       <recent name="D:\OneDrive\Documents\Paradox Interactive\Stellaris\mod\00001\gfx\interface\icons\resources" />
       <recent name="D:\OneDrive\Documents\Paradox Interactive\Stellaris\mod\00001\localisation\english" />
       <recent name="D:\OneDrive\Documents\Paradox Interactive\Stellaris\mod\00001\gfx\interface\icons\jobs" />
       <recent name="D:\OneDrive\Documents\Paradox Interactive\Stellaris\mod\00001\gfx\interface\icons\agenda_icons" />
-      <recent name="D:\OneDrive\Documents\Paradox Interactive\Stellaris\mod\00001\gfx\interface\icons\traditions\tree_icons" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\OneDrive\Documents\Paradox Interactive\Stellaris\mod\00001\.idea" />
@@ -353,7 +364,15 @@
       <option name="project" value="LOCAL" />
       <updated>1754749461607</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="天灾雏形,等级和美术资源都有缺失&#10;现在在招募法令开启时每五年招募一名领袖">
+      <option name="closed" value="true" />
+      <created>1754829630007</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1754829630007</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -415,6 +434,7 @@
     <MESSAGE value="Merge branch 'master' of https://github.com/wdyd123/00001" />
     <MESSAGE value="物种特质可选数修复" />
     <MESSAGE value="文案修改,适配了一些修正" />
-    <option name="LAST_COMMIT_MESSAGE" value="文案修改,适配了一些修正" />
+    <MESSAGE value="天灾雏形,等级和美术资源都有缺失&#10;现在在招募法令开启时每五年招募一名领袖" />
+    <option name="LAST_COMMIT_MESSAGE" value="天灾雏形,等级和美术资源都有缺失&#10;现在在招募法令开启时每五年招募一名领袖" />
   </component>
 </project>
