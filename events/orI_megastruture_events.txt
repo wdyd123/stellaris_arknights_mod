@@ -16,5 +16,9 @@ country_event = {
             which = halo_world_counter
             value = 0
         }
+        set_variable = {
+            which = colonized_halo_counter
+            value = 0
+        }
     }
 }

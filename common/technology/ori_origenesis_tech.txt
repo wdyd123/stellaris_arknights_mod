@@ -19,3 +19,90 @@ tech_originium_awakening = {
     }
 
 }
+
+
+# 第二级科技
+tech_cortex_expansion = {
+    area = physics
+    cost = 50000
+    tier = 5
+    category = { computing }
+    ai_update_type = all
+    is_rare = yes
+    weight = 0
+
+    potential = {
+        has_ascension_perk = ap_origenesis
+    }
+
+    prereqfor_desc = {
+        custom = {
+            title = origenesis_level_2_tech_title
+            desc = origenesis_level_2_tech_desc
+        }
+    }
+}
+
+# 第三级科技
+tech_orignium_override = {
+    area = physics
+    cost = 100000
+    tier = 5
+    category = { field_manipulation }
+    ai_update_type = all
+    is_rare = yes
+    weight = 0
+
+    potential = {
+        has_ascension_perk = ap_origenesis
+    }
+
+    prereqfor_desc = {
+        custom = {
+            title = origenesis_level_3_tech_title
+            desc = origenesis_level_3_tech_desc
+        }
+    }
+}
+# 第四级科技
+tech_mind_integration = {
+    area = physics
+    cost = 200000
+    tier = 5
+    category = { computing }
+    ai_update_type = all
+    is_rare = yes
+    weight = 0
+
+    potential = {
+        has_ascension_perk = ap_origenesis
+    }
+
+    prereqfor_desc = {
+        custom = {
+            title = origenesis_level_4_tech_title
+            desc = origenesis_level_4_tech_desc
+        }
+    }
+}
+# 第五级科技
+tech_stellar_guidance = {
+    area = physics
+    cost = 200000
+    tier = 5
+    category = { field_manipulation }
+    ai_update_type = all
+    is_rare = yes
+    weight = 0
+
+    potential = {
+        has_ascension_perk = ap_origenesis
+    }
+
+    prereqfor_desc = {
+        custom = {
+            title = origenesis_level_5_tech_title
+            desc = origenesis_level_5_tech_desc
+        }
+    }
+}

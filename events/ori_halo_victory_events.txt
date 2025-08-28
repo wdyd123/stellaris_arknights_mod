@@ -1,0 +1,59 @@
+namespace = halo
+
+planet_event = {
+    id = halo.1000
+    title = "halo.1001.name"
+    desc = "halo.1001.desc"
+    is_triggered_only = yes
+    trigger = {
+            OR = {
+                is_planet_class = pc_halo_world_habitable_01
+                is_planet_class = pc_halo_world_habitable_02
+            }
+    }
+    immediate = {
+
+        owner = {
+            change_variable = {
+                which = colonized_halo_counter
+                value = 1
+            }
+            country_event = {
+                id = halo.1001
+                days = 1
+            }
+        }
+    }
+}
+
+country_event = {
+    id = halo.1001
+    title = "halo.1001.name"
+    desc = "halo.1001.desc"
+    is_triggered_only = yes
+    fire_only_once = yes
+    trigger = {
+        check_variable = {
+            which = colonized_halo_counter
+            value >= 10
+        }
+
+    }
+
+    immediate = {
+        if = {
+            limit = {
+                not = { has_special_project = GALATIC_ETCHING }
+            }
+            enable_special_project = {
+                name = "GALATIC_ETCHING"
+            }
+        }
+    }
+    option = {
+        name = halo.1001.a
+    }
+}
+
+
+

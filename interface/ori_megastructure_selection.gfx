@@ -2,4 +2,5 @@ spriteTypes = {
     spriteType = {
         name = "GFX_halo_world_1_build_icon"
         textureFile = "gfx/interface/icons/technologies/tech_halo_world.dds"
-    }}
+    }
+}

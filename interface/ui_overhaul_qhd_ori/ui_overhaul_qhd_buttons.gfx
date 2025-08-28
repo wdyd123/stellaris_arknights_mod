@@ -1,0 +1,30 @@
+# spriteTypes = {
+#     spriteType = {
+#         name = "GFX_ui_tab_1_long_active"
+#         textureFile = "gfx/ui_overhaul_qhd_ori/buttons/tabs/tab_1_long_active_180px.dds"
+#         noOfFrames = 3
+#         effectFile = "gfx/FX/buttonstate_onlydisable.shader"
+#         transparencecheck = yes
+#     }
+#     spriteType = {
+#         name = "GFX_ui_tab_1_long_inactive"
+#         textureFile = "gfx/ui_overhaul_qhd_ori/buttons/tabs/tab_1_long_inactive_180px.dds"
+#         noOfFrames = 3
+#         effectFile = "gfx/FX/buttonstate_onlydisable.shader"
+#         transparencecheck = yes
+#     }
+#     spriteType = {
+#         name = "GFX_ui_tab_2_long_active"
+#         textureFile = "gfx/ui_overhaul_qhd_ori/buttons/tabs/tab_2_long_active_200px.dds"
+#         noOfFrames = 3
+#         effectFile = "gfx/FX/buttonstate_onlydisable.shader"
+#         transparencecheck = yes
+#     }
+#     spriteType = {
+#         name = "GFX_ui_tab_2_long_inactive"
+#         textureFile = "gfx/ui_overhaul_qhd_ori/buttons/tabs/tab_2_long_inactive_200px.dds"
+#         noOfFrames = 3
+#         effectFile = "gfx/FX/buttonstate_onlydisable.shader"
+#         transparencecheck = yes
+#     }
+# }

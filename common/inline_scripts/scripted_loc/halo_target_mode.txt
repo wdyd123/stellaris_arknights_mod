@@ -1,0 +1,129 @@
+#行星
+text = {
+	trigger = {
+		exists = event_target:halo_target_$target$_@from
+		event_target:halo_target_$target$_@from = {
+			has_planet_flag = halo_mode_01_@from
+		}
+	}
+	localization_key = PLANET_KILLER_CRACKER
+}
+text = {
+	trigger = {
+		exists = event_target:halo_target_$target$_@from
+		event_target:halo_target_$target$_@from = {
+			has_planet_flag = halo_mode_02_@from
+		}
+	}
+	localization_key = PLANET_KILLER_SHIELDER
+}
+text = {
+	trigger = {
+		exists = event_target:halo_target_$target$_@from
+		event_target:halo_target_$target$_@from = {
+			has_planet_flag = halo_mode_03_@from
+		}
+	}
+	localization_key = PLANET_KILLER_NEUTRON
+}
+text = {
+	trigger = {
+		exists = event_target:halo_target_$target$_@from
+		event_target:halo_target_$target$_@from = {
+			has_planet_flag = halo_mode_04_@from
+		}
+	}
+	localization_key = PLANET_KILLER_GODRAY
+}
+text = {
+	trigger = {
+		exists = event_target:halo_target_$target$_@from
+		event_target:halo_target_$target$_@from = {
+			has_planet_flag = halo_mode_05_@from
+		}
+	}
+	localization_key = PLANET_KILLER_NANOBOTS
+}
+text = {
+	trigger = {
+		exists = event_target:halo_target_$target$_@from
+		event_target:halo_target_$target$_@from = {
+			has_planet_flag = halo_mode_06_@from
+		}
+	}
+	localization_key = PLANET_KILLER_DELUGE
+}
+text = {
+	trigger = {
+		exists = event_target:halo_target_$target$_@from
+		event_target:halo_target_$target$_@from = {
+			has_planet_flag = halo_mode_07_@from
+		}
+	}
+	localization_key = PLANET_KILLER_DEVOLUTION
+}
+#星系
+text = {
+	trigger = {
+		exists = event_target:halo_target_$target$_@from
+		event_target:halo_target_$target$_@from = {
+			has_star_flag = halo_mode_01_@from
+		}
+	}
+	localization_key = AOW_text_btn_system_target_mode_01
+}
+text = {
+	trigger = {
+		exists = event_target:halo_target_$target$_@from
+		event_target:halo_target_$target$_@from = {
+			has_star_flag = halo_mode_02_@from
+		}
+	}
+	localization_key = AOW_text_btn_system_target_mode_02
+}
+text = {
+	trigger = {
+		exists = event_target:halo_target_$target$_@from
+		event_target:halo_target_$target$_@from = {
+			has_star_flag = halo_mode_03_@from
+		}
+	}
+	localization_key = AOW_text_btn_system_target_mode_03
+}
+text = {
+	trigger = {
+		exists = event_target:halo_target_$target$_@from
+		event_target:halo_target_$target$_@from = {
+			has_star_flag = halo_mode_04_@from
+		}
+	}
+	localization_key = AOW_text_btn_system_target_mode_04
+}
+text = {
+	trigger = {
+		exists = event_target:halo_target_$target$_@from
+		event_target:halo_target_$target$_@from = {
+			has_star_flag = halo_mode_05_@from
+		}
+	}
+	localization_key = AOW_text_btn_system_target_mode_05
+}
+text = {
+	trigger = {
+		exists = event_target:halo_target_$target$_@from
+		event_target:halo_target_$target$_@from = {
+			has_star_flag = halo_mode_06_@from
+		}
+	}
+	localization_key = AOW_text_btn_system_target_mode_06
+}
+text = {
+	trigger = {
+		exists = event_target:halo_target_$target$_@from
+		event_target:halo_target_$target$_@from = {
+			has_star_flag = halo_mode_07_@from
+		}
+	}
+	localization_key = AOW_text_btn_system_target_mode_07
+}
+default = AOW_text_no_target_mode

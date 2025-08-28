@@ -1,6 +1,6 @@
-pc_halo_world_habitable = {
+pc_halo_world_habitable_01 = {
     ringworld = yes
-    entity = "ringworld_habitable_entity"
+    entity = "haloworld_habitable_entity_01"
     preview_entity = "ringworld_01_damaged_full_entity"
     picture = pc_ringworld
     icon = GFX_planet_type_ringworld
@@ -23,7 +23,51 @@ pc_halo_world_habitable = {
     ideal = yes
     starting_planet = no
     orbit_lines = yes
+    can_be_moon = yes
 
+    has_colonization_influence_cost = no		# applies when within own borders
+
+    is_artificial_planet = yes
+    uses_alternative_skies_for_moons = yes
+
+    auto_trait_prio = {
+        trait_auto_pc_ringworld_habitable_preference
+    }
+
+    modifier = {
+        planet_resettlement_unemployed_destination_mult = 0.5
+        pop_environment_tolerance = 1.0
+    }
+
+    carry_cap_per_free_district = @carry_cap_high
+}
+
+pc_halo_world_habitable_02 = {
+    ringworld = yes
+    entity = "haloworld_habitable_entity_02"
+    preview_entity = "ringworld_01_damaged_full_entity"
+    picture = pc_ringworld
+    icon = GFX_planet_type_ringworld
+    entity_scale = 0.7
+    enable_tilt = no
+    fixed_entity_scale = yes
+    atmosphere_color		= hsv { 0.0 0.0 1.0 }
+    atmosphere_intensity	= 1.0
+    atmosphere_width		= 0.35
+    show_city = yes
+    city_color_lut = "gfx/portraits/misc/colorcorrection_continental.dds"
+    extra_orbit_size = 0
+    extra_planet_count = 0
+    chance_of_ring = 0.0
+    planet_size = 10
+    moon_size = 1
+    colonizable = yes
+    district_set = ring_world
+    starting_district = district_rw_city
+    ideal = yes
+    starting_planet = no
+    orbit_lines = yes
+    can_be_moon = yes
 
     min_distance_from_sun = @habitable_min_distance
     max_distance_from_sun = @habitable_max_distance
@@ -40,6 +84,7 @@ pc_halo_world_habitable = {
     modifier = {
         planet_resettlement_unemployed_destination_mult = 0.5
         pop_environment_tolerance = 1.0
+        empire_size_districts_mult = -0.9
     }
 
     carry_cap_per_free_district = @carry_cap_high
@@ -71,4 +116,29 @@ pc_anchor = {
     ideal = yes
     starting_planet = no
 
+}
+
+pc_black_hole_for_planet = {
+    entity = "black_hole_entity"
+    icon = GFX_planet_type_black_hole
+
+    atmosphere_color		= hsv { 0.075 0.13 1.5 }
+    atmosphere_intensity	= 1.0
+    atmosphere_width		= 1.0
+
+
+
+    min_distance_from_sun = 0
+    max_distance_from_sun = 0
+
+    spawn_odds = 0
+
+    extra_orbit_size = 0
+    extra_planet_count = 0
+
+    chance_of_ring = 0
+
+    planet_size = { min = 20 max = 35 }
+
+    colonizable = no
 }

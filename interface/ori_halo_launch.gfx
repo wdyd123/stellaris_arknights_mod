@@ -1,0 +1,47 @@
+spriteTypes = {
+    spriteType = {
+        name = "halo_button_bg"
+        texturefile = gfx/interface/AOW_ui_icons/UI_starfall_spear/button_halo_bg.dds
+        effectFile = "gfx/FX/buttonstate_onlydisable.shader"
+
+    }
+    spriteType = {
+        name = "halo_button_title_bg"
+        texturefile = gfx/interface/AOW_ui_icons/UI_starfall_spear/button_halo_title_bg.dds
+        borderSize = { x = 5 y = 5 }
+        effectFile = "gfx/FX/buttonstate_onlydisable.shader"
+    }
+    spriteType = {
+        name = "halo_button_mode"
+        texturefile = gfx/interface/AOW_ui_icons/UI_starfall_spear/button_halo_mode.dds
+    }
+    spriteType = {
+        name = "halo_button_target"
+        texturefile = gfx/interface/AOW_ui_icons/UI_starfall_spear/button_halo_target.dds
+    }
+    spriteType = {
+        name = "halo_button_target_mode"
+        texturefile = gfx/interface/AOW_ui_icons/UI_starfall_spear/button_halo_target_mode.dds
+    }
+    spriteType = {
+        name = "halo_button_center"
+        texturefile = gfx/interface/AOW_ui_icons/UI_starfall_spear/button_halo_center.dds
+    }
+    spriteType = {
+        name = "halo_button_left_down"
+        texturefile = gfx/interface/AOW_ui_icons/UI_starfall_spear/button_halo_left_down.dds
+    }
+    spriteType = {
+        name = "halo_button_left_up"
+        texturefile = gfx/interface/AOW_ui_icons/UI_starfall_spear/button_halo_left_up.dds
+    }
+    spriteType = {
+        name = "halo_button_right_down"
+        texturefile = gfx/interface/AOW_ui_icons/UI_starfall_spear/button_halo_right_down.dds
+    }
+    spriteType = {
+        name = "halo_button_right_up"
+        texturefile = gfx/interface/AOW_ui_icons/UI_starfall_spear/button_halo_right_up.dds
+    }
+
+}

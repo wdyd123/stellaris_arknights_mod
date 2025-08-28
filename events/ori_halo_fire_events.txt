@@ -1,0 +1,439 @@
+namespace = halo
+
+country_event = {#选择打击方式
+    id = halo.500
+    title = halo.500.name
+    desc = halo.500.desc
+    location = event_target:targeting_halo
+    picture = "GFX_evt_originium_resonance"
+    is_triggered_only = yes
+    diplomatic = yes
+    custom_gui = "halo_ui"
+    picture_event_data = { room = paragon_keides_room }
+    immediate = {
+        #标记发射者、发射巨构、发射巨构下的星球、发射巨构所在的星系
+        save_event_target_as = halo_controler
+        event_target:targeting_halo = {
+            planet = { save_event_target_as = targeted_planet_halo }
+            solar_system = {
+                save_event_target_as = targeted_system_halo
+                clear_global_event_target = targeted_system_halo_@root
+                save_global_event_target_as = targeted_system_halo_@root
+            }
+        }
+        #清空目标
+        halo_cancel_all_targets = { scope = event_target:halo_controler }
+    }
+    option = {#退出
+        name = halo.500.quit
+        custom_tooltip = halo.500.quit.tooltip
+        custom_gui = halo_ui_option_quit
+        hidden_effect = {
+            #清空目标和旗子
+            halo_cancel_all_targets_and_flags = { scope = root }
+            event_target:targeting_halo = {#光环恢复待机状态
+                set_to_initial_state = yes
+            }
+            country_event = { id = halo.503 }#通知：冷却完成
+        }
+    }
+    option = {#确认
+        name = halo.500.confirm
+        allow = {
+            custom_tooltip = {#发射光环一定要有光环
+                fail_text = "halo_requires_existing_launcher"
+                exists = event_target:targeting_halo
+            }
+            custom_tooltip = {#至少选择一个目标
+                fail_text = "halo_requires_a_target"
+                OR = {
+                    exists = event_target:halo_target_01_@root
+                    exists = event_target:halo_target_02_@root
+                    exists = event_target:halo_target_03_@root
+                    exists = event_target:halo_target_04_@root
+                    exists = event_target:halo_target_05_@root
+                    exists = event_target:halo_target_06_@root
+                    exists = event_target:halo_target_07_@root
+                    exists = event_target:halo_target_08_@root
+                    exists = event_target:halo_target_09_@root
+                    exists = event_target:halo_target_10_@root
+                }
+            }
+            if = {
+                limit = {
+                    resource_stockpile_compare = {
+                        resource = energy
+                        value < 1
+                        mult = 50
+                    }
+                }
+                resource_stockpile_compare = {
+                    resource = energy
+                    value >= 1
+                    mult = 50
+                }
+            }
+            if = {
+                limit = {
+                    resource_stockpile_compare = {
+                        resource = sr_dark_matter
+                        value < 1
+                        mult = 50
+                    }
+                }
+                resource_stockpile_compare = {
+                    resource = sr_dark_matter
+                    value >= 50
+                }
+            }
+        }
+        custom_gui = halo_ui_option_confirm
+        custom_tooltip = halo.500.confirm.tooltip
+        if = {
+            limit = {
+                OR = {
+                    exists = event_target:halo_target_01_@root
+                    exists = event_target:halo_target_02_@root
+                    exists = event_target:halo_target_03_@root
+                    exists = event_target:halo_target_04_@root
+                    exists = event_target:halo_target_05_@root
+                    exists = event_target:halo_target_06_@root
+                    exists = event_target:halo_target_07_@root
+                    exists = event_target:halo_target_08_@root
+                    exists = event_target:halo_target_09_@root
+                    exists = event_target:halo_target_10_@root
+                }
+            }
+            custom_tooltip = halo.500.confirm.total_cost
+            add_resource = {
+                energy = -1
+                mult = 50
+            }
+            add_resource = {
+                sr_dark_matter = -1
+                mult = 50
+            }
+        }
+        hidden_effect = {
+            start_launching_at_halo_target = { target = 01 }
+            start_launching_at_halo_target = { target = 02 }
+            start_launching_at_halo_target = { target = 03 }
+            start_launching_at_halo_target = { target = 04 }
+            start_launching_at_halo_target = { target = 05 }
+            start_launching_at_halo_target = { target = 06 }
+            start_launching_at_halo_target = { target = 07 }
+            start_launching_at_halo_target = { target = 08 }
+            start_launching_at_halo_target = { target = 09 }
+            start_launching_at_halo_target = { target = 10 }
+            #清空目标
+            halo_cancel_all_targets = { scope = event_target:halo_controller }
+        }
+    }
+}
+
+country_event = {#通知：光环已经完成冷却
+    id = halo.503
+    title = halo.503.name
+    desc = halo.503.desc
+    picture = GFX_evt_wormhole
+    show_sound = event_mystic_reveal
+    location = fromfrom
+    is_triggered_only = yes
+    option = {
+        name = halo.503.a
+    }
+}
+
+country_event = {
+    id = halo.511
+    title = halo.511.name
+    desc = halo.511.desc
+    picture = GFX_evt_originium_resonance_assimilation
+    show_sound = event_red_alert
+    location = event_target:targeted_system_halo
+    is_triggered_only = yes
+    option = {
+        trigger = {
+            event_target:targeted_system_halo = {
+            }
+        }
+        name = halo.511.a	#完了
+    }
+}
+
+country_event = {
+    id = halo.512
+    title = halo.512.name
+    desc = halo.512.desc
+    picture = GFX_evt_wormhole
+    show_sound = event_red_alert
+    location = event_target:targeted_planet_halo
+    is_triggered_only = yes
+    option = {
+        trigger = {
+            event_target:targeted_planet_halo = { has_owner = yes }
+        }
+        name = halo.512.a	#完了
+    }
+}
+
+system_event = {
+    id = halo.600
+    hide_window = yes
+    is_triggered_only = yes
+    immediate = {
+        save_event_target_as = targeted_system_halo
+        if = {
+            limit = {
+                exists = space_owner
+                space_owner = { NOT = { is_same_value = event_target:halo_controler } }
+            }
+            space_owner = {
+                set_country_flag = was_hit_by_@event_target:halo_controler
+            }
+        }
+        if = {
+            limit = { NOT = { exists = space_owner } }
+            random_system_planet = { #遭受光环打击标识
+                limit = {
+                    has_owner = yes
+                    owner = { NOT = { is_same_value = event_target:halo_controler } }
+                }
+                owner = { set_country_flag = was_hit_by_@event_target:halo_controler }
+            }
+        }
+        halo_hit_effect = yes
+        if = {
+            limit = {  }
+            system_create_star_explosion_effect = yes #创建恒星爆炸特效
+            event_target:targeting_halo = { set_to_initial_state = yes }#光环替换为待机状态的巨构
+            switch = {
+                trigger = has_star_flag
+                halo_mode_04_@from = {
+                    system_event = { id = halo.640 }
+                    remove_star_flag = halo_mode_04_@from
+                }
+            }
+        }
+        remove_star_flag = system_is_being_hit_by_halo #移除正在被打击的标识
+    }
+}
+
+system_event = {
+    id = halo.640
+    hide_window = yes
+
+    is_triggered_only = yes
+
+    immediate = {
+        add_threat = { who = from.owner amount = 10 }
+        from = {
+            owner = {
+                save_event_target_as = crisis_country
+                add_victory_score = {
+                    source = destroyed_stars_score
+                    score = 10
+                }
+                switch = {
+                    trigger = galaxy_size
+                    huge = { add_resource = { reality_etches = 1000 } }
+                    large = { add_resource = { reality_etches = 1500 } }
+                    medium = { add_resource = { reality_etches = 2000 } }
+                    small = { add_resource = { reality_etches = 2500 } }
+                    tiny = { add_resource = { reality_etches = 3000 } }
+                }
+                if = {
+                    limit = {
+                        NOT = { has_country_flag = cracked_first_star }
+                    }
+                    set_country_flag = cracked_first_star
+                }
+            }
+        }
+        solar_system = { save_event_target_as = destroyed_system }
+        every_playable_country = {
+            limit = {
+                is_ai = no
+                has_communications = event_target:crisis_country
+                NOR = {
+                    is_same_value = event_target:crisis_country
+                    has_country_flag = can_build_star_eaters
+                    has_country_flag = star_eater_alert@event_target:crisis_country
+                }
+                intel_level = {
+                    system = event_target:destroyed_system
+                    level = none
+                }
+            }
+            country_event = { id = crisis.6180 }
+        }
+        every_playable_country = {
+            limit = {
+                is_ai = no
+                has_communications = event_target:crisis_country
+                NOR = {
+                    is_same_value = event_target:crisis_country
+                    has_country_flag = can_build_star_eaters
+                    has_country_flag = star_eater_alert@event_target:crisis_country
+                }
+                intel_level = {
+                    system = event_target:destroyed_system
+                    level > none
+                }
+            }
+            country_event = { id = crisis.6181 }
+        }
+        every_playable_country = {
+            limit = {
+                is_ai = no
+                has_communications = event_target:crisis_country
+                NOR = {
+                    is_same_value = event_target:crisis_country
+                    has_country_flag = star_eater_alert@event_target:crisis_country
+                }
+                has_country_flag = can_build_star_eaters
+            }
+            # country_event = { id = crisis.6182 }
+        }
+        every_playable_country = {
+            limit = {
+                has_communications = event_target:crisis_country
+                NOT = {
+                    has_opinion_modifier = {
+                        who = event_target:crisis_country
+                        modifier = opinion_destroying_systems
+                    }
+                }
+            }
+            add_opinion_modifier = {
+                who = event_target:crisis_country
+                modifier = opinion_destroying_systems
+            }
+        }
+        solar_system = {
+            random_system_planet = {
+                limit = { has_modifier = holy_planet }
+                planet_event = { id = planet_destruction.605 }
+            }
+            system_add_war_exhaustion = yes		#对星系拥有者添加厌战度
+        }
+        halo_destroy_star_system = {
+            PLANET_CLASS = pc_black_hole
+        }
+        system_add_negative_opinion = {
+            opinion_victim = opinion_destroyed_my_system
+            opinion_third_party = opinion_destroyed_a_system
+        }
+
+    }
+}
+
+
+country_event = {
+    id = halo.641
+    title = halo.641.name
+    desc = halo.641.desc
+    picture = GFX_evt_supernova
+    show_sound = event_air_raid_siren
+    location = from
+    is_triggered_only = yes
+    option = { name = OK }
+}
+
+planet_event = {
+    id = halo.700
+    hide_window = yes
+    is_triggered_only = yes
+    immediate = {
+        solar_system = {
+            if = {
+                limit = {
+                    exists = space_owner
+                    root = { has_owner = no }
+                    space_owner = { NOT = { is_same_value = event_target:halo_controller } }
+                }
+                space_owner = {
+                    set_country_flag = was_hit_by_@event_target:halo_controller
+                    save_event_target_as = halo_controller_victim
+                }
+            }
+            if = {
+                limit = {
+                    root = { has_owner = yes }
+                    root.owner = { NOT = { is_same_value = event_target:halo_controller } }
+                }
+                root.owner = {
+                    set_country_flag = was_hit_by_@event_target:halo_controller
+                    save_event_target_as = halo_controller_victim
+                }
+            }
+            halo_hit_effect = yes
+            if = {#成功
+                limit = { root = { } }
+                event_target:targeting_halo = { set_to_initial_state = yes }#光环替换为待机状态的巨构
+                event_target:new_halo = { halo_set_cooldown_days = { days = 60 } }#设置冷却时间
+                create_fleet = {
+                    name = "dummy_colossus"
+                    effect = {
+                        set_owner = event_target:halo_controller
+                        create_ship = {
+                            name = random
+                            random_existing_design = colossus
+                            effect = {
+                                save_event_target_as = halo_dummy_colossus
+                            }
+                        }
+                        set_location = {
+                            target = root
+                            distance = 2000
+                            angle = random
+                        }
+                        save_event_target_as = dummy_colossus_fleet
+                    }
+                }
+                root = {#最终效果
+                    switch = {
+                        trigger = has_planet_flag
+                        halo_mode_01_@from = {
+                            event_target:halo_controller = {
+                                set_country_flag = fired_cracker
+                            }
+                            every_playable_country = {#适合被通知的国家
+                                limit = {
+                                    OR = {
+                                        is_same_value = event_target:halo_controller
+                                        is_same_value = event_target:halo_controller_victim
+                                        AND = {
+                                            NOT = { is_same_value = event_target:halo_controller }
+                                            NOT = { is_same_value = event_target:halo_controller_victim }
+                                            has_communications = event_target:halo_controller
+                                            has_communications = event_target:halo_controller_victim
+                                        }
+                                    }
+                                }
+                                create_message = {
+                                    type = PLANET_DESTROYED
+                                    localization = PLANET_DESTROYED_BY_HALO_DESC
+                                    days = 30
+                                    target = root
+                                    variable = {
+                                        type = name
+                                        localization = PLANET
+                                        scope = root
+                                    }
+                                }
+                            }
+                            fire_on_action = {
+                                on_action = on_destroy_planet_with_PLANET_KILLER_CRACKER
+                                scopes = { from = event_target:halo_dummy_colossus }
+                            }
+                            remove_planet_flag = halo_mode_01_@from
+                        }
+                    }
+                }
+                delete_fleet = event_target:dummy_colossus_fleet
+            }
+        }
+        remove_planet_flag = planet_is_being_hit_by_halo #移除正在被打击的标识
+    }
+}

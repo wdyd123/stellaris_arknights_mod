@@ -124,5 +124,12 @@ originium_harvester_deposit_num = {
 
 halo_world_limit = {
     base = 0
-    add = modifier:dyson_swarm_limit_add
+    add = modifier:halo_world_limit_add
+    max = 5
+}
+
+colinized_halo = {
+    base =0
+    add = modifier:colonized_halo_add
+    max = 10
 }

@@ -1,0 +1,435 @@
+btn_halo_type_capacity = {
+    potential = {
+        NOR = {
+            exists = event_target:halo_target_01_@from
+            exists = event_target:halo_target_02_@from
+            exists = event_target:halo_target_03_@from
+            exists = event_target:halo_target_04_@from
+            exists = event_target:halo_target_05_@from
+            exists = event_target:halo_target_06_@from
+            exists = event_target:halo_target_07_@from
+            exists = event_target:halo_target_08_@from
+            exists = event_target:halo_target_09_@from
+            exists = event_target:halo_target_10_@from
+        }
+    }
+    allow = { always = yes }
+    effect = {
+        custom_tooltip = text_halo_target_capacity_desc
+    }
+}
+btn_halo_type_planet = {
+    potential = {
+        halo_has_target_type = { type = planet scope = from }
+    }
+    allow = { always = yes }
+    effect = {
+        custom_tooltip = text_halo_target_planet_desc
+    }
+}
+btn_halo_type_system = {
+    potential = {
+        halo_has_target_type = { type = galactic_object scope = from }
+    }
+    allow = { always = yes }
+    effect = {
+        custom_tooltip = text_halo_target_system_desc
+    }
+}
+btn_clear_all_targets = {
+    potential = { always = yes }
+    allow = { always = yes }
+    effect = {
+        custom_tooltip = text_clear_all_targets_desc
+        hidden_effect = {
+            halo_cancel_all_targets_and_flags = { scope = from }
+        }
+
+    }
+}
+
+#############################################################################
+#星系
+#############################################################################
+btn_system_target_mode_01 = {#黑域封锁
+    potential = {
+        halo_system_viable_target = yes
+    }
+    allow = {
+        if = {
+            limit = { from = { NOT = { has_technology = TECH_hyperlane_controller } } }
+            from = { has_technology = TECH_hyperlane_controller }
+        }
+        custom_tooltip = {
+            fail_text = "halo_requires_not_isolated"
+            this.solar_system = { any_neighbor_system = { exists = this } }
+        }
+        system_selection_condition_button = { mode = 01 }
+    }
+    effect = {
+        halo_system_selection_button = { mode = 01 }
+    }
+}
+
+btn_system_target_mode_02 = {#净世圣灭
+    potential = {
+        halo_system_viable_target = yes
+    }
+    allow = {
+        custom_tooltip = {
+            fail_text = "halo_requires_has_colony"
+            this.solar_system = {
+                any_system_planet = {
+                    OR = {
+                        pop_amount > 0
+                        is_planet_class = pc_infested
+                    }
+                }
+            }
+        }
+        system_selection_condition_button = { mode = 02 }
+    }
+    effect = {
+        halo_system_selection_button = { mode = 02 }
+    }
+}
+
+
+btn_system_target_mode_03 = { #次元裂痕
+    potential = {
+        halo_system_viable_target = yes
+    }
+    allow = {
+        custom_tooltip = {
+            fail_text = "halo_requires_has_hostile_fleets"
+            this.solar_system = {
+                any_fleet_in_system = {
+                    owner = {
+                        is_hostile = from
+                    }
+                }
+            }
+        }
+        system_selection_condition_button = { mode = 03 }
+    }
+    effect = {
+        halo_system_selection_button = { mode = 03 }
+    }
+}
+
+
+btn_system_target_mode_04 = { #源石化
+    potential = {
+        halo_system_viable_target = yes
+    }
+    allow = {
+        custom_tooltip = {
+            fail_text = "halo_requires_no_primary_black_hole"
+            this.solar_system = {
+                any_system_planet = {
+                    is_primary_star = yes
+                    NOR = {
+                        is_planet_class = pc_black_hole
+                        is_planet_class = pc_microquasar_1
+                        is_planet_class = pc_microquasar_2
+                    }
+                }
+            }
+        }
+        system_selection_condition_button = { mode = 04 }
+    }
+    effect = {
+        halo_system_selection_button = { mode = 04 }
+    }
+}
+
+
+btn_system_target_mode_05 = { #奇异物质
+    potential = {
+        halo_system_viable_target = yes
+    }
+    allow = {
+        if = {
+            limit = { from = { NOT = { has_technology = TECH_weaponization_of_strange_matter } } }
+            from = { has_technology = TECH_weaponization_of_strange_matter }
+        }
+        custom_tooltip = {
+            fail_text = "halo_requires_no_primary_neutron_star"
+            this.solar_system = {
+                any_system_planet = {
+                    is_primary_star = yes
+                    NOR = {
+                        is_planet_class = pc_neutron_star
+                        is_planet_class = pc_pulsar
+                        is_planet_class = pc_magnetar #磁星
+                    }
+                }
+            }
+        }
+        custom_tooltip = {
+            fail_text = "halo_requires_no_primary_black_hole"
+            this.solar_system = {
+                any_system_planet = {
+                    is_primary_star = yes
+                    NOR = {
+                        is_planet_class = pc_black_hole
+                        is_planet_class = pc_microquasar_1
+                        is_planet_class = pc_microquasar_2
+                    }
+                }
+            }
+        }
+        system_selection_condition_button = { mode = 05 }
+    }
+    effect = {
+        halo_system_selection_button = { mode = 05 }
+    }
+}
+
+
+btn_system_target_mode_06 = { #死亡献祭
+    potential = {
+        halo_system_viable_target = yes
+    }
+    allow = {
+        if = {
+            limit = { from = { NOT = { has_megastructure = MEGA_psychic_device_3 } } }
+            from = { has_megastructure = MEGA_psychic_device_3 }
+        }
+        custom_tooltip = {
+            fail_text = "halo_requires_no_primary_black_hole"
+            this.solar_system = {
+                any_system_planet = {
+                    is_primary_star = yes
+                    NOR = {
+                        is_planet_class = pc_black_hole
+                        is_planet_class = pc_microquasar_1
+                        is_planet_class = pc_microquasar_2
+                    }
+                }
+            }
+        }
+        system_selection_condition_button = { mode = 06 }
+    }
+    effect = {
+        halo_system_selection_button = { mode = 06 }
+    }
+}
+
+#############################################################################
+#行星
+#############################################################################
+btn_planet_target_mode_01 = {#地爆天星
+    potential = {
+        halo_planet_viable_target = yes
+    }
+    allow = {
+        if = {
+            limit = { from = { NOT = { has_technology = tech_pk_cracker } } }
+            from = { has_technology = tech_pk_cracker }
+        }
+        if = {
+            limit = { can_destroy_planet_with_PLANET_KILLER_CRACKER = no }
+            can_destroy_planet_with_PLANET_KILLER_CRACKER = yes
+        }
+        planet_selection_condition_button = { mode = 01 }
+    }
+    effect = {
+        halo_planet_selection_button = { mode = 01 }
+    }
+}
+
+btn_planet_target_mode_02 = {#安乐天使
+    potential = {
+        halo_planet_viable_target = yes
+    }
+    allow = {
+        if = {
+            limit = { from = { NOT = { has_technology = tech_pk_shielder } } }
+            from = { has_technology = tech_pk_shielder }
+        }
+        if = {
+            limit = { can_destroy_planet_with_PLANET_KILLER_SHIELDER = no }
+            can_destroy_planet_with_PLANET_KILLER_SHIELDER = yes
+        }
+        planet_selection_condition_button = { mode = 02 }
+    }
+    effect = {
+        halo_planet_selection_button = { mode = 02 }
+    }
+}
+
+btn_planet_target_mode_03 = {#中子灭杀
+    potential = {
+        halo_planet_viable_target = yes
+    }
+    allow = {
+        if = {
+            limit = { from = { NOT = { has_technology = tech_pk_neutron } } }
+            from = { has_technology = tech_pk_neutron }
+        }
+        if = {
+            limit = { can_destroy_planet_with_PLANET_KILLER_NEUTRON = no }
+            can_destroy_planet_with_PLANET_KILLER_NEUTRON = yes
+        }
+        planet_selection_condition_button = { mode = 03 }
+    }
+    effect = {
+        halo_planet_selection_button = { mode = 03 }
+    }
+}
+
+btn_planet_target_mode_04 = {#天神裁决
+    potential = {
+        halo_planet_viable_target = yes
+    }
+    allow = {
+        if = {
+            limit = { from = { NOT = { has_technology = tech_pk_godray } } }
+            from = { has_technology = tech_pk_godray }
+        }
+        if = {
+            limit = { can_destroy_planet_with_PLANET_KILLER_GODRAY = no }
+            can_destroy_planet_with_PLANET_KILLER_GODRAY = yes
+        }
+        planet_selection_condition_button = { mode = 04 }
+    }
+    effect = {
+        halo_planet_selection_button = { mode = 04 }
+    }
+}
+
+btn_planet_target_mode_05 = {#纳米灾疫
+    potential = {
+        halo_planet_viable_target = yes
+    }
+    allow = {
+        if = {
+            limit = { from = { NOT = { has_technology = tech_pk_nanobots } } }
+            from = { has_technology = tech_pk_nanobots }
+        }
+        if = {
+            limit = { can_destroy_planet_with_PLANET_KILLER_NANOBOTS = no }
+            can_destroy_planet_with_PLANET_KILLER_NANOBOTS = yes
+        }
+        planet_selection_condition_button = { mode = 05 }
+    }
+    effect = {
+        halo_planet_selection_button = { mode = 05 }
+    }
+}
+
+btn_planet_target_mode_06 = {#天洪浩荡
+    potential = {
+        halo_planet_viable_target = yes
+    }
+    allow = {
+        if = {
+            limit = { from = { NOT = { has_ascension_perk = ap_hydrocentric } } }
+            from = { has_ascension_perk = ap_hydrocentric }
+        }
+        if = {
+            limit = { can_destroy_planet_with_PLANET_KILLER_DELUGE = no }
+            can_destroy_planet_with_PLANET_KILLER_DELUGE = yes
+        }
+        planet_selection_condition_button = { mode = 06 }
+    }
+    effect = {
+        halo_planet_selection_button = { mode = 06 }
+    }
+}
+
+btn_planet_target_mode_07 = {#降智光束
+    potential = {
+        halo_planet_viable_target = yes
+    }
+    allow = {
+        if = {
+            limit = { from = { NOT = { has_technology = tech_archaeo_pk_devolving_beam } } }
+            from = { has_technology = tech_archaeo_pk_devolving_beam }
+        }
+        if = {
+            limit = { can_destroy_planet_with_PLANET_KILLER_DEVOLUTION = no }
+            can_destroy_planet_with_PLANET_KILLER_DEVOLUTION = yes
+        }
+        planet_selection_condition_button = { mode = 07 }
+    }
+    effect = {
+        halo_planet_selection_button = { mode = 07 }
+    }
+}
+
+#############################################################################
+#目标
+#############################################################################
+btn_halo_target_01 = {
+    potential = { exists = event_target:halo_target_01_@from }
+    allow = { always = yes }
+    effect = {
+        halo_target_button = { target = 01 }
+    }
+}
+btn_halo_target_02 = {
+    potential = { exists = event_target:halo_target_02_@from }
+    allow = { always = yes }
+    effect = {
+        halo_target_button = { target = 02 }
+    }
+}
+btn_halo_target_03 = {
+    potential = { exists = event_target:halo_target_03_@from }
+    allow = { always = yes }
+    effect = {
+        halo_target_button = { target = 03 }
+    }
+}
+btn_halo_target_04 = {
+    potential = { exists = event_target:halo_target_04_@from }
+    allow = { always = yes }
+    effect = {
+        halo_target_button = { target = 04 }
+    }
+}
+btn_halo_target_05 = {
+    potential = { exists = event_target:halo_target_05_@from }
+    allow = { always = yes }
+    effect = {
+        halo_target_button = { target = 05 }
+    }
+}
+btn_halo_target_06 = {
+    potential = { exists = event_target:halo_target_06_@from }
+    allow = { always = yes }
+    effect = {
+        halo_target_button = { target = 06 }
+    }
+}
+btn_halo_target_07 = {
+    potential = { exists = event_target:halo_target_07_@from
+    }
+    allow = { always = yes }
+    effect = {
+        halo_target_button = { target = 07 }
+    }
+}
+btn_halo_target_08 = {
+    potential = { exists = event_target:halo_target_08_@from }
+    allow = { always = yes }
+    effect = {
+        halo_target_button = { target = 08 }
+    }
+}
+btn_halo_target_09 = {
+    potential = { exists = event_target:halo_target_09_@from }
+    allow = { always = yes }
+    effect = {
+        halo_target_button = { target = 09 }
+    }
+}
+btn_halo_target_10 = {
+    potential = { exists = event_target:halo_target_10_@from }
+    allow = { always = yes }
+    effect = {
+        halo_target_button = { target = 10 }
+    }
+}

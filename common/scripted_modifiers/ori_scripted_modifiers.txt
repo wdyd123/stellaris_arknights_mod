@@ -11,3 +11,8 @@ halo_world_limit_add = {
     category = country
 }
 
+colonized_halo_add = {
+    icon = "mod_colony_start_num_pops_add"
+    good = yes
+    category = country
+}

@@ -1,0 +1,17 @@
+@system_energy_01 = 1000
+@system_energy_02 = 2000
+@system_energy_03 = 2000
+@system_energy_04 = 5000
+@system_energy_05 = 5000
+@system_energy_06 = 5000
+@system_originium = 500
+
+
+@planet_energy_01 = 500
+@planet_energy_02 = 500
+@planet_energy_03 = 500
+@planet_energy_04 = 500
+@planet_energy_05 = 500
+@planet_energy_06 = 500
+@planet_energy_07 = 500
+@planet_originium = 50

@@ -1,0 +1,117 @@
+halo_set_cooldown_days = {
+    set_variable = { which = mult value = 1 }
+    set_variable = { which = days value = $days$ }
+    multiply_variable = { which = days value = mult }
+    save_event_target_as = new_halo
+    solar_system = {
+        set_timed_star_flag = { flag = system_halo_is_cooling days = prev.days }
+        set_saved_date = {
+            key = timer_cooling_time
+            days_from_present = prev.days
+            expires = prev.days
+        }
+        # system_event = { id = halo.502 }
+    }
+}
+
+system_add_war_exhaustion = {
+    if = {
+        limit = {
+            exists = space_owner
+            space_owner = { NOT = { is_same_value = event_target:halo_controler } }
+            space_owner = { is_at_war_with = event_target:halo_controler }
+        }
+        space_owner = {
+            add_static_war_exhaustion = {
+                attacker = event_target:halo_controler
+                location = root.star
+                value_for_planet_destruction = 2.0
+            }
+            add_threat = { who = event_target:halo_controler amount = 5 }
+        }
+    }
+}
+planet_add_war_exhaustion = {
+    if = {
+        limit = {
+            exists = owner
+            owner = { NOT = { is_same_value = event_target:halo_controler } }
+            owner = { is_at_war_with = event_target:halo_controler }
+        }
+        owner = {
+            add_static_war_exhaustion = {
+                attacker = event_target:halo_controler
+                location = prev
+                value_for_planet_destruction = $value$
+            }
+            add_threat = { who = event_target:halo_controler amount = 1 }
+        }
+    }
+}
+
+system_add_negative_opinion = {
+    if = {
+        limit = {#被炸星系有拥有者，且拥有者不是发射者
+            exists = space_owner
+            space_owner = { NOT = { is_same_value = event_target:halo_controler } }
+        }
+        space_owner = {
+            add_opinion_modifier = {
+                modifier = $opinion_victim$
+                who = event_target:halo_controler
+            }
+            if = {
+                limit = { NOT = { has_ethic = ethic_gestalt_consciousness } }
+                add_modifier = {
+                    modifier = halo_victim
+                    days = 720 # 10 years
+                }
+            }
+        }
+        every_playable_country = {#第三者加负面评价
+            limit = {
+                NOR = {#不是发射者和被打击者，也不是跟发射者同一个联邦
+                    is_same_value = event_target:halo_controler
+                    is_same_value = prev.space_owner
+                    AND = {
+                        has_federation = yes
+                        is_in_federation_with = event_target:halo_controler
+                    }
+                }
+                #跟发射者和跟被打击者有联系
+                has_communications = event_target:halo_controler
+                has_communications = prev.space_owner
+                OR = {
+                    AND = {#要么跟被打击者同一个联邦
+                        has_federation = yes
+                        is_in_federation_with = prev.space_owner
+                    }
+                    AND = {#要么对受害者友好
+                        opinion_level = {
+                            who = prev.owner
+                            level > neutral
+                        }
+                        opinion_level = {
+                            who = event_target:halo_controler
+                            level <= neutral
+                        }
+                    }
+                    AND = {#要么对打击者不友好
+                        opinion_level = {
+                            who = prev.owner
+                            level >= neutral
+                        }
+                        opinion_level = {
+                            who = event_target:halo_controler
+                            level < neutral
+                        }
+                    }
+                }
+            }
+            add_opinion_modifier = {
+                modifier = $opinion_third_party$
+                who = event_target:halo_controler
+            }
+        }
+    }
+}

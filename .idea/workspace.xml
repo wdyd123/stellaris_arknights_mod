@@ -1,44 +1,101 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="AnalysisUIOptions">
+    <option name="SPLITTER_PROPORTION" value="0.53834236" />
     <option name="ANALYZE_INJECTED_CODE" value="false" />
   </component>
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3c23acaf-318b-45fc-ae5e-187f4e105237" name="更改" comment="天灾雏形,等级和美术资源都有缺失&#10;现在在招募法令开启时每五年招募一名领袖">
-      <change afterPath="$PROJECT_DIR$/common/event_chains/ori_origenesis_event_chains.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common/megastructures/ori_halo_world.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common/menace_perks/ori_crisis_perks.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common/planet_classes/ori_planet_classes.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common/scripted_loc/ori_crisis_scripted_loc.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common/technology/ori_fallen_empire_tech.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common/technology/ori_megastructures.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common/technology/ori_origenesis_tech.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/events/orI_megastruture_events.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/events/ori_crisis_events.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/technologies/tech_halo_world.dds" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/interface/ori_crisis.gfx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/interface/ori_megastructure_selection.gfx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/localisation/simp_chinese/ori_megastructures_l_simp_chinese.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dictionaries/project.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dictionaries/project.xml" afterDir="false" />
+    <list default="true" id="3c23acaf-318b-45fc-ae5e-187f4e105237" name="更改" comment="实现了光环巨构的前两个阶段,以及天灾的部分功能,包括等级/奖励/资源/科技/本地化">
+      <change afterPath="$PROJECT_DIR$/common/inline_scripts/scripted_loc/halo_target_mode.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/script_values/ori_halo_values.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/scripted_effects/ori_halo_animation_effects.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/scripted_effects/ori_halo_destroy_system.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/scripted_effects/ori_halo_effects.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/scripted_effects/ori_halo_utilities_effects.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/scripted_loc/ori_halo_weapon_loc.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/scripted_triggers/ori_scripted_triggers_halo.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/scripted_variables/ori_halo_variables.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/special_projects/ori_halo_projects.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/static_modifiers/ori_halo_modifiers.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/events/ori_halo_fire_events.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/events/ori_halo_victory_events.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/event_pictures/origenesis_crisis.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/event_pictures/sign_of_apocalypse.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/AOW_ui_icons/UI_starfall_spear/button_halo_bg.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/AOW_ui_icons/UI_starfall_spear/button_halo_center.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/AOW_ui_icons/UI_starfall_spear/button_halo_left_down.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/AOW_ui_icons/UI_starfall_spear/button_halo_left_up.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/AOW_ui_icons/UI_starfall_spear/button_halo_mode.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/AOW_ui_icons/UI_starfall_spear/button_halo_right_down.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/AOW_ui_icons/UI_starfall_spear/button_halo_right_up.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/AOW_ui_icons/UI_starfall_spear/button_halo_target.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/AOW_ui_icons/UI_starfall_spear/button_halo_target_mode.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/AOW_ui_icons/UI_starfall_spear/button_halo_title_bg.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/AOW_ui_icons/UI_starfall_spear/button_halo_tutorial_bg.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/crisis/Origenesis_Lvl1_btn.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/crisis/Origenesis_Lvl2_btn.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/crisis/Origenesis_Lvl3_btn.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/crisis/Origenesis_Lvl4_btn.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/crisis/Origenesis_Lvl5_btn.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/crisis/origenesis_BG.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/crisis/origenesis_icon_cortex_expansion.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/crisis/origenesis_icon_easily_built.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/crisis/origenesis_icon_knowledge_extraction.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/crisis/origenesis_icon_matter_extraction.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/crisis/origenesis_icon_origenesis_buildings_1.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/crisis/origenesis_icon_origenesis_buildings_2.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/crisis/origenesis_icon_origenesis_buildings_3.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/crisis/origenesis_icon_origenesis_buildings_4.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/crisis/origenesis_icon_origenesis_buildings_5.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/crisis/origenesis_icon_origenesis_ship_2.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/crisis/origenesis_icon_origenesis_ship_3.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/crisis/origenesis_icon_origenesis_ship_4.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/crisis/origenesis_icon_originium_activation.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/crisis/origenesis_icon_originium_override.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/crisis/origenesis_icon_oritech.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/crisis/origenesis_icon_reality_etcher.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/crisis/origenesis_icon_reality_etches.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/crisis/origenesis_icon_star_consumer.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/crisis/origenesis_levelboxes.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/crisis/origenesis_levels_frame.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/crisis/origenesis_title2.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/ui_overhaul_qhd_ori/buttons/tabs/tab_1_long_active_180px.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/ui_overhaul_qhd_ori/buttons/tabs/tab_1_long_inactive_180px.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/ui_overhaul_qhd_ori/buttons/tabs/tab_2_long_active_200px.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/ui_overhaul_qhd_ori/buttons/tabs/tab_2_long_inactive_200px.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/interface/1.gui" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/interface/ori_halo_launch.gfx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/interface/ori_halo_launch.gui" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/interface/planet_view.gui1" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/interface/ui_overhaul_qhd_ori/ui_overhaul_qhd_buttons.gfx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/localisation/simp_chinese/ori_planets_l_simp_chinese.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/localisation/simp_chinese/ori_special_simp_chinese.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/common/crisis_levels/ori_crisis_levels.txt" beforeDir="false" afterPath="$PROJECT_DIR$/common/crisis_levels/ori_crisis_levels.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/crisis_paths/origenesis_path.txt" beforeDir="false" afterPath="$PROJECT_DIR$/common/crisis_paths/origenesis_path.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/menace_perks/ori_perks.txt" beforeDir="false" afterPath="$PROJECT_DIR$/common/crisis_paths/ori_megastrucures.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/crisis_paths/ori_megastrucures.txt" beforeDir="false" afterPath="$PROJECT_DIR$/common/button_effects/ori_halo_button_effects.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/megastructures/ori_halo_world.txt" beforeDir="false" afterPath="$PROJECT_DIR$/common/megastructures/ori_halo_world.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/menace_perks/ori_crisis_perks.txt" beforeDir="false" afterPath="$PROJECT_DIR$/common/menace_perks/ori_crisis_perks.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/on_actions/on_actions_ori.txt" beforeDir="false" afterPath="$PROJECT_DIR$/common/on_actions/on_actions_ori.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/planet_classes/ori_planet_classes.txt" beforeDir="false" afterPath="$PROJECT_DIR$/common/planet_classes/ori_planet_classes.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/common/script_values/script_values_originium.txt" beforeDir="false" afterPath="$PROJECT_DIR$/common/script_values/script_values_originium.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/scripted_loc/ori_ascension_scripted_loc.txt" beforeDir="false" afterPath="$PROJECT_DIR$/common/scripted_loc/ori_ascension_scripted_loc.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/scripted_effects/ori_origenesis_effects.txt" beforeDir="false" afterPath="$PROJECT_DIR$/common/scripted_effects/ori_origenesis_effects.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/common/scripted_modifiers/ori_scripted_modifiers.txt" beforeDir="false" afterPath="$PROJECT_DIR$/common/scripted_modifiers/ori_scripted_modifiers.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/strategic_resources/resources_originium.txt" beforeDir="false" afterPath="$PROJECT_DIR$/common/strategic_resources/resources_originium.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/events/originium_events.txt" beforeDir="false" afterPath="$PROJECT_DIR$/events/originium_events.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gfx/interface/icons/resources/reality_projection.dds" beforeDir="false" afterPath="$PROJECT_DIR$/gfx/interface/icons/resources/reality_etches.dds" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gfx/interface/icons/resources/reality_projection_grey.dds" beforeDir="false" afterPath="$PROJECT_DIR$/gfx/interface/icons/resources/reality_etches_grey.dds" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/technology/ori_megastructures.txt" beforeDir="false" afterPath="$PROJECT_DIR$/common/technology/ori_megastructures.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/technology/ori_origenesis_tech.txt" beforeDir="false" afterPath="$PROJECT_DIR$/common/technology/ori_origenesis_tech.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/events/orI_megastruture_events.txt" beforeDir="false" afterPath="$PROJECT_DIR$/events/orI_megastruture_events.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/events/ori_crisis_events.txt" beforeDir="false" afterPath="$PROJECT_DIR$/events/ori_crisis_events.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/gfx/models/planets/ori_halo.asset" beforeDir="false" afterPath="$PROJECT_DIR$/gfx/models/planets/ori_halo.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/localisation/simp_chinese/main_ori_l_simp_chinese.yml" beforeDir="false" afterPath="$PROJECT_DIR$/localisation/simp_chinese/main_1_ori_l_simp_chinese.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/localisation/simp_chinese/name_lists_l_simp_chinese.yml" beforeDir="false" afterPath="$PROJECT_DIR$/localisation/simp_chinese/name_lists_l_simp_chinese.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/interface/ori_crisis.gfx" beforeDir="false" afterPath="$PROJECT_DIR$/interface/ori_crisis.gfx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/interface/ori_megastructure_selection.gfx" beforeDir="false" afterPath="$PROJECT_DIR$/interface/ori_megastructure_selection.gfx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/localisation/simp_chinese/main_1_ori_l_simp_chinese.yml" beforeDir="false" afterPath="$PROJECT_DIR$/localisation/simp_chinese/main_1_ori_l_simp_chinese.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/localisation/simp_chinese/ori_megastructures_l_simp_chinese.yml" beforeDir="false" afterPath="$PROJECT_DIR$/localisation/simp_chinese/ori_megastructures_l_simp_chinese.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/localisation/simp_chinese/ori_origenesis_l_simp_chinese.yml" beforeDir="false" afterPath="$PROJECT_DIR$/localisation/simp_chinese/ori_origenesis_l_simp_chinese.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/localisation/simp_chinese/ori_resources_l_simp_chinese.yml" beforeDir="false" afterPath="$PROJECT_DIR$/localisation/simp_chinese/ori_resources_l_simp_chinese.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/localisation/simp_chinese/ori_situations_l_simp_chinese.yml" beforeDir="false" afterPath="$PROJECT_DIR$/localisation/simp_chinese/ori_situations_l_simp_chinese.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/localisation/simp_chinese/ori_technology_l_simp_chinese.yml" beforeDir="false" afterPath="$PROJECT_DIR$/localisation/simp_chinese/ori_technology_l_simp_chinese.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -82,6 +139,7 @@
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
+    <option name="sortKey" value="BY_TIME_DESCENDING" />
   </component>
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
@@ -91,9 +149,10 @@
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;master&quot;,
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/OneDrive/Documents/Paradox Interactive/Stellaris/mod/00001/gfx/interface/icons/technologies&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/OneDrive/Documents/Paradox Interactive/Stellaris/mod/00001/gfx/event_pictures&quot;,
     &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;pls&quot;
+    &quot;settings.editor.selected.configurable&quot;: &quot;pls&quot;,
+    &quot;two.files.diff.last.used.file&quot;: &quot;B:/steam/steamapps/common/Stellaris/common/scripted_effects/00_scripted_effects.txt&quot;
   },
   &quot;keyToStringList&quot;: {
     &quot;com.intellij.ide.scratch.ScratchImplUtil$2/新建临时文件&quot;: [
@@ -107,20 +166,21 @@
 }</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\OneDrive\Documents\Paradox Interactive\Stellaris\mod\00001\gfx\interface\icons\technologies" />
-      <recent name="D:\OneDrive\Documents\Paradox Interactive\Stellaris\mod\00001\gfx\interface\icons\resources" />
-      <recent name="D:\OneDrive\Documents\Paradox Interactive\Stellaris\mod\00001\localisation\english" />
-      <recent name="D:\OneDrive\Documents\Paradox Interactive\Stellaris\mod\00001\gfx\interface\icons\jobs" />
-      <recent name="D:\OneDrive\Documents\Paradox Interactive\Stellaris\mod\00001\gfx\interface\icons\agenda_icons" />
+      <recent name="D:\OneDrive\Documents\Paradox Interactive\Stellaris\mod\00001\gfx\event_pictures" />
+      <recent name="D:\OneDrive\Documents\Paradox Interactive\Stellaris\mod\00001\gfx\interface\AOW_ui_icons\UI_starfall_spear" />
+      <recent name="D:\OneDrive\Documents\Paradox Interactive\Stellaris\mod\00001\interface" />
+      <recent name="D:\OneDrive\Documents\Paradox Interactive\Stellaris\mod\00001\interface\ui_overhaul_qhd_ori" />
+      <recent name="D:\OneDrive\Documents\Paradox Interactive\Stellaris\mod\00001\common\scripted_loc" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\OneDrive\Documents\Paradox Interactive\Stellaris\mod\00001\.idea" />
-      <recent name="D:\OneDrive\Documents\Paradox Interactive\Stellaris\mod\00001\gfx\event_pictures" />
-      <recent name="D:\OneDrive\Documents\Paradox Interactive\Stellaris\mod\00001\common\inline_scripts\pop_categories" />
-      <recent name="D:\OneDrive\Documents\Paradox Interactive\Stellaris\mod\00001\common\tradition_categories" />
-      <recent name="D:\OneDrive\Documents\Paradox Interactive\Stellaris\mod\00001\gfx\models\portraits\civilian_protraits" />
+      <recent name="D:\OneDrive\Documents\Paradox Interactive\Stellaris\mod\00001\gfx\interface\AOW_ui_icons\UI_starfall_spear" />
+      <recent name="D:\OneDrive\Documents\Paradox Interactive\Stellaris\mod\00001\gfx\interface" />
+      <recent name="D:\OneDrive\Documents\Paradox Interactive\Stellaris\mod\00001\gfx\interface\AOW_ui_icons" />
+      <recent name="D:\OneDrive\Documents\Paradox Interactive\Stellaris\mod\00001\common\inline_scripts\scripted_loc" />
+      <recent name="D:\OneDrive\Documents\Paradox Interactive\Stellaris\mod\00001\common\button_effects" />
     </key>
     <key name="Pls.ConvertImageFormat.RECENT_KEYS.PNG">
+      <recent name="D:\OneDrive\桌面\sucai\ui\aow" />
       <recent name="D:\OneDrive\桌面\sucai\resources" />
     </key>
   </component>
@@ -372,7 +432,15 @@
       <option name="project" value="LOCAL" />
       <updated>1754829630007</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="实现了光环巨构的前两个阶段,以及天灾的部分功能,包括等级/奖励/资源/科技/本地化">
+      <option name="closed" value="true" />
+      <created>1755010631205</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1755010631205</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -435,6 +503,7 @@
     <MESSAGE value="物种特质可选数修复" />
     <MESSAGE value="文案修改,适配了一些修正" />
     <MESSAGE value="天灾雏形,等级和美术资源都有缺失&#10;现在在招募法令开启时每五年招募一名领袖" />
-    <option name="LAST_COMMIT_MESSAGE" value="天灾雏形,等级和美术资源都有缺失&#10;现在在招募法令开启时每五年招募一名领袖" />
+    <MESSAGE value="实现了光环巨构的前两个阶段,以及天灾的部分功能,包括等级/奖励/资源/科技/本地化" />
+    <option name="LAST_COMMIT_MESSAGE" value="实现了光环巨构的前两个阶段,以及天灾的部分功能,包括等级/奖励/资源/科技/本地化" />
   </component>
 </project>

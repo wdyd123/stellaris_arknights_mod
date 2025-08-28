@@ -1,0 +1,116 @@
+# # In-game interface for the Halo weapon system.
+# # This file defines the custom window and buttons used in event halo.500.
+#
+# guiTypes = {
+#
+#     # Main container window for the Halo targeting interface.
+#     containerWindowType = {
+#         name = "halo_ui"
+#         # Position is centered, with a slight offset upwards from the center of the screen.
+#         position = { x = -450 y = -350 }
+#         # Size of the window.
+#         size = { width = 900 height = 700 }
+#         # The window can be moved by the player.
+#         moveable = yes
+#         # Orientation is centered on the screen.
+#         orientation = center
+#
+#         # Background for the window.
+#         background = {
+#             name = "background"
+#             quadTextureSprite ="GFX_tile_outliner_bg"
+#         }
+#
+#         # Event Picture
+#         iconType = {
+#             name = "event_picture"
+#             # Positioned in the upper left corner.
+#             position = { x = 20 y = 50 }
+#             spriteType = "GFX_event_picture"
+#             alwaystransparent = yes
+#         }
+#
+#         # Event Title
+#         textBoxType = {
+#             name = "title"
+#             # Positioned at the top center.
+#             position = { x = 280 y = 20 }
+#             size = { width = 580 height = 40 }
+#             font = "hoi_36header"
+#             text = "EVENT_TITLE" # This is a placeholder; the game fills it from the event's title field.
+#             maxWidth = 580
+#             maxHeight = 40
+#             format = left
+#         }
+#
+#         # Event Description
+#         textBoxType = {
+#             name = "desc"
+#             # Positioned below the title.
+#             position = { x = 280 y = 80 }
+#             size = { width = 580 height = 450 }
+#             font = "cg_16b"
+#             text = "EVENT_DESCRIPTION" # Placeholder, filled by the game from the event's desc field.
+#             maxWidth = 580
+#             format = left
+#         }
+#
+#         # Container for the option buttons.
+#         # The game will automatically place buttons defined in the event's options here.
+#         containerWindowType = {
+#             name = "options"
+#             position = { x = 275 y = 580 }
+#             size = { width = 600 height = 100 }
+#         }
+#
+#         # Close button in the top right corner.
+#         buttonType = {
+#             name = "close"
+#             # Positioned in the top right corner of the window.
+#             position = { x = -42 y = 14 }
+#             quadTextureSprite = "GFX_close"
+#             buttonFont = "cg_16b"
+#             shortcut = "ESCAPE"
+#             orientation = upper_right
+#             clicksound = "ui_close"
+#             pdx_tooltip = "CLOSE"
+#         }
+#     }
+#
+#     # Definition for the custom "Confirm Fire" button.
+#     # This is referenced by 'custom_gui = halo_ui_option_confirm' in the event option.
+#     buttonType = {
+#         name = "halo_ui_option_confirm"
+#         # Position is relative to the "options" container defined above.
+#         position = { x = 310 y = 0 }
+#         size = { x = 250 y = 40 }
+#         quadTextureSprite = "GFX_standard_button_200_34"
+#         buttonFont = "cg_16b"
+#         # The text for this button is pulled from the 'name' field of the event option.
+#     }
+#
+#     # Definition for the custom "Quit/Cancel" button.
+#     # This is referenced by 'custom_gui = halo_ui_option_quit' in the event option.
+#     buttonType = {
+#         name = "halo_ui_option_quit"
+#         # Position is to the left of the confirm button.
+#         position = { x = 30 y = 0 }
+#         size = { x = 250 y = 40 }
+#         quadTextureSprite = "GFX_standard_button_200_34"
+#         buttonFont = "cg_16b"
+#         # The text for this button is pulled from the 'name' field of the event option.
+#     }
+# }
+#
+# # As requested, this section is for required graphics definitions,
+# # but the texture files are left empty. You will need to replace
+# # them with paths to your actual .dds graphics files or the game
+# # will show blank squares.
+# spriteTypes = {
+#     # Example spriteType for a background.
+#     # You would create similar entries for any other custom graphics you need.
+#     spriteType = {
+#         name = "GFX_halo_ui_background_example"
+#         texturefile = "" # Left empty per request. Example path: "gfx/interface/backgrounds/my_custom_bg.dds"
+#     }
+# }

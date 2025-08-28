@@ -1,0 +1,182 @@
+#光环当前所选目标数量
+halo_num_of_targets = {
+    base = 0
+    modifier = {
+        exists = event_target:halo_target_01_@$scope$
+        add = 1
+    }
+    modifier = {
+        exists = event_target:halo_target_02_@$scope$
+        add = 1
+    }
+    modifier = {
+        exists = event_target:halo_target_03_@$scope$
+        add = 1
+    }
+    modifier = {
+        exists = event_target:halo_target_04_@$scope$
+        add = 1
+    }
+    modifier = {
+        exists = event_target:halo_target_05_@$scope$
+        add = 1
+    }
+    modifier = {
+        exists = event_target:halo_target_06_@$scope$
+        add = 1
+    }
+    modifier = {
+        exists = event_target:halo_target_07_@$scope$
+        add = 1
+    }
+    modifier = {
+        exists = event_target:halo_target_08_@$scope$
+        add = 1
+    }
+    modifier = {
+        exists = event_target:halo_target_09_@$scope$
+        add = 1
+    }
+    modifier = {
+        exists = event_target:halo_target_10_@$scope$
+        add = 1
+    }
+    max = 10
+}
+
+#光环源石花费
+halo_originium_cost = {
+    base = 0
+    #行星
+    modifier = {
+        exists = event_target:halo_target_$num$_@root
+        event_target:halo_target_$num$_@root = {
+            is_scope_type = planet
+        }
+        add = @planet_originium
+    }
+    #星系
+    modifier = {
+        exists = event_target:halo_target_$num$_@root
+        event_target:halo_target_$num$_@root = {
+            is_scope_type = galactic_object
+        }
+        add = @system_originium
+    }
+}
+halo_originium_total_cost = {
+    base = 0
+    add = value:halo_originium_cost|num|01|
+    add = value:halo_originium_cost|num|02|
+    add = value:halo_originium_cost|num|03|
+    add = value:halo_originium_cost|num|04|
+    add = value:halo_originium_cost|num|05|
+    add = value:halo_originium_cost|num|06|
+    add = value:halo_originium_cost|num|07|
+    add = value:halo_originium_cost|num|08|
+    add = value:halo_originium_cost|num|09|
+    add = value:halo_originium_cost|num|10|
+}
+#光环能量币花费
+halo_energy_cost = {
+    base = 0
+    #行星
+    modifier = {
+        exists = event_target:halo_target_$num$_@root
+        event_target:halo_target_$num$_@root = {
+            is_scope_type = planet
+            has_planet_flag = halo_mode_01_@root
+        }
+        add = @planet_energy_01
+    }
+    modifier = {
+        exists = event_target:halo_target_$num$_@root
+        event_target:halo_target_$num$_@root = {
+            is_scope_type = planet
+            has_planet_flag = halo_mode_02_@root
+        }
+        add = @planet_energy_02
+    }
+    modifier = {
+        exists = event_target:halo_target_$num$_@root
+        event_target:halo_target_$num$_@root = {
+            is_scope_type = planet
+            has_planet_flag = halo_mode_03_@root
+        }
+        add = @planet_energy_03
+    }
+    modifier = {
+        exists = event_target:halo_target_$num$_@root
+        event_target:halo_target_$num$_@root = {
+            is_scope_type = planet
+            has_planet_flag = halo_mode_04_@root
+        }
+        add = @planet_energy_04
+    }
+    modifier = {
+        exists = event_target:halo_target_$num$_@root
+        event_target:halo_target_$num$_@root = {
+            is_scope_type = planet
+            has_planet_flag = halo_mode_05_@root
+        }
+        add = @planet_energy_05
+    }
+    modifier = {
+        exists = event_target:halo_target_$num$_@root
+        event_target:halo_target_$num$_@root = {
+            is_scope_type = planet
+            has_planet_flag = halo_mode_06_@root
+        }
+        add = @planet_energy_06
+    }
+    modifier = {
+        exists = event_target:halo_target_$num$_@root
+        event_target:halo_target_$num$_@root = {
+            is_scope_type = planet
+            has_planet_flag = halo_mode_07_@root
+        }
+        add = @planet_energy_07
+    }
+    #星系
+    modifier = {
+        exists = event_target:halo_target_$num$_@root
+        event_target:halo_target_$num$_@root = {
+            is_scope_type = galactic_object
+            has_star_flag = halo_mode_01_@root
+        }
+        add = @system_energy_01
+    }
+}
+halo_energy_total_cost = {
+    base = 0
+    add = value:halo_energy_cost|num|01|
+    add = value:halo_energy_cost|num|02|
+    add = value:halo_energy_cost|num|03|
+    add = value:halo_energy_cost|num|04|
+    add = value:halo_energy_cost|num|05|
+    add = value:halo_energy_cost|num|06|
+    add = value:halo_energy_cost|num|07|
+    add = value:halo_energy_cost|num|08|
+    add = value:halo_energy_cost|num|09|
+    add = value:halo_energy_cost|num|10|
+}
+#光环星系目标数量，这样写是希望能通过比较灵活的修正来增加可选上限
+halo_system_target_capacity = {
+    base = 1
+    max = 1
+}
+halo_system_target_capacity_desc = {
+    base = 1
+    max = 1
+}
+#光环行星目标数量，这样写是希望能通过比较灵活的修正来增加可选上限
+halo_planet_target_capacity = {
+    base = 1
+    add = from.modifier:halo_world_limit_add #修正：光环可选行星数量
+    max = 6
+}
+halo_planet_target_capacity_desc = {
+    base = 1
+    add = modifier:halo_world_limit_add #修正：光环可选行星数量
+    max = 6
+}

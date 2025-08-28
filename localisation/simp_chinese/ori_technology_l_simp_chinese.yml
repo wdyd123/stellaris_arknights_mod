@@ -1,4 +1,4 @@
-l_simp_chinese:
+﻿l_simp_chinese:
  tech_crystallization: "结晶"
  tech_crystallization_desc: "源石技术的突破和源石培育仓的大规模生产技术允许个人基于一个共同的表达模板修改自己的存在。"
  tech_gene_banks: "基因库"
@@ -46,6 +46,34 @@ l_simp_chinese:
  tech_infection_suppressant_iii: "三级矿石病抑制剂"
  tech_infection_suppressant_iii_desc: "三级源石病抑制剂是最新的突破性技术，能够彻底控制源石病并恢复患者的生理功能。其高效性和低副作用使源石病的治愈成为可能，为患者带来了新的希望。"
 
+ tech_originium_awakening: "源石激活"
+ tech_originium_awakening_desc: "通过深入研究源石的内在能量结构，我们终于掌握了激活源石潜能的方法。觉醒的源石不仅能够作为能源核心，更能与生物体建立共生关系，为建立光环奠定基础。这是源石文明向星际扩张迈出的关键一步。"
 
- origenesis_level_1_tech_desc: "§I$tech_originium_awakening$§!\n解开源石的更多功能，我们必须提高能量获取效率。"
- origenesis_level_1_tech_title: "解锁§I源石计划§!天灾§I等级2§!"
+ # 第二级科技
+ tech_cortex_expansion: "网络扩张"
+ tech_cortex_expansion_desc: "源石之间存在着神秘的共振网络，通过增强这种连接，我们能够在更大范围内建立源石影响域。扩张的网络不仅提高了光环的运作效率，更为后续的深度实验提供了必要的基础设施支持。"
+
+ # 第三级科技
+ tech_orignium_override: "源石超频"
+ tech_orignium_override_desc: "源石利用技术的重大突破。通过精确控制源石能量的释放过程，我们提高了源石的功能上限。"
+
+ # 第四级科技
+ tech_mind_integration: "意识统合"
+ tech_mind_integration_desc: "当足够多的个体被源石同化后，一个前所未有的集体意识开始浮现。这种统合并非简单的思维融合，而是在保持个体特性的同时，实现了更高维度的精神连接。整个文明开始作为一个统一的实体运作。"
+
+ # 第五级科技
+ tech_stellar_guidance: "恒星引导"
+ tech_stellar_guidance_desc: "源石文明的终极成就。通过将整个恒星系统纳入源石网络，我们获得了直接操控恒星能量输出的能力。光环不再只是殖民地，而成为了引导恒星力量的巨大装置，加快同化整个星系的步伐"
+
+ origenesis_level_1_tech_desc: "§3$tech_originium_awakening$§!\n解开源石的更多功能，我们必须提高能量获取效率。"
+ origenesis_level_1_tech_title: "解锁§3源石计划§!天灾§3等级2§!"
+ origenesis_level_2_tech_desc: "§3$tech_cortex_expansion$§!\n解开源石的更多功能，我们必须提高行政管理能力。"
+ origenesis_level_2_tech_title: "解锁§3源石计划§!天灾§3等级3§!"
+ origenesis_level_3_tech_desc: "§3$tech_orignium_override$§!\n解开源石的更多功能，我们必须提高物资生产效率。"
+ origenesis_level_3_tech_title: "解锁§3源石计划§!天灾§3等级4§!"
+ origenesis_level_4_tech_desc: "§3$tech_mind_integration$§!\n解开源石的更多功能，我们必须提高舰船作战能力。"
+ origenesis_level_4_tech_title: "解锁§3源石计划§!天灾§3等级5§!"
+ origenesis_level_5_tech_desc: "§3$tech_stellar_guidance$§!\n解开源石的更多功能，我们必须提高星系同化速度。"
+ origenesis_level_5_tech_title: "解锁§3光环§!的§R坠星§!功能"
+
+

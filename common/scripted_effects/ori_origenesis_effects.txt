@@ -1,0 +1,66 @@
+add_origenesis_level_1_perks = {
+    add_research_option = tech_originium_awakening
+    add_research_option = tech_halo_world
+
+    if = {
+        limit = {
+            country_uses_bio_ships = yes
+        }
+        add_research_option = tech_weaver_bio_healing_6
+        add_research_option = tech_weaver_bio_evasion_6
+    }
+
+}
+add_origenesis_level_2_perks = {
+    add_research_option = tech_cortex_expansion
+    if = {
+        limit = {
+            country_uses_bio_ships = no
+        }
+        add_research_option = tech_cosmogenesis_escort
+    }
+    else = {
+        add_research_option = tech_cosmogenesis_mauler
+        add_research_option = tech_cosmogenesis_weaver
+        add_research_option = tech_weaver_bio_fire_rate_6
+        add_research_option = tech_weaver_bio_confuser_6
+    }
+}
+
+add_origenesis_level_3_perks = {
+
+    add_research_option = tech_orignium_override
+    if = {
+        limit = {
+            country_uses_bio_ships = no
+        }
+        add_research_option = tech_cosmogenesis_battlecruiser
+    }
+    else = {
+        add_research_option = tech_cosmogenesis_harbinger
+        add_research_option = tech_weaver_bio_anti_evasion_6
+        add_research_option = tech_weaver_bio_anti_fire_rate_6
+    }
+}
+
+add_origenesis_level_4_perks = {
+
+    add_research_option = tech_mind_integration
+    if = {
+        limit = {
+            country_uses_bio_ships = no
+        }
+        add_research_option = tech_cosmogenesis_FE_titan
+    }
+    else = {
+        add_research_option = tech_cosmogenesis_stinger
+    }
+}
+
+add_origenesis_level_5_perks = {
+
+    add_research_option = tech_stellar_guidance
+    add_research_option = tech_nanite_repair_system
+    add_research_option = tech_nanite_flak_batteries
+    add_research_option = tech_nanite_autocannon
+}

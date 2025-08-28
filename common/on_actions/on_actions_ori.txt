@@ -180,3 +180,15 @@ on_originium_resonance_hive_approach_assimilation_events_list = {
         10 = ori_ap.410
     }
 }
+
+on_megastructure_upgraded = {
+    events = {
+
+    }
+}
+
+on_colonized = {
+    events = {
+        halo.1000
+    }
+}

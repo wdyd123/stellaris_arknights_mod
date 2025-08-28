@@ -1,12 +1,12 @@
 # On becoming a Crisis Empire (Crisis Level 1)
-namespace = ori_crisis
+namespace = origenesis
 country_event = {
-    id = ori_crisis.4140
-    title = "ori_crisis.4140.name"
+    id = origenesis.4140
+    title = "origenesis.4140.name"
     desc = {
-        text = ori_crisis.4140.desc
+        text = origenesis.4140.desc
     }
-    picture = GFX_evt_sign_of_apocalypse
+    picture = "GFX_evt_sign_of_apocalypse"
     show_sound = event_death_cult
     event_chain = origenesis_chain
 
@@ -20,7 +20,7 @@ country_event = {
     }
 
     option = {
-        name = ori_crisis.4140.a
+        name = origenesis.4140.a
         tooltip = {
             begin_event_chain = {
                 event_chain = origenesis_chain
@@ -33,5 +33,116 @@ country_event = {
             amount = 1
         }
         custom_tooltip = new_origenesis_perks_tt
+    }
+}
+
+
+country_event = { # Reaching Level 2
+    id = origenesis.7105
+    title = "origenesis.7105.name"
+    desc = origenesis.7105.desc
+    picture = GFX_evt_synaptic_lathe
+    show_sound = event_death_cult
+    event_chain = origenesis_chain
+
+    is_triggered_only = yes
+
+    immediate = {
+        add_event_chain_counter = {
+            event_chain = "origenesis_chain"
+            counter = "origenesis_level_reached"
+            amount = 1
+        }
+    }
+
+    option = {
+        name = origenesis.7105.a
+        custom_tooltip = new_origenesis_perks_tt
+    }
+}
+
+country_event = { # Reaching Level 3
+    id = origenesis.7110
+    title = "origenesis.7110.name"
+    desc = origenesis.7110.desc
+    picture = GFX_evt_black_hole
+    show_sound = event_death_cult
+    event_chain = origenesis_chain
+
+    is_triggered_only = yes
+
+    immediate = {
+        add_event_chain_counter = {
+            event_chain = "origenesis_chain"
+            counter = "origenesis_level_reached"
+            amount = 1
+        }
+    }
+
+    option = {
+        name = crisis.7110.a
+        custom_tooltip = new_origenesis_perks_tt
+    }
+}
+
+country_event = { # Reaching Level 4
+    id = origenesis.7115
+    title = "origenesis.7115.name"
+    desc = origenesis.7115.desc
+    picture = GFX_evt_origenesis_crisis
+    show_sound = event_death_cult
+    event_chain = origenesis_chain
+
+    is_triggered_only = yes
+
+    immediate = {
+        add_event_chain_counter = {
+            event_chain = "origenesis_chain"
+            counter = "origenesis_level_reached"
+            amount = 1
+        }
+    }
+
+    option = {
+        name = origenesis.7115.a
+        custom_tooltip = new_origenesis_perks_tt
+    }
+}
+
+country_event = { # Reaching Level 5
+    id = origenesis.7120
+    title = "origenesis.7120.name"
+    desc = origenesis.7120.desc
+    picture = GFX_evt_origenesis_crisis
+    show_sound = event_death_cult
+    event_chain = origenesis_chain
+
+    is_triggered_only = yes
+
+    immediate = {
+        add_event_chain_counter = {
+            event_chain = "origenesis_chain"
+            counter = "origenesis_level_reached"
+            amount = 1
+        }
+    }
+
+    option = {
+        name = origenesis.7120.a
+        custom_tooltip = new_origenesis_perks_tt
+    }
+}
+
+country_event = {
+    id = origenesis.6051
+    title = "origenesis.6051.name"
+    desc = "origenesis.6051.desc"
+    picture = GFX_evt_supernova
+    show_sound = event_default
+
+    is_triggered_only = yes
+
+    option = {
+        name = origenesis.6051.a
     }
 }

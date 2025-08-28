@@ -1,0 +1,388 @@
+halo_select_target = {
+    if = {
+        limit = {
+            NOR = {
+                exists = event_target:halo_target_$target$_@from
+                is_same_value = event_target:halo_target_01_@from
+                is_same_value = event_target:halo_target_02_@from
+                is_same_value = event_target:halo_target_03_@from
+                is_same_value = event_target:halo_target_04_@from
+                is_same_value = event_target:halo_target_05_@from
+                is_same_value = event_target:halo_target_06_@from
+                is_same_value = event_target:halo_target_07_@from
+                is_same_value = event_target:halo_target_08_@from
+                is_same_value = event_target:halo_target_09_@from
+                is_same_value = event_target:halo_target_10_@from
+            }
+        }
+        save_global_event_target_as = halo_target_$target$_@from
+        set_$sp$_flag = halo_mode_$mode$_@from
+    }
+}
+#重新选择打击模式
+halo_reselect_target_mode = {
+    if = {
+        limit = {
+            exists = event_target:halo_target_$target$_@from
+            is_same_value = event_target:halo_target_$target$_@from
+            NOT = { exists = event_target:halo_current_target_@from }
+        }
+        event_target:halo_target_$target$_@from = {
+            remove_$sp$_flag = halo_mode_01_@from
+            remove_$sp$_flag = halo_mode_02_@from
+            remove_$sp$_flag = halo_mode_03_@from
+            remove_$sp$_flag = halo_mode_04_@from
+            remove_$sp$_flag = halo_mode_05_@from
+            remove_$sp$_flag = halo_mode_06_@from
+            remove_$sp$_flag = halo_mode_07_@from
+            remove_$sp$_flag = halo_mode_08_@from
+            remove_$sp$_flag = halo_mode_09_@from
+            remove_$sp$_flag = halo_mode_10_@from
+            set_$sp$_flag = halo_mode_$mode$_@from
+        }
+    }
+    else_if = {
+        limit = { exists = event_target:halo_current_target_@from }
+        event_target:halo_current_target_@from = {
+            remove_$sp$_flag = halo_mode_01_@from
+            remove_$sp$_flag = halo_mode_02_@from
+            remove_$sp$_flag = halo_mode_03_@from
+            remove_$sp$_flag = halo_mode_04_@from
+            remove_$sp$_flag = halo_mode_05_@from
+            remove_$sp$_flag = halo_mode_06_@from
+            remove_$sp$_flag = halo_mode_07_@from
+            remove_$sp$_flag = halo_mode_08_@from
+            remove_$sp$_flag = halo_mode_09_@from
+            remove_$sp$_flag = halo_mode_10_@from
+            set_$sp$_flag = halo_mode_$mode$_@from
+        }
+    }
+}
+
+#选择行星目标
+halo_planet_selection_button = {
+    tooltip = { custom_tooltip = planet_target_cost_$mode$ }
+    custom_tooltip = planet_target_mode_$mode$_tooltip
+    hidden_effect = {
+        planet = {
+            #最多可选10个
+            halo_select_target = { target = 01 mode = $mode$ sp = planet }
+            halo_select_target = { target = 02 mode = $mode$ sp = planet }
+            halo_select_target = { target = 03 mode = $mode$ sp = planet }
+            halo_select_target = { target = 04 mode = $mode$ sp = planet }
+            halo_select_target = { target = 05 mode = $mode$ sp = planet }
+            halo_select_target = { target = 06 mode = $mode$ sp = planet }
+            halo_select_target = { target = 07 mode = $mode$ sp = planet }
+            halo_select_target = { target = 08 mode = $mode$ sp = planet }
+            halo_select_target = { target = 09 mode = $mode$ sp = planet }
+            halo_select_target = { target = 10 mode = $mode$ sp = planet }
+            #对同一目标再次点击，则重新选择打击模式
+            halo_reselect_target_mode = { target = 01 mode = $mode$ sp = planet }
+            halo_reselect_target_mode = { target = 02 mode = $mode$ sp = planet }
+            halo_reselect_target_mode = { target = 03 mode = $mode$ sp = planet }
+            halo_reselect_target_mode = { target = 04 mode = $mode$ sp = planet }
+            halo_reselect_target_mode = { target = 05 mode = $mode$ sp = planet }
+            halo_reselect_target_mode = { target = 06 mode = $mode$ sp = planet }
+            halo_reselect_target_mode = { target = 07 mode = $mode$ sp = planet }
+            halo_reselect_target_mode = { target = 08 mode = $mode$ sp = planet }
+            halo_reselect_target_mode = { target = 09 mode = $mode$ sp = planet }
+            halo_reselect_target_mode = { target = 10 mode = $mode$ sp = planet }
+        }
+    }
+}
+#选择星系目标
+halo_system_selection_button = {
+    tooltip = { custom_tooltip = system_target_cost_$mode$ }
+    custom_tooltip = system_target_mode_$mode$_tooltip
+    hidden_effect = {
+        solar_system = {
+            #最多可选10个
+            halo_select_target = { target = 01 mode = $mode$ sp = star }
+            #对同一目标再次点击，则重新选择打击模式
+            halo_reselect_target_mode = { target = 01 mode = $mode$ sp = star }
+        }
+    }
+}
+#展示目标名字和打击模式的按钮
+halo_target_button = {
+    if = {#点击取消选择
+        limit = { exists = event_target:halo_target_$target$_@from }
+        event_target:halo_target_$target$_@from = {
+            custom_tooltip = AOW_text_cancel_target
+            if = {
+                limit = { is_scope_type = galactic_object }
+                remove_star_flag = halo_mode_01_@from
+                remove_star_flag = halo_mode_02_@from
+                remove_star_flag = halo_mode_03_@from
+                remove_star_flag = halo_mode_04_@from
+                remove_star_flag = halo_mode_05_@from
+                remove_star_flag = halo_mode_06_@from
+            }
+            if = {
+                limit = { is_scope_type = planet }
+                remove_planet_flag = halo_mode_01_@from
+                remove_planet_flag = halo_mode_02_@from
+                remove_planet_flag = halo_mode_03_@from
+                remove_planet_flag = halo_mode_04_@from
+                remove_planet_flag = halo_mode_05_@from
+                remove_planet_flag = halo_mode_06_@from
+                remove_planet_flag = halo_mode_07_@from
+            }
+        }
+        clear_global_event_target = halo_target_$target$_@from
+    }
+}
+
+
+halo_cancel_target = {
+    if = {
+        limit = {
+            exists = event_target:halo_target_$target$_@$scope$
+        }
+        clear_global_event_target = halo_target_$target$_@$scope$
+    }
+
+}
+
+halo_cancel_target_and_flag = {
+    if = {
+        limit = { exists = event_target:halo_target_$target$_@$scope$ }
+        event_target:halo_target_$target$_@$scope$ = {
+            if = {
+                limit = { is_scope_type = galactic_object }
+                remove_star_flag = halo_mode_01_@$scope$
+            }
+            if = {
+                limit = { is_scope_type = planet }
+                remove_planet_flag = halo_mode_01_@$scope$
+                remove_planet_flag = halo_mode_02_@$scope$
+                remove_planet_flag = halo_mode_03_@$scope$
+                remove_planet_flag = halo_mode_04_@$scope$
+                remove_planet_flag = halo_mode_05_@$scope$
+                remove_planet_flag = halo_mode_06_@$scope$
+                remove_planet_flag = halo_mode_07_@$scope$
+
+
+            }
+        }
+        clear_global_event_target = halo_target_$target$_@$scope$
+    }
+
+}
+
+halo_cancel_all_targets_and_flags = {
+    halo_cancel_target_and_flag = { target = 01 scope = $scope$ }
+    halo_cancel_target_and_flag = { target = 02 scope = $scope$ }
+    halo_cancel_target_and_flag = { target = 03 scope = $scope$ }
+    halo_cancel_target_and_flag = { target = 04 scope = $scope$ }
+    halo_cancel_target_and_flag = { target = 05 scope = $scope$ }
+    halo_cancel_target_and_flag = { target = 06 scope = $scope$ }
+    halo_cancel_target_and_flag = { target = 07 scope = $scope$ }
+
+
+}
+
+set_to_initial_state = {
+    if = {
+        limit = {
+            OR = {
+                is_megastructure_type = halo_world_03_launching
+            }
+        }
+        upgrade_megastructure_to = halo_world_03_standby
+        finish_upgrade = yes
+        save_event_target_as = new_halo
+    }
+}
+
+halo_start_launching_at_system = {
+    every_fleet_in_system = {
+        limit = { owner = { is_hostile = event_target:halo_controller } }
+        # every_controlled_ship = {
+        #     add_modifier = {
+        #         modifier = AOW_mod_SP_navigation_damage
+        #         days = 30
+        #     }
+        # }
+    }
+    # AOW_eft_SSTM_create_hit_effect = yes #创建星系打击特效
+    set_star_flag = system_is_being_hit_by_halo #正在被打击
+    system_event = { id = halo.600 days = 30 } #星系摧毁事件
+    if = {#星系有拥有者，通知星系拥有者
+        limit = {
+            exists = space_owner
+            space_owner = { NOT = { is_same_value = event_target:halo_controler } }
+        }
+        space_owner = { country_event = { id = halo.511 } }
+    }
+}
+#对行星目标发射
+halo_start_launching_at_planet = {
+    # AOW_eft_PLNT_create_planet_hit_effect = yes #创建行星打击特效
+    set_planet_flag = planet_is_being_hit_by_halo #正在被打击
+    planet_event = { id = halo.700 days = 30 } #行星摧毁事件
+    if = {#行星有拥有者
+        limit = {
+            exists = owner
+            owner = { NOT = { is_same_value = event_target:halo_controler } }
+        }
+
+        owner = { country_event = { id = halo.512 } }
+    }
+    else_if = {#行星无拥有者，但星系有拥有者
+        limit = {
+            NOT = { exists = owner }
+            exists = space_owner
+            space_owner = { NOT = { is_same_value = root } }
+        }
+        space_owner = { country_event = { id = halo.512 } }
+    }
+}
+
+start_launching_at_halo_target = {
+    if = {
+        limit = { exists = event_target:halo_target_$target$_@root }
+        event_target:halo_target_$target$_@root = {
+            if = {
+                limit = { is_scope_type = galactic_object }
+                halo_start_launching_at_system = yes
+            }
+            if = {
+                limit = { is_scope_type = planet }
+                halo_start_launching_at_planet = yes
+            }
+        }
+    }
+
+}
+
+halo_cancel_all_targets = {
+    halo_cancel_target = { target = 01 scope = $scope$ }
+    halo_cancel_target = { target = 02 scope = $scope$ }
+    halo_cancel_target = { target = 03 scope = $scope$ }
+    halo_cancel_target = { target = 04 scope = $scope$ }
+    halo_cancel_target = { target = 05 scope = $scope$ }
+    halo_cancel_target = { target = 06 scope = $scope$ }
+    halo_cancel_target = { target = 07 scope = $scope$ }
+    halo_cancel_target = { target = 08 scope = $scope$ }
+    halo_cancel_target = { target = 09 scope = $scope$ }
+    halo_cancel_target = { target = 10 scope = $scope$ }
+}
+
+halo_hit_effect = {
+    every_system_ambient_object = {
+        limit = { has_ambient_object_flag = halo_flag_@event_target:targeting_halo }
+        destroy_ambient_object = this
+    }
+}
+
+system_create_hit_effect = {
+    # if = {#来自O型恒星的打击特效
+    #     limit = {
+    #         event_target:AOW_tgt_MEGA_starfall_spear = {
+    #             is_megastructure_type = AOW_MEGA_starfall_spear_fire_O
+    #         }
+    #     }
+    #     create_ambient_object = {
+    #         type = "AOW_ao_starfall_spear_o_system_hit_effect"
+    #         location = star
+    #         use_3d_location = yes
+    #         base_angle_towards = star
+    #         entity_face_object = star
+    #         entity_offset = { min = 0 max = 0 }
+    #     }
+    # }
+    # else_if = {#来自B型恒星的打击特效
+    #     limit = {
+    #         event_target:AOW_tgt_MEGA_starfall_spear = {
+    #             is_megastructure_type = AOW_MEGA_starfall_spear_fire_B
+    #         }
+    #     }
+    #     create_ambient_object = {
+    #         type = "AOW_ao_starfall_spear_b_system_hit_effect"
+    #         location = star
+    #         use_3d_location = yes
+    #         base_angle_towards = star
+    #         entity_face_object = star
+    #         entity_offset = { min = 0 max = 0 }
+    #     }
+    # }
+    # else_if = {#来自A型恒星的打击特效
+    #     limit = {
+    #         event_target:AOW_tgt_MEGA_starfall_spear = {
+    #             is_megastructure_type = AOW_MEGA_starfall_spear_fire_A
+    #         }
+    #     }
+    #     create_ambient_object = {
+    #         type = "AOW_ao_starfall_spear_a_system_hit_effect"
+    #         location = star
+    #         use_3d_location = yes
+    #         base_angle_towards = star
+    #         entity_face_object = star
+    #         entity_offset = { min = 0 max = 0 }
+    #     }
+    # }
+    # else_if = {#来自F型恒星的打击特效
+    #     limit = {
+    #         event_target:AOW_tgt_MEGA_starfall_spear = {
+    #             is_megastructure_type = AOW_MEGA_starfall_spear_fire_F
+    #         }
+    #     }
+    #     create_ambient_object = {
+    #         type = "AOW_ao_starfall_spear_f_system_hit_effect"
+    #         location = star
+    #         use_3d_location = yes
+    #         base_angle_towards = star
+    #         entity_face_object = star
+    #         entity_offset = { min = 0 max = 0 }
+    #     }
+    # }
+    # else_if = {#来自G型恒星的打击特效
+    #     limit = {
+    #         event_target:AOW_tgt_MEGA_starfall_spear = {
+    #             is_megastructure_type = AOW_MEGA_starfall_spear_fire_G
+    #         }
+    #     }
+    #     create_ambient_object = {
+    #         type = "AOW_ao_starfall_spear_g_system_hit_effect"
+    #         location = star
+    #         use_3d_location = yes
+    #         base_angle_towards = star
+    #         entity_face_object = star
+    #         entity_offset = { min = 0 max = 0 }
+    #     }
+    # }
+    # else_if = {#来自K型恒星的打击特效
+    #     limit = {
+    #         event_target:AOW_tgt_MEGA_starfall_spear = {
+    #             is_megastructure_type = AOW_MEGA_starfall_spear_fire_K
+    #         }
+    #     }
+    #     create_ambient_object = {
+    #         type = "AOW_ao_starfall_spear_k_system_hit_effect"
+    #         location = star
+    #         use_3d_location = yes
+    #         base_angle_towards = star
+    #         entity_face_object = star
+    #         entity_offset = { min = 0 max = 0 }
+    #     }
+    # }
+    # else_if = {#来自M型恒星的打击特效
+    #     limit = {
+    #         event_target:AOW_tgt_MEGA_starfall_spear = {
+    #             is_megastructure_type = AOW_MEGA_starfall_spear_fire_M
+    #         }
+    #     }
+    #     create_ambient_object = {
+    #         type = "AOW_ao_starfall_spear_m_system_hit_effect"
+    #         location = star
+    #         use_3d_location = yes
+    #         base_angle_towards = star
+    #         entity_face_object = star
+    #         entity_offset = { min = 0 max = 0 }
+    #     }
+    # }
+    last_created_ambient_object = {
+        set_ambient_object_flag = flag_halo_@event_target:targeting_halo
+    }
+}

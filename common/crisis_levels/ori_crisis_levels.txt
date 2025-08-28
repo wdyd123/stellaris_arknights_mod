@@ -6,13 +6,15 @@ crisis_origenesis_level_1 = {
         reality_etches_objectives
         reality_etcher
         origenesis_buildings_1
-        origenesis_techs_1
+        origenesis_originium_activation
     }
 
     on_unlock = {
+        add_origenesis_level_1_perks = yes
+
         hidden_effect = {
             owner = {
-                country_event = { id = ori_crisis.4140 }
+                country_event = { id = origenesis.4140 }
             }
         }
     }
@@ -36,32 +38,87 @@ crisis_origenesis_level_2 = {
     }
     on_unlock = {
         add_origenesis_level_2_perks = yes
-
+        hidden_effect = {
+            owner = {
+                country_event = { id = origenesis.7105 }
+            }
+        }
     }
 }
 
 crisis_origenesis_level_3 = {
+    allow = {
+        custom_tooltip = {
+            success_text =	origenesis_level_3_req_clear_tooltip
+            fail_text =	origenesis_level_3_req_tooltip
+            has_technology = tech_cortex_expansion
+        }
+    }
+    required_crisis_currency = 6000
+
     perks = {
         origenesis_ship_3
         origenesis_buildings_3
         origenesis_features_3
         origenesis_easily_built
     }
+    on_unlock = {
+        add_origenesis_level_3_perks = yes
+        hidden_effect = {
+            owner = {
+                country_event = { id = origenesis.7110 }
+            }
+        }
+    }
 }
 
 crisis_origenesis_level_4 = {
+    allow = {
+        custom_tooltip = {
+            success_text =	origenesis_level_4_req_clear_tooltip
+            fail_text =	origenesis_level_4_req_tooltip
+            has_technology = tech_orignium_override
+        }
+    }
+    required_crisis_currency = 18000
+
     perks = {
         origenesis_ship_4
         origenesis_buildings_4
         origenesis_originium_components
         origenesis_knowledge_extraction
     }
+    on_unlock = {
+        add_origenesis_level_4_perks = yes
+        hidden_effect = {
+            owner = {
+                country_event = { id = origenesis.7115 }
+            }
+        }
+    }
 }
 
 crisis_origenesis_level_5 = {
+    allow = {
+        custom_tooltip = {
+            success_text =	origenesis_level_5_req_clear_tooltip
+            fail_text =	origenesis_level_5_req_tooltip
+            has_technology = tech_mind_integration
+        }
+    }
+    required_crisis_currency = 45000
+
     perks = {
         origenesis_galatic_consumption
         origenesis_buildings_5
         origenesis_techs_5
+    }
+    on_unlock = {
+        add_origenesis_level_5_perks = yes
+        hidden_effect = {
+            owner = {
+                country_event = { id = origenesis.7120 }
+            }
+        }
     }
 }

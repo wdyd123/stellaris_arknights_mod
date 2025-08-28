@@ -1,0 +1,300 @@
+#坠星天矛目标类型是？（行星/星系）
+halo_has_target_type = {
+    OR = {
+        AND = {
+            exists = event_target:halo_target_01_@$scope$
+            event_target:halo_target_01_@$scope$ = {
+                is_scope_type = $type$
+            }
+        }
+        AND = {
+            exists = event_target:halo_target_02_@$scope$
+            event_target:halo_target_02_@$scope$ = {
+                is_scope_type = $type$
+            }
+        }
+        AND = {
+            exists = event_target:halo_target_03_@$scope$
+            event_target:halo_target_03_@$scope$ = {
+                is_scope_type = $type$
+            }
+        }
+        AND = {
+            exists = event_target:halo_target_04_@$scope$
+            event_target:halo_target_04_@$scope$ = {
+                is_scope_type = $type$
+            }
+        }
+        AND = {
+            exists = event_target:halo_target_05_@$scope$
+            event_target:halo_target_05_@$scope$ = {
+                is_scope_type = $type$
+            }
+        }
+        AND = {
+            exists = event_target:halo_target_06_@$scope$
+            event_target:halo_target_06_@$scope$ = {
+                is_scope_type = $type$
+            }
+        }
+        AND = {
+            exists = event_target:halo_target_07_@$scope$
+            event_target:halo_target_07_@$scope$ = {
+                is_scope_type = $type$
+            }
+        }
+        AND = {
+            exists = event_target:halo_target_08_@$scope$
+            event_target:halo_target_08_@$scope$ = {
+                is_scope_type = $type$
+            }
+        }
+        AND = {
+            exists = event_target:halo_target_09_@$scope$
+            event_target:halo_target_09_@$scope$ = {
+                is_scope_type = $type$
+            }
+        }
+        AND = {
+            exists = event_target:halo_target_10_@$scope$
+            event_target:halo_target_10_@$scope$ = {
+                is_scope_type = $type$
+            }
+        }
+    }
+}
+
+#选择的目标能跳转到行星
+halo_planet_viable_target = {
+    OR = {
+        AND = {
+            is_scope_type = planet
+            is_star = no
+        }
+        AND = {
+            is_scope_type = megastructure
+            exists = planet
+            planet = { is_star = no }
+        }
+    }
+}
+#选择行星目标的条件
+planet_selection_condition_button = {
+    if = {
+        limit = {
+            halo_has_target_type = { type = galactic_object scope = from }
+        }
+        custom_tooltip = {
+            fail_text = "halo_requires_not_system_targets"
+            always = no
+        }
+    }
+    if = {
+        limit = { has_planet_flag = AOW_flag_starfall_spear_mode_$mode$_@from }
+        custom_tooltip = {
+            fail_text = "halo_requires_mode_has_been_selected"
+            always = no
+        }
+    }
+    if = {
+        limit = {
+            calc_true_if = {
+                amount >= from.value:halo_planet_target_capacity
+                exists = event_target:halo_target_01_@from
+                exists = event_target:halo_target_02_@from
+                exists = event_target:halo_target_03_@from
+                exists = event_target:halo_target_04_@from
+                exists = event_target:halo_target_05_@from
+                exists = event_target:halo_target_06_@from
+                exists = event_target:halo_target_07_@from
+                exists = event_target:halo_target_08_@from
+                exists = event_target:halo_target_09_@from
+                exists = event_target:halo_target_10_@from
+            }
+        }
+        custom_tooltip = {
+            fail_text = "halo_requires_cannot_choose_more_targets"
+            always = no
+        }
+    }
+    custom_tooltip = {
+        fail_text = "halo_requires_cannot_be_being_hitted"
+        this = { planet = { NOT = { has_planet_flag = AOW_flag_PLNT_is_being_hit_by_starfall_spear } } }
+    }
+    custom_tooltip = {#其他模组可以用这个flag
+        fail_text = "halo_requires_no_error"
+        planet = { NOT = { has_planet_flag = cannot_be_hit_by_halo } }
+    }
+    custom_tooltip = AOW_planet_target_mode_$mode$_tooltip
+}
+#选择的目标能跳转到星系
+halo_system_viable_target = {
+    OR = {
+        AND = {
+            is_scope_type = planet
+            is_star = yes
+        }
+        AND = {
+            is_scope_type = megastructure
+            OR = {
+                NOT = { exists = planet }
+                AND = {
+                    exists = planet
+                    planet = { is_star = yes }
+                }
+            }
+        }
+        is_scope_type = fleet
+        is_scope_type = ship
+        is_scope_type = starbase
+    }
+    exists = solar_system
+    solar_system = { exists = star }
+}
+#选择星系目标的条件
+system_selection_condition_button = {
+    if = {
+        limit = {
+            halo_has_target_type = { type = planet scope = from }
+        }
+        custom_tooltip = {
+            fail_text = "halo_requires_not_planet_targets"
+            always = no
+        }
+    }
+    if = {
+        limit = { solar_system = { has_star_flag = AOW_flag_starfall_spear_mode_$mode$_@from } }
+        custom_tooltip = {
+            fail_text = "halo_requires_mode_has_been_selected"
+            always = no
+        }
+    }
+    if = {
+        limit = {
+            calc_true_if = {
+                amount >= value:halo_system_target_capacity
+                exists = event_target:halo_target_01_@from
+                exists = event_target:halo_target_02_@from
+                exists = event_target:halo_target_03_@from
+                exists = event_target:halo_target_04_@from
+                exists = event_target:halo_target_05_@from
+                exists = event_target:halo_target_06_@from
+                exists = event_target:halo_target_07_@from
+                exists = event_target:halo_target_08_@from
+                exists = event_target:halo_target_09_@from
+                exists = event_target:halo_target_10_@from
+            }
+        }
+        custom_tooltip = {
+            fail_text = "halo_requires_cannot_choose_more_targets"
+            always = no
+        }
+    }
+    custom_tooltip = {
+        fail_text = "halo_requires_cannot_be_being_hitted"
+        solar_system = {
+            NOR = {
+                has_star_flag = AOW_flag_SSTM_is_being_hit_by_starfall_spear
+                any_system_planet = { has_planet_flag = AOW_flag_PLNT_is_being_hit_by_starfall_spear }
+            }
+        }
+    }
+    if = {
+        limit = {
+            exists = solar_system.space_owner
+            solar_system.space_owner = { NOT = { is_same_value = root.from } }
+        }
+        custom_tooltip = {
+            fail_text = "halo_requires_has_communication_with_space_owner"
+            solar_system.space_owner = { has_communications = root.from }
+        }
+    }
+    if = {#不能是自家星系或盟友星系
+        limit = { from = { has_policy_flag = AOW_policy_SS_unlimited } }
+        custom_tooltip = {
+            fail_text = "halo_requires_no_our_or_allys"
+            solar_system = {
+                NOT = {
+                    space_owner = {
+                        OR = {
+                            is_same_value = root.from
+                            is_in_federation_with = from
+                            is_overlord_to = from
+                            from = { is_overlord_to = root }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    else_if = {#要么无主星系，要么敌对星系
+        limit = { from = { has_policy_flag = AOW_policy_SS_hostility } }
+        custom_tooltip = {
+            fail_text = "halo_requires_no_owner_or_hostile"
+            solar_system = {
+                OR = {
+                    NOT = { exists = space_owner }
+                    space_owner = { is_same_value = root.from }
+                    space_owner = { is_hostile = root.from }
+                }
+            }
+        }
+    }
+    else_if = {#要么无主星系，要么敌对星系，且被星系拥有者打击过
+        limit = { from = { has_policy_flag = AOW_policy_SS_no_first_use } }
+        custom_tooltip = {
+            fail_text = "halo_requires_no_first_use"
+            solar_system = {
+                OR = {
+                    NOT = { exists = space_owner }
+                    space_owner = { is_same_value = root.from }
+                    space_owner = {
+                        is_hostile = root.from
+                        OR = {
+                            root.from = { has_country_flag = AOW_flag_CNTR_was_hit_by_@prev }
+                            has_ascension_perk = ap_become_the_crisis
+                            has_ascension_perk = ap_origenesis
+                            has_crisis_level = crisis_cosmogenesis_level_2
+                            if = {
+                                limit = { has_global_flag = has_wsg_mod }
+                                has_ascension_perk = ap_wg_crisis
+                            }
+                            is_crisis_faction = yes
+                        }
+                    }
+                }
+            }
+        }
+    }
+    custom_tooltip = {
+        fail_text = "halo_requires_no_crisis_sphere"
+        this.solar_system = {
+            NOT = {
+                any_system_megastructure = {
+                    OR = {
+                        is_megastructure_type = crisis_sphere_0
+                        is_megastructure_type = crisis_sphere_1
+                        is_megastructure_type = crisis_sphere_2
+                        is_megastructure_type = crisis_sphere_3
+                        is_megastructure_type = crisis_sphere_4
+                        AND = {
+                            is_megastructure_type = crisis_sphere_ruined
+                            is_upgrading = yes
+                        }
+                    }
+                }
+            }
+        }
+    }
+    custom_tooltip = {
+        fail_text = "halo_requires_no_error"
+        solar_system = {
+            NOR = {
+                is_star_class = sc_kuat
+                has_star_flag = kuat_military_base_system_home
+                has_star_flag = cannot_be_hit_by_halo#其他模组可以用这个flag
+            }
+        }
+    }
+    custom_tooltip = AOW_system_target_mode_$mode$_tooltip
+}

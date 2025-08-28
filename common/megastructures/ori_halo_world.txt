@@ -147,12 +147,12 @@ halo_world_1 = {
             if = {
                 limit = {
                     check_variable = {
-                        which = dyson_swarm_counter
+                        which = halo_world_counter
                         value >= 1
                     }
                 }
                 change_variable = {
-                    which = dyson_swarm_counter
+                    which = halo_world_counter
                     value = -1
                 }
             }
@@ -162,7 +162,7 @@ halo_world_1 = {
     on_build_complete = {
         spawn_planet = {
             name = "NAME_Ring_Section_C"
-            class = pc_city
+            class = pc_anchor
             size = 1
             location = fromfrom
             init_effect = {
@@ -175,7 +175,7 @@ halo_world_1 = {
 
 halo_world_2_intermediate = {
     entity = ""
-    construction_entity = "haloworld_seam_entity_01_full_entity"
+    construction_entity = "haloworld_seam_entity_01_full_entity_60"
     construction_scale = 0.8
     portrait = "GFX_megastructure_construction_background"
     show_galactic_map_icon = yes
@@ -220,67 +220,303 @@ halo_world_2_intermediate = {
             save_event_target_as = anchor_planet
         }
         spawn_megastructure = {
-            name = "NAME_Ring_Section_A"
-            type = "halo_world_2"
+            name = "NAME_Halo_Section"
+            type = "halo_world_2_01"
             orbit_angle = 0
-            orbit_distance = 0.1
+            orbit_distance = 0.001
             owner = from
             graphical_culture = fromfrom
             planet = event_target:anchor_planet
         }
-        # spawn_megastructure = {
-        #     name = "NAME_Ring_Section_A"
-        #     type = "halo_world_2"
-        #     orbit_angle = 0
-        #     orbit_distance = 36
-        #     owner = from
-        #     graphical_culture = fromfrom
-        #     planet = event_target:anchor_planet
-        # }
-        # spawn_megastructure = {
-        #     name = "NAME_Ring_Section_B"
-        #     type = "halo_world_2"
-        #     orbit_angle = 90
-        #     orbit_distance = 36
-        #     owner = from
-        #     graphical_culture = fromfrom
-        #     planet = event_target:anchor_planet
-        # }
-        # spawn_megastructure = {
-        #     name = "NAME_Ring_Section_C"
-        #     type = "halo_world_2"
-        #     orbit_angle = 180
-        #     orbit_distance = 36
-        #     owner = from
-        #     graphical_culture = fromfrom
-        #     planet = event_target:anchor_planet
-        # }
-        # spawn_megastructure = {
-        #     name = "NAME_Ring_Section_D"
-        #     type = "halo_world_2"
-        #     orbit_angle = 270
-        #     orbit_distance = 36
-        #
-        #     owner = from
-        #     graphical_culture = fromfrom
-        #     planet = event_target:anchor_planet
-        # }
-
+        spawn_megastructure = {
+            name = "NAME_Halo_Section"
+            type = "halo_world_2_02"
+            orbit_angle = 0
+            orbit_distance = 0.0001
+            owner = from
+            graphical_culture = fromfrom
+            planet = event_target:anchor_planet
+        }
         remove_megastructure = fromfrom
     }
 }
 
 
 
-halo_world_2 = {
-    entity = "haloworld_full_construction_entity_ro"
+halo_world_2_01 = {
+    entity = "haloworld_full_construction_entity_ro_01"
     portrait = "GFX_megastructure_construction_background"
-    rotate_to_center = yes
+    rotate_to_center = no
     upgrade_from = {
         halo_world_2_intermediate
     }
-    scales_with_planet = no
     # used from script only
     upgrade_desc = hide
     potential = { always = no }
 }
+
+halo_world_2_02 = {
+    entity = "haloworld_full_construction_entity_ro_02"
+    portrait = "GFX_megastructure_construction_background"
+    rotate_to_center = no
+    upgrade_from = {
+        halo_world_2_intermediate
+    }
+    # used from script only
+    upgrade_desc = hide
+    potential = { always = no }
+}
+
+halo_world_3_intermediate = {
+    entity = ""
+    construction_entity = "haloworld_seam_entity_01_full_entity_60"
+    construction_scale = 0.8
+    portrait = "GFX_megastructure_construction_background"
+    build_time = 1500
+    show_galactic_map_icon = no
+    show_in_outliner = no
+    resources = {
+        category = megastructures
+        cost = {
+            trigger = {
+                country_uses_bio_ships = no
+            }
+            alloys = 5000
+        }
+        cost = {
+            trigger = {
+                country_uses_bio_ships = yes
+            }
+            alloys = 5000
+            mult = 0.5
+        }
+        cost = {
+            trigger = {
+                country_uses_bio_ships = yes
+            }
+            food = 5000
+            mult = @halved_alloy_to_food_cost_ratio
+        }
+    }
+
+    upgrade_from = {
+        halo_world_2_01
+        halo_world_2_02
+    }
+
+    prerequisites = { "tech_halo_world" }
+    show_prereqs = yes
+    prereq_name = "RING_WORLD_SHOW_NAME"
+
+    on_build_complete = {
+        from = {
+            set_country_flag = has_built_or_repaired_megastructure
+            set_country_flag = has_ring_world
+        }
+        random_system_planet = {
+            limit = {has_planet_flag = haloworld_habitable_1}
+            save_event_target_as = haloworld_habitable_1
+        }
+        random_system_planet = {
+            limit = {has_planet_flag = anchor}
+            save_event_target_as = anchor_planet
+        }
+        # Spawn the first planet section unconditionally
+
+        # Conditional spawning of the second planet section
+        if = {
+            limit = {  event_target:haloworld_habitable_1 = {has_planet_flag = haloworld_habitable_1} }
+
+            spawn_planet = {
+                class = "pc_halo_world_habitable_02"
+                location = event_target:anchor_planet
+                orbit_angle_offset = 0
+                orbit_distance = 0
+                init_effect = {
+                    set_name = "NAME_Habitable_Section_B"
+                    set_surveyed = {
+                        surveyed = yes
+                        surveyor = FROM
+                    }
+                    set_all_comms_surveyed = yes
+                    clear_blockers = yes
+                    save_event_target_as = ring_section
+                    trigger_megastructure_icon = yes
+                    set_planet_flag = megastructure
+                }
+            }
+            event_target:anchor_planet = {remove_planet_flag = anchor}
+            event_target:haloworld_habitable_1 = {remove_planet_flag = haloworld_habitable_1}
+            spawn_megastructure = {
+                type = halo_world_03_standby
+                coords_from = event_target:anchor_planet
+                orbit_angle = 0
+                ## cardinality = 0..1
+                orbit_distance = 0
+                owner = from
+                init_effect = {  }
+
+            }
+        }
+        else = {
+            spawn_planet = {
+                class = "pc_halo_world_habitable_01"
+                location = event_target:anchor_planet
+                orbit_angle_offset = 0.001
+                orbit_distance = 0
+                init_effect = {
+                    set_name = "NAME_Habitable_Section_A"
+                    set_surveyed = {
+                        surveyed = yes
+                        surveyor = FROM
+                    }
+                    set_all_comms_surveyed = yes
+                    clear_blockers = yes
+                    save_event_target_as = ring_section
+                    trigger_megastructure_icon = yes
+                    set_planet_flag = megastructure
+                    set_planet_flag = haloworld_habitable_1
+                    # Set a system flag to indicate the first section is built
+                }
+            }
+            set_star_flag = ringworld_section_A_built
+        }
+        remove_megastructure = fromfrom
+    }
+}
+
+
+
+
+halo_world_03_standby = {
+    entity = ""
+    portrait = "GFX_megastructure_construction_background"
+    scales_with_planet = no
+    place_entity_on_planet_plane = no
+    use_planet_resource = no
+    build_time = 0
+    resources = {
+        category = megastructures
+        upkeep = {
+            energy = 50
+            alloys = 50
+            originium = 10
+        }
+        upkeep = {
+            trigger = { solar_system = { has_star_flag = halo_is_cooling } }
+            energy = -30
+        }
+        produces = { influence = 4 }
+
+    }
+    country_modifier = {
+        founder_species_growth_mult = 0.1
+        empire_size_pops_mult = -0.05
+    }
+    potential = { always = no }
+    upgrade_from = {
+        halo_world_03_launching
+    }
+    upgrade_desc = hide
+    on_build_start = {}
+    on_build_complete = {
+        fromfrom = {
+            set_megastructure_flag = halo_center
+            set_megastructure_flag = halo_@owner
+        }
+    }}
+
+halo_world_03_launch = {
+    entity = ""
+    portrait = "GFX_megastructure_construction_background"
+    scales_with_planet = no
+    place_entity_on_planet_plane = yes
+    construction_blocks_and_blocked_by = none
+    use_planet_resource = no
+    build_time = 0
+    resources = {
+        category = megastructures
+        upkeep = {
+            energy = 50
+            alloys = 50
+            originium = 10
+        }
+        upkeep = {
+            trigger = { solar_system = { has_star_flag = halo_is_cooling } }
+            energy = -30
+        }
+        produces = { influence = 4 }
+
+    }
+    upgrade_from = { halo_world_03_standby }
+    upgrade_desc = hide
+    country_modifier = {
+        founder_species_growth_mult = 0.1
+        empire_size_pops_mult = -0.05
+    }
+
+    possible = {
+        custom_tooltip = {
+            fail_text = "AOW_mega_requires_not_at_cooling_time"
+            NOT = { has_star_flag = halo_is_cooling }
+        }
+        custom_tooltip = {
+            fail_text = "AOW_mega_requires_only_one_can_be_launched_at_a_time"
+            from = { NOT = { has_active_event = { halo.500 } } }
+        }
+        custom_tooltip = {
+            fail_text = "requires_only_one_halo_firing"
+            count_system_megastructure = {
+                limit = { is_megastructure_type = halo_world_03_standby }
+                count = 1
+            }
+        }
+    }
+    on_build_start = { fromfrom = { finish_upgrade = yes } }
+    on_build_complete = {
+        fromfrom = {
+            set_megastructure_flag = halo
+            upgrade_megastructure_to = halo_world_03_launching
+            finish_upgrade = yes
+            save_event_target_as = targeting_halo
+        }
+        from = {
+            country_event = { id = halo.500 }#选取
+        }
+    }
+}
+
+halo_world_03_launching = {
+    entity = ""
+    portrait = "GFX_megastructure_construction_background"
+    scales_with_planet = no
+    place_entity_on_planet_plane = yes
+    use_planet_resource = yes
+    build_time = 0
+    country_modifier = {
+        founder_species_growth_mult = 0.1
+        empire_size_pops_mult = -0.05
+    }
+
+    resources = {
+        category = megastructures
+        upkeep = {
+            energy = 50
+            alloys = 50
+            originium = 10
+        }
+        upkeep = {
+            trigger = { solar_system = { has_star_flag = halo_is_cooling } }
+            energy = -30
+        }
+        produces = { influence = 4 }
+
+    }
+    country_modifier = {
+        diplo_weight_naval_mult = 0.25
+    }
+    potential = { always = no }
+    upgrade_from = { halo_world_03_launch }
+    upgrade_desc = hide
+}
+

@@ -1,7 +1,171 @@
 spriteTypes = {
     spriteType = {
-        name = "GFX_crisis_icon_reality_etches"
-        texturefile = "gfx/interface/icons/crisis/cosmogenesis_icon_advanced_logic.dds"
+        name = "GFX_origenesis_icon_reality_etches_objectives"
+        texturefile = gfx/interface/icons/crisis/origenesis_icon_reality_etches.dds
         noOfFrames = 2
+    }
+
+    spriteType = {
+        name = "GFX_origenesis_icon_origenesis_buildings_1"
+        texturefile = gfx/interface/icons/crisis/origenesis_icon_origenesis_buildings_1.dds
+        noOfFrames = 2
+    }
+
+    spriteType = {
+        name = "GFX_origenesis_icon_origenesis_buildings_2"
+        texturefile = "gfx/interface/icons/crisis/origenesis_icon_origenesis_buildings_2.dds"
+        noOfFrames = 2
+    }
+
+    spriteType = {
+        name = "GFX_origenesis_icon_origenesis_buildings_3"
+        texturefile = "gfx/interface/icons/crisis/origenesis_icon_origenesis_buildings_3.dds"
+        noOfFrames = 2
+    }
+    spriteType = {
+        name = "GFX_origenesis_icon_origenesis_buildings_4"
+        texturefile = "gfx/interface/icons/crisis/origenesis_icon_origenesis_buildings_4.dds"
+        noOfFrames = 2
+    }
+    spriteType = {
+        name = "GFX_origenesis_icon_origenesis_buildings_5"
+        texturefile = "gfx/interface/icons/crisis/origenesis_icon_origenesis_buildings_5.dds"
+        noOfFrames = 2
+    }
+    spriteType = {
+        name = "GFX_origenesis_icon_origenesis_ship_2"
+        texturefile = "gfx/interface/icons/crisis/origenesis_icon_origenesis_ship_2.dds"
+        noOfFrames = 2
+    }
+    spriteType = {
+        name = "GFX_origenesis_icon_origenesis_ship_3"
+        texturefile = "gfx/interface/icons/crisis/origenesis_icon_origenesis_ship_3.dds"
+        noOfFrames = 2
+    }
+    spriteType = {
+        name = "GFX_origenesis_icon_origenesis_ship_4"
+        texturefile = "gfx/interface/icons/crisis/origenesis_icon_origenesis_ship_4.dds"
+        noOfFrames = 2
+    }
+
+    spriteType = {
+        name = "GFX_crisis_origenesis_level_1_btn"
+        texturefile = "gfx/interface/icons/crisis/Origenesis_Lvl1_btn.dds"
+        noOfFrames = 2
+    }
+    spriteType = {
+        name = "GFX_crisis_origenesis_level_2_btn"
+        texturefile = "gfx/interface/icons/crisis/Origenesis_Lvl2_btn.dds"
+        noOfFrames = 2
+    }
+    spriteType = {
+        name = "GFX_crisis_origenesis_level_3_btn"
+        texturefile = "gfx/interface/icons/crisis/Origenesis_Lvl3_btn.dds"
+        noOfFrames = 2
+    }
+    spriteType = {
+        name = "GFX_crisis_origenesis_level_4_btn"
+        texturefile = "gfx/interface/icons/crisis/Origenesis_Lvl4_btn.dds"
+        noOfFrames = 2
+    }
+    spriteType = {
+        name = "GFX_crisis_origenesis_level_5_btn"
+        texturefile = "gfx/interface/icons/crisis/Origenesis_Lvl5_btn.dds"
+        noOfFrames = 2
+    }
+    # 物质解压
+    spriteType = {
+        name = "GFX_origenesis_icon_matterextraction"
+        texturefile = "gfx/interface/icons/crisis/origenesis_icon_matter_extraction.dds"
+        noOfFrames = 2
+    }
+    # 知识解压
+    spriteType = {
+        name = "GFX_origenesis_icon_knowledgeextraction"
+        texturefile = "gfx/interface/icons/crisis/origenesis_icon_knowledge_extraction.dds"
+        noOfFrames = 2
+    }
+    # 碎星
+    spriteType = {
+        name = "GFX_origenesis_icon_galaticconsumption"
+        texturefile = "gfx/interface/icons/crisis/origenesis_icon_star_consumer.dds"
+        noOfFrames = 2
+    }
+    # 源石部件
+    spriteType = {
+        name = "GFX_origenesis_icon_oricomponents"
+        texturefile = "gfx/interface/icons/crisis/origenesis_icon_oritech.dds"
+        noOfFrames = 2
+    }
+
+    # 快速建造
+    spriteType = {
+        name = "GFX_origenesis_icon_origenesis_easilybuilt"
+        texturefile = "gfx/interface/icons/crisis/origenesis_icon_easily_built.dds"
+        noOfFrames = 2
+    }
+    # 蚀刻者
+    spriteType = {
+        name = "GFX_origenesis_icon_reality_etcher"
+        texturefile = "gfx/interface/icons/crisis/origenesis_icon_reality_etcher.dds"
+        noOfFrames = 2
+    }
+# 源石激活
+    spriteType = {
+        name = "GFX_origenesis_icon_origenesis_techs_1"
+        texturefile = "gfx/interface/icons/crisis/origenesis_icon_originium_activation.dds"
+        noOfFrames = 2
+    }
+
+# 源石激活
+    spriteType = {
+        name = "GFX_origenesis_icon_origenesis_override"
+        texturefile = "gfx/interface/icons/crisis/origenesis_icon_originium_override.dds"
+        noOfFrames = 2
+    }
+    progressbarType = {
+        name = "GFX_origenesis_path_progressbar"
+        color = { 1.0 1.0 1.0 }
+        colorTwo = { 1.0 1.0 1.0 }
+        textureFile1 = "gfx/interface/crisis/origenesis_progress_bar.dds"
+        textureFile2 = "gfx/interface/crisis/Crisis_progressBar_BG.dds"
+        size = { x = 10 y = 432 }
+        effectFile = "gfx/FX/progress.shader"
+        horizontal = no
+        flipdirection = yes
+    }
+
+    spriteType = {
+        name = "GFX_origenesis_path_level_boxes"
+        texturefile = "gfx/interface/icons/crisis/origenesis_levelboxes.dds"
+        noOfFrames = 2
+    }
+
+    spriteType = {
+        name = "GFX_origenesis_path_levels_frame"
+        texturefile = "gfx/interface/icons/crisis/origenesis_levels_frame.dds"
+    }
+
+    spriteType = {
+        name = "GFX_origenesis_path_title_box"
+        texturefile = "gfx/interface/icons/crisis/origenesis_title2.dds"
+    }
+    corneredTileSpriteType = {
+        name = "GFX_origenesis_path_bg"
+        texturefile = "gfx/interface/icons/crisis/origenesis_BG.dds"
+        borderSize = { x = 0 y = 0 }
+        effectFile = "gfx/FX/buttonstate_onlydisable.shader"
+    }
+    spriteType = {
+        name = "GFX_evt_sign_of_apocalypse"
+        texturefile = "gfx/event_pictures/sign_of_apocalypse.dds"
+        masking_texture = "gfx/interface/situation_log/event_mask.dds"
+        alwaystransparent = yes
+    }
+    spriteType = {
+        name = "GFX_evt_origenesis_crisis"
+        texturefile = "gfx/event_pictures/origenesis_crisis.dds"
+        masking_texture = "gfx/interface/situation_log/event_mask.dds"
+        alwaystransparent = yes
     }
 }

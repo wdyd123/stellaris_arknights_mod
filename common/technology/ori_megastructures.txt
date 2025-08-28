@@ -1,10 +1,9 @@
 tech_halo_world = {
     area = engineering
-    cost = @tier5cost3
+    cost = @tier5cost1
     tier = 5
-    category = { voidcraft }
+    category = { materials }
     ai_update_type = all
-    prerequisites = { "tech_mega_engineering" }
 
     weight = @tier5weight3
     is_rare = yes
@@ -16,8 +15,15 @@ tech_halo_world = {
     weight_modifier = {
         factor = 0
     }
+    prereqfor_desc = {
+        custom = {
+            title = "TECH_UNLOCK_HALOOWORLD_CONSTRUCTION_TITLE"
+            desc = "TECH_UNLOCK_HALOWORLD_CONSTRUCTION_DESC"
+        }
+    }
 
     ai_weight = {
         factor = @best_megastructure_ai_tech_factor
     }
 }
+

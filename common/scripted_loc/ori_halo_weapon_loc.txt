@@ -1,0 +1,86 @@
+defined_text = {
+    name = GetHaloTargetMode01
+    inline_script = {
+        script = scripted_loc/halo_target_mode
+        target = 01
+    }
+}
+defined_text = {
+    name = GetHaloTargetMode02
+    inline_script = {
+        script = scripted_loc/halo_target_mode
+        target = 02
+    }
+}
+defined_text = {
+    name = GetHaloTargetMode03
+    inline_script = {
+        script = scripted_loc/halo_target_mode
+        target = 03
+    }
+}
+defined_text = {
+    name = GetHaloTargetMode04
+    inline_script = {
+        script = scripted_loc/halo_target_mode
+        target = 04
+    }
+}
+defined_text = {
+    name = GetHaloTargetMode05
+    inline_script = {
+        script = scripted_loc/halo_target_mode
+        target = 05
+    }
+}
+defined_text = {
+    name = GetHaloTargetMode06
+    inline_script = {
+        script = scripted_loc/halo_target_mode
+        target = 06
+    }
+}
+defined_text = {
+    name = GetHaloTargetMode07
+    inline_script = {
+        script = scripted_loc/halo_target_mode
+        target = 07
+    }
+}
+defined_text = {
+    name = GetHaloTargetMode08
+    inline_script = {
+        script = scripted_loc/halo_target_mode
+        target = 08
+    }
+}
+defined_text = {
+    name = GetHaloTargetMode09
+    inline_script = {
+        script = scripted_loc/halo_target_mode
+        target = 09
+    }
+}
+defined_text = {
+    name = GetHaloTargetMode10
+    inline_script = {
+        script = scripted_loc/halo_target_mode
+        target = 10
+    }
+}
+
+#坠星天矛当前目标数量
+defined_text = {
+    name = GetHaloNumOfTargets
+    value = value:halo_num_of_targets|scope|from|
+}
+#坠星天矛星系目标容量
+defined_text = {
+    name = GetHaloSystemTargetCapacity
+    value = value:halo_system_target_capacity_desc
+}
+#坠星天矛行星目标容量
+defined_text = {
+    name = GetHaloPlanetTargetCapacity
+    value = value:halo_planet_target_capacity_desc
+}

@@ -1,0 +1,607 @@
+guiTypes = {
+    ### 事件选项 ###
+    containerWindowType = {
+        #取消发射
+        name = "halo_ui_option_quit"
+        position = { x = 660 y = 0 }
+        size = { width = 700 height = 0 }#height必须为0，否则这两个事件选项不会横向对齐
+        moveable = no
+        buttonType = {
+            name = "option_button"
+            quadTextureSprite = "GFX_close"
+            position = { x = 660 y = 0 }
+            #position = { x = 437 y = 97 }
+            font = "malgun_goth_24"#"cg_16b"
+            text = ""
+        }
+        OverlappingElementsBoxType = {
+            name = "trigger_icons"
+            position = { x = 0 y = 10 }
+            size = { x = 65 y = 28 }
+        }
+    }
+    containerWindowType = {
+        #确认发射
+        name = "halo_ui_option_confirm"
+        position = { x = 435 y = 438 }
+        size = { width = 180 height = 34 }
+        moveable = no
+        buttonType = {
+            name = "option_button"
+            quadTextureSprite = "GFX_standard_button_180_34_button"
+            position = { x = 435 y = 438 }
+            #position = { x = 202 y = 97 }
+            font = "malgun_goth_24"#"cg_16fb"
+            text = "OPTION_TEXT"
+        }
+        OverlappingElementsBoxType = {
+            name = "trigger_icons"
+            position = { x = 0 y = 10 }
+            size = { x = 65 y = 28 }
+        }
+    }
+    ### 事件窗口 ###
+    containerWindowType = {
+        name = "halo_ui"
+        orientation = center
+        origo = center
+        moveable = yes
+        size = { width = 700 height = 502 }
+
+        background = {
+            #整体背景
+            name = "background"
+            quadtexturesprite = "halo_button_bg"
+            # alwaysTransparent = yes
+        }
+        containerWindowType = {
+            name = "screen_frame_bg"
+            position = { x = 5 y = 55 }
+            size = { width = 690 height = 442 }
+            orientation = upper_left
+
+            background = {
+                #标题背景
+                name = "title_background"
+                position = { x = 0 y = 0 }
+                quadTextureSprite = "halo_button_title_bg"
+                alwaysTransparent = yes
+
+            }
+
+        }
+        ### 选项窗口 ###
+
+
+        containerWindowType = {
+            name = "EVENT_DIPLO"
+            position = { x = 0 y = 0 }
+            size = { width = 700 height = 502 }
+            moveable = no
+            instantTextBoxType = {
+                #事件标题文字
+                name = "action_title"
+                font = "malgun_goth_24"
+                position = { x = 9999 y = 9999 }
+                maxWidth = 400
+                alwaysTransparent = yes
+            }
+            instantTextBoxType = {
+                name = "action_desc"
+                font = "malgun_goth_24"
+                position = { x = 9999 y = 9999 }
+                maxWidth = 500
+                maxHeight = 180
+                Orientation = "UPPER_LEFT"
+                format = center
+                alwaysTransparent = yes
+                text_color_code = "H"
+            }
+            listboxType = {
+                #选项栏
+                name = "option_list"
+                position = { x = 0 y = 0 }
+                moveable = yes
+                #backGround=""
+                size = { width = 700 height = 502 }
+                spacing = 0
+                scrollbartype = "standardlistbox_slider"
+                borderSize = { x = 0 y = 0 }
+                alwaysTransparent = yes
+                #Orientation = "UPPER_LEFT"
+            }
+        }
+        effectButtonType = {
+            name = "button_left_null"
+            position = { x = 25 y = 221 }
+            spriteType = "GFX_standard_button_172_34"
+            buttonFont = malgun_goth_24
+            format = center
+            text = text_halo_target_capacity
+            multiline = yes
+            effect = btn_halo_type_capacity
+        }
+        effectButtonType = {
+            name = "button_left_planet"
+            position = { x = 25 y = 221 }
+            spriteType = "GFX_standard_button_172_34"
+            buttonFont = "malgun_goth_24"
+            format = center
+            text = text_halo_target_planet
+            effect = btn_halo_type_planet
+        }
+        effectButtonType = {
+            name = "button_left_system"
+            position = { x = 25 y = 221 }
+            spriteType = "GFX_standard_button_172_34"
+            buttonFont = "malgun_goth_24"
+            format = center
+            text = text_halo_target_system
+            effect = btn_halo_type_system
+        }
+        effectButtonType = {
+            name = "button_right"
+            position = { x = 85 y = 438 }
+            quadTextureSprite = "GFX_standard_button_180_34_button"
+            buttonFont = "malgun_goth_24"
+            format = center
+            text = text_clear_all_targets
+            effect = btn_clear_all_targets
+        }
+
+
+
+        @button_left_x = 255
+        @button_right_x = 485
+        @target_button_y1 = 73
+        @target_button_y2 = 107
+        @target_button_y3 = 141
+        @target_button_y4 = 175
+        @target_button_y5 = 209
+        @target_button_y6 = 243
+        @target_button_y7 = 277
+        @target_button_y8 = 311
+        @target_button_y9 = 345
+        @target_button_y10 = 379
+        #显示所选目标
+        effectButtonType = {
+            name = "target_01"
+            position = { x = @button_left_x y = @target_button_y1 }
+            spriteType = "GFX_button_164_24"
+            buttonFont = "malgun_goth_24"
+            format = center
+            text = halo_text_target_01
+            effect = btn_halo_target_01
+        }
+        effectButtonType = {
+            name = "target_02"
+            position = { x = @button_left_x y = @target_button_y2 }
+            spriteType = "GFX_button_164_24"
+            buttonFont = "malgun_goth_24"
+            format = center
+            text = halo_text_target_02
+            effect = btn_halo_target_02
+        }
+        effectButtonType = {
+            name = "target_03"
+            position = { x = @button_left_x y = @target_button_y3 }
+            spriteType = "GFX_button_164_24"
+            buttonFont = "malgun_goth_24"
+            format = center
+            text = halo_text_target_03
+            effect = btn_halo_target_03
+        }
+        effectButtonType = {
+            name = "target_04"
+            position = { x = @button_left_x y = @target_button_y4 }
+            spriteType = "GFX_button_164_24"
+            buttonFont = "malgun_goth_24"
+            format = center
+            text = halo_text_target_04
+            effect = btn_halo_target_04
+        }
+        effectButtonType = {
+            name = "target_05"
+            position = { x = @button_left_x y = @target_button_y5 }
+            spriteType = "GFX_button_164_24"
+            buttonFont = "malgun_goth_24"
+            format = center
+            text = halo_text_target_05
+            effect = btn_halo_target_05
+        }
+        effectButtonType = {
+            name = "target_06"
+            position = { x = @button_left_x y = @target_button_y6 }
+            spriteType = "GFX_button_164_24"
+            buttonFont = "malgun_goth_24"
+            format = center
+            text = halo_text_target_06
+            effect = btn_halo_target_06
+        }
+        effectButtonType = {
+            name = "target_07"
+            position = { x = @button_left_x y = @target_button_y7 }
+            spriteType = "GFX_button_164_24"
+            buttonFont = "malgun_goth_24"
+            format = center
+            text = halo_text_target_07
+            effect = btn_halo_target_07
+        }
+        effectButtonType = {
+            name = "target_08"
+            position = { x = @button_left_x y = @target_button_y8 }
+            spriteType = "GFX_button_164_24"
+            buttonFont = "malgun_goth_24"
+            format = center
+            text = halo_text_target_08
+            effect = btn_halo_target_08
+        }
+        effectButtonType = {
+            name = "target_09"
+            position = { x = @button_left_x y = @target_button_y9 }
+            spriteType = "GFX_button_164_24"
+            buttonFont = "malgun_goth_24"
+            format = center
+            text = halo_text_target_09
+            effect = btn_halo_target_09
+        }
+        effectButtonType = {
+            name = "target_10"
+            position = { x = @button_left_x y = @target_button_y10 }
+            spriteType = "GFX_button_164_24"
+            buttonFont = "malgun_goth_24"
+            format = center
+            text = halo_text_target_10
+            effect = btn_halo_target_10
+        }
+        #显示目标可用的打击模式
+        effectButtonType = {
+            #行星目标：模式一
+            name = "mode_planet_01"
+            position = { x = @button_right_x y = @target_button_y1 }
+            spriteType = "GFX_button_164_24"
+            buttonFont = "malgun_goth_24"
+            format = center
+            text = PLANET_KILLER_CRACKER
+            effect = btn_planet_target_mode_01
+        }
+        effectButtonType = {
+            #行星目标：模式二
+            name = "mode_planet_02"
+            position = { x = @button_right_x y = @target_button_y2 }
+            spriteType = "GFX_button_164_24"
+            buttonFont = "malgun_goth_24"
+            format = center
+            text = PLANET_KILLER_SHIELDER
+            effect = btn_planet_target_mode_02
+        }
+        effectButtonType = {
+            #行星目标：模式三
+            name = "mode_planet_03"
+            position = { x = @button_right_x y = @target_button_y3 }
+            spriteType = "GFX_button_164_24"
+            buttonFont = "malgun_goth_24"
+            format = center
+            text = PLANET_KILLER_NEUTRON
+            effect = btn_planet_target_mode_03
+        }
+        effectButtonType = {
+            #行星目标：模式四
+            name = "mode_planet_04"
+            position = { x = @button_right_x y = @target_button_y4 }
+            spriteType = "GFX_button_164_24"
+            buttonFont = "malgun_goth_24"
+            format = center
+            text = PLANET_KILLER_GODRAY
+            effect = btn_planet_target_mode_04
+        }
+        effectButtonType = {
+            #行星目标：模式五
+            name = "mode_planet_05"
+            position = { x = @button_right_x y = @target_button_y5 }
+            spriteType = "GFX_button_164_24"
+            buttonFont = "malgun_goth_24"
+            format = center
+            text = PLANET_KILLER_NANOBOTS
+            effect = btn_planet_target_mode_05
+        }
+        effectButtonType = {
+            #行星目标：模式六
+            name = "mode_planet_06"
+            position = { x = @button_right_x y = @target_button_y6 }
+            spriteType = "GFX_button_164_24"
+            buttonFont = "malgun_goth_24"
+            format = center
+            text = PLANET_KILLER_DELUGE
+            effect = btn_planet_target_mode_06
+        }
+        effectButtonType = {
+            #行星目标：模式七
+            name = "mode_planet_07"
+            position = { x = @button_right_x y = @target_button_y7 }
+            spriteType = "GFX_button_164_24"
+            buttonFont = "malgun_goth_24"
+            format = center
+            text = PLANET_KILLER_DEVOLUTION
+            effect = btn_planet_target_mode_07
+        }
+
+        # effectButtonType = {
+        #     #星系目标：模式一
+        #     name = "mode_system_01"
+        #     position = { x = @button_right_x y = @target_button_y1 }
+        #     spriteType = "GFX_button_164_24"
+        #     buttonFont = "malgun_goth_24"
+        #     format = center
+        #     text = AOW_text_btn_system_target_mode_01
+        #     effect = btn_system_target_mode_01
+        # }
+        # effectButtonType = {
+        #     #星系目标：模式二
+        #     name = "mode_system_02"
+        #     position = { x = @button_right_x y = @target_button_y2 }
+        #     spriteType = "GFX_button_164_24"
+        #     buttonFont = "malgun_goth_24"
+        #     format = center
+        #     text = AOW_text_btn_system_target_mode_02
+        #     effect = btn_system_target_mode_02
+        # }
+        # effectButtonType = {
+        #     #星系目标：模式三
+        #     name = "mode_system_03"
+        #     position = { x = @button_right_x y = @target_button_y3 }
+        #     spriteType = "GFX_button_164_24"
+        #     buttonFont = "malgun_goth_24"
+        #     format = center
+        #     text = AOW_text_btn_system_target_mode_03
+        #     effect = btn_system_target_mode_03
+        # }
+        effectButtonType = {
+            #星系目标：模式四
+            name = "mode_system_04"
+            position = { x = @button_right_x y = @target_button_y4 }
+            spriteType = "GFX_button_164_24"
+            buttonFont = "malgun_goth_24"
+            format = center
+            text = AOW_text_btn_system_target_mode_04
+            effect = btn_system_target_mode_04
+        }
+        # effectButtonType = {
+        #     #星系目标：模式五
+        #     name = "mode_system_05"
+        #     position = { x = @button_right_x y = @target_button_y5 }
+        #     spriteType = "GFX_button_164_24"
+        #     buttonFont = "malgun_goth_24"
+        #     format = center
+        #     text = AOW_text_btn_system_target_mode_05
+        #     effect = btn_system_target_mode_05
+        # }
+        # effectButtonType = {
+        #     #星系目标：模式六
+        #     name = "mode_system_06"
+        #     position = { x = @button_right_x y = @target_button_y6 }
+        #     spriteType = "GFX_button_164_24"
+        #     buttonFont = "malgun_goth_24"
+        #     format = center
+        #     text = AOW_text_btn_system_target_mode_06
+        #     effect = btn_system_target_mode_06
+        # }
+
+        buttonType = {#确认按钮
+            name = "confirm_button"
+            quadTextureSprite = "GFX_standard_button_142_34_button"
+            position = { x= -175 y = 564  }
+            Orientation = "UPPER_RIGHT"
+            font = "cg_16b"
+            text = "MESSAGE_OK"
+            clicksound = "confirmation"
+        }
+        instantTextBoxType = {#“信号传输接入”
+            name = "heading"
+            font = "malgun_goth_24"
+            text = "DIPLOMACY"
+            position = { x = 9999 y = 9999 }
+            maxWidth = 543
+            maxHeight = 22
+            fixedSize = yes
+            alwaysTransparent = yes
+        }
+        buttonType = {#事件描述背景
+            name = "alien_message_background"
+            size = { x = 626 y = 370 }
+            position = { x = 9999 y = 9999 }
+            spriteType = "GFX_tiles_dark_area_cut_8"
+            alwaysTransparent = yes
+        }
+        instantTextBoxType = {#事件描述文本
+            name = "alien_message"
+            font = "cg_16b"
+            position = { x = 9999 y = 9999 }
+            maxWidth = 606
+            maxHeight = 360
+            format = left
+            scrollbartype = "standardtext_slider"
+        }
+        #房间背景 领袖肖像
+        containerWindowType = {
+            name = "portrait"
+            position = { x = 9999 y = 9999 }
+            size = { width = 964 height = 350 }
+            clipping = yes
+            iconType = {
+                name = "portrait"
+                spriteType = "GFX_portrait_gamesetup_mask"
+                position = { x = 3 y = 3 }
+                alwaysTransparent = yes
+                scale = 0.65
+            }
+            iconType = {#填色背景
+                name = "black_frame"
+                spriteType = "GFX_diplomacy_portrait_shadow_frame"
+                position = { x = -1 y = -2 }
+                alwaysTransparent = yes
+                scale = 0.65
+            }
+            iconType = {#横白线
+                name = "stripes_1"
+                spriteType = "GFX_diplomacy_stripes_2"
+                position = { x = 3 y = 3 }
+                alwaysTransparent = yes
+                scale = 0.65
+            }
+            iconType = {#边框
+                name = "city_frame"
+                spriteType = "GFX_diplomacy_portrait_frame"
+                position = { x = -3 y = -2 }
+                alwaysTransparent = yes
+                scale = 0.65
+            }
+        }
+        #肖像背景
+        containerWindowType = {
+            name = "portrait_background"
+            position = { x = 9999 y = 9999 }
+            size = { width = 964 height = 350 }
+            clipping = yes
+            iconType = {
+                name = "event_picture"
+                spriteType = "GFX_diplomacy_portrait_frame"
+                position = { x = -6 y = -5 }
+            }
+            iconType = {
+                name = "portrait"
+                position = { x = 250 y = 0 }
+                spriteType = "GFX_portrait_character"
+            }
+        }
+        #帝国信息
+        iconType = {
+            name = "empire_info_bg"
+            spriteType = "GFX_diplomacy_dark_fade_bg"
+            position = { x = 9999 y = 9999 }
+            alwaysTransparent = yes
+        }
+        instantTextBoxType={#帝国名字
+            name = "empire_name"
+            font = "malgun_goth_24"
+            text = "Kammarian Galactic Concordat"
+            position = { x = 9999 y = 9999 }
+            maxWidth = 450
+            maxHeight = 16
+            format = LEFT
+            text_color_code = "E"
+            fixedsize = yes
+        }
+        instantTextBoxType={#帝国政府类型
+            name = "empire_government_type"
+            font = "cg_16b"
+            text = "Autocracy"
+            position = { x = 9999 y = 9999 }
+            maxWidth = 250
+            maxHeight = 16
+            format = LEFT
+            fixedsize = yes
+            text_color_code = "Y"
+        }
+        instantTextBoxType={#帝国AI人格类型
+            name = "empire_personality_type"
+            font = "cg_16b"
+            text = "Despicable Neutrals"
+            position = { x = 9999 y = 9999 }
+            maxWidth = 250
+            maxHeight = 16
+            format = LEFT
+            fixedsize = yes
+        }
+        OverlappingElementsBoxType = {#帝国思潮
+            name = "empire_ethics_icons"
+            position = { x = 9999 y = 9999 }
+            size = { x = 240 y = 30 }
+            spacing = 2.0
+            format = left
+        }
+        buttonType = {#帝国旗帜
+            name = "empire_flag"
+            quadTextureSprite = "GFX_empire_flag_128"
+            position = { x = 9999 y = 9999 }
+            orientation = UPPER_LEFT
+        }
+        containerWindowType = {#领袖细节
+            name = "leader_details"
+            position = { x = 9999 y = 9999 }
+            containerWindowType = {
+                name = "empire_traits_box"
+                position = { x = 0 y = -5 }
+                size = { width = 210 height = 75 }
+                background = {
+                    name = "ethics_bg"
+                    spriteType = "GFX_tiles_dark_area_cut_8"
+                }
+            }
+            instantTextBoxType = {
+                name = "empire_traits_label"
+                position = { x = 214 y = 37 }
+                font = "cg_16b"
+                maxWidth = 230
+                maxHeight = 20
+                fixedSize = yes
+                format = left
+                #text_color_code = "E"
+                text = "RULER_TRAITS"
+                alwaysTransparent = yes
+            }
+            overlappingElementsBoxType = {
+                name = "leader_traits"
+                position = { x = 215 y = 55 }
+                size = { x = 125 y = 330 }
+            }
+            instantTextBoxType = {
+                name = "leader_name"
+                position = { x = 10 y = 0 }
+                font = "cg_16b"
+                maxWidth = 330
+                maxHeight = 20
+                fixedSize = yes
+                format = left
+                text = "Leader Name"
+                text_color_code = "E"
+            }
+            instantTextBoxType = {
+                name = "leader_species"
+                position = { x = 10 y = 18 }
+                font = "cg_16b"
+                maxWidth = 330
+                maxHeight = 20
+                fixedSize = yes
+                text = "Leader Species"
+                format = left
+            }
+        }
+        ### 评价
+        containerWindowType = {
+            name = "opinion_window"
+            position = { x = 9999 y = 9999 }
+            size = { width = 94 height = 30 }
+            background = {
+                name = "opinion_bg"
+                spriteType = "GFX_tiled_window_transparent"
+            }
+            iconType = {
+                name = "their_opinion_icon"
+                spriteType = "GFX_diplomacy_opinion"
+                position = { x = 7 y = 4 }
+                alwaysTransparent = yes
+            }
+            instantTextBoxType = {
+                name = "their_opinion"
+                font = "cg_16b"
+                maxWidth = 40
+                position = { x = 40 y = 7 }
+                format = left
+                text = "100"
+                alwaysTransparent = yes
+            }
+        }
+    }
+
+}

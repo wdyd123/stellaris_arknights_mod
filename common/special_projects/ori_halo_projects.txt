@@ -1,0 +1,47 @@
+special_project = {
+    key = "GALATIC_ETCHING"
+    cost = 0
+    days_to_research = 4800
+    tech_department = physics_technology
+    picture = GFX_evt_originium_resonance_crystallization
+
+    event_scope = country_event
+    timelimit = -1
+    requirements = {
+        shipclass_science_ship = 1
+        leader = scientist
+        shipclass_military = 1
+        fleet_power > 1000000
+        #skill = 3
+    }
+
+    on_success = {
+        every_playable_country = {
+            limit = {
+                is_ai = no
+                NOT = { is_same_value = root }
+            }
+            country_event = { id = origenesis.6051 }
+        }
+        set_update_modifiers_batch = begin
+        every_system = {
+            halo_destroy_star_system = {
+                PLANET_CLASS = pc_black_hole
+            }
+        }
+        set_update_modifiers_batch = end
+        every_country = {
+            limit = {
+                NOT = {
+                    is_country_type = default
+                }
+            }
+            destroy_country = yes
+        }
+        win = yes
+
+    }
+
+    on_fail = {
+    }
+}
