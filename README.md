@@ -216,9 +216,10 @@
 
 ## 📄 许可证 | License
 
-本mod大部分素材来自鹰角网络,少数图标为自行绘制。禁止商用
-[CC BY-NC 4.0]
-https://creativecommons.org/licenses/by-nc/4.0/
+- 本mod大部分素材来自鹰角网络,少数图标为自行绘制。禁止商用
+- [CC BY-NC 4.0]
+  https://creativecommons.org/licenses/by-nc/4.0/
+
 ---
 
 <div align="center">
