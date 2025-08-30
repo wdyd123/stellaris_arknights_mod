@@ -1,4 +1,4 @@
-![mod_banner](thumbnail.png)
+![mod_banner](readme_image/thumbnail.png)
 
 # 明日方舟 Stellaris Mod | Arknights Stellaris Mod
 
