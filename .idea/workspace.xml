@@ -8,22 +8,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3c23acaf-318b-45fc-ae5e-187f4e105237" name="更改" comment="实现了天灾的所有功能，包括事件链，等级奖励，以及独特巨构。目前还有一些gfx和本地化需要补充，以及潜在的bug需要修复">
-      <change afterPath="$PROJECT_DIR$/gfx/event_pictures/recruitment.dds" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/ascension_perks/origenesis.dds" afterDir="false" />
+    <list default="true" id="3c23acaf-318b-45fc-ae5e-187f4e105237" name="更改" comment="修改了事件的细节,完善了最终特殊项目,添加了一些美术资源">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/crisis_levels/ori_crisis_levels.txt" beforeDir="false" afterPath="$PROJECT_DIR$/common/crisis_levels/ori_crisis_levels.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/edicts/Originium.txt" beforeDir="false" afterPath="$PROJECT_DIR$/common/edicts/Originium.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/megastructures/ori_halo_world.txt" beforeDir="false" afterPath="$PROJECT_DIR$/common/megastructures/ori_halo_world.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/situations/ori_recruitment_situations.txt" beforeDir="false" afterPath="$PROJECT_DIR$/common/situations/ori_recruitment_situations.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/situations/originium_situation.txt" beforeDir="false" afterPath="$PROJECT_DIR$/common/situations/originium_situation.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/special_projects/ori_halo_projects.txt" beforeDir="false" afterPath="$PROJECT_DIR$/common/special_projects/ori_halo_projects.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/events/operator_events.txt" beforeDir="false" afterPath="$PROJECT_DIR$/events/operator_events.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/events/ori_halo_victory_events.txt" beforeDir="false" afterPath="$PROJECT_DIR$/events/ori_halo_victory_events.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/interface/ori_ascension_perk.gfx" beforeDir="false" afterPath="$PROJECT_DIR$/interface/ori_ascension_perk.gfx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/interface/ori_eventpictures.gfx" beforeDir="false" afterPath="$PROJECT_DIR$/interface/ori_eventpictures.gfx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/localisation/simp_chinese/ori_megastructures_l_simp_chinese.yml" beforeDir="false" afterPath="$PROJECT_DIR$/localisation/simp_chinese/ori_megastructures_l_simp_chinese.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/localisation/simp_chinese/ori_special_simp_chinese.yml" beforeDir="false" afterPath="$PROJECT_DIR$/localisation/simp_chinese/ori_special_simp_chinese.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gfx/event_pictures/origenesis_crisis.dds" beforeDir="false" afterPath="$PROJECT_DIR$/gfx/event_pictures/origenesis_crisis.dds" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/interface/ori_crisis.gfx" beforeDir="false" afterPath="$PROJECT_DIR$/interface/ori_crisis.gfx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -72,29 +61,29 @@
     <option name="showLibraryContents" value="true" />
     <option name="sortKey" value="BY_TIME_DESCENDING" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/OneDrive/Documents/Paradox Interactive/Stellaris/mod/00001/gfx/event_pictures&quot;,
-    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
-    &quot;two.files.diff.last.used.file&quot;: &quot;B:/steam/steamapps/common/Stellaris/common/scripted_effects/00_scripted_effects.txt&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "master",
+    "ignore.virus.scanning.warn.message": "true",
+    "last_opened_file_path": "D:/OneDrive/Documents/Paradox Interactive/Stellaris/mod/00001/gfx/interface/icons/ascension_perks",
+    "run.code.analysis.last.selected.profile": "pProject Default",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "two.files.diff.last.used.file": "B:/steam/steamapps/common/Stellaris/common/scripted_effects/00_scripted_effects.txt"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;com.intellij.ide.scratch.ScratchImplUtil$2/新建临时文件&quot;: [
-      &quot;GitIgnore&quot;,
-      &quot;PLAIN_TEXT&quot;
+  "keyToStringList": {
+    "com.intellij.ide.scratch.ScratchImplUtil$2/新建临时文件": [
+      "GitIgnore",
+      "PLAIN_TEXT"
     ],
-    &quot;com.intellij.ide.scratch.ScratchImplUtil$2/更改语言&quot;: [
-      &quot;PARADOX_SCRIPT&quot;
+    "com.intellij.ide.scratch.ScratchImplUtil$2/更改语言": [
+      "PARADOX_SCRIPT"
     ]
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\OneDrive\Documents\Paradox Interactive\Stellaris\mod\00001\gfx\event_pictures" />
@@ -111,6 +100,7 @@
       <recent name="D:\OneDrive\Documents\Paradox Interactive\Stellaris\mod\00001\common\button_effects" />
     </key>
     <key name="Pls.ConvertImageFormat.RECENT_KEYS.PNG">
+      <recent name="D:\OneDrive\Documents\Paradox Interactive\Stellaris\mod\00001\gfx\interface\icons\ascension_perks" />
       <recent name="D:\OneDrive\桌面\sucai\ui\aow" />
       <recent name="D:\OneDrive\桌面\sucai\resources" />
     </key>
@@ -379,7 +369,15 @@
       <option name="project" value="LOCAL" />
       <updated>1756372700231</updated>
     </task>
-    <option name="localTasksCounter" value="33" />
+    <task id="LOCAL-00033" summary="修改了事件的细节,完善了最终特殊项目,添加了一些美术资源">
+      <option name="closed" value="true" />
+      <created>1756516230115</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1756516230115</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -444,6 +442,7 @@
     <MESSAGE value="天灾雏形,等级和美术资源都有缺失&#10;现在在招募法令开启时每五年招募一名领袖" />
     <MESSAGE value="实现了光环巨构的前两个阶段,以及天灾的部分功能,包括等级/奖励/资源/科技/本地化" />
     <MESSAGE value="实现了天灾的所有功能，包括事件链，等级奖励，以及独特巨构。目前还有一些gfx和本地化需要补充，以及潜在的bug需要修复" />
-    <option name="LAST_COMMIT_MESSAGE" value="实现了天灾的所有功能，包括事件链，等级奖励，以及独特巨构。目前还有一些gfx和本地化需要补充，以及潜在的bug需要修复" />
+    <MESSAGE value="修改了事件的细节,完善了最终特殊项目,添加了一些美术资源" />
+    <option name="LAST_COMMIT_MESSAGE" value="修改了事件的细节,完善了最终特殊项目,添加了一些美术资源" />
   </component>
 </project>

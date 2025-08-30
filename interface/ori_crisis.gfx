@@ -164,6 +164,7 @@ spriteTypes = {
     }
     spriteType = {
         name = "GFX_evt_origenesis_crisis"
+
         texturefile = "gfx/event_pictures/origenesis_crisis.dds"
         masking_texture = "gfx/interface/situation_log/event_mask.dds"
         alwaystransparent = yes
