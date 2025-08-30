@@ -3,6 +3,7 @@
  TIMELINE_EVENT_ORIGINIUM_REGULAR_TOOLTIP: "§H错综的命运显出踪迹§!\n§3帝国事件§!\n\n§L[GetDate]§!，[EVENT_TARGET_0.GetName]完成了源石飞升"
  TECH_UNLOCK_HALOOWORLD_CONSTRUCTION_TITLE: "§3解锁巨型结构§!：光环"
  TECH_UNLOCK_HALOWORLD_CONSTRUCTION_DESC: "§3光环§!\n它不仅是我们为了加快源石同化进度所设计的毁灭性武器，同时也拥有维持生态平衡和支持殖民生活的功能。每个光环都具有强大的生态系统，能够为殖民者提供优渥的生存空间，"
+ requires_origenesis_tech_5_to_fire: "光环需要§I$tech_stellar_guidance$§!科技才能发射"
 
  # pc_halo_world_habitable: "光环区段"
  # pc_halo_world_habitable_desc: "该光环区段是光环的一部分，同行星一样围绕太阳运行。\n不像球形行星那样拥有诸多限制，内圈有大量人造宜居空间。"

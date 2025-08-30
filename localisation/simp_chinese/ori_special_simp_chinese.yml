@@ -1,3 +1,4 @@
 ﻿l_simp_chinese:
  GALATIC_ETCHING: "蚀刻银河"
  GALATIC_ETCHING_DESC: "启动光环，利用超大型源石阵列捕获并固化整个星系的时空信息。，将恒星、行星及其间所有物质的存在状态永久烙印于源石晶体结构中。"
+ halo.1001.a.tooltip: "解锁特殊项目：§Y$GALATIC_ETCHING$§!"

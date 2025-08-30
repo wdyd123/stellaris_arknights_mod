@@ -1,0 +1,321 @@
+recruitment_situation = {
+    picture = GFX_evt_originium_resonance
+    complete_icon_frame = GFX_situation_outcome_frame_green
+    complete_icon = GFX_situation_outcome_ascension
+    category = positive
+    initial_progress = 0
+
+    on_progress_complete = {
+        custom_tooltip = originium_resonance_situation_outcome
+        hidden_effect = {
+            situation_event = { id = arknights_recruitment.1 } # Situation Complete event
+        }
+    }
+
+    stages = {
+        stage_1 = {
+            icon = GFX_situation_stage_1
+            icon_background = GFX_situation_stage_frame_blue
+            end = 600
+            on_first_enter = {
+                situation_event = { id = ori_ap.5 days = 1 }
+            }
+            custom_tooltip = "originium_stage_1_effects"
+        }
+        stage_2 = {
+            icon = GFX_situation_stage_2
+            icon_background = GFX_situation_stage_frame_blue
+            end = 1200
+            on_first_enter = {
+                situation_event = { id = ori_ap.10 }
+            }
+            custom_tooltip = "originium_stage_2_effects"
+        }
+        stage_3 = {
+            icon = GFX_situation_stage_3
+            icon_background = GFX_situation_stage_frame_blue
+            end = 1800
+            on_first_enter = {
+                situation_event = { id = ori_ap.15 }
+            }
+            custom_tooltip = "originium_stage_3_effects"
+        }
+    }
+
+    monthly_progress = {
+        base = 15
+        modifier = {
+            mult = 0
+            desc = "originium_resonance_situation_pause_desc"
+            has_situation_flag = situation_originium_pause
+        }
+        modifier = {
+            mult = owner.value:prophecy_progress_mult_value
+            desc = originium_resonance_number_of_originium_researchers
+        }
+        modifier = {
+            owner = {
+                OR = {
+                    has_edict = debug
+                    country_has_situation = {
+                        SITUATION =
+                    }
+                }
+            }
+            add = 135
+            desc = originium_resonance_number_of_originium_researchers
+
+        }
+        modifier = {
+            mult = 0
+            desc = "situation_originium_facility_needed_desc"
+            owner = {
+                NOT = {
+                    any_owned_planet = {
+                        has_active_building = building_originium_facility
+                    }
+                }
+            }
+        }
+        modifier = {
+            mult = 0
+            desc = "situation_gene_tailoring_needed_desc"
+            current_stage = stage_2
+            owner = {
+                NOT = {
+                    has_technology = tech_gene_tailoring
+                }
+            }
+        }
+        modifier = {
+            mult = 0.90
+            owner = {
+                has_modifier = superior_individuals
+            }
+            desc = "superior_individuals"
+        }
+        modifier = {
+            mult = 0.5
+            desc = "prophecy_stalled_tt"
+            has_situation_flag = prophecy_stalled
+        }
+    }
+
+    triggered_blocked_desc = {
+        trigger = {
+            owner = {
+                NOT = {
+                    any_owned_planet = {
+                        has_active_building = building_originium_facility
+                    }
+                }
+            }
+        }
+        text = "situation_originium_facility_needed_desc"
+    }
+
+    triggered_blocked_desc = {
+        trigger = {
+            current_stage = stage_2
+            owner = {
+                NOT = {
+                    has_technology = tech_gene_tailoring
+                }
+            }
+        }
+        text = "situation_gene_tailoring_needed_desc"
+    }
+
+    triggered_modifier = {
+        potential = {
+            situation_monthly_progress > 0
+        }
+        country_society_tech_research_speed = @genetic_situation_society_tech_research_speed_mult
+        category_biology_research_speed_mult = @genetic_situation_biology_research_speed_mult
+    }
+
+    approach = { # Resonance Approach
+        name = originium_resonance_approach_resonance
+        icon = GFX_situation_icon_resonance
+        icon_background = GFX_situation_approach_bg_green
+        on_select = {
+            set_situation_flag = resonance_approach_selected
+            # We do this here, so it shows in the Approach selection tooltip in the Sitation UI
+            switch = {
+                trigger = current_stage
+                stage_1 = {
+                    owner = {
+                        set_country_flag = originium_resonance_stage_1_resonance
+                    }
+                    custom_tooltip = originium_stage_one_resonance_tt
+                }
+                stage_2 = {
+                    owner = {
+                        set_country_flag = originium_resonance_stage_2_resonance
+                    }
+                    custom_tooltip = originium_stage_two_resonance_tt
+                }
+                stage_3 = {
+                    owner = {
+                        set_country_flag = originium_resonance_stage_3_resonance
+
+                    }
+                    custom_tooltip = originium_stage_three_resonance_tt
+                }
+            }
+        }
+        allow = {
+            custom_tooltip = {
+                text = originium_resonance_approach_selected
+                NOR = {
+                    has_situation_flag = crystallization_approach_selected
+                    has_situation_flag = assimilation_approach_selected
+                    owner = { has_country_flag = clone_army_full_potential }
+                }
+            }
+        }
+    }
+
+    approach = { # Crystallization Approach
+        name = originium_resonance_approach_crystallization
+        icon = GFX_situation_icon_crystallization
+        icon_background = GFX_situation_approach_bg_green
+        on_select = {
+            set_situation_flag = crystallization_approach_selected
+            # We do this here, so it shows in the Approach selection tooltip in the Sitation UI
+            switch = {
+                trigger = current_stage
+                stage_1 = {
+                    owner = {
+                        set_country_flag = originium_resonance_stage_1_crystallization
+                    }
+                    if = {
+                        limit = {
+                            owner = {
+                                NOT = {
+                                    has_country_flag = clone_army_full_potential
+                                }
+                            }
+                        }
+                        custom_tooltip = originium_stage_one_crystallization_tt
+                    }
+                }
+                stage_2 = {
+                    owner = {
+                        set_country_flag = originium_resonance_stage_2_crystallization
+                    }
+                    if = {
+                        limit = {
+                            owner = {
+                                NOT = {
+                                    has_country_flag = clone_army_full_potential
+                                }
+                            }
+                        }
+                        custom_tooltip = originium_stage_two_crystallization_tt
+                    }
+                }
+                stage_3 = {
+                    owner = {
+                        set_country_flag = originium_resonance_stage_3_crystallization
+                    }
+                    if = {
+                        limit = {
+                            owner = {
+                                NOT = {
+                                    has_country_flag = clone_army_full_potential
+                                }
+                            }
+                        }
+                        custom_tooltip = originium_stage_three_crystallization_tt
+                    }
+                }
+            }
+        }
+        allow = {
+            custom_tooltip = {
+                text = originium_resonance_approach_selected
+                NOR = {
+                    has_situation_flag = resonance_approach_selected
+                    has_situation_flag = assimilation_approach_selected
+                }
+            }
+        }
+    }
+
+    approach = { # Mutation Approach
+        name = originium_resonance_approach_assimilation
+        icon = GFX_situation_icon_assimilation
+        icon_background = GFX_situation_approach_bg_green
+        on_select = {
+            set_situation_flag = assimilation_approach_selected
+            # We do this here, so it shows in the Approach selection tooltip in the Sitation UI
+            switch = {
+                trigger = current_stage
+                stage_1 = {
+                    owner = {
+                        set_country_flag = originium_resonance_stage_1_assimilation
+                    }
+                    if = {
+                        limit = {
+                            owner = {
+                                # NOT = {
+                                #     has_origin = origin_evolutionary_predators
+                                # }
+                            }
+                        }
+                        custom_tooltip = originium_stage_one_assimilation_tt
+                    }
+                }
+                stage_2 = {
+                    owner = {
+                        set_country_flag = originium_resonance_stage_2_assimilation
+                    }
+                    if = {
+                        limit = {
+                            owner = {
+                                # NOT = {
+                                #     has_origin = origin_evolutionary_predators
+                                # }
+                            }
+                        }
+                        custom_tooltip = originium_stage_two_assimilation_tt
+                    }
+                }
+                stage_3 = {
+                    owner = {
+                        set_country_flag = originium_resonance_stage_3_assimilation
+                    }
+                    if = {
+                        limit = {
+                            owner = {
+                                # NOT = {
+                                #     has_origin = origin_evolutionary_predators
+                                # }
+                            }
+                        }
+                        custom_tooltip = originium_stage_three_assimilation_tt
+                    }
+                }
+            }
+        }
+        allow = {
+            custom_tooltip = {
+                text = originium_resonance_approach_selected
+                NOR = {
+                    has_situation_flag = resonance_approach_selected
+                    has_situation_flag = crystallization_approach_selected
+                    owner = { has_country_flag = clone_army_full_potential }
+                }
+            }
+        }
+    }
+
+    on_monthly = {
+        events = {
+            ori_ap.2 		# Fires a random event for the current situation approach
+            ori_ap.3		# Fires a random event for the situation determined by the current and any previously selected approaches
+        }
+    }
+}
+

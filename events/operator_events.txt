@@ -5,10 +5,10 @@ country_event = {
     id = arknights_recruitment.1
     title = arknights_recruitment.1.name
     desc = arknights_recruitment.1.desc
-    # picture =
+    picture = "GFX_evt_arknights_recruitment"
     is_triggered_only = yes
     trigger = {
-        has_country_flag = recruitment_available
+        has_edict = gacha
     }
     immediate = {
         add_resource = {
@@ -1822,5 +1822,18 @@ country_event = {
         remove_country_flag = recruited_zima
         remove_country_flag = recruited_elysium
         remove_country_flag = all_operators_recruited
+    }
+}
+
+situation_event = {
+    id = arknights_recruitment.2
+    hide_window = yes
+
+    is_triggered_only = yes
+
+    immediate = {
+        owner = {
+            country_event = { id = arknights_recruitment.1 }
+        }
     }
 }

@@ -411,7 +411,7 @@ halo_world_03_standby = {
     }
     country_modifier = {
         founder_species_growth_mult = 0.1
-        empire_size_pops_mult = -0.05
+        empire_size_pops_mult = -0.04
     }
     potential = { always = no }
     upgrade_from = {
@@ -452,7 +452,7 @@ halo_world_03_launch = {
     upgrade_desc = hide
     country_modifier = {
         founder_species_growth_mult = 0.1
-        empire_size_pops_mult = -0.05
+        empire_size_pops_mult = -0.04
     }
 
     possible = {
@@ -470,6 +470,10 @@ halo_world_03_launch = {
                 limit = { is_megastructure_type = halo_world_03_standby }
                 count = 1
             }
+        }
+        custom_tooltip = {
+            fail_text = "requires_origenesis_tech_5_to_fire"
+            from = {  has_technology = tech_stellar_guidance  }
         }
     }
     on_build_start = { fromfrom = { finish_upgrade = yes } }
@@ -493,10 +497,6 @@ halo_world_03_launching = {
     place_entity_on_planet_plane = yes
     use_planet_resource = yes
     build_time = 0
-    country_modifier = {
-        founder_species_growth_mult = 0.1
-        empire_size_pops_mult = -0.05
-    }
 
     resources = {
         category = megastructures
@@ -513,7 +513,8 @@ halo_world_03_launching = {
 
     }
     country_modifier = {
-        diplo_weight_naval_mult = 0.25
+        founder_species_growth_mult = 0.1
+        empire_size_pops_mult = -0.04
     }
     potential = { always = no }
     upgrade_from = { halo_world_03_launch }

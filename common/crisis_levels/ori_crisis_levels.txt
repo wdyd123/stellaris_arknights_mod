@@ -115,6 +115,7 @@ crisis_origenesis_level_5 = {
     }
     on_unlock = {
         add_origenesis_level_5_perks = yes
+        declare_crisis_effect = yes
         hidden_effect = {
             owner = {
                 country_event = { id = origenesis.7120 }

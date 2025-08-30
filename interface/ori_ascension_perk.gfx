@@ -6,8 +6,8 @@ spriteTypes = {
     }
 
     spriteType = {
-        name = "GFX_ap_originiumgenesis"
-        texturefile = "gfx/interface/icons/ascension_perks/ap_originium_resonance.dds"
+        name = "GFX_ap_origenesis"
+        texturefile = "gfx/interface/icons/ascension_perks/origenesis.dds"
         alwaystransparent = yes
     }
 

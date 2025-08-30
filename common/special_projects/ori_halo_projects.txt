@@ -4,15 +4,11 @@ special_project = {
     days_to_research = 4800
     tech_department = physics_technology
     picture = GFX_evt_originium_resonance_crystallization
-
-    event_scope = country_event
+    event_chain = origenesis_chain
+    event_scope = ship_event
     timelimit = -1
     requirements = {
-        shipclass_science_ship = 1
-        leader = scientist
-        shipclass_military = 1
-        fleet_power > 1000000
-        #skill = 3
+        fleet_power = 999999
     }
 
     on_success = {
@@ -39,9 +35,14 @@ special_project = {
             destroy_country = yes
         }
         win = yes
-
     }
 
     on_fail = {
+        every_owned_planet = {
+            destroy_colony = yes
+        }
+        owner = {
+            destroy_country = yes
+        }
     }
 }

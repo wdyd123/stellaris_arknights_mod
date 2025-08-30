@@ -64,9 +64,6 @@ originium_resonance_situation = {
             owner = {
                 OR = {
                     has_edict = debug
-                    country_has_situation = {
-                        SITUATION =
-                    }
                 }
             }
             add = 135

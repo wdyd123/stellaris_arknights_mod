@@ -83,10 +83,13 @@ gacha = {
         category = edicts
 
         cost = {
-            originium = 5
-            # multiplier = value:edict_size_effect
+            originium = 50
+            multiplier = value:edict_size_effect
         }
-
+        upkeep = {
+            originium = 20
+            multiplier = value:edict_size_effect
+        }
     }
 
     potential = {

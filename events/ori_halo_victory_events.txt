@@ -2,8 +2,7 @@ namespace = halo
 
 planet_event = {
     id = halo.1000
-    title = "halo.1001.name"
-    desc = "halo.1001.desc"
+    hide_window = yes
     is_triggered_only = yes
     trigger = {
             OR = {
@@ -41,17 +40,21 @@ country_event = {
     }
 
     immediate = {
+    }
+    option = {
+        name = halo.1001.a
         if = {
             limit = {
                 not = { has_special_project = GALATIC_ETCHING }
             }
             enable_special_project = {
                 name = "GALATIC_ETCHING"
+                location = home_planet
+                owner = this
             }
         }
-    }
-    option = {
-        name = halo.1001.a
+
+        # custom_tooltip = halo.1001.a.tooltip
     }
 }
 

@@ -46,6 +46,12 @@ spriteTypes = {
         alwaystransparent = yes
     }
 
+    spriteType = {
+        name = "GFX_evt_arknights_recruitment"
+        texturefile = "gfx/event_pictures/recruitment.dds"
+        masking_texture = "gfx/interface/situation_log/event_mask.dds"
+        alwaystransparent = yes
+    }
 
 
 
